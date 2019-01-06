@@ -524,9 +524,7 @@
 	          jQuery('#menu-destination').change(function(){
 				document.location.href = $(this).find('option:selected').attr('value');
 				});
-				
-				
-				
+										
 	function maPosition(position) {		
 			var lat1 = position.coords.latitude;
 			var lon1 = position.coords.longitude;	
@@ -536,8 +534,7 @@
 			jQuery('#map-moisson').attr('src', itineraireSrc + '1s0x47e6c12b153c22bf%3A0x2d227d4087bc4da9!2sMoisson!3m2!1d49.072928999999995!2d1.6691859999999998!5e1!3m2!1sfr!2sfr!4v1544557383138');			
 			jQuery('#map-vaires').attr('src', itineraireSrc + '1s0x47e61074aa8587ab%3A0x40b82c3688c48d0!2sVaires-sur-Marne!3m2!1d48.873608999999995!2d2.6395429999999998!5e1!3m2!1sfr!2sfr!4v1544557341867');			
 			jQuery('#map-grande-paroisse').attr('src', itineraireSrc + '1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e1!3m2!1sfr!2sfr!4v1546091365802');			
-	}
-			
+	}		
 
 	    function getWebCams() {
 			getWebCamPoses();

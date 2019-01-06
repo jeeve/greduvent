@@ -6,149 +6,181 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://jvjulien.free.fr/</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/index.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/index.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/commentaires/commentaires.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/musique/musique.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/sommaire/sommaire.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/commentaires/commentaires.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/astronomie/astronomie.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/sommaire/sommaire.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/mer/mer.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/astronomie/astronomie.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/loire/loire.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/mer/mer.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/foret/foret.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/mer/rivages.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/impressions/impressions.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/mer/diapo.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/sensations/sensations.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/mer/saint-jacut.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/emotions/emotions.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/mer/safaga.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/en-chemin/en-chemin.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/loire/loire.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/en-chemin/ncis.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/loire/diapo.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/reflexions/reflexions.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/foret/foret.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/informatique/informatique.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/foret/diapo.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/science/science.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/impressions/impressions.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/a-propos/a-propos.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/sensations/sensations.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/mer/rivages.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/sensations/windsurf-kitesurf.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/mer/saint-jacut.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/sensations/powerkite.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/mer/diapo.php</loc>
-  <lastmod>2016-05-13T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/loire/diapo.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/foret/diapo.php</loc>
-  <lastmod>2016-05-10T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/mer/diapo.php</loc>
-  <lastmod>2016-05-14T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/mer/safaga.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://jvjulien.free.fr/sensations/lac-lery-poses.php</loc>
-  <lastmod>2016-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/sensations/spots-ile-de-france.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/sensations/spots-ile-de-france.php</loc>
-  <lastmod>2018-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/sensations/lac-lery-poses.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://jvjulien.free.fr/sensations/grande-paroisse.php</loc>
-  <lastmod>2018-04-27T11:24:31+00:00</lastmod>
+  <loc>https://greduvent.herokuapp.com/sensations/grande-paroisse.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://greduvent.herokuapp.com/sensations/powerkite.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/emotions/emotions.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/en-chemin/en-chemin.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/en-chemin/ncis.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/reflexions/reflexions.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/informatique/informatique.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/informatique/hop.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/science/science.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/a-propos/a-propos.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/musique/le-chant-des-songes.php</loc>
+  <lastmod>2019-01-06T17:18:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/en-chemin/france3.html</loc>
+  <lastmod>2019-01-06T16:15:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/en-chemin/linxe.html</loc>
+  <lastmod>2019-01-06T16:15:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/informatique/alphazero.pdf</loc>
+  <lastmod>2019-01-06T16:15:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://greduvent.herokuapp.com/science/science-et-avenir/une-teleportation-reussie-sur-25-km-de-distance.html</loc>
+  <lastmod>2019-01-06T16:15:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 </urlset>
