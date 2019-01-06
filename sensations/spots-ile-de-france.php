@@ -537,11 +537,7 @@
 			jQuery('#map-vaires').attr('src', itineraireSrc + '1s0x47e61074aa8587ab%3A0x40b82c3688c48d0!2sVaires-sur-Marne!3m2!1d48.873608999999995!2d2.6395429999999998!5e1!3m2!1sfr!2sfr!4v1544557341867');			
 			jQuery('#map-grande-paroisse').attr('src', itineraireSrc + '1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e1!3m2!1sfr!2sfr!4v1546091365802');			
 	}
-
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(maPosition);
-	}
-				
+			
 
 	    function getWebCams() {
 			getWebCamPoses();
@@ -585,6 +581,10 @@
 		var myCam = setInterval(getWebCams, 30000);	// 30 s
 	  
 		jQuery(document).ready(function($) {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(maPosition);
+			}
+
 			getWebCams();	 
 		});
 		
