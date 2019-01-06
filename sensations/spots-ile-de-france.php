@@ -166,7 +166,7 @@
 			   <br>	
 				<a name="poses"></a>
 			    <h2><a href="lac-lery-poses.php">Léry-Poses</a></h2>
-		<p><a data-toggle="collapse" data-target="#item-vue-poses" class="lien-collapse">Orientations</a> - <button data-toggle="collapse" data-target="#item-webcam-poses" class="lien-collapse">Webcam</button> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
+		<p><a data-toggle="collapse" data-target="#item-vue-poses" class="lien-collapse">Orientations</a> - <button data-toggle="collapse" data-target="#item-webcam-poses" >Webcam</button> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
 							<img src="images/spots-lery-poses-2.jpg" width=400 class="img-responsive ombre-image" alt="Les mises à l'eau en fonction du vent" title="Les mises à l'eau en fonction du vent">
