@@ -50,5 +50,6 @@
       </div></div>
       <!--/.page-container-->
       <?php include("includes/footer.php"); ?>
+	  <script src="/js/lake.js"></script>	  
    </body>
 </html>
