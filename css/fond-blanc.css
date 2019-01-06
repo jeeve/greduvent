@@ -1,0 +1,14 @@
+body, .fond {
+	background-image: none;
+	background-repeat: repeat;
+}
+
+.fond-table {
+	background-image: none;
+	background-color: white;
+}
+
+.encadrement-table {
+	border: 2px solid grey;
+	padding: 5px;
+}

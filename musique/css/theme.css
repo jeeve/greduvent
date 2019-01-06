@@ -1,0 +1,28 @@
+#playerContainer { width:300px; padding-left:5px; }
+
+.audioTime { display: inline-block; text-align: right; float: right; }
+
+.progress { clear:both; height:4px; background-color:#666666; width:100%; cursor:pointer; position:relative; }
+.progress .updateProgress { width:0px; background-color:#00BD9B; height:100%; float:left; position:relative; }
+
+.volumeControl { position: relative; margin: 20px auto; }
+
+#buttonsContainer {
+	margin-left:12px;
+}
+ 
+#BtnPlay.btn.btn-default.btn-lg.playAudio { 
+	display : none;
+}
+ 
+#BtnPlay.btn.btn-default.btn-lg.pauseAudio  { 
+	display : inline;
+}
+ 
+ #BtnPause.btn.btn-default.btn-lg.playAudio { 
+	display : inline;
+}
+ 
+#BtnPause.btn.btn-default.btn-lg.pauseAudio  { 
+	display : none;
+}

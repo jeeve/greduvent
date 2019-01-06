@@ -1,0 +1,54 @@
+.table-externe {
+	background-color: #CCCCFF;
+	margin: auto;
+}
+
+.table-interne {
+	background-color: #FDFDFD;
+	width: 100%
+}
+
+.colonne-lien {
+	border-right-style: none; 
+	border-right-width: medium;
+	width: 220px;
+	vertical-align : bottom;
+}
+
+.colonne-auteur {
+	text-align: right;
+}
+
+.table-interne tr td {
+	padding-bottom: 0px;
+	padding-left: 3px;
+	padding-right: 3px;	
+}
+
+table tr td p {
+	font-family: arial,sans-serif;
+	font-size: 85%;
+	margin: 0px;
+}
+
+table tr td {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+}
+
+.titre-externe {
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+h2 { font-family: arial,sans-serif;
+  position: relative;
+  margin-bottom: 0px;
+  margin-left: -10px;
+}
+
+.table-interne br {
+	display: block;
+	margin: 4px 0;
+}

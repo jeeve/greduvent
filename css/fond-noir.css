@@ -1,0 +1,20 @@
+body, .fond {
+	background-image: none;
+	background-color: black;
+	color: white;
+}
+
+.fond-table {
+	background-image: url('/images/fond-papier.jpg');
+    background-repeat: repeat;
+	color: black;
+}
+
+.encadrement-table {
+	border: 2px solid white;
+	padding: 5px;
+}
+
+a {
+	color: #6699FF;
+}

@@ -1,0 +1,19 @@
+body, .fond {
+	background-image: url('/images/stars.gif');
+    background-repeat: repeat;
+	background-attachment: scroll;
+	color: #FFC;
+}
+
+.fond-table {
+	background-color: black;
+}
+
+.encadrement-table {
+	border: 2px solid white;
+	padding: 5px;
+}
+
+a {
+	color: #6699FF;
+}

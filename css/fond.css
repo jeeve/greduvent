@@ -1,0 +1,15 @@
+body, .fond {
+	background-image: url('/images/fond-papier.jpg');
+    background-repeat: repeat;
+	/*background-attachment: fixed;*/
+}
+
+.fond-table {
+	background-color: white;
+	border-radius: 10px;
+}
+
+.encadrement-table {
+	border: 2px solid grey;
+	padding: 5px;
+}

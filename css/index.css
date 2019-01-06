@@ -1,0 +1,70 @@
+/*
+body, .fond { 
+	background-attachment: fixed; 
+}
+*/
+
+/*		
+.wrapper {	
+  display: inline-block;
+  position: relative;  
+}
+*/
+.wrapper img {
+  display: block;
+  max-width:100%;
+}
+
+.wrapper .overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wrapper .overlay p {
+ /* text-align: right; */
+  text-shadow: 3px 3px 5px rgba(0,0,0, 0.8);
+  font-style: italic;
+  font-size: 160%;
+  color: white;   
+  margin-top: 5%;
+  margin-right:5%
+}
+
+/* en mode xs */
+@media screen and (max-width: 767px) { 
+ .wrapper .overlay p  {
+	font-size: 130%;
+	}
+}
+
+@keyframes opacite-anim {
+	0% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}	
+
+.opacite { /* au gré du vent */
+	-webkit-animation: opacite-anim 3.5s linear;
+	-moz-animation: opacite-anim 3.5s linear;
+	-ms-animation: opacite-anim 3.5s linear;	
+	-o-animation: opacite-anim 3.5s linear;	
+	animation: opacite-anim 3.5s linear;
+}
+
+@keyframes opacite-anim2 { 
+	0% { opacity: 0.0; }
+	30% { opacity: 0.0; } 
+	100% { opacity: 1.0; }
+}	
+
+.opacite2 { /* 1.0 */
+	-webkit-animation: opacite-anim2 4s linear;
+	-moz-animation: opacite-anim2 4s linear;
+	-ms-animation: opacite-anim2 4s linear;	
+	-o-animation: opacite-anim2 4s linear;	
+	animation: opacite-anim2 4s linear;
+}

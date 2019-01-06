@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="http://jvjulien.free.fr/news.xml" rel="self" type="application/rss+xml" />
+        <title>Au gré du vent 1.0</title>
+        <link>http://jvjulien.free.fr</link>
+        <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
+
+		<item>
+            <title>Les spots de planche de la région parisienne</title>
+            <link>http://jvjulien.free.fr/sensations/spots-ile-de-france.php</link>
+            <guid isPermaLink="false">spots-ile-de-france</guid>
+            <description>Retrouvez ici toutes les infos pour savoir où naviguer en Ile-de-France.</description>
+            <pubDate>Mon, 17 Dec 2018 16:49:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Emergence</title>
+            <link>https://youtu.be/nHaLZyHsAyI</link>
+            <guid isPermaLink="false">emergence</guid>
+            <description>Nouveau morceau musical de Cuisine Spectrale. Ambiance Gilles et John.</description>
+            <pubDate>Sun, 25 Nov 2018 16:43:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Entropie</title>
+            <link>https://youtu.be/GCfxyWM9TIo</link>
+            <guid isPermaLink="false">entropie</guid>
+            <description>Nouveau morceau musical de Cuisine Spectrale. Ambiance electro / techno.</description>
+            <pubDate>Mon, 8 Oct 2018 11:36:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>L'hypothèse de Riemann</title>
+            <link>http://jvjulien.free.fr/science/science.php#hypothese-riemann</link>
+            <guid isPermaLink="false">hypothese-riemann</guid>
+            <description>Le problème mathématique le plus difficile du monde ? Il parait que c'est l'hypothèse de Riemann... Récompense : 1 million de dollars.</description>
+            <pubDate>Wed, 3 Oct 2018 14:57:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Planche à voile sous l'orage à Saint-Jacut de la Mer, août 2018</title>
+            <link>http://jvjulien.free.fr/mer/saint-jacut.php#windsurf-aout-2018</link>
+            <guid isPermaLink="false">windsurf-aout-2018</guid>
+            <description>Peu de vent cette année en Bretagne nord, mais quelques belles balades dans la baie et une frayeur sous l'orage.</description>
+            <pubDate>Sat, 22 Sep 2018 11:49:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Alexandre du Haut Marnais</title>
+            <link>http://jvjulien.free.fr/en-chemin/ncis.php#simulation-alex</link>
+            <guid isPermaLink="false">simulation-alex</guid>
+            <description>Le NCIS (National Center of Intensive Simulation) accueille un nouveau membre.</description>
+            <pubDate>Tue, 31 Jul 2018 10:40:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Espace-temps</title>
+            <link>http://jvjulien.free.fr/science/science.php#espace-temps</link>
+            <guid isPermaLink="false">espce-temps</guid>
+            <description>Interprétation audacieuse et séduisante du concept d'espace-temps. Qu'en pensez-vous ?</description>
+            <pubDate>Sun, 29 Jul 2018 11:29:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Taille de l'Univers</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#taille-univers</link>
+            <guid isPermaLink="false">taille-univers</guid>
+            <description>Vous voulez avoir une idée de l'immensité de l'univers ? Voici une vidéo qui va vous l'illustrer en seulement 6 minutes...</description>
+            <pubDate>Mon, 23 Jul 2018 15:45:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Max et Lulu</title>
+            <link>http://jvjulien.free.fr/en-chemin/en-chemin.php#max-et-lulu</link>
+            <guid isPermaLink="false">max-et-lulu</guid>
+            <description>Nouveau morceau musical de Cuisine Spectrale. Spécial dédicace aux collègues...</description>
+            <pubDate>Sun, 15 Jul 2018 08:43:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Epicentre</title>
+            <link>https://youtu.be/Z0fD8lsK1oY</link>
+            <guid isPermaLink="false">epicentre</guid>
+            <description>Nouveau morceau musical de Cuisine Spectrale. Ambiance electro / techno.</description>
+            <pubDate>Thu, 12 Jul 2018 22:39:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>TensorFlow</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php#tensorflow</link>
+            <guid isPermaLink="false">tensorflow</guid>
+            <description>Intelligence artificielle : l'apprentissage profond, sans les équations différentielles.</description>
+            <pubDate>Fri, 29 Jun 2018 23:03:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Altération</title>
+            <link>https://youtu.be/PntnA9jYQ3M</link>
+            <guid isPermaLink="false">alteration</guid>
+            <description>Nouvelle musique de Cuisine Spectrale. Robotique à l'honneur.</description>
+            <pubDate>Fri, 22 Jun 2018 18:05:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Au gré du vent 1.0 fait peau neuve</title>
+            <link>http://jvjulien.free.fr</link>
+            <guid isPermaLink="false">new-design</guid>
+            <description>C'est l'été ! Nouvelle police. Nouveau design.</description>
+            <pubDate>Thu, 21 Jun 2018 11:00:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>La mort</title>
+            <link>http://jvjulien.free.fr/impressions/impressions.php#mort</link>
+            <guid isPermaLink="false">mort</guid>
+            <description>La mort paraît comme l’horizon, mais c’est un mur vers lequel on fonce inexorablement.</description>
+            <pubDate>Fri, 11 May 2018 20:53:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Par la fenêtre</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#par-la-fenetre</link>
+            <guid isPermaLink="false">par-la-fenetre</guid>
+            <description>Ode à la rêvrie. A abuser avec modération.</description>
+            <pubDate>Wed, 11 Apr 2018 15:45:00 GMT</pubDate>
+		</item>	
+				
+		<item>
+            <title>Périphérique fluide</title>
+            <link>https://youtu.be/FOPWbRRWsds</link>
+            <guid isPermaLink="false">peripherique-fluide</guid>
+            <description>Afin d’agrémenter les trajets sur le périphérique lorsque les conditions de circulation deviennent difficiles, Cuisine Spectrale a pensé à ce titre « Périphérique fluide » spécialement dédié à ce type de situation.</description>
+            <pubDate>Mon, 26 Mar 2018 15:21:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Albert code</title>
+            <link>https://youtu.be/Vh990Pt0jIg</link>
+            <guid isPermaLink="false">albert-code</guid>
+            <description>Nouvelle musique de Cuisine Spectrale. Chanson electro en Morse. A vos décodeurs !</description>
+            <pubDate>Sun, 3 Mar 2018 11:42:00 GMT</pubDate>
+		</item>	
+
+		<item>
+            <title>Playlist émotion</title>
+            <link>http://jvjulien.free.fr/emotions/emotions.php#playlist</link>
+            <guid isPermaLink="false">playlist-emotion</guid>
+            <description>Une playlist musicale pleine d'émotion.</description>
+            <pubDate>Sat, 3 Mar 2018 15:41:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Nuit étoilée</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#nuit-etoilee</link>
+            <guid isPermaLink="false">nuit-etoilee</guid>
+            <description>Mois d'août au camping en Bretagne. La tête dans les étoiles.</description>
+            <pubDate>Thu, 1 Mar 2018 14:12:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>La cruauté</title>
+            <link>http://jvjulien.free.fr/impressions/impressions.php#cancer</link>
+            <guid isPermaLink="false">cancer</guid>
+            <description>La cruauté ne frappe pas au hasard. Elle cherche sa proie...</description>
+            <pubDate>Wed, 28 Feb 2018 00:15:00 GMT</pubDate>
+		</item>	
+
+		<item>
+            <title>Le funambule</title>
+            <link>https://youtu.be/Vkre8z10G50</link>
+            <guid isPermaLink="false">le-funambule</guid>
+            <description>Nouvelle musique de Cuisine Spectrale. Danse sur un fil.</description>
+            <pubDate>Mon, 12 Feb 2018 14:10:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Question du jour</title>
+            <link>http://jvjulien.free.fr/reflexions/reflexions.php</link>
+            <guid isPermaLink="false">question-jour</guid>
+            <description>Chaque jour une question. Vous êtes invités à y répondre ou proposer une autre question. A votre clavier !</description>
+            <pubDate>Sun, 11 Feb 2018 12:11:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Google chante d'Ormesson</title>
+            <link>https://youtu.be/ciV5qD6VGv4</link>
+            <guid isPermaLink="false">google-chante-d-ormesson</guid>
+            <description>Nouvelle chanson de Cuisine Spectrale. Inspiré librement d'un texte de l'écrivain et académicien Jean d'Ormesson lu par Google translate.</description>
+            <pubDate>Tue, 30 Jan 2018 10:38:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Confiture apologie</title>
+            <link>https://youtu.be/y9OZpe62_gg</link>
+            <guid isPermaLink="false">confiture-apologie</guid>
+            <description>Nouvelle chanson de Cuisine Spectrale. La confiture c'est l'enfance. La confiture c'est le sucre, la douceur, la tendresse, un sourire. La confiture c'est le fruit, la tentation, le désir.</description>
+            <pubDate>Fri, 5 Jan 2018 19:52:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Deux valises</title>
+            <link>https://youtu.be/7auKfpwig2M</link>
+            <guid isPermaLink="false">deux-valises</guid>
+            <description>Nouvelle composition musicale de Cuisine Spectrale. Consonances subliminales à laisser écouter discrètement à votre compagne pendant les préparatifs de vacances.</description>
+            <pubDate>Thu, 14 Dec 2017 13:27:00 GMT</pubDate>
+		</item>	
+
+		<item>
+            <title>Liliane, Denis et José</title>
+            <link>http://jvjulien.free.fr/en-chemin/en-chemin.php#liliane-sdf-jose</link>
+            <guid isPermaLink="false">liliane-sdf-jose</guid>
+            <description>Pourquoi faire ?</description>
+            <pubDate>Sat, 30 Sep 2017 20:59:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Planche à voile à Saint-Jacut de la Mer, août 2017</title>
+            <link>http://jvjulien.free.fr/mer/saint-jacut.php#windsurf-aout-2017</link>
+            <guid isPermaLink="false">windsurf-aout-2017</guid>
+            <description>De bonnes sessions musclées en ce mois d'été avec tirages de bourres en règle.</description>
+            <pubDate>Tue, 29 Aug 2017 16:14:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Camille Flammarion</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#flammarion</link>
+            <guid isPermaLink="false">flammarion-1884</guid>
+            <description>Une réflexion de Camille Flammarion datant de 1884 sur notre place dans l'univers.</description>
+            <pubDate>Mon, 24 Jul 2017 10:06:00 GMT</pubDate>
+		</item>	
+		
+		<item>
+            <title>Navigation sous le soleil du lac de Léry-Poses</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php#lery-poses-24-06-17</link>
+            <guid isPermaLink="false">lery-poses-24-06-17</guid>
+            <description>Session sous le soleil mais le vent est resté très timide. Petits planning au début. Spéciale dédicace au teeshirt de Roger. Le canard qui m'avait doublé lors d'une précédente navigation est venu me narguer pendant que je gréais, mais une fois sur l'eau, il rigolait moins.</description>
+            <pubDate>Fri, 30 Jun 2017 12:10:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Service Web : météo en temps réel</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php#meteo-temps-reel</link>
+            <guid isPermaLink="false">service-web-meteo</guid>
+            <description>Petit script PHP permettant de connaitre les conditions météo en temps réel de la station de son choix.</description>
+            <pubDate>Mon, 13 Mar 2017 15:25:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Nouvelle page : lac de Léry-Poses</title>
+            <link>http://jvjulien.free.fr/sensations/lac-lery-poses.php</link>
+            <guid isPermaLink="false">lac-lery-poses</guid>
+            <description>Une nouvelle page dédiée au lac de Léry Poses voit le jour. Au menu, webcam avec archives, météo en temps réel et prévisitions, lien vers l'association WLPA.</description>
+            <pubDate>Fri, 10 Mar 2017 15:45:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Communiqué du NCIS</title>
+            <link>http://jvjulien.free.fr/en-chemin/ncis.php#simulation-communique</link>
+            <guid isPermaLink="false">communique-ncis</guid>
+            <description>L'auteur adresse ici un communiqué à l'attention du National Center of Intensive Simulation.</description>
+            <pubDate>Tue, 7 Mar 2017 9:25:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Webcam lac de Léry-Poses</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php#webcam-poses</link>
+            <guid isPermaLink="false">webcam-poses</guid>
+            <description>Le lac de Léry Poses en temps réel.</description>
+            <pubDate>Tue, 14 Feb 2017 13:28:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Angular</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php#angular</link>
+            <guid isPermaLink="false">angular</guid>
+            <description>Exemple d'utilisation du framework web AngularJs.</description>
+            <pubDate>Sun, 12 Feb 2017 23:18:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Expansion</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#expansion</link>
+            <guid isPermaLink="false">expansion</guid>
+            <description>L'expansion de l'univers ou l'espace qui grandit.</description>
+            <pubDate>Fri, 3 Feb 2017 10:53:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Nouvelle page d'accueil</title>
+            <link>http://codepen.io/jeeve/pen/LbwGGa</link>
+            <guid isPermaLink="false">reflexion-vague</guid>
+            <description>Une utilisation du script http://alligatr.co.uk/lake.js/ qui génère une animation de reflets de vagues sous une photo. Il a fallu l'adapter pour assurer la compatibilité avec le responsive design de bootstrap. Mais le résultat est sympa.</description>
+            <pubDate>Tue, 10 Jan 2017 13:29:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>2017</title>
+            <link>http://codepen.io/jeeve/pen/GrKNpN</link>
+            <guid isPermaLink="false">2017</guid>
+            <description>Pour la nouvelle année, quelques flocons de neige à la sauce javascript ! Meilleurs voeux cher visiteur.</description>
+            <pubDate>Sun, 1 Jan 2017 00:21:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Ils forment la paire</title>
+            <link>http://jvjulien.free.fr/en-chemin/en-chemin.php#la-paire</link>
+            <guid isPermaLink="false">la-paire</guid>
+            <description>Mystérieux texte sensuel qui peut plonger le lecteur dans l'expectative. Quelques indices disséminés ça et là peuvent aider à se faire une idée des protagonistes.</description>
+            <pubDate>Fri, 16 Dec 2016 22:34:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Voyage aux pays des fractals</title>
+            <link>http://jvjulien.free.fr/science/images/Dreaming_Again_(Lucid_version_by_Adam_Pizurny).gif</link>
+            <guid isPermaLink="false">dreaming-again</guid>
+            <description>Somptueuse animation fractale "Dreaming Again" signée Adam Pizurny.</description>
+            <pubDate>Wed, 7 Dec 2016 23:33:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Clips vidéo de Cuisine Spectrale</title>
+            <link>http://jvjulien.free.fr/sensations/sensations.php#clips-cuisine-spectrale</link>
+            <guid isPermaLink="false">clip-cuisine-spectrale</guid>
+            <description>Retrouvez les clips des tubes tels que l'inoubliable Osez José ou l'improbable Rillette Apothéose.</description>
+            <pubDate>Mon, 21 Nov 2016 22:39:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Mise à jour du sommaire</title>
+            <link>http://jvjulien.free.fr/sommaire/sommaire.php</link>
+            <guid isPermaLink="false">maj-sommaire</guid>
+            <description>La page "en route..." incorpore maintenant un sommaire dynamique qui permet de connaitre directement le contenu de chaque rubrique. Un zest de CSS et un soupçon de PHP...</description>
+            <pubDate>Wed, 16 Nov 2016 14:54:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Toucher le bonheur du bout des lèvres</title>
+            <link>http://jvjulien.free.fr/emotions/emotions.php#bonheur</link>
+            <guid isPermaLink="false">toucher-bonheur</guid>
+            <description>Ode à la tendresse.</description>
+            <pubDate>Sat, 5 Nov 2016 11:50:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Reconnaissance d'images</title>
+            <link>http://codepen.io/jeeve/pen/vymQyb</link>
+            <guid isPermaLink="false">reconnaissance-images</guid>
+            <description>Un exemple de reconnaissance d'images basé sur des services web IBM Watson. N'hésitez pas à tester, pour cela, indiquez l'URL d'une image et cliquez sur bouton Analyser.</description>
+            <pubDate>Thu, 3 Nov 2016 21:59:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Etrange vidéo</title>
+            <link>http://jvjulien.free.fr/science/science.php#fractal</link>
+            <guid isPermaLink="false">fractal</guid>
+            <description>A regarder jusqu'à la fin !</description>
+            <pubDate>Wed, 12 Oct 2016 16:06:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Moisson, 1er octobre 2016</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php#moisson-1-10-16</link>
+            <guid isPermaLink="false">moisson-1-10-16</guid>
+            <description>Lac de Moisson le 1er octobre 2016. Super ambiance. Vent de sud-ouest. Essai de mon aileron anti-algues Gun 33 cm.</description>
+            <pubDate>Sun, 2 Oct 2016 05:09:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Eté indien au lac de Poses</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php#ete-indien-poses</link>
+            <guid isPermaLink="false">ete-indien-poses</guid>
+            <description>Lac de Poses le 24 septembre 2016. 24°C. Vent de sud. Merci à Roger de m'avoir prêté un aileron anti-algues Gun de 36 cm.</description>
+            <pubDate>Sun, 25 Sep 2016 15:26:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Parution dans Sciences et Avenir</title>
+            <link>http://jvjulien.free.fr/science/science-et-avenir/une-teleportation-reussie-sur-25-km-de-distance.html</link>
+            <guid isPermaLink="false">sciences-et-avenir</guid>
+            <description>Un article parut sur le site de Sciences et Avenir mentionne les résulats d'une expérience de téléportation d'un lombric sur une distance de 25 km. Le professeur Machepro est à l'honneur ainsi que la toute nouvelle entité du NCIS.</description>
+            <pubDate>Wed, 21 Sep 2016 15:07:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Inside Baie de Beaussais</title>
+            <link>http://jvjulien.free.fr/mer/saint-jacut.php#inside-beausais-2016</link>
+            <guid isPermaLink="false">inside-beausais-2016</guid>
+            <description>29 août 2016, Baie de Beaussais, Saint-Jacut de la Mer, Bretagne nord, à bord de l'Exocet Scross 116. Balade dans le vent léger sous le soleil breton. Le bonheur.</description>
+            <pubDate>Mon, 05 Sep 2016 9:48:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Balade en baie de l'Arguenon</title>
+            <link>http://jvjulien.free.fr/mer/saint-jacut.php#arguenon</link>
+            <guid isPermaLink="false">arguenon</guid>
+            <description>Petite balade en bateau dans la baie de l'Arguenon. Découverte depuis les eaux du chateau du Guildo, puis rencontre avec un phoque. Dernière escale, les fameuses pierres sonnantes.</description>
+            <pubDate>Wed, 29 Jul 2016 10:55:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Mouvement perpétuel</title>
+            <link>http://jvjulien.free.fr/science/science.php#mouvement-perpetuel</link>
+            <guid isPermaLink="false">mouvement-perpetuel</guid>
+            <description>Le philosophe Jean-Claude Van Damme nous éclaire sur un sujet qui alimente tous nos fantasmes : le mouvement perpétuel. Avec des mots simples, une démarche logique, il démontre à quel point ce concept peut être appréhendé par chacun d'entre nous.</description>
+            <pubDate>Sat, 25 Jun 2016 19:02:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Miroir : paradoxe</title>
+            <link>http://jvjulien.free.fr/science/science.php#miroir-paradoxe</link>
+            <guid isPermaLink="false">miroir-paradoxe</guid>
+            <description>Pourquoi un miroir inverse-t-il la gauche et la droite et pas le haut et le bas ? David Louapre nous éclaire.</description>
+            <pubDate>Tue, 23 Jun 2016 23:45:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>jQuery mobile</title>
+            <link>http://jvjulien.free.fr</link>
+            <guid isPermaLink="false">jquery-mobile</guid>
+            <description>Le site utilise mainenant l'API jQuery mobile pour permettre une navigation tactile entre les pages (slide). Idéal sur smartphone et tablette.</description>
+            <pubDate>Tue, 21 Jun 2016 13:08:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Traducteur automatique IBM Watson </title>
+            <link>http://codepen.io/jeeve/pen/YWqKbj</link>
+            <guid isPermaLink="false">tradution-watson</guid>
+            <description>Utilisation en jQuery de l'API IBM Watson pour la traduction automatique d'un texte.</description>
+            <pubDate>Sun, 12 Jun 2016 9:45:00 GMT</pubDate>
+		</item>
+		
+		<item>
+            <title>Liens externes avec icône</title>
+            <link>http://codepen.io/jeeve/pen/aZONYK</link>
+            <guid isPermaLink="false">liens-externes</guid>
+            <description>Petite mise en bouche en jQuery : affichage des liens externes au site avec un petit icône adapté, façon Wikipédia.</description>
+            <pubDate>Fri, 3 Jun 2016 8:40:00 GMT</pubDate>
+		</item>	
+
+		<item>
+            <title>Lumières marines</title>
+            <link>http://jvjulien.free.fr/mer/diapo.php</link>
+            <guid isPermaLink="false">lumieres-marines</guid>
+            <description>La mer et ses lumières racontées dans ce diaporama. Ambiances iodées garanties.</description>
+            <pubDate>Wed, 13 May 2016 13:09:00 GMT</pubDate>
+		</item>	
+
+		<item>
+            <title>A La Truie qui File</title>
+            <link>http://jvjulien.free.fr/impressions/impressions.php#la-truie-qui-file</link>
+            <guid isPermaLink="false">a-la-truie-qui-file</guid>
+            <description>Un peu de désespoir trouve refuge dans ce bar de Dinan un soir d'été.</description>
+            <pubDate>Tue, 10 May 2016 01:09:00 GMT</pubDate>
+		</item>		
+
+		<item>
+            <title>Rencontres végétales</title>
+            <link>http://jvjulien.free.fr/foret/diapo.php</link>
+            <guid isPermaLink="false">rencontres-vegetales</guid>
+            <description>La nature à travers l'objectif de mon appareil photo. Sous le charme de La Sologne, la Bretagne, la Baie de Somme...</description>
+            <pubDate>Sat, 7 May 2016 21:34:00 GMT</pubDate>
+		</item>		
+
+		<item>
+            <title>Lecteur audio HTML5</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php#lecteur-audio</link>
+            <guid isPermaLink="false">lecteur-audio</guid>
+            <description>Adieu Flash... Bienvenue HTML5. Le lecteur audio du site profite donc de cette nouvelle technologie. Il affiche désormais le spectre musical. Que d'innovations...</description>
+            <pubDate>Sun, 1 May 2016 10:30:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Nouvelle version !</title>
+            <link>http://jvjulien.free.fr</link>
+            <guid isPermaLink="false">nouvelle-version</guid>
+            <description>Le site "au gré du vent 1.0" fait peau neuve. Il passe en "responsive design" avec le framework Bootstrap. C'est à dire qu'il peut être consulté depuis un PC, une tablette, un smartphone... Les photos sont maintenant plus grandes. Bonne visite !</description>
+            <pubDate>Wed, 27 Apr 2016 23:44:00 GMT</pubDate>
+		</item>		
+		
+		<item>
+            <title>Informatique cognitive</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php#informatique-cognitive</link>
+            <guid isPermaLink="false">informatique-cognitive</guid>
+            <description>IMB travaille activement dans le domaine émergent de l'informatique cognitive qui serait la 3ème ère de l'informatique (hardware, software, cognitive).</description>
+            <pubDate>Sun, 3 Apr 2016 19:06:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Téléportation ionique, page spéciale</title>
+            <link>https://www.facebook.com/teleportationionique</link>
+            <guid isPermaLink="false">teleportation-facebook</guid>
+            <description>Suite au succès rencontré dans notre rubrique "Téléportation ionique", une page facebook dédiée a été créée. Elle permettra d'améliorer les échanges techniques et scientifiques tout en vulgarisant les notions difficiles à appréhender.</description>
+            <pubDate>Tue, 1 Mar 2016 22:55:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Intelligence artificielle, une nouvelle étape ?</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php#ia</link>
+            <guid isPermaLink="false">ia</guid>
+            <description>En octobre 2015, AlphaGo fait le "buzz" en devenant le premier logiciel d'IA à gagner au jeu de Go contre un joueur professionnel. Pourtant ce jeu nécessite d'autres facultés que la "simple" exploration des combinaisons de solutions.</description>
+            <pubDate>Sat, 27 Feb 2016 01:38:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Téléportation ionique</title>
+            <link>http://jvjulien.free.fr/science/science.php#teleportation-ionique</link>
+            <guid isPermaLink="false">teleportation-ionique</guid>
+            <description>Vous trouverez ici quelques uns de nos échanges avec le professeur Schpounz alias Machepro sur le télétransport au sein du Centre de Téléportation Ionique Français. Cet espace est libre, n'hésitez pas à y apporter votre contribution.</description>
+            <pubDate>Fri, 12 Feb 2016 21:08:00 GMT</pubDate>
+		</item>
+	  
+		<item>
+            <title>Nouvelle rubrique e^(i.pi)+1=0</title>
+            <link>http://jvjulien.free.fr/science/science.php</link>
+            <guid isPermaLink="false">e^(i.pi)+1=0</guid>
+            <description>Retrouvez ici quelques réflexions d'ordre mathémathique, physique, voire philosophique. Cet espace est libre et il vous est possible d'y contribuer. Merci à tous ceux qui y participent.</description>
+            <pubDate>Tue, 09 Feb 2016 13:54:00 GMT</pubDate>
+		</item>
+	  
+       <item>
+            <title>Un week-end en Bretagne nord</title>
+            <link>http://jvjulien.free.fr/mer/saint-jacut.php#weekend</link>
+            <guid isPermaLink="false">weekend-bretagne</guid>
+            <description>Week-end d'évasion sur la côte d'Emeraude. Vent et soleil sont au rendez-vous. Mimi à la caméra.</description>
+            <pubDate>Mon, 29 Jan 2016 13:32:00 GMT</pubDate>
+      </item>
+      
+       <item>
+            <title>Fil Twitter</title>
+            <link>http://jvjulien.free.fr/a-propos/a-propos.php</link>
+            <guid isPermaLink="false">twitter</guid>
+            <description>Vous pouvez désormais suivre les tweets d'Au gré du vent.</description>
+            <pubDate>Mon, 21 Dec 2015 21:34:00 GMT</pubDate>
+      </item>
+         
+      <item>
+            <title>Playlist musicale</title>
+            <link>http://jvjulien.free.fr/a-propos/a-propos.php#playlist</link>
+            <guid isPermaLink="false">playlist</guid>
+            <description>Compilation musicale avec Vitalic, Moby, Biolay, Pink Floyd...</description>
+            <pubDate>Thu, 23 Apr 2015 13:15:00 GMT</pubDate>
+        </item>
+
+      <item>
+            <title>7 janvier 2015</title>
+            <link>http://jvjulien.free.fr/en-chemin/en-chemin.php#jesuischarlie</link>
+            <guid isPermaLink="false">je-suis-charlie</guid>
+            <description>Le 7 janvier 2015, 2 terroristes déciment la rédaction de Charlie Hebdo.</description>
+            <pubDate>Fri, 23 Jan 2015 21:30:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Dream of flying</title>
+            <link>http://blenderartists.org/forum/showthread.php?208735</link>
+            <guid isPermaLink="false">dream-of-flying</guid>
+            <description>Image d'une grande beauté et inspiration réalisée avec le logiciel Blender par Artur Zygulski.</description>
+            <pubDate>Fri, 18 Jul 2014 13:46:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Vote et pragmatisme</title>
+            <link>http://jvjulien.free.fr/reflexions/reflexions.php#vote</link>
+            <guid isPermaLink="false">vote-pragmatisme</guid>
+            <description>Le vote, une démarche singulière.</description>
+            <pubDate>Tue, 25 Mar 2014 14:33:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Expérience de pensée</title>
+            <link>http://jvjulien.free.fr/reflexions/reflexions.php#ville-ancetres</link>
+            <guid isPermaLink="false">experience-pensee</guid>
+            <description>La ville de vos ancêtres...</description>
+            <pubDate>Tue, 14 Nov 2013 11:16:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Entrevue spatiale</title>
+            <link>http://jvjulien.free.fr/musique/songs/entrevue-spatiale.mp3</link>
+            <guid isPermaLink="false">entrevue_spatial</guid>
+            <description>Ambiance extra solaire.</description>
+            <pubDate>Tue, 17 Jun 2013 21:25:00 GMT</pubDate>
+        </item>
+
+       <item>
+            <title>Distance entre 2 villes</title>
+            <link>http://jvjulien.free.fr/informatique/racket.php#distance-ville</link>
+            <guid isPermaLink="false">distance-ville</guid>
+            <description>Petit programme Racket pour calculer la distance entre villes.</description>
+            <pubDate>Fri, 22 Feb 2013 17:12:00 GMT</pubDate>
+        </item>
+
+       <item>
+            <title>Session dominicale à Moisson</title>
+            <link>http://jvjulien.free.fr/sensations/sensations.php</link>
+            <guid isPermaLink="false">session-4-novembre</guid>
+            <description>Conditions solides, mais vent bien orienté (SO), ce qui permet des bords travers du lac à donf... Pluie au début, puis soleil ensuite. J'étreine mes nouveaux bouts de harnais. La JP avait l'air de se plaire sur ce terrain de jeu. Moi j'étais essoufflé par le rythme à suivre... Que du bonheur. A terre, des habitués se chambrent gentiment.</description>
+            <pubDate>Mon, 5 Nov 2012 10:49:00 GMT</pubDate>
+        </item>
+ 
+      <item>
+            <title>Nouvelle musique : Percutrip</title>
+            <link>http://jvjulien.free.fr/musique/songs/percutrip.mp3</link>
+            <guid isPermaLink="false">percutrip</guid>
+            <description>Ambiance percussive.</description>
+            <pubDate>Tue, 23 Oct 2012 19:12:00 GMT</pubDate>
+        </item>
+
+     <item>
+        <title>Les hauteurs des cours d'eau en direct</title>
+        <link>http://jvjulien.free.fr/informatique/racket.php#hauteur-eau</link>
+        <guid isPermaLink="false">hauteur-eau</guid>
+        <description>Petit programme pour afficher les variations de hauteur de cours d'eau en France. Les données sont issues du site VigieCrues.</description>
+        <pubDate>Sat, 20 Oct 2012 19:07:00 GMT</pubDate>
+      </item>
+
+     <item>
+        <title>Petit baromètre maison</title>
+        <link>http://jvjulien.free.fr/informatique/racket.php#barometre</link>
+        <guid isPermaLink="false">barometre</guid>
+        <description>Petit programme pour afficher les courbes de pression atmosphérique dans les endroits choisis.</description>
+        <pubDate>Sat, 20 Oct 2012 01:17:00 GMT</pubDate>
+      </item>
+
+     <item>
+        <title>Les dernières photos en provenance de Mars</title>
+        <link>http://jvjulien.free.fr/informatique/racket.php#mars</link>
+        <guid isPermaLink="false">photos-mars-racket</guid>
+        <description>Les dernières photos prises par le rover Curiosity sur Mars.</description>
+        <pubDate>Fri, 12 Oct 2012 15:49:00 GMT</pubDate>
+      </item>
+
+      <item>
+        <title>Curiosity s'est posé</title>
+        <link>http://www.ustream.tv/recorded/24512027</link>
+        <guid isPermaLink="false">curiosity-rover</guid>
+        <description>Le rover Curiosity a attérri comme un charme dans le cratère de Gale sur la planète Mars.</description>
+        <pubDate>Mon, 6 Aug 2012 7:20:00 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title>Le boson de Higgs</title>
+        <link>http://www.franceculture.fr/sites/default/files/sons/2012/07/s27/Higgs%20_%20Le%20nouveau%20boson%20du%20CERN%20est.mp3</link>
+        <guid isPermaLink="false">boson-higgs</guid>
+        <description>La découverte du boson de Higgs passe à la radio...</description>
+        <pubDate>Sun, 8 Jul 2012 14:42:00 GMT</pubDate>
+      </item> 
+
+      <item>
+        <title>Voyage au coeur de la matière (sans aspirine)</title>
+        <link>http://jvjulien.free.fr/reflexions/voyage-au-coeur-de-la-matiere.pdf</link>
+        <guid isPermaLink="false">voyage-coeur-matiere</guid>
+        <description>A l'ocassion de la découverte du boson de Higgs, un article de David Calvet pour ceux qui comme moi n'y connaissent rien en muons et autres fermions. Bon voyage...</description>
+        <pubDate>Fri, 6 Jul 2012 19:38:00 GMT</pubDate>
+      </item> 
+      
+      <item>
+        <title>Le bout du monde</title>
+        <link>http://www.panoramio.com/user/497034/tags/Hourdel</link>
+        <guid isPermaLink="false">boutdumondes</guid>
+        <description>Printemps 2012, la pointe du Hourdel, marée basse.</description>
+        <pubDate>Mon, 11 Jun 2012 3:08:00 GMT</pubDate>
+      </item> 
+      
+      <item>
+        <title>Abonnés Twitter</title>
+        <link>http://jvjulien.free.fr/informatique/racket.php#followers</link>
+        <guid isPermaLink="false">racket_followers</guid>
+        <description>Ce petit programme en langage Racket vous permet de suivre graphiquement et en temps réel l'évolution du nombre d'abonnés à des comptes Twitter</description>
+        <pubDate>Sat, 18 Feb 2012 09:50:00 GMT</pubDate>
+      </item> 
+      
+      <item>
+        <title>Vol au-dessus d'un champ de salicornes</title>
+        <link>http://www.youtube.com/watch?v=p8J1qbZN7pI</link>
+        <guid isPermaLink="false">vol_au_dessus_d_un_champ_de_salicornes</guid>
+        <description>Morceau d'ambiance aux accents aquatiques.</description>
+        <pubDate>Sat, 14 Jan 2012 04:41:00 GMT</pubDate>
+      </item>  
+
+      <item>
+        <title>Rivages</title>
+        <link>http://jvjulien.free.fr/mer/rivages.php</link>
+        <guid isPermaLink="false">rivages</guid>
+        <description>Ambiances au gré du littoral, entre Bretagne, Normandie et Atlantique.</description>
+        <pubDate>Thu, 22 Dec 2011 16:54:00 GMT</pubDate>
+      </item>  
+      
+		<item>
+			<title>Langage Racket</title>
+			<link>http://jvjulien.free.fr/informatique/racket.php</link>
+			<guid isPermaLink="false">page_racket</guid>
+			<description>Nouvelle rubrique consacrée au langage Racket avec des exemples de programmes.</description>
+			<pubDate>Thu, 15 Dec 2011 4:12:00 GMT</pubDate>
+		</item>
+		
+       <item>
+            <title>Le Crotoy, 16 mai 2011</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</link>
+            <guid isPermaLink="false">crotoy20110516</guid>
+            <description>Session matinale bien oxygénée par un vent de sud ouest établit. Ca avoine, c'est génial. La JP exulte et son pilote aussi...</description>
+            <pubDate>Mon, 30 May 2011 8:25:00 GMT</pubDate>
+        </item>
+ 
+       <item>
+            <title>Chasseurs de tornades</title>
+            <link>http://jvjulien.free.fr/a-propos/a-propos.php</link>
+            <guid isPermaLink="false">chasseurs_tornades_us</guid>
+            <description>Un site qui permet de suivre en direct l'évolution météo aux USA. Les chasseurs de tornades sont affichés sur la carte et l'on peut les suivre via webcam.</description>
+            <pubDate>Tue, 26 May 2011 5:02:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Rencontre</title>
+            <link>http://jvjulien.free.fr/en-chemin/en-chemin.php#croiser</link>
+            <guid isPermaLink="false">rencontre_sourire</guid>
+            <description>Croiser sur la route un sourire. S'arrêter et tendre la main. S'enivrer de soleil et courir, vers de nouveaux jours, d’insouciants lendemains.</description>
+            <pubDate>Tue, 28 Apr 2011 0:17:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>En direct de la station spatiale internationale</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#lit</link>
+            <guid isPermaLink="false">iss_live</guid>
+            <description>Suivez en direct les images retransmises depuis la station spatiale internationale ISS.</description>
+            <pubDate>Fri, 15 Apr 2011 5:41:00 GMT</pubDate>
+        </item>
+     
+	<item>
+            <title>Le soi</title>
+            <link>http://jvjulien.free.fr/loire/loire.php#Le_soi</link>
+            <guid isPermaLink="false">le_soi</guid>
+            <description>Une nuit me vint cette interrogation quelque peu exaltée, sur notre condition humaine. Pourquoi pas ?</description>
+            <pubDate>Mon, 28 Mar 2011 6:12:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Citation d'Albert Einstein</title>
+            <link>http://jvjulien.free.fr/a-propos/a-propos.php</link>
+            <guid isPermaLink="false">citation_einstein</guid>
+            <description>« Un être humain fait partie d'un tout que nous appelons "l’Univers" ; il demeure limité dans le temps et dans l'espace. Il fait l'expérience de son être, de ses pensées et de ses sensations comme étant séparés du reste – une sorte d'illusion d’optique de sa conscience. Cette illusion est pour nous une prison, nous restreignant à nos désirs personnels et à une affection réservée à nos proches. Notre tâche est de nous libérer de cette prison en élargissant le cercle de notre compassion afin qu’il embrasse tous les êtres vivants, et la nature entière, dans sa splendeur. »</description>
+            <pubDate>Mon, 14 Mar 2011 1:45:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Un nouveau monde</title>
+            <link>http://jvjulien.free.fr/reflexions/reflexions.php#nouveau_monde</link>
+            <guid isPermaLink="false">nouveau_monde</guid>
+            <description>L’humanité change. L’humanité devient vivante. Ces différentes cellules, les individus, sont désormais irrigués par le sang électronique. Un être constitué de milliards d’humains est en train de naître. Une nouvelle forme de conscience prend vie sur la planète Terre.</description>
+            <pubDate>Sat, 5 Mar 2011 8:12:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Le lit volant</title>
+            <link>http://jvjulien.free.fr/astronomie/astronomie.php#lit</link>
+            <guid isPermaLink="false">lit_volant</guid>
+            <description>Voyage spacial à bord de mon lit.</description>
+            <pubDate>Sat, 5 Feb 2011 3:22:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Le lampadaire</title>
+            <link>http://jvjulien.free.fr/reflexions/reflexions.php#lampadaire</link>
+            <guid isPermaLink="false">lampadaire</guid>
+            <description>L'hiver, la neige, le lampadaire. La valse des flocons et une méditation sur notre perception du monde.</description>
+            <pubDate>Tue, 1 Feb 2011 5:35:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Dynablaster</title>
+            <link>http://jvjulien.free.fr/informatique/wescheme.php#dynablaster</link>
+            <guid isPermaLink="false">dynablaster</guid>
+            <description>Le langage Racket (dialecte de Scheme) propose un environnement de développement riche et modulaire. Basé sur le concept de "World", Dynablaster est un petit jeu dont on peut modifier le comportement du joueur "robot". A vous de jouer !</description>
+            <pubDate>Mon, 22 Nov 2010 2:05:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Dans les nuages</title>
+            <link>http://jvjulien.free.fr/informatique/wescheme.php</link>
+            <guid isPermaLink="false">wescheme</guid>
+            <description>En levant les yeux vers le ciel, je découvrais bientôt une autre implémentation de Scheme pour le web. WeScheme s'exécute quelque part dans les nuages (les spécialistes parlent de cloud computing). Impossible de résister à un premier vol.</description>
+            <pubDate>Mon, 1 Nov 2010 1:25:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Moisson, dimanche 3 octobre 2010</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</link>
+            <guid isPermaLink="false">moisson20101003</guid>
+            <description>Petite session de planche automnale sur le lac de Moisson. Vent de sud et douceur offrent de bonnes conditions pour se dégourdir les neurones.</description>
+            <pubDate>Mon, 4 Oct 2010 8:05:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Secteur 303</title>
+            <link>http://jamen.do/t/642420</link>
+            <guid isPermaLink="false">secteur 303</guid>
+            <description>Dernier titre de l'album Horizon de Cuisine Spectrale, Secteur 303 propose Un voyage musical aux sonorités trance. Accrochez vos ceintures, départ imminent...</description>
+            <pubDate>Thu, 22 Jul 2010 1:20:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Lothop</title>
+            <link>http://jvjulien.free.fr/informatique/lothop.php</link>
+            <guid isPermaLink="false">lothop 0.0.1</guid>
+            <description>Un petit programme en Hop pour trouver les numéros du loto. Bonne chance...</description>
+            <pubDate>Fri, 17 Jun 2010 8:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Symptômes épidermiques après lecture d'un éditorial de Claude Imbert</title>
+            <link>http://jvjulien.free.fr/reflexions/reflexions.php#claude-imbert</link>
+            <guid isPermaLink="false">symptomes épidermiques</guid>
+            <description>La lecture d'un éditorial de Claude Imbert est souvent pour moi le catalyseur d'une sorte d'introspection de ma conscience politique, si faible et peu affirmée soit elle. Voici mes dernières divagations, écloses au c?ur de cette courte nuit de printemps.</description>
+            <pubDate>Wed, 9 Jun 2010 0:17:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Twithop</title>
+            <link>http://jvjulien.free.fr/informatique/twithop.php</link>
+            <guid isPermaLink="false">twithop 0.0.3</guid>
+            <description>Premières expérimentations avec le langage Hop : un petit twitter live et parlant pour s'amuser...</description>
+            <pubDate>Fri, 28 May 2010 10:30:00 GMT</pubDate>
+        </item>
+        
+        <item>
+            <title>Ride en baie de Somme</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</link>
+            <guid isPermaLink="false">ride baie de somme mai 2010</guid>
+            <description>Vidéo en caméra embarquée des sessions du 15 et 16 mai 2010 au Crotoy. Rencontre avec les veaux marin, puis session freeride dans une vingtaine de noeuds d'ouest.</description>
+            <pubDate>Wed, 26 May 2010 1:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Un long week-end de septembre sur la Côte d'Emeraude</title>
+            <link>http://jvjulien.free.fr/mer/saint-jacut.php</link>
+            <guid isPermaLink="false">week-end septembre</guid>
+            <description>4 jours de soleil et de vent, une lumière qui magnifie les contrastes entre le ciel, le sable, les rochers. et la mer. La marée haute en début d'après-midi. Comment refuser un telle invtation ?</description>
+            <pubDate>Tue, 20 Apr 2010 2:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Programmation diffuse</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php</link>
+            <guid isPermaLink="false">hop</guid>
+            <description>Voyage au pays de la programmation diffuse avec HOP.</description>
+            <pubDate>Thu, 1 Apr 2010 7:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Carte des spots de windsurf kitesurf</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</link>
+            <guid isPermaLink="false">spots windsurf kitesurf</guid>
+            <description>Les spots testés et approuvés.</description>
+            <pubDate>Wed, 24 Mar 2010 7:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Nouvelle musique : un soir sur le rocher</title>
+            <link>http://jvjulien.free.fr/musique/songs/un-soir-sur-le-rocher.mp3</link>
+            <guid isPermaLink="false">Un soir sur le rocher</guid>
+            <description>Un morceau d'ambiance, qui invite à la méditation.</description>
+            <pubDate>Mon, 17 Aug 2009 10:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Vidéo de kitesurf</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</link>
+            <guid isPermaLink="false">video kitesurf le crotoy</guid>
+            <description>Fin d'après midi à la plage du Crotoy, le 1er mai 2009.</description>
+            <pubDate>Fri, 15 May 2009 23:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Nouvelle vidéo de windsurf</title>
+            <link>http://jvjulien.free.fr/sensations/windsurf-kitesurf.php</link>
+            <guid isPermaLink="false">video windsurf vaires sur marne</guid>
+            <description>Vaires sur Marne, le 10 avril 2009. Vent de sud 15 noeuds.</description>
+            <pubDate>Fri, 10 Apr 2009 19:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Découverte dans le Monde en Tique</title>
+            <link>http://jvjulien.free.fr/informatique/informatique.php</link>
+            <guid isPermaLink="false">le Monde en Tique</guid>
+            <description>C'est en arpentant cette rue improbable de la capitale que je découvrais le Monde en Tique, petite librairie informatique où j'allais sans le savoir rencontrer la passion...</description>
+            <pubDate>Fri, 3 Apr 2009 14:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>Nouvelle rubrique</title>
+            <link>http://jvjulien.free.fr/science/science.php</link>
+            <guid isPermaLink="false">eipi+1=0</guid>
+            <description>La rubrique e^i*pi+1=0 évoque les plaisirs de l'esprit.</description>
+            <pubDate>Fri, 3 Apr 2009 12:30:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

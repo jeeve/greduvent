@@ -1,0 +1,157 @@
+
+@font-face {
+ font-family: "Raleway";
+    src : url('/fonts/Raleway-Regular.eot');
+    src : url('/fonts/Raleway-Regular.woff') format('woff'),
+          url('/fonts/Raleway-Regular.svg') format('svg'),
+          url('/fonts/Raleway-Regular.ttf') format('truetype');		  
+}
+/*
+body {
+	background-attachment: fixed;
+}
+*/
+
+#sidebar .nav a:hover {
+	background-color: #d9dff2;
+}
+
+.navbar-toggle { /* Garde affiché le bouton de menu */
+	position: absolute;
+	right: 10px;
+	display: inline;
+}
+
+p, h1, li, .navbar-brand  {
+    font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+}
+
+p, .sidebar-offcanvas {
+	font-size: 120%;
+}
+
+#sidebar li {
+  border-bottom-width:0px;
+}
+
+p {
+	margin: 5px;
+}
+
+h2 { font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+	font-size: 120%;
+	margin-left: 5px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.numero-page {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.ombre-image {
+box-shadow: 2px 2px 10px 2px rgba(119, 119, 119, 0.75);
+-moz-box-shadow: 2px 2px 10px 2px rgba(119, 119, 119, 0.75);
+-webkit-box-shadow: 2px 2px 10px 2px rgba(119, 119, 119, 0.75);
+}
+
+.row-cadre { /* util pour les cadres en mode xs (donne un marge quand meme) */
+	margin: 0px;
+}
+
+a:link 
+{ 
+ text-decoration:underline; 
+} 
+
+.legende {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.image-dans-texte {
+	margin: 10px;
+}
+
+@media (max-width: 767px) { 
+	.image-dans-texte {
+		margin: 5px;
+	}
+}
+
+/* pb affiche que 11 colonnes
+.vcenter { 
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+*/
+
+/* pour le centrage vertical des row http://stackoverflow.com/questions/20547819/vertical-align-with-bootstrap-3 */
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+/* Extra small devices (767px and down) */
+@media (max-width: 767px) { 
+    .row.vertical-align {
+        display: block; /* turn off the flexible box layout */
+    }
+}
+
+.font-fixe-mini { /* utilisée dans la page impressions "intolérable intolérance" */
+	font-family: monospace;
+	font-size: 6px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 7px;
+}
+
+.font-code {
+	font-family: monospace; font-size: 12px; line-height: 15px;
+}
+
+hr {
+	height: 2px; color: grey; background-color:grey; width: 80%; border: none;
+	margin-bottom: 30px;
+}
+
+.sommaire li {
+	text-align: center;
+	padding-bottom: 20px;
+	list-style-type: none;
+	font-size: 120%;
+	margin-left: -20px;
+}
+
+a.external {
+	background: url(../images/lien-externe.gif) no-repeat 100% 0px;
+	padding-right: 12px;
+    margin: 0;
+    background-position: right center; 	
+}
+
+/* en mode xs */
+@media screen and (max-width: 767px) { 
+ p, .sidebar-offcanvas {
+	font-size: 100%;
+	}
+ .sommaire li {
+	font-size: 100%; 
+ }	
+}
+
+/* utilisé pour compenser le décalage des signets à cause de la navbar fixe */
+/* http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+a[name] {
+  padding-top: 50px;
+  margin-top: -50px;
+  display: inline-block; /* required for webkit browsers */
+  vertical-align: top;
+}
