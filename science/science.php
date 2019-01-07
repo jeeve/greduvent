@@ -1067,8 +1067,9 @@
                                     <tr>
                                        <td colspan="2">
                                           <p>
-                                             <a name="principe-inertie-fin"></a>La réponse expliquée par Aurélien Barrau
+                                             <a name="principe-inertie-fin"></a>L'explication d'Aurélien Barrau au détour d'un cours sur l'Univers :
 											       </p>
+												   <br>
 <p align="center">
 <div class="embed-responsive embed-responsive-16by9 ombre-image">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TX1HxOF5evk?start=3899" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1085,9 +1086,9 @@
                                           <a href="#principe-inertie-fin"><font size="1">Fin</font></a>
                                        </td>
                                        <td class="colonne-auteur">
-                                          <a target="_blank" href="https://twitter.com/jeeve">
-                                          <font size="1">@jeeve</font></a><font size="1">, 
-                                          30/12/2015 23h32</font>
+                                          <a target="_blank" href="https://twitter.com/AurelienBarrau">
+                                          <font size="1">@AurelienBarrau</font></a><font size="1">, 
+                                          28/07/2017 10h00</font>
                                        </td>
                                     </tr>
                                  </table>
