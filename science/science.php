@@ -1049,7 +1049,7 @@
                                           <a href="#sommaire"><font size="1">Sommaire</font></a><font size="1"> 
                                           - <a href="#principe-inertie">Principe d&#39;inertie</a> -
                                           </font>
-                                          <a href="#principe-inertie-fin"><font size="1">Fin</font></a>
+                                          <font size="1">Fin</font>
                                        </td>
                                        <td class="colonne-auteur">
                                           <a target="_blank" href="https://twitter.com/jeeve">
@@ -1060,7 +1060,41 @@
                                  </table>
                               </td>
                            </tr>
-                        </table>
+
+                           <tr>
+                              <td>
+                                 <table class="table-interne">
+                                    <tr>
+                                       <td colspan="2">
+                                          <p>
+                                             <a name="principe-inertie-fin"></a>La réponse expliquée par Aurélien Barrau
+											       </p>
+<p align="center">
+<div class="embed-responsive embed-responsive-16by9 ombre-image">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TX1HxOF5evk?start=3899" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</p>
+                                    
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="colonne-lien">
+                                          <a href="#sommaire"><font size="1">Sommaire</font></a><font size="1"> 
+                                          - <a href="#principe-inertie">Principe d&#39;inertie</a> -
+                                          </font>
+                                          <a href="#principe-inertie-fin"><font size="1">Fin</font></a>
+                                       </td>
+                                       <td class="colonne-auteur">
+                                          <a target="_blank" href="https://twitter.com/jeeve">
+                                          <font size="1">@jeeve</font></a><font size="1">, 
+                                          30/12/2015 23h32</font>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>						   
+						   
+						   </table>
                         <a name="teleportation-ionique"></a>
                         <table class="table-externe">
                            <tr>
