@@ -1037,7 +1037,7 @@
                                           <p>
                                              <a name="principe-inertie-fin"></a>effectivement, 
                                              d&#39;ailleurs cela fait echo à un petit texte post ado
-                                             <a href="http://jvjulien.free.fr/astronomie/astronomie.php#lit">http://jvjulien.free.fr/astronomie/astronomie.php#lit</a><br>
+                                             <a href="https://greduvent.herokuapp.com/astronomie/astronomie.php#lit">https://greduvent.herokuapp.com/astronomie/astronomie.php#lit</a><br>
                                              il est 23h30 et je me couche sur le lit bien accroché à 
                                              chait pas combien de km/h autour du soleil. vendredi on aura 
                                              fait un tour de plus...
@@ -1075,6 +1075,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TX1HxOF5evk?start=3899" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </p>
+<br>
                                     
                                        </td>
                                     </tr>
