@@ -166,7 +166,7 @@
 			   <br>	
 				<a name="poses"></a>
 			    <h2><a href="lac-lery-poses.php">Léry-Poses</a></h2>
-		<p><a data-toggle="collapse" data-target="#item-vue-poses" class="lien-collapse">Orientations</a> - <a data-toggle="collapse" data-target="#item-webcam-poses" class="lien-collapse">Webcam</a> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
+		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" /> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
 							<img src="images/spots-lery-poses-2.jpg" width=400 class="img-responsive ombre-image" alt="Les mises à l'eau en fonction du vent" title="Les mises à l'eau en fonction du vent">
@@ -229,7 +229,7 @@
 			<br>		
 				<a name="jablines"></a>
 			    <h2>Jablines</h2>
-				<p><a data-toggle="collapse" data-target="#item-vue-jablines" class="lien-collapse">Orientations favorables : S - N</a>  - <a data-toggle="collapse" data-target="#item-webcam-jablines" class="lien-collapse">Webcam</a> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Orientations favorables : S - N" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-jablines" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -290,7 +290,7 @@
 			   <br>	
 <a name="moisson"></a>			   
 			    <h2>Moisson Lavacourt</h2>
-				<p><a data-toggle="collapse" data-target="#item-vue-moisson" class="lien-collapse">Orientations favorables : SO - NE</a> - <a data-toggle="collapse" data-target="#item-webcam-moisson" class="lien-collapse">Webcam</a> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Orientations favorables : SO - NE" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" /> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-moisson" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -353,7 +353,7 @@
 			   <br>	   
 			   <a name="vaires"></a>
 			    <h2>Vaires sur Marne</h2>
-				<p><a data-toggle="collapse" data-target="#item-vue-vaires" class="lien-collapse">Orientations favorables : SE - NO</a> - <a data-toggle="collapse" data-target="#item-webcam-vaires" class="lien-collapse">Webcam</a> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Orientations favorables : SE - NO" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -414,7 +414,7 @@
 			   <br>	   
 			   <a name="grande-paroisse"></a>
 			    <h2><a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
-				<p><a data-toggle="collapse" data-target="#item-vue-grande-paroisse" class="lien-collapse">Orientations favorables : E - NE</a> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Orientations favorables : E - NE" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
