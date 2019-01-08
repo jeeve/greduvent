@@ -66,7 +66,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.weatherlink.com/map/33782285-df4e-4432-a3b3-06ddf1b3680a" target="_blank"></a></em></p></td>
+						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -93,7 +93,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.weatherlink.com/map/33782285-df4e-4432-a3b3-06ddf1b3680a" target="_blank"></a></em></p></td>
+						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -514,7 +514,7 @@
       <?php include("../includes/footer.php"); ?>	
 	  	
 	  <script src="js/jquery-ui.min.js"></script>
-	  <script type="text/javascript" src="js/meteo2.js"></script>	  
+	  <script type="text/javascript" src="js/meteo3.js"></script>	  
       <script> 
 	    function getWebCam() {
 			jQuery.ajax({
