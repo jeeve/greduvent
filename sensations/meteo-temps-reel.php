@@ -1,4 +1,3 @@
-<?php header("Access-Control-Allow-Origin: *"); ?>
 <html>
 <head>
 <link href="/css/style.css" rel="stylesheet">
