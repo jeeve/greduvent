@@ -44,7 +44,7 @@
 	  <script type="text/javascript" src="js/meteo3.js"></script>	  
       <script> 
 		station = "<?php echo $station; ?>"
-		var myVar =	setInterval(getMeteo, 15000);		
+		var myVar =	setInterval(getMeteo, 30000);		
         $(document).ready(function($) { 
 			getMeteo();		 
 		});
