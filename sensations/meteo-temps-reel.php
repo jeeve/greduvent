@@ -40,7 +40,7 @@
 				</table>
 				
 	  <script src="/js/jquery.min.js"></script>
-	  <script type="text/javascript" src="js/meteo2.js"></script>	  
+	  <script type="text/javascript" src="/sensations/js/meteo2.js"></script>	  
       <script> 
 		station = "<?php echo $station; ?>"
 		var myVar =	setInterval(getMeteo, 30000);		
