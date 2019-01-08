@@ -14,8 +14,8 @@ function getMeteo() {
 			
 			if (vitesseVent != '') {
 				var vitesse = parseFloat(vitesseVent) * 0.539957; // conversion km/h en Noeuds
-				$('.vitesse-vent').html(vitesse.toFixed(1) + ' n');
-				$('#vitesse-vent-s').html(vitesse.toFixed(1) + ' n');
+				$('.vitesse-vent').html(vitesse.toFixed(1) + ' kts');
+				$('#vitesse-vent-s').html(vitesse.toFixed(1) + ' kts');
 			}
 			else
 			{

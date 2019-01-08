@@ -20,7 +20,8 @@
 
 		$line = $lines[getLigne($lines, "Wind from") + 1];
 		$p = strpos($line, '>');
-		$line = substr($line, $p+1, strpos($line, '<') + 1);
+		$line = substr($line, $p+1, strlen($line) + 1);
+		$line = substr($line, 0, strpos($line, '<'));
 		$orientationVent = trim($line);
 
 		$line = $lines[getLigne($lines, "windCompassSpeed") + 2];
@@ -29,7 +30,8 @@
 
 		$line = $lines[getLigne($lines, 'data-variable="temperature"') + 1];
 		$p = strpos($line, '>');
-		$line = substr($line, $p+1, strpos($line, '<') + 2);
+		$line = substr($line, $p+1, strlen($line) + 1);
+		$line = substr($line, 0, strpos($line, '<'));
 		$tempAir = trim($line);	
 		
 		$arr = array('station' => $station, 'vitesseVent' => $vitesseVent, 'orientationVent' => $orientationVent, 'temperatureExterieure' => $tempAir);
