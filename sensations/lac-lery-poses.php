@@ -530,7 +530,7 @@
 		
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
-		station = "33782285-df4e-4432-a3b3-06ddf1b3680a";
+		station = "I27LERY4";
 		var myVar =	setInterval(getMeteo, 30000);		
 
 	function maPosition(position) {		
