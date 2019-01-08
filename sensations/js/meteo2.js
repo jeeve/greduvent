@@ -2,7 +2,8 @@ var station;
 
 function getMeteo() {
 		$.ajax({
-			url: "https://meteo-station.herokuapp.com/temps-reel-2.php?station=" + station,
+			url: "https://www.weatherlink.com/map/data/station/" + station,
+			//url: "https://meteo-station.herokuapp.com/temps-reel-2.php?station=" + station,
 			type: 'GET',
 			crossDomain: true,
 			dataType: 'json'

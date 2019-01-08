@@ -1,9 +1,11 @@
+<?php header("Access-Control-Allow-Origin: *"); ?>
 <html>
 <head>
 <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
 	  <?php
+	  
 		$station = '33782285-df4e-4432-a3b3-06ddf1b3680a';
 		if ($_GET['station'] != '') {
 				$station = $_GET['station'];
