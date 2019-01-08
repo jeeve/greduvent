@@ -14,19 +14,15 @@ function getMeteo() {
 			
 			if (vitesseVent != '') {
 				var vitesse = parseFloat(vitesseVent) * 0.539957; // conversion km/h en Noeuds
-				$('.vitesse-vent').html(vitesse.toFixed(1) + ' kts');
-				$('#vitesse-vent-s').html(vitesse.toFixed(1) + ' kts');
+				$('.vitesse-vent').html(Math.round(vitesse) + ' kts');
 			}
 			else
 			{
 				$('.vitesse-vent').html('');
-				$('#vitesse-vent-s').html('');
 			}
 			
 			$('.nom-sation').html(nomStation);
 			$('.orientation-vent').html(orientationVent);
-			$('#orientation-vent-s').html(orientationVent);
 			$('.temperature-air').html(temperatureExterieure);
-			$('.temperature-air-s').html(temperatureExterieure);
 			});
 }
