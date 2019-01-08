@@ -277,7 +277,7 @@
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
 				   <div class="embed-responsive fond-table encadrement-table" style="height:160px;">
-  					<iframe src="meteo-temps-reel.php?station=12d9760b-0b8e-4564-9537-13551756fd15&credit=0" height=160></iframe>	
+  					<iframe src="meteo-temps-reel.php?station=I77DAMPM4&credit=0" height=160></iframe>	
 					</div>
 					<br>
 					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
@@ -339,7 +339,7 @@
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
 				   <div class="embed-responsive fond-table encadrement-table" style="height:160px;">
-  					<iframe src="meteo-temps-reel.php?station=64a25cf9-5156-425f-9706-e334dc0bc1d0&credit=0" height=160></iframe>	
+  					<iframe src="meteo-temps-reel.php?station=IMONTREU227&credit=0" height=160></iframe>	
 					</div>
 					<br>
 					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
@@ -402,7 +402,7 @@
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
 				   <div class="embed-responsive fond-table encadrement-table" style="height:160px;">
-  					<iframe src="meteo-temps-reel.php?station=12d9760b-0b8e-4564-9537-13551756fd15&credit=0" height=160></iframe>	
+  					<iframe src="meteo-temps-reel.php?station=ILEDEFRA44&credit=0" height=160></iframe>	
 					</div>
 					<br>
 					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
@@ -453,7 +453,7 @@
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
 				   <div class="embed-responsive fond-table encadrement-table" style="height:160px;">
-  					<iframe src="meteo-temps-reel.php?station=a14ba5bb-d3f8-4ef8-bb7f-54d3aba82a39&credit=0" height=160></iframe>	
+  					<iframe src="meteo-temps-reel.php?station=ISAINTMA1672&credit=0" height=160></iframe>	
 					</div>
 					<br>
 					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
