@@ -216,7 +216,7 @@
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
 				   <div class="embed-responsive fond-table encadrement-table" style="height:160px;">
-  					<iframe src="meteo-temps-reel.php?station=33782285-df4e-4432-a3b3-06ddf1b3680a&credit=0" height=160></iframe>	
+  					<iframe src="meteo-temps-reel.php?station=I27LERY4&credit=0" height=160></iframe>	
 					</div>
 					<br>
 					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
