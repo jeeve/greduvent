@@ -531,7 +531,7 @@
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
 		station = "I27LERY4";
-		var myVar =	setInterval(getMeteo, 30000);		
+		var myVar =	setInterval(getMeteo, 15000);		
 
 	function maPosition(position) {		
 			var lat1 = position.coords.latitude;
