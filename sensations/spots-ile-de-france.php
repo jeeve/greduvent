@@ -165,7 +165,8 @@
 -->		
 			   <br>	
 				<a name="poses"></a>
-			    <h2><a href="lac-lery-poses.php">Léry-Poses</a></h2>
+			    <h2><input id="div-poses" type="button" value=" - " data-toggle="collapse" data-target="#item-div-poses" />  <a href="lac-lery-poses.php">Léry-Poses</a></h2>
+<div id="item-div-poses" class="collapse in">		
 		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" /> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
@@ -225,10 +226,11 @@
 
 				 </div>		
 			</div>
-
-			<br>		
+			<br>
+</div>		
 				<a name="jablines"></a>
-			    <h2>Jablines</h2>
+			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  Jablines</h2>
+<div id="item-div-jablines" class="collapse in">					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Orientations favorables : S - N" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-jablines" class="collapse">
@@ -246,7 +248,7 @@
 		</div>
 	</div>
 	  
-  <br>
+  <br>  
 </div> 		
 			   
 			   <div class="row">
@@ -288,8 +290,11 @@
 
 			
 			   <br>	
+</div>	
+		   
 <a name="moisson"></a>			   
-			    <h2>Moisson Lavacourt</h2>
+			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" />  Moisson Lavacourt</h2>
+<div id="item-div-moisson" class="collapse in">					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Orientations favorables : SO - NE" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" /> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-moisson" class="collapse">
@@ -350,9 +355,11 @@
 
 			
 
-			   <br>	   
+			   <br>
+</div>			   
 			   <a name="vaires"></a>
-			    <h2>Vaires sur Marne</h2>
+			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  Vaires sur Marne</h2>
+<div id="item-div-vaires" class="collapse in">	
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Orientations favorables : SE - NO" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
@@ -411,9 +418,11 @@
 			</div>		
 </div>
 
-			   <br>	   
+			   <br>	  
+</div>			   
 			   <a name="grande-paroisse"></a>
-			    <h2><a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
+			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
+<div id="item-div-grande-paroisse" class="collapse in">					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Orientations favorables : E - NE" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
@@ -475,7 +484,7 @@
 </div>
 -->
 <br>
-
+</div>
 
 <div class="row">
 <div class="col-xs-12 fond">
@@ -567,8 +576,7 @@
 
 		});
 		}
-		
-		
+				
 		function getWebCamEuroDisney() {
 			d = new Date();
 			jQuery('#webcam-jablines').attr('src', 'https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg?'+d.getTime());			
@@ -578,6 +586,47 @@
 		var myCam = setInterval(getWebCams, 30000);	// 30 s
 	  
 		jQuery(document).ready(function($) {
+			jQuery('#div-poses').click(function() {
+				if (jQuery('#div-poses').attr('value') == ' + ') {
+					jQuery('#div-poses').attr('value', ' - ');
+				}
+				else {
+					jQuery('#div-poses').attr('value', ' + ');
+				}	
+			});
+			jQuery('#div-jablines').click(function() {
+				if (jQuery('#div-jablines').attr('value') == ' + ') {
+					jQuery('#div-jablines').attr('value', ' - ');
+				}
+				else {
+					jQuery('#div-jablines').attr('value', ' + ');
+				}	
+			});
+			jQuery('#div-moisson').click(function() {
+				if (jQuery('#div-moisson').attr('value') == ' + ') {
+					jQuery('#div-moisson').attr('value', ' - ');
+				}
+				else {
+					jQuery('#div-moisson').attr('value', ' + ');
+				}	
+			});
+			jQuery('#div-vaires').click(function() {
+				if (jQuery('#div-vaires').attr('value') == ' + ') {
+					jQuery('#div-vaires').attr('value', ' - ');
+				}
+				else {
+					jQuery('#div-vaires').attr('value', ' + ');
+				}	
+			});
+			jQuery('#div-grande-paroisse').click(function() {
+				if (jQuery('#div-grande-paroisse').attr('value') == ' + ') {
+					jQuery('#div-grande-paroisse').attr('value', ' - ');
+				}
+				else {
+					jQuery('#div-grande-paroisse').attr('value', ' + ');
+				}	
+			});			
+					
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(maPosition);
 			}
