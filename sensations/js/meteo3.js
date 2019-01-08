@@ -7,13 +7,13 @@ function getMeteo() {
 			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
-			var temperatureExterieure = data.temperatureExterieure ' °C'; 
+			var temperatureExterieure = data.temperatureExterieure + ' °C'; 
 			var vitesseVent = data.vitesseVent;
 			var orientationVent = data.orientationVent;
 			var nomStation = data.station;
 			
 			if (vitesseVent != '') {
-				var vitesse = parseFloat(vitesseVent) * 0,539957; // conversion km/h en Noeuds
+				var vitesse = parseFloat(vitesseVent) * 0.539957; // conversion km/h en Noeuds
 				$('.vitesse-vent').html(vitesse.toFixed(1) + ' n');
 				$('#vitesse-vent-s').html(vitesse.toFixed(1) + ' n');
 			}

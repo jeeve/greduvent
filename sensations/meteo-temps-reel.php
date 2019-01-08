@@ -5,7 +5,7 @@
 <body>
 	  <?php
 	  
-		$station = '33782285-df4e-4432-a3b3-06ddf1b3680a';
+		$station = 'I27LERY4';
 		if ($_GET['station'] != '') {
 				$station = $_GET['station'];
 		}	
@@ -36,12 +36,12 @@
 					</tr>
 -->					
 					<tr>
-						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a class="nom-sation" href="https://www.weatherlink.com/map/<?php echo $station; ?>" target="_blank"></a></em><?php if ($credit != '0') { echo '<br><a href="http://jvjulien.free.fr" target="_blank">au gré du vent 1.0</a>'; } ?></p></td>
+						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=<?php echo $station; ?>" target="_blank"></a></em><?php if ($credit != '0') { echo '<br><a href="http://jvjulien.free.fr" target="_blank">au gré du vent 1.0</a>'; } ?></p></td>
 					</tr>						
 				</table>
 				
 	  <script src="/js/jquery.min.js"></script>
-	  <script type="text/javascript" src="/sensations/js/meteo3.js"></script>	  
+	  <script type="text/javascript" src="js/meteo3.js"></script>	  
       <script> 
 		station = "<?php echo $station; ?>"
 		var myVar =	setInterval(getMeteo, 30000);		
