@@ -175,9 +175,9 @@
       </div>
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>	
-	  <script type="text/javascript" src="js/meteo2.js"></script>	  
-      <script> 
-	    station = "c788dd48-d3d9-4cdc-845f-0bf404360799";
+	  <script type="text/javascript" src="js/meteo3.js"></script>	  
+      <script>  
+	    station = "ISAINTMA1672";
 		var myVar =	setInterval(getMeteo, 30000);	
          $(document).ready(function($) {	 
 			getMeteo();
