@@ -66,7 +66,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -93,7 +93,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="text-align: right; font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
