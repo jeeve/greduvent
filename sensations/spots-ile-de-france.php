@@ -366,7 +366,7 @@
 			   <a name="vaires"></a>
 			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  Vaires sur Marne</h2>
 <div id="item-div-vaires" class="collapse in">	
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Orientations favorables : SE - NO" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Orientations favorables : ESE - ONO" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
