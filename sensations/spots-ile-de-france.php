@@ -158,7 +158,7 @@
 					
 					<div class="col-sm-4">
 						<div class="fond-table encadrement-table liste-spots">
-						    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoJ-PWelqj9dB7RscAqHaDMOxZFufa8NEN9cTwtywbe_ct0VynX0ssMMPkAdpCv6DsEptrhGXDW_kY/pubhtml" target="_blank"><h2 style="display: inline-block;" >Spots</h2></a>
+						    <a href="https://docs.google.com/spreadsheets/d/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/edit?usp=sharing" target="_blank"><h2 style="display: inline-block; text-decoration: underline;" >Spots</h2></a>
     <div style="position: absolute; top: -5px; right: 40px;">
 	<SELECT id="menu-vent" style="margin-top: 15px;">
 	<option value="" selected>Vent</option>
