@@ -125,7 +125,7 @@
    <body>
       <div class="page-container">
          <!-- top navbar -->
-         <?php include("./includes/navbar.php"); ?>	  
+         <?php include("../includes/navbar.php"); ?>	  
          <div class="container">
             <div class="row row-offcanvas row-offcanvas-left">
                <!-- sidebar -->
@@ -152,16 +152,42 @@
 			<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	
 		</div>	
   </div>
-					<div class="hidden-xs col-sm-4">
+    					<div class="visible-xs fond">
+						<br><br>
+					</div>
+					
+					<div class="col-sm-4">
 						<div class="fond-table encadrement-table liste-spots">
-						    <h2>Spots</h2>
-							<ul>	
-							<li><a href="#poses">Léry-Poses</a></li>
-							<li><a href="#jablines">Jablines</a></li>
-							<li><a href="#moisson">Moisson Lavacourt</a></li>
-							<li><a href="#vaires">Vaires sur Marne</a></li>
-							<li><a href="#grande-paroisse">La Grande-Paroisse</a></li>
-							</ul>
+						    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoJ-PWelqj9dB7RscAqHaDMOxZFufa8NEN9cTwtywbe_ct0VynX0ssMMPkAdpCv6DsEptrhGXDW_kY/pubhtml" target="_blank"><h2 style="display: inline-block;" >Spots</h2></a>
+    <div style="position: absolute; top: -5px; right: 40px;">
+	<SELECT id="menu-vent" style="margin-top: 15px;">
+	<option value="" selected>Vent</option>
+    <option value="N">N</option>
+    <option value="NNE">NNE</option>
+    <option value="NE">NE</option>
+    <option value="ENE">ENE</option>
+    <option value="E">E</option>	
+	<option value="ESE">ESE</option>
+	<option value="SE">SE</option>
+	<option value="SSE">SSE</option>
+	<option value="S">S</option>
+    <option value="SSO">SSO</option>
+    <option value="SO">SO</option>
+    <option value="OSO">OSO</option>
+    <option value="O">O</option>
+    <option value="ONO">ONO</option>	
+	<option value="NO">NO</option>
+	<option value="NNO">NNO</option>
+    </SELECT>
+	</div>
+
+							<table>
+							<tr><td><p><a href="#poses">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
+							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
+							<tr><td><p><a href="#moisson">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
+							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
+							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
+							</table>
 						</div>		
 					</div>
   
@@ -533,13 +559,15 @@
          </div>
       </div>
       <!--/.page-container-->
-      <?php include("../includes/footer.php"); ?>	
+      <?php include("../includes/footer.php"); ?>
+	  <script type="text/javascript" src="js/vent-spot.js"></script>		
 	  <script type="text/javascript" src="js/commentaires.js"></script>	
 	  <script>
+	 /*
 	          jQuery('#menu-destination').change(function(){
 				document.location.href = $(this).find('option:selected').attr('value');
 				});
-										
+		*/								
 	function maPosition(position) {		
 			var lat1 = position.coords.latitude;
 			var lon1 = position.coords.longitude;	
@@ -612,6 +640,11 @@
 					jQuery(this).addClass('btn-releve');										
 				}
 			});
+			
+	         jQuery('#menu-vent').change(function(){
+				orientationVent = $(this).find('option:selected').attr('value');
+				getOrientationVentSpot();
+				});
 					
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(maPosition);
