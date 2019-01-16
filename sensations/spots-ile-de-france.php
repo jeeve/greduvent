@@ -214,7 +214,7 @@
 				<a name="jablines"></a>
 			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  Jablines</h2>
 <div id="item-div-jablines" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Orientations : S - N" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-jablines" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -278,7 +278,7 @@
 <a name="moisson"></a>			   
 			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" />  Moisson Lavacourt</h2>
 <div id="item-div-moisson" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Orientations : SO - NE" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-moisson" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -343,7 +343,7 @@
 			   <a name="vaires"></a>
 			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  Vaires sur Marne</h2>
 <div id="item-div-vaires" class="collapse in">	
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Orientations : ESE - ONO" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -406,7 +406,7 @@
 			   <a name="grande-paroisse"></a>
 			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
 <div id="item-div-grande-paroisse" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Orientations : E - NE" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
