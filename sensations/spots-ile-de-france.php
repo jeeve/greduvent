@@ -100,9 +100,9 @@
 					
 					<div class="col-sm-4">
 						<div class="fond-table encadrement-table liste-spots">
-						    <a href="https://docs.google.com/spreadsheets/d/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/edit?usp=sharing" target="_blank"><h2 style="display: inline-block; text-decoration: underline;" >Spots</h2></a>
+						    <a href="https://docs.google.com/spreadsheets/d/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/edit?usp=sharing" target="_blank"><h2 id="titre-spots" >Spots</h2></a>
     <div  style="position: absolute; top: -5px; right: 40px;">
-	<SELECT id="menu-vent" style="margin-top: 15px;">
+	<SELECT id="menu-vent">
 	<option value="" selected>Vent</option>
     <option value="N">N</option>
     <option value="NNE">NNE</option>

@@ -23,6 +23,16 @@
 			text-align: center;
 		}
 
+#titre-spots {
+	display: inline-block; 
+	text-decoration: underline;
+	margin-top: 10px;
+}
+
+#menu-vent {
+	margin-top: 20px;
+}
+
 @media screen and (min-width: 768px) {
 		.liste-spots table td {
 			padding-top: 10px;
