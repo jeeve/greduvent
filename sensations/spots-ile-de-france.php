@@ -30,13 +30,13 @@
 			text-align: center;
 		}
 
-		.liste-spots ul {
-			font-size: 120%;
-		}
-		.liste-spots li {
+@media screen and (min-width: 768px) {
+		.liste-spots table td {
 			padding-top: 10px;
 			padding-bottom: 10px;
-		}
+		}			
+}
+
 		.btn-releve {
 			border-style: outset;
 		}
@@ -47,12 +47,6 @@
 @media screen and (max-width: 767px) {
 	.table-commentaires {
 		font-size: 80%;
-	}
-}
-
-@media screen and (minx-width: 768px) {	
-	.table-commentaires {
-		font-size: 100%;
 	}
 }
 
@@ -159,7 +153,7 @@
 					<div class="col-sm-4">
 						<div class="fond-table encadrement-table liste-spots">
 						    <a href="https://docs.google.com/spreadsheets/d/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/edit?usp=sharing" target="_blank"><h2 style="display: inline-block; text-decoration: underline;" >Spots</h2></a>
-    <div style="position: absolute; top: -5px; right: 40px;">
+    <div  style="position: absolute; top: -5px; right: 40px;">
 	<SELECT id="menu-vent" style="margin-top: 15px;">
 	<option value="" selected>Vent</option>
     <option value="N">N</option>
