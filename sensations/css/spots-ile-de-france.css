@@ -29,6 +29,11 @@
 			padding-bottom: 10px;
 		}			
 }
+@media screen and (max-width: 767px) {
+		.liste-spots  table {
+			margin-bottom: 0;
+		}			
+}
 
 		.btn-releve {
 			border-style: outset;
@@ -69,7 +74,7 @@
 	#comparer {
 		position: absolute;
 		right: 30px;
-		bottom: 30px;
+		bottom: 15px;
 	}	
 }
 
