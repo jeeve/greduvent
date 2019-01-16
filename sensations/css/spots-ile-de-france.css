@@ -1,0 +1,59 @@
+		.lien-collapse {
+			cursor: pointer;
+			text-decoration-line: underline;
+		}
+
+		.webcam {
+			position: relative;
+		}
+		.webcam img {
+			position: relative;
+			z-index: 1;
+		}
+		.webcam .webcam-texte {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			z-index: 10;
+		}	  
+		.webcam-texte p {
+			color: silver;
+			text-align: center;
+		}
+
+@media screen and (min-width: 768px) {
+		.liste-spots table td {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}			
+}
+
+		.btn-releve {
+			border-style: outset;
+		}
+		.btn-enfonce {
+			border-style: inset;
+		}
+		
+@media screen and (max-width: 767px) {
+	.table-commentaires {
+		font-size: 80%;
+	}
+}
+
+.table-commentaires td {
+	padding-right: 5px; 
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+.note-bonne  {
+	color: green;
+}
+.note-moyenne  {
+	color: orange;
+}
+.note-mauvaise {
+	color: red;
+}

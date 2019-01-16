@@ -17,37 +17,63 @@ function getOrientationVentSpot() {
 			dataType: 'json'
 		}).then(function(data) {
 				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse;
+				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse
 				for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 					ligne = data.feed.entry[i];
 					vent = ligne.title.$t;
 					if (vent == orientationVent) {
-						spPoses = ligne.gsx$poses.$t;
-						spVairessurmarne = ligne.gsx$vairessurmarne.$t;
-						spJablines = ligne.gsx$jablines.$t;
-						spMoisson = ligne.gsx$moisson.$t;
-						spGrandeparoisse = ligne.gsx$grandeparoisse.$t;
+						nPoses = ligne.gsx$poses.$t;
+						nVairessurmarne = ligne.gsx$vairessurmarne.$t;
+						nJablines = ligne.gsx$jablines.$t;
+						nMoisson = ligne.gsx$moisson.$t;
+						nGrandeparoisse = ligne.gsx$grandeparoisse.$t;
 						
-						if (spPoses != '') {
-							spPoses = spPoses + ' / 10';
+						spPoses = '';
+						spVairessurmarne = '';
+						spJablines = '';
+						spMoisson = '';
+						spGrandeparoisse = '';
+						
+						if (nPoses != '') {
+							spPoses = '<span class="note">' + nPoses + '</span> / 10';
 						}
-						if (spVairessurmarne != '') {
-							spVairessurmarne = spVairessurmarne + ' / 10';
+						if (nVairessurmarne != '') {
+							spVairessurmarne = '<span class="note">' + nVairessurmarne + '</span> / 10';
 						}
-						if (spJablines != '') {
-							spJablines = spJablines + ' / 10';
+						if (nJablines != '') {
+							spJablines = '<span class="note">' + nJablines + '</span> / 10';
 						}
-						if (spMoisson != '') {
-							spMoisson = spMoisson + ' / 10';
+						if (nMoisson != '') {
+							spMoisson = '<span class="note">' + nMoisson + '</span> / 10';
 						}
-						if (spGrandeparoisse != '') {
-							spGrandeparoisse = spGrandeparoisse + ' / 10';
+						if (nGrandeparoisse != '') {
+							spGrandeparoisse = '<span class="note">' + nGrandeparoisse + '</span> / 10';
 						}
 						
 						$('.notePoses').html(spPoses);
 						$('.noteVairesSurMarne').html(spVairessurmarne);
 						$('.noteJablines').html(spJablines);
 						$('.noteMoisson').html(spMoisson);
-						$('.noteGrandeParoisse').html(spGrandeparoisse);						
+						$('.noteGrandeParoisse').html(spGrandeparoisse);
+
+						$('.note').each(function(index, el) { 
+							var elem = $(el);
+							var x = parseInt(elem.text());
+							if (x > 7) {
+								elem.removeClass();
+								elem.addClass('note-bonne');
+							}
+							else {
+								if (x < 3) {
+									elem.removeClass();
+									elem.addClass('note-mauvaise');									
+								}
+								else {
+									elem.removeClass();
+									elem.addClass('note-moyenne');									
+								}
+							}
+						});
 					}
 				}
 			});
