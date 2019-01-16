@@ -9,6 +9,45 @@
 			jQuery('#map-grande-paroisse').attr('src', itineraireSrc + '1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e1!3m2!1sfr!2sfr!4v1546091365802');			
 	}		
 
+	function clickComparer() {
+		if (jQuery('.notePoses').text() == '' && jQuery('.noteVairesSurMarne').text() == '' && jQuery('.noteJablines').text() == '' && jQuery('.noteMoisson').text() == '' && jQuery('.noteGrandeparoisse').text() == '') {
+			jQuery('div[id^="item-div"]').collapse("show");
+		} 
+		else {
+		if (jQuery('.notePoses').text() != '') {
+			jQuery('#item-div-poses').collapse("show");
+		}
+		else {
+			jQuery('#item-div-poses').collapse("hide");	
+		}
+		if (jQuery('.noteVairesSurMarne').text() != '') {
+			jQuery('#item-div-vaires').collapse("show");
+		}
+		else {
+			jQuery('#item-div-vaires').collapse("hide");	
+		}
+		if (jQuery('.noteJablines').text() != '') {
+			jQuery('#item-div-jablines').collapse("show");
+		}
+		else {
+			jQuery('#item-div-jablines').collapse("hide");	
+		}
+		if (jQuery('.noteMoisson').text() != '') {
+			jQuery('#item-div-moisson').collapse("show");
+		}
+		else {
+			jQuery('#item-div-moisson').collapse("hide");	
+		}
+		if (jQuery('.noteGrandeParoisse').text() != '') {
+			jQuery('#item-div-grande-paroisse').collapse("show");
+		}
+		else {
+			jQuery('#item-div-grande-paroisse').collapse("hide");	
+		}
+		}		
+	}
+	
+	
 	    function getWebCams() {
 			getWebCamPoses();
 			getWebCamMoisson();

@@ -130,8 +130,16 @@
 							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
 							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
 							</table>
+							
+						<br>
+						<div id="comparer">
+							<button onclick="clickComparer()">Comparer</button>
+						</div>								
+							
 						</div>		
-					</div>
+
+						
+					</div>													
   
 </div> 		
 <!--

@@ -57,3 +57,14 @@
 .note-mauvaise {
 	color: red;
 }
+
+#comparer {
+	width: 100%;
+	text-align: center;
+}
+@media screen and (min-width: 768px) {
+	#comparer {
+		margin-bottom: 10px;
+	}	
+}
+
