@@ -30,6 +30,11 @@
 }
 
 #menu-vent {
+	position: absolute; 
+	top: -5px; 
+	right: 40px;
+}
+#menu-vent select {
 	margin-top: 20px;
 }
 
@@ -83,7 +88,7 @@
 @media screen and (max-width: 767px) {
 	#comparer {
 		position: absolute;
-		right: 30px;
+		right: 40px;
 		bottom: 15px;
 	}	
 }
