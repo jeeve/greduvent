@@ -125,8 +125,8 @@
 
 							<table>
 							<tr><td><p><a href="#poses">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
-							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
 							<tr><td><p><a href="#moisson">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
+							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
 							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
 							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
 							</table>
@@ -211,70 +211,7 @@
 			</div>
 			<br>
 </div>		
-				<a name="jablines"></a>
-			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  Jablines</h2>
-<div id="item-div-jablines" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
-               
-			<div id="item-vue-jablines" class="collapse">
-			<div class="embed-responsive embed-responsive-4by3 ombre-image">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13272.819129650208!2d2.7189477352299387!3d48.91141958867993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124228312" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>					<br>		
-			</div>	
-			<br>
-			</div>
-			   
-<div id="item-webcam-jablines" class="collapse">			
-    <div class="webcam">
-		<img id="webcam-jablines" class="img-responsive ombre-image" src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg">
-		<div class="webcam-texte">
-			<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  
-		</div>
-	</div>
-	  
-  <br>  
-</div> 		
-			   
-			   <div class="row">
-					<div class="col-sm-8">
-						<div class="fond-table encadrement-table">
-
-						<script id="wg_fwdg_90210_3_1538749208510">
-(function (window, document) {
-  var loader = function () {
-    var arg = ["s=60274","m=3","uid=wg_fwdg_90210_3_1538749208510","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
-   "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
-    var script = document.createElement("script");
-    var tag = document.getElementsByTagName("script")[0];
-    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
-    tag.parentNode.insertBefore(script, tag);
-  };
-  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
-})(window, document);
-</script>						
-
-<!--
-						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
--->						
-
-						</div>
-						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a> - Le forum <a href="http://windsurfing77.forumactif.com/" target="_blank">Windsurfing 77</a></p>						
-					</div>			
-				  <div class="visible-xs"><br></div>						
-				   <div class="col-sm-4">
-				   <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
-  					<iframe src="meteo-temps-reel.php?station=I77DAMPM4&credit=0"></iframe>	
-					</div>
-					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-jablines" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d422235.08052076533!2d2.2754300925254305!3d48.904374951691736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e1!3m2!1sfr!2sfr!4v1544557168668" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                        </div>
-
-				 </div>		
-			</div>
-
-			
-			   <br>	
-</div>	
-		   
+				
 <a name="moisson"></a>			   
 			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" />  Moisson Lavacourt</h2>
 <div id="item-div-moisson" class="collapse in">					
@@ -340,8 +277,79 @@
 
 			   <br>
 </div>			   
+				
+				
+				
+				
+				
+				
+				
+				<a name="jablines"></a>
+			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  Jablines</h2>
+<div id="item-div-jablines" class="collapse in">					
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+               
+			<div id="item-vue-jablines" class="collapse">
+			<div class="embed-responsive embed-responsive-4by3 ombre-image">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13272.819129650208!2d2.7189477352299387!3d48.91141958867993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124228312" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>					<br>		
+			</div>	
+			<br>
+			</div>
+			   
+<div id="item-webcam-jablines" class="collapse">			
+    <div class="webcam">
+		<img id="webcam-jablines" class="img-responsive ombre-image" src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg">
+		<div class="webcam-texte">
+			<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  
+		</div>
+	</div>
+	  
+  <br>  
+</div> 		
+			   
+			   <div class="row">
+					<div class="col-sm-8">
+						<div class="fond-table encadrement-table">
+
+						<script id="wg_fwdg_90210_3_1538749208510">
+(function (window, document) {
+  var loader = function () {
+    var arg = ["s=60274","m=3","uid=wg_fwdg_90210_3_1538749208510","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
+   "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
+    var script = document.createElement("script");
+    var tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+    tag.parentNode.insertBefore(script, tag);
+  };
+  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+})(window, document);
+</script>						
+
+<!--
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+-->						
+
+						</div>
+						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a> Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>						
+					</div>			
+				  <div class="visible-xs"><br></div>						
+				   <div class="col-sm-4">
+				   <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
+  					<iframe src="meteo-temps-reel.php?station=I77DAMPM4&credit=0"></iframe>	
+					</div>
+					<br>
+					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
+<iframe id="map-jablines" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d422235.08052076533!2d2.2754300925254305!3d48.904374951691736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e1!3m2!1sfr!2sfr!4v1544557168668" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                        </div>
+
+				 </div>		
+			</div>
+
+			
+			   <br>	
+</div>	
+		   
 			   <a name="vaires"></a>
-			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  Vaires sur Marne</h2>
+			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  <a href="vaires-sur-marne.php">Vaires sur Marne</a></h2>
 <div id="item-div-vaires" class="collapse in">	
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
@@ -387,7 +395,8 @@
 						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
 -->
 					</div>	
-						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=254" target="_blank">My wind session</a> - Le forum <a href="http://windsurfing77.forumactif.com/" target="_blank">Windsurfing 77</a></p>						
+						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=254" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
+				
 				</div>			
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
@@ -440,7 +449,8 @@
 						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
 -->
 					</div>	
-						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum des <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Tontons Windsurfers</a> - Le forum <a href="http://windsurfing77.forumactif.com/" target="_blank">Windsurfing 77</a></p>						
+						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
+						
 				</div>			
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">

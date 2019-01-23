@@ -475,19 +475,7 @@
 				  Test de la V8 dans le vent léger
 				  </p>
 				  </div></div>				  		  
-<!--			  
-				  <a name="commentaires"></a>
-				  <h2>Commentaires</h2>
-				  <p>
-				  <a href="https://goo.gl/forms/ZlDIbV7DJhXjArND3" target="_blank">Poster un commentaire <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a> 
-				  </p>
-				  
-				   <br>
-				 <div class="hidden-xs"> 
-					<table id="tableCommentaires" class="table-commentaires"></table>
-					<br>
-				  </div>
--->	
+	
 				  <br>		  
 			 
 				  <div id="swipe">

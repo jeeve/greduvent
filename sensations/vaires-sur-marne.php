@@ -2,7 +2,7 @@
 <html lang="fr">
    <head>
       <title>Vaires-sur-Marne</title>
-      <META NAME="Description" CONTENT="La base de Vaires sur Marne avec webcam, archives, météo en temps réel et prévisions, lien vers l'association WLPA et site de covoiturage."/>
+      <META NAME="Description" CONTENT="La base de Vaires sur Marne avec webcam, archives, météo en temps réel et prévisions, lien vers les forums."/>
 	  <?php include("../includes/header.php"); ?>	
 	  <link rel="stylesheet" href="css/jquery-ui.min.css">
 	  <link href="css/lac-lery-poses.css" rel="stylesheet">
@@ -115,8 +115,7 @@
 		 
                   <br>
 				  
-                  <p class="legende">En direct du lac de Léry-Poses et <a href="http://windsurf-lery-poses.soforums.com" target="_blank">ses passionnés</a> - <a href="http://wlpa.e-monsite.com/" target="_blank">association WLPA <img src="images/logo-wlpa.png"></a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
-                  </p>
+                  <p class="legende">Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
                   
 				  
 				  <br><br>
@@ -124,18 +123,18 @@
                     <!-- <div class="col-xs-12 col-sm-2"></div> -->
                      <div class="col-xs-12 col-sm-6 fond">
                         <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-poses" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d421188.1259875271!2d1.5370175529156327!3d49.028173071130745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e1289bac44658f%3A0xe940a5c757b0bf2a!2sL%C3%A9ry-Poses+en+Normandie%2C+Poses!3m2!1d49.302783!2d1.209404!5e1!3m2!1sfr!2sfr!4v1544558819114" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>				
+<iframe id="map-vaires" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d105647.94469813356!2d2.439899995693516!3d48.862143539942224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61074aa8587ab%3A0x40b82c3688c48d0!2sVaires-sur-Marne!3m2!1d48.873608999999995!2d2.6395429999999998!5e1!3m2!1sfr!2sfr!4v1544557341867" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
-						<p class="legende">Situation géographique</p>
+						<p class="legende">Itinéraire</p>
 						
-						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a></p>
+						
 					</div>
 						
 						<div class="col-xs-12 col-sm-6 fond">
-							<a href="images/spots-lery-poses.jpg" target="_blank">
-							<img src="images/spots-lery-poses.jpg" class="img-responsive ombre-image" alt="Les mises à l'eau en fonction du vent" title="Les mises à l'eau en fonction du vent">
-							</a>
-							<p class="legende">Les mises à l'eau</p>
+			<div class="embed-responsive embed-responsive-4by3 ombre-image">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11109.004540217287!2d2.619497111646004!3d48.864038185964624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124922241" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		
+			</div>
+							<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a></p>
 						</div>
                     
                   </div>
@@ -149,14 +148,14 @@
 
 					<div class="hidden-xs col-sm-8" style="margin-left: 5px;">
 						<div class="fond-table encadrement-table" style="width: 540px;">
-						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33126&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Poses&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
-						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lake_des_deux_amants?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lake_des_deux_amants?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Lac des deux Amants</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33136&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Vaires-sur-Marn&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lake_des_deux_amants?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Lac des deux Amants</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
 <!--						<iframe src="http://www.windguru.cz/int/distr_iframe.php?u=196518&s=4864&c=4a30721b47&lng=fr" width="520" height="238" frameborder="0" style="overflow-x: auto; overflow-y: auto; margin-left: 5px;"></iframe>
 -->
-<script id="wg_fwdg_4864_3_1544556530603">
+<script id="wg_fwdg_60276_3_1544556036427">
 (function (window, document) {
   var loader = function () {
-    var arg = ["s=4864","m=3","uid=wg_fwdg_4864_3_1544556530603","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
+    var arg = ["s=60276","m=3","uid=wg_fwdg_60276_3_1544556036427","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
    "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
     var script = document.createElement("script");
     var tag = document.getElementsByTagName("script")[0];
@@ -165,17 +164,17 @@
   };
   window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
 })(window, document);
-</script>
-						</div>		
+</script>	
+					</div>		
 					</div>
 
 					<div class="hidden-xs col-sm-2" style="margin-left: 65px;">
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
-							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
-							<a href="http://www.xcweather.co.uk/forecast/L%C3%A9ry_poses" target="_blank">XCWeather</a><br><br>
-							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a>
+							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
+							<a href="https://www.ventusky.com/?p=48.78;2.64;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
 							</p>
 						</div>		
 					</div>
@@ -189,10 +188,10 @@
 					<div class="visible-xs col-xs-12 fond">
 						<div class="fond-table encadrement-table">
 						
-<script id="wg_fwdg_4864_3_1546007481425">
+<script id="wg_fwdg_60276_3_1548236615805">
 (function (window, document) {
   var loader = function () {
-    var arg = ["s=4864","m=3","uid=wg_fwdg_4864_3_1546007481425","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
+    var arg = ["s=60276","m=3","uid=wg_fwdg_60276_3_1548236615805","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
    "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
     var script = document.createElement("script");
     var tag = document.getElementsByTagName("script")[0];
@@ -202,13 +201,13 @@
   window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
 })(window, document);
 </script>
+
 						
-						<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank"><img src="images/logo-windfinder.png" alt="superforecast" title="superforecast"></a>	
-						<a href="http://www.windalert.com/map#49.299,2.002,9,1,!33126,2" target="_blank"><img src="images/logo-windalert.jpg"></a>								
-						<a href="https://www.windguru.cz/4864" target="_blank"><img src="images/logo-windguru.gif"></a>
-						<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank"><img src="images/logo-ventusky.png"></a>
-						<a href="http://www.xcweather.co.uk/forecast/L%C3%A9ry_poses" target="_blank"><img src="images/logo-xcweather.png"></a>
-						<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank"><img src="images/logo-meteofrance.png"></a>
+						<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank"><img src="images/logo-windfinder.png" alt="superforecast" title="superforecast"></a>	
+						<a href="https://www.windalert.com/map#48.862,2.63,14,1,!33136" target="_blank"><img src="images/logo-windalert.jpg"></a>								
+						<a href="https://www.ventusky.com/?p=48.78;2.64;8&l=wind-10m" target="_blank"><img src="images/logo-ventusky.png"></a>
+						<a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne" target="_blank"><img src="images/logo-xcweather.png"></a>
+						<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank"><img src="images/logo-meteofrance.png"></a>
 						</div>		
 					</div>	
 										<div class="col-xs-12 visible-xs fond">
@@ -221,19 +220,22 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
-<!--			  
-				  <a name="commentaires"></a>
-				  <h2>Commentaires</h2>
-				  <p>
-				  <a href="https://goo.gl/forms/ZlDIbV7DJhXjArND3" target="_blank">Poster un commentaire <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a> 
-				  </p>
-				  
-				   <br>
-				 <div class="hidden-xs"> 
-					<table id="tableCommentaires" class="table-commentaires"></table>
-					<br>
+				  <br><a name="lery-poses-21-12-18"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/nKog-ZBmtOs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
--->	
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=219593" target="_blank">Vaires le retour...</a><br>
+Vent parfaitement orienté ! Du bonheur...
+Quelques bon spin-out surtout en plein largue à 47 km/h !
+				  </p>
+				  </div></div>
+
 				  <br>		  
 			 
 				  <div id="swipe">
@@ -246,7 +248,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<p class="numero-page">page 14b</p>
+						<p class="numero-page">page 14c</p>
 						
 					</div>
                   </div>
@@ -282,12 +284,12 @@
 		jQuery(document).ready(function($) {
 		getWebCam();	 
 		getMeteo();
-		/*
+		
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
 
-		*/
+		
 		 });
       </script>
    </body>
