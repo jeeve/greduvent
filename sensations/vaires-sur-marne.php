@@ -220,7 +220,7 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
-				  <br><a name="lery-poses-21-12-18"></a>
+				  <br><a name="vaires-13-01-19"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
