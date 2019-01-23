@@ -506,7 +506,7 @@
       <script> 
 	    function getWebCam() {
 			jQuery.ajax({
-				url: 'https://meteo-station.herokuapp.com/webcam-viewsurf-src-video.php?station=HEUDEBOUVILLE&url=3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen',
+				url: '/sensations/webcam-viewsurf-src-video.php?station=HEUDEBOUVILLE&url=3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen',
 				type: 'GET',
 				crossDomain: true,
 				dataType: 'json'

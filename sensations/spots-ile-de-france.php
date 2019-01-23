@@ -415,7 +415,7 @@
 			   <a name="grande-paroisse"></a>
 			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
 <div id="item-div-grande-paroisse" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -423,6 +423,18 @@
 			</div>
 			<br>
 			</div>
+			
+<div id="item-webcam-grande-paroisse" class="collapse">			
+  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+    
+	<video id="video-grande-paroisse" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
+	<div class="webcam-texte">
+		<p><a href='https://www.viewsurf.com/univers/trafic/vue/7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon' target="_blank">Melun</a> / A6 près de Melun, et Fontainebleau, vue orientée vers Lyon</p>  
+	</div>
+	  
+  </div> 
+  <br>
+</div> 				
 				
 				
 

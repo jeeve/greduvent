@@ -4,6 +4,24 @@
       <title>La Grande-Paroisse</title>
       <META NAME="Description" CONTENT="Le lac de La Grande Paroisse."/>
 	  <?php include("../includes/header.php"); ?>	
+	  <style>
+		#webcam {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.5);
+		}	  
+		#meteo-tems-reel {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		#meteo-tems-reel p, #webcam p {
+			color: silver;
+		}
+	  </style>	  
    </head>
    <body>
       <div class="page-container">
@@ -16,66 +34,90 @@
                <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
 			   
-			   
+			    <h1>La Grande-Paroisse</h1> 
                <div class="row">
-				<div class="col-sm-8">
-				  <h1>La Grande-Paroisse</h1>
-				</div>
-				<br>
-				  <div class="col-xs-1"></div>
-				  <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
-				  <table id="meteo">
+				
+  <div class="col-xs-12 col-sm-12 fond">
+    <br>
+	<div class="visible-xs">
+		<p><a href='https://www.viewsurf.com/univers/trafic/vue/7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon' target="_blank">Melun</a> / A6 près de Melun, et Fontainebleau, vue orientée vers Lyon</p>  
+	</div>
+	
+  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+    <div>
+	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
+    </video>
+	<div id="webcam" class="hidden-xs">
+		<p><a href='https://www.viewsurf.com/univers/trafic/vue/7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon' target="_blank">Melun</a> / A6 près de Melun, et Fontainebleau, vue orientée vers Lyon</p>  
+	</div>
+					  <div id="meteo-tems-reel" class="hidden-xs">
+				  <table>
 					<tr>
-						<td><p>Vitesse vent </p></td>
-						<td><p class="vitesse-vent"></p></td>
+						<td><p>Vitesse vent </p></td><td><p id="vitesse-vent" class="vitesse-vent"></p></td>
 					</tr>
 					<tr>
-						<td><p>Orientation </p></td>
-						<td><p class="orientation-vent"></p></td>
+						<td><p>Orientation </p></td><td><p id="orientation-vent" class="orientation-vent"></p></td>
 					</tr>				
 					<tr>
-						<td><p>Air </p></td>
-						<td><p class="temperature-air"></p></td>
+						<td><p>Air </p></td><td><p id="temperature-air" class="temperature-air"></p></td>
 					</tr>
-					<!--
+					
 					<tr>
-						<td><p>Eau </p></td>
-						<td><p id="temperature-eau"></p></td>
-					</tr>
--->					
-					<tr>
-						<td colspan=2><p style="text-align: right; font-size: 10px;"><em>Données temps réel <a class="nom-sation" href="https://www.weatherlink.com/map/c788dd48-d3d9-4cdc-845f-0bf404360799" target="_blank"></a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
-				</div>
-						
-				  <br><br>
-                  <div class="row">
-                    <!-- <div class="col-xs-12 col-sm-2"></div> -->
-                     <div class="col-xs-12 col-sm-6 fond">
-                        <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.581507550365!2d2.894412360008576!3d48.37266914912942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ef5d9c58ece64f%3A0xef2f7065145151ff!2sEXO+77+La+Grande+Paroisse!5e1!3m2!1sfr!2sfr!4v1538747020066" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
-						<p class="legende">Situation géographique</p>
-						
-						
-					</div>
-						
-						<div class="col-xs-12 col-sm-6 fond">
-							<a href="http://eauplate.com/Paroisse.html" target="_blank">
-							<img style="margin-left: auto; margin-right: auto;" src="images/grande-paroisse.gif" class="img-responsive ombre-image" alt="Les mises à l'eau" title="Les mises à l'eau">
-							</a>
-							
-							<p class="legende"><a href="http://eauplate.com/Paroisse.html" target="_blank">Le spot sur eauplate.com</a></p>
-							<br>
-							<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a></p>
-							<br>
-							<p class="legende">Le forum des <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Tontons Windsurfers</a></p>
-						</div>
-                    
-                  </div>
+  </div>
+</div>  
+  
+  <div class="visible-xs"><br></div>
+  </div> 
+  
+  
+  <div class="visible-xs">
+   <div class="col-xs-1"></div>
 
+				  <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
+				  <table>
+					<tr>
+						<td><p>Vitesse vent </p></td><td><p id="vitesse-vent" class="vitesse-vent"></p></td>
+					</tr>
+					<tr>
+						<td><p>Orientation </p></td><td><p id="orientation-vent" class="orientation-vent"></p></td>
+					</tr>				
+					<tr>
+						<td><p>Air </p></td><td><p id="temperature-air" class="temperature-air"></p></td>
+					</tr>
+					
+					<tr>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
+					</tr>						
+				</table>
+				</div>
+											
+				</div>	
+
+</div>				
+	
+ 
+
+<!--			   
+			    <div class="row">
+				<div class="col-xs-4">
+                  <h1>Lac de Léry-Poses</h1>
+				</div>
+				<div class="col-xs-8">	
+				  <p style="text-align:right;">
+				  <a href="#commentaires">Un commentaire sur cette page, une suggestion, un problème... <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+				  </p>
+				 </div>
+				</div> 
+-->				 
+                  <br>
+				  
+						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
+			
+				
                   <br><br>			  
 				  
                   <h2>Prévisions méteo</h2>
@@ -123,9 +165,22 @@
 				<div class="row">
 					<div class="visible-xs col-xs-12 fond">
 						<div class="fond-table encadrement-table">
+<script id="wg_fwdg_60276_3_1548236615805">
+(function (window, document) {
+  var loader = function () {
+    var arg = ["s=60276","m=3","uid=wg_fwdg_60276_3_1548236615805","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
+   "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
+    var script = document.createElement("script");
+    var tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+    tag.parentNode.insertBefore(script, tag);
+  };
+  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+})(window, document);
+</script>
 						<a href="http://www.windalert.com/spot/33106" target="_blank"><img src="images/logo-windalert.jpg"></a>								
 						<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank"><img src="images/logo-windfinder.png" alt="superforecast" title="superforecast"></a>	
-						<a href="https://www.windguru.cz/90210" target="_blank"><img src="images/logo-windguru.gif"></a>
+
 						<a href="https://www.ventusky.com/?p=48.334;2.921;9&l=wind-10m" target="_blank"><img src="images/logo-ventusky.png"></a>
 						<a href="https://www.xcweather.co.uk/forecast/grande-paroisse" target="_blank"><img src="images/logo-xcweather.png"></a>
 						<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank"><img src="images/logo-meteofrance.png"></a>
@@ -177,9 +232,24 @@
       <?php include("../includes/footer.php"); ?>	
 	  <script type="text/javascript" src="js/meteo3.js"></script>	  
       <script>  
+	    function getWebCam() {
+			jQuery.ajax({
+				url: '/sensations/webcam-viewsurf-src-video.php?url=7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon',
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				console.log(data.src);
+			jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);	
+			});
+		}
+		
+		var myCam = setInterval(getWebCam, 30000);	// 30 s
+	  
 	    station = "ISAINTMA1672";
 		var myVar =	setInterval(getMeteo, 30000);	
-         $(document).ready(function($) {	 
+         $(document).ready(function($) {	
+			getWebCam();		 
 			getMeteo();
 		 });
 	  </script>		

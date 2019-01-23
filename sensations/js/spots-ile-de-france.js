@@ -52,11 +52,12 @@
 			getWebCamPoses();
 			getWebCamMoisson();
 			getWebCamEuroDisney();
+			getWebCamGrandeParoisse();
 		}
 		
 		function getWebCamPoses() {
 			jQuery.ajax({
-				url: 'https://meteo-station.herokuapp.com/webcam-viewsurf-src-video.php?station=HEUDEBOUVILLE&url=3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen',
+				url: '/sensations/webcam-viewsurf-src-video.php?station=HEUDEBOUVILLE&url=3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen',
 				type: 'GET',
 				crossDomain: true,
 				dataType: 'json'
@@ -69,7 +70,7 @@
 		
 		function getWebCamMoisson() {
 			jQuery.ajax({
-				url: 'https://meteo-station.herokuapp.com/webcam-viewsurf-src-video.php?station=BUCHELAY&url=3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris',
+				url: '/sensations/webcam-viewsurf-src-video.php?station=BUCHELAY&url=3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris',
 				type: 'GET',
 				crossDomain: true,
 				dataType: 'json'
@@ -79,6 +80,20 @@
 
 		});
 		}
+		
+		function getWebCamGrandeParoisse() {
+			jQuery.ajax({
+				url: '/sensations/webcam-viewsurf-src-video.php?url=7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon',
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				console.log(data.src);
+				jQuery('#video-grande-paroisse').attr('src', data.src);
+
+		});
+		}
+		
 				
 		function getWebCamEuroDisney() {
 			d = new Date();
