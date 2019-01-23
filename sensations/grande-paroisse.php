@@ -116,7 +116,27 @@
                   <br>
 				  
 						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
+			<br>
 			
+                  <div class="row">
+                    <!-- <div class="col-xs-12 col-sm-2"></div> -->
+                     <div class="col-xs-12 col-sm-6 fond">
+                        <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
+<iframe id="map-grande-paroisse" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d357010.49566299294!2d2.410506468175938!3d48.62537999052597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e1!3m2!1sfr!2sfr!4v1546091365802" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>				
+						</div>
+						<p class="legende">Itinéraire</p>
+						
+						
+					</div>
+						
+						<div class="col-xs-12 col-sm-6 fond">
+			<div class="embed-responsive embed-responsive-4by3 ombre-image">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11273.578551281074!2d2.8976667986773608!3d48.373243326464745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546125059041" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
+			</div>
+							<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a></p>
+						</div>
+                    
+                  </div>			
 				
                   <br><br>			  
 				  
@@ -244,6 +264,14 @@
 			});
 		}
 		
+	function maPosition(position) {		
+			var lat1 = position.coords.latitude;
+			var lon1 = position.coords.longitude;	
+			var itineraireSrc = 'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d' + lat1 + '!2d' + lon1 + '!4m5!';	
+			jQuery('#map-grande-paroisse').attr('src', itineraireSrc + 'ls0x47e1289bac44658f%3A0xe940a5c757b0bf2a!2sL%C3%A9ry-Poses+en+Normandie%2C+CD+110%2C+27740+Poses!3m2!1d49.302783!2d1.209404!5e1!3m2!1sfr!2sfr!4v1546773316328');
+	}
+		
+		
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
 	    station = "ISAINTMA1672";
@@ -251,6 +279,10 @@
          $(document).ready(function($) {	
 			getWebCam();		 
 			getMeteo();
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(maPosition);
+			}
+
 		 });
 	  </script>		
    </body>
