@@ -48,7 +48,7 @@
                   <div class="row vertical-align">
                     
                      <div class="col-xs-12 col-sm-6 fond">
-					 <h2><a target="_blank" href="http://windsurf-sessions.eg2.fr/rider_matos.php?id_rider=3185">Equipement</a></h2>
+					 <h2><a target="_blank" href="http://windsurf-sessions.eg2.fr/mws_new/rider_matos.php?id_rider=3185">Equipement</a></h2>
 					 <p>
 					<h2>Windsurf</h2>
 					<ul>
@@ -98,38 +98,7 @@
 					</div>
 					</div>
   <br>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-1 fond"></div>
-				  <div class="col-xs-12 col-sm-10 fond">
 
-				<a name="webcam-poses"></a>
-				  <p align="center">
-				  <!--
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-				  <iframe id="WLPVantagePro" src="http://meteocamtroislacs.dtdns.net/axis-cgi/mjpg/video.cgi?resolution=800x600&amp;compression=30&amp;camera=1" scrolling="no" width="800" height="600" frameborder="0" style="margin-left: -5px; margin-top: -5px;"></iframe>
-				  </div>
-				  -->
-<?php
-if (!(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
-    strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE)) {				  
-?>				  
-					<a href="lac-lery-poses.php">
-                     <img id="webcam-image" src="http://meteocamtroislacs.dtdns.net/mjpg/video.mjpg" width="1024px" height="576px" class="img-responsive ombre-image">                  
-					</a> 
-<?php				  
-} else {
-?>
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-				  <iframe id="WLPVantagePro" src="http://meteocamtroislacs.dtdns.net/axis-cgi/mjpg/video.cgi?resolution=800x600&amp;compression=30&amp;camera=1" scrolling="no" width="800" height="600" frameborder="0" style="margin-left: -5px; margin-top: -5px;"></iframe>
-				  </div>
-<?php
-}
-?>	
-				</p>
-				  <p class="legende">En direct du <a href="lac-lery-poses.php">lac de Léry-Poses</a>
-				  </p>
-				</div>
-				</div>	
 
 
 <p align="center">
@@ -142,18 +111,18 @@ if (!(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
 		<p align="center">
 		<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
 		
-		<h2 align="center"><a target="_blank" href="http://windsurf-sessions.eg2.fr/rider_sessions.php?id_rider=3185">Récits de sessions</a></h2>   
+		<h2 align="center"><a target="_blank" href="http://windsurf-sessions.eg2.fr/mws_new/rider_sessions.php?id_rider=3185">Récits de sessions</a></h2>   
       </p>
 	  </td></tr></tbody></table></div>
 
 				
 				  <a name="ca-zef-au-crotoy"></a>
 				  <p align="center">
-				  <a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">
+				  <a href="http://windsurf-sessions.eg2.fr/mws_new/infos_session.php?id_session=166956" target="_blank">
 				  <img alt="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." title="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." src="images/windsurf-full-speed.jpg" class="img-responsive ombre-image" />
 				  </a>
 				  </p>
-				  <p class="legende"><a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">Ca zef au Crotoy</a></p>
+				  <p class="legende"><a href="http://windsurf-sessions.eg2.fr/mws_new/infos_session.php?id_session=166956" target="_blank">Ca zef au Crotoy</a></p>
 				  
 				  <br><br>
 				  <p align="center">
@@ -192,7 +161,7 @@ if (!(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
 				  </div>
 				  </p>
 				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?target=id_rider&id_rider=3185&id_session=166966" target="_blank">
+					<a href="http://windsurf-sessions.eg2.fr/mws_new/infos_session.php?target=id_rider&id_rider=3185&id_session=166966" target="_blank">
 				  Session kitesurf au Crotoy, le 1er mai 2009</a><br>
 				  Un peu de vent mais pour ce qui est du soleil...
 				  </p>
