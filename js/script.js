@@ -4,6 +4,7 @@ String.prototype.replaceAll = function(search, replacement) {
 };	
 
 $(document).ready(function() {
+	
 	$('a').filter(function() {
 		return this.hostname && this.hostname != location.hostname &&
 						this.hostname.indexOf('http://jvjulien') == -1 && 
@@ -12,5 +13,15 @@ $(document).ready(function() {
 						$(this).children('span').length == 0 && 
                         $(this).text().indexOf('@') == -1 // && $(this).text().indexOf('contrib') == -1;
 	}).addClass('external').attr("target","_blank");;
-
+/*
+	var images = $('img').filter(function() {
+		var attr = $(this).attr('title');
+		return (typeof attr !== typeof undefined && attr !== false);
+		});
+	
+	images.each(function () {
+		var imageHtml = $(this).clone();
+		$(this).replaceWith('<figure>' + imageHtml.html() + '</figure>');
+	});
+*/
 });
