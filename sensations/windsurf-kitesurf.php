@@ -85,8 +85,7 @@
 					<div class="col-xs-12 col-sm-10 fond">
 					<div class="embed-responsive embed-responsive-4by3 ombre-image">  
 					<p align="center">
-<iframe scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps/ms?hl=fr&amp;ie=UTF8&amp;t=k&amp;msa=0&amp;msid=200553150720547264858.000479f72ea8ec718d36b&amp;ll=48.385442,-0.65918&amp;spn=5.107788,9.360352&amp;z=6&amp;output=embed" frameborder="0" height="350" width="425" class="embed-responsive-item"></iframe>
-					</p>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1tYJab9GlTo3NNKg2sGabgFLygHw" width="640" height="480"></iframe>					</p>
 					</div>
 								
 					<p class="legende">
