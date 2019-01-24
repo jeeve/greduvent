@@ -85,7 +85,8 @@
 					<div class="col-xs-12 col-sm-10 fond">
 					<div class="embed-responsive embed-responsive-4by3 ombre-image">  
 					<p align="center">
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1tYJab9GlTo3NNKg2sGabgFLygHw" width="640" height="480"></iframe>					</p>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1tYJab9GlTo3NNKg2sGabgFLygHw" width="640" height="480"></iframe>
+					</p>
 					</div>
 								
 					<p class="legende">
@@ -117,7 +118,7 @@
 				
 				  <a name="ca-zef-au-crotoy"></a>
 				  <p align="center">
-				  <a href="http://windsurf-sessions.eg2.fr/mws_new/infos_session.php?id_session=166956" target="_blank">
+				  <a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">
 				  <img alt="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." title="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." src="images/windsurf-full-speed.jpg" class="img-responsive ombre-image" />
 				  </a>
 				  </p>
