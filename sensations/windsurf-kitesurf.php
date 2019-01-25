@@ -122,7 +122,7 @@
 				  <img alt="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." title="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." src="images/windsurf-full-speed.jpg" class="img-responsive ombre-image" />
 				  </a>
 				  </p>
-				  <p class="legende"><a href="http://windsurf-sessions.eg2.fr/mws_new/infos_session.php?id_session=166956" target="_blank">Ca zef au Crotoy</a></p>
+				  <p class="legende"><a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">Ca zef au Crotoy</a></p>
 				  
 				  <br><br>
 				  <p align="center">
