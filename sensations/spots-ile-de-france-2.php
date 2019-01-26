@@ -601,8 +601,8 @@
 	
 <script>
 
-	$('#wg_fwdg_4864_3_1544556530603').ready(function() {
-		console.log($('#wg_fwdg_4864_3_1544556530603 .day1').first().html());
+	$('#item-div-poses #iFrameResizer0').ready(function() {
+		console.log($('#item-div-poses #iFrameResizer0 .day1').first().html());
 	});		
 
 </script>	
