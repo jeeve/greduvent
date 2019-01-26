@@ -15,7 +15,7 @@
 		}			
 		});
 	  </script>	
-	  
+<!--	  
 	  <script>
 (function(w,d,s,i,n){w[n]=w[n]||{q:[],init:function(o){w[n].initOpts=o;},ready:function(c){w[n].q.push(c);}};
 setTimeout(function(j,k){if(!d.getElementById(i)){k=d.getElementsByTagName(s)[0];j=d.createElement(s);j.id=i;
@@ -40,5 +40,5 @@ WonderPush.init({
     }
 });
 </script>
-	  
+-->	  
 	  
