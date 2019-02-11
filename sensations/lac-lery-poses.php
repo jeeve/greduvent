@@ -288,6 +288,20 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
+				  <br><a name="lery-poses-9-2-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/UpWjw20K0DQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=220540" target="_blank">Un samedi full taquet. Le pied !</a>
+				  </p>
+				  </div></div>
+
 				  <br><a name="lery-poses-21-12-18"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
