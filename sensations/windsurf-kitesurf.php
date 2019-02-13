@@ -3,7 +3,16 @@
    <head>
       <title>windsurf / kitesurf</title>
       <META NAME="Description" CONTENT="La passion du windsurf et du kite. Equipement, sessions, vidéos."/>
-	  <?php include("../includes/header.php"); ?>	
+	  <?php include("../includes/header.php"); ?>
+		<style>
+			.chart {
+  width: 100%; 
+  min-height: 450px;
+}
+.row {
+  margin:0 !important;
+}
+</style>
    </head>
    <body>
       <div class="page-container">
@@ -87,13 +96,10 @@
 					<p align="center">
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1tYJab9GlTo3NNKg2sGabgFLygHw" width="640" height="480"></iframe>
 					</p>
-					</div>
-								
+					</div>								
 					<p class="legende">
 					<a target="_blank" href="http://maps.google.fr/maps/ms?hl=fr&amp;ie=UTF8&amp;t=k&amp;msa=0&amp;msid=200553150720547264858.000479f72ea8ec718d36b&amp;ll=48.385442,-0.65918&amp;spn=5.107788,9.360352&amp;z=6&amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left">
 					Quelques spots testés et approuvés</a></p>
-					 
-
 					</div>
 					</div>
 					</div>
@@ -114,6 +120,15 @@
 		<h2 align="center"><a target="_blank" href="http://windsurf-sessions.eg2.fr/mws_new/rider_sessions.php?id_rider=3185">Récits de sessions</a></h2>   
       </p>
 	  </td></tr></tbody></table></div>
+	  
+<br>	  
+<div class="row">
+  <div class="col-xs-12 col-sm-1 fond"></div>
+  <div class="col-xs-12 col-sm-10 ombre-image">
+    <div id="chart_div2" class="chart"></div>
+  </div>
+</div>
+<br>	   
 
 				
 				  <a name="ca-zef-au-crotoy"></a>
@@ -200,15 +215,63 @@
          <!--/.container--></div>
       </div>
       <!--/.page-container-->
-	  <?php include("../includes/footer.php"); ?>		  
+	  <?php include("../includes/footer.php"); ?>	
+      <script src="https://www.google.com/jsapi"></script> 	  
       <script> 
-         $(document).ready(function($) {
-			 
-		 if ($('#webcam-image').innerHeight() == 0 || ($('#webcam-image').innerHeight() == $('#webcam-image').innerWidth())) { // la webcam ne marche pas
-			 $('#webcam-image').parent().html('<img id="webcam-image" src="images/mire.png" width="1024px" height="576px" class="img-responsive ombre-image">');
-		 }
-		 
-		 });
+	  var vitesses = [];
+	  
+		$(document).ready(function($) {
+			$.ajax({
+				url: "https://spreadsheets.google.com/feeds/list/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/default/public/values?alt=json",
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				vitesses = [];
+				var ligne, d, v100, vmax, i;
+				var v = [];
+				vitesses[0] = ['Date', 'V 100m', 'V Max'];
+				for (i=0; i < data.feed.entry.length; i++) {
+					ligne = data.feed.entry[i];
+					d = ligne.gsx$date.$t;
+					v100 = ligne.gsx$v100mk72.$t;
+					vmax = ligne.gsx$vmaxk72noeuds.$t;
+					v = [];
+					v[0] = new Date(d);
+					v[1] = parseFloat(v100);
+					v[2] = parseFloat(vmax);
+					vitesses[i+1] = v;
+				}
+			});
+		});
+	  	  
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart2);
+function drawChart2() {
+  var data = google.visualization.arrayToDataTable(vitesses/*[
+    ['Date', 'V 100m', 'V Max'],
+    ['2013',  1000,      400],
+    ['2014',  1170,      460],
+    ['2015',  660,       1120],
+    ['2016',  1030,      540]
+  ]*/);
+
+  var options = {
+    title: 'Vitesse',
+    hAxis: {titleTextStyle: {color: '#333'}},
+    vAxis: {title: 'Noeuds',  minValue: 0},
+	pointSize: 10
+  };
+
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div2'));
+  chart.draw(data, options);
+}
+
+$(window).resize(function(){
+  drawChart2();
+});
+
+// Reminder: you need to put https://www.google.com/jsapi in the head of your document or as an external resource on codepen //	
 	  </script>	
    </body>
 </html>
