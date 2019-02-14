@@ -7,7 +7,7 @@
 		<style>
 			.chart {
   width: 100%; 
-  min-height: 450px;
+  min-height: 400px;
 }
 .row {
   margin:0 !important;
@@ -124,8 +124,9 @@
 <br>	  
 <div class="row">
   <div class="col-xs-12 col-sm-1 fond"></div>
-  <div class="col-xs-12 col-sm-10 ombre-image">
-    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank"><div id="chart_div2" class="chart"></div></a>
+  <div class="col-xs-12 col-sm-10 fond">
+    <div id="chart_div2" class="chart fond ombre-image"></div>
+	<p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses</a></p>
   </div>
 </div>
 <br>	   
@@ -257,7 +258,6 @@ function drawChart2() {
   ]*/);
 
   var options = {
-    title: 'Vitesse',
     hAxis: {titleTextStyle: {color: '#333'}},
     vAxis: {title: 'Noeuds',  minValue: 0},
 	pointSize: 10
