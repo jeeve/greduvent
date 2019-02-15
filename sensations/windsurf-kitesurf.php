@@ -243,11 +243,12 @@
 					v[2] = parseFloat(vmax);
 					vitesses[i+1] = v;
 				}
+				drawChart2();
 			});
 		});
 	  	  
 google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart2);
+//google.setOnLoadCallback(drawChart2);
 function drawChart2() {
   var data = google.visualization.arrayToDataTable(vitesses/*[
     ['Date', 'V 100m', 'V Max'],
