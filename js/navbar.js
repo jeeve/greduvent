@@ -1,6 +1,6 @@
 // gère l'activation du menu
 
-$(document).ready(function() { 
+//$(document).ready(function() { 
 	$('.nav > li').filter(function() {
 		if ($(this).children('a').length != 0)
 				{
@@ -32,4 +32,4 @@ $(document).ready(function() {
 				}				
 	}).addClass('active2');	
 	$('.active ul').css('display', 'block');
-});
+//});
