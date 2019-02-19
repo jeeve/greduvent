@@ -219,36 +219,6 @@
 					</div>
 				</div>	
 
-	<!--
-	<br>
-					<div class="row">
-					<div class="visible-xs col-xs-12 fond" style="margin-left: 5px; margin-bottom:10px;">
-						<a href="http://www.windalert.com/map#49.299,2.002,9,1,!33126,2" target="_blank">
-							<img src="images/logo-windalert.jpg">
-						</a>	
-					</div>
-					<div class="visible-xs col-xs-12 fond" style="margin-left: 5px; margin-bottom:20px;">
-						<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">
-							<img src="images/logo-windfinder.png" alt="superforecast" title="superforecast">
-						</a>	
-					</div>
-					<div class="col-xs-12 visible-xs fond" style="margin-left: 5px;">
-						<a href="https://www.windguru.cz/4864" target="_blank"><img src="images/logo-windguru.gif"></a>
-					</div>
-					<div class="col-xs-12 visible-xs fond" style="margin-left: 0px;">
-							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind" target="_blank"><img src="images/logo-ventusky.png"></a>		
-					</div>
-					<div class="col-xs-12 visible-xs fond" style="margin-left: 5px;">
-							<a href="http://www.xcweather.co.uk/forecast/L%C3%A9ry_poses" target="_blank"><img src="images/logo-xcweather.png"></a>			
-					</div>					
-					<div class="col-xs-12 visible-xs fond" style="margin-left: 5px; margin-top: 5px;">
-							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank"><img src="images/logo-meteofrance.png"></a>			
-					</div>					
-					<div class="col-xs-12 visible-xs fond">
-						<br><br>
-					</div>
-					</div>	
--->
 <!--
                   <h2>Historique</h2>
                   <form id="datetimeform">
@@ -293,7 +263,7 @@
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/UpWjw20K0DQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
@@ -551,7 +521,7 @@
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
 
-		
+	/*	
 		 var estHier = false;
 		 var maDate;
          var now = new Date();
@@ -605,6 +575,7 @@
 			getHistoriqueVent();
 			getPictures();	 
 		 }
+		 */
       </script>
 	  <script type="text/javascript" src="js/historique-vent.js"></script>
       <script type="text/javascript" src="js/imagebankleryposes.js"></script>
