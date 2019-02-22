@@ -520,6 +520,7 @@
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
+		});
 
 	/*	
 		 var estHier = false;
