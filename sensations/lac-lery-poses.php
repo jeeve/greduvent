@@ -258,6 +258,20 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
+				  <br><a name="lery-poses-2-3-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/m8QhuvrdKfY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=221393" target="_blank">Premier planning sur l'Isonic</a>
+				  </p>
+				  </div></div>
+
 				  <br><a name="lery-poses-9-2-19"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
