@@ -64,6 +64,9 @@
 						<li><p>flotteur&nbsp; Exocet Scross 116 litres modèle 2014<br>
 						dimensions : 2 m 42 x 68 cm</p>
 						</li>
+						<li><p>flotteur&nbsp; Starboard Isonic 111 litres modèle 2010<br>
+						dimensions : 2 m 35 x 68,5 cm</p>
+						</li>						
 						<li><p>voile Neilpryde V6 modèle 2006<br>
 						surface : 6,5 m²</p></li>          
 						<li><p>voile Neilpryde V8 modèle 2017<br>
