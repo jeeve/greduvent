@@ -60,7 +60,7 @@
 	</div>
 	
 	<div class="webcam">
-		<img id="webcam-vaires" class="img-responsive ombre-image" src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg">
+		<img id="webcam-jablines" class="img-responsive ombre-image" src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg">
 	<div class="hidden-xs webcam-titre">
 		<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  
 	</div>
@@ -266,7 +266,7 @@ Surpris par une pointe de vitesse !!
       <script> 
 		function getWebCam() {
 			d = new Date();
-			jQuery('#webcam-vaires').attr('src', 'https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg?'+d.getTime());			
+			jQuery('#webcam-jablines').attr('src', 'https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg?'+d.getTime());			
 		}
 	    	
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
@@ -278,7 +278,7 @@ Surpris par une pointe de vitesse !!
 			var lat1 = position.coords.latitude;
 			var lon1 = position.coords.longitude;	
 			var itineraireSrc = 'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d' + lat1 + '!2d' + lon1 + '!4m5!';	
-			jQuery('#map-jablines').attr('src', itineraireSrc + '1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e1!3m2!1sfr!2sfr!4v1544557168668);			
+			jQuery('#map-jablines').attr('src', itineraireSrc + '1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e1!3m2!1sfr!2sfr!4v1544557168668');			
 	}
 
         
