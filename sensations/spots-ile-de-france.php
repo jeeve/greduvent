@@ -285,7 +285,7 @@
 				
 				
 				<a name="jablines"></a>
-			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  Jablines</h2>
+			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  <a href="jablines.php">Jablines</a></h2>
 <div id="item-div-jablines" class="collapse in">					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
