@@ -123,7 +123,7 @@
                     <!-- <div class="col-xs-12 col-sm-2"></div> -->
                      <div class="col-xs-12 col-sm-6 fond">
                         <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d422235.08052076533!2d2.2754300925254305!3d48.904374951691736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e1!3m2!1sfr!2sfr!4v1544557168668" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		
+<iframe id="map-jablines" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d422235.08052076533!2d2.2754300925254305!3d48.904374951691736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e1!3m2!1sfr!2sfr!4v1544557168668" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		
 						</div>
 						<p class="legende">Itinéraire</p>
 						
@@ -132,7 +132,7 @@
 						
 						<div class="col-xs-12 col-sm-6 fond">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
-<iframe id="map-jablines" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13272.819129650208!2d2.7189477352299387!3d48.91141958867993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124228312" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13272.819129650208!2d2.7189477352299387!3d48.91141958867993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124228312" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 							<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a></p>
 						</div>
