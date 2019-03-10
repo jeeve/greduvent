@@ -284,7 +284,7 @@
 <a name="saint-quentin"></a>			   
 			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  Saint-Quentin en Yvelines</h2>
 <div id="item-div-saint-quentin" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/forecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> <!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a href="https://fr.windfinder.com/forecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-saint-quentin" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
