@@ -7,10 +7,12 @@
 			jQuery('#map-moisson').attr('src', itineraireSrc + '1s0x47e6c12b153c22bf%3A0x2d227d4087bc4da9!2sMoisson!3m2!1d49.072928999999995!2d1.6691859999999998!5e1!3m2!1sfr!2sfr!4v1544557383138');			
 			jQuery('#map-vaires').attr('src', itineraireSrc + '1s0x47e61074aa8587ab%3A0x40b82c3688c48d0!2sVaires-sur-Marne!3m2!1d48.873608999999995!2d2.6395429999999998!5e1!3m2!1sfr!2sfr!4v1544557341867');			
 			jQuery('#map-grande-paroisse').attr('src', itineraireSrc + '1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e1!3m2!1sfr!2sfr!4v1546091365802');			
-	}		
+			jQuery('#map-saint-quentin').attr('src', itineraireSrc + '1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e681460086fb29%3A0x48eb9dbd818f35f3!2sSaint-Quentin+en+Yvelines%2C+Montigny-le-Bretonneux!3m2!1d48.7700557!2d2.0249544!5e1!3m2!1sfr!2sfr!4v1552237922454');			
+
+			}		
 
 	function clickComparer() {
-		if (jQuery('.notePoses').text() == '' && jQuery('.noteVairesSurMarne').text() == '' && jQuery('.noteJablines').text() == '' && jQuery('.noteMoisson').text() == '' && jQuery('.noteGrandeparoisse').text() == '') {
+		if (jQuery('.notePoses').text() == '' && jQuery('.noteVairesSurMarne').text() == '' && jQuery('.noteJablines').text() == '' && jQuery('.noteMoisson').text() == '' && jQuery('.noteGrandeParoisse').text() == '' && jQuery('.noteSaintQuentin').text() == '') {
 			jQuery('div[id^="item-div"]').collapse("show");
 		} 
 		else {
@@ -44,6 +46,13 @@
 		else {
 			jQuery('#item-div-grande-paroisse').collapse("hide");	
 		}
+		if (jQuery('.noteSaintQuentin').text() != '') {
+			jQuery('#item-div-saint-quentin').collapse("show");
+		}
+		else {
+			jQuery('#item-div-saint-quentin').collapse("hide");	
+		}
+		
 		}		
 	}
 	

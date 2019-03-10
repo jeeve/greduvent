@@ -6,8 +6,8 @@ function getOrientationVentSpot() {
 						$('.noteVairesSurMarne').html('');
 						$('.noteJablines').html('');
 						$('.noteMoisson').html('');
-						$('.noteGrandeParoisse').html('');						
-		
+						$('.noteGrandeParoisse').html('');		
+						$('.noteSaintQuentin').html('');								
 	}
 	else {
 		$.ajax({
@@ -16,8 +16,8 @@ function getOrientationVentSpot() {
 			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
-				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse;
-				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse
+				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse, spSaintQuentin;
+				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse, nSaintQuentin;
 				for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 					ligne = data.feed.entry[i];
 					vent = ligne.title.$t;
@@ -27,12 +27,14 @@ function getOrientationVentSpot() {
 						nJablines = ligne.gsx$jablines.$t;
 						nMoisson = ligne.gsx$moisson.$t;
 						nGrandeparoisse = ligne.gsx$grandeparoisse.$t;
+						nSaintQuentin = ligne.gsx$saintquentinenyvelines.$t;
 						
 						spPoses = '';
 						spVairessurmarne = '';
 						spJablines = '';
 						spMoisson = '';
 						spGrandeparoisse = '';
+						spSaintQuentin = '';
 						
 						if (nPoses != '') {
 							spPoses = '<span class="note">' + nPoses + '</span> / 10';
@@ -49,12 +51,16 @@ function getOrientationVentSpot() {
 						if (nGrandeparoisse != '') {
 							spGrandeparoisse = '<span class="note">' + nGrandeparoisse + '</span> / 10';
 						}
+						if (nSaintQuentin != '') {
+							spSaintQuentin = '<span class="note">' + nSaintQuentin + '</span> / 10';
+						}
 						
 						$('.notePoses').html(spPoses);
 						$('.noteVairesSurMarne').html(spVairessurmarne);
 						$('.noteJablines').html(spJablines);
 						$('.noteMoisson').html(spMoisson);
 						$('.noteGrandeParoisse').html(spGrandeparoisse);
+						$('.noteSaintQuentin').html(spSaintQuentin);
 
 						$('.note').each(function(index, el) { 
 							var elem = $(el);

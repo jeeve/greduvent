@@ -126,6 +126,7 @@
 							<table>
 							<tr><td><p><a href="#poses">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
 							<tr><td><p><a href="#moisson">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
+							<tr><td><p><a href="#saint-quentin">Saint-Quentin en Y.</a></p></td><td><p class="noteSaintQuentin"></p></td></tr>							
 							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
 							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
 							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
@@ -278,6 +279,69 @@
 			   <br>
 </div>			   
 				
+
+
+<a name="saint-quentin"></a>			   
+			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  Saint-Quentin en Yvelines</h2>
+<div id="item-div-saint-quentin" class="collapse in">					
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/forecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
+               
+			<div id="item-vue-saint-quentin" class="collapse">
+			<div class="embed-responsive embed-responsive-4by3 ombre-image">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11122.852984860809!2d2.0167699586466092!3d48.787014702848644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1552238675540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>			<br>
+			</div><br>
+			</div>
+			
+<div id="item-webcam-saint-quentin" class="collapse">			
+  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+    
+	<video id="video-saint-quentin" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
+	<div class="webcam-texte">
+		<p>A13 près de Mantes la Ville, <a href='https://www.viewsurf.com/univers/trafic/vue/3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
+	</div>
+	  
+  </div> 
+  <br>
+</div> 			
+					   
+			   <div class="row">
+					<div class="col-sm-8">
+						<div class="fond-table encadrement-table">
+					
+<script id="wg_fwdg_161_3_1552237641461">
+(function (window, document) {
+  var loader = function () {
+    var arg = ["s=161","m=3","uid=wg_fwdg_161_3_1552237641461","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
+   "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
+    var script = document.createElement("script");
+    var tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+    tag.parentNode.insertBefore(script, tag);
+  };
+  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+})(window, document);
+</script>				
+
+					</div>		
+					<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=21" target="_blank">My wind session</a></p>
+				</div>			
+				  <div class="visible-xs"><br></div>						
+				   <div class="col-sm-4">
+				   <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
+  					<iframe src="meteo-temps-reel.php?station=IMONTIGN117&credit=0"></iframe>	
+					</div>
+					<br>
+					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
+<iframe id="map-saint-quentin" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d105705.06057385674!2d2.117237644898744!3d48.835080237233456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e681460086fb29%3A0x48eb9dbd818f35f3!2sSaint-Quentin+en+Yvelines%2C+Montigny-le-Bretonneux!3m2!1d48.7700557!2d2.0249544!5e1!3m2!1sfr!2sfr!4v1552237922454" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>						</div>
+
+				 </div>		
+			</div>
+
+			
+
+			   <br>
+</div>	
+
 				
 				
 				
