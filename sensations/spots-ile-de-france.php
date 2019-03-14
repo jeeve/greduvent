@@ -184,10 +184,10 @@
 </div> 	
 
 <div id="item-infos-poses" class="collapse">
-  <p>Tarif 4€ ou 25€ l'année.</p>
-  <p>Ouvert toute l'année.</p>  
-  <p>Mise à l'eau au pied du parking.</p>
-  <p>Grande superficie.</p>
+  <p>Tarif 4€ ou 25€ l'année</p>
+  <p>Ouvert toute l'année</p>  
+  <p>Mise à l'eau au pied du parking</p>
+  <p>Grande superficie</p>
   <p>Fonctionne par toutes les orientations de vent excepté l'est.</p>
                     <p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a> - en direct du lac et <a href="http://windsurf-lery-poses.soforums.com" target="_blank">ses passionnés</a> - <a href="http://wlpa.e-monsite.com/" target="_blank">association WLPA <img src="images/logo-wlpa.png"></a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
                   </p>
@@ -333,10 +333,10 @@
 </div> 	
 -->	
 <div id="item-infos-saint-quentin" class="collapse">
-  <p>Tarif 15€. Arriver au bureau du centre nautique avant 12h00 ou après 14h00 pour se procurer le badge d'accès au port 2 (mise à l'eau).</p>	
-  <p>Mise à l'eau à 15 m du parking.</p>
-  <p>Eau peu profonde.</p>
-  <p>Idéal par vent d'ouest.</p>
+  <p>Tarif 15€. Arriver au bureau du centre nautique avant 12h00 ou après 14h00 pour se procurer le badge d'accès au port 2 (mise à l'eau)</p>	
+  <p>Mise à l'eau à 15 m du parking</p>
+  <p>Eau peu profonde</p>
+  <p>Idéal par vent d'ouest</p>
   					<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=21" target="_blank">My wind session</a></p>
 
   <br>
@@ -410,9 +410,9 @@
 </div> 		
 
 <div id="item-infos-jablines" class="collapse">
-  <p>Tarif : gratuit hors saison.</p>	
-  <p>Mise à l'eau à 100 m du parking.</p>
-    <p>Fonctionne idéalement par sud ou nord.</p>
+  <p>Tarif : gratuit hors saison</p>	
+  <p>Mise à l'eau à 100 m du parking</p>
+    <p>Fonctionne idéalement par sud ou nord</p>
 							<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>						
 
   <br>
@@ -483,9 +483,9 @@
 </div> 		
 
 <div id="item-infos-vaires" class="collapse">
-  <p>Tarif : gratuit hors saison.</p>	
-  <p>Mise à l'eau à 100 m du parking.</p>
-    <p>Fonctionne idéalement par ouest-nord-ouest.</p>
+  <p>Tarif : gratuit hors saison</p>	
+  <p>Mise à l'eau à 100 m du parking</p>
+    <p>Fonctionne idéalement par ouest-nord-ouest</p>
 							<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=254" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
 
   <br>
@@ -555,10 +555,10 @@
 </div> 	
 
 <div id="item-infos-grande-paroisse" class="collapse">
-  <p>Fermé hors saison. Se renseigner au-près de l'association <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a> pour un droit d'accès durant cette période.
-  <p>Tarif : gratuit hors saison.</p>	
-  <p>Mise à l'eau à 100 m du parking.</p>
-  <p>Fonctionne par toutes les orientations sauf sud et sud-est.</p>
+  <p>Fermé hors saison. Se renseigner au-près de l'association <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a> pour un droit d'accès durant cette période</p>
+  <p>Tarif : gratuit hors saison</p>	
+  <p>Mise à l'eau à 100 m du parking</p>
+  <p>Fonctionne par toutes les orientations sauf sud et sud-est</p>
   						<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
 
   <br>
