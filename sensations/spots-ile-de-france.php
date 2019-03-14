@@ -163,7 +163,7 @@
 				<a name="poses"></a>
 			    <h2><input id="div-poses" type="button" value=" - " data-toggle="collapse" data-target="#item-div-poses" />  <a href="lac-lery-poses.php">Léry-Poses</a></h2>
 <div id="item-div-poses" class="collapse in">		
-		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
+		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-poses" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
 							<img src="images/spots-lery-poses-2.jpg" width=400 class="img-responsive ombre-image" alt="Les mises à l'eau en fonction du vent" title="Les mises à l'eau en fonction du vent">
@@ -180,6 +180,15 @@
 	</div>
 	  
   </div> 
+  <br>
+</div> 	
+
+<div id="item-infos-poses" class="collapse">
+  <p>Tarif 4€ ou 25€ l'année.</p>
+  <p>Ouvert toute l'année.</p>  
+  <p>Mise à l'eau au pied du parking.</p>
+  <p>Grande superficie.</p>
+  <p>Fonctionne par toutes les orientations de vent excepté l'est.</p>
   <br>
 </div> 			
 							
@@ -296,14 +305,14 @@
 <a name="saint-quentin"></a>			   
 			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  Saint-Quentin en Yvelines</h2>
 <div id="item-div-saint-quentin" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> <!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-saint-quentin" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11122.852984860809!2d2.0167699586466092!3d48.787014702848644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1552238675540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>			<br>
 			</div><br>
 			</div>
-			
+<!--			
 <div id="item-webcam-saint-quentin" class="collapse">			
   <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
     
@@ -314,7 +323,16 @@
 	  
   </div> 
   <br>
-</div> 			
+</div> 	
+-->	
+<div id="item-infos-saint-quentin" class="collapse">
+  <p>Tarif 15€. Arriver au bureau du centre nautique avant 12h00 ou après 14h00 pour se procurer le badge d'accès au port 2 (mise à l'eau).</p>	
+  <p>Mise à l'eau à 15 m du parking.</p>
+  <p>Eau peu profonde.</p>
+  <p>Idéal par vent d'ouest.</p>
+  <br>
+</div> 	
+	
 					   
 			   <div class="row">
 					<div class="col-sm-8">
@@ -363,7 +381,7 @@
 				<a name="jablines"></a>
 			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  <a href="jablines.php">Jablines</a></h2>
 <div id="item-div-jablines" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-jablines" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -382,6 +400,13 @@
 	  
   <br>  
 </div> 		
+
+<div id="item-infos-jablines" class="collapse">
+  <p>Tarif : gratuit hors saison.</p>	
+  <p>Mise à l'eau à 100 m du parking.</p>
+    <p>Fonctionne idéalement par sud ou nord.</p>
+  <br>
+</div> 	
 			   
 			   <div class="row">
 					<div class="col-sm-8">
@@ -427,7 +452,7 @@
 			   <a name="vaires"></a>
 			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  <a href="vaires-sur-marne.php">Vaires sur Marne</a></h2>
 <div id="item-div-vaires" class="collapse in">	
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -447,6 +472,13 @@
   </div> 
   <br>
 </div> 		
+
+<div id="item-infos-vaires" class="collapse">
+  <p>Tarif : gratuit hors saison.</p>	
+  <p>Mise à l'eau à 100 m du parking.</p>
+    <p>Fonctionne idéalement par ouest-nord-ouest.</p>
+  <br>
+</div> 
 			   
 			   
 			   <div class="row">
@@ -491,7 +523,7 @@
 			   <a name="grande-paroisse"></a>
 			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
 <div id="item-div-grande-paroisse" class="collapse in">					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grande-paroisse" value="Informations" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -510,7 +542,15 @@
 	  
   </div> 
   <br>
-</div> 				
+</div> 	
+
+<div id="item-infos-grande-paroisse" class="collapse">
+  <p>Fermé hors saison. Se renseigner au-près de l'association <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a> pour un droit d'accès durant cette période.
+  <p>Tarif : gratuit hors saison.</p>	
+  <p>Mise à l'eau à 100 m du parking.</p>
+  <p>Fonctionne par toutes les orientations sauf sud et sud-est.</p>
+  <br>
+</div> 			
 				
 				
 

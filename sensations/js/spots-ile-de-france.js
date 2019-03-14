@@ -123,7 +123,7 @@
 				}	
 			});
 			
-			jQuery("input[data-target^='#item-vue'], input[data-target^='#item-webcam']").click(function() {
+			jQuery("input[data-target^='#item-vue'], input[data-target^='#item-webcam'], input[data-target^='#item-infos']").click(function() {
 				if (jQuery(this).hasClass('btn-releve')) {
 					jQuery(this).removeClass('btn-releve');	
 					jQuery(this).addClass('btn-enfonce');					
