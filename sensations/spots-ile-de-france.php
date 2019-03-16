@@ -333,7 +333,7 @@
 </div> 	
 -->	
 <div id="item-infos-saint-quentin" class="collapse">
-  <p>Tarif 15€. Arriver au bureau du centre nautique avant 12h00 ou après 14h00 pour se procurer le badge d'accès au port 2 (mise à l'eau)</p>	
+  <p>Tarif 13€. Arriver au bureau du centre nautique avant 12h00 ou après 14h00 pour se procurer le badge d'accès au port 2 (mise à l'eau)</p>	
   <p>Mise à l'eau à 15 m du parking</p>
   <p>Eau peu profonde</p>
   <p>Idéal par vent d'ouest</p>
