@@ -7,7 +7,7 @@ function getMeteo() {
 			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
-			var temperatureExterieure = data.temperatureExterieure + ' °C'; 
+			var temperatureExterieure = Math.round((parseFloat(data.temperatureExterieure)-32)/1.8) + ' °C'; // conversion °F en °C
 			var vitesseVent = data.vitesseVent;
 			var orientationVent = data.orientationVent;
 			var nomStation = data.station;

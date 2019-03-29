@@ -10,6 +10,14 @@
 			return false;
 		}
 		
+		function getValeur($line, $key, $offset = 0) {
+			$a = strpos($line, $key);
+			$linefin = substr($line, $a + strlen($key) + 1 + $offset); // <......>..........
+			$b = strpos($linefin, '>');
+			$valeur = substr($linefin, 0, $b - 1); // <...>
+			return $valeur;
+		}
+		
 		$station = 'I27LERY4';
 
 		if ($_GET['station'] != '') {
@@ -18,21 +26,16 @@
 		
 		$lines = file('https://www.wunderground.com/personal-weather-station/dashboard?ID=' . $station);
 
-		$line = $lines[getLigne($lines, "Wind from") + 1];
-		$p = strpos($line, '>');
-		$line = substr($line, $p+1, strlen($line) + 1);
-		$line = substr($line, 0, strpos($line, '<'));
-		$orientationVent = trim($line);
+		$line = $lines[getLigne($lines, 'WIND FROM</div><div _ngcontent-sc7="" class="weather__text"')];
+		$orientationVent = trim(getValeur($line, 'WIND FROM</div><div _ngcontent-sc7="" class="weather__text"'));
 
-		$line = $lines[getLigne($lines, "windCompassSpeed") + 2];
-		$line = substr($line, 0, strlen($line)-1);
-		$vitesseVent = trim($line);
+		$line = $lines[getLigne($lines, 'src="https://s.w-x.co/wu/assets/static/images/pws/Wind-Dial.svg"><div _ngcontent-sc7="" class="text-wrapper"><span _ngcontent-sc7="" class="big" style="font-size:100%;"')];
+		$vitesseVent = trim(getValeur($line, 'src="https://s.w-x.co/wu/assets/static/images/pws/Wind-Dial.svg"><div _ngcontent-sc7="" class="text-wrapper"><span _ngcontent-sc7="" class="big" style="font-size:100%;"'));
 
-		$line = $lines[getLigne($lines, 'data-variable="temperature"') + 1];
-		$p = strpos($line, '>');
-		$line = substr($line, $p+1, strlen($line) + 1);
-		$line = substr($line, 0, strpos($line, '<'));
-		$tempAir = trim($line);	
+
+		$line = $lines[getLigne($lines, 'class="current-temp" style="color:#')];
+		$temp = getValeur($line, 'class="current-temp" style="color:#', 32);
+		$tempAir = trim(substr($temp, 0, strlen($temp) - 1));
 		
 		$arr = array('station' => $station, 'vitesseVent' => $vitesseVent, 'orientationVent' => $orientationVent, 'temperatureExterieure' => $tempAir);
 
