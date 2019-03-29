@@ -163,6 +163,13 @@
 				<a name="poses"></a>
 			    <h2><input id="div-poses" type="button" value=" - " data-toggle="collapse" data-target="#item-div-poses" />  <a href="lac-lery-poses.php">Léry-Poses</a></h2>
 <div id="item-div-poses" class="collapse in">		
+		
+							
+						
+				
+               <div class="row">
+					<div class="col-sm-8">
+					
 		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-poses" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
@@ -192,12 +199,10 @@
                     <p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a> - en direct du lac et <a href="http://windsurf-lery-poses.soforums.com" target="_blank">ses passionnés</a> - <a href="http://wlpa.e-monsite.com/" target="_blank">association WLPA <img src="images/logo-wlpa.png"></a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
                   </p>
   <br>
-</div> 			
-							
-						
-				
-               <div class="row">
-					<div class="col-sm-8">
+</div> 	
+
+					
+					
 						<div class="fond-table encadrement-table">
 <script id="wg_fwdg_4864_3_1544556530603">
 (function (window, document) {
@@ -238,6 +243,14 @@
 <a name="moisson"></a>			   
 			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" />  Moisson Lavacourt</h2>
 <div id="item-div-moisson" class="collapse in">					
+			
+		
+			
+			   
+			   
+			   <div class="row">
+					<div class="col-sm-8">
+					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-moisson" class="collapse">
@@ -262,13 +275,9 @@
 					<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=271" target="_blank">My wind session</a></p>
 
    <br>
-</div> 			
-		
-			
-			   
-			   
-			   <div class="row">
-					<div class="col-sm-8">
+</div> 					
+					
+					
 						<div class="fond-table encadrement-table">
 					
 <script id="wg_fwdg_581_3_1544556198330">
@@ -312,6 +321,11 @@
 <a name="saint-quentin"></a>			   
 			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  Saint-Quentin en Yvelines</h2>
 <div id="item-div-saint-quentin" class="collapse in">					
+	
+					   
+			   <div class="row">
+					<div class="col-sm-8">
+					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-saint-quentin" class="collapse">
@@ -341,10 +355,10 @@
 
   <br>
 </div> 	
-	
-					   
-			   <div class="row">
-					<div class="col-sm-8">
+					
+					
+					
+					
 						<div class="fond-table encadrement-table">
 					
 <script id="wg_fwdg_161_3_1552237641461">
@@ -389,6 +403,10 @@
 				<a name="jablines"></a>
 			    <h2><input id="div-jablines" type="button" value=" - " data-toggle="collapse" data-target="#item-div-jablines" />  <a href="jablines.php">Jablines</a></h2>
 <div id="item-div-jablines" class="collapse in">					
+			   
+			   <div class="row">
+					<div class="col-sm-8">
+					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-jablines" class="collapse">
@@ -417,9 +435,7 @@
 
   <br>
 </div> 	
-			   
-			   <div class="row">
-					<div class="col-sm-8">
+					
 						<div class="fond-table encadrement-table">
 
 						<script id="wg_fwdg_90210_3_1538749208510">
@@ -461,6 +477,11 @@
 			   <a name="vaires"></a>
 			    <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse" data-target="#item-div-vaires" />  <a href="vaires-sur-marne.php">Vaires sur Marne</a></h2>
 <div id="item-div-vaires" class="collapse in">	
+			   
+			   
+			   <div class="row">
+					<div class="col-sm-8">
+					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
@@ -490,10 +511,9 @@
 
   <br>
 </div> 
-			   
-			   
-			   <div class="row">
-					<div class="col-sm-8">
+					
+					
+					
 						<div class="fond-table encadrement-table">
 
 <script id="wg_fwdg_60276_3_1544556036427">
@@ -533,6 +553,12 @@
 			   <a name="grande-paroisse"></a>
 			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
 <div id="item-div-grande-paroisse" class="collapse in">					
+				
+				
+
+				<div class="row">
+					<div class="col-sm-8">
+					
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grande-paroisse" value="Informations" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
@@ -563,11 +589,10 @@
 
   <br>
 </div> 			
-				
-				
-
-				<div class="row">
-					<div class="col-sm-8">
+					
+					
+					
+					
 						<div class="fond-table encadrement-table">
 
 <script id="wg_fwdg_90210_3_1546091535290">
