@@ -30,7 +30,7 @@
  {
    "@context": "http://schema.org",
    "@type": "Place",
-   "name": "Saint-Quentin en yvelines",
+   "name": "Saint-Quentin en Yvelines",
 	"address": {
 		"@type": "PostalAddress",
 			"addressLocality": "Saint-Quentin en yvelines",
