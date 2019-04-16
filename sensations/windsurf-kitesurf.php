@@ -61,9 +61,6 @@
 					 <p>
 					<h2>Windsurf</h2>
 					<ul>
-						<li><p>flotteur&nbsp; Exocet Scross 116 litres modèle 2014<br>
-						dimensions : 2 m 42 x 68 cm</p>
-						</li>
 						<li><p>flotteur&nbsp; Starboard Isonic 111 litres modèle 2009<br>
 						dimensions : 2 m 34 x 68,5 cm</p>
 						</li>						
@@ -75,6 +72,19 @@
 		<p align="center">ça dépote !</p>
 					<h2>Kitesurf</h2>
 					<p>Après quelques années de pratique, j'ai déposé les armes pour me recentrer sur la planche.
+					<p><br></p>
+					<h2>Windfoil</h2>
+					<ul>
+						<li><p>flotteur&nbsp; Exocet Scross 116 litres modèle 2014<br>
+						dimensions : 2 m 42 x 68 cm</p>
+						</li>
+						<li><p>foil Neilpryde Glide small modèle 2019<br>
+						hauteur : 70 cm, envergure 40 cm</p></li>          
+						</ul></p>
+		<p align="center">ça vole !</p>
+					
+					
+					
 					</p>
                         <p><br></p>
                      </div>
@@ -128,11 +138,21 @@
 <div class="row">
   <div class="col-xs-12 col-sm-1 fond"></div>
   <div class="col-xs-12 col-sm-10 fond">
-    <div id="chart_div2" class="chart fond ombre-image"></div>
-	<p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses</a></p>
+    <div id="chart_div_1" class="chart fond ombre-image"></div>
+	<p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windsurf</a></p>
   </div>
 </div>
-<br>	   
+<br>	
+
+<br>	  
+<div class="row">
+  <div class="col-xs-12 col-sm-1 fond"></div>
+  <div class="col-xs-12 col-sm-10 fond">
+    <div id="chart_div_2" class="chart fond ombre-image"></div>
+	<p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windfoil</a></p>
+  </div>
+</div>
+<br>   
 
 				
 				  <a name="ca-zef-au-crotoy"></a>
@@ -222,7 +242,8 @@
 	  <?php include("../includes/footer.php"); ?>	
       <script src="https://www.google.com/jsapi"></script> 	  
       <script> 
-	  var vitesses = [];
+	  var vitesses1 = [];
+	  var vitesses2 = [];
 	  
 		$(document).ready(function($) {
 			$.ajax({
@@ -231,35 +252,41 @@
 				crossDomain: true,
 				dataType: 'json'
 			}).then(function(data) {
-				vitesses = [];
-				var ligne, d, v100, vmax, i;
+				vitesses1 = [];
+				vitesses2 = [];
+				var ligne, d, v100, vmax, i, pratique;
 				var v = [];
-				vitesses[0] = ['Date', 'V 100m', 'V Max'];
+				vitesses1[0] = ['Date', 'V 100m', 'V Max'];
+				vitesses2[0] = ['Date', 'V 100m', 'V Max'];
+				var j1 = 1;
+				var j2 = 1;
 				for (i=0; i < data.feed.entry.length; i++) {
 					ligne = data.feed.entry[i];
 					d = ligne.gsx$date.$t;
+					pratique = ligne.gsx$pratique.$t; 
 					v100 = ligne.gsx$v100mk72.$t;
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v = [];
 					v[0] = new Date(d);
 					v[1] = parseFloat(v100);
 					v[2] = parseFloat(vmax);
-					vitesses[i+1] = v;
+					if (pratique == 'Windsurf') {
+						vitesses1[j1] = v;
+						j1 = j1 + 1;
+					}
+					else {
+						vitesses2[j2] = v;
+						j2 = j2 + 1;
+					}
 				}
+				drawChart1();
 				drawChart2();
 			});
 		});
 	  	  
 google.load("visualization", "1", {packages:["corechart"]});
-//google.setOnLoadCallback(drawChart2);
-function drawChart2() {
-  var data = google.visualization.arrayToDataTable(vitesses/*[
-    ['Date', 'V 100m', 'V Max'],
-    ['2013',  1000,      400],
-    ['2014',  1170,      460],
-    ['2015',  660,       1120],
-    ['2016',  1030,      540]
-  ]*/);
+function drawChart1() {
+  var data = google.visualization.arrayToDataTable(vitesses1);
 
   var options = {
     hAxis: {titleTextStyle: {color: '#333'}},
@@ -267,12 +294,26 @@ function drawChart2() {
 	pointSize: 10
   };
 
-  var chart = new google.visualization.LineChart(document.getElementById('chart_div2'));
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div_1'));
+  chart.draw(data, options);
+}
+
+function drawChart2() {
+  var data = google.visualization.arrayToDataTable(vitesses2);
+
+  var options = {
+    hAxis: {titleTextStyle: {color: '#333'}},
+    vAxis: {title: 'Noeuds',  minValue: 0},
+	pointSize: 10
+  };
+
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div_2'));
   chart.draw(data, options);
 }
 
 $(window).resize(function(){
-  drawChart2();
+  drawChart1();
+  drawChart2();  
 });
 
 // Reminder: you need to put https://www.google.com/jsapi in the head of your document or as an external resource on codepen //	
