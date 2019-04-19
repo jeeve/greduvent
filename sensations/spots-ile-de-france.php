@@ -431,7 +431,7 @@
   <p>Tarif : gratuit hors saison</p>	
   <p>Mise à l'eau à 100 m du parking</p>
     <p>Fonctionne idéalement par sud ou nord</p>
-							<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>						
+							<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a> - Le forum <a href="http://windsurfing77.forumactif.com/" target="_blank">Windsurfing 77</a></p>						
 
   <br>
 </div> 	
@@ -507,7 +507,7 @@
   <p>Tarif : gratuit hors saison</p>	
   <p>Mise à l'eau à 100 m du parking</p>
     <p>Fonctionne idéalement par ouest-nord-ouest</p>
-							<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=254" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
+							<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=254" target="_blank">My wind session</a> - Le forum <a href="http://windsurfing77.forumactif.com/" target="_blank">Windsurfing 77</a></p>
 
   <br>
 </div> 
