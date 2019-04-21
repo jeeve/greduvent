@@ -582,7 +582,7 @@
 
 <div id="item-infos-grande-paroisse" class="collapse">
   <p>Fermé hors saison. Se renseigner au-près de l'association <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a> pour un droit d'accès durant cette période</p>
-  <p>Tarif : gratuit hors saison</p>	
+  <p>Tarif : gratuit hors saison, sinon 5 euros la mise à l'eau</p>	
   <p>Mise à l'eau à 100 m du parking</p>
   <p>Fonctionne par toutes les orientations sauf sud et sud-est</p>
   						<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
