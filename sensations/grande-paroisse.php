@@ -216,13 +216,13 @@
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/aXU6S-sCWAU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				  <p class="legende">
 					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=224389" target="_blank">
-				  La Grande-Paroisse, samedi 20 avril 2019. Deuxième session en foil.</a>
+				  Samedi 20 avril 2019, deuxième session en foil</a>
 				  </p>
 				  </div></div>
 				  
@@ -231,13 +231,13 @@
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/YyNFm05u1Qs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				  <p class="legende">
 					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=214744" target="_blank">
-				  La Grande-Paroisse, samedi 6 octobre 2018</a>
+				  Samedi 6 octobre 2018</a>
 				  </p>
 				  </div></div>
 
