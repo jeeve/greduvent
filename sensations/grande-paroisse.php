@@ -231,7 +231,7 @@
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
 				  <iframe width="560" height="315" src="https://www.youtube.com/embed/YyNFm05u1Qs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
