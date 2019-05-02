@@ -26,11 +26,11 @@
 		
 		$lines = file('https://www.wunderground.com/personal-weather-station/dashboard?ID=' . $station);
 
-		$line = $lines[getLigne($lines, 'WIND FROM</div><div _ngcontent-sc7="" class="weather__text"')];
-		$orientationVent = trim(getValeur($line, 'WIND FROM</div><div _ngcontent-sc7="" class="weather__text"'));
+		$line = $lines[getLigne($lines, 'WIND FROM</div><div _ngcontent-sc8="" class="weather__text"')];
+		$orientationVent = trim(getValeur($line, 'WIND FROM</div><div _ngcontent-sc8="" class="weather__text"'));
 
-		$line = $lines[getLigne($lines, 'src="https://s.w-x.co/wu/assets/static/images/pws/Wind-Dial.svg"><div _ngcontent-sc7="" class="text-wrapper"><span _ngcontent-sc7="" class="big" style="font-size:100%;"')];
-		$vitesseVent = trim(getValeur($line, 'src="https://s.w-x.co/wu/assets/static/images/pws/Wind-Dial.svg"><div _ngcontent-sc7="" class="text-wrapper"><span _ngcontent-sc7="" class="big" style="font-size:100%;"'));
+		$line = $lines[getLigne($lines, 'span _ngcontent-sc27="" class="wu-value wu-value-to" style=""')];
+		$vitesseVent = trim(getValeur($line, 'span _ngcontent-sc27="" class="test-false wu-unit ng-star-inserted"><!----><!----><!----><span _ngcontent-sc27="" class="wu-value wu-value-to" style=""'));
 
 
 		$line = $lines[getLigne($lines, 'class="current-temp" style="color:#')];
