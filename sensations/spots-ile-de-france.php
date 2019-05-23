@@ -243,11 +243,6 @@
 <a name="moisson"></a>			   
 			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" />  Moisson Lavacourt</h2>
 <div id="item-div-moisson" class="collapse in">					
-			
-		
-			
-			   
-			   
 			   <div class="row">
 					<div class="col-sm-8">
 					
@@ -272,6 +267,7 @@
 </div> 	
 
 <div id="item-infos-moisson" class="collapse">
+<p>Gratuit l'hiver. Sinon à partir de mai le week-end : 9€</p>
 					<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=271" target="_blank">My wind session</a></p>
 
    <br>
