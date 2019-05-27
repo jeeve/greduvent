@@ -79,7 +79,7 @@
 						dimensions : 2 m 42 x 68 cm</p>
 						</li>
 						<li><p>foil Neilpryde Glide small modèle 2019<br>
-						hauteur : 70 cm, envergure 40 cm</p></li>          
+						hauteur : 70 cm, envergure 64 cm</p></li>          
 						</ul></p>
 		<p align="center">ça vole !</p>
 					
