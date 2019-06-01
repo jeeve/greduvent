@@ -137,6 +137,9 @@
                    <div class="containerPlayer">
                         <div style="display: none;">
                            <ul id="playListContainer">
+							  <li data-src="songs/adada-bar.mp3"><a href="#">Adada bar</a>
+                              </li>							   						   						   
+						   
 							  <li data-src="songs/horreur-boreale.mp3"><a href="#">Horreur boréale</a>
                               </li>							   						   						   
 							  <li data-src="songs/les-rives-de-l-inconscient.mp3"><a href="#">Les rives de l'inconscient</a>
