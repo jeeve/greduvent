@@ -28,10 +28,10 @@
 			
 		}
 		else {
-			$lines = file('https://www.wunderground.com/personal-weather-station/dashboard?ID=' . $station);
+			$lines = file('https://www.wunderground.com/dashboard/pws/' . $station);
 
 			$line = $lines[getLigne($lines, 'WIND FROM')];
-			$orientationVent = trim(getValeur($line, 'WIND FROM', 51));
+			$orientationVent = $lines; //trim(getValeur($line, 'WIND FROM', 51));
 
 			$line = $lines[getLigne($lines, 'span _ngcontent-sc27="" class="wu-value wu-value-to" style=""')];
 			$vitesseVent = trim(getValeur($line, 'span _ngcontent-sc27="" class="test-false wu-unit ng-star-inserted"><!----><!----><!----><span _ngcontent-sc27="" class="wu-value wu-value-to" style=""'));
