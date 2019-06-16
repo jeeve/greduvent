@@ -267,7 +267,7 @@
 </div> 	
 
 <div id="item-infos-moisson" class="collapse">
-<p>Gratuit l'hiver. Sinon à partir de mai le week-end : 9€</p>
+<p>Gratuit l'hiver. Sinon à partir de mai le week-end : 6€</p>
 					<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=271" target="_blank">My wind session</a></p>
 
    <br>
