@@ -2,9 +2,9 @@ var station;
 
 function getMeteo() {
 		$.ajax({
-			url: "https://samples.openweathermap.org/data/2.5/weather?q=" + station + ",fr&appid=b6907d289e10d714a6e88b30761fae22",
+			url: "https://api.openweathermap.org/data/2.5/weather?q=" + station + ",fr&appid=a132b29f173b49547663b30b40006e6f",
 			type: 'GET',
-			/*crossDomain: true,*/
+			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
 			var temperatureExterieure = Math.round((parseFloat(data.main.temp)-32)/1.8) + ' °C'; // conversion °F en °C
