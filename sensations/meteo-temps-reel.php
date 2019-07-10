@@ -36,7 +36,7 @@
 					</tr>
 -->					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><?php echo $station; ?></em><?php if ($credit != '0') { echo '<br><a href="https://greduvent.herokuapp.com" target="_blank">au gré du vent 1.0</a>'; } ?></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a class="id-station" target="_blank"><?php echo $station; ?></a></em><?php if ($credit != '0') { echo '<br><a href="https://greduvent.herokuapp.com" target="_blank">au gré du vent 1.0</a>'; } ?></p></td>
 					</tr>						
 				</table>
 				
@@ -44,6 +44,7 @@
 	  <script type="text/javascript" src="js/meteo3.js"></script>	  
       <script> 
 		station = "<?php echo $station; ?>"
+		setIDStation();
 		var myVar =	setInterval(getMeteo, 30000);		
         $(document).ready(function($) { 
 			getMeteo();		 

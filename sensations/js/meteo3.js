@@ -24,11 +24,22 @@ function getMeteo() {
 			var direction = "";
 			if (orientationVent != '') {
 				var directions = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSO","SO","OSO","O","ONO","NO","NNO","N"];
-				direction = directions[Math.round((parseFloat(data.windDirection) % 360)/ 22.5,0) + 0];
+				direction = directions[Math.round((parseFloat(orientationVent) % 360)/ 22.5,0) + 0];
 			}
 			
 			$('.nom-sation').html(nomStation);
 			$('.orientation-vent').html(direction);
 			$('.temperature-air').html(temperatureExterieure);
 			});
+}
+
+function setIDStation() {
+			$.ajax({
+			url: "https://api.openweathermap.org/data/2.5/weather?q=" + station + ",fr&appid=a132b29f173b49547663b30b40006e6f",
+			type: 'GET',
+			crossDomain: true,
+			dataType: 'json'
+		}).then(function(data) {
+			$('.id-station').attr('href', 'https://openweathermap.org/city/' + data.id);
+		});
 }
