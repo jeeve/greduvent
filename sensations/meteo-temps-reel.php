@@ -36,7 +36,7 @@
 					</tr>
 -->					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=<?php echo $station; ?>" target="_blank"></a></em><?php if ($credit != '0') { echo '<br><a href="https://greduvent.herokuapp.com" target="_blank">au gré du vent 1.0</a>'; } ?></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><?php echo $station; ?></em><?php if ($credit != '0') { echo '<br><a href="https://greduvent.herokuapp.com" target="_blank">au gré du vent 1.0</a>'; } ?></p></td>
 					</tr>						
 				</table>
 				

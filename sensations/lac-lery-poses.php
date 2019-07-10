@@ -66,7 +66,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2997336" target="_blank">Louviers</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -93,7 +93,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=I27LERY4" target="_blank">I27LERY4</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2997336" target="_blank">Louviers</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -586,7 +586,7 @@
 		
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
-		station = "I27LERY4";
+		station = "louviers";
 		var myVar =	setInterval(getMeteo, 30000);		
 
 	function maPosition(position) {		

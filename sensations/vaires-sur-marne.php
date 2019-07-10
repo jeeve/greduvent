@@ -77,7 +77,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=ILEDEFRA44" target="_blank">ILEDEFRA44</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2972444" target="_blank">Torcy</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -104,7 +104,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=ILEDEFRA44" target="_blank">ILEDEFRA44</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2972444" target="_blank">Torcy</a></em></p></td>
 					</tr>						
 				</table>
 				</div>											
@@ -270,7 +270,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
 	    	
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
-		station = "ILEDEFRA44";
+		station = "Torcy";
 		var myVar =	setInterval(getMeteo, 30000);		
 
 	function maPosition(position) {		

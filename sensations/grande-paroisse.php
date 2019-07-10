@@ -63,7 +63,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=ISAINTMA1672" target="_blank">ISAINTMA1672</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2992671" target="_blank">Montereau-Fault-Yonne</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -90,7 +90,7 @@
 					</tr>
 					
 					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://www.wunderground.com/personal-weather-station/dashboard?ID=ISAINTMA1672" target="_blank">ISAINTMA1672</a></em></p></td>
+						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2992671" target="_blank">Montereau-Fault-Yonne</a></em></p></td>
 					</tr>						
 				</table>
 				</div>
@@ -289,7 +289,7 @@
 		
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
-	    station = "ISAINTMA1672";
+	    station = "Montereau-Fault-Yonne";
 		var myVar =	setInterval(getMeteo, 30000);	
          
 		 $(document).ready(function($) {	
