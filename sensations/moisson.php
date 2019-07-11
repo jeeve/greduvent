@@ -124,7 +124,7 @@
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15691.154105754329!2d1.674180497185694!3d49.05563923112997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124769919" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>			
 			</div>
-							<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My wind session</a></p>
+							<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=271" target="_blank">My wind session</a></p>
 						</div>
                     
                   </div>
@@ -209,6 +209,19 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
+				  <br><a name="lery-poses-28-6-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/cB_HMl2brIg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=229478" target="_blank">C'est l'été à Moisson ! Cruising en windfoil</a>
+				  </p>
+				  </div></div>
 
 
 

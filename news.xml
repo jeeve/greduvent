@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Le spot de Moisson Lavacourt</title>
+            <link>https://greduvent.herokuapp.com/sensations/moisson.php</link>
+            <guid isPermaLink="false">spot-moisson</guid>
+            <description>Page dédiée au windsurf / windfoil sur le spot de Moisson Lavacourt près de Paris.</description>
+            <pubDate>Thu, 11 Jul 2019 17:40:00 GMT</pubDate>
+		</item>
+		
+		<item>
             <title>Adada bar</title>
             <link>https://youtu.be/pu6LhMDZ3II</link>
             <guid isPermaLink="false">adada-bar</guid>
