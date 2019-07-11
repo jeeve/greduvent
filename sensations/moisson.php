@@ -209,7 +209,7 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
-				  <br><a name="lery-poses-28-6-19"></a>
+				  <br><a name="moisson-3-7-19"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
@@ -223,6 +223,33 @@
 				  </p>
 				  </div></div>
 
+				  <br><a name="moisson-15-6-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/d9JahLfRmcU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=228533" target="_blank">Windfoil en Ile-de-France</a>
+				  </p>
+				  </div></div>
+
+				  <br><a name="moisson-14-5-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/EkRBTnpZH0Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=226398" target="_blank">Windsurf en Ile-de-France</a>
+				  </p>
+				  </div></div>
 
 
 
