@@ -249,7 +249,7 @@ Surpris par une pointe de vitesse !!
 						</div>
 					</div>
 					<div class="row">
-						<p class="numero-page">page 14b</p>
+						<p class="numero-page">page 14c</p>
 						
 					</div>
                   </div>

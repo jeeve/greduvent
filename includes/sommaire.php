@@ -51,6 +51,7 @@
 		echo getSommaireItem('../sensations/windsurf-kitesurf.php');
 		echo getSommaireItem('../sensations/spots-ile-de-france.php');		
 		echo getSommaireItem('../sensations/lac-lery-poses.php');
+		echo getSommaireItem('../sensations/moisson.php');
 		echo getSommaireItem('../sensations/jablines.php');		
 		echo getSommaireItem('../sensations/vaires-sur-marne.php');
 		echo getSommaireItem('../sensations/grande-paroisse.php');

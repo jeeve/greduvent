@@ -241,7 +241,7 @@
 </div>		
 				
 <a name="moisson"></a>			   
-			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" />  Moisson Lavacourt</h2>
+			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-moisson" /> <a href="moisson.php">Moisson Lavacourt</a></h2>
 <div id="item-div-moisson" class="collapse in">					
 			   <div class="row">
 					<div class="col-sm-8">

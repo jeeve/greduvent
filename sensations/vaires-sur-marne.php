@@ -248,7 +248,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
 						</div>
 					</div>
 					<div class="row">
-						<p class="numero-page">page 14c</p>
+						<p class="numero-page">page 14d</p>
 						
 					</div>
                   </div>
