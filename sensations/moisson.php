@@ -102,10 +102,9 @@
 </div>				
 	
 		 
-                  <br>
+               
 				  
-                  <p class="legende"><a href="http://www.kiffmembers.org/" target="_blank">Le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
-                  </p>
+               
                   
 				  
 				  <br><br>
@@ -205,6 +204,10 @@
 					</div>
 				</div>	
 
+				<h2>Informations</h2>		
+				<p>Gratuit l'hiver. Sinon à partir de mai le week-end : 6€. Juillet-août tous les jours : 6€.</p>
+                 <p><a href="http://www.kiffmembers.org/" target="_blank">Le K.I.F.F. (Klan des Intrépides Funboarders Franciliens) <img  height="60" src="images/logo-kiffmembers.gif"></a>
+ 				<br>
 					
 				  <br>
 				  <h2>Sessions en vidéo</h2>
@@ -251,7 +254,33 @@
 				  </p>
 				  </div></div>
 
+				  <br><a name="moisson-13-5-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/SNNjvHcOOAE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=226297" target="_blank">Windfoil en 5.3 - lundi 13 mai 2019</a>
+				  </p>
+				  </div></div>
 
+				  <br><a name="moisson-13-4-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/UbPr6JycIuk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=223941" target="_blank">Baptême Foil. Magique !! Samedi 13 avril 2019</a>
+				  </p>
+				  </div></div>				  
 
 				  <br>		  
 			 
