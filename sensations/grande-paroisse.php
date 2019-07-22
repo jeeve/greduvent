@@ -211,6 +211,37 @@
 <br>
 				  <h2>Sessions en vidéo</h2>
 
+				  <br><a name="grande-paroisse-20-7-2019"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/aNn3KZsdO0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=230636" target="_blank">
+				  Samedi 20 juillet 2019, Ride and Mix</a>
+				  </p>
+				  </div></div>
+				  
+				  <br><a name="grande-paroisse-14-7-2019"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/1FIFtOWd-9g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=230154" target="_blank">
+				  Windfoil, dimanche 14 juillet 2019</a>
+				  </p>
+				  </div></div>
+
+
 				  <br><a name="grande-paroisse-6-10-2018"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
