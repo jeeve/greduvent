@@ -500,6 +500,7 @@
 </div> 		
 
 <div id="item-infos-vaires" class="collapse">
+	<p style="font-color:red;">Attention, ce spot n'est plus accessible pour cause de travaux</p>
   <p>Tarif : gratuit hors saison</p>	
   <p>Mise à l'eau à 100 m du parking</p>
     <p>Fonctionne idéalement par ouest-nord-ouest</p>
