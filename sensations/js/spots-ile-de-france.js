@@ -73,7 +73,6 @@
 			}).then(function(data) {
 				console.log(data.src);
 				jQuery('#video-poses').attr('src', data.src);
-
 		});
 		}
 		
@@ -86,7 +85,6 @@
 			}).then(function(data) {
 				console.log(data.src);
 				jQuery('#video-moisson').attr('src', data.src);
-
 		});
 		}
 		
@@ -99,7 +97,6 @@
 			}).then(function(data) {
 				console.log(data.src);
 				jQuery('#video-grande-paroisse').attr('src', data.src);
-
 		});
 		}
 		
