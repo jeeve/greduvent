@@ -296,8 +296,7 @@
 			seulement le carburant. Le vrai conducteur n'est plus le politique, 
 			c'est le consommateur. Le citoyen, c'était avant, dans l'autre 
 			monde. Le pouvoir ne germe plus uniquement des urnes, il se construit au 
-			quotidien, dans nos choix de consommateur, statut peu séduisant mais 
-			d'une puissance considérable. Certains scandent "travailler plus 
+			quotidien, dans nos choix de consommateur. Certains scandent "travailler plus 
 			pour gagner plus". Moi ce soir, dans l'euphorie qui succède souvent 
 			la lecture des éditoriaux de Claude Imbert, je proclame "consommer 
 			moins pour consommer mieux". Merde au dumping social. Vive le 
