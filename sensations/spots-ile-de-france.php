@@ -191,7 +191,7 @@
 </div> 	
 
 <div id="item-infos-poses" class="collapse">
-  <p>Tarif 4€ ou 25€ l'année</p>
+  <p>Tarif 5€ ou 25€ l'année</p>
   <p>Ouvert toute l'année</p>  
   <p>Mise à l'eau au pied du parking</p>
   <p>Grande superficie</p>
@@ -268,7 +268,7 @@
 
 <div id="item-infos-moisson" class="collapse">
 <p>Gratuit l'hiver. Sinon à partir de mai le week-end : 6€</p>
-					<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=271" target="_blank">My wind session</a></p>
+					<p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=271" target="_blank">My wind session</a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a></p> 
 
    <br>
 </div> 					
