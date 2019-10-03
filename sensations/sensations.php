@@ -156,7 +156,43 @@
 				  Clips vidéo de <em>Cuisine Spectrale</em><br>
 				  A la découverte de <a href="https://soundcloud.com/cuisine-spectrale" target="_blank">sensations sonores</a>
 				  </p>	
-				 </div></div>		
+				 </div></div>	
+				 
+<br>				 
+<a name="couleurs-cafe"></a>
+<div class="row">
+<div class="col-xs-1 col-md-3 fond"></div>
+       <div class="col-xs-10 col-md-6 fond-table encadrement-table">
+<h2>Couleurs café</h2>
+<p>
+A la croisée des chemins<br>
+A la croisée de nos vies<br>
+Une petite pause<br>
+Couleur café<br>
+Une petite pause bien méritée<br>
+Prenez place à bord<br>
+Du triporteur de l'amitié<br>
+Arnaud veille aux grains<br>
+Grains de café<br>
+Prenez place et savourez<br>
+Le temps ici est arrêté<br>
+Ici se croise le monde entier<br>
+Le marin, l'avocat, le peintre, l'infirmier<br>
+Chacun se découvre<br>
+Se retrouve<br>
+Autour d'une tasse<br>
+D'un sourire<br>
+D'un rêve à demi éveillé<br>
+Si vous passez par là<br>
+Laissez-vous tenter<br>
+Par ce voyage hors du temps<br>
+<a href="https://www.couleurs-cafe.com/street-art" target="_blank">Couleur café</a><br>
+<p style="text-align: right;"><font size="2"><em>
+24 février 2019</em></font>
+</p>
+</div>
+</div>
+		 
 			
 
 <br><br>
