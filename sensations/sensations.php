@@ -161,10 +161,13 @@
 <br>				 
 <a name="couleurs-cafe"></a>
 <div class="row">
-<div class="col-xs-2 col-md-3 fond"></div>
-       <div class="col-xs-8 col-md-6">
+<div class="col-md-3 fond"></div>
+       <div class="col-xs-12 col-md-6 fond">
+	   <p align="center">
 <a href="https://www.couleurs-cafe.com/street-art" target="_blank"><img alt="Le Couleurs café - dessin David Mahé" title="Le Couleurs café - dessin David Mahé" src="images/couleurs-cafe.jpg" class="img-responsive ombre-image" /></a>
+</p>
 			  	  <p class="legende"><a href="https://www.couleurs-cafe.com/street-art" target="_blank">le Couleurs café, dessin David Mahé</a></p></p>
+
 </div>
 </div>
 		 
