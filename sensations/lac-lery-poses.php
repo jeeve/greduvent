@@ -116,11 +116,6 @@
 				 </div>
 				</div> 
 -->				 
-                  <br>
-				  
-                  <p class="legende">En direct du lac de Léry-Poses et <a href="http://windsurf-lery-poses.soforums.com" target="_blank">ses passionnés</a> - <a href="http://wlpa.e-monsite.com/" target="_blank">association WLPA <img src="images/logo-wlpa.png"></a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
-                  </p>
-                  
 				  
 				  <br><br>
                   <div class="row">
@@ -253,7 +248,15 @@
 				  </ul>
 				  </font></em></p>
 -->	
-
+				<h2>Informations</h2>		
+  <p>Tarif 5€ ou 25€ l'année</p>
+  <p>Ouvert toute l'année</p>  
+  <p>Mise à l'eau au pied du parking</p>
+  <p>Grande superficie</p>
+  <p>Fonctionne par toutes les orientations de vent</p>
+                    <p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a> - en direct du lac et <a href="http://windsurf-lery-poses.soforums.com" target="_blank">ses passionnés</a> - <a href="http://wlpa.e-monsite.com/" target="_blank">association WLPA <img src="images/logo-wlpa.png"></a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
+                  </p>
+  <br>
 					
 				  <br>
 				  <h2>Sessions en vidéo</h2>
