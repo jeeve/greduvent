@@ -43,7 +43,7 @@
   <div class="col-xs-12 col-sm-12 fond">
     <br>
 	<div class="visible-xs">
-	<p>A13 près de Louviers, <a href='https://www.viewsurf.com/univers/trafic/vue/3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen' target="_blank">péage de Heudebouville</a>, vue orientée vers Le Havre ou Caen</p>  
+	<p>A13 près de Louviers, <a href='https://www.viewsurf.com/univers/trafic/vue/3256-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-paris' target="_blank">péage de Heudebouville</a>, vue orientée vers Paris</p>  
 	</div>
 	
   <div class="embed-responsive embed-responsive-16by9 ombre-image">
@@ -51,7 +51,7 @@
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
 	<div id="webcam" class="hidden-xs">
-		<p>A13 près de Louviers, <a href='https://www.viewsurf.com/univers/trafic/vue/3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen' target="_blank">péage de Heudebouville</a>, vue orientée vers Le Havre ou Caen</p>  
+		<p>A13 près de Louviers, <a href='https://www.viewsurf.com/univers/trafic/vue/3256-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-paris' target="_blank">péage de Heudebouville</a>, vue orientée vers Paris</p>  
 	</div>
 					  <div id="meteo-tems-reel" class="hidden-xs">
 				  <table>

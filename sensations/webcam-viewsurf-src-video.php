@@ -39,7 +39,7 @@
 	}
 	
 	if ($station == 'HEUDEBOUVILLE') {
-		$line2 = 'https://www.webcam-autoroute.eu/videos/3254-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-le-havre-ou-caen.mp4';
+		$line2 = 'https://www.webcam-autoroute.eu/videos/3256-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-paris.mp4';
 	}
 	
 	$arr = array('src' => $line2);
