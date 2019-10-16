@@ -39,7 +39,11 @@
 	}
 	
 	if ($station == 'HEUDEBOUVILLE') {
-		$line2 = 'https://www.webcam-autoroute.eu/videos/3256-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-paris.mp4';
+		$lines = file('https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/131/haute-normandie/louviers/rouen-vers-paris');
+		$line = $lines[getLigne($lines, "<video")];	
+		$k = strpos($line, 'source src="');
+		$l = strpos($line, 'type="video/mp4"');
+		$line2 = 'https://www.webcam-autoroute.eu/' . substr($line, $k + 13, $l-$k-15);
 	}
 	
 	$arr = array('src' => $line2);
