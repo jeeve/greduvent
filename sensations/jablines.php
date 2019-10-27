@@ -219,6 +219,20 @@
 					
 				  <br>
 				  <h2>Sessions en vidéo</h2>
+				  
+				  <br><a name="jablines-26-10-19"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/7cKl8r_3CSg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				  <p class="legende">
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=237562" target="_blank">Session windsurf de rêve. Vent pile dans l'axe</a>
+				  </p>
+				  </div></div>				  
 
 				  <br><a name="jablines-3-3-2019"></a>
 				  <div class="row">
