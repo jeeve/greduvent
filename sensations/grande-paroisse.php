@@ -101,22 +101,6 @@
 	
  
 
-<!--			   
-			    <div class="row">
-				<div class="col-xs-4">
-                  <h1>Lac de Léry-Poses</h1>
-				</div>
-				<div class="col-xs-8">	
-				  <p style="text-align:right;">
-				  <a href="#commentaires">Un commentaire sur cette page, une suggestion, un problème... <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-				  </p>
-				 </div>
-				</div> 
--->				 
-                  <br>
-				  
-						<p class="legende">Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=928" target="_blank">My wind session</a> - Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
-			<br>
 			
                   <div class="row">
                     <!-- <div class="col-xs-12 col-sm-2"></div> -->

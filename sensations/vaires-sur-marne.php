@@ -112,11 +112,7 @@
 </div>					
 	
  
-		 
-                  <br>
-				  
-                  <p class="legende">Le forum <a href="http://tontons-windsurfers.forumprod.com/" target="_blank">Windsurf 77</a></p>
-                  
+		                   
 				  
 				  <br><br>
                   <div class="row">
