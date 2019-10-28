@@ -231,7 +231,7 @@
 				  </div>
 				  </p>
 				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=237562" target="_blank">Session windsurf de rêve. Vent pile dans l'axe</a>
+					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=237957" target="_blank">Génial !!! La prochaine fois j'essaie le jibe ;-)</a>
 				  </p>
 				  </div></div>				  
 
