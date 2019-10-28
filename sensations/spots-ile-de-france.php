@@ -161,7 +161,7 @@
 -->		
 			   <br>	
 				<a name="poses"></a>
-			    <h2><input id="div-poses" type="button" value=" - " data-toggle="collapse" data-target="#item-div-poses" />  <a href="lac-lery-poses.php">Léry-Poses</a></h2>
+			    <h2><input id="div-poses" type="button" value=" - " data-toggle="collapse" data-target="#item-div-poses" />  <a href="lery-poses.php">Léry-Poses</a></h2>
 <div id="item-div-poses" class="collapse in">		
 		
 							

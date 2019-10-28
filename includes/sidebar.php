@@ -25,7 +25,7 @@
 					<ul style="display: none;">
 						<li><a href="/sensations/windsurf-kitesurf.php">windsurf / kitesurf</a></li>
 						<li><a href="/sensations/spots-ile-de-france.php">les spots d'Ile-de-France</a></li>
-						<li><a href="/sensations/lac-lery-poses.php">lac de Léry-Poses</a></li>
+						<li><a href="/sensations/lery-poses.php">Léry-Poses</a></li>
 						<li><a href="/sensations/moisson.php">Moisson Lavacourt</a></li>
 						<li><a href="/sensations/jablines.php">Jablines</a></li>						
 						<li><a href="/sensations/vaires-sur-marne.php">Vaires-sur-Marne</a></li>
