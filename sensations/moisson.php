@@ -205,11 +205,10 @@
 				</div>	
 
 				<h2>Informations</h2>		
-				<p>Gratuit hors saison. Sinon à partir de mai le week-end : 6€. Juillet-août tous les jours : 6€.</p>
-                 <p><a href="http://www.kiffmembers.org/" target="_blank">Le K.I.F.F. (Klan des Intrépides Funboarders Franciliens) <img  height="60" src="images/logo-kiffmembers.gif"></a>
- 				<br>
-					
-				  <br>
+  <div class="infoMoisson"></div>
+  <br>
+									
+				
 				  <h2>Sessions en vidéo</h2>
 
 				  <br><a name="moisson-18-10-19"></a>
@@ -350,6 +349,7 @@
 
         
 		jQuery(document).ready(function($) {
+		getInfoSpot();
 		getWebCam();	 
 		getMeteo();
 		
@@ -359,6 +359,7 @@
 		});
 
       </script>
+	    <script type="text/javascript" src="js/info-spot.js"></script>
    </body>
 </html>
 

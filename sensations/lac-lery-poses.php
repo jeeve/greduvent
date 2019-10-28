@@ -249,16 +249,10 @@
 				  </font></em></p>
 -->	
 				<h2>Informations</h2>		
-  <p>Tarif 5€ ou 25€ l'année</p>
-  <p>Ouvert toute l'année</p>  
-  <p>Mise à l'eau au pied du parking</p>
-  <p>Grande superficie</p>
-  <p>Fonctionne par toutes les orientations de vent</p>
-                    <p>Le spot sur <a href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=231" target="_blank">My wind session</a> - en direct du lac et <a href="http://windsurf-lery-poses.soforums.com" target="_blank">ses passionnés</a> - <a href="http://wlpa.e-monsite.com/" target="_blank">association WLPA <img src="images/logo-wlpa.png"></a> - <a href="http://www.kiffmembers.org/" target="_blank">le covoiturage <img  height="60" src="images/logo-kiffmembers.gif"></a>
-                  </p>
+  <div class="infoPoses"></div>
   <br>
 					
-				  <br>
+			
 				  <h2>Sessions en vidéo</h2>
 
 				  <br><a name="lery-poses-6-10-19"></a>
@@ -629,6 +623,7 @@
 
         
 		jQuery(document).ready(function($) {
+		getInfoSpot();
 		getWebCam();	 
 		getMeteo();
 		
@@ -693,6 +688,7 @@
 		 }
 		 */
       </script>
+	  <script type="text/javascript" src="js/info-spot.js"></script>
 	  <script type="text/javascript" src="js/historique-vent.js"></script>
       <script type="text/javascript" src="js/imagebankleryposes.js"></script>
 	  <script type="text/javascript" src="js/timelapse.js"></script>	  

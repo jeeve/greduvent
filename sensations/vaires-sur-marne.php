@@ -215,9 +215,9 @@
 					</div>
 				</div>	
 
-
-					
-				  <br>
+				<h2>Informations</h2>		
+  <div class="infoVairesSurMarne"></div>
+  <br>
 				  <h2>Sessions en vidéo</h2>
 
 				  <br><a name="vaires-13-01-19"></a>
@@ -282,6 +282,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
 
         
 		jQuery(document).ready(function($) {
+		getInfoSpot();
 		getWebCam();	 
 		getMeteo();
 		
@@ -292,6 +293,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
 		
 		 });
       </script>
+	  <script type="text/javascript" src="js/info-spot.js"></script>
    </body>
 </html>
 

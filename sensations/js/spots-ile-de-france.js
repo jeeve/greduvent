@@ -111,6 +111,8 @@
 	  
 		jQuery(document).ready(function($) {
 
+			getInfoSpot();
+
 			jQuery("input[data-target^='#item-div']").click(function() {
 				if (jQuery(this).attr('value') == ' + ') {
 					jQuery(this).attr('value', ' - ');

@@ -208,7 +208,11 @@
 					</div>	
 				</div>	
 				
-<br>
+				<h2>Informations</h2>		
+  <div class="infoGrandeParoisse"></div>
+
+					
+				  <br>
 				  <h2>Sessions en vidéo</h2>
 
 				  <br><a name="grande-paroisse-19-9-2019"></a>
@@ -339,6 +343,7 @@
 		var myVar =	setInterval(getMeteo, 30000);	
          
 		 $(document).ready(function($) {	
+			getInfoSpot();
 			getWebCam();		 
 			getMeteo();
 			if (navigator.geolocation) {
@@ -346,7 +351,8 @@
 			}
 
 		 });
-	  </script>		
+	  </script>	
+<script type="text/javascript" src="js/info-spot.js"></script>	  
    </body>
 </html>
 

@@ -215,9 +215,10 @@
 					</div>
 				</div>	
 
-
-					
-				  <br>
+				<h2>Informations</h2>		
+  <div class="infoJablines"></div>
+  <br>
+  
 				  <h2>Sessions en vidéo</h2>
 				  
 				  <br><a name="jablines-26-10-19"></a>
@@ -297,6 +298,7 @@ Surpris par une pointe de vitesse !!
 
         
 		jQuery(document).ready(function($) {
+			getInfoSpot();
 		getWebCam();	 
 		getMeteo();
 		
@@ -307,6 +309,7 @@ Surpris par une pointe de vitesse !!
 		
 		 });
       </script>
+	  <script type="text/javascript" src="js/info-spot.js"></script>	  
    </body>
 </html>
 
