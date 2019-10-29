@@ -595,7 +595,7 @@
       <?php include("../includes/footer.php"); ?>	
 	  	
 	  <script src="js/jquery-ui.min.js"></script>
-	  <script type="text/javascript" src="js/meteo3.js"></script>	  
+	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
 	    function getWebCam() {
 			jQuery.ajax({

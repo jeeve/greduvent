@@ -273,7 +273,7 @@ Surpris par une pointe de vitesse !!
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>	
 	  	
-	  <script type="text/javascript" src="js/meteo3.js"></script>	  
+	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
 		function getWebCam() {
 			d = new Date();

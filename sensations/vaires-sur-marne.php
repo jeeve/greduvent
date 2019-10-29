@@ -257,7 +257,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>	
 	  	
-	  <script type="text/javascript" src="js/meteo3.js"></script>	  
+	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
 		function getWebCam() {
 			d = new Date();
