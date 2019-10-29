@@ -146,10 +146,12 @@
 						<div class="hidden-xs">	
 						<br>
 						</div>
+						
+						<!--
 						<div id="comparer">
 							<button onclick="clickComparer()">Comparer</button>
 						</div>								
-							
+						-->	
 						</div>		
 
 						
