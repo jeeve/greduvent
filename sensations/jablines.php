@@ -242,9 +242,7 @@
 				  </p>
 				  <p class="legende">
 					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=221465" target="_blank">Découverte du spot</a><br>
-Super session
-Vent très irrégulier mais quelques bonnes rafales
-Surpris par une pointe de vitesse !!
+Super session. Vent très irrégulier mais quelques bonnes rafales. Surpris par une pointe de vitesse !!
 				  </p>
 				  </div></div>
 
