@@ -65,7 +65,7 @@
 
 .table-commentaires td {
 	padding-right: 5px; 
-	padding-bottom: 10px;
+	padding-bottom: 0;
 	vertical-align: top;
 }
 .note-bonne  {
