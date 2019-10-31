@@ -2,7 +2,7 @@
 <html lang="fr">
    <head>
       <title>Saint-Jacut-de-la-Mer</title>
-      <META NAME="Description" CONTENT="Saint-Jacut de la Mer, petite presqu'île bretonne au charme envoûtant."/>
+      <META NAME="Description" CONTENT="Saint-Jacut-de-la-Mer, petite presqu'île bretonne au charme envoûtant."/>
 	  <?php include("../includes/header.php"); ?>	
    </head>
    <body>
@@ -152,7 +152,7 @@
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
 				 <iframe width="560" height="315" src="https://www.youtube.com/embed/k6x21YJ9ojo?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
