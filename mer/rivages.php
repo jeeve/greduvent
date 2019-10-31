@@ -66,7 +66,7 @@
 <br><br>
 <div id="swipe"><div class="row">
 <div class="col-xs-2"><p><a id="page-precedente" href="mer.php">parfum salé</a></p></div>
-<div class="col-xs-10"><p align="right"><a id="page-suivante" href="diapo.php">lumières marines</a> - <a href="saint-jacut.php">Saint-Jacut de la Mer</a> - <a href="safaga.php">Safaga</a> - <a href="../loire/loire.php">au fil de l'eau</a></p></div>
+<div class="col-xs-10"><p align="right"><a id="page-suivante" href="diapo.php">lumières marines</a> - <a href="saint-jacut.php">Saint-Jacut-de-la-Mer</a> - <a href="safaga.php">Safaga</a> - <a href="../loire/loire.php">au fil de l'eau</a></p></div>
 </div><div class="row"><p class="numero-page">page 3</p>	
 
 </div></div>

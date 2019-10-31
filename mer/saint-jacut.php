@@ -43,7 +43,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-5 fond">
                            <h2 align="center">
-                              Saint-Jacut de la Mer
+                              Saint-Jacut-de-la-Mer
                            </h2>
                            <p align="center">Paysage aux portes du monde.<br>  
                               Miroir mouvant qui s'ouvre sur le ciel.<br>  

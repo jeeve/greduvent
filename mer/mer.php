@@ -127,7 +127,7 @@
 <br><br>
 <div id="swipe"><div class="row">
 <div class="col-xs-3"><p><a id="page-precedente" href="../astronomie/astronomie.php">vers les étoiles</a></p></div>
-<div class="col-xs-9"><p align="right"><a id="page-suivante" href="rivages.php">rivages</a> - <a href="diapo.php">lumières marines</a> - <a href="saint-jacut.php">Saint-Jacut de la Mer</a> - <a href="safaga.php">Safaga</a> - <a href="../loire/loire.php">au fil de l'eau</a></p></div>
+<div class="col-xs-9"><p align="right"><a id="page-suivante" href="rivages.php">rivages</a> - <a href="diapo.php">lumières marines</a> - <a href="saint-jacut.php">Saint-Jacut-de-la-Mer</a> - <a href="safaga.php">Safaga</a> - <a href="../loire/loire.php">au fil de l'eau</a></p></div>
 </div><div class="row"><p class="numero-page">page 2</p>	
 
 </div></div>

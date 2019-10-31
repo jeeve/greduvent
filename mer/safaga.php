@@ -38,7 +38,7 @@
 				  </div></div>
 <br><br>
 <div id="swipe"><div class="row">
-<div class="col-xs-9"><p><a href="mer.php">parfum salé</a> - <a href="rivages.php">rivages</a> - <a href="diapo.php">lumières marines</a> - <a id="page-precedente" href="saint-jacut.php">Saint-Jacut de la Mer</a></p></div>
+<div class="col-xs-9"><p><a href="mer.php">parfum salé</a> - <a href="rivages.php">rivages</a> - <a href="diapo.php">lumières marines</a> - <a id="page-precedente" href="saint-jacut.php">Saint-Jacut-de-la-Mer</a></p></div>
 <div class="col-xs-3"><p align="right"><a id="page-suivante" href="../loire/loire.php">au fil de l'eau</a></p>
 </div>
 </div><div class="row"><p class="numero-page">page 6</p>	
