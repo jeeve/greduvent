@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
    <head>
-      <title>Saint-Jacut de la Mer</title>
+      <title>Saint-Jacut-de-la-Mer</title>
       <META NAME="Description" CONTENT="Saint-Jacut de la Mer, petite presqu'île bretonne au charme envoûtant."/>
 	  <?php include("../includes/header.php"); ?>	
    </head>
@@ -15,7 +15,7 @@
 			   <?php include("../includes/sidebar.php"); ?>		
                <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
-                  <h1>Saint-Jacut de la Mer</h1>
+                  <h1>Saint-Jacut-de-la-Mer</h1>
                   <br>
                   <p align="center">
                      En marchant vers le rivage, le ciel se fit artiste<br>
@@ -133,17 +133,31 @@
                      </div>
                   </div>
 				  		  
+				  <br><a name="windsurf-aout-2019"></a>
+				  <div class="row">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
+				  <p align="center">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
+				 <iframe width="560" height="315" src="https://www.youtube.com/embed/_D3RVJqU344?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  </p>
+				<p class="legende">
+				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2019
+				  </p>
+				  </div></div>	
+
 				  <br><a name="windsurf-aout-2018"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
 				 <iframe width="560" height="315" src="https://www.youtube.com/embed/k6x21YJ9ojo?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> sous l'orage à Saint-Jacut de la Mer, août 2018
+				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> sous l'orage à Saint-Jacut-de-la-Mer, août 2018
 				  </p>
 				  </div></div>	
 
@@ -157,7 +171,7 @@
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> à Saint-Jacut de la Mer, août 2017
+				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2017
 				  </p>
 				  </div></div>				 
 				  

@@ -6,7 +6,7 @@
 					<ul style="display: none;">
 						<li><a href="/mer/rivages.php">rivages</a></li>
 						<li><a href="/mer/diapo.php">lumières marines</a></li>
-						<li><a href="/mer/saint-jacut.php">Saint-Jacut de la Mer</a></li>
+						<li><a href="/mer/saint-jacut.php">Saint-Jacut-de-la-Mer</a></li>
 						<li><a href="/mer/safaga.php">Safaga</a></li>						
 					</ul>	
 				  </li>					
