@@ -185,7 +185,7 @@
     
 	<video id="video-poses" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p>A13 près de Louviers, <a href='https://www.viewsurf.com/univers/trafic/vue/3256-france-haute-normandie-heudebouville-a13-pres-de-louviers-peage-de-heudebouville-vue-orientee-vers-paris' target="_blank">péage de Heudebouville</a>, vue orientée vers Paris</p>  
+		<p>A13 près de Louviers, <a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/131/haute-normandie/louviers/rouen-vers-paris' target="_blank">péage de Heudebouville</a>, vue orientée vers Paris</p>  
 	</div>
 	  
   </div> 
@@ -255,7 +255,7 @@
     
 	<video id="video-moisson" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p>A13 près de Mantes la Ville, <a href='https://www.viewsurf.com/univers/trafic/vue/3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
+		<p>A13 près de Mantes la Ville, <a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
 	</div>
 	  
   </div> 
@@ -551,7 +551,7 @@
     
 	<video id="video-grande-paroisse" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p><a href='https://www.viewsurf.com/univers/trafic/vue/7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
+		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
 	</div>
 	  
   </div> 

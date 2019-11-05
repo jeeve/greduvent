@@ -42,7 +42,7 @@
   <div class="col-xs-12 col-sm-12 fond">
     <br>
 	<div class="visible-xs">
-	<p>A13 près de Mantes la Ville, <a href='https://www.viewsurf.com/univers/trafic/vue/3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
+	<p>A13 près de Mantes la Ville, <a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
 	</div>
 	
   <div class="embed-responsive embed-responsive-16by9 ombre-image">
@@ -50,7 +50,7 @@
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
 	<div id="webcam" class="hidden-xs">
-	<p>A13 près de Mantes la Ville, <a href='https://www.viewsurf.com/univers/trafic/vue/3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
+	<p>A13 près de Mantes la Ville, <a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
 	</div>
 					  <div id="meteo-tems-reel" class="hidden-xs">
 				  <table>
@@ -324,7 +324,7 @@
       <script> 
 	    function getWebCam() {
 			jQuery.ajax({
-				url: '/sensations/webcam-viewsurf-src-video.php?station=BUCHELAY&url=3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris',
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris',
 				type: 'GET',
 				crossDomain: true,
 				dataType: 'json'

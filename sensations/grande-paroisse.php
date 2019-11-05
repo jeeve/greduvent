@@ -40,7 +40,7 @@
   <div class="col-xs-12 col-sm-12 fond">
     <br>
 	<div class="visible-xs">
-		<p><a href='https://www.viewsurf.com/univers/trafic/vue/7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
+		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
 	</div>
 	
   <div class="embed-responsive embed-responsive-16by9 ombre-image">
@@ -48,7 +48,7 @@
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
 	<div id="webcam" class="hidden-xs">
-		<p><a href='https://www.viewsurf.com/univers/trafic/vue/7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
+		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
 	</div>
 					  <div id="meteo-tems-reel" class="hidden-xs">
 				  <table>
@@ -303,7 +303,7 @@
       <script>  
 	    function getWebCam() {
 			jQuery.ajax({
-				url: '/sensations/webcam-viewsurf-src-video.php?url=7354-france-ile-de-france-melun-a6-pres-de-melun-et-fontainebleau-vue-orientee-vers-lyon',
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon',
 				type: 'GET',
 				crossDomain: true,
 				dataType: 'json'
