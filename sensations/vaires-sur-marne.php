@@ -215,7 +215,10 @@
   <div class="infoVairesSurMarne"></div>
   <br>
 				  <h2>Sessions en vidéo</h2>
+				  
+				  <div id="sessions"></div>
 
+<!--
 				  <br><a name="vaires-13-01-19"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
@@ -231,7 +234,7 @@ Vent parfaitement orienté ! Du bonheur...
 Quelques bon spin-out surtout en plein largue à 47 km/h !
 				  </p>
 				  </div></div>
-
+-->
 				  <br>		  
 			 
 				  <div id="swipe">
@@ -279,6 +282,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
         
 		jQuery(document).ready(function($) {
 		getInfoSpot();
+		getInfoSessions('Vaires sur Marne');
 		getWebCam();	 
 		getMeteo();
 		
@@ -290,6 +294,7 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
 		 });
       </script>
 	  <script type="text/javascript" src="js/info-spot.js"></script>
+	  <script type="text/javascript" src="js/info-sessions.js"></script>	
    </body>
 </html>
 

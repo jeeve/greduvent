@@ -199,6 +199,9 @@
 				  <br>
 				  <h2>Sessions en vidéo</h2>
 
+<div id="sessions"></div>
+
+<!--
 				  <br><a name="grande-paroisse-19-9-2019"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
@@ -275,6 +278,7 @@
 				  </p>
 				  </div></div>
 
+-->
 <br>
 <br>
  				  <div id="swipe">
@@ -328,6 +332,7 @@
          
 		 $(document).ready(function($) {	
 			getInfoSpot();
+			getInfoSessions('Grande-Paroisse');
 			getWebCam();		 
 			getMeteo();
 			if (navigator.geolocation) {
@@ -336,7 +341,9 @@
 
 		 });
 	  </script>	
-<script type="text/javascript" src="js/info-spot.js"></script>	  
+<script type="text/javascript" src="js/info-spot.js"></script>
+<script type="text/javascript" src="js/info-sessions.js"></script>
+	  
    </body>
 </html>
 

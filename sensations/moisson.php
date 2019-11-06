@@ -210,7 +210,10 @@
 									
 				
 				  <h2>Sessions en vidéo</h2>
+				  
+				  <div id="sessions"></div>	
 
+<!--
 				  <br><a name="moisson-18-10-19"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
@@ -293,7 +296,9 @@
 				  <p class="legende">
 					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=223941" target="_blank">Baptême Foil. Magique !! Samedi 13 avril 2019</a>
 				  </p>
-				  </div></div>				  
+				  </div></div>
+-->
+				  
 
 				  <br>		  
 			 
@@ -350,6 +355,7 @@
         
 		jQuery(document).ready(function($) {
 		getInfoSpot();
+		getInfoSessions('Moisson');
 		getWebCam();	 
 		getMeteo();
 		
@@ -360,6 +366,7 @@
 
       </script>
 	    <script type="text/javascript" src="js/info-spot.js"></script>
+		<script type="text/javascript" src="js/info-sessions.js"></script>	 
    </body>
 </html>
 

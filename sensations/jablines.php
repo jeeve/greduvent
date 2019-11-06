@@ -217,6 +217,9 @@
   
 				  <h2>Sessions en vidéo</h2>
 				  
+<div id="sessions"></div>				  
+				  
+<!--
 				  <br><a name="jablines-26-10-19"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
@@ -245,6 +248,8 @@
 Super session. Vent très irrégulier mais quelques bonnes rafales. Surpris par une pointe de vitesse !!
 				  </p>
 				  </div></div>
+				  
+-->				  
 
 				  <br>		  
 			 
@@ -293,6 +298,7 @@ Super session. Vent très irrégulier mais quelques bonnes rafales. Surpris par 
         
 		jQuery(document).ready(function($) {
 			getInfoSpot();
+			getInfoSessions('Jablines');
 		getWebCam();	 
 		getMeteo();
 		
@@ -303,7 +309,8 @@ Super session. Vent très irrégulier mais quelques bonnes rafales. Surpris par 
 		
 		 });
       </script>
-	  <script type="text/javascript" src="js/info-spot.js"></script>	  
+	  <script type="text/javascript" src="js/info-spot.js"></script>
+	<script type="text/javascript" src="js/info-sessions.js"></script>	  
    </body>
 </html>
 

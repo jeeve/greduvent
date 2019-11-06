@@ -254,6 +254,10 @@
 					
 			
 				  <h2>Sessions en vidéo</h2>
+				  
+				  <div id="sessions"></div>	
+				  
+<!--				  
 
 				  <br><a name="lery-poses-6-10-19"></a>
 				  <div class="row">
@@ -567,7 +571,9 @@
 				  16 avril 2017</a><br>
 				  Test de la V8 dans le vent léger
 				  </p>
-				  </div></div>				  		  
+				  </div></div>	
+
+-->				  
 	
 				  <br>		  
 			 
@@ -624,6 +630,7 @@
         
 		jQuery(document).ready(function($) {
 		getInfoSpot();
+		getInfoSessions('Léry-Poses');
 		getWebCam();	 
 		getMeteo();
 		
@@ -689,6 +696,7 @@
 		 */
       </script>
 	  <script type="text/javascript" src="js/info-spot.js"></script>
+		<script type="text/javascript" src="js/info-sessions.js"></script>	  
 	  <script type="text/javascript" src="js/historique-vent.js"></script>
       <script type="text/javascript" src="js/imagebankleryposes.js"></script>
 	  <script type="text/javascript" src="js/timelapse.js"></script>	  
