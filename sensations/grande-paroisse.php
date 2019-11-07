@@ -3,7 +3,8 @@
    <head>
       <title>La Grande-Paroisse</title>
       <META NAME="Description" CONTENT="Le lac de La Grande Paroisse."/>
-	  <?php include("../includes/header.php"); ?>	
+	  <?php include("../includes/header.php"); ?>	  
+	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>
 	  <style>
 		#webcam {
 			position: absolute;
@@ -189,8 +190,10 @@
 						<a href="https://www.xcweather.co.uk/forecast/grande-paroisse" target="_blank"><img src="images/logo-xcweather.png"></a>
 						<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank"><img src="images/logo-meteofrance.png"></a>
 						</div>		
-					</div>	
-				</div>	
+					</div>
+										<div class="col-xs-12 visible-xs fond">
+						<br><br>					
+				</div>	</div>
 				
 				<h2>Informations</h2>		
   <div class="infoGrandeParoisse"></div>

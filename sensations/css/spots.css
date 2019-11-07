@@ -101,3 +101,13 @@ label {
 	padding-bottom: 10px;
 	vertical-align: top;
 }
+
+.info-sessions {
+	font-family: 'Raleway', sans-serif;
+	font-size: 100%;
+}
+
+.info-sessions  td {
+	padding: 5px;
+	vertical-align: top;
+}

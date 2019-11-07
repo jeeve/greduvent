@@ -5,7 +5,7 @@
       <META NAME="Description" CONTENT="Le lac de Léry Poses avec webcam, archives, météo en temps réel et prévisions, lien vers l'association WLPA et site de covoiturage."/>
 	  <?php include("../includes/header.php"); ?>	
 	  <link rel="stylesheet" href="css/jquery-ui.min.css">
-	  <link href="css/lac-lery-poses.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>
 	  <style>
 		#webcam {
 			position: absolute;
