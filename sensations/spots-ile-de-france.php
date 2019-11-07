@@ -2,7 +2,7 @@
 <html lang="fr">
    <head>
       <title>Les spots d'Ile-de-France</title>
-      <META NAME="Description" CONTENT="Où naviguer en Ile-de-France. Les spots de la région parisienne pour la planche à voile et le windsurf. Prévisions, météo temps réel et webcams."/>
+      <META NAME="Description" CONTENT="Où naviguer en Ile-de-France. Les spots de la région parisienne pour la planche à voile,le windsurf et le windfoil. Prévisions, météo temps réel et webcams."/>
 	  <?php include("../includes/header.php"); ?>	
 	  <link rel="stylesheet" type="text/css" href="css/spots-ile-de-france.css" media="all"/>
 		  	  
@@ -172,7 +172,7 @@
                <div class="row">
 					<div class="col-sm-8">
 					
-		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-poses" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
+		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-poses" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
 							<img src="images/spots-lery-poses-2.jpg" width=400 class="img-responsive ombre-image" alt="Les mises à l'eau en fonction du vent" title="Les mises à l'eau en fonction du vent">
@@ -242,7 +242,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-moisson" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -316,7 +316,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-saint-quentin" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -393,7 +393,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-jablines" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -464,7 +464,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /> - <a href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -537,7 +537,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grande-paroisse" value="Informations" class="btn-releve" /> - <a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grande-paroisse" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
 
 			<div id="item-vue-grande-paroisse" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">

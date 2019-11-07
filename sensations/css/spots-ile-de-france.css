@@ -93,3 +93,9 @@
 	}	
 }
 
+.lien-bouton {
+	display: inline-block; 
+	padding-top: 15px; 
+	padding-bottom: 10px;
+}
+
