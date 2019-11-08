@@ -44,10 +44,18 @@ function getInfoSessions(spot) {
 					html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
 					html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
 					html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
+					if (distance != '') {
+						if  (trace == '') {
+							html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
+						}
+						else {
+							html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km</td></tr>';
+						}
+					}
 					html = html + '<tr><td>VMax</td><td>' + vmax + ' kts</td></tr>';
 					html = html + '<tr><td>V100m</td><td>' + v100m + ' kts</td></tr>';
-					if (trace.substring(0, 18) == 'https://flow.polar') {
-						html = html + '<tr><td colspan="2"><a href="' + trace + '" target="_blank">Trace GPS</a></td></tr>';
+					if (leCommentaire != '') {
+						html = html + '<tr><td colspan="2">' + leCommentaire + '</td></tr>';
 					}
 					html = html + '</table></div></div>';
 					
