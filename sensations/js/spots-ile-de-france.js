@@ -60,6 +60,7 @@
 	    function getWebCams() {
 			getWebCamPoses();
 			getWebCamMoisson();
+			getWebCamSaintQuentin();
 			getWebCamEuroDisney();
 			getWebCamGrandeParoisse();
 		}
@@ -87,6 +88,18 @@
 				jQuery('#video-moisson').attr('src', data.src);
 		});
 		}
+		
+		function getWebCamSaintQuentin() {
+			jQuery.ajax({
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france/144/ile-de-france/paris/porte-de-ch-tillon-vers-porte-de-vanves',
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				console.log(data.src);
+				jQuery('#video-saint-quentin').attr('src', data.src);
+		});
+		}		
 		
 		function getWebCamGrandeParoisse() {
 			jQuery.ajax({

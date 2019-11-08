@@ -309,33 +309,33 @@
 
 
 <a name="saint-quentin"></a>			   
-			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  Saint-Quentin en Yvelines</h2>
+			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  <a href="saint-quentin-yvelines.php">Saint-Quentin en Yvelines</a></h2>
 <div id="item-div-saint-quentin" class="collapse in">					
 	
 					   
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
                
 			<div id="item-vue-saint-quentin" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11122.852984860809!2d2.0167699586466092!3d48.787014702848644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1552238675540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>			<br>
 			</div><br>
 			</div>
-<!--			
+			
 <div id="item-webcam-saint-quentin" class="collapse">			
   <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
     
 	<video id="video-saint-quentin" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p>A13 près de Mantes la Ville, <a href='https://www.viewsurf.com/univers/trafic/vue/3246-france-ile-de-france-buchelay-a13-pres-de-mantes-la-ville-peage-de-buchelay-vue-orientee-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
+	<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france/144/ile-de-france/paris/porte-de-ch-tillon-vers-porte-de-vanves' target="_blank">Paris, porte de Vanves</a> orientée vers Porte de Brancion</p>  
 	</div>
 	  
   </div> 
   <br>
-</div> 	
--->	
+</div> 
+
 <div id="item-infos-saint-quentin" class="collapse">
 <div class="infoSaintQuentin"></div>
 

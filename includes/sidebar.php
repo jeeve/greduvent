@@ -27,6 +27,7 @@
 						<li><a href="/sensations/spots-ile-de-france.php">les spots d'Ile-de-France</a></li>
 						<li><a href="/sensations/lery-poses.php">Léry-Poses</a></li>
 						<li><a href="/sensations/moisson.php">Moisson Lavacourt</a></li>
+						<li><a href="/sensations/saint-quentin-yvelines.php">Saint-Quentin en Yvelines</a></li>
 						<li><a href="/sensations/jablines.php">Jablines</a></li>						
 						<li><a href="/sensations/vaires-sur-marne.php">Vaires-sur-Marne</a></li>
 						<li><a href="/sensations/grande-paroisse.php">la Grande-Paroisse</a></li>

@@ -2,7 +2,7 @@
 <html lang="fr">
    <head>
       <title>Moisson Lavacourt</title>
-      <META NAME="Description" CONTENT="Le lac de Moisson Mousseaux avec webcam, archives, météo en temps réel et prévisions, lien vers l'association WLPA et site de covoiturage."/>
+      <META NAME="Description" CONTENT="Le lac de Moisson Mousseaux avec webcam, archives, météo en temps réel et prévisions."/>
 	  <?php include("../includes/header.php"); ?>	
 	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>	  
 	  <style>
