@@ -172,7 +172,21 @@
                <div class="row">
 					<div class="col-sm-8">
 					
-		<p><input type="button" value="Orientations" data-toggle="collapse" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-toggle="collapse" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-poses" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a></p>		
+		<p><input type="button" data-target=".item-meteo-poses" value="Météo" class="btn-releve" /> - <input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></p>		
+			
+			<div class="item-meteo-poses collapse">
+					
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
+							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="http://www.xcweather.co.uk/forecast/L%C3%A9ry_poses" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a>
+							</p>
+			</div>
+				<br>						
+			</div>
+			
 			<div id="item-vue-poses" class="collapse">
 							<a href="images/spots-lery-poses.jpg" target="_blank">
 							<img src="images/spots-lery-poses-2.jpg" width=400 class="img-responsive ombre-image" alt="Les mises à l'eau en fonction du vent" title="Les mises à l'eau en fonction du vent">
@@ -200,6 +214,13 @@
 					
 					
 						<div class="fond-table encadrement-table">
+
+
+<div class="item-meteo-poses collapse">
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33126&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Poses&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lake_des_deux_amants?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lake_des_deux_amants?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Lac des deux Amants</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>
+
 <script id="wg_fwdg_4864_3_1544556530603">
 (function (window, document) {
   var loader = function () {
@@ -242,8 +263,21 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-target=".item-meteo-moisson" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></p>			                								
                
+			<div class="item-meteo-moisson collapse">
+					
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
+							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.xcweather.co.uk/forecast/moisson" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a>
+							</p>
+			</div>
+				<br>						
+			</div>			   
+			   
 			<div id="item-vue-moisson" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15691.154105754329!2d1.674180497185694!3d49.05563923112997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124769919" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>			</div>	
@@ -269,6 +303,11 @@
 					
 					
 						<div class="fond-table encadrement-table">
+						
+<div class="item-meteo-moisson collapse">
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33116&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Lavacourt&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/moisson_lavacourt?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/moisson_lavacourt?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Moisson Lavacourt</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>						
 					
 <script id="wg_fwdg_581_3_1544556198330">
 (function (window, document) {
@@ -316,15 +355,28 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saint-quentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saint-quentin" value="Informations" class="btn-releve" /><!--- <input type="button" data-toggle="collapse" data-target="#item-webcam-saint-quentin" value="Webcam" class="btn-releve" />--> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-target=".item-meteo-saintquentin" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-saintquentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saintquentin" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saintquentin" value="Informations" class="btn-releve" /></p>			                								
                
-			<div id="item-vue-saint-quentin" class="collapse">
+			<div class="item-meteo-saintquentin collapse">			
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a><br><br>							
+							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.xcweather.co.uk/forecast/saint-quentin_en_yvelines" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a>
+							</p>
+			</div>
+				<br>						
+			</div>			   
+			   
+			   
+			<div id="item-vue-saintquentin" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11122.852984860809!2d2.0167699586466092!3d48.787014702848644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1552238675540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>			<br>
 			</div><br>
 			</div>
 			
-<div id="item-webcam-saint-quentin" class="collapse">			
+<div id="item-webcam-saintquentin" class="collapse">			
   <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
     
 	<video id="video-saint-quentin" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
@@ -336,17 +388,19 @@
   <br>
 </div> 
 
-<div id="item-infos-saint-quentin" class="collapse">
+<div id="item-infos-saintquentin" class="collapse">
 <div class="infoSaintQuentin"></div>
 
   <br>
 </div> 	
+								
 					
-					
-					
-					
+			
 						<div class="fond-table encadrement-table">
-					
+<div class="item-meteo-saintquentin collapse">								
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=115576&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Trappes&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/montigny_le_bretonneux?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/moisson_lavacourt?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Montigny-le-Bretonneux</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>					
 <script id="wg_fwdg_161_3_1552237641461">
 (function (window, document) {
   var loader = function () {
@@ -393,8 +447,22 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-target=".item-meteo-jablines" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></p>			                								
                
+			<div class="item-meteo-jablines collapse">			
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
+							<a href="https://www.ventusky.com/?p=48.78;2.64;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
+							</p>
+			</div>
+				<br>						
+			</div>			   
+			   
+			   
+			   
 			<div id="item-vue-jablines" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13272.819129650208!2d2.7189477352299387!3d48.91141958867993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124228312" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>					<br>		
@@ -419,6 +487,10 @@
 </div> 	
 					
 						<div class="fond-table encadrement-table">
+<div class="item-meteo-jablines collapse">								
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33136&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Vaires-sur-Marn&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lake_des_deux_amants?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Lac des deux Amants</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>					
 
 						<script id="wg_fwdg_90210_3_1538749208510">
 (function (window, document) {
@@ -464,8 +536,20 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://fr.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a></p>			                								
-               
+				<p><input type="button" data-target=".item-meteo-vaires" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></p>			                								
+ 
+ 			<div class="item-meteo-vaires collapse">			
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
+							<a href="https://www.ventusky.com/?p=48.78;2.64;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
+							</p>
+			</div>
+				<br>						
+			</div>			   
+
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11109.004540217287!2d2.619497111646004!3d48.864038185964624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546124922241" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		
@@ -493,6 +577,10 @@
 					
 					
 						<div class="fond-table encadrement-table">
+<div class="item-meteo-vaires collapse">								
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33136&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=Vaires-sur-Marn&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lake_des_deux_amants?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Lac des deux Amants</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>					
 
 <script id="wg_fwdg_60276_3_1544556036427">
 (function (window, document) {
@@ -537,16 +625,30 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grande-paroisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grande-paroisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grande-paroisse" value="Informations" class="btn-releve" /> - <a class="lien-bouton" href="https://www.windfinder.com/weatherforecast/la_grande_paroisse" target="_blank">Superforecast</a></p>			                								
+				<p><input type="button" data-target=".item-meteo-grandeparoisse" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></p>			                								
 
-			<div id="item-vue-grande-paroisse" class="collapse">
+ 			<div class="item-meteo-grandeparoisse collapse">			
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank">Superforecast</a><br><br>
+							<a href="https://www.ventusky.com/?p=48.334;2.921;9&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.xcweather.co.uk/forecast/grande-paroisse" target="_blank">XCWeather</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a>
+							</p>
+			</div>
+				<br>						
+			</div>			   
+
+
+
+			<div id="item-vue-grandeparoisse" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11273.578551281074!2d2.8976667986773608!3d48.373243326464745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1546125059041" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
 			</div>
 			<br>
 			</div>
 			
-<div id="item-webcam-grande-paroisse" class="collapse">			
+<div id="item-webcam-grandeparoisse" class="collapse">			
   <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
     
 	<video id="video-grande-paroisse" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
@@ -558,7 +660,7 @@
   <br>
 </div> 	
 
-<div id="item-infos-grande-paroisse" class="collapse">
+<div id="item-infos-grandeparoisse" class="collapse">
 <div class="infoGrandeParoisse"></div> 
  <br>
 </div> 			
@@ -567,6 +669,10 @@
 					
 					
 						<div class="fond-table encadrement-table">
+<div class="item-meteo-grandeparoisse collapse">								
+						<div style="width:520px;overflow:auto;"><iframe align="top" src="https://widgets.windalert.com/widgets/web/modelTable?spot_id=33106&amp;units_wind=kts&amp;units_temp=C&amp;type=daily&amp;width=5830&amp;height=310&amp;color=f1eeee&amp;name=La Grande-Paroisse&amp;app=windalert" width="5830" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe></div>
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/la_grande_paroisse?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/la_grande_paroisse?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>					
 
 <script id="wg_fwdg_90210_3_1546091535290">
 (function (window, document) {

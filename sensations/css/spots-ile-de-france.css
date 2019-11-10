@@ -93,9 +93,8 @@
 	}	
 }
 
-.lien-bouton {
-	display: inline-block; 
-	padding-top: 15px; 
-	padding-bottom: 10px;
+input {
+	margin-top: 10px; 
+	margin-bottom: 10px;
 }
 

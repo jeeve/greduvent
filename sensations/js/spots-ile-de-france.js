@@ -129,13 +129,115 @@
 			jQuery("input[data-target^='#item-div']").click(function() {
 				if (jQuery(this).attr('value') == ' + ') {
 					jQuery(this).attr('value', ' - ');
+					/*jQuery(this).removeClass('btn-releve');	
+					jQuery(this).addClass('btn-enfonce');*/					
 				}
 				else {
 					jQuery(this).attr('value', ' + ');
+					/*jQuery(this).removeClass('btn-enfonce');	
+					jQuery(this).addClass('btn-releve');*/
 				}	
 			});
 			
-			jQuery("input[data-target^='#item-vue'], input[data-target^='#item-webcam'], input[data-target^='#item-infos']").click(function() {
+			jQuery("input[data-target^='.item-meteo']").click(function() {
+				var words = jQuery(this).attr("data-target").split('-');
+				var spot = words[2];
+				if (jQuery(this).hasClass('btn-releve')) {
+					jQuery(this).removeClass('btn-releve');	
+					jQuery(this).addClass('btn-enfonce');
+					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');				
+					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
+					jQuery("#item-vue-" + spot).collapse("hide");
+					jQuery("#item-webcam-" + spot).collapse("hide");
+					jQuery("#item-infos-" + spot).collapse("hide");	
+					jQuery(".item-meteo-" + spot).collapse("show");
+				}
+				else {
+					jQuery(this).removeClass('btn-enfonce');	
+					jQuery(this).addClass('btn-releve');
+					jQuery(".item-meteo-" + spot).collapse("hide");	
+				}
+			});		
+			jQuery("input[data-target^='#item-vue']").click(function() {
+				var words = jQuery(this).attr("data-target").split('-');
+				var spot = words[2];
+				if (jQuery(this).hasClass('btn-releve')) {
+					jQuery(this).removeClass('btn-releve');	
+					jQuery(this).addClass('btn-enfonce');
+					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');				
+					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
+					jQuery(".item-meteo-" + spot).collapse("hide");
+					jQuery("#item-webcam-" + spot).collapse("hide");
+					jQuery("#item-infos-" + spot).collapse("hide");						
+					jQuery("#item-vue-" + spot).collapse("show");
+				}
+				else {
+					jQuery(this).removeClass('btn-enfonce');	
+					jQuery(this).addClass('btn-releve');	
+					jQuery("#item-vue-" + spot).collapse("hide");	
+				}
+			});
+			jQuery("input[data-target^='#item-webcam']").click(function() {
+				var words = jQuery(this).attr("data-target").split('-');
+				var spot = words[2];
+				if (jQuery(this).hasClass('btn-releve')) {
+					jQuery(this).removeClass('btn-releve');	
+					jQuery(this).addClass('btn-enfonce');
+					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');				
+					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
+					jQuery("#item-vue-" + spot).collapse("hide");
+					jQuery(".item-meteo-" + spot).collapse("hide");
+					jQuery("#item-infos-" + spot).collapse("hide");						
+					jQuery("#item-webcam-" + spot).collapse("show");
+				}
+				else {
+					jQuery(this).removeClass('btn-enfonce');	
+					jQuery(this).addClass('btn-releve');
+					jQuery("#item-webcam-" + spot).collapse("hide");		
+				}
+			});
+			jQuery("input[data-target^='#item-infos']").click(function() {
+				var words = jQuery(this).attr("data-target").split('-');
+				var spot = words[2];
+				if (jQuery(this).hasClass('btn-releve')) {
+					jQuery(this).removeClass('btn-releve');	
+					jQuery(this).addClass('btn-enfonce');
+					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');	
+					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');	
+					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');					
+					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
+					jQuery("#item-vue-" + spot).collapse("hide");
+					jQuery("#item-webcam-" + spot).collapse("hide");
+					jQuery(".item-meteo-" + spot).collapse("hide");						
+					jQuery("#item-infos-" + spot).collapse("show");
+				}
+				else {
+					jQuery(this).removeClass('btn-enfonce');	
+					jQuery(this).addClass('btn-releve');
+					jQuery("#item-infos-" + spot).collapse("hide");		
+				}
+			});
+			
+			
+			
+			
+			
+/*			
+			jQuery("input[data-target^='#item-vue'], input[data-target^='#item-webcam'], input[data-target^='#item-infos'], input[data-target^='.item-meteo']").click(function() {
 				if (jQuery(this).hasClass('btn-releve')) {
 					jQuery(this).removeClass('btn-releve');	
 					jQuery(this).addClass('btn-enfonce');					
@@ -145,7 +247,7 @@
 					jQuery(this).addClass('btn-releve');										
 				}
 			});
-			
+*/			
 	         jQuery('#menu-vent').change(function(){
 					orientationVent = $(this).find('option:selected').attr('value');
 					getOrientationVentSpot();
