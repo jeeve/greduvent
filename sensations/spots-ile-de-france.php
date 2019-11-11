@@ -172,7 +172,7 @@
                <div class="row">
 					<div class="col-sm-8">
 					
-		<p><input type="button" data-target=".item-meteo-poses" value="Météo" class="btn-releve" /> - <input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></p>		
+		<p><input type="button" data-target=".item-meteo-poses" value="Météo" class="btn-releve" /> - <input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span></p>		
 			
 			<div class="item-meteo-poses collapse">
 					
@@ -270,7 +270,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-moisson" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></p>			                								
+				<p><input type="button" data-target=".item-meteo-moisson" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-moisson" value="Infos" class="btn-releve"/></span></p>				                								
                
 			<div class="item-meteo-moisson collapse">
 					
@@ -361,7 +361,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-saintquentin" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-saintquentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saintquentin" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-saintquentin" value="Informations" class="btn-releve" /></p>			                								
+				<p><input type="button" data-target=".item-meteo-saintquentin" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-saintquentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saintquentin" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-saintquentin" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-saintquentin" value="Infos" class="btn-releve"/></span></p>				                								
                
 			<div class="item-meteo-saintquentin collapse">			
 						<div class="fond-table encadrement-table" style="width: 150px;">
@@ -452,7 +452,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-jablines" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></p>			                								
+				<p><input type="button" data-target=".item-meteo-jablines" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-jablines" value="Infos" class="btn-releve"/></span></p>            								
                
 			<div class="item-meteo-jablines collapse">			
 						<div class="fond-table encadrement-table" style="width: 150px;">
@@ -540,7 +540,7 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-vaires" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></p>			                								
+				<p><input type="button" data-target=".item-meteo-vaires" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-vaires" value="Infos" class="btn-releve"/></span></p>             								
  
  			<div class="item-meteo-vaires collapse">			
 						<div class="fond-table encadrement-table" style="width: 150px;">
@@ -628,7 +628,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-grandeparoisse" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></p>			                								
+				<p><input type="button" data-target=".item-meteo-grandeparoisse" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-grandeparoisse" value="Infos" class="btn-releve"/></span></p>		                								
 
  			<div class="item-meteo-grandeparoisse collapse">			
 						<div class="fond-table encadrement-table" style="width: 150px;">
