@@ -179,7 +179,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.windy.com/?49.306,1.207,10,m:e1kagdd" target="_blank">Windy</a><br><br>
 							<a href="http://www.xcweather.co.uk/forecast/L%C3%A9ry_poses" target="_blank">XCWeather</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a>
 							</p>
@@ -277,7 +277,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.windy.com/?49.008,1.821,10,m:e0UagdX" target="_blank">Windy</a><br><br>
 							<a href="https://www.xcweather.co.uk/forecast/moisson" target="_blank">XCWeather</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a>
 							</p>
@@ -367,7 +367,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.windy.com/?48.865,2.119,10,m:e0tagew" target="_blank">Windy</a><br><br>
 							<a href="https://www.xcweather.co.uk/forecast/saint-quentin_en_yvelines" target="_blank">XCWeather</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a>
 							</p>
@@ -458,7 +458,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.ventusky.com/?p=48.78;2.64;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.windy.com/?48.935,2.802,10,m:e0FagfH" target="_blank">Windy</a><br><br>
 							<a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne" target="_blank">XCWeather</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
 							</p>
@@ -546,7 +546,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.ventusky.com/?p=48.78;2.64;8&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.windy.com/?48.935,2.802,10,m:e0Bagfx" target="_blank">Windy</a><br><br>
 							<a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne" target="_blank">XCWeather</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
 							</p>
@@ -634,7 +634,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank">Superforecast</a><br><br>
-							<a href="https://www.ventusky.com/?p=48.334;2.921;9&l=wind-10m" target="_blank">Ventusky</a><br><br>
+							<a href="https://www.windy.com/?48.400,3.012,10,m:eZOagfV" target="_blank">Windy</a><br><br>
 							<a href="https://www.xcweather.co.uk/forecast/grande-paroisse" target="_blank">XCWeather</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a>
 							</p>

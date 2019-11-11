@@ -129,13 +129,9 @@
 			jQuery("input[data-target^='#item-div']").click(function() {
 				if (jQuery(this).attr('value') == ' + ') {
 					jQuery(this).attr('value', ' - ');
-					/*jQuery(this).removeClass('btn-releve');	
-					jQuery(this).addClass('btn-enfonce');*/					
 				}
 				else {
 					jQuery(this).attr('value', ' + ');
-					/*jQuery(this).removeClass('btn-enfonce');	
-					jQuery(this).addClass('btn-releve');*/
 				}	
 			});
 			
