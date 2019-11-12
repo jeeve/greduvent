@@ -158,9 +158,11 @@
 					</div>													
   
 </div> 		
-<!--
-			   <h1>Les spots d'Ile-de-France</h1>
--->		
+
+<div id="boutons-deplier-replier">
+	<button onclick="clickDeplier()">Tout déplier</button> - <button onclick="clickReplier()">Tout replier</button>
+</div>
+
 			   <br>	
 				<a name="poses"></a>
 			    <h2><input id="div-poses" type="button" value=" - " data-toggle="collapse" data-target="#item-div-poses" />  <a href="lery-poses.php">Léry-Poses</a></h2>

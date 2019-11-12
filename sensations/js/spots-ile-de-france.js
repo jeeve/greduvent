@@ -10,7 +10,7 @@
 			jQuery('#map-saint-quentin').attr('src', itineraireSrc + '1s0x47e681460086fb29%3A0x48eb9dbd818f35f3!2sSaint-Quentin+en+Yvelines%2C+Montigny-le-Bretonneux!3m2!1d48.7700557!2d2.0249544!5e0!3m2!1sfr!2sfr!4v1552237922454');			
 
 			}		
-
+/*
 	function clickComparer() {
 		if (jQuery('.notePoses').text() == '' && jQuery('.noteVairesSurMarne').text() == '' && jQuery('.noteJablines').text() == '' && jQuery('.noteMoisson').text() == '' && jQuery('.noteGrandeParoisse').text() == '' && jQuery('.noteSaintQuentin').text() == '') {
 			jQuery('div[id^="item-div"]').collapse("show");
@@ -55,7 +55,18 @@
 		
 		}		
 	}
+*/	
+
+	function clickDeplier() {
+		jQuery('div[id^="item-div"]').collapse("show");	
+		jQuery("input[data-target^='#item-div']").attr('value', ' - ');
+	}
 	
+	
+	function clickReplier() {
+		jQuery('div[id^="item-div"]').collapse("hide");	
+		jQuery("input[data-target^='#item-div']").attr('value', ' + ');	
+	}
 	
 	    function getWebCams() {
 			getWebCamPoses();
