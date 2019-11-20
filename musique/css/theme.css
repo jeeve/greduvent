@@ -26,3 +26,16 @@
 #BtnPause.btn.btn-default.btn-lg.pauseAudio  { 
 	display : none;
 }
+
+.containerPlayer {
+	float: left; 
+	position: fixed; 
+	top: 300px; 
+	height: calc(100% - 300px); 
+	overflow-y: 
+	scroll; width: 100%;
+}
+
+#playListContainer {
+	list-style:none;
+}
