@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Un sourire</title>
+            <link>https://youtu.be/gXqPNFCkDLw</link>
+            <guid isPermaLink="false">un-sourire</guid>
+            <description>Nouveau morceau musical de Cuisine Spectrale. Ambiance electro pop rock.</description>
+            <pubDate>Wed, 20 nov 2019 21:10:00 GMT</pubDate>
+		</item>
+		
+		<item>
             <title>Le spot de Moisson Lavacourt</title>
             <link>https://greduvent.herokuapp.com/sensations/moisson.php</link>
             <guid isPermaLink="false">spot-moisson</guid>
