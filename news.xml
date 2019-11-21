@@ -11,7 +11,15 @@
             <link>https://youtu.be/gXqPNFCkDLw</link>
             <guid isPermaLink="false">un-sourire</guid>
             <description>Nouveau morceau musical de Cuisine Spectrale. Ambiance electro pop rock.</description>
-            <pubDate>Wed, 20 nov 2019 21:10:00 GMT</pubDate>
+            <pubDate>Wed, 20 Nov 2019 21:10:00 GMT</pubDate>
+		</item>
+
+		<item>
+            <title>Le spot de Saint-Quentin en Yvelines</title>
+            <link>https://greduvent.herokuapp.com/sensations/saint-quentin-yvelines.php</link>
+            <guid isPermaLink="false">spot-saint-quentin</guid>
+            <description>Page dédiée au windsurf / windfoil sur le spot de Saint-Quentin en Yvelines près de Paris.</description>
+            <pubDate>Mon, 18 Nov 2019 18:10:00 GMT</pubDate>
 		</item>
 		
 		<item>
