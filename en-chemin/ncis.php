@@ -35,8 +35,16 @@ Le linxe s’alimente principalement de ricard accompagné parfois de cacahuète
 On peut souligner son caractère altruiste pourtant peu répandu chez ses congénères. En effet il est capable de sacrifier un peu de son indépendance pour conduire une jeune autostoppeuse égarée sur l’autoroute allant même jusqu’à "discuter" avec elle...<br>
 Sa période d’accouplement, de 22h00 à 3h00, est précédée généralement d’une phase de séduction qui consiste à procurer à sa partenaire un sentiment de confiance voire d’insouciance. Cette technique d’approche très élaborée est l’objet de nombreuses études car son efficacité peut conduire à une surpopulation de l’espèce dans les 40 ans à venir.<br>
 Sa nomination au poste de directeur du département simulation du NCIS ne doit donc rien au hasard. Il a été démontré que la gestion d’une équipe comme celle-là nécessitait une implication physiologique telle (surtout avec <a href="#simulation-jose">José del Rio</a>), qu'elle est censée diminuer d’autant ses ardeurs sexuelles au coucher du soleil. Pour l’instant, les effets n’ont pu être vérifiés. Malheureusement des riverains auraient aperçu l’animal, chassant en meute dans le quartier Saint-Michel. En attendant une éventuelle confirmation, les autorités tentent de rassurer la population.<br>
-					<br><strong>Membres :</strong><br><br style="display: block; margin: 4px 0;"></p>
-					<p><a name="simulation-jose"></a>
+</p><p>
+					<br><strong>Nouveaux membres :</strong><br><br style="display: block; margin: 4px 0;">
+					<a name="simulation-saber-nordine-seb"></a>
+					<em><u>Saber le Jedi, Nordine le Breton, Seb de la Braise-Casher</u></em><br>
+
+La Terre ne s'attendait pas à un tel bouleversement depuis l'arrivée de Nordine le Breton et Saber le Jedi à la cellule computing du NCIS. Les écosystèmes gravitant autour du centre subissent de fait de profondes mutations obligeant les organismes multicellulaires comme les fondeurs, monocellulaires comme les forgerons à modifier leurs comportements diurnes. En effet les mécanismes de reproduction se retrouvent largement perturbées par les conflits récurrents entre les partisans du grand remplacement. Nordine imagine la Terre peuplée de bigoudènes à 70% à l'horizon 2050, tandis que notre Jedi table plutôt sur une hégémonie de linuxiens dans la sphère sociétale à moindre échéance. Les membres du NCIS dont Fabiola partie intégrante de la cellule communication se voient désormais contraints de décaler leurs ébats en dehors des pauses café. À l'heure où la biodiversité est plus que jamais menacée, en témoigne la disparition des pizza en quelques mois seulement, il serait temps pour Nordine et Jedi d'apaiser leurs tensions pour laisser aux autres espèces un peu d'espace dans le débat, par ailleurs souvent perturbé par <a href="#simulation-jose">José del Rio</a> être multicellulaire par excellence tant ses cellules ont eu le temps de se reproduire depuis qu'il s'est converti à la mauvaise foi. 
+Je serais tenté de nuancer mon propos relativement alarmiste grâce à l'arrivée d'une espèce nouvelle totalement inconnue dont le nom scientifique est imprononçable même pour un Haut-marnais. A l'instar des grands migrateurs, l'arrivée de Seb en ce milieu hostile pourrait apporter un semblant d'équilibre. On lui souhaite bonne chance.
+</p><p>
+					<br><strong>Membres :</strong><br><br style="display: block; margin: 4px 0;">
+					<a name="simulation-jose"></a>
 					<em><u>José del Rio</u></em><br>
 					C'est l'homme le plus recherché de l'ouest<br>
 Il se fait appeler José del Rio<br>
@@ -61,7 +69,30 @@ Laissez-le continuer sa route en silence et surtout ne vous retournez pas<br>
 Contactez Interpol au 06 25 87 47 85 en signalant vos coordonnées GPS<br>
 Prévenez vos proches d'une attaque imminente en leur communiquant ce message<br>
 </p>
-<br>
+				
+
+
+					<br><p><a name="simulation-jeff"></a><em><u>Jeff l'incollable</u></em><br>
+					Le plus secret. Je vais donc devoir procéder comme <a href="#simulation-max-la-menace">Max la menace</a> quand il veut briller culturellement, consulter la page wikipedia de l’intéressé. 
+					La page en question est bien trop longue pour faire un simple copier/coller, je vais donc essayer de résumer la biographie en me concentrant sur les points les plus marquants.<br>
+					C’est à l’âge de 12 ans que le cinéma et la télévision vont influencer sa vie et son parcours professionnel. En effet à cette époque, la 6 diffuse le dimanche soir en 2ème partie de soirée des fictions d’un nouveau genre qui changeront sa vie. 
+					Son premier film, <a href="https://fr.wikipedia.org/wiki/Histoire_d%27O_(film)" target="_blank">Histoire d’O</a>, film franco-germano-canadien réalisé par Just Jaeckin sera pour lui une référence, tant en matière de dialogues, que de musique, d’éclairage avec une mention particulière pour les costumes, minimalistes dans certaines scènes.<br>
+					A l’âge de 15 ans, Jeff commencera à collectionner les grappes de coulées,  principalement à moulage horizontal, puis progressivement les systèmes de remplissage en zamak. On dit que sa collection avoisine aujourd’hui  les 400 pièces.<br> 
+					Mais ce sont ses connaissances scientifiques qui feront la différence lorsque <a href="#simulation-gibbs">Maître Gibbs</a> recherchera une pointure pour intégrer le team. En effet, même si on le sait moins, Jeff est l’inventeur du module de Youn en référence à son acteur, réalisateur, scénariste préféré.<br>
+					Il reste néanmoins beaucoup de mystères autour du personnage.
+					</p>	
+					
+						<br><p><a name="simulation-alex"></a><em><u>Alexandre du Haut Marnais</u></em><br>
+					Vous êtes gérant d’un Mcdo, d’un Quick, d’un Kebab, méfiez-vous. Il passe inaperçu vêtu d’un imperméable beige et d’une chaussure noire. Son regard est aiguisé, il parcourt les différents menus pour trouver celui qui saura combler son intense désir gustatif. Si vous êtes suffisamment attentif lors de la commande, vous pourrez déceler des intonations haute marnaise. Là, ne le décevez pas et sortez vos plus grandes frites et le steak maxi bacon avec petits oignons finement émincés. En effet, Burgerman, son nom de code dans le milieu, est testeur de fast food au sein du très renommé guide Good Year.<br>
+Outre cette noble profession, notre homme sandwich exerce accessoirement le métier de forgeron. Une de ses grandes passions, avec la guitare et le sauna d’appartement, c’est bien sûr la collection d’enclumes de différents gabarits, de différentes couleurs, qui, c’est vrai, occupent un peu de place dans son loft de 14m<sup>2</sup>. C'est une de ses plus belles pièces qui lui sert d’oreiller.<br>
+Forgeron constitue quasiment son seul défaut. D’ailleurs dès qu’il a un moment de libre, il s’adonne en toute discrétion à la lecture de Fonderie magazine et on l’aurait même surpris en train de méditer un rapport de <a href="#simulation-jose">José del Rio</a> à l’ombre d’un chêne.
+					</p>					
+					
+					<p>				
+
+
+<br><strong>Anciens membres :</strong><br><br style="display: block; margin: 4px 0;">
+
 					<p><a name="simulation-caboulettes"></a><em><u>Caboulettes</u></em><br>
 					Caboulettes, chaque instant de toi est une poésie vivante <br>
 					Où les mots sont des courbes, les rimes un sourire <br>
@@ -104,23 +135,9 @@ Prévenez vos proches d'une attaque imminente en leur communiquant ce message<br
 					Attention, si <b>d</b> > 30 mm, vous risquez un dégondage en règle avec les désagréments que cela peut engendrer. 
 					Je préfère prévenir car Cédric peut avoir des comportements erratiques dans certaines circonstances. 
 					Donc méfiance. Sinon, question simu, il n’y a pas de problème, il touche sa bille. 
-					</p>	
+					</p>
 
-					<br><p><a name="simulation-jeff"></a><em><u>Jeff l'incollable</u></em><br>
-					Le plus secret. Je vais donc devoir procéder comme <a href="#simulation-max-la-menace">Max la menace</a> quand il veut briller culturellement, consulter la page wikipedia de l’intéressé. 
-					La page en question est bien trop longue pour faire un simple copier/coller, je vais donc essayer de résumer la biographie en me concentrant sur les points les plus marquants.<br>
-					C’est à l’âge de 12 ans que le cinéma et la télévision vont influencer sa vie et son parcours professionnel. En effet à cette époque, la 6 diffuse le dimanche soir en 2ème partie de soirée des fictions d’un nouveau genre qui changeront sa vie. 
-					Son premier film, <a href="https://fr.wikipedia.org/wiki/Histoire_d%27O_(film)" target="_blank">Histoire d’O</a>, film franco-germano-canadien réalisé par Just Jaeckin sera pour lui une référence, tant en matière de dialogues, que de musique, d’éclairage avec une mention particulière pour les costumes, minimalistes dans certaines scènes.<br>
-					A l’âge de 15 ans, Jeff commencera à collectionner les grappes de coulées,  principalement à moulage horizontal, puis progressivement les systèmes de remplissage en zamak. On dit que sa collection avoisine aujourd’hui  les 400 pièces.<br> 
-					Mais ce sont ses connaissances scientifiques qui feront la différence lorsque <a href="#simulation-gibbs">Maître Gibbs</a> recherchera une pointure pour intégrer le team. En effet, même si on le sait moins, Jeff est l’inventeur du module de Youn en référence à son acteur, réalisateur, scénariste préféré.<br>
-					Il reste néanmoins beaucoup de mystères autour du personnage.
-					</p>					
-
-					<br><p><a name="simulation-alex"></a><em><u>Alexandre du Haut Marnais</u></em><br>
-					Vous êtes gérant d’un Mcdo, d’un Quick, d’un Kebab, méfiez-vous. Il passe inaperçu vêtu d’un imperméable beige et d’une chaussure noire. Son regard est aiguisé, il parcourt les différents menus pour trouver celui qui saura combler son intense désir gustatif. Si vous êtes suffisamment attentif lors de la commande, vous pourrez déceler des intonations haute marnaise. Là, ne le décevez pas et sortez vos plus grandes frites et le steak maxi bacon avec petits oignons finement émincés. En effet, Burgerman, son nom de code dans le milieu, est testeur de fast food au sein du très renommé guide Good Year.<br>
-Outre cette noble profession, notre homme sandwich exerce accessoirement le métier de forgeron. Une de ses grandes passions, avec la guitare et le sauna d’appartement, c’est bien sûr la collection d’enclumes de différents gabarits, de différentes couleurs, qui, c’est vrai, occupent un peu de place dans son loft de 14m<sup>2</sup>. C'est une de ses plus belles pièces qui lui sert d’oreiller.<br>
-Forgeron constitue quasiment son seul défaut. D’ailleurs dès qu’il a un moment de libre, il s’adonne en toute discrétion à la lecture de Fonderie magazine et on l’aurait même surpris en train de méditer un rapport de <a href="#simulation-jose">José del Rio</a> à l’ombre d’un chêne.
-					</p>					
+<hr>					
 					
 					<br><p><a name="simulation-communique"></a><em><u>Communiqué NCIS du 7 mars 2017</u></em><br>
 					<img src="images/jeeve-barbu.jpg" class="ombre-image image-dans-texte" style="float: right" alt="Jeeve l'informaticien - 13 avril 2009" title="Jeeve l'informaticien - 13 avril 2009">
@@ -128,7 +145,7 @@ Forgeron constitue quasiment son seul défaut. D’ailleurs dès qu’il a un mo
 					Il ne doit son salut qu'à une <a href="#simulation-caboulettes">caboulette</a> d'ampleur relativement mineure mais nécessitant une intervention immédiate. L'informaticien a été découvert en l'état, devant l'écran, le regard hagard, figé devant moultes lignes de codes aussi incompréhensibles qu'un rapport de <a href="#simulation-jose">José del Rio</a> sur l'emploi de talons de lavage en encombrement limité.<br>
 					Devant l'état préoccupant du jeune homme, l'équipe du NCIS a décidé d'un commun accord de lui administrer une cure de café et de blagues de José corsées mais faciles à comprendre afin de stimuler ses neurones lors de séances quotidiennes. Les résultats semblent prometteurs même si on constate toujours une absence totale de répartie imputable selon les spécialistes à un délai de latence neurologique qui laisse à désirer.<br> 
 					Aussi des effets secondaires sont à déplorer sur le sujet, celui-ci se livrant depuis à des écritures compulsives fort mystérieuses, qui n'épargneront personnes pas même le prestigieux José del Rio, et comble du narcissisme, l’informaticien lui-même.
-					</p>
+					</p></p>
 					
                      </div>
 
