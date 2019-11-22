@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Du nouveau au NCIS</title>
+            <link>https://greduvent.herokuapp.com/en-chemin/ncis.php#simulation-saber-nordine-seb/link>
+            <guid isPermaLink="false">simulation-saber-nordine-seb</guid>
+            <description>Le NCIS (National Center of Intensive Simulation) accueille trois nouveaux membres.</description>
+            <pubDate>Fri, 22 Nov 2019 11:44:00 GMT</pubDate>
+		</item>
+		
+		<item>
             <title>Un sourire</title>
             <link>https://youtu.be/gXqPNFCkDLw</link>
             <guid isPermaLink="false">un-sourire</guid>

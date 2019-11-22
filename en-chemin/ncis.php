@@ -24,7 +24,7 @@
                      <div class="col-xs-12 col-sm-10 fond">
 					<h2>Département Simulation Numérique</h2>
 					<p><strong>Responsable :</strong><em><br>
-<br style="display: block; margin: 4px 0;"><a name="simulation-gibbs"></a><u>Maître Gibbs dit le linxe</u></em> (<a href="linxe.html" target="_blank" class="external">article parut dans l'Express</a>)<br>
+<br style="display: block; margin: 4px 0;"><a name="simulation-gibbs"></a><u>Maître Gibbs dit le linxe</u></em><br>
 					Le linxe est un animal bipède, ou presque, originaire du sud ouest de la Gaule, de la lignée des félins.<br> 
 Descendants du Lynx d'Issoire, les lynx ont connu de nombreuses classifications taxinomiques différentes et les diverses espèces ont tour à tour été sous-espèces puis espèces à part entière.<br>
 Cependant, Maître Gibbs se distingue par une pilosité capillaire particulière qui a inspiré un célèbre héros de série télévisée où figure notamment l’énervant Pinozzo qui se la pète en permanence.<br>
