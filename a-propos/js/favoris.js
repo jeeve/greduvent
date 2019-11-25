@@ -20,9 +20,13 @@ function getFavoris() {
 					nom = ligne.title.$t;
 					auteur = ligne.gsx$auteur.$t;
 					type = ligne.gsx$type.$t;
-					ligneHtml = ligneHtml + "<td>" + nom + "</td>";
-					ligneHtml = ligneHtml + "<td>" + auteur + "</td>";
-					// ligneHtml = ligneHtml + "<td>" + type + "</td>";					
+					if (nom.substring(0, 4) == 'http') {
+						ligneHtml = ligneHtml + '<td><a href="' + nom + '" target="_blank">' + nom + '</td>';
+					}
+					else {
+						ligneHtml = ligneHtml + "<td>" + nom + "</td>";
+					}
+					ligneHtml = ligneHtml + "<td>" + auteur + "</td>";			
 					ligneHtml = ligneHtml + "</tr>";
 					if (type == "Roman") {
 						htmlRomans = htmlRomans + ligneHtml;
