@@ -70,8 +70,8 @@
 	float: left; 
 	position: fixed; 
 	top: 300px; 
-	height: calc(100% - 300px); 
-	overflow-y: scroll; 
+	height: calc(100% - 310px); 
+	overflow-y: scroll;	
 }
 
 #playListContainer {
