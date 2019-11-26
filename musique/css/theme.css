@@ -1,11 +1,36 @@
-#playerContainer { width:300px; padding-left:5px; }
 
-.audioTime { display: inline-block; text-align: right; float: right; }
+#playerContainer { 
+	width:300px; 
+	padding-left:5px; 
+}
 
-.progress { clear:both; height:4px; background-color:#666666; width:100%; cursor:pointer; position:relative; }
-.progress .updateProgress { width:0px; background-color:#00BD9B; height:100%; float:left; position:relative; }
+.audioTime { 
+	display: inline-block; 
+	text-align: right; 
+	float: right; 
+}
 
-.volumeControl { position: relative; margin: 20px auto; }
+.progress { 
+	clear:both; 
+	height:4px; 
+	background-color:#666666; 
+	width:100%; 
+	cursor:pointer; 
+	position:relative; 
+
+}
+.progress .updateProgress { 
+	width:0px; 
+	background-color:#00BD9B; 
+	height:100%; 
+	float:left; 
+	position:relative; 
+}
+
+.volumeControl { 
+	position: relative; 
+	margin: 20px auto; 
+}
 
 #buttonsContainer {
 	margin-left:12px;
@@ -27,15 +52,36 @@
 	display : none;
 }
 
+#lecteur {
+	border: 1px solid silver;
+	/*border-style: inset;*/
+	position: absolute;
+	background-color: #625f7129;
+	height: 100%;
+	width: 310px;
+}
+
+#player {
+	 position:fixed;
+	 padding-bottom: 13px;
+}
+
 .containerPlayer {
 	float: left; 
 	position: fixed; 
 	top: 300px; 
 	height: calc(100% - 300px); 
-	overflow-y: 
-	scroll; width: 100%;
+	overflow-y: scroll; 
 }
 
 #playListContainer {
 	list-style:none;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	margin-bottom: 1px;
+}
+
+#playListContainer li:hover {
+	background-color: #00BD9B;
 }
