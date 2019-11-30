@@ -13,7 +13,7 @@ function getInfoSessions(spot) {
 				ligne = data.feed.entry[i];
 				leSpot = ligne.gsx$spot.$t;
 
-				if (leSpot == spot && laVideo != '') {											
+				if (leSpot == spot) {											
 
 					dateheure = ligne.gsx$date.$t;
 					laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
@@ -34,13 +34,15 @@ function getInfoSessions(spot) {
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
 
-					html = html + '<br><a name="' + dateheure + '"></a><div class="row">' +
-					'<div class="col-sm-8 fond">' +
-					'<p align="center"><div class="embed-responsive embed-responsive-4by3 ombre-image">' + 
-					'<iframe width="560" height="315" src="https://www.youtube.com/embed/';
-					html = html + codeYoutube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></p></div>';
+					html = html + '<br><a name="' + dateheure + '"></a><div class="row"><div class="col-sm-8 fond">';
 					
-					html = html + '<div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
+					if (laVideo != '') {		
+						html = html + '<p align="center"><div class="embed-responsive embed-responsive-4by3 ombre-image">' + 
+						'<iframe width="560" height="315" src="https://www.youtube.com/embed/';
+						html = html + codeYoutube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></p>';
+					}
+					
+					html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
 					html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
 					html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
 					html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
