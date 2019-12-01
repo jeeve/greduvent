@@ -60,9 +60,12 @@
 	</div>
 	
 	<div class="webcam">
-		<img id="webcam-vaires" class="img-responsive ombre-image" src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg">
+	<div class="embed-responsive embed-responsive-4by3 ombre-image">
+	    <div>
+	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
+    </video>
 	<div class="hidden-xs webcam-titre">
-		<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  
+		<p>A4, <a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">péage de Coutrevoult</a> vers Reims, à proximité de Disneyland Paris</p>  
 	</div>
 				<div class="hidden-xs webcam-texte">
 				  <table>
@@ -81,7 +84,9 @@
 					</tr>						
 				</table>
 				</div>
-	</div>			
+	</div>	
+</div<
+</div>	
 
  
   
@@ -262,11 +267,17 @@ Quelques bon spin-out surtout en plein largue à 47 km/h !
 	  	
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
-		function getWebCam() {
-			d = new Date();
-			jQuery('#webcam-vaires').attr('src', 'https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg?'+d.getTime());			
-		}
-	    	
+	    function getWebCam() {
+			jQuery.ajax({
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				console.log(data.src);
+			jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);	
+			});
+		}	    	
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
 		station = "Torcy";
