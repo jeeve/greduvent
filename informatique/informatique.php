@@ -55,7 +55,9 @@
 			  	  </div>
 				  </div>
 
+<p align="right"><em><font size="2">jeudi 2 janvier 2020</font></em></p>					
 
+<hr>
 
 <a name="angular"></a><h2>Angular</h2>
 <p><a href="https://angularjs.org/" target="_blank" >AngularJs</a> est un framework javascript pour développer des applications Web, en l'ocurrence des SPA (Single Page Application). Les sites Web conçut avec Angular ne contiennent qu'une seule page.<br>
