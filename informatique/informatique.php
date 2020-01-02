@@ -40,6 +40,7 @@
 <h2>Scroll Screens</h2>
 <p>Un <a href="appli/scrollscreens.zip" target="_blank">petit programme Windows</a> pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image. Enjoy !<br>
 </p>
+<br>
 				  <div class="row">
 				 
 				  <div class="col-xs-12 col-sm-2 fond"></div>
