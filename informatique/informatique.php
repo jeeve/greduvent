@@ -37,10 +37,25 @@
 <hr>
 -->			
 <a name="scrollscreens"></a>
-<h2>Scroll Screens</h2><p>Un petit programme Windows pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et de lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image.<br>
+<h2>Scroll Screens</h2>
+<p>Un petit programme Windows pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et de lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image.<br>
 <a href="appli/scrollscreens.zip" target="_blank">scrollscreens.zip</a>
 </p>
-<p>
+				  <div class="row">
+				 
+				  <div class="col-xs-12 col-sm-3 fond"></div>
+				  <div class="col-xs-12 col-sm-6 fond">
+				  <p align="center">
+				  <a href="appli/scrollscreens.zip" target="blank">
+	              <img alt="Scroll Screens" title="Scroll Screens" src="images/scrollscreens.jpg" class="img-responsive ombre-image" />
+				  </a>
+				  </p>
+				  <p class="legende"><a href="appli/scrollscreens.zip" target="_blank">scrollscreens.zip</a></p>
+				  </a>
+			  	  </div>
+				  </div>
+
+
 
 <a name="angular"></a><h2>Angular</h2>
 <p><a href="https://angularjs.org/" target="_blank" >AngularJs</a> est un framework javascript pour développer des applications Web, en l'ocurrence des SPA (Single Page Application). Les sites Web conçut avec Angular ne contiennent qu'une seule page.<br>
