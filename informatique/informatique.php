@@ -20,6 +20,7 @@
                         <br>
 						<ul class="sommaire">
 <!--						<li><a href="#meteo-temps-reel">Service Web de météo temps réel</a></li> -->
+						<li><a href="#scrollscreens">Scroll Screens</a></li>
 						<li><a href="#angular">Angular</a></li>
                         <li><a href="#lecteur-audio">Lecteur audio HTML5</a></li>
                         <li><a href="#informatique-cognitive">Informatique cognitive</a></li>
@@ -35,6 +36,12 @@
 
 <hr>
 -->			
+<a name="scrollscreens"></a>
+<h2>Scroll Screens</h2><p>Un petit programme Windows pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et de lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image.<br>
+<a href="appli/scrollscreens.zip" target="_blank">scrollscreens.zip</a>
+</p>
+<p>
+
 <a name="angular"></a><h2>Angular</h2>
 <p><a href="https://angularjs.org/" target="_blank" >AngularJs</a> est un framework javascript pour développer des applications Web, en l'ocurrence des SPA (Single Page Application). Les sites Web conçut avec Angular ne contiennent qu'une seule page.<br>
 D'ordinaire, un site renvoie au travers du serveur différentes pages HTML en fonction des demandes du client, le navigateur. Avec Angular, la démarche est différente, la page fournit par le serveur contient déjà la logique du site. Le rôle du serveur se limite alors à fournir les données à l'application chargée dans le navigateur.<br>
