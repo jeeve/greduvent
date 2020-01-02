@@ -22,7 +22,7 @@
 <div class="row">
 <div class="col-xs-1 col-md-3 fond"></div>
        <div class="col-xs-10 col-md-6 fond-table encadrement-table">
-			<p>Il est vain de vouloir refaire le monde sans l'avoir parcouru.</p>
+			<p>Il est vain, me sembe-t-il, de vouloir refaire le monde sans l'avoir parcouru.</p>
 			<p align="right"><em><font size="2">mardi 31 décembre 2019</font></em></p>	
 		</div>
 </div>	
