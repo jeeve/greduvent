@@ -38,16 +38,15 @@
 -->			
 <a name="scrollscreens"></a>
 <h2>Scroll Screens</h2>
-<p>Un petit programme Windows pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et de lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image.<br>
-<a href="appli/scrollscreens.zip" target="_blank">scrollscreens.zip</a>
+<p>Un <a href="appli/scrollscreens.zip" target="_blank">petit programme Windows</a> pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et de lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image.<br>
 </p>
 				  <div class="row">
 				 
-				  <div class="col-xs-12 col-sm-3 fond"></div>
-				  <div class="col-xs-12 col-sm-6 fond">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
-				  <a href="appli/scrollscreens.zip" target="blank">
-	              <img alt="Scroll Screens" title="Scroll Screens" src="images/scrollscreens.jpg" class="img-responsive ombre-image" />
+				  <a href="images/scrollscreens.gif" target="blank">
+	              <img alt="Scroll Screens" title="Scroll Screens" src="images/scrollscreens.gif" class="img-responsive ombre-image" />
 				  </a>
 				  </p>
 				  <p class="legende"><a href="appli/scrollscreens.zip" target="_blank">scrollscreens.zip</a></p>
