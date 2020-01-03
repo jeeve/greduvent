@@ -7,11 +7,19 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Scroll Screens</title>
+            <link>https://greduvent.herokuapp.com/informatique/informatique.php#scrollscreens</link>
+            <guid isPermaLink="false">scrollscreens</guid>
+            <description>Un petit programme Windows pour faire défiler une image sur autant d'écrans que l'on souhaite. Pour cela il suffit de copier le programme dans un dossier partagé et lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image. Enjoy !</description>
+            <pubDate>Fri, 3 Jan 2020 9:48:00 GMT</pubDate>
+		</item>
+
+		<item>
             <title>Algorithme</title>
             <link>https://youtu.be/puRGqWWeGRo</link>
             <guid isPermaLink="false">algorithme</guid>
             <description>Nouveau morceau musical de Cuisine Spectrale pour cette fin d'année.</description>
-            <pubDate>Tue, 31 Dec2019 22:45:00 GMT</pubDate>
+            <pubDate>Tue, 31 Dec 2019 22:45:00 GMT</pubDate>
 		</item>
 		
 		<item>
