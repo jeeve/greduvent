@@ -55,7 +55,7 @@
 			  	  </div>
 				  </div>
 
-<p align="right"><em><font size="2">jeudi 2 janvier 2020</font></em></p>					
+<p align="right"><em><font size="2">vendredi 3 janvier 2020</font></em></p>					
 
 <hr>
 
