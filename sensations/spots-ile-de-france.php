@@ -103,7 +103,7 @@
  <div class="row">
 	<div class="col-sm-8">
 		<div class="embed-responsive embed-responsive-4by3 ombre-image">
-			<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	
+		<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=48.951&lon=2.186&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=48.860&detailLon=2.027&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe>	<!--		<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	-->
 		</div>	
   </div>
     					<div class="visible-xs fond">
@@ -181,7 +181,6 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.windy.com/?49.306,1.207,10,m:e1kagdd" target="_blank">Windy</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a>
 							</p>
 			</div>
@@ -285,7 +284,6 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.windy.com/?49.008,1.821,10,m:e0UagdX" target="_blank">Windy</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a>
 							</p>
 			</div>
@@ -374,7 +372,6 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.windy.com/?48.865,2.119,10,m:e0tagew" target="_blank">Windy</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a>
 							</p>
 			</div>
@@ -464,7 +461,6 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.windy.com/?48.935,2.802,10,m:e0FagfH" target="_blank">Windy</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
 							</p>
 			</div>
@@ -552,7 +548,6 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="https://www.windy.com/?48.935,2.802,10,m:e0Bagfx" target="_blank">Windy</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
 							</p>
 			</div>
@@ -639,7 +634,6 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank">Superforecast</a><br><br>
-							<a href="https://www.windy.com/?48.400,3.012,10,m:eZOagfV" target="_blank">Windy</a><br><br>
 							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a>
 							</p>
 			</div>
