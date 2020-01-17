@@ -34,7 +34,7 @@ function getInfoSessions(spot) {
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
 
-					html = html + '<br><a name="' + dateheure + '"></a><div class="row"><div class="col-sm-8 fond">';
+					html = html + '<br><a name="' + laDate.replace(new RegExp('/', 'g'), '-') + '"></a><div class="row"><div class="col-sm-8 fond">';
 					
 					if (laVideo != '') {		
 						html = html + '<p align="center"><div class="embed-responsive embed-responsive-4by3 ombre-image">' + 
