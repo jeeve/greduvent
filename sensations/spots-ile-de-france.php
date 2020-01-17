@@ -103,7 +103,8 @@
  <div class="row">
 	<div class="col-sm-8">
 		<div class="embed-responsive embed-responsive-4by3 ombre-image">
-		<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=48.951&lon=2.186&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=&calendar=24&pressure=&type=map&location=coordinates&detail=&detailLat=48.860&detailLon=2.027&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe>	<!--		<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	-->
+<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=48.669&lon=2.340&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=49.013&detailLon=2.005&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe> 		
+<!--		<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	-->
 		</div>	
   </div>
     					<div class="visible-xs fond">
