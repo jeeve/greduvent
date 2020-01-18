@@ -5,9 +5,9 @@ function getInfoSessions(spot) {
 		crossDomain: true,
 		dataType: 'json'
 	}).then(function(data) {
-			var ligne, html;
-			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace;
+			var ligne, html, ancre;
 			html = '';
+			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 				
 				ligne = data.feed.entry[i];
@@ -33,8 +33,10 @@ function getInfoSessions(spot) {
 					distance = ligne.gsx$distancekm.$t;
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
+					
+					ancre = laDate.replace(new RegExp('/', 'g'), '-');
 
-					html = html + '<br><a name="' + laDate.replace(new RegExp('/', 'g'), '-') + '"></a><div class="row"><div class="col-sm-8 fond">';
+					html = html + '<br><div id="' + ancre + '" class="row"><div class="col-sm-8 fond">';
 					
 					if (laVideo != '') {		
 						html = html + '<p align="center"><div class="embed-responsive embed-responsive-4by3 ombre-image">' + 
@@ -66,6 +68,27 @@ function getInfoSessions(spot) {
 					$('#sessions').html(html);
 				}
 			}
+		goSession();	
 	});
 }
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function goSession() {
+	var d = getParameterByName('session');
+	if (d != null) {
+	    jQuery("html, body").animate({
+			scrollTop : jQuery('#' + d).offset().top + 50
+		}, "slow");
+	}
+}
+	
 

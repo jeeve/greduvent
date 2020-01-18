@@ -696,7 +696,7 @@
 		 */
       </script>
 	  <script type="text/javascript" src="js/info-spot.js"></script>
-		<script type="text/javascript" src="js/info-sessions.js"></script>	  
+	  <script type="text/javascript" src="js/info-sessions.js"></script>  
 	  <script type="text/javascript" src="js/historique-vent.js"></script>
       <script type="text/javascript" src="js/imagebankleryposes.js"></script>
 	  <script type="text/javascript" src="js/timelapse.js"></script>	  
