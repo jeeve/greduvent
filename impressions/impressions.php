@@ -17,6 +17,51 @@
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
                   <h1>impressions</h1>
 
+<br>		  
+<a name="horloge"></a>
+<div class="row">
+<div class="col-xs-1 col-md-2 fond"></div>
+       <div class="col-xs-10 col-md-8 fond-table encadrement-table">
+			<p>L’horloge<br>
+<br>
+Horloge ! dieu sinistre, effrayant, impassible,<br>
+Dont le doigt nous menace et nous dit :  » Souviens-toi !<br>
+Les vibrantes Douleurs dans ton coeur plein d’effroi<br>
+Se planteront bientôt comme dans une cible,<br>
+<br>
+Le plaisir vaporeux fuira vers l’horizon<br>
+Ainsi qu’une sylphide au fond de la coulisse ;<br>
+Chaque instant te dévore un morceau du délice<br>
+A chaque homme accordé pour toute sa saison.<br>
+<br>
+Trois mille six cents fois par heure, la Seconde<br>
+Chuchote : Souviens-toi ! – Rapide, avec sa voix<br>
+D’insecte, Maintenant dit : Je suis Autrefois,<br>
+Et j’ai pompé ta vie avec ma trompe immonde !<br>
+<br>
+Remember ! Souviens-toi, prodigue ! Esto memor !<br>
+(Mon gosier de métal parle toutes les langues.)<br>
+Les minutes, mortel folâtre, sont des gangues<br>
+Qu’il ne faut pas lâcher sans en extraire l’or !<br>
+<br>
+Souviens-toi que le Temps est un joueur avide<br>
+Qui gagne sans tricher, à tout coup ! c’est la loi.<br>
+Le jour décroît ; la nuit augmente, souviens-toi !<br>
+Le gouffre a toujours soif ; la clepsydre se vide.<br>
+<br>
+Tantôt sonnera l’heure où le divin Hasard,<br>
+Où l’auguste Vertu, ton épouse encor vierge,<br>
+Où le repentir même (oh ! la dernière auberge !),<br>
+Où tout te dira : Meurs, vieux lâche ! il est trop tard !  »</p>
+			
+			<p align="right"><em><font size="2">Charles Baudelaire, Les fleurs du mal</font></em></p>	
+<p align="center"><div class="embed-responsive embed-responsive-16by9 ombre-image">			
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/A47qwEqIkEI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>			
+</p>			
+		</div>
+</div>	</div>
+<br>
+
 				
 <br>		  
 <a name="mort"></a>
