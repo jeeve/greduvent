@@ -2,7 +2,7 @@
 <html lang="fr">
    <head>
       <title>Les spots d'Ile-de-France</title>
-      <META NAME="Description" CONTENT="Où naviguer en Ile-de-France. Les spots de la région parisienne pour la planche à voile,le windsurf et le windfoil. Prévisions, météo temps réel et webcams."/>
+      <META NAME="Description" CONTENT="Où naviguer en Ile-de-France. Les spots de la région parisienne pour la planche à voile, le windsurf et le windfoil. Prévisions, météo temps réel et webcams."/>
 	  <?php include("../includes/header.php"); ?>	
 	  <link rel="stylesheet" type="text/css" href="css/spots-ile-de-france.css" media="all"/>
 		  	  
