@@ -155,8 +155,8 @@ Puis s'endormir à ses côtés					</p>
 				  <br>
 				  <a name="playlist"></a>
 				  <div class="row">
-				  <div class="col-xs-12 col-sm-3 fond"></div>
-				  <div class="col-xs-12 col-sm-6 fond">
+				  <div class="col-xs-12 col-sm-2 fond"></div>
+				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
 				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
 				  <iframe width="300" height="225" src="https://www.youtube.com/embed/videoseries?list=PLvp4urJ2GQfj-iL5M0SiJep9oRdVhbfFx" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe>
