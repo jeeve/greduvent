@@ -101,4 +101,6 @@ input {
 #boutons-deplier-replier {
 	text-align: center;
 	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
