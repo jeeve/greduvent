@@ -104,3 +104,6 @@ input {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
+#boutons-deplier-replier button {
+	margin: 2px;
+}
