@@ -20,7 +20,7 @@
                         <br>
 						<ul class="sommaire">
 <!--						<li><a href="#meteo-temps-reel">Service Web de météo temps réel</a></li> -->
-						<li><a href="#easyscreens">Easy Screens</a></li>
+						<li><a href="#easyscreens">Scroll Screens</a></li>
 						<li><a href="#angular">Angular</a></li>
                         <li><a href="#lecteur-audio">Lecteur audio HTML5</a></li>
                         <li><a href="#informatique-cognitive">Informatique cognitive</a></li>
@@ -38,7 +38,7 @@
 -->			
 <a name="easyscreens"></a>
 <h2>Easy Screens</h2>
-<p>Un <a href="appli/easyscreens.zip" target="_blank">petit programme Windows</a> maison pour faire défiler une image sur autant d'écrans que l'on veut. Pour cela il suffit de copier le programme dans un dossier partagé et lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image. Enjoy !<br>
+<p>Un <a href="appli/scrollscreens.zip" target="_blank">petit programme Windows</a> maison écrit en Windev 19 pour faire défiler une image sur autant d'écrans que l'on veut. Pour cela il suffit de copier le programme dans un dossier partagé et lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image. Enjoy !<br>
 </p>
 <br>
 				  <div class="row">
@@ -50,7 +50,7 @@
 	              <img alt="Scroll Screens" title="Scroll Screens" src="images/easyscreens.gif" class="img-responsive ombre-image" />
 				  </a>
 				  </p>
-				  <p class="legende"><a href="appli/easyscreens.zip" target="_blank">easyscreens.zip</a></p>
+				  <p class="legende"><a href="appli/easyscreens.zip" target="_blank">scrollscreens.zip</a></p>
 				  </a>
 			  	  </div>
 				  </div>
