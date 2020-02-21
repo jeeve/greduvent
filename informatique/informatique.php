@@ -37,7 +37,7 @@
 <hr>
 -->			
 <a name="scrollscreens"></a>
-<h2>Easy Screens</h2>
+<h2>Scroll Screens</h2>
 <p>Un <a href="appli/scrollscreens.zip" target="_blank">petit programme Windows</a> maison écrit en Windev 19 pour faire défiler une image sur autant d'écrans que l'on veut. Pour cela il suffit de copier le programme dans un dossier partagé et lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image. Enjoy !<br>
 </p>
 <br>
