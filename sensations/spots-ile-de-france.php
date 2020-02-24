@@ -183,7 +183,8 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/4864" target="_blank">Windguru</a>
 							</p>
 			</div>
 				<br>
@@ -286,7 +287,8 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a>
+							<a href="https://www.windguru.cz/581" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/581" target="_blank">Windguru</a>
 							</p>
 			</div>
 				<br>						
@@ -374,7 +376,8 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/161" target="_blank">Windguru</a>
 							</p>
 			</div>
 				<br>						
@@ -463,7 +466,8 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/60274" target="_blank">Windguru</a>
 							</p>
 			</div>
 				<br>						
@@ -550,7 +554,8 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/60276" target="_blank">Windguru</a>
 							</p>
 			</div>
 				<br>						
@@ -636,7 +641,8 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank">Superforecast</a><br><br>
-							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/90210" target="_blank">Windguru</a>
 							</p>
 			</div>
 				<br>						
