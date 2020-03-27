@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Machination</title>
+            <link>https://youtu.be/HUzIIXBQiZ0</link>
+            <guid isPermaLink="false">machination</guid>
+            <description>Nouveau morceau musical de Cuisine Spectrale en début de confinement.</description>
+            <pubDate>Fri, 27 Mar 2020 14:59:00 GMT</pubDate>
+		</item>
+		
+		<item>
             <title>L'Horloge</title>
             <link>https://greduvent.herokuapp.com/impressions/impressions.php#horloge</link>
             <guid isPermaLink="false">horloge</guid>
