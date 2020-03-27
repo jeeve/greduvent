@@ -89,6 +89,7 @@
                    <div class="containerPlayer">
                         <div>
                            <ul id="playListContainer">
+							  <li data-src="songs/machination.mp3"><a href="#">Machination</a></li>
 							  <li data-src="songs/algorithme.mp3"><a href="#">Algorithme</a></li>							   						   
 							  <li data-src="songs/un-sourire.mp3"><a href="#">Un sourire</a></li>							   
 							  <li data-src="songs/adada-bar.mp3"><a href="#">Adada bar</a></li>							   						   						   
