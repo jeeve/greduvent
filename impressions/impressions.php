@@ -71,7 +71,7 @@ Où tout te dira : Meurs, vieux lâche ! il est trop tard !  »</p>
 Ce soir j'observe le lampadaire. Il éclaire. Il a été élevé pour ça. Il pourrait se faire la belle. Personne ne s'en apercevrait. Ce n'est pas un rebelle. A moins qu'il surveille les humains. Il ne faut pas sous-estimer les réverbères car le jour où ils vont se liguer, ils sont légion et attendent peut-être leur heure. En tous cas pour l'instant Herbert mon réverbère est sage. Il rêve.
 </p>
 			
-			<p align="right"><em><font size="2">Gentilly, mercredi 15 avril 2020</font></em></p>	
+			<p align="right"><em><font size="2">Gentilly, mercredi 15 avril 2020, 30ème jour de confinement</font></em></p>	
 		</div>
 </div>	
 <br>	

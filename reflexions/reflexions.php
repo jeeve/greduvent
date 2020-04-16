@@ -36,7 +36,7 @@
 					  <a name="sectarisme"></a>
 						<h2>Sectarisme</h2>
 						<p>
-						Ce je déteste particulièrement ce sont les gens sectaires.<br>
+						Ce que je déteste particulièrement ce sont les gens sectaires.<br>
 						Leur esprit est comme un champ de certitudes entouré de barbelés.  
 					</p>
 					<p align="right"><em><font size="2">
