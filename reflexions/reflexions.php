@@ -29,6 +29,21 @@
 					</div>	
 				  </div>	
 				  
+				  <br><br>
+                  <div class="row">
+                     <div class="col-xs-2 col-sm-3 fond"></div>
+					  <div class="col-xs-8 col-sm-6 fond">
+					  <a name="sectarisme"></a>
+						<h2>Sectarisme</h2>
+						<p>
+						Ce je déteste particulièrement ce sont les gens sectaires.<br>
+						Leur esprit est comme un champ de certitudes entouré de barbelés.  
+					</p>
+					<p align="right"><em><font size="2">
+			Gentilly, mercredi 15 avril 2020
+			</font></em></p>	
+				   </div></div>				  
+				  
 				  <br>
 				  <br>
                   <div class="row">

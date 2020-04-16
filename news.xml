@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Herbert rêve</title>
+            <link>https://greduvent.herokuapp.com/impressions/impressions.php#reve-herbert</link>
+            <guid isPermaLink="false">reve-herbert</guid>
+            <description>Confinement jour 30.</description>
+            <pubDate>Wed, 15 Apr 2020 23:59:00 GMT</pubDate>
+		</item>
+
+		<item>
             <title>Machination</title>
             <link>https://youtu.be/HUzIIXBQiZ0</link>
             <guid isPermaLink="false">machination</guid>

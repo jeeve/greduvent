@@ -56,11 +56,25 @@ Où tout te dira : Meurs, vieux lâche ! il est trop tard !  »</p>
 			
 			<p align="right"><em><font size="2">Charles Baudelaire, Les fleurs du mal</font></em></p>	
 <p align="center"><div class="embed-responsive embed-responsive-16by9 ombre-image">			
-'<iframe width="560" height="315" src="https://www.youtube.com/embed/A47qwEqIkEI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>			
+'<iframe width="560" height="315" src="https://www.youtube.com/embed/hUrhVifHEyY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>			
 </p>			
 		</div>
 </div>	</div>
 <br>
+
+<br>		  
+<a name="reve-herbert"></a>
+<div class="row">
+<div class="col-xs-1 col-md-3 fond"></div>
+       <div class="col-xs-10 col-md-6">
+			<p>Avec Églantine, ma plante s'appelle Églantine, ça va même si j'ai l'impression qu'elle essaye de me faire comprendre que je me suis un peu emballé. Toute façon moi et les plantes... 
+Ce soir j'observe le lampadaire. Il éclaire. Il a été élevé pour ça. Il pourrait se faire la belle. Personne ne s'en apercevrait. Ce n'est pas un rebelle. A moins qu'il surveille les humains. Il ne faut pas sous-estimer les réverbères car le jour où ils vont se liguer, ils sont légion et attendent peut-être leur heure. En tous cas pour l'instant Herbert mon réverbère est sage. Il rêve.
+</p>
+			
+			<p align="right"><em><font size="2">Gentilly, mercredi 15 avril 2020</font></em></p>	
+		</div>
+</div>	
+<br>	
 
 				
 <br>		  
