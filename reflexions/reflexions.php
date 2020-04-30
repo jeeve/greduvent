@@ -32,6 +32,18 @@
 				  <br><br>
                   <div class="row">
                      <div class="col-xs-2 col-sm-3 fond"></div>
+					  <div class="col-xs-8 col-sm-6 fond-table encadrement-table">
+					  <p align="center">
+						Pour expliquer le monde, on tente souvent une approche consistant à partir du néant, état que l'on estime le plus "naturel" car le plus simple, invoquer une série d'événements qui auraient engendré la vie. Je propose une hypothèse inverse où l'état le plus "naturel" serait en quelque sorte le Tout, où tout existerait par nature, et la vie serait une des possibilités parmi une infinité. Nous existons dans ce monde là car c'est celui qui a enfanté la conscience.
+					</p>
+										<p align="right"><em><font size="2">
+			Gentilly, 25 juin 2019
+			</font></em></p>
+				   </div></div>				 
+
+				 <br><br>
+                  <div class="row">
+                     <div class="col-xs-2 col-sm-3 fond"></div>
 					  <div class="col-xs-8 col-sm-6 fond">
 					  <a name="sectarisme"></a>
 						<h2>Sectarisme</h2>
