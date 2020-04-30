@@ -33,6 +33,7 @@
                   <div class="row">
                      <div class="col-xs-2 col-sm-3 fond"></div>
 					  <div class="col-xs-8 col-sm-6 fond-table encadrement-table">
+					   <br>
 					  <h2>Le contraire du néant</h2>
 					  <p>
 						Pour expliquer le monde, on tente souvent une approche consistant à partir du néant, état que l'on estime le plus "naturel" car le plus simple, invoquer une série d'événements qui auraient engendré la vie. Je propose une hypothèse inverse où l'état le plus "naturel" serait en quelque sorte le Tout, où tout existerait par nature, et la vie serait une des possibilités parmi une infinité. Nous existons dans ce monde là car c'est celui qui a enfanté la conscience.
