@@ -111,7 +111,7 @@ Mais bon pourquoi pas seulement la nôtre après tout... On est tellement except
 </p><p>
 Considérons maintenant l'univers observable et d'après les estimations celui-ci compterait au moins... 100 milliards de galaxies.
 </p><p>
-Il suffit donc de condenser notre bande de sable dans par exemple un diamant d'1 mm pour former une rivière de pierres précieuses d'1 km de long sur 1 m de large avec 10 cm d'épaisseur...
+Il suffit donc de condenser notre bande de sable dans par exemple un diamant d'1 mm pour former une rivière de pierres précieuses d'1 km de long sur 1 m de large avec 10 cm d'épaisseur... Où chaque diamant contient une galaxie donc.
 </p><p>
 Là, ce serait bien le diable si on ne trouve pas une seule autre pépite parmis tout ces diamants.
 </p><p>
