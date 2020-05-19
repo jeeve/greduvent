@@ -17,6 +17,7 @@ function getInfoSpot() {
 					iMoisson = ligne.gsx$moisson.$t;
 					iGrandeparoisse = ligne.gsx$grandeparoisse.$t;
 					iSaintQuentin = ligne.gsx$saintquentinenyvelines.$t;
+					iEcluzelles = ligne.gsx$ecluzelles.$t;
 												
 					$('.infoPoses').html(iPoses);
 					$('.infoVairesSurMarne').html(iVairessurmarne);
@@ -24,6 +25,7 @@ function getInfoSpot() {
 					$('.infoMoisson').html(iMoisson);
 					$('.infoGrandeParoisse').html(iGrandeparoisse);
 					$('.infoSaintQuentin').html(iSaintQuentin);
+					$('.infoEcluzelles').html(iEcluzelles);
 
 				}
 			}
