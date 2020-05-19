@@ -287,7 +287,7 @@
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
 							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/581" target="_blank">Météo France</a><br><br>
 							<a href="https://www.windguru.cz/581" target="_blank">Windguru</a>
 							</p>
 			</div>
@@ -360,98 +360,6 @@
 			   <br>
 </div>			   
 				
-
-
-
-
-<a name="ecluzelles"></a>			   
-			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-ecluzelles" /> Mézières-Écluzelles</h2>
-<div id="item-div-ecluzelles" class="collapse in">					
-			   <div class="row">
-					<div class="col-sm-8">
-					
-				<p><input type="button" data-target=".item-meteo-ecluzelles" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-ecluzelles" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-ecluzelles" value="Infos" class="btn-releve"/></span></p>				                								
-               
-			<div class="item-meteo-ecluzelles collapse">
-					
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://fr.windfinder.com/weatherforecast/ecluzelles" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/ecluzelles/28500" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/919254" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
-			   
-			<div id="item-vue-ecluzelles" class="collapse">
-			<div class="embed-responsive embed-responsive-4by3 ombre-image">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11077.639428984821!2d1.4224061084166975!3d48.7148328689713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1589917230536!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-		</div>	
-			<br>
-			</div>
-			
-<div id="item-webcam-ecluzelles" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
-    
-	<video id="video-ecluzelles" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
-	<div class="webcam-texte">
-		<p>A13 près de Mantes la Ville, <a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
-	</div>
-	  
-  </div> 
-  <br>
-</div> 	
-
-<div id="item-infos-ecluzelles" class="collapse">
-<div class="infoEcluzelles"></div>
-   <br>
-</div> 					
-					
-					
-						<div class="fond-table encadrement-table">
-						
-<div class="item-meteo-ecluzelles collapse">
-						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/ecluzelles?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/ecluzelles?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Ecluzelles</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
-</div>						
-					
-<script id="wg_fwdg_919254_3_1589916450009">
-(function (window, document) {
-  var loader = function () {
-    var arg = ["s=919254","m=3","uid=wg_fwdg_919254_3_1589916450009", "wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
-   "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
-    var script = document.createElement("script");
-    var tag = document.getElementsByTagName("script")[0];
-    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
-    tag.parentNode.insertBefore(script, tag);
-  };
-  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
-})(window, document);
-</script>				
-					</div>		
-				</div>			
-				  <div class="visible-xs"><br></div>						
-				   <div class="col-sm-4">
-				   <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
-  					<iframe src="meteo-temps-reel.php?station=dreux&credit=0"></iframe>	
-					</div>
-					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-ecluzelles" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d211164.66341434096!2d1.8751571688649815!3d48.89321926889306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!3m2!1d48.856614!2d2.3522219!4m3!3m2!1d48.7158425!2d1.4339123!5e0!3m2!1sfr!2sfr!4v1589917508322!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>						</div>
-
-				 </div>		
-			</div>
-
-			   <br>
-</div>	
-
-
-
-
-
-
-
-
 
 
 <a name="saint-quentin"></a>			   

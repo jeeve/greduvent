@@ -8,6 +8,7 @@
 			jQuery('#map-vaires').attr('src', itineraireSrc + '1s0x47e61074aa8587ab%3A0x40b82c3688c48d0!2sVaires-sur-Marne!3m2!1d48.873608999999995!2d2.6395429999999998!5e0!3m2!1sfr!2sfr!4v1544557341867');			
 			jQuery('#map-grande-paroisse').attr('src', itineraireSrc + '1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e0!3m2!1sfr!2sfr!4v1546091365802');			
 			jQuery('#map-saint-quentin').attr('src', itineraireSrc + '1s0x47e681460086fb29%3A0x48eb9dbd818f35f3!2sSaint-Quentin+en+Yvelines%2C+Montigny-le-Bretonneux!3m2!1d48.7700557!2d2.0249544!5e0!3m2!1sfr!2sfr!4v1552237922454');			
+			jQuery('#map-ecluzelles').attr('src', itineraireSrc + '!3m2!1d48.856614!2d2.3522219!4m3!3m2!1d48.7158425!2d1.4339123!5e0!3m2!1sfr!2sfr!4v1589917508322!5m2!1sfr!2sfr');			
 
 			}		
 /*
@@ -74,6 +75,7 @@
 			getWebCamSaintQuentin();
 			getWebCamEuroDisney();
 			getWebCamGrandeParoisse();
+			getWebCamEcluzelles();
 		}
 		
 		function getWebCamPoses() {
@@ -121,6 +123,18 @@
 			}).then(function(data) {
 				console.log(data.src);
 				jQuery('#video-grande-paroisse').attr('src', data.src);
+		});
+		}
+		
+		function getWebCamEcluzelles() {
+			jQuery.ajax({
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris',
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				console.log(data.src);
+				jQuery('#video-ecluzelles').attr('src', data.src);
 		});
 		}
 		
