@@ -5,7 +5,7 @@ function getInfoSpot() {
 		crossDomain: true,
 		dataType: 'json'
 	}).then(function(data) {
-			var ligne, iPoses, iVairessurmarne, iJablines, iMoisson, iGrandeparoisse, iSaintQuentin;
+			var ligne, iPoses, iVairessurmarne, iJablines, iMoisson, iGrandeparoisse, iSaintQuentin, iEcluzelles;
 			var col1;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 				ligne = data.feed.entry[i];

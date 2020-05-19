@@ -16,8 +16,8 @@ function getOrientationVentSpot() {
 			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
-				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse, spSaintQuentin;
-				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse, nSaintQuentin;
+				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse, spSaintQuentin, spEcluzelles;
+				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse, nSaintQuentin, nEcluzelles;
 				for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 					ligne = data.feed.entry[i];
 					vent = ligne.title.$t;
@@ -28,6 +28,7 @@ function getOrientationVentSpot() {
 						nMoisson = ligne.gsx$moisson.$t;
 						nGrandeparoisse = ligne.gsx$grandeparoisse.$t;
 						nSaintQuentin = ligne.gsx$saintquentinenyvelines.$t;
+						nEcluzelles = ligne.gsx$ecluzelles.$t;
 						
 						spPoses = '';
 						spVairessurmarne = '';
@@ -35,6 +36,7 @@ function getOrientationVentSpot() {
 						spMoisson = '';
 						spGrandeparoisse = '';
 						spSaintQuentin = '';
+						spEcluzelles = '';
 						
 						if (nPoses != '') {
 							spPoses = '<span class="note">' + nPoses + '</span> / 10';
@@ -54,6 +56,9 @@ function getOrientationVentSpot() {
 						if (nSaintQuentin != '') {
 							spSaintQuentin = '<span class="note">' + nSaintQuentin + '</span> / 10';
 						}
+						if (nEcluzelles != '') {
+							spEcluzelles = '<span class="note">' + nEcluzelles + '</span> / 10';
+						}
 						
 						$('.notePoses').html(spPoses);
 						$('.noteVairesSurMarne').html(spVairessurmarne);
@@ -61,6 +66,7 @@ function getOrientationVentSpot() {
 						$('.noteMoisson').html(spMoisson);
 						$('.noteGrandeParoisse').html(spGrandeparoisse);
 						$('.noteSaintQuentin').html(spSaintQuentin);
+						$('.noteEcluzelles').html(spEcluzelles);
 
 						$('.note').each(function(index, el) { 
 							var elem = $(el);
