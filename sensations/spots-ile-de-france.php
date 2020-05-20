@@ -195,20 +195,9 @@
                <div class="row">
 					<div class="col-sm-8">
 					
-		<p><input type="button" data-target=".item-meteo-poses" value="Météo" class="btn-releve" /> - <input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span></p>		
+		<p><input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span></p>		
 			
-			<div class="item-meteo-poses collapse">
-					
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/4864" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>
-				
-			</div>
+
 			
 		
 			
@@ -284,9 +273,13 @@
   					<iframe src="meteo-temps-reel.php?station=louviers&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-poses" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d421188.1259875271!2d1.5370175529156327!3d49.028173071130745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e1289bac44658f%3A0xe940a5c757b0bf2a!2sL%C3%A9ry-Poses+en+Normandie%2C+Poses!3m2!1d49.302783!2d1.209404!5e0!3m2!1sfr!2sfr!4v1544558819114" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>				
-							</div>
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://fr.windfinder.com/weatherforecast/lake_des_deux_amants" target="_blank">Superforecast</a><br><br>							
+							<a href="http://www.meteofrance.com/previsions-meteo-france/val-de-reuil/27100" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/4864" target="_blank">Windguru</a>
+							</p>
+			</div>
 
 				 </div>		
 			</div>
@@ -299,19 +292,8 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-moisson" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-moisson" value="Infos" class="btn-releve"/></span></p>				                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-moisson" value="Infos" class="btn-releve"/></span></p>				                								
                
-			<div class="item-meteo-moisson collapse">
-					
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/581" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
 			   
 			<div id="item-vue-moisson" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -368,9 +350,13 @@
   					<iframe src="meteo-temps-reel.php?station=mantes-la-jolie&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-moisson" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d211164.66341434096!2d1.8751571688649815!3d48.89321926889306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e6c12b153c22bf%3A0x2d227d4087bc4da9!2sMoisson!3m2!1d49.072928999999995!2d1.6691859999999998!5e0!3m2!1sfr!2sfr!4v1544557383138" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>						</div>
-
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt" target="_blank">Superforecast</a><br><br>							
+							<a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/581" target="_blank">Windguru</a>
+							</p>
+			</div>
 				 </div>		
 			</div>
 
@@ -389,19 +375,8 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-ecluzelles" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-ecluzelles" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-ecluzelles" value="Infos" class="btn-releve"/></span></p>				                								
-               
-			<div class="item-meteo-ecluzelles collapse">
-					
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://fr.windfinder.com/weatherforecast/ecluzelles" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/ecluzelles/28500" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/919254" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-ecluzelles" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-ecluzelles" value="Infos" class="btn-releve"/></span></p>				                								
+               	   
 			   
 			<div id="item-vue-ecluzelles" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -455,9 +430,13 @@
   					<iframe src="meteo-temps-reel.php?station=dreux&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-ecluzelles" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d211164.66341434096!2d1.8751571688649815!3d48.89321926889306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!3m2!1d48.856614!2d2.3522219!4m3!3m2!1d48.7158425!2d1.4339123!5e0!3m2!1sfr!2sfr!4v1589917508322!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>						</div>
-
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://fr.windfinder.com/weatherforecast/ecluzelles" target="_blank">Superforecast</a><br><br>							
+							<a href="http://www.meteofrance.com/previsions-meteo-france/ecluzelles/28500" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/919254" target="_blank">Windguru</a>
+							</p>
+			</div>
 				 </div>		
 			</div>
 
@@ -481,18 +460,8 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-saintquentin" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-saintquentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saintquentin" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-saintquentin" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-saintquentin" value="Infos" class="btn-releve"/></span></p>				                								
-               
-			<div class="item-meteo-saintquentin collapse">			
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://www.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/161" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-saintquentin" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-saintquentin" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-saintquentin" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-saintquentin" value="Infos" class="btn-releve"/></span></p>				                								
+                
 			   
 			   
 			<div id="item-vue-saintquentin" class="collapse">
@@ -547,8 +516,13 @@
   					<iframe src="meteo-temps-reel.php?station=montigny-le-bretonneux&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-saint-quentin" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d105705.06057385674!2d2.117237644898744!3d48.835080237233456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e681460086fb29%3A0x48eb9dbd818f35f3!2sSaint-Quentin+en+Yvelines%2C+Montigny-le-Bretonneux!3m2!1d48.7700557!2d2.0249544!5e0!3m2!1sfr!2sfr!4v1552237922454" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>						</div>
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/montigny_le_bretonneux" target="_blank">Superforecast</a><br><br>							
+							<a href="http://www.meteofrance.com/previsions-meteo-france/montigny-le-bretonneux/78180" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/161" target="_blank">Windguru</a>
+							</p>
+			</div>
 
 				 </div>		
 			</div>
@@ -571,18 +545,9 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-jablines" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-jablines" value="Infos" class="btn-releve"/></span></p>            								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-jablines" value="Infos" class="btn-releve"/></span></p>            								
                
-			<div class="item-meteo-jablines collapse">			
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/60274" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
+	   
 			   
 			   
 			   
@@ -641,8 +606,13 @@
   					<iframe src="meteo-temps-reel.php?station=torcy&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-jablines" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d422235.08052076533!2d2.2754300925254305!3d48.904374951691736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61c3ceabfc0ff%3A0x40b82c3688c57b0!2sJablines!3m2!1d48.917429!2d2.761107!5e0!3m2!1sfr!2sfr!4v1544557168668" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                        </div>
+					<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/60274" target="_blank">Windguru</a>
+							</p>
+			</div>
 
 				 </div>		
 			</div>
@@ -659,18 +629,10 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-vaires" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-vaires" value="Infos" class="btn-releve"/></span></p>             								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-vaires" value="Infos" class="btn-releve"/></span></p>             								
  
- 			<div class="item-meteo-vaires collapse">			
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
-							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/60276" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
+					
+						   
 
 			<div id="item-vue-vaires" class="collapse">
 			<div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -729,10 +691,15 @@
   					<iframe src="meteo-temps-reel.php?station=torcy&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-vaires" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d105647.94469813356!2d2.439899995693516!3d48.862143539942224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e61074aa8587ab%3A0x40b82c3688c48d0!2sVaires-sur-Marne!3m2!1d48.873608999999995!2d2.6395429999999998!5e0!3m2!1sfr!2sfr!4v1544557341867" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				 </div>		
-			</div>		
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne" target="_blank">Superforecast</a><br><br>							
+							<a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/60276" target="_blank">Windguru</a>
+							</p>
+			</div>
+	
+			
 </div>
 
 			   <br>	  
@@ -746,18 +713,9 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-target=".item-meteo-grandeparoisse" value="Météo" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-grandeparoisse" value="Infos" class="btn-releve"/></span></p>		                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-grandeparoisse" value="Infos" class="btn-releve"/></span></p>		                								
 
- 			<div class="item-meteo-grandeparoisse collapse">			
-						<div class="fond-table encadrement-table" style="width: 150px;">
-							<p>	
-							<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank">Superforecast</a><br><br>
-							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a><br><br>
-							<a href="https://www.windguru.cz/90210" target="_blank">Windguru</a>
-							</p>
-			</div>
-				<br>						
-			</div>			   
+		   
 
 
 
@@ -820,9 +778,13 @@
   					<iframe src="meteo-temps-reel.php?station=montereau-fault-yonne&credit=0"></iframe>	
 					</div>
 					<br>
-					    <div class="embed-responsive embed-responsive-4by3 ombre-image" style="background-image: none; background-color: black;">
-<iframe id="map-grande-paroisse" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d357010.49566299294!2d2.410506468175938!3d48.62537999052597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47ef5da0654377a5%3A0xcc0ec2789c79926a!2sLa+Grande-Paroisse!3m2!1d48.386235!2d2.900735!5e0!3m2!1sfr!2sfr!4v1546091365802" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>				
- </div>		
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/weatherforecast/la_grande_paroisse?utm_campaign=homepageweather" target="_blank">Superforecast</a><br><br>
+							<a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/90210" target="_blank">Windguru</a>
+							</p>
+			</div>	
 			</div>		
 </div>
 

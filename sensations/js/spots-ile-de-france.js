@@ -291,10 +291,10 @@
 					orientationVent = $(this).find('option:selected').attr('value');
 					getOrientationVentSpot();
 				});
-					
+			/*		
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(maPosition);
 			}
-
+*/
 			getWebCams();	 
 		});
