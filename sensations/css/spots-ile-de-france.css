@@ -38,6 +38,14 @@
 	margin-top: 20px;
 }
 
+.ferme {
+	background-image: url("../images/sens-interdit-mini.png");
+	background-repeat: no-repeat;
+	background-size: 18px 15px;	
+	background-position: left;
+	padding-left: 20px;
+}
+
 @media screen and (min-width: 768px) {
 		.liste-spots table td {
 			padding-top: 8px;

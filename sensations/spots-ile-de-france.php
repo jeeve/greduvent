@@ -102,10 +102,28 @@
 <br><br>				
  <div class="row">
 	<div class="col-sm-8">
+	
+<p><input type="button" data-target="#item-meteo" value="Météo" class="btn-enfonce" /> - <input type="button" value="Géographie" data-target="#item-geographie" class="btn-releve" /> </p>	
+
+<div id="item-meteo" class="collapse in">
+	
 		<div class="embed-responsive embed-responsive-4by3 ombre-image">
+<div id="page">
 <iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=48.669&lon=2.340&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=49.013&detailLon=2.005&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe> 		
-<!--		<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	-->
-		</div>	
+</div>		
+		</div>
+
+</div>
+<!--
+<div id="item-geographie" class="collapse">
+
+		<div class="embed-responsive embed-responsive-4by3 ombre-image">
+		<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>	
+		</div>
+
+</div>		
+-->
+		
   </div>
     					<div class="visible-xs fond">
 						<br><br>
@@ -137,13 +155,13 @@
 	</div>
 
 							<table>
-							<tr><td><p><a href="#poses">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
-							<tr><td><p><a href="#moisson">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
+							<tr><td><p><a href="#poses" class="ferme">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
+							<tr><td><p><a href="#moisson" class="ferme">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
 							<tr><td><p><a href="#ecluzelles">Mézières-Écluzelles</a></p></td><td><p class="noteEcluzelles"></p></td></tr>
-							<tr><td><p><a href="#saint-quentin">Saint-Quentin en Y.</a></p></td><td><p class="noteSaintQuentin"></p></td></tr>							
-							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
-							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
-							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
+							<tr><td><p><a href="#saint-quentin" class="ferme">Saint-Quentin en Y.</a></p></td><td><p class="noteSaintQuentin"></p></td></tr>							
+							<tr><td><p><a href="#jablines" class="ferme">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
+							<tr><td><p><a href="#vaires" class="ferme">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
+							<tr><td><p><a href="#grande-paroisse" class="ferme">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
 							</table>
 
 						

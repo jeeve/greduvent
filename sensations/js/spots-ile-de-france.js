@@ -263,18 +263,30 @@
 			
 			
 			
-/*			
-			jQuery("input[data-target^='#item-vue'], input[data-target^='#item-webcam'], input[data-target^='#item-infos'], input[data-target^='.item-meteo']").click(function() {
-				if (jQuery(this).hasClass('btn-releve')) {
-					jQuery(this).removeClass('btn-releve');	
-					jQuery(this).addClass('btn-enfonce');					
-				}
-				else {
-					jQuery(this).removeClass('btn-enfonce');	
-					jQuery(this).addClass('btn-releve');										
+			
+			jQuery("input[data-target='#item-meteo']").click(function() {
+				if (jQuery("input[data-target='#item-meteo']").hasClass('btn-releve')) {
+					jQuery("input[data-target='#item-meteo']").removeClass('btn-releve');	
+					jQuery("input[data-target='#item-meteo']").addClass('btn-enfonce');	
+					jQuery("input[data-target='#item-geographie']").addClass('btn-releve');	
+					jQuery("input[data-target='#item-geographie']").removeClass('btn-enfonce');
+				//	jQuery("#item-geographie").collapse("hide");					
+				//	jQuery("#item-meteo").collapse("show");		
+			jQuery("#page").html('<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=48.669&lon=2.340&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=49.013&detailLon=2.005&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe>');				
 				}
 			});
-*/			
+			jQuery("input[data-target='#item-geographie']").click(function() {
+				if (jQuery("input[data-target='#item-geographie']").hasClass('btn-releve')) {
+					jQuery("input[data-target='#item-geographie']").removeClass('btn-releve');	
+					jQuery("input[data-target='#item-geographie']").addClass('btn-enfonce');
+					jQuery("input[data-target='#item-meteo']").addClass('btn-releve');	
+					jQuery("input[data-target='#item-meteo']").removeClass('btn-enfonce');	
+				//	jQuery("#item-meteo").collapse("hide");
+				//	jQuery("#item-geographie").collapse("show");
+				jQuery("#page").html('<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>');
+				}
+			});			
+			
 	         jQuery('#menu-vent').change(function(){
 					orientationVent = $(this).find('option:selected').attr('value');
 					getOrientationVentSpot();
