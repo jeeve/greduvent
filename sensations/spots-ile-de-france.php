@@ -670,7 +670,7 @@
   <br>
 </div> 
 					
-					
+				
 					
 						<div class="fond-table encadrement-table">
 <div class="item-meteo-vaires collapse">								
@@ -695,8 +695,8 @@
 						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
 -->
 					</div>	
-				
-				</div>			
+				</div>
+						
 				  <div class="visible-xs"><br></div>						
 				   <div class="col-sm-4">
 				   <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
@@ -710,12 +710,13 @@
 							<a href="https://www.windguru.cz/60276" target="_blank">Windguru</a>
 							</p>
 			</div>
-	
-			
-</div>
+	</div>
+</div>			
+
 
 			   <br>	  
-</div>			   
+</div>	
+		   
 			   <a name="grande-paroisse"></a>
 			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
 <div id="item-div-grande-paroisse" class="collapse in">					
