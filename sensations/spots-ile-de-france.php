@@ -74,6 +74,18 @@
 		}
  }
  </script>
+ <script type="application/ld+json">
+ {
+   "@context": "http://schema.org",
+   "@type": "Place",
+   "name": "Mézières-Écluzelles",
+	"address": {
+		"@type": "PostalAddress",
+			"addressLocality": "Mézières-en-Drouais",
+			"addressCountry": "France"
+		}
+ }
+ </script>
  
    </head>
    <body>
