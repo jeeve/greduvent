@@ -62,7 +62,7 @@
 					<h2>Windsurf</h2>
 					<ul>
 						<li><p>flotteur&nbsp; Starboard Isonic 111 litres modèle 2009<br>
-						dimensions : 2 m 34 x 68,5 cm</p>
+						dimensions : 234 x 68,5 cm</p>
 						</li>						
 						<li><p>voile Simmer Style Vmax modèle 2018<br>
 						surface : 6,6 m²</p></li>          
@@ -75,7 +75,7 @@
 					<p><br></p>
 					<h2>Windfoil</h2>
 					<ul>
-						<li><p>flotteur&nbsp; JP hydrofoil 135 modèle 2019<br>
+						<li><p>flotteur&nbsp; JP Hydrofoil 135 modèle 2019<br>
 						dimensions : 215 x 86 cm</p>
 						</li>
 						<li><p>foil Taaroa Noé Freerace modèle 2020<br>
