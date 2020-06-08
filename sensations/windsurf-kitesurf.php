@@ -75,11 +75,11 @@
 					<p><br></p>
 					<h2>Windfoil</h2>
 					<ul>
-						<li><p>flotteur&nbsp; Exocet Scross 116 litres modèle 2014<br>
-						dimensions : 2 m 42 x 68 cm</p>
+						<li><p>flotteur&nbsp; JP hydrofoil 135 modèle 2019<br>
+						dimensions : 215 x 86 cm</p>
 						</li>
-						<li><p>foil Neilpryde Glide small modèle 2019<br>
-						hauteur : 70 cm, envergure 64 cm</p></li>          
+						<li><p>foil Taaroa Noé Freerace modèle 2020<br>
+						aile : 80 cm d'envergure</p></li>          
 						</ul></p>
 		<p align="center">ça vole !</p>
 					
