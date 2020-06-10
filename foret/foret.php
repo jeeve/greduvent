@@ -64,6 +64,7 @@
 				  </a>  
 				  <br><br>
                   <div class="row row-cadre vertical-align">
+				  <div class="col-xs-12 col-sm-3 fond"></div>
                      <div class="col-xs-12 col-sm-6 fond">
                         <a name="fontainebleau"></a><h2>Fontainebleau</h2>
                        
@@ -76,13 +77,29 @@
         Courir, parler, crier, courir, surtout ne pas tomber dans le vide de son 
         inexistence<br>
         La forêt semble souffler en attendant son heure<br> 
-        L'infection humaine a eut raison de son âme</p>
+        L'infection humaine aurait-elle raison de son âme ?</p>
                      </div>
 					
-						<div class="col-xs-12 col-sm-6 fond-table encadrement-table"> 
-                            <img src="images/bout-des-crocs.jpg" class="img-responsive center-block">
-                        </div>
+
                   </div>
+				  
+				  <br><br>
+				  <div class="row">
+                  <div class="col-xs-12 col-sm-1 fond"></div>
+				  <div class="col-xs-12 col-sm-10 fond">
+                  <img alt="Gorges d'Apremont - 20 mai 2020" title="Gorges d'Apremont - 20 mai 2020" src="images/apremont.jpg" class="img-responsive ombre-image" />
+				  </div>
+				  </div>	
+
+
+						<br><br>
+				  <div class="row">
+				   <div class="col-xs-1 col-sm-3 fond"></div>
+						<div class="col-xs-10 col-sm-6 fond-table encadrement-table"> 
+                            <img src="images/bout-des-crocs.jpg" class="img-responsive center-block">
+                        </div>	
+					</div>			
+				  
 
 				  <br><br>
 				  <p align="center">	

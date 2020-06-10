@@ -56,7 +56,7 @@
 <!--	<div class="item"><img src="images/diapos/foret22.jpg" alt=""></div> -->
 	<div class="item"><img src="images/diapos/foret23.jpg" alt="Sologne - 30 mai 2009" title="Sologne - 30 mai 2009"></div>
 	<div class="item"><img src="images/diapos/foret24.jpg" alt="Sologne - 30 décembre 2003" title="Sologne - 30 décembre 2003"></div>
-	<div class="item"><img src="images/diapos/foret25.jpg" alt="Gorges d'Apremont - 20 mai 2020" title="Gorges d'Apremont - 20 mai 2020"></div>
+
  </div>
 
   <!-- Controls -->
