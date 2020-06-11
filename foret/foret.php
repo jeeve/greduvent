@@ -77,7 +77,7 @@
         Courir, parler, crier, courir, surtout ne pas tomber dans le vide de son 
         inexistence<br>
         La forêt semble souffler en attendant son heure<br> 
-        L'infection humaine aurait-elle raison de son âme ?</p>
+        L'infection humaine aurait-elle raison de son âme&nbsp;?</p>
                      </div>
 					
 
