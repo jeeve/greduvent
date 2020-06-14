@@ -167,11 +167,11 @@
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
 				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				 <iframe width="560" height="315" src="https://www.youtube.com/embed/XNFeOSk6Mck?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				 <iframe width="560" height="315" src="https://www.youtube.com/embed/ftOzuIgUg14?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2017
+				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2017
 				  </p>
 				  </div></div>				 
 				  
