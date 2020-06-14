@@ -139,11 +139,11 @@
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
 				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				 <iframe width="560" height="315" src="https://www.youtube.com/embed/_D3RVJqU344?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				 <iframe width="560" height="315" src="https://www.youtube.com/embed/ftOzuIgUg14?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				<p class="legende">
-				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2019
+				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2019
 				  </p>
 				  </div></div>	
 
@@ -157,7 +157,7 @@
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="../sensations/windsurf-kitesurf">Planche à voile</a> sous l'orage à Saint-Jacut-de-la-Mer, août 2018
+				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> sous l'orage à Saint-Jacut-de-la-Mer, août 2018
 				  </p>
 				  </div></div>	
 
@@ -167,7 +167,7 @@
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
 				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				 <iframe width="560" height="315" src="https://www.youtube.com/embed/ftOzuIgUg14?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				 <iframe width="560" height="315" src="https://www.youtube.com/embed/XNFeOSk6Mck&t?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				  <p class="legende">
