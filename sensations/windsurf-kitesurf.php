@@ -64,6 +64,8 @@
 						<li><p>flotteur&nbsp; Starboard Isonic 111 litres modèle 2009<br>
 						dimensions : 234 x 68,5 cm</p>
 						</li>						
+						<li><p>voile Gunsails Torro modèle 2019<br>
+						surface : 5,3 m²</p></li>   
 						<li><p>voile Simmer Style Vmax modèle 2018<br>
 						surface : 6,6 m²</p></li>          
 						<li><p>voile Neilpryde V8 modèle 2017<br>
