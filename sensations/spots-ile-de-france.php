@@ -382,7 +382,7 @@
 
 
 <a name="ecluzelles"></a>			   
-			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-ecluzelles" /> Mézières-Écluzelles</h2>
+			    <h2><input id="div-moisson" type="button" value=" - " data-toggle="collapse" data-target="#item-div-ecluzelles" /> <a href="ecluzelles.php">Mézières-Écluzelles</a></h2>
 <div id="item-div-ecluzelles" class="collapse in">					
 			   <div class="row">
 					<div class="col-sm-8">

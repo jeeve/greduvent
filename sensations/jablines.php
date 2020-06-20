@@ -268,7 +268,7 @@ Super session. Vent très irrégulier mais quelques bonnes rafales. Surpris par 
 						</div>
 					</div>
 					<div class="row">
-						<p class="numero-page">page 14d</p>
+						<p class="numero-page">page 14e</p>
 						
 					</div>
                   </div>
