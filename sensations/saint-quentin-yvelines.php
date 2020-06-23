@@ -227,7 +227,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<p class="numero-page">page 14c</p>
+						<p class="numero-page">page 14d</p>
 						
 					</div>
                   </div>
