@@ -7,7 +7,7 @@ function getInfoSessions(spot) {
 	}).then(function(data) {
 			var ligne, html, ancre;
 			html = '';
-			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace;
+			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 				
 				ligne = data.feed.entry[i];
@@ -30,6 +30,7 @@ function getInfoSessions(spot) {
 					flotteur = ligne.gsx$flotteur.$t;
 					voile = ligne.gsx$voile.$t;
 					aileron = ligne.gsx$aileron.$t;
+					aile = ligne.gsx$aile.$t;
 					distance = ligne.gsx$distancekm.$t;
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
@@ -47,7 +48,12 @@ function getInfoSessions(spot) {
 					html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
 					html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
 					html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
-					html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
+					if (aile != '') {
+						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '<br>' + 'Aile ' + aile + '</td></tr>';
+					}
+					else {		
+						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
+					}
 					if (distance != '') {
 						if  (trace == '') {
 							html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
