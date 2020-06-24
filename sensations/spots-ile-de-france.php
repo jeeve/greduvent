@@ -170,7 +170,7 @@
 							<tr><td><p><a href="#poses">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
 							<tr><td><p><a href="#moisson">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
 							<tr><td><p><a href="#ecluzelles">Mézières-Écluzelles</a></p></td><td><p class="noteEcluzelles"></p></td></tr>
-							<tr><td><p><a href="#saint-quentin" <!--class="ferme"-->Saint-Quentin en Y.</a></p></td><td><p class="noteSaintQuentin"></p></td></tr>							
+							<!--<tr><td><p><a href="#saint-quentin" class="ferme"Saint-Quentin en Y.</a></p></td><td><p class="noteSaintQuentin"></p></td></tr>	-->						
 							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
 							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
 							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
@@ -462,7 +462,7 @@
 
 
 
-
+<!--
 
 <a name="saint-quentin"></a>			   
 			    <h2><input id="div-saint-quentin" type="button" value=" - " data-toggle="collapse" data-target="#item-div-saint-quentin" />  <a href="saint-quentin-yvelines.php">Saint-Quentin en Yvelines</a></h2>
@@ -545,7 +545,7 @@
 </div>	
 
 				
-				
+-->				
 				
 				
 				
