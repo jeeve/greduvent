@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Le spot de Mézières-Ecluzelles</title>
+            <link>https://greduvent.herokuapp.com/sensations/ecluzelles.php</link>
+            <guid isPermaLink="false">spot-ecluzelles</guid>
+            <description>Page dédiée au windsurf / windfoil sur le spot de Mézières-Ecluzelles près de Dreux.</description>
+            <pubDate>Wed, 24 Jun 2020 14:10:00 GMT</pubDate>
+		</item>
+		
+		<item>
             <title>Herbert rêve</title>
             <link>https://greduvent.herokuapp.com/impressions/impressions.php#reve-herbert</link>
             <guid isPermaLink="false">reve-herbert</guid>
