@@ -33,7 +33,7 @@ function getInfoSessions(spot) {
 					distance = ligne.gsx$distancekm.$t;
 					vmax = ligne.gsx$vmaxpolarkmh;// ligne.gsx$vmaxk72noeuds.$t;
 					if (vmax != '') {
-						vmax =  vmax / 1.852; // passage en noeuds
+						vmax =  vmax.parseFloat / 1.852; // passage en noeuds
 					}
 					v100m = ligne.gsx$v100mk72.$t;
 					
