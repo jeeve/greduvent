@@ -31,10 +31,7 @@ function getInfoSessions(spot) {
 					voile = ligne.gsx$voile.$t;
 					aileron = ligne.gsx$aileron.$t;
 					distance = ligne.gsx$distancekm.$t;
-					vmax = ligne.gsx$vmaxpolarkmh;// ligne.gsx$vmaxk72noeuds.$t;
-					if (vmax != '') {
-						vmax =  parseFloat(vmax) / 1.852; // passage en noeuds
-					}
+					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
 					
 					ancre = laDate.replace(new RegExp('/', 'g'), '-');
