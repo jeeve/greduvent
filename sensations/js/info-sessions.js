@@ -68,6 +68,7 @@ function getInfoSessions(spot) {
 					
 					html = html + '</div>';
 					
+					
 					$('#sessions').html(html);
 				}
 			}
