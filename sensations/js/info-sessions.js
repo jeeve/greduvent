@@ -39,7 +39,7 @@ function getInfoSessions(spot) {
 					html = html + '<br><div id="' + ancre + '" class="row"><div class="col-sm-8 fond">';
 					
 					if (laVideo != '') {		
-						html = html + '<p align="center"><div class="embed-responsive embed-responsive-4by3 ombre-image">' + 
+						html = html + '<p align="center"><div class="embed-responsive embed-responsive-16by9 ombre-image">' + 
 						'<iframe width="560" height="315" src="https://www.youtube.com/embed/';
 						html = html + codeYoutube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></p>';
 					}
