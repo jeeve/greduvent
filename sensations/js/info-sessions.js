@@ -49,7 +49,7 @@ function getInfoSessions(spot) {
 					html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
 					html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
 					if (aile != '') {
-						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '<br>' + 'Aile ' + aile + '</td></tr>';
+						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '- aile ' + aile + '</td></tr>';
 					}
 					else {		
 						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
