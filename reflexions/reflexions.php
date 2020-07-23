@@ -29,19 +29,19 @@
 					</div>	
 				  </div>
 
-				  <br><br>
+				 <br><br>
                   <div class="row">
                      <div class="col-xs-2 col-sm-3 fond"></div>
-					  <div class="col-xs-8 col-sm-6 fond-table encadrement-table">
-					   <br>
-					  <h2>La conscience</h2>
-					  <p>
-						Pourquoi ressentons-nous les choses et pourquoi notre cerveau ne se contente pas de leur analyse ? Il n’y a à priori pas d’intérêt évolutionniste à l'apparition de la conscience.
+					  <div class="col-xs-8 col-sm-6 fond">
+					  <a name="conscience"></a>
+						<h2>Conscience</h2>
+						<p>
+						Pourquoi ressentons-nous les choses et pourquoi notre cerveau ne se contente pas de leur analyse ? Il n’y a à priori  pas d’intérêt évolutionniste à l'apparition de la conscience.
 					</p>
-										<p align="right"><em><font size="2">
-			Sèvres, 23 juillet 2020
-			</font></em></p>
-				   </div></div>				 
+					<p align="right"><em><font size="2">
+			Sèvres, jeudi 23 juillet 2020
+			</font></em></p>	
+				   </div></div>					 
 				  
 				  
 				  <br><br>
