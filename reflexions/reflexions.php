@@ -39,7 +39,7 @@
 						Pourquoi ressentons-nous les choses et pourquoi notre cerveau ne se contente pas de leur analyse ? Il n’y a à priori pas d’intérêt évolutionniste à l'apparition de la conscience.
 					</p>
 										<p align="right"><em><font size="2">
-			Sèvres, 23 juillet 2019
+			Sèvres, 23 juillet 2020
 			</font></em></p>
 				   </div></div>				 
 				  
