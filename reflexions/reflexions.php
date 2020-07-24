@@ -22,8 +22,10 @@
 				  <div class="row">
 					<div class="col-xs-1 col-sm-1 fond"></div>
 					<div class="col-xs-10 col-sm-10 fond">
-						<div id="ligne-question"></div>	  
+						<div id="ligne-question"></div>	 
+						<br>			
 						<div id="lignes-reponses"></div>
+						<br>
 						<div id="autres-questions-toggle" style="cursor: pointer; display:none;"><p><u><a>Autres questions...</a></u></p></div>
 						<div id="autres-questions" style="display: none;"></div>
 					</div>	
@@ -33,7 +35,7 @@
 				  <hr>
 				  
 
-				 <br><br>
+				 <br>
                   <div class="row">
                      <div class="col-xs-2 col-sm-3 fond"></div>
 					  <div class="col-xs-8 col-sm-6 fond">
