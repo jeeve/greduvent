@@ -28,6 +28,10 @@
 						<div id="autres-questions" style="display: none;"></div>
 					</div>	
 				  </div>
+				  
+				  <br>
+				  <hr>
+				  <br>
 
 				 <br><br>
                   <div class="row">
