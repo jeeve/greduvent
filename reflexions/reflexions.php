@@ -31,7 +31,7 @@
 				  
 				  <br>
 				  <hr>
-				  <br>
+				  
 
 				 <br><br>
                   <div class="row">
