@@ -46,7 +46,9 @@
 					</p>
 					<p align="right"><em><font size="2">
 			Sèvres, jeudi 23 juillet 2020
-			</font></em></p>	
+			</font></em></p>
+				<p>Ils en débatent... <a href="https://youtu.be/vrfaqsb_0LM" target="_blank">Interview complète | François Kammerer - Sommes-nous tous des zombies ?</a>
+				</p>
 				   </div></div>					 
 				  
 				  
