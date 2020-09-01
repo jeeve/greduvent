@@ -222,7 +222,7 @@
       <script> 
 		jQuery(document).ready(function($) {
 		getInfoSessions('saint-jacut,la pissotte,la justice,les haas');
-		}
+		});
       </script>	  
 	  <script type="text/javascript" src="../sensations/js/info-sessions.js"></script>
    </body>
