@@ -192,7 +192,9 @@
 					</div></div>
 								  
 				  
+				  <h2>Sessions en vidéo</h2>
 				  
+				  <div id="sessions"></div>					  
 				  
           
               
@@ -214,5 +216,10 @@
       </div>
       <!--/.page-container-->
 	  <?php include("../includes/footer.php"); ?> 
+      <script> 
+		jQuery(document).ready(function($) {
+		getInfoSessions('saint-jacut,pissotte,justice,haas');
+      </script>	  
+	  <script type="text/javascript" src="../sensations/js/info-sessions.js"></script>
    </body>
 </html>
