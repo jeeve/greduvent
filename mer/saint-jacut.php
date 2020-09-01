@@ -3,7 +3,8 @@
    <head>
       <title>Saint-Jacut-de-la-Mer</title>
       <META NAME="Description" CONTENT="Saint-Jacut-de-la-Mer, petite presqu'île bretonne au charme envoûtant."/>
-	  <?php include("../includes/header.php"); ?>	
+	  <?php include("../includes/header.php"); ?>
+	<link rel="stylesheet" type="text/css" href="../sensations/css/spots.css" media="all"/>	  
    </head>
    <body>
       <div class="page-container">
