@@ -13,7 +13,7 @@ function getInfoSessions(spot) {
 				ligne = data.feed.entry[i];
 				leSpot = ligne.gsx$spot.$t;
 
-				if (spot.toLowerCase().indexOf(leSpot.toLowerCase()) > -1) {											
+				if (spot.toLowerCase().indexOf(leSpot.toLowerCase()) > -1 && leSpot != "") {											
 
 					dateheure = ligne.gsx$date.$t;
 					laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
