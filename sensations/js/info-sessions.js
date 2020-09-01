@@ -21,6 +21,9 @@ function getInfoSessions(spot) {
 					laDate = res[1] + '/' + res[0] + '/' + res[2];
 					
 					trace = ligne.gsx$tracemontre.$t;
+					if (trace == "") {
+						trace = ligne.gsx$tracek72.$t;
+					}
 					leMWS = ligne.gsx$mws.$t;
 					laVideo = ligne.gsx$youtube.$t;
 					leCommentaire = ligne.gsx$commentaire.$t;
