@@ -132,6 +132,13 @@
                         </div>
                      </div>
                   </div>
+				  
+				  
+			  
+				  <h2>Sessions en vidéo</h2>
+				  
+				  <div id="sessions"></div>					  
+				  
 				  		  
 				  <br><a name="windsurf-aout-2019"></a>
 				  <div class="row">
@@ -191,11 +198,7 @@
 				  </p>
 					</div></div>
 								  
-				  
-				  <h2>Sessions en vidéo</h2>
-				  
-				  <div id="sessions"></div>					  
-				  
+					  
           
               
 <br>
@@ -218,7 +221,8 @@
 	  <?php include("../includes/footer.php"); ?> 
       <script> 
 		jQuery(document).ready(function($) {
-		getInfoSessions('saint-jacut,pissotte,justice,haas');
+		getInfoSessions('saint-jacut,la pissotte,la justice,les haas');
+		}
       </script>	  
 	  <script type="text/javascript" src="../sensations/js/info-sessions.js"></script>
    </body>
