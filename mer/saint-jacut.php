@@ -140,7 +140,7 @@
 				  
 				  <div id="sessions"></div>					  
 				  
-				  		  
+			<!--	  		  
 				  <br><a name="windsurf-aout-2019"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
@@ -154,7 +154,7 @@
 				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2019
 				  </p>
 				  </div></div>	
-
+-->
 				  <br><a name="windsurf-aout-2018"></a>
 				  <div class="row">
 				  <div class="col-xs-12 col-sm-2 fond"></div>
