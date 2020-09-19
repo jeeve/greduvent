@@ -134,7 +134,7 @@
                      </div>
                   </div>
 				  
-				  
+				  <br>
 			  
 				  <h2>Sessions en vidéo</h2>
 				  

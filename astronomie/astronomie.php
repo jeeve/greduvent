@@ -83,6 +83,18 @@ Gentilly, mercredi 11 avril 2018</em></font>
 </p>
 <br>
 
+<br>
+<div class="row">
+<div class="col-xs-1 col-md-3 fond"></div>
+       <div class="col-xs-10 col-md-6 fond-table encadrement-table">
+			<p>Les humains vivent sur la planète Terre comme des gens vivraient dans une maison fermée d'où ils ne sont jamais sortis, où chaque fenêtre vue de l'intérieur serait perçue comme un tableau abstrait. Impossible pour eux d'imaginer l'immensité de l'extérieur.</p>	
+			<p align="right"><em><font size="2">
+			<a href="../mer/saint-jacut.php">Saint-Jacut de la Mer</a>, 11 août 2020
+			</font></em></p>	
+		</div>
+</div>	
+<br>
+
 <a name="nuit-etoilee"></a>
 <h2>Nuit étoilée</h2>
 <p>
@@ -146,6 +158,8 @@ Les distances entre chaque point de l’espace augmentent et ce depuis 13 millia
 L’univers n’est pas une simple salle de spectacle où des acteurs célestes se meuvent.<br>
 L’univers bouge, l’univers grandit, l’univers vit.
 </p>  
+
+<br>
 		  
 		  <a href="http://www.google.com/moon/#lat=12.554563&amp;lon=10.898437&amp;map=visible&amp;apollo=" target="_blank">
 		  <img src="images/lune.gif" alt="La Lune depuis Malakoff - 8 octobre 2003" title="La Lune depuis Malakoff - 8 octobre 2003" class="img-responsive"/>
