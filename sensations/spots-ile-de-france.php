@@ -838,7 +838,7 @@
 <div id="item-webcam-foretorient" class="collapse">			
 
 <p> 
-<a href="https://www.viewsurf.com/univers/ville/vue/17714-519405668-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac" target="_blank">Viewsurf</a>
+<a href="https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac" target="_blank">Viewsurf</a>
 </p>
  <br>
 </div> 	
