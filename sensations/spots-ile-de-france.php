@@ -836,15 +836,11 @@
 			</div>
 			
 <div id="item-webcam-foretorient" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
-    
-	<video id="video-foret-orient" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
-	<div class="webcam-texte">
-		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
-	</div>
-	  
-  </div> 
-  <br>
+
+<p> 
+<a href="https://www.viewsurf.com/univers/ville/vue/17714-519405668-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac" target="_blank">Viewsurf</a>
+</p>
+ <br>
 </div> 	
 
 <div id="item-infos-foretorient" class="collapse">
