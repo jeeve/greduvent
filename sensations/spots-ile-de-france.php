@@ -166,7 +166,7 @@
     </SELECT>
 	</div>
 
-							<table>
+							<table style="width: 100%;">
 							<tr><td><p><a href="#poses">Léry-Poses</a></p></td><td><p class="notePoses"></p></td></tr>
 							<tr><td><p><a href="#moisson">Moisson Lavacourt</a></p></td><td><p class="noteMoisson"></p></td></tr>
 							<tr><td><p><a href="#ecluzelles">Mézières-Écluzelles</a></p></td><td><p class="noteEcluzelles"></p></td></tr>
@@ -174,6 +174,8 @@
 							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
 							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
 							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
+							<tr><td colspan="2"><p>Plus loin...</p></td></tr>
+							<tr><td><p><a href="#foret-orient">La Forêt d'Orient</a></p></td><td><p class="noteForetOrient"></p></td></tr>
 							</table>
 
 						
@@ -716,7 +718,9 @@
 
 			   <br>	  
 </div>	
-		   
+	
+
+	
 			   <a name="grande-paroisse"></a>
 			    <h2><input id="div-grande-paroisse" type="button" value=" - " data-toggle="collapse" data-target="#item-div-grande-paroisse" />  <a href="grande-paroisse.php">La Grande-Paroisse</a></h2>
 <div id="item-div-grande-paroisse" class="collapse in">					
@@ -798,8 +802,105 @@
 							<a href="https://www.windguru.cz/90210" target="_blank">Windguru</a>
 							</p>
 			</div>	
-			</div>		
+			</div>
+			</div>	
+<br>				
 </div>
+
+
+
+
+
+
+
+
+			   <a name="foret-orient"></a>
+			    <h2><input id="div-foret-orient" type="button" value=" - " data-toggle="collapse" data-target="#item-div-foret-orient" />  La Forêt d'Orient</h2>
+<div id="item-div-foret-orient" class="collapse in">					
+				
+				
+
+				<div class="row">
+					<div class="col-sm-8">
+					
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span></p>		                								
+
+		   
+
+
+
+			<div id="item-vue-foretorient" class="collapse">
+			<div class="embed-responsive embed-responsive-4by3 ombre-image">
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d45080.63704030345!2d4.33706154791041!3d48.27179599100967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sforet%20orient!5e1!3m2!1sfr!2sfr!4v1600861587932!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>			</div>
+			<br>
+			</div>
+			
+<div id="item-webcam-foretorient" class="collapse">			
+  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+    
+	<video id="video-foret-orient" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
+	<div class="webcam-texte">
+		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
+	</div>
+	  
+  </div> 
+  <br>
+</div> 	
+
+<div id="item-infos-foretorient" class="collapse">
+<div class="infoForetOrient"></div> 
+ <br>
+</div> 			
+					
+					
+					
+					
+						<div class="fond-table encadrement-table">
+<div class="item-meteo-foretorient collapse">								
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/la_grande_paroisse?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/la_grande_paroisse?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+</div>					
+
+<script id="wg_fwdg_92534_3_1600861761128">
+(function (window, document) {
+  var loader = function () {
+    var arg = ["s=92534","m=3","uid=wg_fwdg_92534_3_1600861761128","wj=knots","tj=c","odh=7","doh=21","fhours=240","vt=forecasts",
+   "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"];
+    var script = document.createElement("script");
+    var tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.windguru.cz/js/widget.php?"+(arg.join("&"));
+    tag.parentNode.insertBefore(script, tag);
+  };
+  window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+})(window, document);
+</script>
+
+
+<!--
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+-->
+					</div>	
+						
+				</div>			
+				  <div class="visible-xs"><br></div>						
+				   <div class="col-sm-4">
+				   <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
+  					<iframe src="meteo-temps-reel.php?station=lusigny-sur-barse&credit=0"></iframe>	
+					</div>
+					<br>
+						<div class="fond-table encadrement-table" style="width: 150px;">
+							<p>	
+							<a href="https://www.windfinder.com/forecast/lac-de-la-foret-d-orient" target="_blank">Superforecast</a><br><br>
+							<a href="https://meteofrance.com/previsions-meteo-france/mesnil-saint-pere/10140" target="_blank">Météo France</a><br><br>
+							<a href="https://www.windguru.cz/92534" target="_blank">Windguru</a>
+							</p>
+			</div>	
+			</div>
+			</div>	
+  <br>			
+</div>
+
+
+
 
 <!--					
 				  <br>

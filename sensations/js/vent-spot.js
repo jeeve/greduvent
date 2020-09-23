@@ -7,7 +7,8 @@ function getOrientationVentSpot() {
 						$('.noteJablines').html('');
 						$('.noteMoisson').html('');
 						$('.noteGrandeParoisse').html('');		
-						$('.noteSaintQuentin').html('');								
+						$('.noteSaintQuentin').html('');
+						$('.noteForetOrient').html('');							
 	}
 	else {
 		$.ajax({
@@ -16,8 +17,8 @@ function getOrientationVentSpot() {
 			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
-				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse, spSaintQuentin, spEcluzelles;
-				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse, nSaintQuentin, nEcluzelles;
+				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse, spSaintQuentin, spEcluzelles, spForetOrient;
+				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse, nSaintQuentin, nEcluzelles, nForetOrient;
 				for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 					ligne = data.feed.entry[i];
 					vent = ligne.title.$t;
@@ -29,6 +30,7 @@ function getOrientationVentSpot() {
 						nGrandeparoisse = ligne.gsx$grandeparoisse.$t;
 						nSaintQuentin = ligne.gsx$saintquentinenyvelines.$t;
 						nEcluzelles = ligne.gsx$ecluzelles.$t;
+						nForetOrient = ligne.gsx$foretorient.$t;
 						
 						spPoses = '';
 						spVairessurmarne = '';
@@ -37,6 +39,7 @@ function getOrientationVentSpot() {
 						spGrandeparoisse = '';
 						spSaintQuentin = '';
 						spEcluzelles = '';
+						spForetOrient = '';
 						
 						if (nPoses != '') {
 							spPoses = '<span class="note">' + nPoses + '</span> / 10';
@@ -59,6 +62,9 @@ function getOrientationVentSpot() {
 						if (nEcluzelles != '') {
 							spEcluzelles = '<span class="note">' + nEcluzelles + '</span> / 10';
 						}
+						if (nForetOrient != '') {
+							spForetOrient = '<span class="note">' + nForetOrient + '</span> / 10';
+						}						
 						
 						$('.notePoses').html(spPoses);
 						$('.noteVairesSurMarne').html(spVairessurmarne);
@@ -67,6 +73,7 @@ function getOrientationVentSpot() {
 						$('.noteGrandeParoisse').html(spGrandeparoisse);
 						$('.noteSaintQuentin').html(spSaintQuentin);
 						$('.noteEcluzelles').html(spEcluzelles);
+						$('.noteForetOrient').html(spForetOrient);
 
 						$('.note').each(function(index, el) { 
 							var elem = $(el);
