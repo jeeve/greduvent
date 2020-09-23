@@ -885,7 +885,7 @@
 					<br>
 						<div class="fond-table encadrement-table" style="width: 150px;">
 							<p>	
-							<a href="https://www.windfinder.com/forecast/lac-de-la-foret-d-orient" target="_blank">Superforecast</a><br><br>
+							<a href="https://www.windfinder.com/weatherforecast/lac-de-la-foret-d-orient" target="_blank">Superforecast</a><br><br>
 							<a href="https://meteofrance.com/previsions-meteo-france/mesnil-saint-pere/10140" target="_blank">Météo France</a><br><br>
 							<a href="https://www.windguru.cz/92534" target="_blank">Windguru</a>
 							</p>
