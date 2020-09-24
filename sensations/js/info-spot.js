@@ -5,7 +5,7 @@ function getInfoSpot() {
 		crossDomain: true,
 		dataType: 'json'
 	}).then(function(data) {
-			var ligne, iPoses, iVairessurmarne, iJablines, iMoisson, iGrandeparoisse, iSaintQuentin, iEcluzelles;
+			var ligne, iPoses, iVairessurmarne, iJablines, iMoisson, iGrandeparoisse, iSaintQuentin, iEcluzelles, iForetOrient;
 			var col1;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 				ligne = data.feed.entry[i];
@@ -18,6 +18,7 @@ function getInfoSpot() {
 					iGrandeparoisse = ligne.gsx$grandeparoisse.$t;
 					iSaintQuentin = ligne.gsx$saintquentinenyvelines.$t;
 					iEcluzelles = ligne.gsx$ecluzelles.$t;
+					iForetOrient = ligne.gsx$foretorient.$t;
 												
 					$('.infoPoses').html(iPoses);
 					$('.infoVairesSurMarne').html(iVairessurmarne);
@@ -26,6 +27,7 @@ function getInfoSpot() {
 					$('.infoGrandeParoisse').html(iGrandeparoisse);
 					$('.infoSaintQuentin').html(iSaintQuentin);
 					$('.infoEcluzelles').html(iEcluzelles);
+					$('.infoForetOrient').html(iForetOrient);
 
 				}
 			}
