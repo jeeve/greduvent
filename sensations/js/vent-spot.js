@@ -8,6 +8,7 @@ function getOrientationVentSpot() {
 						$('.noteMoisson').html('');
 						$('.noteGrandeParoisse').html('');		
 						$('.noteSaintQuentin').html('');
+						$('.noteEcluzelles').html('');
 						$('.noteForetOrient').html('');							
 	}
 	else {
