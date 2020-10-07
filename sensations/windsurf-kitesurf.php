@@ -81,7 +81,7 @@
 						dimensions : 215 x 86 cm</p>
 						</li>
 						<li><p>foil Taaroa Noé Freerace modèle 2020<br>
-						aile : 80 cm d'envergure</p></li>          
+						ailes 800 et 1050</p></li>          
 						</ul></p>
 		<p align="center">ça vole !</p>
 					
@@ -273,19 +273,21 @@
 					ligne = data.feed.entry[i];
 					d = ligne.gsx$date.$t;
 					pratique = ligne.gsx$pratique.$t; 
-					v100 = ligne.gsx$v100mk72.$t;
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
-					v = [];
-					v[0] = new Date(d);
-					v[1] = parseFloat(v100);
-					v[2] = parseFloat(vmax);
-					if (pratique == 'Windsurf') {
-						vitesses1[j1] = v;
-						j1 = j1 + 1;
-					}
-					else {
-						vitesses2[j2] = v;
-						j2 = j2 + 1;
+					v100 = ligne.gsx$v100mk72.$t;
+					if (vmax != '') {
+						v = [];
+						v[0] = new Date(d);
+						v[1] = parseFloat(v100);
+						v[2] = parseFloat(vmax);
+						if (pratique == 'Windsurf') {
+							vitesses1[j1] = v;
+							j1 = j1 + 1;
+						}
+						else {
+							vitesses2[j2] = v;
+							j2 = j2 + 1;
+						}
 					}
 				}
 				drawChart1();
