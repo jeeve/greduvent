@@ -20,7 +20,8 @@
                         <br>
 						<ul class="sommaire">
 <!--						<li><a href="#meteo-temps-reel">Service Web de météo temps réel</a></li> -->
-						<li><a href="#easyscreens">Scroll Screens</a></li>
+						<li><a href="#jeudejose">Le jeu de José</a></li>
+						<li><a href="#scrollscreens">Scroll Screens</a></li>
 						<li><a href="#angular">Angular</a></li>
                         <li><a href="#lecteur-audio">Lecteur audio HTML5</a></li>
                         <li><a href="#informatique-cognitive">Informatique cognitive</a></li>
@@ -35,7 +36,23 @@
 <p align="right"><em><font size="2">vendredi 10 mars 2017</font></em></p>
 
 <hr>
--->			
+-->	
+
+<a name="jeudejose"></a>
+<h2>Le jeu de José</h2>
+<p>Une rivière, une barge ne pouvant contenir que 2 individus maximum.</p>
+<p>Sur la rive droite, 3 humains et 3 orques.</p<
+<p>Le but, que les 3 humains traversent sur la rive gauche sachant qu'ils ne doivent jamais être en infériorité numérique par rapport aux orques.</p>
+<p>Le <a href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing" target="_blank">programme</a> écrit en Python.<br>
+</p>
+<br>
+
+
+<p align="right"><em><font size="2">lundi 26 octobre 2020</font></em></p>					
+
+<hr>
+
+		
 <a name="scrollscreens"></a>
 <h2>Scroll Screens</h2>
 <p>Un <a href="appli/scrollscreens.zip" target="_blank">petit programme Windows</a> maison écrit en Windev 19 pour faire défiler une image sur autant d'écrans que l'on veut. Pour cela il suffit de copier le programme dans un dossier partagé et lancer l'exécutable depuis les différents postes dans l'ordre où l'on souhaite voir défiler l'image. Enjoy !<br>
