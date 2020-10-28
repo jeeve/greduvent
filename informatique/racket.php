@@ -92,11 +92,8 @@ Et cliquez sur le bouton <i>Exécuter</i>.</p>
 													</td>
 												</tr>
 											</table>
-										</div>
-										</td>
-									</tr>
-								</table>
-							</div>
+						
+							
 							</td>
 						</tr>
 					</table>
@@ -106,7 +103,7 @@ Et cliquez sur le bouton <i>Exécuter</i>.</p>
 		</div>
 		</td>
 	</tr>
-	<tr>
+	<tr><
 		<td>
 		&nbsp;</td>
 	</tr>

@@ -275,7 +275,7 @@ révolution :</p><br>
 <p>C'est en arpentant cette rue improbable de la capitale que je découvrais le         
 <em>Monde en Tique</em>, petite librairie informatique où j'allais sans le savoir         
 rencontrer la passion. Je ne suis pas particulièrement croyant, mais est-ce         
-l'atmosphère quasi spirituelle du lieu, ce que je découvris ici allais         
+l'atmosphère quasi spirituelle du lieu, ce que je découvris ici allait         
 m'élever dans la quête d'absolu. Feuilletant un livre de programmation je lu ceci :<br>         
 </p>
 <div class="row row-cadre">
