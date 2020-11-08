@@ -14,6 +14,9 @@
 				$station = $_GET['station'];
 		}	
 		
+		
+function enregistre_meteo_station($station) {
+		
 		$ctx = stream_context_create(array('http'=>
 			array(
 				'timeout' => 1200,  //1200 Seconds is 20 Minutes
@@ -40,6 +43,22 @@
 		}
 		
 		file_get_contents("https://script.google.com/macros/s/AKfycbwNiYJL49ynuyGNkqW0K-P3yCBm74lH3V2INQYDl_9Giqe557A/exec?station=%27" . $station . "%27&temperature=%27" . $temperature . "%27&vitesse=%27" . $vitesse . "%27&orientation=%27" . $direction . "%27", false, $ctx);
+
+}
+
+	enregistre_meteo_station('louviers');
+	sleep(1);
+	enregistre_meteo_station('dreux');
+	sleep(1);
+	enregistre_meteo_station('lusigny-sur-barse');
+	sleep(1);
+	enregistre_meteo_station('mantes-la-jolie');
+	sleep(1);
+	enregistre_meteo_station('montereau-fault-yonne');
+	sleep(1);
+	enregistre_meteo_station('torcy');
+	
+		
 		
 		?>
 		
