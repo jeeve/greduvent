@@ -5,6 +5,22 @@
 
 	  <?php
 	//  header("Access-Control-Allow-Origin: *");
+	
+	date_default_timezone_set('Europe/Paris');
+	$h = localtime(); 
+	$current_time = $h[2] . ':' . $h[1] . ':' . $h[0];
+	
+	$difference = strtotime( $current_time ) - strtotime( "08:00:00" );
+	
+	if ($difference < 0) {
+		return;
+	}
+	
+	$difference = strtotime( $current_time ) - strtotime( "20:00:00" );
+	if ($difference > 0) {
+		return;
+	}	
+	
 	 ob_start();
 //	  set_time_limit(0); 
 //	  ini_set('default_socket_timeout', 900); // 900 Seconds = 15 Minutes
