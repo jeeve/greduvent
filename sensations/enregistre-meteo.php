@@ -37,7 +37,7 @@
 			$vitesse = $vitesse * 1.944;
 		}
 		
-	//	file_get_contents("https://script.google.com/macros/s/AKfycbwNiYJL49ynuyGNkqW0K-P3yCBm74lH3V2INQYDl_9Giqe557A/exec?station=%27" . $station . "%27&temperature=%27" . $temperature . "%27&vitesse=%27" . $vitesse . "%27&orientation=%27" . $direction . "%27");
+		file_get_contents("https://script.google.com/macros/s/AKfycbwNiYJL49ynuyGNkqW0K-P3yCBm74lH3V2INQYDl_9Giqe557A/exec?station=%27" . $station . "%27&temperature=%27" . $temperature . "%27&vitesse=%27" . $vitesse . "%27&orientation=%27" . $direction . "%27", false, $ctx);
 		
 		?>
 		
