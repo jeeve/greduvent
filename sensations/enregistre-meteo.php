@@ -1,5 +1,7 @@
 
-<!-- https://console.cron-job.org/jobs -->
+<!-- https://console.cron-job.org/jobs 
+	 https://statmeteo.000webhostapp.com/enregistre-meteo.php?station=louviers
+	-->
 
 	  <?php
 	//  header("Access-Control-Allow-Origin: *");
