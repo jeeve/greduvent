@@ -1,9 +1,8 @@
-<html>
-<head>
-</head>
-<body>
+
 <!-- https://console.cron-job.org/jobs -->
 	  <?php
+	  
+	  ob_start();
 	  
 		$station = 'I27LERY4';
 		if ($_GET['station'] != '') {
@@ -15,7 +14,15 @@
 				$credit = $_GET['credit'];
 		}	
 	
+	
+		
+		
 		?>
+		
+<html>
+<body>
+
+
 				
 	  <script src="/js/jquery.min.js"></script>
 	  <script type="text/javascript" src="js/enregistre-meteo.js"></script>	  
@@ -23,6 +30,10 @@
 		station = "<?php echo $station; ?>"
 		enregistreMeteo(station);		 
       </script>
-				
-</body>
+</body>				
 </html>
+<?php
+
+ob_end_flush();
+
+?>
