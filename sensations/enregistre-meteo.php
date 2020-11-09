@@ -66,7 +66,7 @@ function enregistre_meteo_station($station) {
 		$mysqli->close();				
 		
 		// ecriture dans GoogleSheet https://docs.google.com/spreadsheets/d/1pUXSOCwr7QYkFT5veDxLiZLBl-GHCR0ECJHZ5p6e7MQ/edit?usp=sharing
-		file_get_contents("https://script.google.com/macros/s/AKfycbwNiYJL49ynuyGNkqW0K-P3yCBm74lH3V2INQYDl_9Giqe557A/exec?station=%27" . $station . "%27&temperature=%27" . $temperature . "%27&vitesse=%27" . $vitesse . "%27&orientation=%27" . $direction . "%27", false, $ctx);
+		// file_get_contents("https://script.google.com/macros/s/AKfycbwNiYJL49ynuyGNkqW0K-P3yCBm74lH3V2INQYDl_9Giqe557A/exec?station=%27" . $station . "%27&temperature=%27" . $temperature . "%27&vitesse=%27" . $vitesse . "%27&orientation=%27" . $direction . "%27", false, $ctx);
 				
 }
 
