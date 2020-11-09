@@ -58,8 +58,16 @@ function enregistre_meteo_station($station) {
 			$vitesse = $vitesse * 1.944;
 		}
 		
+		
+		// BD
+		$mysqli = new mysqli("localhost", "id12603904_jeeve", ">(sXJFq=T<0a<MrE", "id12603904_meteo");
+		$Ajouter = "INSERT INTO meteo (station, vitesse, orientation, temperature) VALUES ('" . $station . "', '" . floatval($vitesse) . "', '" . floatval($direction) . "', '" . floatval($temperature) . "')";
+		$mysqli->query($Ajouter);
+		$mysqli->close();				
+		
+		// ecriture dans GoogleSheet https://docs.google.com/spreadsheets/d/1pUXSOCwr7QYkFT5veDxLiZLBl-GHCR0ECJHZ5p6e7MQ/edit?usp=sharing
 		file_get_contents("https://script.google.com/macros/s/AKfycbwNiYJL49ynuyGNkqW0K-P3yCBm74lH3V2INQYDl_9Giqe557A/exec?station=%27" . $station . "%27&temperature=%27" . $temperature . "%27&vitesse=%27" . $vitesse . "%27&orientation=%27" . $direction . "%27", false, $ctx);
-
+				
 }
 
 	enregistre_meteo_station('louviers');
@@ -73,9 +81,7 @@ function enregistre_meteo_station($station) {
 	enregistre_meteo_station('montereau-fault-yonne');
 	sleep(1);
 	enregistre_meteo_station('torcy');
-	
-		
-		
+			
 		?>
 		
 
