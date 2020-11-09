@@ -43,7 +43,7 @@
 <h2>Floutage de visages</h2>
 <p>Petit script Python pour flouter les visages sur une photo.</p>
 <p>Le programme utilise la librairie mtcnn pour la détection.</p>
-<p>Le but, que les 3 humains traversent sur la rive gauche sachant qu'ils ne doivent jamais être en infériorité numérique par rapport aux orques.</p>
+<p>Entrez l'URL d'une image dans le champ dédié.</p>
 <p>Le <a href="https://colab.research.google.com/drive/1fzjH4gr6vXVJ1UgQkeV_2mgUs6dFjFQO?usp=sharing" target="_blank">notebook Jupyter</a>.<br>
 </p>
 <br>
