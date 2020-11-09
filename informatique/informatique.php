@@ -20,6 +20,7 @@
                         <br>
 						<ul class="sommaire">
 <!--						<li><a href="#meteo-temps-reel">Service Web de météo temps réel</a></li> -->
+						<li><a href="#floutage-visages">Floutage de visages</a></li>
 						<li><a href="#jeudejose">Le jeu de José</a></li>
 						<li><a href="#scrollscreens">Scroll Screens</a></li>
 						<li><a href="#angular">Angular</a></li>
@@ -38,6 +39,19 @@
 <hr>
 -->	
 
+<a name="floutage-visages"></a>
+<h2>Floutage de visages</h2>
+<p>Petit script Python pour flouter les visages sur une photo.</p>
+<p>Le programme utilise la librairie mtcnn pour la détection.</p>
+<p>Le but, que les 3 humains traversent sur la rive gauche sachant qu'ils ne doivent jamais être en infériorité numérique par rapport aux orques.</p>
+<p>Le <a href="https://colab.research.google.com/drive/1fzjH4gr6vXVJ1UgQkeV_2mgUs6dFjFQO?usp=sharing" target="_blank">notebook Jupyter</a>.<br>
+</p>
+<br>
+<p align="right"><em><font size="2">lundi 9 novembre 2020</font></em></p>					
+
+<hr>
+
+
 <a name="jeudejose"></a>
 <h2>Le jeu de José</h2>
 <p>Une rivière, une barge ne pouvant contenir que 2 individus maximum.</p>
@@ -46,8 +60,6 @@
 <p>Le <a href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing" target="_blank">programme</a> écrit en Python.<br>
 </p>
 <br>
-
-
 <p align="right"><em><font size="2">lundi 26 octobre 2020</font></em></p>					
 
 <hr>
