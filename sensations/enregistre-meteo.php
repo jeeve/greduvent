@@ -16,7 +16,7 @@
 		return;
 	}
 	
-	$difference = strtotime( $current_time ) - strtotime( "20:15:00" );
+	$difference = strtotime( $current_time ) - strtotime( "20:05:00" );
 	if ($difference >= 0) {
 		return;
 	}	
