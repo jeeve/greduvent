@@ -1,8 +1,21 @@
 <?php		
 		
+
+	
 		// BD
 		$mysqli = new mysqli("localhost", "id12603904_jeeve", ">(sXJFq=T<0a<MrE", "id12603904_meteo");
+		
+	if (isset($_GET['date'])) {
+		$d = $_GET['date'];
+		$d1 = substr($d, 4, 4) . '-' . substr($d, 2, 2) . '-' .  substr($d, 0, 2) . ' 00:00:00';
+		$d2 = substr($d, 4, 4) . '-' . substr($d, 2, 2) . '-' .  substr($d, 0, 2) . ' 23:59:00';
+		$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %h:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo WHERE date_heure >= '" . $d1 . "' AND date_heure < '" . $d2 . "'";
+		//echo $select;
+	}
+	else {
 		$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %h:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo";
+	}
+		
 		$result = $mysqli->query($select);
 			
 		
