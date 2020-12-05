@@ -7,10 +7,16 @@
 		
 	if (isset($_GET['date'])) {
 		$d = $_GET['date'];
-		$d1 = substr($d, 0, 4) . '-' . substr($d, 4, 2) . '-' .  substr($d, 6, 2) . ' 00:00:00';
-		$d2 = substr($d, 0, 4) . '-' . substr($d, 4, 2) . '-' .  substr($d, 6, 2) . ' 23:59:00';
-		$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %H:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo WHERE date_heure >= '" . $d1 . "' AND date_heure < '" . $d2 . "'";
-		//echo $select;
+		if (strlen($d) == 8) {
+			$d1 = substr($d, 0, 4) . '-' . substr($d, 4, 2) . '-' .  substr($d, 6, 2) . ' 00:00:00';
+			$d2 = substr($d, 0, 4) . '-' . substr($d, 4, 2) . '-' .  substr($d, 6, 2) . ' 23:59:00';
+			$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %H:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo WHERE date_heure >= '" . $d1 . "' AND date_heure < '" . $d2 . "'";
+		}
+		if (strlen($d) == 16) {
+			$d1 = substr($d, 0, 4) . '-' . substr($d, 4, 2) . '-' .  substr($d, 6, 2) . ' 00:00:00';
+			$d2 = substr($d, 8, 4) . '-' . substr($d, 12, 2) . '-' .  substr($d, 14, 2) . ' 23:59:00';
+			$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %H:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo WHERE date_heure >= '" . $d1 . "' AND date_heure < '" . $d2 . "'";
+		}
 	}
 	else {
 		$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %H:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo";
