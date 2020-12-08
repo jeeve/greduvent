@@ -19,7 +19,12 @@
 		}
 	}
 	else {
-		$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %H:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo";
+		$d1 = new DateTime();
+		$d2 = new DateTime();
+		$d1->sub(new DateInterval('P7D')); // 1 semaine par defaut
+		$s1 = $d1->format('Y-m-d H:i:s');
+		$s2 = $d2->format('Y-m-d H:i:s');
+		$select = "SELECT DATE_FORMAT(date_heure, '%Y-%m-%d %H:%i') as date_heure, station, vitesse, orientation, temperature FROM meteo where date_heure >= '" . $s1 . "' AND date_heure < '" . $s2 . "'";
 	}
 		
 		$result = $mysqli->query($select);
