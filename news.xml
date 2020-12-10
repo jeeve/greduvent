@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>La mare aux fées</title>
+            <link>https://youtu.be/qEhiqspCFNg</link>
+            <guid isPermaLink="false">la-mare-aux-fees</guid>
+            <description>Cuisine Spectrale sort son nouveau single La mare aux fées. Sonorités naïves reflétant une ambiance innocente de l’enfance jusqu’aux portes de l’adolescence.</description>
+            <pubDate>Wed, 9 Dec 2020 23:04:00 GMT</pubDate>
+		</item>
+		
+		<item>
             <title>Floutage de visages</title>
             <link>https://greduvent.herokuapp.com/informatique/informatique.php#floutage-visages</link>
             <guid isPermaLink="false">floutage-visages</guid>
