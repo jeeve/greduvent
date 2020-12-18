@@ -295,5 +295,14 @@
 				navigator.geolocation.getCurrentPosition(maPosition);
 			}
 */
+			$.ajax({
+				url: "niveau-foret-orient.php",
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				jQuery(".niveau-foret-orient").replaceWith(data.value);
+			})
+				
 			getWebCams();	 
 		});
