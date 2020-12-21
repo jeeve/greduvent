@@ -175,7 +175,7 @@
 							<tr><td><p><a href="#jablines">Jablines</a></p></td><td><p class="noteJablines"></p></td></tr>
 							<tr><td><p><a href="#vaires">Vaires sur Marne</a></p></td><td><p class="noteVairesSurMarne"></p></td></tr>
 							<tr><td><p><a href="#grande-paroisse">La Grande-Paroisse</a></p></td><td><p class="noteGrandeParoisse"></p></td></tr>
-							<tr><td colspan="2"><p>Plus loin...</p></td></tr>
+						<!--	<tr><td colspan="2"><p>Plus loin...</p></td></tr> -->
 							<tr><td><p><a href="#foret-orient">Forêt d'Orient</a> (<span class="niveau-foret-orient"></span> %)</p></td><td><p class="noteForetOrient"></p></td></tr>
 							</table>
 
