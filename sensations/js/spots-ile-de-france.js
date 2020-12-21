@@ -253,7 +253,24 @@
 			$( "#ma-date-poses" ).change(function() {
 			 getHistoriqueVent('poses');
 			});
-			
+			$( "#ma-date-moisson" ).change(function() {
+			 getHistoriqueVent('moisson');
+			});
+			$( "#ma-date-ecluzelles" ).change(function() {
+			 getHistoriqueVent('ecluzelles');
+			});
+			$( "#ma-date-jablines" ).change(function() {
+			 getHistoriqueVent('jablines');
+			});
+			$( "#ma-date-vaires" ).change(function() {
+			 getHistoriqueVent('vaires');
+			});
+			$( "#ma-date-grandeparoisse" ).change(function() {
+			 getHistoriqueVent('grandeparoisse');
+			});
+			$( "#ma-date-foretorient" ).change(function() {
+			 getHistoriqueVent('foretorient');
+			});			
 			
 			
 			
