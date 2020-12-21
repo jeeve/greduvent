@@ -210,7 +210,11 @@
                <div class="row">
 					<div class="col-sm-8">
 					
-		<p><input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span><span class="hidden-xs"> - <input type="button" data-target="#item-histo-poses" value="Historique" class="btn-releve" /></span></p>		
+		<p><input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span> - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-poses" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-poses" value="Histo" class="btn-releve"/></span>
+</p>		
 			
 
 			
