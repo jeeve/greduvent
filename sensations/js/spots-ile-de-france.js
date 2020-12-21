@@ -185,6 +185,7 @@
 					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-histo']").addClass('btn-releve');
 					jQuery("#item-vue-" + spot).collapse("hide");
 					jQuery(".item-meteo-" + spot).collapse("hide");
 					jQuery("#item-infos-" + spot).collapse("hide");						
