@@ -214,40 +214,37 @@
 					</div>
 				</div>	
 
-<!--
+
                   <h2>Historique</h2>
                   <form id="datetimeform">
                      
-                        <div><p><label for="ma-date">Date <span style="color:grey">(JJ/MM/AAAA)</span></label><input id="ma-date" type="text" name="date" value="25/02/2017"></input></p></div>
-                        <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
+                        <div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date" type="text" name="date" value="25/02/2017"></input></p></div>
+                      <!-- 
+ 					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
                         <div><p><label for="mon-heure2">et <span style="color:grey">(HH:MM)</span></label><input id="mon-heure2" type="text" name="heure2" value="17:00"></input></p></div>
                         <div><p><label for="mon-delta">toutes les</label><input id="mon-delta" type="text" name="delta" value="60"></input> minutes
+						
                         <button type="button" onclick="getHistorique()">Afficher</button>
-						<button type="button" onclick="getTimelapse()">Créer timelapse (beta)</button>
-						</p></div>
+						-->
+						
                 
                   </form>
                   <br>
 				  
 				  <div class="row">
-					<div class="col-xs-12 col-md-6 fond" id="historique-vent"></div>
-					<div class="col-xs-12 col-md-6 fond" id="rose-vent"></div>
+					<div class="col-xs-12 fond" id="historique-vent"></div>
 				  </div>	
 				  
-				  <div class="legende"><p><em><font size="2">graphiques issus du site <a href="http://mywindstats.com">mywindstats.com</a></font></em></p></div>
+				  <div class="row">
+					<div class="col-xs-12 fond" id="historique-vent"></div>
+				  </div>	
+
                   
-				  <div id="pictureform">
-                  </div>
-                  <br>
+			
+                  <br><br>
 				  
-				  <p><em><font size="2">images issues du site <a href="http://imagebankleryposes.appspot.com/">imagebankleryposes.appspot.com</a></font></em></p>
-				  <p><em><font size="2">
-				  <ul>
-				  <li>Les données météorologiques de Léry-Poses sont issues de la sonde de "troislacs - base de loisirs"</li>
-				  <li>Les images sont issues de la caméra du Syndicat Mixte de la Base de Loisirs et Plein Air de Léry-Poses</li>
-				  </ul>
-				  </font></em></p>
--->	
+
+
 				<h2>Informations</h2>		
   <div class="infoPoses"></div>
   <br>
@@ -257,323 +254,7 @@
 				  
 				  <div id="sessions"></div>	
 				  
-<!--				  
-
-				  <br><a name="lery-poses-6-10-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/hn-_ew01VmA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=236806" target="_blank">Riding in the rain</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-28-9-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/qTos2Ozaeu8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=236185" target="_blank">Poses paradise, test de la Simmer dans le vent</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-28-6-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/TKRujLfJCIM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=229211" target="_blank">Ride on the canicule, vendredi 28 juin 2019</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-8-5-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/dY47u3x6Ces?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=225875" target="_blank">Riders on the storm, mercredi 8 mai 2019</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-5-5-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/tmMIiDxT6CM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=225636" target="_blank">Dimanche frisquet, vent capricieux et petits vols</a>
-				  </p>
-				  </div></div>
-				 
-  				  <br><a name="lery-poses-28-4-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/gK3fKazOtsM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=225016" target="_blank">Régate-Saucisses 2019</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-6-4-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/FwhbAi_lbes?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=223537" target="_blank">Session de rêve sous le soleil</a>
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-2-3-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/m8QhuvrdKfY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=221393" target="_blank">Premier planning sur l'Isonic</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-9-2-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/UpWjw20K0DQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=220540" target="_blank">Un samedi full taquet. Le pied !</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-21-12-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/LDflYBzZa28?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=218850" target="_blank">Un vendredi d'automne au Lac des Deux Amants, 21 décembre 2018</a>
-				  Session très physique. Gréé trop gros. Un rider carbure en 6m². Un autre en flotteur gonflable. Grosse risée pendant 30 minutes. Plus de force pour lever la voile. Je réussi à rejoindre le bord tant bien que mal.
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-2-12-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/SMT0fE7tyhA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=217931" target="_blank">
-				  De la pluie, de la douceur et 3 micro plannings</a><br>
-				  Bonne ambiance à terre avec chambrage en règle. Premier test de la caméra avec GPS : Verdict : Vmax à 21 noeuds...
-				  </p>
-				  </div></div>
-
-				  <br><a name="lery-poses-13-10-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/Ihfz2P8uAJ4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=215248" target="_blank">
-				  Balade, cygnes, micro-plannings et autres gamelles, samedi 13 octobre 2018</a>
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-11-10-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/dywEbCxmmi0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=215139" target="_blank">
-				  Un jeudi au soleil, 11 octobre 2018</a>
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-21-09-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/JTd-HKdMfew?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=213684" target="_blank">
-				  vendredi 21 septembre 2018</a>
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-26-05-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/fsDiueE3WYw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=205532" target="_blank">
-				  26 mai 2018</a><br>
-				  La planche c'est cool !
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-16-05-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/G1e040GygAU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=204994" target="_blank">
-				  16 mai 2018</a><br>
-				  Ceci n'est pas un reportage animalier.
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-10-05-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/aP1cxMEdWIM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=204412" target="_blank">
-				  jeudi 10 mai 2018</a><br>
-				  Le jour où j'ai filmé Phil95.
-				  </p>
-				  </div></div>					  
-				  
-				  <br><a name="lery-poses-22-04-18"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/I4K38qxT47c?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=202905" target="_blank">
-				  dimanche 22 avril 2018</a><br>
-				  Caméra embarqué sur le wishbone.
-				  </p>
-				  </div></div>				  
-				  
-				  <br><a name="lery-poses-24-06-17"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/NI9sRobneb8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?target=id_rider&id_rider=3185&id_session=183014" target="_blank">
-				  samedi 24 juin 2017</a><br>
-				  Session sous le soleil mais le vent est resté très timide. Petits planning au début. Spéciale dédicace au teeshirt de Roger. Le canard qui m'avait doublé lors d'une précédente navigation est venu me narguer pendant que je gréais, mais une fois sur l'eau, il rigolait moins.
-				  </p>
-				  </div></div>				  
-
-				  <br><a name="lery-poses-26-05-17"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				 <iframe width="560" height="315" src="https://www.youtube.com/embed/oimKwqCOqWQ?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?target=id_rider&id_rider=3185&id_session=180514" target="_blank">
-				  vendredi 26 mai 2017</a><br>
-				  Du soleil, du vent, du monde sur l'eau...
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="lery-poses-16-04-17"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				 <iframe width="560" height="315" src="https://www.youtube.com/embed/UMcsfIwQbbc?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?target=id_rider&id_rider=3185&id_session=177119" target="_blank">
-				  16 avril 2017</a><br>
-				  Test de la V8 dans le vent léger
-				  </p>
-				  </div></div>	
-
--->				  
+			  
 	
 				  <br>		  
 			 
@@ -637,9 +318,9 @@
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
-		});
+		
 
-	/*	
+
 		 var estHier = false;
 		 var maDate;
          var now = new Date();
@@ -687,19 +368,21 @@
 		 $("#mon-heure2").val(heure2 + ':00');
 		 
 		 getHistorique();
+		 
+		 $( "#ma-date" ).change(function() {
+			 getHistorique();
+		 });
+		 
          });
 		 
 		 function getHistorique() {
-			getHistoriqueVent();
-			getPictures();	 
+			getHistoriqueVent(); 
 		 }
-		 */
+		 
       </script>
 	  <script type="text/javascript" src="js/info-spot.js"></script>
 	  <script type="text/javascript" src="js/info-sessions.js"></script>  
-	  <script type="text/javascript" src="js/historique-vent.js"></script>
-      <script type="text/javascript" src="js/imagebankleryposes.js"></script>
-	  <script type="text/javascript" src="js/timelapse.js"></script>	  
+	  <script type="text/javascript" src="js/historique-vent.js"></script>  
    </body>
 </html>
 
