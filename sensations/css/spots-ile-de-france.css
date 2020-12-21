@@ -115,3 +115,7 @@ input {
 #boutons-deplier-replier button {
 	margin: 2px;
 }
+
+.histo img {
+	margin-bottom: 10px;
+}

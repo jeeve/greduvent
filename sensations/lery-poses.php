@@ -22,6 +22,9 @@
 		}
 		#meteo-tems-reel p, #webcam p {
 			color: silver;
+		}	
+		.histo img {
+			margin: 10px;
 		}
 	  </style>
    </head>
@@ -231,8 +234,12 @@
                   </form>
                   <br>
 				  
-				  <div class="row">
+				  <div class="row histo">
 					<div class="col-xs-12 fond" id="historique-vent-poses"></div>
+					</div>
+				  <div class="row histo">
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-rose-poses"></div>
 				  </div>	
 				  
 

@@ -244,13 +244,14 @@
   <br>
 </div> 	
 
-<div id="item-histo-poses" class="collapse">
+<div id="item-histo-poses" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-poses" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-poses"></div>
+		<div class="col-xs-12 fond" id="historique-rose-poses"></div>
 	</div>
 	<br>			  
 </div> 	
@@ -352,13 +353,14 @@
    <br>
 </div> 	
 
-<div id="item-histo-moisson" class="collapse">
+<div id="item-histo-moisson" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-moisson" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-moisson"></div>
+		<div class="col-xs-12 fond" id="historique-rose-moisson"></div>
 	</div>
 	<br>			  
 </div> 	
@@ -450,13 +452,14 @@
    <br>
 </div> 	
 
-<div id="item-histo-ecluzelles" class="collapse">
+<div id="item-histo-ecluzelles" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-ecluzelles" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-ecluzelles"></div>
+		<div class="col-xs-12 fond" id="historique-rose-ecluzelles"></div>
 	</div>
 	<br>			  
 </div> 	
@@ -637,13 +640,14 @@
 <br>
 </div> 	
 
-<div id="item-histo-jablines" class="collapse">
+<div id="item-histo-jablines" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-jablines" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-jablines"></div>
+		<div class="col-xs-12 fond" id="historique-rose-jablines"></div>
 	</div>
 	<br>			  
 </div> 	
@@ -735,13 +739,14 @@
   <br>
 </div> 
 					
-<div id="item-histo-vaires" class="collapse">
+<div id="item-histo-vaires" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-vaires" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-vaires"></div>
+		<div class="col-xs-12 fond" id="historique-rose-vaires"></div>
 	</div>
 	<br>			  
 </div> 	
@@ -836,13 +841,14 @@
  <br>
 </div> 			
 					
-<div id="item-histo-grandeparoisse" class="collapse">
+<div id="item-histo-grandeparoisse" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-grandeparoisse" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-grandeparoisse"></div>
+		<div class="col-xs-12 fond" id="historique-rose-grandeparoisse"></div>
 	</div>
 	<br>			  
 </div> 	
@@ -937,13 +943,14 @@
  <br>
 </div> 
 
-<div id="item-histo-foretorient" class="collapse">
+<div id="item-histo-foretorient" class="collapse histo">
     <form id="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-foretorient" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-foretorient"></div>
+		<div class="col-xs-12 fond" id="historique-rose-foretorient"></div>
 	</div>
 	<br>			  
 </div> 	
