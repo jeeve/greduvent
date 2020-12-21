@@ -230,11 +230,13 @@
 					jQuery(this).removeClass('btn-releve');	
 					jQuery(this).addClass('btn-enfonce');
 					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');	
-					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');	
+					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');
+					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');						
 					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');					
 					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
 					jQuery("#item-vue-" + spot).collapse("hide");
 					jQuery("#item-webcam-" + spot).collapse("hide");
 					jQuery(".item-meteo-" + spot).collapse("hide");						
