@@ -54,7 +54,7 @@ function initHistorique(spot) {
 
 function getHistoriqueVent(spot) {
 	
-	var dateFrancaise = document.getElementById("datetimeform")[0].value;
+	var dateFrancaise =  $( "#ma-date-" + spot ).val();
 	var decompositionDate = dateFrancaise.split('/');
 	
 	if (decompositionDate[1].length == 1) {
