@@ -10,52 +10,7 @@
 			jQuery('#map-saint-quentin').attr('src', itineraireSrc + '1s0x47e681460086fb29%3A0x48eb9dbd818f35f3!2sSaint-Quentin+en+Yvelines%2C+Montigny-le-Bretonneux!3m2!1d48.7700557!2d2.0249544!5e0!3m2!1sfr!2sfr!4v1552237922454');			
 			jQuery('#map-ecluzelles').attr('src', itineraireSrc + '!3m2!1d48.856614!2d2.3522219!4m3!3m2!1d48.7158425!2d1.4339123!5e0!3m2!1sfr!2sfr!4v1589917508322!5m2!1sfr!2sfr');			
 			}		
-/*
-	function clickComparer() {
-		if (jQuery('.notePoses').text() == '' && jQuery('.noteVairesSurMarne').text() == '' && jQuery('.noteJablines').text() == '' && jQuery('.noteMoisson').text() == '' && jQuery('.noteGrandeParoisse').text() == '' && jQuery('.noteSaintQuentin').text() == '') {
-			jQuery('div[id^="item-div"]').collapse("show");
-		} 
-		else {
-		if (jQuery('.notePoses').text() != '') {
-			jQuery('#item-div-poses').collapse("show");
-		}
-		else {
-			jQuery('#item-div-poses').collapse("hide");	
-		}
-		if (jQuery('.noteVairesSurMarne').text() != '') {
-			jQuery('#item-div-vaires').collapse("show");
-		}
-		else {
-			jQuery('#item-div-vaires').collapse("hide");	
-		}
-		if (jQuery('.noteJablines').text() != '') {
-			jQuery('#item-div-jablines').collapse("show");
-		}
-		else {
-			jQuery('#item-div-jablines').collapse("hide");	
-		}
-		if (jQuery('.noteMoisson').text() != '') {
-			jQuery('#item-div-moisson').collapse("show");
-		}
-		else {
-			jQuery('#item-div-moisson').collapse("hide");	
-		}
-		if (jQuery('.noteGrandeParoisse').text() != '') {
-			jQuery('#item-div-grande-paroisse').collapse("show");
-		}
-		else {
-			jQuery('#item-div-grande-paroisse').collapse("hide");	
-		}
-		if (jQuery('.noteSaintQuentin').text() != '') {
-			jQuery('#item-div-saint-quentin').collapse("show");
-		}
-		else {
-			jQuery('#item-div-saint-quentin').collapse("hide");	
-		}
-		
-		}		
-	}
-*/	
+
 
 	function clickDeplier() {
 		jQuery('div[id^="item-div"]').collapse("show");	
@@ -174,12 +129,15 @@
 					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');				
+					jQuery("input[data-target^='#item-histo']").removeClass('btn-enfonce');	
 					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-histo']").addClass('btn-releve');
 					jQuery("#item-vue-" + spot).collapse("hide");
 					jQuery("#item-webcam-" + spot).collapse("hide");
-					jQuery("#item-infos-" + spot).collapse("hide");	
+					jQuery("#item-infos-" + spot).collapse("hide");
+					jQuery("#item-histo-" + spot).collapse("hide");					
 					jQuery(".item-meteo-" + spot).collapse("show");
 				}
 				else {
@@ -197,13 +155,16 @@
 					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');				
+					jQuery("input[data-target^='#item-histo']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-histo']").addClass('btn-releve');
 					jQuery(".item-meteo-" + spot).collapse("hide");
 					jQuery("#item-webcam-" + spot).collapse("hide");
 					jQuery("#item-infos-" + spot).collapse("hide");						
 					jQuery("#item-vue-" + spot).collapse("show");
+					jQuery("#item-histo-" + spot).collapse("hide");
 				}
 				else {
 					jQuery(this).removeClass('btn-enfonce');	
@@ -220,6 +181,7 @@
 					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');
 					jQuery("input[data-target^='#item-infos']").removeClass('btn-enfonce');				
+					jQuery("input[data-target^='#item-histo']").removeClass('btn-enfonce');	
 					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-infos']").addClass('btn-releve');
@@ -227,6 +189,7 @@
 					jQuery(".item-meteo-" + spot).collapse("hide");
 					jQuery("#item-infos-" + spot).collapse("hide");						
 					jQuery("#item-webcam-" + spot).collapse("show");
+					jQuery("#item-histo-" + spot).collapse("hide");
 				}
 				else {
 					jQuery(this).removeClass('btn-enfonce');	
@@ -242,14 +205,17 @@
 					jQuery(this).addClass('btn-enfonce');
 					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');	
 					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');	
-					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');					
+					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');	
+					jQuery("input[data-target^='#item-histo']").removeClass('btn-enfonce');		
 					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
 					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-histo']").addClass('btn-releve');
 					jQuery("#item-vue-" + spot).collapse("hide");
 					jQuery("#item-webcam-" + spot).collapse("hide");
 					jQuery(".item-meteo-" + spot).collapse("hide");						
 					jQuery("#item-infos-" + spot).collapse("show");
+					jQuery("#item-histo-" + spot).collapse("hide");
 				}
 				else {
 					jQuery(this).removeClass('btn-enfonce');	
@@ -257,7 +223,36 @@
 					jQuery("#item-infos-" + spot).collapse("hide");		
 				}
 			});
+			jQuery("input[data-target^='#item-histo']").click(function() {
+				var words = jQuery(this).attr("data-target").split('-');
+				var spot = words[2];
+				if (jQuery(this).hasClass('btn-releve')) {
+					jQuery(this).removeClass('btn-releve');	
+					jQuery(this).addClass('btn-enfonce');
+					jQuery("input[data-target^='.item-meteo']").removeClass('btn-enfonce');	
+					jQuery("input[data-target^='#item-webcam']").removeClass('btn-enfonce');	
+					jQuery("input[data-target^='#item-vue']").removeClass('btn-enfonce');					
+					jQuery("input[data-target^='.item-meteo']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-webcam']").addClass('btn-releve');
+					jQuery("input[data-target^='#item-vue']").addClass('btn-releve');
+					jQuery("#item-vue-" + spot).collapse("hide");
+					jQuery("#item-webcam-" + spot).collapse("hide");
+					jQuery(".item-meteo-" + spot).collapse("hide");						
+					jQuery("#item-infos-" + spot).collapse("hide");
+					initHistorique(spot);
+					getHistoriqueVent(spot);
+					jQuery("#item-histo-" + spot).collapse("show");
+				}
+				else {
+					jQuery(this).removeClass('btn-enfonce');	
+					jQuery(this).addClass('btn-releve');
+					jQuery("#item-histo-" + spot).collapse("hide");		
+				}
+			});
 			
+			$( "#ma-date-poses" ).change(function() {
+			 getHistoriqueVent('poses');
+			});
 			
 			
 			
@@ -269,8 +264,6 @@
 					jQuery("input[data-target='#item-meteo']").addClass('btn-enfonce');	
 					jQuery("input[data-target='#item-geographie']").addClass('btn-releve');	
 					jQuery("input[data-target='#item-geographie']").removeClass('btn-enfonce');
-				//	jQuery("#item-geographie").collapse("hide");					
-				//	jQuery("#item-meteo").collapse("show");		
 			jQuery("#page").html('<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=48.669&lon=2.340&zoom=7&level=surface&overlay=wind&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=49.013&detailLon=2.005&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe>');				
 				}
 			});
@@ -280,8 +273,6 @@
 					jQuery("input[data-target='#item-geographie']").addClass('btn-enfonce');
 					jQuery("input[data-target='#item-meteo']").addClass('btn-releve');	
 					jQuery("input[data-target='#item-meteo']").removeClass('btn-enfonce');	
-				//	jQuery("#item-meteo").collapse("hide");
-				//	jQuery("#item-geographie").collapse("show");
 				jQuery("#page").html('<iframe src="https://www.google.com/maps/d/embed?mid=10cRXGDzFD6BHC2YczFYe2xv6EbqLJB-t" width="640" height="480"></iframe>');
 				}
 			});			
@@ -303,6 +294,11 @@
 			}).then(function(data) {
 				jQuery(".niveau-foret-orient").replaceWith(data.value);
 			})
+				
+				
+				
+		
+		
 				
 			getWebCams();	 
 		});

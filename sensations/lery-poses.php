@@ -218,7 +218,7 @@
                   <h2>Historique</h2>
                   <form id="datetimeform">
                      
-                        <div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date" type="text" name="date" value="25/02/2017"></input></p></div>
+                        <div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-poses" type="text" name="date" value="25/02/2017"></input></p></div>
                       <!-- 
  					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
                         <div><p><label for="mon-heure2">et <span style="color:grey">(HH:MM)</span></label><input id="mon-heure2" type="text" name="heure2" value="17:00"></input></p></div>
@@ -232,12 +232,9 @@
                   <br>
 				  
 				  <div class="row">
-					<div class="col-xs-12 fond" id="historique-vent"></div>
+					<div class="col-xs-12 fond" id="historique-vent-poses"></div>
 				  </div>	
 				  
-				  <div class="row">
-					<div class="col-xs-12 fond" id="historique-vent"></div>
-				  </div>	
 
                   
 			
@@ -319,65 +316,13 @@
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
 		
-
-
-		 var estHier = false;
-		 var maDate;
-         var now = new Date();
-		 if (now.getHours() < 11) {
-			maDate = new Date(new Date().setDate(new Date().getDate()-1)); // hier	
-			estHier = true;	
-		 }
-		 else
-		 {
-			maDate = new Date(new Date().setDate(new Date().getDate()-0)); // aujourd'hui
-		 }
-		 
-         var annee   = maDate.getFullYear();
-         var mois    = maDate.getMonth() + 1;
-         var jour    = maDate.getDate();
-		 var heure2 = maDate.getHours();
-		 var minute2 = maDate.getMinutes();
-		 
-		 annee = annee.toString();
-		 mois = mois.toString();
-		 jour = jour.toString();
-		 if (mois.length == 1) {
-			 mois = "0" + mois;
-		 }
-		 if (jour.length == 1) {
-			 jour = "0" + jour;
-		 }
-		 	 
-         $( "#ma-date" ).datepicker({dateFormat:"dd/mm/yy",minDate:"13/04/2015",maxDate:new Date(),changeMonth:true,changeYear:true});
-		 $( "#ma-date" ).datepicker( "setDate", jour + "/" + mois + "/" + annee); 
-		 
-
-		 if (heure2 > 18 || estHier) {
-			heure2 = 18;
-		 }
-		 heure2 = heure2.toString();
-		 minute2 = minute2.toString();
-		 if (heure2.length == 1) {
-			 heure2 = "0" + heure2;
-		 }
-		 if (minute2.length == 1) {
-			 minute2 = "0" + minute2;
-		 }
-		 
-		 $("#mon-heure2").val(heure2 + ':00');
-		 
-		 getHistorique();
-		 
-		 $( "#ma-date" ).change(function() {
-			 getHistorique();
-		 });
-		 
-         });
-		 
-		 function getHistorique() {
-			getHistoriqueVent(); 
-		 }
+	initHistorique('poses');
+	getHistoriqueVent('poses');
+	
+				$( "#ma-date-poses" ).change(function() {
+			 getHistoriqueVent('poses');
+			});
+		});
 		 
       </script>
 	  <script type="text/javascript" src="js/info-spot.js"></script>

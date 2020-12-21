@@ -4,6 +4,7 @@
       <title>Les spots d'Ile-de-France</title>
       <META NAME="Description" CONTENT="Où naviguer en Ile-de-France. Les spots de la région parisienne pour la planche à voile, le windsurf et le windfoil. Prévisions, météo temps réel et webcams."/>
 	  <?php include("../includes/header.php"); ?>	
+	  <link rel="stylesheet" href="css/jquery-ui.min.css">
 	  <link rel="stylesheet" type="text/css" href="css/spots-ile-de-france.css" media="all"/>
 		  	  
  <script type="application/ld+json">
@@ -209,7 +210,7 @@
                <div class="row">
 					<div class="col-sm-8">
 					
-		<p><input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span></p>		
+		<p><input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span><span class="hidden-xs"> - <input type="button" data-target="#item-histo-poses" value="Historique" class="btn-releve" /></span></p>		
 			
 
 			
@@ -237,6 +238,17 @@
 <div id="item-infos-poses" class="collapse">
 	<div class="infoPoses"></div>
   <br>
+</div> 	
+
+<div id="item-histo-poses" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-poses" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-poses"></div>
+	</div>
+	<br>			  
 </div> 	
 
 					
@@ -960,6 +972,8 @@
 	  <script type="text/javascript" src="js/info-spot.js"></script>
 	  <script type="text/javascript" src="js/commentaires.js"></script>	
 	  <script type="text/javascript" src="js/spots-ile-de-france.js"></script>
+	  <script src="js/jquery-ui.min.js"></script>
+	  <script type="text/javascript" src="js/historique-vent.js"></script>	  
 	
    </body>
 </html>

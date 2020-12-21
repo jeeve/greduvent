@@ -1,5 +1,58 @@
+function initHistorique(spot) {
+	
+		 var estHier = false;
+		 var maDate;
+         var now = new Date();
+		 if (now.getHours() < 11) {
+			maDate = new Date(new Date().setDate(new Date().getDate()-1)); // hier	
+			estHier = true;	
+		 }
+		 else
+		 {
+			maDate = new Date(new Date().setDate(new Date().getDate()-0)); // aujourd'hui
+		 }
+		 
+         var annee   = maDate.getFullYear();
+         var mois    = maDate.getMonth() + 1;
+         var jour    = maDate.getDate();
+		 var heure2 = maDate.getHours();
+		 var minute2 = maDate.getMinutes();
+		 
+		 annee = annee.toString();
+		 mois = mois.toString();
+		 jour = jour.toString();
+		 if (mois.length == 1) {
+			 mois = "0" + mois;
+		 }
+		 if (jour.length == 1) {
+			 jour = "0" + jour;
+		 }
+		 	 
+         $( "#ma-date-" + spot ).datepicker({dateFormat:"dd/mm/yy",minDate:"13/04/2015",maxDate:new Date(),changeMonth:true,changeYear:true});
+		 $( "#ma-date-" + spot ).datepicker( "setDate", jour + "/" + mois + "/" + annee); 
+		 
 
-function getHistoriqueVent() {
+		 if (heure2 > 18 || estHier) {
+			heure2 = 18;
+		 }
+		 heure2 = heure2.toString();
+		 minute2 = minute2.toString();
+		 if (heure2.length == 1) {
+			 heure2 = "0" + heure2;
+		 }
+		 if (minute2.length == 1) {
+			 minute2 = "0" + minute2;
+		 }
+		 
+		 $("#mon-heure2").val(heure2 + ':00');
+		 
+		// getHistoriqueVent();
+		 
+
+}		 
+
+
+function getHistoriqueVent(spot) {
 	
 	var dateFrancaise = document.getElementById("datetimeform")[0].value;
 	var decompositionDate = dateFrancaise.split('/');
@@ -27,6 +80,6 @@ function getHistoriqueVent() {
 	var heure2 = heuresminutes2[0];
 	var minute2 = heuresminutes2[1];
 */	
-	$("#historique-vent").html('<img src="http://flacktest.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+	$("#historique-vent-poses").html('<img src="http://flacktest.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image">'); 
 
 }
