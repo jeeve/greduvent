@@ -322,7 +322,11 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-moisson" value="Infos" class="btn-releve"/></span></p>				                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-moisson" value="Infos" class="btn-releve"/></span>
+ - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-moisson" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-moisson" value="Histo" class="btn-releve"/></span>
+</p>				                								
                
 			   
 			<div id="item-vue-moisson" class="collapse">
@@ -346,7 +350,18 @@
 <div id="item-infos-moisson" class="collapse">
 <div class="infoMoisson"></div>
    <br>
-</div> 					
+</div> 	
+
+<div id="item-histo-moisson" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-moisson" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-moisson"></div>
+	</div>
+	<br>			  
+</div> 	
 					
 					
 						<div class="fond-table encadrement-table">
@@ -405,7 +420,10 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-ecluzelles" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-ecluzelles" value="Infos" class="btn-releve"/></span></p>				                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-ecluzelles" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-ecluzelles" value="Infos" class="btn-releve"/></span>
+				 - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-ecluzelles" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-ecluzelles" value="Histo" class="btn-releve"/></span></p>				                								
                	   
 			   
 			<div id="item-vue-ecluzelles" class="collapse">
@@ -430,7 +448,18 @@
 <div id="item-infos-ecluzelles" class="collapse">
 <div class="infoEcluzelles"></div>
    <br>
-</div> 					
+</div> 	
+
+<div id="item-histo-ecluzelles" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-ecluzelles" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-ecluzelles"></div>
+	</div>
+	<br>			  
+</div> 	
 					
 					
 						<div class="fond-table encadrement-table">
@@ -575,7 +604,10 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-jablines" value="Infos" class="btn-releve"/></span></p>            								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-jablines" value="Infos" class="btn-releve"/></span>
+				 - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-jablines" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-jablines" value="Histo" class="btn-releve"/></span></p>            								
                
 	   
 			   
@@ -604,6 +636,18 @@
 <div class="infoJablines"></div>
 <br>
 </div> 	
+
+<div id="item-histo-jablines" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-jablines" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-jablines"></div>
+	</div>
+	<br>			  
+</div> 	
+
 					
 						<div class="fond-table encadrement-table">
 <div class="item-meteo-jablines collapse">								
@@ -659,7 +703,10 @@
 			   <div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-vaires" value="Infos" class="btn-releve"/></span></p>             								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-vaires" value="Infos" class="btn-releve"/></span>
+				 - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-vaires" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-vaires" value="Histo" class="btn-releve"/></span></p>             								
  
 					
 						   
@@ -688,7 +735,17 @@
   <br>
 </div> 
 					
-				
+<div id="item-histo-vaires" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-vaires" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-vaires"></div>
+	</div>
+	<br>			  
+</div> 	
+
 					
 						<div class="fond-table encadrement-table">
 <div class="item-meteo-vaires collapse">								
@@ -746,7 +803,10 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-grandeparoisse" value="Infos" class="btn-releve"/></span></p>		                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-grandeparoisse" value="Infos" class="btn-releve"/></span>
+				 - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-grandeparoisse" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-grandeparoisse" value="Histo" class="btn-releve"/></span></p>		                								
 
 		   
 
@@ -776,7 +836,17 @@
  <br>
 </div> 			
 					
-					
+<div id="item-histo-grandeparoisse" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-grandeparoisse" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-grandeparoisse"></div>
+	</div>
+	<br>			  
+</div> 	
+
 					
 					
 						<div class="fond-table encadrement-table">
@@ -839,7 +909,10 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span></p>		                								
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span>
+				 - 
+<span class="hidden-xs"><input type="button" data-target="#item-histo-foretorient" value="Historique" class="btn-releve" /></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-foretorient" value="Histo" class="btn-releve"/></span></p>		                								
 
 		   
 
@@ -862,7 +935,21 @@
 <div id="item-infos-foretorient" class="collapse">
 <div class="infoForetOrient"></div> 
  <br>
-</div> 			
+</div> 
+
+<div id="item-histo-foretorient" class="collapse">
+    <form id="datetimeform">
+		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-foretorient" type="text" name="date" value="25/02/2017"></input></p></div>
+	</form>
+    <br>
+	<div class="row">
+		<div class="col-xs-12 fond" id="historique-vent-foretorient"></div>
+	</div>
+	<br>			  
+</div> 	
+
+
+
 <p><a href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine" target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> %</p>					
 					
 					
