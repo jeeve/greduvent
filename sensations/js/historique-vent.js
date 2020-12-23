@@ -83,8 +83,8 @@ function getHistoriqueVent(spot) {
 
 	switch (spot) {
 		case 'poses' :
-			$("#historique-vent-poses").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-poses").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/louviers/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-poses").html('<img src="http://flacktest.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-poses").html('<img src="http://flacktest.herokuapp.com/rose/louviers/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'moisson' :
 			$("#historique-vent-moisson").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/mantes-la-jolie/vent/' + curdate + '" class="img-responsive ombre-image">'); 
@@ -113,3 +113,7 @@ function getHistoriqueVent(spot) {
 	}		
 
 }
+
+	jQuery(".histo-image").ready(function() {
+			jQuery(this).prev().css("display", "none");
+		});

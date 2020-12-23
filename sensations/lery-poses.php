@@ -26,6 +26,10 @@
 		.histo img {
 			margin: 10px;
 		}
+.loader{
+		widht: 50px;
+		height: 50px;
+}		
 	  </style>
    </head>
    <body>
@@ -234,8 +238,9 @@
                   </form>
                   <br>
 				  
-				  <div class="row histo">
+				  <div class="row histo loader">
 					<div class="col-xs-12 fond" id="historique-vent-poses"></div>
+					
 					</div>
 				  <div class="row histo">
 				   <div class="col-xs-1 fond"></div>
@@ -311,9 +316,9 @@
 			var itineraireSrc = 'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d' + lat1 + '!2d' + lon1 + '!4m5!';	
 			jQuery('#map-poses').attr('src', itineraireSrc + 'ls0x47e1289bac44658f%3A0xe940a5c757b0bf2a!2sL%C3%A9ry-Poses+en+Normandie%2C+CD+110%2C+27740+Poses!3m2!1d49.302783!2d1.209404!5e0!3m2!1sfr!2sfr!4v1546773316328');
 	}
-
-        
+		
 		jQuery(document).ready(function($) {
+			
 		getInfoSpot();
 		getInfoSessions('Léry-Poses');
 		getWebCam();	 
@@ -329,6 +334,9 @@
 				$( "#ma-date-poses" ).change(function() {
 			 getHistoriqueVent('poses');
 			});
+			
+			
+			
 		});
 		 
       </script>
