@@ -83,32 +83,32 @@ function getHistoriqueVent(spot) {
 
 	switch (spot) {
 		case 'poses' :
-			$("#historique-vent-poses").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-poses").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/louviers/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-poses").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-poses").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/louviers/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'moisson' :
-			$("#historique-vent-moisson").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/mantes-la-jolie/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-moisson").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/mantes-la-jolie/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-moisson").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/mantes-la-jolie/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-moisson").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/mantes-la-jolie/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'ecluzelles' :
-			$("#historique-vent-ecluzelles").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/dreux/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-ecluzelles").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/dreux/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-ecluzelles").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/dreux/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-ecluzelles").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/dreux/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'jablines' :
-			$("#historique-vent-jablines").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-jablines").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-jablines").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-jablines").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'vaires' :
-			$("#historique-vent-vaires").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-vaires").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-vaires").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-vaires").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'grandeparoisse' :
-			$("#historique-vent-grandeparoisse").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/montereau-fault-yonne/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-grandeparoisse").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/montereau-fault-yonne/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-grandeparoisse").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/montereau-fault-yonne/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-grandeparoisse").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/montereau-fault-yonne/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'foretorient' :
-			$("#historique-vent-foretorient").html('<img onload="imagePlotChargee()" src="http://flacktest.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-foretorient").html('<img onload="imageRoseChargee()" src="http://flacktest.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-foretorient").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-foretorient").html('<img onload="imageChargee()" src="http://flacktest.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 	}		
 
