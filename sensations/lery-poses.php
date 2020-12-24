@@ -238,7 +238,7 @@
                   </form>
                   <br>
 				  
-				  <div class="row histo loader">
+				  <div class="row histo">
 					<div class="col-xs-12 fond" id="historique-vent-poses"></div>
 					
 					</div>
@@ -293,6 +293,8 @@
 	  <script src="js/jquery-ui.min.js"></script>
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
+	  
+	  
 	    function getWebCam() {
 			jQuery.ajax({
 				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/131/haute-normandie/louviers/rouen-vers-paris',
@@ -319,6 +321,7 @@
 		
 		jQuery(document).ready(function($) {
 			
+		
 		getInfoSpot();
 		getInfoSessions('Léry-Poses');
 		getWebCam();	 
