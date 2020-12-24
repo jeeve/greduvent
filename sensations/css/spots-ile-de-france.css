@@ -119,3 +119,8 @@ input {
 .histo img {
 	margin-bottom: 15px;
 }
+
+.loader{
+		widht: 50px;
+		height: 50px;
+}	
