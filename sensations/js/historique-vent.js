@@ -100,7 +100,7 @@ function getHistoriqueVent(spot) {
 			break;
 		case 'vaires' :
 			$("#historique-vent-vaires").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-vaires").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-rose-vaires").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image">'); 
 			break;
 		case 'grandeparoisse' :
 			$("#historique-vent-grandeparoisse").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/montereau-fault-yonne/vent/' + curdate + '" class="img-responsive ombre-image">'); 

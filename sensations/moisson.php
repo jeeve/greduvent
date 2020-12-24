@@ -3,7 +3,8 @@
    <head>
       <title>Moisson Lavacourt</title>
       <META NAME="Description" CONTENT="Le lac de Moisson Mousseaux avec webcam, archives, météo en temps réel et prévisions."/>
-	  <?php include("../includes/header.php"); ?>	
+	  <?php include("../includes/header.php"); ?>
+	  <link rel="stylesheet" href="css/jquery-ui.min.css">	  
 	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>	  
 	  <style>
 		#webcam {
@@ -22,6 +23,13 @@
 		#meteo-tems-reel p, #webcam p {
 			color: silver;
 		}
+				.histo img {
+			margin: 10px;
+		}
+		.loader{
+		widht: 50px;
+		height: 50px;
+}	
 	  </style>
    </head>
    <body>
@@ -207,97 +215,37 @@
 				<h2>Informations</h2>		
   <div class="infoMoisson"></div>
   <br>
-									
+
+                  <h2>Historique</h2>
+                  <form id="datetimeform">
+                     
+                        <div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-moisson" type="text" name="date" value="25/02/2017"></input></p></div>
+                      <!-- 
+ 					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
+                        <div><p><label for="mon-heure2">et <span style="color:grey">(HH:MM)</span></label><input id="mon-heure2" type="text" name="heure2" value="17:00"></input></p></div>
+                        <div><p><label for="mon-delta">toutes les</label><input id="mon-delta" type="text" name="delta" value="60"></input> minutes
+						
+                        <button type="button" onclick="getHistorique()">Afficher</button>
+						-->
+						
+                
+                  </form>
+                  <br>
+				  
+				  <div class="row histo">
+					<div class="col-xs-12 fond" id="historique-vent-moisson"></div>
+					
+					</div>
+				  <div class="row histo">
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-rose-moisson"></div>
+				  </div>					  
+					<br><br>									
 				
 				  <h2>Sessions en vidéo</h2>
 				  
 				  <div id="sessions"></div>	
 
-<!--
-				  <br><a name="moisson-18-10-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/gROEhbWPofU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=237562" target="_blank">Session windsurf de rêve. Vent pile dans l'axe</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="moisson-3-7-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/cB_HMl2brIg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=229478" target="_blank">C'est l'été à Moisson ! Cruising en windfoil</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="moisson-15-6-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/d9JahLfRmcU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=228533" target="_blank">Windfoil en Ile-de-France</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="moisson-14-5-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/EkRBTnpZH0Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=226398" target="_blank">Windsurf en Ile-de-France</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="moisson-13-5-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/SNNjvHcOOAE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=226297" target="_blank">Windfoil en 5.3 - lundi 13 mai 2019</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="moisson-13-4-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/UbPr6JycIuk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=223941" target="_blank">Baptême Foil. Magique !! Samedi 13 avril 2019</a>
-				  </p>
-				  </div></div>
--->
 				  
 
 				  <br>		  
@@ -325,6 +273,7 @@
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>	
 	  	
+			  <script src="js/jquery-ui.min.js"></script>
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
 	    function getWebCam() {
@@ -362,11 +311,21 @@
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
+		
+	initHistorique('moisson');
+	getHistoriqueVent('moisson');
+	
+				$( "#ma-date-moisson" ).change(function() {
+			 getHistoriqueVent('moisson');
+			});		
+		
+		
 		});
 
       </script>
 	    <script type="text/javascript" src="js/info-spot.js"></script>
-		<script type="text/javascript" src="js/info-sessions.js"></script>	 
+		<script type="text/javascript" src="js/info-sessions.js"></script>
+			  <script type="text/javascript" src="js/historique-vent.js"></script> 
    </body>
 </html>
 

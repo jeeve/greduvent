@@ -4,6 +4,7 @@
       <title>La Grande-Paroisse</title>
       <META NAME="Description" CONTENT="Le lac de La Grande Paroisse."/>
 	  <?php include("../includes/header.php"); ?>	  
+	  <link rel="stylesheet" href="css/jquery-ui.min.css">	  
 	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>
 	  <style>
 		#webcam {
@@ -22,6 +23,13 @@
 		#meteo-tems-reel p, #webcam p {
 			color: silver;
 		}
+		.histo img {
+			margin: 10px;
+		}
+.loader{
+		widht: 50px;
+		height: 50px;
+}			
 	  </style>	  
    </head>
    <body>
@@ -196,92 +204,42 @@
 				</div>	</div>
 				
 				<h2>Informations</h2>		
-  <div class="infoGrandeParoisse"></div>
+  <div class="infoGrandeParoisse"></div>			
 
-					
+				
 				  <br>
+				  
+                  <h2>Historique</h2>
+                  <form id="datetimeform">
+                     
+                        <div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-grandeparoisse" type="text" name="date" value="25/02/2017"></input></p></div>
+                      <!-- 
+ 					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
+                        <div><p><label for="mon-heure2">et <span style="color:grey">(HH:MM)</span></label><input id="mon-heure2" type="text" name="heure2" value="17:00"></input></p></div>
+                        <div><p><label for="mon-delta">toutes les</label><input id="mon-delta" type="text" name="delta" value="60"></input> minutes
+						
+                        <button type="button" onclick="getHistorique()">Afficher</button>
+						-->
+						
+                
+                  </form>
+                  <br>
+				  
+				  <div class="row histo">
+					<div class="col-xs-12 fond" id="historique-vent-grandeparoisse"></div>
+					
+					</div>
+				  <div class="row histo">
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-rose-grandeparoisse"></div>
+				  </div>					  
+					<br><br>				  
+				  
+				  
 				  <h2>Sessions en vidéo</h2>
 
 <div id="sessions"></div>
 
-<!--
-				  <br><a name="grande-paroisse-19-9-2019"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/p6iqOd2Uw9s?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=235431" target="_blank">
-				  Jeudi 19 septembre 2019, du soleil et un peu de vent</a>
-				  </p>
-				  </div></div>
-
-				  <br><a name="grande-paroisse-20-7-2019"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/aNn3KZsdO0o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=230636" target="_blank">
-				  Samedi 20 juillet 2019, Ride and Mix</a>
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="grande-paroisse-14-7-2019"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/1FIFtOWd-9g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=230154" target="_blank">
-				  Windfoil, dimanche 14 juillet 2019</a>
-				  </p>
-				  </div></div>
-
-
-				  <br><a name="grande-paroisse-6-10-2018"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/aXU6S-sCWAU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=224389" target="_blank">
-				  Samedi 20 avril 2019, deuxième session en foil</a>
-				  </p>
-				  </div></div>
-				  
-				  <br><a name="grande-paroisse-6-10-2018"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/YyNFm05u1Qs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=214744" target="_blank">
-				  Samedi 6 octobre 2018</a>
-				  </p>
-				  </div></div>
-
--->
 <br>
 <br>
  				  <div id="swipe">
@@ -306,6 +264,7 @@
       </div>
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>	
+	  <script src="js/jquery-ui.min.js"></script>	  
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script>  
 	    function getWebCam() {
@@ -341,11 +300,20 @@
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(maPosition);
 			}
+			
+				initHistorique('grandeparoisse');
+	getHistoriqueVent('grandeparoisse');
+	
+				$( "#ma-date-grandeparoisse" ).change(function() {
+			 getHistoriqueVent('grandeparoisse');
+			});
+			
 
 		 });
 	  </script>	
 <script type="text/javascript" src="js/info-spot.js"></script>
 <script type="text/javascript" src="js/info-sessions.js"></script>
+	  <script type="text/javascript" src="js/historique-vent.js"></script>  
 	  
    </body>
 </html>

@@ -4,6 +4,7 @@
       <title>Mézières-Ecluzelles</title>
       <META NAME="Description" CONTENT="Le plan d'eau de Mézières-Ecluzelles avec webcam, archives, météo en temps réel et prévisions."/>
 	  <?php include("../includes/header.php"); ?>	
+	  	  <link rel="stylesheet" href="css/jquery-ui.min.css">
 	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>	  
 	  <style>
 		#webcam {
@@ -22,6 +23,13 @@
 		#meteo-tems-reel p, #webcam p {
 			color: silver;
 		}
+				.histo img {
+			margin: 10px;
+		}
+.loader{
+		widht: 50px;
+		height: 50px;
+}
 	  </style>
    </head>
    <body>
@@ -204,7 +212,34 @@
 				<h2>Informations</h2>		
   <div class="infoEcluzelles"></div>
   <br>
-									
+	
+                  <h2>Historique</h2>
+                  <form id="datetimeform">
+                     
+                        <div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-ecluzelles" type="text" name="date" value="25/02/2017"></input></p></div>
+                      <!-- 
+ 					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
+                        <div><p><label for="mon-heure2">et <span style="color:grey">(HH:MM)</span></label><input id="mon-heure2" type="text" name="heure2" value="17:00"></input></p></div>
+                        <div><p><label for="mon-delta">toutes les</label><input id="mon-delta" type="text" name="delta" value="60"></input> minutes
+						
+                        <button type="button" onclick="getHistorique()">Afficher</button>
+						-->
+						
+                
+                  </form>
+                  <br>
+				  
+				  <div class="row histo">
+					<div class="col-xs-12 fond" id="historique-vent-ecluzelles"></div>
+					
+					</div>
+				  <div class="row histo">
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-rose-ecluzelles"></div>
+				  </div>					  
+					<br><br>
+
+	
 				
 				  <h2>Sessions en vidéo</h2>
 				  
@@ -238,6 +273,7 @@
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>	
 	  	
+	  <script src="js/jquery-ui.min.js"></script>		
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
 	    function getWebCam() {
@@ -275,11 +311,21 @@
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(maPosition);
 		}
+		
+	initHistorique('ecluzelles');
+	getHistoriqueVent('ecluzelles');
+	
+				$( "#ma-date-ecluzelles" ).change(function() {
+			 getHistoriqueVent('ecluzelles');
+			});
+		
+		
 		});
 
       </script>
 	    <script type="text/javascript" src="js/info-spot.js"></script>
-		<script type="text/javascript" src="js/info-sessions.js"></script>	 
+		<script type="text/javascript" src="js/info-sessions.js"></script>	
+  <script type="text/javascript" src="js/historique-vent.js"></script>  		
    </body>
 </html>
 

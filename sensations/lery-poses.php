@@ -222,6 +222,15 @@
 				</div>	
 
 
+
+
+       		  
+
+
+				<h2>Informations</h2>		
+  <div class="infoPoses"></div>
+  <br>
+				
                   <h2>Historique</h2>
                   <form id="datetimeform">
                      
@@ -245,19 +254,11 @@
 				  <div class="row histo">
 				   <div class="col-xs-1 fond"></div>
 					<div class="col-xs-10 fond" id="historique-rose-poses"></div>
-				  </div>	
-				  
-
-                  
-			
-                  <br><br>
-				  
+				  </div>					  
+					<br><br>
 
 
-				<h2>Informations</h2>		
-  <div class="infoPoses"></div>
-  <br>
-					
+				
 			
 				  <h2>Sessions en vidéo</h2>
 				  
