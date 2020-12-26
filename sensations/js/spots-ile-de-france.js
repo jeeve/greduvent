@@ -191,6 +191,8 @@
 					jQuery("#item-infos-" + spot).collapse("hide");						
 					jQuery("#item-webcam-" + spot).collapse("show");
 					jQuery("#item-histo-" + spot).collapse("hide");
+					
+					getWebCams();	
 				}
 				else {
 					jQuery(this).removeClass('btn-enfonce');	
@@ -320,5 +322,5 @@
 		
 		
 				
-			getWebCams();	 
+			//getWebCams();	 
 		});
