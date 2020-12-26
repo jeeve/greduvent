@@ -82,7 +82,11 @@
 						</li>
 						<li><p>foil Taaroa Noé Freerace modèle 2020<br>
 						ailes 800 et 1050</p></li>          
-						</ul></p>
+						</ul>
+						<p style="margin-bottom: 20px;">
+						Distance parcourue : <strong><span id="distance-foil"></span> km</strong>
+						</p>
+						</p>
 		<p align="center">ça vole !</p>
 					
 					
@@ -263,8 +267,9 @@
 			}).then(function(data) {
 				vitesses1 = [];
 				vitesses2 = [];
-				var ligne, d, v100, vmax, i, pratique;
+				var ligne, d, v100, vmax, i, pratique, distanceFoil, distanceFoilTotale;
 				var v = [];
+				distanceFoilTotale = 0.0;
 				vitesses1[0] = ['Date', 'V 100m', 'V Max'];
 				vitesses2[0] = ['Date', 'V 100m', 'V Max'];
 				var j1 = 1;
@@ -275,6 +280,14 @@
 					pratique = ligne.gsx$pratique.$t; 
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100 = ligne.gsx$v100mk72.$t;
+					distanceFoil = ligne.gsx$distancekm.$t;
+					if (distanceFoil == "") {
+						distanceFoil = 0.0;
+					}
+					distanceFoil = parseFloat(distanceFoil);
+					if (pratique == "Windfoil") {
+						distanceFoilTotale = distanceFoilTotale + distanceFoil;
+					}
 					if (vmax != '') {
 						v = [];
 						v[0] = new Date(d);
@@ -290,6 +303,7 @@
 						}
 					}
 				}
+				jQuery("#distance-foil").html(Math.round(distanceFoilTotale).toString());
 				drawChart1();
 				drawChart2();
 			});
