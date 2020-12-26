@@ -53,7 +53,7 @@ function getInfoSessions(spot) {
 					html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
 					html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
 					if (ventMini != '' && ventMaxi != '') {
-						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + 'kts</td></tr>';
+						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';
 					}
 					else {
 						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
