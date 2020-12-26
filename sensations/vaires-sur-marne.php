@@ -67,7 +67,7 @@
 	</div>
 	
 	<div class="webcam">
-	<div class="embed-responsive embed-responsive-4by3 ombre-image">
+	<div class="embed-responsive embed-responsive-16by9 ombre-image">
 	    <div>
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
