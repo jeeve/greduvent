@@ -37,6 +37,8 @@ function getInfoSessions(spot) {
 					distance = ligne.gsx$distancekm.$t;
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
+					ventMini = ligne.gsx$mini.$t;
+					ventMaxi = ligne.gsx$maxi.$t;
 					
 					ancre = laDate.replace(new RegExp('/', 'g'), '-');
 
@@ -50,7 +52,12 @@ function getInfoSessions(spot) {
 					
 					html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
 					html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
-					html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
+					if (ventMini != '' && ventMaxi != '') {
+						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + 'kts</td></tr>';
+					}
+					else {
+						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
+					}
 					if (aile != '') {
 						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + '</td></tr>';
 					}
