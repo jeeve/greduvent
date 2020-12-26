@@ -1,7 +1,7 @@
 <?php	
 
 	header("Access-Control-Allow-Origin: *");
-
+/*
 	$url = 'https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris';
 		
 	if ($_GET['url'] != '') {
@@ -23,6 +23,8 @@
 	$k = strpos($line, 'source src="');
 	$l = strpos($line, 'type="video/mp4"');
 	$line2 = 'https://www.webcam-autoroute.eu/' . substr($line, $k + 13, $l-$k-15);
+*/	
+	$line2 = "images/mire-tv.mp4";
 	
 	$arr = array('src' => $line2);
 	
