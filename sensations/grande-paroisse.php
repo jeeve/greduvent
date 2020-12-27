@@ -226,14 +226,14 @@
                   <br>
 				  
 				  <div class="row histo">
-					<div class="col-xs-12 fond" id="historique-vent-grandeparoisse"></div>
-					
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-vent-grandeparoisse"></div>
 					</div>
 				  <div class="row histo">
-				   <div class="col-xs-1 fond"></div>
-					<div class="col-xs-10 fond" id="historique-rose-grandeparoisse"></div>
+				   <div class="col-xs-2 fond"></div>
+					<div class="col-xs-8 fond" id="historique-rose-grandeparoisse"></div>
 				  </div>					  
-					<br><br>				  
+					<br><br>		  
 				  
 				  
 				  <h2>Sessions en vidéo</h2>

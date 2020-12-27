@@ -244,15 +244,14 @@
                   <br>
 				  
 				  <div class="row histo">
-					<div class="col-xs-12 fond" id="historique-vent-jablines"></div>
-					
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-vent-jablines"></div>
 					</div>
 				  <div class="row histo">
-				   <div class="col-xs-1 fond"></div>
-					<div class="col-xs-10 fond" id="historique-rose-jablines"></div>
+				   <div class="col-xs-2 fond"></div>
+					<div class="col-xs-8 fond" id="historique-rose-jablines"></div>
 				  </div>					  
 					<br><br>
-  
   
   
   
@@ -260,37 +259,7 @@
 				  
 <div id="sessions"></div>				  
 				  
-<!--
-				  <br><a name="jablines-26-10-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/7cKl8r_3CSg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=237957" target="_blank">Génial !!! La prochaine fois j'essaie le jibe ;-)</a>
-				  </p>
-				  </div></div>				  
-
-				  <br><a name="jablines-3-3-2019"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/eLc5MIpz0z4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=221465" target="_blank">Découverte du spot</a><br>
-Super session. Vent très irrégulier mais quelques bonnes rafales. Surpris par une pointe de vitesse !!
-				  </p>
-				  </div></div>
-				  
--->				  
+			  
 
 				  <br>		  
 			 

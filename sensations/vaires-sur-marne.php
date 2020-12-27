@@ -244,15 +244,14 @@
                   <br>
 				  
 				  <div class="row histo">
-					<div class="col-xs-12 fond" id="historique-vent-vaires"></div>
-					
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-vent-vaires"></div>
 					</div>
 				  <div class="row histo">
-				   <div class="col-xs-1 fond"></div>
-					<div class="col-xs-10 fond" id="historique-rose-vaires"></div>
+				   <div class="col-xs-2 fond"></div>
+					<div class="col-xs-8 fond" id="historique-rose-vaires"></div>
 				  </div>					  
 					<br><br>
-
   
   
   
@@ -260,23 +259,7 @@
 				  
 				  <div id="sessions"></div>
 
-<!--
-				  <br><a name="vaires-13-01-19"></a>
-				  <div class="row">
-				  <div class="col-xs-12 col-sm-2 fond"></div>
-				  <div class="col-xs-12 col-sm-8 fond">
-				  <p align="center">
-				  <div class="embed-responsive embed-responsive-4by3 ombre-image">
-				  <iframe width="560" height="315" src="https://www.youtube.com/embed/nKog-ZBmtOs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				  </div>
-				  </p>
-				  <p class="legende">
-					<a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=219593" target="_blank">Vaires le retour...</a><br>
-Vent parfaitement orienté ! Du bonheur...
-Quelques bon spin-out surtout en plein largue à 47 km/h !
-				  </p>
-				  </div></div>
--->
+
 				  <br>		  
 			 
 				  <div id="swipe">

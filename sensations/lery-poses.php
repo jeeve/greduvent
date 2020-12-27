@@ -248,12 +248,12 @@
                   <br>
 				  
 				  <div class="row histo">
-					<div class="col-xs-12 fond" id="historique-vent-poses"></div>
-					
+				   <div class="col-xs-1 fond"></div>
+					<div class="col-xs-10 fond" id="historique-vent-poses"></div>
 					</div>
 				  <div class="row histo">
-				   <div class="col-xs-1 fond"></div>
-					<div class="col-xs-10 fond" id="historique-rose-poses"></div>
+				   <div class="col-xs-2 fond"></div>
+					<div class="col-xs-8 fond" id="historique-rose-poses"></div>
 				  </div>					  
 					<br><br>
 
