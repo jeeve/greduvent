@@ -628,7 +628,7 @@
     
 	<video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p>A4, <a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">péage de Coutrevoult</a> vers Reims, à proximité de Disneyland Paris</p>  
+		<p><a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">Porte de bagnolet</a> , visualisation de l'accès au Boulevard périphérique par l'autoroute A3</p>  
 	</div>
 	  
   </div> 
@@ -727,7 +727,7 @@
     
 	<video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p>A4, <a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">péage de Coutrevoult</a> vers Reims, à proximité de Disneyland Paris</p>  
+		<p><a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">Porte de bagnolet</a> ,visualisation de l'accès au Boulevard périphérique par l'autoroute A3</p>  
 	</div>
 	  
   </div> 
@@ -915,7 +915,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 					
-				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span>
+				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /><!-- - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" />--> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-foretorient" value="Historique" class="btn-releve" /></span>
 <span class="visible-xs-inline"><input type="button" data-target="#item-foretorient" value="Histo" class="btn-releve"/></span></p>		                								
@@ -957,7 +957,7 @@
 
 
 
-<p><a href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine" target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> %</p>					
+<p><a href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine" target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> % - <a id="lien-vwebcam-viewsurf-foret-orient" href="https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac" target="_blank">Webcam</a></p>					
 					
 					
 					

@@ -72,7 +72,7 @@
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
 	<div class="hidden-xs webcam-titre">
-		<p>A4, <a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">péage de Coutrevoult</a> vers Reims, à proximité de Disneyland Paris</p>  
+		<p><a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">Porte de Bagnolet</a>, visualisation de l'accès au Boulevard périphérique par l'autoroute A3</p>  
 	</div>
 				<div class="hidden-xs webcam-texte">
 				  <table>
