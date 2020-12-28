@@ -7,7 +7,7 @@
 	if ($_GET['url'] != '') {
 				$url = $_GET['url'];
 	}	
-/*
+
 	function getLigne($tableau, $terme) {
 		for ($i = 0; $i < count($tableau); $i++) {
 			if (strpos(strtoupper($tableau[$i]), strtoupper($terme))) {
@@ -16,7 +16,7 @@
 		}
 		return false;
 	}
-
+/*
 	
 	$lines = file($url);
 	$line = $lines[getLigne($lines, "<video")];	
@@ -46,8 +46,14 @@
 	if ($url == "https://www.webcam-autoroute.eu/fr/caméra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon") {
 		$line2  = "http://gieat.viewsurf.com?id=2746&action=mediaRedirect";
 	}	
-			
-	
+		
+if ($url == "https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac") {
+	$lines = file($url);
+	$line = $lines[getLigne($lines, "https://platforms5.joada.net/embeded/embeded.html")];	
+	$k = strpos($line, "src");
+	$line2 = substr($line, $k + 5, strlen($line) - $k - 8);
+	}	
+		
 	$arr = array('src' => $line2);
 	
 	echo json_encode($arr);

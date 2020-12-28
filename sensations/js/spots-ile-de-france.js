@@ -30,6 +30,7 @@
 			getWebCamEuroDisney();
 			getWebCamGrandeParoisse();
 			getWebCamEcluzelles();
+			//getWebCamForetOrient();
 		}
 		
 		function getWebCamPoses() {
@@ -104,6 +105,18 @@
 				jQuery('.video-eurodisney').attr('src', data.src);
 		});
 		}
+		
+		function getWebCamForetOrient() {
+			jQuery.ajax({
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac',
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				console.log(data.src);
+				jQuery('#lien-vwebcam-viewsurf-foret-orient').attr('href', data.src);
+		});
+		}			
 		
 		var myCam = setInterval(getWebCams, 30000);	// 30 s
 	  
