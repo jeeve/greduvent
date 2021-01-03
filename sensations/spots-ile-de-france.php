@@ -918,7 +918,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /><!-- - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" />--> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-foretorient" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-foretorient" value="Histo" class="btn-releve"/></span></p>		                								
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-foretorient" value="Histo" class="btn-releve"/></span></p>		                								
 
 		   
 
