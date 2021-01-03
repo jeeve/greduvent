@@ -951,6 +951,7 @@
 	<div class="row">
 		<div class="col-xs-12 fond" id="historique-vent-foretorient"></div>
 		<div class="col-xs-12 fond" id="historique-rose-foretorient"></div>
+		<div class="col-xs-12 fond" id="historique-niveau-foretorient"></div>
 	</div>
 	<br>			  
 </div> 	

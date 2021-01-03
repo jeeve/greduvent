@@ -109,6 +109,7 @@ function getHistoriqueVent(spot) {
 		case 'foretorient' :
 			$("#historique-vent-foretorient").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '" class="img-responsive ombre-image">'); 
 			$("#historique-rose-foretorient").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-niveau-foretorient").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/niveau/" class="img-responsive ombre-image">');
 			break;
 	}		
 
