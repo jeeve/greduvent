@@ -109,7 +109,7 @@ function getHistoriqueVent(spot) {
 		case 'foretorient' :
 			$("#historique-vent-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
 			$("#historique-rose-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '" class="img-responsive ombre-image"></a>'); 
-			$("#historique-niveau-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/niveau/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/niveau/" class="img-responsive ombre-image"></a>');
+			$("#historique-niveau-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/niveau/"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/niveau/" class="img-responsive ombre-image"></a>');
 			break;
 	}		
 
