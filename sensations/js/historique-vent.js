@@ -83,33 +83,33 @@ function getHistoriqueVent(spot) {
 
 	switch (spot) {
 		case 'poses' :
-			$("#historique-vent-poses").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image histo-image">'); 
-			$("#historique-rose-poses").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/louviers/' + curdate + '" class="img-responsive ombre-image histo-image">'); 
+			$("#historique-vent-poses").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/louviers/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/louviers/vent/' + curdate + '" class="img-responsive ombre-image histo-image"></a>'); 
+			$("#historique-rose-poses").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/louviers/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/louviers/' + curdate + '" class="img-responsive ombre-image histo-image"></a>'); 
 			break;
 		case 'moisson' :
-			$("#historique-vent-moisson").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/mantes-la-jolie/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-moisson").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/mantes-la-jolie/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-moisson").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/mantes-la-jolie/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/mantes-la-jolie/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-rose-moisson").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/mantes-la-jolie/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/mantes-la-jolie/' + curdate + '" class="img-responsive ombre-image"></a>'); 
 			break;
 		case 'ecluzelles' :
-			$("#historique-vent-ecluzelles").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/dreux/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-ecluzelles").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/dreux/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-ecluzelles").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/louviers/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/dreux/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-rose-ecluzelles").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/louviers/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/dreux/' + curdate + '" class="img-responsive ombre-image"></a>'); 
 			break;
 		case 'jablines' :
-			$("#historique-vent-jablines").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-jablines").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-jablines").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-rose-jablines").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/torcy/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image"></a>'); 
 			break;
 		case 'vaires' :
-			$("#historique-vent-vaires").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-vaires").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-vaires").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/torcy/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-rose-vaires").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/torcy/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/torcy/' + curdate + '" class="img-responsive ombre-image"></a>'); 
 			break;
 		case 'grandeparoisse' :
-			$("#historique-vent-grandeparoisse").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/montereau-fault-yonne/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-grandeparoisse").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/montereau-fault-yonne/' + curdate + '" class="img-responsive ombre-image">'); 
+			$("#historique-vent-grandeparoisse").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/montereau-fault-yonne/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/montereau-fault-yonne/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-rose-grandeparoisse").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/montereau-fault-yonne/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/montereau-fault-yonne/' + curdate + '" class="img-responsive ombre-image"></a>'); 
 			break;
 		case 'foretorient' :
-			$("#historique-vent-foretorient").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-rose-foretorient").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '" class="img-responsive ombre-image">'); 
-			$("#historique-niveau-foretorient").html('<img src="images/loading.gif" class="loader"><img onload="imageChargee(this)" src="http://meteoflask.herokuapp.com/niveau/" class="img-responsive ombre-image">');
+			$("#historique-vent-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/plot/lusigny-sur-barse/vent/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-rose-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/rose/lusigny-sur-barse/' + curdate + '" class="img-responsive ombre-image"></a>'); 
+			$("#historique-niveau-foretorient").html('<img src="images/loading.gif" class="loader"><a target="_blank" href="https://meteoflask.herokuapp.com/niveau/' + curdate + '"><img onload="imageChargee(this)" src="https://meteoflask.herokuapp.com/niveau/" class="img-responsive ombre-image"></a>');
 			break;
 	}		
 
