@@ -43,7 +43,7 @@
 merci de votre visite, à bientôt...
 </p>
 </div>
-</div><div class="row"><p class="numero-page">page 26</p>	
+</div><div class="row"><p class="numero-page">page 27</p>	
 
 </div></div>
 

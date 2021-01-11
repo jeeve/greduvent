@@ -123,11 +123,11 @@ du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font 
    
 <br><br>
 <div id="swipe"><div class="row">
-<div class="col-xs-4"><p><a id="page-precedente" href="../science/science.php">e^(i.pi)+1=0</a></p></div>
+<div class="col-xs-4"><p><a id="page-precedente" href="../outils/outils.php">la boite à outils</a></p></div>
 <div class="col-xs-8">
 <p align="right"><a id="page-suivante" href="../commentaires/commentaires.php">et vous ?</a></p>
 </div></div><div class="row">
-<p class="numero-page">page 25</p></div></div>
+<p class="numero-page">page 26</p></div></div>
 				 
 				 
                </div>

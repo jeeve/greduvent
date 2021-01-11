@@ -2217,7 +2217,7 @@
 				  <div id="swipe"><div class="row">
 				  <div class="col-xs-2"><p><a id="page-precedente" href="../informatique/informatique.php">01101</a></p></div>
                   <div class="col-xs-10">
-				  <p align="right"><a id="page-suivante" href="../a-propos/a-propos.php">à propos...</a></p>
+				  <p align="right"><a id="page-suivante" href="../outils/outils.php">la boite à outils</a></p>
 				  </div></div><div class="row"><p class="numero-page">page 24</p>	
  
 </div></div>

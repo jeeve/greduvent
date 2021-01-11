@@ -51,6 +51,7 @@
 					</ul>	
 				  </li>					  
                   <li><a href="/science/science.php">e^(i.pi)+1=0</a></li>
+				  <li><a href="/outils/outils.php">la boite à outils</a></li>
                   <li><a href="/a-propos/a-propos.php">à propos...</a></li>
                   <li><a href="/commentaires/commentaires.php">et vous ?</a></li>
                </ul>
