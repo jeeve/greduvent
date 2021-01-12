@@ -19,7 +19,7 @@
 								
 								<br>
 						<ul class="sommaire">
-								<li><a target="_blank" href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers SML en GPX</a></li>
+								<li style="text-align: left;"><a target="_blank" href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers SML en GPX</a></li>
 								</ul>
 								
 								
