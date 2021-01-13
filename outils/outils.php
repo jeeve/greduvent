@@ -17,10 +17,12 @@
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
                   <h1>la boite à outils</h1>
 								
-								<br>
-						<ul class="sommaire">
-								<li style="text-align: left;"><a target="_blank" href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers SML en GPX</a></li>
-								</ul>
+								<br><br>
+								
+								<h2>GPS</h2>
+						<p>
+								<a target="_blank" href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers Suunto SML en GPX</a>
+								</p>
 								
 								
 								
