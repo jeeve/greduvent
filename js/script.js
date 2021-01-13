@@ -11,7 +11,7 @@ $(document).ready(function() {
 					//	document.location.href.indexOf('sommaire') == - 1 &&
                         $(this).children('img').length == 0 && 
 						$(this).children('span').length == 0 &&  
-						$(this).text().indexOf('herokuapp') == -1
+						$(this).text().indexOf('herokuapp') == -1 &&
                         $(this).text().indexOf('@') == -1 // && $(this).text().indexOf('contrib') == -1;
 	}).addClass('external').attr("target","_blank");;
 /*
