@@ -107,7 +107,7 @@
 				</div>
 				<div class="col-xs-5">	
 				  <p style="text-align:right;">
-				  <a href="#commentaires">Un commentaire sur cette page, une suggestion, un problème... <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+				  <a href="#outils">outils</a> - <a href="#commentaires">commentaires</a>
 				  </p>
 				 </div>
 				</div> 
@@ -1022,6 +1022,22 @@
 </div>
 </div>
 -->
+
+<br>
+
+
+<div class="row">
+<div class="col-xs-12 fond">
+				  <a name="outils"></a>
+				  <h2>Outils</h2>
+				 <p>
+								<a target="_blank" href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers SML en GPX</a>
+								</p>
+
+</div>
+</div>
+
+
 <br>
 
 
