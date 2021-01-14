@@ -245,7 +245,7 @@
 </div> 	
 
 <div id="item-histo-poses" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-poses" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
@@ -354,7 +354,7 @@
 </div> 	
 
 <div id="item-histo-moisson" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-moisson" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
@@ -453,7 +453,7 @@
 </div> 	
 
 <div id="item-histo-ecluzelles" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-ecluzelles" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
@@ -641,7 +641,7 @@
 </div> 	
 
 <div id="item-histo-jablines" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-jablines" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
@@ -740,7 +740,7 @@
 </div> 
 					
 <div id="item-histo-vaires" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-vaires" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
@@ -842,7 +842,7 @@
 </div> 			
 					
 <div id="item-histo-grandeparoisse" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-grandeparoisse" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>
@@ -931,12 +931,16 @@
 			</div>
 			
 <div id="item-webcam-foretorient" class="collapse">			
-
-<p> 
-<a id="lien-vwebcam-viewsurf-foret-orient" href="https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac" target="_blank">Viewsurf</a>
-</p>
- <br>
-</div> 	
+  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+    
+	<video id="video-foret-orient" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
+	<div class="webcam-texte">
+		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
+	</div>
+	  
+  </div> 
+  <br>
+</div>	
 
 <div id="item-infos-foretorient" class="collapse">
 <div class="infoForetOrient"></div> 
@@ -944,7 +948,7 @@
 </div> 
 
 <div id="item-histo-foretorient" class="collapse histo">
-    <form id="datetimeform">
+    <form class="datetimeform">
 		<div><p><label for="ma-date" style="margin-right: 10px;">Date <span style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;" id="ma-date-foretorient" type="text" name="date" value="25/02/2017"></input></p></div>
 	</form>
     <br>

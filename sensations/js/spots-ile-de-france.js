@@ -114,7 +114,7 @@
 				dataType: 'json'
 			}).then(function(data) {
 				console.log(data.src);
-				jQuery('#lien-vwebcam-viewsurf-foret-orient').attr('href', data.src);
+				jQuery('#video-foret-orient').attr('href', data.src);
 		});
 		}			
 		
@@ -331,9 +331,4 @@
 			})
 				
 				
-				
-		
-		
-				
-			//getWebCams();	 
 		});

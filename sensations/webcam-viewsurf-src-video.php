@@ -49,9 +49,16 @@
 		
 if ($url == "https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac") {
 	$lines = file($url);
+	/*
 	$line = $lines[getLigne($lines, "https://platforms5.joada.net/embeded/embeded.html")];	
 	$k = strpos($line, "src");
 	$line2 = substr($line, $k + 5, strlen($line) - $k - 8);
+	*/
+	$line = $lines[getLigne($lines, ".mp4")];	
+	$k = strpos($line, "src");
+	$l = strpos($line, ".mp4");
+	$line2 = substr($line, $k + 6, strlen($line) - $k - 9);
+	
 	}	
 		
 	$arr = array('src' => $line2);
