@@ -30,7 +30,7 @@
 			getWebCamEuroDisney();
 			getWebCamGrandeParoisse();
 			getWebCamEcluzelles();
-			//getWebCamForetOrient();
+			// getWebCamForetOrient();
 		}
 		
 		function getWebCamPoses() {
@@ -114,7 +114,7 @@
 				dataType: 'json'
 			}).then(function(data) {
 				console.log(data.src);
-				jQuery('#video-foret-orient').attr('href', data.src);
+				jQuery('#video-foret-orient').attr('href', "https://pv.viewsurf.com/1084/Lac-d-Orient");
 		});
 		}			
 		
