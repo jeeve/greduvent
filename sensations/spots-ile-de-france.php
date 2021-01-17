@@ -106,6 +106,7 @@
                   <h1>Les spots d'Ile-de-France</h1>
 				</div>
 				<div class="col-xs-5">	
+				<br>
 				  <p style="text-align:right;">
 				  <a href="#outils">outils</a> - <a href="#commentaires">commentaires</a>
 				  </p>
