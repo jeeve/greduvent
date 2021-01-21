@@ -67,12 +67,12 @@
 	</div>
 	
 	<div class="webcam">
-	<div class="embed-responsive embed-responsive-16by9 ombre-image">
+	<div class="ombre-image">
 	    <div>
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
 	<div class="hidden-xs webcam-titre">
-		<p><a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">Porte de Bagnolet</a>, visualisation de l'accès au Boulevard périphérique par l'autoroute A3</p>  
+		<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  
 	</div>
 				<div class="hidden-xs webcam-texte">
 				  <table>
@@ -289,6 +289,7 @@
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script> 
 	    function getWebCam() {
+			/*
 			jQuery.ajax({
 				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
 				type: 'GET',
@@ -298,6 +299,9 @@
 				console.log(data.src);
 			jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);	
 			});
+			*/
+						jQuery('#videojs-viewsurf_html5_api').replaceWith('<img src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg" class="img-responsive"/>');
+
 		}	    	
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  

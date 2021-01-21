@@ -625,11 +625,11 @@
 			</div>
 			   
 <div id="item-webcam-jablines" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+  <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
     
 	<video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p><a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">Porte de bagnolet</a> , visualisation de l'accès au Boulevard périphérique par l'autoroute A3</p>  
+		<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  
 	</div>
 	  
   </div> 
@@ -728,8 +728,7 @@
     
 	<video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
-		<p><a href="https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims" target="_blank">Porte de bagnolet</a> ,visualisation de l'accès au Boulevard périphérique par l'autoroute A3</p>  
-	</div>
+<p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand ballon</a></p>  	</div>
 	  
   </div> 
   <br>
