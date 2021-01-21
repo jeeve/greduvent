@@ -724,7 +724,7 @@
 			   </div>
 			   
 <div id="item-webcam-vaires" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+  <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
     
 	<video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
