@@ -78,7 +78,7 @@ function getInfoSessions(spot) {
 					if (leCommentaire != '') {
 						html = html + '<tr><td colspan="2">' + leCommentaire + '</td></tr>';
 					}
-					html = html + '<tr><td colspan="2"><a href="' + location.pathname + '?session=' + ancre + '">#Permalien</a></td></tr>';
+					html = html + '<tr><td colspan="2"><a href="' + location.pathname + '?session=' + ancre + '">#permalien</a></td></tr>';
 					html = html + '</table></div></div>';
 					
 					html = html + '</div>';
