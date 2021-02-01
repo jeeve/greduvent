@@ -7,7 +7,7 @@ function getInfoSessions(spot) {
 	}).then(function(data) {
 			var ligne, html, ancre;
 			html = '';
-			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile;
+			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 				
 				ligne = data.feed.entry[i];
@@ -34,6 +34,11 @@ function getInfoSessions(spot) {
 					voile = ligne.gsx$voile.$t;
 					aileron = ligne.gsx$aileron.$t;
 					aile = ligne.gsx$aile.$t;
+					reglage = ligne.gsx$réglage.$t;
+					if (reglage != '') {
+						reglage = ' R' + reglage;
+					}
+					
 					distance = ligne.gsx$distancekm.$t;
 					vmax = ligne.gsx$vmaxk72noeuds.$t;
 					v100m = ligne.gsx$v100mk72.$t;
@@ -59,7 +64,7 @@ function getInfoSessions(spot) {
 						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
 					}
 					if (aile != '') {
-						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + '</td></tr>';
+						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + reglage + '</td></tr>';
 					}
 					else {		
 						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
