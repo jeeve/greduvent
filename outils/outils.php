@@ -21,7 +21,7 @@
 								
 								<h2>GPS</h2>
 						<p>
-								<a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers Suunto SML en GPX</a>
+								<a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers FIT et SML en GPX</a>
 								</p>
 								
 								

@@ -1035,7 +1035,7 @@
 				  <a name="outils"></a>
 				  <h2>Outils</h2>
 				 <p>
-								<a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers SML en GPX</a>
+								<a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers FIT et SML en GPX</a>
 								</p>
 
 </div>
