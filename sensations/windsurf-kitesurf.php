@@ -146,6 +146,18 @@
 		<h2 align="center"><a target="_blank" href="http://windsurf-sessions.eg2.fr/mws_new/rider_sessions.php?id_rider=3185">Récits de sessions</a></h2>   
       </p>
 	  </td></tr></tbody></table></div>
+
+
+<br>	  
+<div class="row">
+  <div class="col-xs-12 col-sm-1 fond"></div>
+  <div class="col-xs-12 col-sm-10 fond">
+    <div id="chart_div_2" class="chart fond ombre-image"></div>
+	<p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windfoil</a></p>
+  </div>
+</div>
+<br>   
+
 	  
 <br>	  
 <div class="row">
@@ -157,15 +169,6 @@
 </div>
 <br>	
 
-<br>	  
-<div class="row">
-  <div class="col-xs-12 col-sm-1 fond"></div>
-  <div class="col-xs-12 col-sm-10 fond">
-    <div id="chart_div_2" class="chart fond ombre-image"></div>
-	<p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windfoil</a></p>
-  </div>
-</div>
-<br>   
 
 				
 				  <a name="ca-zef-au-crotoy"></a>
