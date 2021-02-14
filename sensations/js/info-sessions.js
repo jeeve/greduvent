@@ -64,7 +64,8 @@ function getInfoSessions(spot) {
 						html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
 					}
 					if (aile != '') {
-						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + reglage + '</td></tr>';
+						//html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + reglage + '</td></tr>';
+						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + '</td></tr>';
 					}
 					else {		
 						html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
