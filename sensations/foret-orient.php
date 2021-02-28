@@ -291,6 +291,7 @@
 	  <script src="js/jquery-ui.min.js"></script>	  
 	  <script type="text/javascript" src="js/meteo.js"></script>	  
       <script>  
+/*
 	    function getWebCam() {
 			jQuery.ajax({
 				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon',
@@ -302,7 +303,7 @@
 			jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);	
 			});
 		}
-		
+*/		
 	function maPosition(position) {		
 			var lat1 = position.coords.latitude;
 			var lon1 = position.coords.longitude;	
@@ -311,15 +312,15 @@
 	}
 		
 		
-		var myCam = setInterval(getWebCam, 30000);	// 30 s
+//		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
 	    station = "lusigny-sur-barse";
 		var myVar =	setInterval(getMeteo, 30000);	
          
-		 $(document).ready(function($) {	
+		jQuery(document).ready(function($) {	
 			getInfoSpot();
 			getInfoSessions('Foret-Orient');
-			getWebCam();		 
+			//getWebCam();		 
 			getMeteo();
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(maPosition);
@@ -328,7 +329,7 @@
 				initHistorique('foretorient');
 	getHistoriqueVent('foretorient');
 	
-				$( "#ma-date-foretorient" ).change(function() {
+				jQuery( "#ma-date-foretorient" ).change(function() {
 			 getHistoriqueVent('foretorient');
 			});
 			
