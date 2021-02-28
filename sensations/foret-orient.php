@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
    <head>
-      <title>Lac de la Forêt d'Orient</title>
+      <title>La Forêt d'Orient</title>
       <META NAME="Description" CONTENT="Tout sur le lac de la Forêt d'Orient."/>
 	  <?php include("../includes/header.php"); ?>	  
 	  <link rel="stylesheet" href="css/jquery-ui.min.css">	  
@@ -43,7 +43,7 @@
                <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
 			   
-			    <h1>Lac de la Forêt d'Orient</h1> 
+			    <h1>La Forêt d'Orient</h1> 
                <div class="row">
 			   
 				 <div class="col-xs-12 col-sm-8 fond">

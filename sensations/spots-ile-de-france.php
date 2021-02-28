@@ -907,7 +907,7 @@
 
 
 			   <a name="foret-orient"></a>
-			    <h2><input id="div-foret-orient" type="button" value=" - " data-toggle="collapse" data-target="#item-div-foret-orient" />  La Forêt d'Orient</h2>
+			    <h2><input id="div-foret-orient" type="button" value=" - " data-toggle="collapse" data-target="#item-div-foret-orient" />  <a href="foret-orient.php">La Forêt d'Orient</a></h2>
 <div id="item-div-foret-orient" class="collapse in">					
 				
 				
