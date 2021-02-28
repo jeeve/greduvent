@@ -57,6 +57,7 @@
 		echo getSommaireItem('../sensations/jablines.php');		
 		echo getSommaireItem('../sensations/vaires-sur-marne.php');
 		echo getSommaireItem('../sensations/grande-paroisse.php');
+		echo getSommaireItem('../sensations/foret-orient.php');
 		echo getSommaireItem('../sensations/powerkite.php');
 	echo '</ul>';	
 	echo getSommaireItem('../emotions/emotions.php'); 

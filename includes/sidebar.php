@@ -32,6 +32,7 @@
 						<li><a href="/sensations/jablines.php">Jablines</a></li>						
 						<li><a href="/sensations/vaires-sur-marne.php">Vaires-sur-Marne</a></li>
 						<li><a href="/sensations/grande-paroisse.php">la Grande-Paroisse</a></li>
+						<li><a href="/sensations/foret-orient.php">lac de la Forêt d'Orient</a></li>
 						<li><a href="/sensations/powerkite.php">powerkite</a></li>
 					</ul>
 				  </li>
