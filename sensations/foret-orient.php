@@ -313,7 +313,7 @@
 		
 		var myCam = setInterval(getWebCam, 30000);	// 30 s
 	  
-	    station = "Montereau-Fault-Yonne";
+	    station = "lusigny-sur-barse";
 		var myVar =	setInterval(getMeteo, 30000);	
          
 		 $(document).ready(function($) {	
