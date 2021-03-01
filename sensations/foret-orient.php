@@ -307,6 +307,7 @@
 	function maPosition(position) {		
 			var lat1 = position.coords.latitude;
 			var lon1 = position.coords.longitude;	
+			console.log("posistion ok");
 			var itineraireSrc = 'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d' + lat1 + '!2d' + lon1 + '!4m5!';	
 			jQuery('#map-foret-orient').attr('src', itineraireSrc + '1s0x47ec2375d1e1f51d%3A0x40a5fb99a3f4060!2s10140%20Mesnil-Saint-P%C3%A8re!3m2!1d48.248976899999995!2d4.333515!5e0!3m2!1sfr!2sfr!4v1614520308696');
 	}
@@ -318,11 +319,13 @@
 		var myVar =	setInterval(getMeteo, 30000);	
          
 		jQuery(document).ready(function($) {	
+			console.log("ready");
 			getInfoSpot();
 			getInfoSessions('Foret-Orient');
 			//getWebCam();		 
 			getMeteo();
 			if (navigator.geolocation) {
+				console.log("navigator");
 				navigator.geolocation.getCurrentPosition(maPosition);
 			}
 			
@@ -335,12 +338,20 @@
 			
 
 		 });
+		 
+		 			jQuery.ajax({
+				url: "niveau-foret-orient.php",
+				type: 'GET',
+				crossDomain: true,
+				dataType: 'json'
+			}).then(function(data) {
+				jQuery(".niveau-foret-orient").replaceWith(data.value);
+			})
 	  </script>	
   
 <script type="text/javascript" src="js/info-spot.js"></script>
 <script type="text/javascript" src="js/info-sessions.js"></script>
 	  <script type="text/javascript" src="js/historique-vent.js"></script> 
-	  <script type="text/javascript" src="js/spots-ile-de-france.js"></script>
 	  
    </body>
 </html>
