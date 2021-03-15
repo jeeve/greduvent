@@ -170,7 +170,14 @@
 <br>	
 
 
-				
+
+				  <p align="center">
+				  <a href="https://windsurf-sessions.eg2.fr/mws_new/infos_session.php?target=id_rider&id_rider=3185&id_session=260968" target="_blank">
+				  <img alt="Jablines - 20 février 2021 - prise de vue Olive91" title="Jablines - 20 février 2021 - prise de vue Olive91" src="images/v8-foil.jpg" class="img-responsive ombre-image" />
+				  </a>
+				  </p>
+				  <p class="legende"><a href="https://windsurf-sessions.eg2.fr/mws_new/infos_session.php?target=id_rider&id_rider=3185&id_session=260968" target="_blank">En vol à Jablines</a></p>
+
 				  <a name="ca-zef-au-crotoy"></a>
 				  <p align="center">
 				  <a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">
