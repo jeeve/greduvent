@@ -183,7 +183,7 @@
     <div class="item"> <img src="images/diapos/david-foil.jpg" alt="Moisson Lavacourt - 4 juillet 2020" title="Moisson Lavacourt - 4 juillet 2020"></div>
 	<div class="item"> <img src="images/diapos/tintin-drone2.jpg" alt="Moisson Lavacourt - 25 juillet 2020" title="Moisson Lavacourt - 25 juillet 2020"></div>
 	<div class="item"> <img src="images/diapos/mimi-foil.jpg" alt="Moisson Lavacourt - 12 juillet 2020 - photo Mireille M." title="Moisson Lavacourt - 12 juillet 2020 - photo Mireille M."></div>
-	<div class="item"> <img src="images/diapos/david-haas-foil.jpg" alt="Les Haas - 3 août 2020 - photo David M." title="Les Haas - 3 août 2020 - photo David M."></div>
+	<div class="item"> <img src="images/diapos/david-haas-foil.jpg" alt="Les Haas - 3 août 2020 - photo Kumi H." title="Les Haas - 3 août 2020 - photo Kumi H."></div>
 	<div class="item"> <img src="images/diapos/v8-foil.jpg" alt="Jablines - 20 février 2021 - photo Olive91" title="Jablines - 20 février 2021 - photo Olive91"></div>
  </div>
   <!-- Controls -->
