@@ -124,6 +124,7 @@ function getHistoriqueVent(spot) {
 
 function imageChargee(elt) {
 	jQuery(elt).parent().prev().css('display', 'none');
+	goSession();
 }
 
 
