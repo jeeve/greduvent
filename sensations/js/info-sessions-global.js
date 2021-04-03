@@ -5,8 +5,8 @@ function getInfoSessions() {
 		crossDomain: true,
 		dataType: 'json'
 	}).then(function(data) {
-			var ligne, html, ancre, ligne0, dateheure0, res0, premiereLigne;
-            premiereLigne = true;
+			var ligne, html, ancre, ligne0, dateheure0, res0, annee;
+            premiereAnnee = true;
 			html = '';
 			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
@@ -19,17 +19,18 @@ function getInfoSessions() {
                     dateheure = ligne.gsx$date.$t;
                     laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
                     res = laDate.split("/");
+                    annee = res[2];
 
                     if (i < data.feed.entry.length-1) {
                         ligne0 = data.feed.entry[i+1];
                         dateheure0 = ligne0.gsx$date.$t;
                         res0 = dateheure0.split("/");
                         if (res[2] != res0[2]) {
-                            html = html + '<h3>' + res[2] + '</h3>';   
+                            html = html + '<h3 class="titre-annee" data-annee="' + annee + '">' + annee + '</h3>';   
                         }
                     }
 
-                    laDate = res[1] + '/' + res[0] + '/' + res[2];
+                    laDate = res[1] + '/' + res[0] + '/' + annee;
 
                     trace = ligne.gsx$tracemontre.$t;
                     if (trace == "") {
@@ -58,7 +59,7 @@ function getInfoSessions() {
 
                     ancre = laDate.replace(new RegExp('/', 'g'), '-');
 
-                    html = html + '<br><div id="' + ancre + '" class="row"><div class="col-sm-8 fond">';
+                    html = html + '<div id="' + ancre + '" class="row session" data-annee="' + annee + '" style="display: none;"><div class="col-sm-8 fond">'; 
 
                     if (laVideo != '') {
                         html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><img class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"></a></p>';
@@ -104,13 +105,19 @@ function getInfoSessions() {
 
                     html = html + '</div>';
 
-                    premiereLigne = false;
-
                 }
 			
 			}
             $('#sessions').html(html);    
-		goSession();	
+		goSession();
+
+        $(document).ready(function() {
+            $('.titre-annee').click(function() {
+                var a = $(this).attr("data-annee");
+                $('.session[data-annee="' + a + '"]').toggle();
+            });
+        });	
+
 	});
 }
 
@@ -132,5 +139,7 @@ function goSession() {
 		}, "slow");
 	}
 }
+
+
 	
 

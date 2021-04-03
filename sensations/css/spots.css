@@ -120,3 +120,14 @@ label {
 	padding: 0px;
 	font-weight: bold;
 }
+
+#sessions .titre-annee {
+	cursor: pointer;
+	text-decoration: underline;
+	margin-top: 10px;	
+	color:#337ab7;
+}
+
+#sessions .session {
+	padding-top: 20px;
+}
