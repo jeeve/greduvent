@@ -47,15 +47,13 @@ function getInfoSessions() {
 
                     ancre = laDate.replace(new RegExp('/', 'g'), '-');
 
-                    html = html + '<br><div id="' + ancre + '" class="row"><div class="col-sm-2 fond">';
-/*
+                    html = html + '<br><div id="' + ancre + '" class="row"><div class="col-sm-8 fond">';
+
                     if (laVideo != '') {
-                        html = html + '<p align="center"><div class="embed-responsive embed-responsive-16by9 ombre-image">' +
-                            '<iframe width="560" height="315" src="https://www.youtube.com/embed/';
-                        html = html + codeYoutube + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div></p>';
+                        html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><img class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"></a></p>';
                     }
-*/
-                    html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-8"><div class="fond-table encadrement-table"><table class="info-sessions">';
+
+                    html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
                     html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
                     html = html + '</td><td>Spot</td><td>' + leSpot + '</td></tr>';
                     if (ventMini != '' && ventMaxi != '') {
@@ -85,11 +83,11 @@ function getInfoSessions() {
                     if (leCommentaire != '') {
                         html = html + '<tr><td colspan="2">' + leCommentaire + '</td></tr>';
                     }
-
+/*
                     if (laVideo != '') {
                         html = html + '<tr><td colspan="2"><a target="_blank" href="' + laVideo + '">Vidéo</a></td></tr>';
                     }    
-
+*/
                     html = html + '<tr><td colspan="2"><a href="' + location.pathname + '?session=' + ancre + '">#permalien</a></td></tr>';
                     html = html + '</table></div></div>';
 
