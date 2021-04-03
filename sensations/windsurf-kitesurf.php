@@ -4,6 +4,7 @@
       <title>windsurf / kitesurf</title>
       <META NAME="Description" CONTENT="La passion du windsurf et du kite. Equipement, sessions, vidéos."/>
 	  <?php include("../includes/header.php"); ?>
+	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>	  
 		<style>
 			.chart {
   width: 100%; 
@@ -239,7 +240,7 @@
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="lac-lery-poses.php">Léry-Poses</a>, jeudi 10 mai 2018<br>
+				  <a href="lery-poses.php">Léry-Poses</a>, jeudi 10 mai 2018<br>
 				  Le jour où j'ai filmé Phil95.
 				  </p>
 				  </div></div>	
@@ -273,8 +274,13 @@
 				  Planche à voile à <a href="../mer/saint-jacut.php">Saint-Jacut de la Mer</a>, août 2017
 				  </p>
 				  </div></div>				 
-			  
-														  
+
+				<br><br>	
+				  <h2>Liste des sessions</h2>
+				  <div id="sessions"></div>	
+				  <br>
+					
+
 				  				  
 			<br>
 			<div id="swipe"><div class="row">
@@ -295,6 +301,7 @@
       <!--/.page-container-->
 	  <?php include("../includes/footer.php"); ?>	
 	  <?php include("../includes/swipe-diapo.php"); ?>
+	  <script type="text/javascript" src="js/info-sessions-global.js"></script>
       <script src="https://www.google.com/jsapi"></script> 	  
       <script> 
 	  var vitesses1 = [];
@@ -349,6 +356,7 @@
 				drawChart1();
 				drawChart2();
 			});
+			 
 		});
 	  	  
 google.load("visualization", "1", {packages:["corechart"]});
@@ -382,6 +390,11 @@ $(window).resize(function(){
   drawChart1();
   drawChart2();  
 });
+
+$(document).ready(function($) {
+			getInfoSessions();
+		}
+);
 
 // Reminder: you need to put https://www.google.com/jsapi in the head of your document or as an external resource on codepen //	
 	  </script>	

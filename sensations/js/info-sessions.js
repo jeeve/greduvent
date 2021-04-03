@@ -111,7 +111,7 @@ function goSession() {
 	var d = getParameterByName('session');
 	if (d != null) {
 	    jQuery("html, body").animate({
-			scrollTop : jQuery('#' + d).offset().top + 50
+			scrollTop : jQuery('#' + d).offset().top - 50
 		}, "slow");
 	}
 }
