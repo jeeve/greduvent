@@ -26,7 +26,7 @@ function getInfoSessions() {
                         dateheure0 = ligne0.gsx$date.$t;
                         res0 = dateheure0.split("/");
                         if (res[2] != res0[2]) {
-                            html = html + '<h3 class="titre-annee" data-annee="' + annee + '">' + annee + '</h3>';   
+                            html = html + '<h3 class="titre-annee" data-annee="' + annee + '">+ ' + annee + '</h3>';   
                         }
                     }
 
@@ -108,15 +108,22 @@ function getInfoSessions() {
                 }
 			
 			}
-            $('#sessions').html(html);    
-		goSession();
-
+            $('#sessions').html(html);
+            
+            goSession();
+ 
         $(document).ready(function() {
             $('.titre-annee').click(function() {
                 var a = $(this).attr("data-annee");
                 $('.session[data-annee="' + a + '"]').toggle();
+                if ($(this).text().indexOf('+') > -1) {
+                    $(this).text($(this).text().replace('+', '-'));  
+                }
+                else {
+                    $(this).text($(this).text().replace('-', '+'));
+                }
             });
-        });	
+       });	
 
 	});
 }
@@ -134,6 +141,16 @@ function getParameterByName(name, url) {
 function goSession() {
 	var d = getParameterByName('session');
 	if (d != null) {
+        var words = d.split('-');
+        var a = words[2];
+        $('.session[data-annee="' + a + '"]').show();
+        if ($('.titre-annee[data-annee="' + a + '"]').text().indexOf('+') > -1) {
+            $('.titre-annee[data-annee="' + a + '"]').text($('.titre-annee[data-annee="' + a + '"]').text().replace('+', '-'));  
+        }
+        else {
+            $('.titre-annee[data-annee="' + a + '"]').text($('.titre-annee[data-annee="' + a + '"]').text().replace('-', '+'));
+        }
+
 	    jQuery("html, body").animate({
 			scrollTop : jQuery('#' + d).offset().top - 50
 		}, "slow");
