@@ -91,7 +91,10 @@ function getInfoSessions() {
                         case 'La Justice' :
                             spotURL = '/mer/saint-jacut.php';
                             break;
-                         case 'Les Haas' :
+                        case 'Pissotte' :
+                            spotURL = '/mer/saint-jacut.php';
+                            break;
+                        case 'Les Haas' :
                             spotURL = '/mer/saint-jacut.php';
                             break;
                         case 'Grande-Paroisse' :
