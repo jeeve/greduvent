@@ -26,7 +26,7 @@ function getInfoSessions() {
                         dateheure0 = ligne0.gsx$date.$t;
                         res0 = dateheure0.split("/");
                         if (res[2] != res0[2]) {
-                            html = html + '<h3 class="titre-annee" data-annee="' + annee + '">+ ' + annee + '</h3>';   
+                            html = html + '<h3 class="titre-annee" data-annee="' + annee + '">+ <span class="annee">' + annee + '</span></h3>';   
                         }
                     }
 
@@ -67,7 +67,45 @@ function getInfoSessions() {
 
                     html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
                     html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
-                    html = html + '</td><td>Spot</td><td>' + leSpot + '</td></tr>';
+                    
+                    var spotURL;
+                    switch (leSpot) {
+                        case 'Léry-Poses' :
+                            spotURL = '/sensations/lery-poses.php';
+                            break;
+                        case 'Vaires sur Marne' : 
+                            spotURL = '/sensations/vaires-sur-marne.php';
+                            break;
+                        case 'Moisson' :
+                            spotURL = '/sensations/moisson.php';
+                            break;
+                         case 'Foret-Orient' :
+                            spotURL = '/sensations/foret-orient.php';
+                            break;
+                        case 'Jablines' :
+                            spotURL = '/sensations/jablines.php';
+                            break;
+                        case 'Mézières-Ecluzelles' :
+                            spotURL = '/sensations/ecluzelles.php';
+                            break;
+                        case 'La Justice' :
+                            spotURL = '/mer/saint-jacut.php';
+                            break;
+                         case 'Les Haas' :
+                            spotURL = '/mer/saint-jacut.php';
+                            break;
+                        case 'Grande-Paroisse' :
+                            spotURL = '/sensations/grande-paroisse.php';
+                            break;
+                        default :
+                            spotURL = '';
+                     }
+                    if (spotURL == '') {
+                        html = html + '</td><td>Spot</td><td>' + leSpot + '</td></tr>';
+                    }
+                    else {
+                        html = html + '</td><td>Spot</td><td><a href="' + spotURL + '">' + leSpot + '</a></td></tr>';
+                    }
                     if (ventMini != '' && ventMaxi != '') {
                         html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';
                     }
@@ -115,12 +153,12 @@ function getInfoSessions() {
         $(document).ready(function() {
             $('.titre-annee').click(function() {
                 var a = $(this).attr("data-annee");
-                $('.session[data-annee="' + a + '"]').toggle();
-                if ($(this).text().indexOf('+') > -1) {
-                    $(this).text($(this).text().replace('+', '-'));  
+                $('.session[data-annee="' + a + '"]').slideToggle( "slow", function() {});
+                if ($(this).html().indexOf('+') > -1) {
+                    $(this).html($(this).html().replace('+', '-'));  
                 }
                 else {
-                    $(this).text($(this).text().replace('-', '+'));
+                    $(this).html($(this).html().replace('-', '+'));
                 }
             });
        });	
@@ -144,11 +182,11 @@ function goSession() {
         var words = d.split('-');
         var a = words[2];
         $('.session[data-annee="' + a + '"]').show();
-        if ($('.titre-annee[data-annee="' + a + '"]').text().indexOf('+') > -1) {
-            $('.titre-annee[data-annee="' + a + '"]').text($('.titre-annee[data-annee="' + a + '"]').text().replace('+', '-'));  
+        if ($('.titre-annee[data-annee="' + a + '"]').html().indexOf('+') > -1) {
+            $('.titre-annee[data-annee="' + a + '"]').html($('.titre-annee[data-annee="' + a + '"]').html().replace('+', '-'));  
         }
         else {
-            $('.titre-annee[data-annee="' + a + '"]').text($('.titre-annee[data-annee="' + a + '"]').text().replace('-', '+'));
+            $('.titre-annee[data-annee="' + a + '"]').html($('.titre-annee[data-annee="' + a + '"]').html().replace('-', '+'));
         }
 
 	    jQuery("html, body").animate({
