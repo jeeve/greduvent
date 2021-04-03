@@ -5,7 +5,8 @@ function getInfoSessions() {
 		crossDomain: true,
 		dataType: 'json'
 	}).then(function(data) {
-			var ligne, html, ancre;
+			var ligne, html, ancre, ligne0, dateheure0, res0, premiereLigne;
+            premiereLigne = true;
 			html = '';
 			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
 			for (i=data.feed.entry.length-1; i >= 0 ; i--) {
@@ -18,6 +19,16 @@ function getInfoSessions() {
                     dateheure = ligne.gsx$date.$t;
                     laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
                     res = laDate.split("/");
+
+                    if (i < data.feed.entry.length-1) {
+                        ligne0 = data.feed.entry[i+1];
+                        dateheure0 = ligne0.gsx$date.$t;
+                        res0 = dateheure0.split("/");
+                        if (res[2] != res0[2]) {
+                            html = html + '<h3>' + res[2] + '</h3>';   
+                        }
+                    }
+
                     laDate = res[1] + '/' + res[0] + '/' + res[2];
 
                     trace = ligne.gsx$tracemontre.$t;
@@ -93,12 +104,12 @@ function getInfoSessions() {
 
                     html = html + '</div>';
 
+                    premiereLigne = false;
 
-                    $('#sessions').html(html);
-
-            }
+                }
 			
 			}
+            $('#sessions').html(html);    
 		goSession();	
 	});
 }

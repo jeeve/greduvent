@@ -90,9 +90,10 @@ function getInfoSessions(spot) {
 					html = html + '</div>';
 					
 					
-					$('#sessions').html(html);
+					
 				}
 			}
+			$('#sessions').html(html);
 		goSession();	
 	});
 }
