@@ -214,7 +214,7 @@
 		<p><input type="button" value="Orientations" data-target="#item-vue-poses" class="btn-releve" /> - <input type="button" value="Webcam" data-target="#item-webcam-poses" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-poses" value="Informations" class="btn-releve" /></span>
 <span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses" value="Infos" class="btn-releve"/></span> - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-poses" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-poses" value="Histo" class="btn-releve"/></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-poses" value="Historique" class="btn-releve"/></span>
 </p>		
 			
 
@@ -327,7 +327,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-moisson" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-moisson" value="Infos" class="btn-releve"/></span>
  - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-moisson" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-moisson" value="Histo" class="btn-releve"/></span>
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-moisson" value="Historique" class="btn-releve"/></span>
 </p>				                								
                
 			   
@@ -426,7 +426,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-ecluzelles" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-ecluzelles" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-ecluzelles" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-ecluzelles" value="Histo" class="btn-releve"/></span></p>				                								
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-ecluzelles" value="Historique" class="btn-releve"/></span></p>				                								
                	   
 			   
 			<div id="item-vue-ecluzelles" class="collapse">
@@ -611,7 +611,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-jablines" value="Satellite" class="btn-releve" />  - <input type="button" data-toggle="collapse" data-target="#item-webcam-jablines" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-jablines" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-jablines" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-jablines" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-jablines" value="Histo" class="btn-releve"/></span></p>            								
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-jablines" value="Historique" class="btn-releve"/></span></p>            								
                
 	   
 			   
@@ -711,7 +711,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-vaires" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-vaires" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-vaires" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-vaires" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-vaires" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-vaires" value="Histo" class="btn-releve"/></span></p>             								
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-vaires" value="Historique" class="btn-releve"/></span></p>             								
  
 					
 						   
@@ -811,7 +811,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-grandeparoisse" value="Satellite" class="btn-releve" /> - <input type="button" data-toggle="collapse" data-target="#item-webcam-grandeparoisse" value="Webcam" class="btn-releve" /> - <span class="hidden-xs"><input type="button" data-target="#item-infos-grandeparoisse" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-grandeparoisse" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-grandeparoisse" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-grandeparoisse" value="Histo" class="btn-releve"/></span></p>		                								
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-grandeparoisse" value="Historique" class="btn-releve"/></span></p>		                								
 
 		   
 
@@ -918,7 +918,7 @@
 				<p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient" value="Satellite" class="btn-releve" /><!-- - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" />--> - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient" value="Informations" class="btn-releve" /></span><span class="visible-xs-inline"><input type="button" data-target="#item-infos-foretorient" value="Infos" class="btn-releve"/></span>
 				 - 
 <span class="hidden-xs"><input type="button" data-target="#item-histo-foretorient" value="Historique" class="btn-releve" /></span>
-<span class="visible-xs-inline"><input type="button" data-target="#item-histo-foretorient" value="Histo" class="btn-releve"/></span></p>		                								
+<span class="visible-xs-inline"><input type="button" data-target="#item-histo-foretorient" value="Historique" class="btn-releve"/></span></p>		                								
 
 		   
 
