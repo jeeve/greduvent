@@ -203,9 +203,9 @@ function goSession() {
 		}, "slow");
 	}
     else {
-        var annee;
-        annee = $('#sessions .titre-annee').first().attr('data-annee');
-        $('.session[data-annee="' + 2021 + '"]').show();
+        var premiereAnnee;
+        premiereAnnee = $('#sessions .titre-annee').first().attr('data-annee');
+        $('.session[data-annee="' + premiereAnnee + '"]').show();
     }
 }
 
