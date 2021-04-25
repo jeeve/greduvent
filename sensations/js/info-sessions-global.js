@@ -202,6 +202,11 @@ function goSession() {
 			scrollTop : jQuery('#' + d).offset().top - 50
 		}, "slow");
 	}
+    else {
+        var annee;
+        annee = $('#sessions .titre-annee').first().attr('data-annee');
+        $('.session[data-annee="' + 2021 + '"]').show();
+    }
 }
 
 
