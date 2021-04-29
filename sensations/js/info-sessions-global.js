@@ -21,6 +21,10 @@ function getInfoSessions() {
                     res = laDate.split("/");
                     annee = res[2];
 
+                    if (i == data.feed.entry.length-1) {
+                        html = html + '<h3 class="titre-annee" data-annee="' + annee + '">+ <span class="annee">' + annee + '</span></h3>';   
+                    }
+
                     if (i < data.feed.entry.length-1) {
                         ligne0 = data.feed.entry[i+1];
                         dateheure0 = ligne0.gsx$date.$t;
@@ -132,7 +136,9 @@ function getInfoSessions() {
                     if (vmax != '') {
                         html = html + '<tr><td>VMax</td><td>' + vmax + ' kts</td></tr>';
                     }
-                    html = html + '<tr><td>V100m</td><td>' + v100m + ' kts</td></tr>';
+                    if (v100m != '') {
+                        html = html + '<tr><td>V100m</td><td>' + v100m + ' kts</td></tr>';
+                    }
                     if (leCommentaire != '') {
                         html = html + '<tr><td colspan="2">' + leCommentaire + '</td></tr>';
                     }
@@ -196,6 +202,11 @@ function goSession() {
 			scrollTop : jQuery('#' + d).offset().top - 50
 		}, "slow");
 	}
+    else {
+        var premiereAnnee;
+        premiereAnnee = $('#sessions .titre-annee').first().attr('data-annee');
+        $('.session[data-annee="' + premiereAnnee + '"]').show();
+    }
 }
 
 

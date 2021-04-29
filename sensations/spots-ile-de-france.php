@@ -823,7 +823,7 @@
 			</div>
 			<br>
 			</div>
-			
+			 
 <div id="item-webcam-grandeparoisse" class="collapse">			
   <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
     
