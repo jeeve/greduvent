@@ -66,7 +66,7 @@ function getInfoSessions() {
                     html = html + '<div id="' + ancre + '" class="row session" data-annee="' + annee + '" style="display: none;"><div class="col-sm-8 fond">'; 
 
                     if (laVideo != '') {
-                        html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><img class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"></a></p>';
+                        html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><div><img class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"><img style="position: absolute; width: 50px; top: 10px;" src="images/lecture-video.png"></div></a></p>';
                     }
 
                     html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
@@ -205,6 +205,7 @@ function goSession() {
     else {
         var premiereAnnee;
         premiereAnnee = $('#sessions .titre-annee').first().attr('data-annee');
+        $('.titre-annee[data-annee="' + premiereAnnee + '"]').html($('.titre-annee[data-annee="' + premiereAnnee + '"]').html().replace('+', '-'));
         $('.session[data-annee="' + premiereAnnee + '"]').show();
     }
 }

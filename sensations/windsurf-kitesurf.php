@@ -181,11 +181,14 @@
     <div class="item active"> <img src="images/diapos/tintin-foil.jpg" alt="Jablines - 17 février 2021 - photo Tintin" title="Jablines - 17 février 2021 - photo Tintin"></div>
     <div class="item"> <img src="images/diapos/tintin-drone.jpg" alt="Moisson Lavacourt - 12 juillet 2020" title="Moisson Lavacourt - 12 juillet 2020"></div>
 	<div class="item"> <img src="images/diapos/haut.jpg" alt="Vaires sur Marne - 14 mars 2021" title="Vaires sur Marne - 14 mars 2021"></div>
-    <div class="item"> <img src="images/diapos/david-foil.jpg" alt="Moisson Lavacourt - 4 juillet 2020" title="Moisson Lavacourt - 4 juillet 2020"></div>
+    <div class="item"> <img src="images/diapos/david-foil.jpg" alt="Moisson Lavacourt - 4 juillet 2020 - photo Kumi H." title="Moisson Lavacourt - 4 juillet 2020 - photo Kumi H."></div>
 	<div class="item"> <img src="images/diapos/tintin-drone2.jpg" alt="Moisson Lavacourt - 25 juillet 2020" title="Moisson Lavacourt - 25 juillet 2020"></div>
 	<div class="item"> <img src="images/diapos/mimi-foil.jpg" alt="Moisson Lavacourt - 12 juillet 2020 - photo Mireille M." title="Moisson Lavacourt - 12 juillet 2020 - photo Mireille M."></div>
 	<div class="item"> <img src="images/diapos/david-haas-foil.jpg" alt="Les Haas - 3 août 2020 - photo Kumi H." title="Les Haas - 3 août 2020 - photo Kumi H."></div>
 	<div class="item"> <img src="images/diapos/v8-foil.jpg" alt="Jablines - 20 février 2021 - photo Olive91" title="Jablines - 20 février 2021 - photo Olive91"></div>
+	<div class="item"> <img src="images/diapos/windsurf-full-speed.jpg" alt="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." title="Le Crotoy - 16 mai 2011 - prise de vue Mireille M."></div>
+	<div class="item"> <img src="images/diapos/le-crotoy-kitesurf.jpg" alt="Kitesurf au Crotoy - 1er mai 2009 - prise de vue Mireille M." title="Kitesurf au Crotoy - 1er mai 2009 - prise de vue Mireille M."></div>
+	<div class="item"> <img src="images/diapos/run-beaussais.jpg" alt="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M." title="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M."></div>
  </div>
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -209,7 +212,7 @@
 				  </a>
 				  </p>
 				  <p class="legende"><a href="https://windsurf-sessions.eg2.fr/mws_new/infos_session.php?target=id_rider&id_rider=3185&id_session=260968" target="_blank">En vol à Jablines</a></p>
--->
+
 				  <a name="ca-zef-au-crotoy"></a>
 				  <p align="center">
 				  <a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">
@@ -227,7 +230,7 @@
 				  <p align="center">
 				  <img alt="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M." title="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M." src="images/run-beaussais.jpg" class="img-responsive ombre-image" />			  
 				  </p>
-
+-->
 				  <br>
 
 				  <br><a name="lery-poses-10-05-18"></a>
@@ -276,7 +279,7 @@
 				  </div></div>				 
 
 				<br><br>	
-				  <h2>Sessions en vidéo</h2>
+				  <h2><a href="https://docs.google.com/spreadsheets/d/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/edit?usp=sharing" target="_blank">Liste des sessions</a></h2>
 				  <div id="sessions"></div>	
 				  <br>
 					
