@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
    <head>
-      <title>windsurf / kitesurf</title>
+      <title>glisse</title>
       <META NAME="Description" CONTENT="La passion du windsurf et du kite. Equipement, sessions, vidéos."/>
 	  <?php include("../includes/header.php"); ?>
 	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>	  
@@ -25,7 +25,7 @@
 			   <?php include("../includes/sidebar.php"); ?>		
                <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
-                  <h1>windsurf / kitesurf</h1>
+                  <h1>glisse</h1>
 					<br>
 									  
 					<div class="row">

@@ -48,7 +48,7 @@
 	echo getSommaireItem('../impressions/impressions.php'); 
 	echo getSommaireItem('../sensations/sensations.php'); 
 	echo '<ul>';
-		echo getSommaireItem('../sensations/windsurf-kitesurf.php');
+		echo getSommaireItem('../sensations/glisse.php');
 		echo getSommaireItem('../sensations/spots-ile-de-france.php');		
 		echo getSommaireItem('../sensations/lery-poses.php');
 		echo getSommaireItem('../sensations/moisson.php');

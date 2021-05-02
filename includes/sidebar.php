@@ -23,7 +23,7 @@
                   <li><a href="/impressions/impressions.php">impressions</a></li>
                   <li><a href="/sensations/sensations.php">sensations</a>
 					<ul style="display: none;">
-						<li><a href="/sensations/windsurf-kitesurf.php">windsurf / kitesurf</a></li>
+						<li><a href="/sensations/glisse.php">glisse</a></li>
 						<li><a href="/sensations/spots-ile-de-france.php">les spots d'Ile-de-France</a></li>
 						<li><a href="/sensations/lery-poses.php">Léry-Poses</a></li>
 						<li><a href="/sensations/moisson.php">Moisson Lavacourt</a></li>
