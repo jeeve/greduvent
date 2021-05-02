@@ -279,7 +279,7 @@
 				  </div></div>				 
 
 				<br><br>	
-				  <h2><a href="https://docs.google.com/spreadsheets/d/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/edit?usp=sharing" target="_blank">Liste des sessions</a></h2>
+				  <h2>Liste des sessions</h2>
 				  <div id="sessions"></div>	
 				  <br>
 					
