@@ -25,7 +25,19 @@
 			   <?php include("../includes/sidebar.php"); ?>		
                <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
+
+			   <div class="row">
+				<div class="col-xs-7">
                   <h1>glisse</h1>
+				</div>
+				<div class="col-xs-5">	
+				<br>
+				  <p style="text-align:right;">
+				  <a href="#liste-sessions">Liste des sessions</a>
+				  </p>
+				 </div>
+				</div> 
+
 					<br>
 									  
 					<div class="row">
@@ -278,7 +290,8 @@
 				  </p>
 				  </div></div>				 
 
-				<br><br>	
+				<br><br>
+				<a name="liste-sessions"></a>	
 				  <h2>Liste des sessions</h2>
 				  <div id="sessions"></div>	
 				  <br>
