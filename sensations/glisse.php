@@ -33,7 +33,7 @@
 				<div class="col-xs-5">	
 				<br>
 				  <p style="text-align:right;">
-				  <a href="#liste-sessions">Liste des sessions</a>
+				  <a href="#liste-sessions">liste des sessions</a>
 				  </p>
 				 </div>
 				</div> 
