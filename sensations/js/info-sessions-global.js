@@ -104,6 +104,9 @@ function getInfoSessions() {
                         case 'Grande-Paroisse' :
                             spotURL = '/sensations/grande-paroisse.php';
                             break;
+                        case 'Saint-Quentin-en-Yvelines' :
+                            spotURL = '/sensations/saint-quentin-yvelines.php';
+                            break;                            
                         default :
                             spotURL = '';
                      }
