@@ -236,7 +236,7 @@
 					<br><br>		  
 				  
 				  
-				  <h2>Sessions en vidéo</h2>
+				  <h2>Liste des sessions</h2>
 
 <div id="sessions"></div>
 

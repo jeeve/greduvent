@@ -317,7 +317,7 @@
       <!--/.page-container-->
 	  <?php include("../includes/footer.php"); ?>	
 	  <?php include("../includes/swipe-diapo.php"); ?>
-	  <script type="text/javascript" src="js/info-sessions-global.js"></script>
+	  <script type="text/javascript" src="js/info-sessions.js"></script>
       <script src="https://www.google.com/jsapi"></script> 	  
       <script> 
 	  var vitesses1 = [];
@@ -408,7 +408,7 @@ $(window).resize(function(){
 });
 
 $(document).ready(function($) {
-			getInfoSessions();
+			getInfoSessions('');
 		}
 );
 
