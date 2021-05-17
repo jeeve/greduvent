@@ -90,7 +90,7 @@
 					<p><br></p>
 					<h2>Windfoil</h2>
 					<ul>
-						<li><p>flotteur&nbsp; JP Hydrofoil 135 modèle 2019<br>
+						<li><p>flotteur&nbsp; JP Hydrofoil 135 modèle 2018<br>
 						dimensions : 215 x 86 cm</p>
 						</li>
 						<li><p>foil Taaroa Noé Freerace modèle 2020<br>
@@ -116,7 +116,7 @@
 							 
 							 
 							 <p align="center"><br><br>
-<a href="http://windsurf-sessions.eg2.fr/mws_new/infos_rider.php?id_rider=3185"><img class ="img-responsive ombre-image" src="http://windsurf-sessions.eg2.fr/signatures/signature_3185.jpg" border="0" title="My Wind Sessions - Mon journal de navigation en ligne"></a>Powered by <a href="http://windsurf-sessions.eg2.fr/mws_new">MWS</a>							 
+<a target="_blank" href="http://windsurf-sessions.eg2.fr/mws_new/infos_rider.php?id_rider=3185"><img class ="img-responsive ombre-image" src="http://windsurf-sessions.eg2.fr/signatures/signature_3185.jpg" border="0" title="My Wind Sessions - Mon journal de navigation en ligne"></a>Powered by <a href="http://windsurf-sessions.eg2.fr/mws_new">MWS</a>							 
 							 <br><br></p>
 							 
                         
