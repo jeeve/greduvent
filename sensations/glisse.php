@@ -96,8 +96,10 @@
 						<li><p>foil Taaroa Noé Freerace modèle 2020<br>
 						ailes 800 et 1050</p></li>          
 						</ul>
-						<p style="margin-bottom: 20px;">
-						Distance parcourue : <strong><span id="distance-foil"></span> km</strong>
+						<p style="margin-bottom: 20px; margin-left: 45px;">
+						Distance parcourue : <strong><span id="distance-foil"></span> km</strong> <br>
+						Vmax : <strong><span id="vmax-foil"></span> kts</strong><br>
+						V100m : <strong><span id="v100-foil"></span> kts</strong>
 						</p>
 						</p>
 		<p align="center">ça vole !</p>
@@ -333,6 +335,9 @@
 				vitesses1 = [];
 				vitesses2 = [];
 				var ligne, d, v100, vmax, i, pratique, distanceFoil, distanceFoilTotale;
+				var vmaxfoilmax, vmaxfoildate, v100mfoilmax, v100mfoildate;
+				vmaxfoilmax = 0.0;
+				v100mfoilmax = 0.0;
 				var v = [];
 				distanceFoilTotale = 0.0;
 				vitesses1[0] = ['Date', 'V 100m', 'V Max'];
@@ -352,6 +357,14 @@
 					distanceFoil = parseFloat(distanceFoil);
 					if (pratique == "Windfoil") {
 						distanceFoilTotale = distanceFoilTotale + distanceFoil;
+						if (vmax > vmaxfoilmax) {
+							vmaxfoilmax = vmax;
+							vmaxfoildate = d;
+						}
+						if (v100 > v100mfoilmax) {
+							v100mfoilmax = v100;
+							v100mfoildate = d;
+						}
 					}
 					if (vmax != '') {
 						v = [];
@@ -369,6 +382,11 @@
 					}
 				}
 				jQuery("#distance-foil").html(Math.round(distanceFoilTotale).toString());
+				var res;
+                res = vmaxfoildate.split("/");
+				jQuery("#vmax-foil").html('<a href="' + '?session=' + res[1] + '-' + res[0] + '-' + res[2] + '">' + (Math.round(vmaxfoilmax*100)/100).toString() + '</a>');
+				res = v100mfoildate.split("/");
+				jQuery("#v100-foil").html('<a href="' + '?session=' + res[1] + '-' + res[0] + '-' + res[2] + '">' + (Math.round(v100mfoilmax*100)/100).toString() + '</a>');
 				drawChart1();
 				drawChart2();
 			});
