@@ -98,8 +98,8 @@
 						</ul>
 						<p style="margin-bottom: 20px; margin-left: 45px;">
 						Distance parcourue : <strong><span id="distance-foil"></span> km</strong> <br>
-						Vmax : <strong><span id="vmax-foil"></span> kts</strong><br>
-						V100m : <strong><span id="v100-foil"></span> kts</strong>
+						Vmax : <strong><span id="vmax-foil"></span></strong> kts<br>
+						V100m : <strong><span id="v100-foil"></span></strong> kts
 						</p>
 						</p>
 		<p align="center">ça vole !</p>
