@@ -23,6 +23,9 @@
 					if (dir.indexOf('#') >= 0) {
 						dir = dir.substring(0, dir.lastIndexOf('#')-1);						
 					}
+					if (dir.indexOf('?') >= 0) {
+						dir = dir.substring(0, dir.lastIndexOf('?')-1);						
+					}					
 					href = $(this).children('a')[0].getAttribute('href');
 					return href.indexOf(dir) > 0; 
 				}
