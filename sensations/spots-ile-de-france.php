@@ -229,7 +229,7 @@
 			</div>	
 
 <div id="item-webcam-poses" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+  <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
     
 	<video id="video-poses" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
@@ -338,7 +338,7 @@
 			</div>
 			
 <div id="item-webcam-moisson" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+  <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
     
 	<video id="video-moisson" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">
@@ -437,7 +437,7 @@
 			</div>
 			
 <div id="item-webcam-ecluzelles" class="collapse">			
-  <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+  <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
     
 	<video id="video-ecluzelles" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
 	<div class="webcam-texte">

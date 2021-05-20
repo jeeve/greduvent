@@ -53,7 +53,7 @@
 	<p>A13 près de Mantes la Ville, <a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris' target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>  
 	</div>
 	
-  <div class="embed-responsive embed-responsive-16by9 ombre-image">
+  <div class="embed-responsive embed-responsive-4by3 ombre-image">
     <div>
 	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
     </video>
