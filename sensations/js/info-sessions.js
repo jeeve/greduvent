@@ -8,7 +8,7 @@ function getInfoSessions(spot) {
 			var ligne, html, ancre, ligne0, dateheure0, annee0, annee;
             premiereAnnee = true;
 			html = '';
-			var dateheure, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
+			var dateheure, laDateAnglais, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
 			annee0 = 0;
             for (i=data.feed.entry.length-1; i >= 0 ; i--) {
 				
@@ -28,6 +28,16 @@ function getInfoSessions(spot) {
                     }
 
                     laDate = res[1] + '/' + res[0] + '/' + annee;
+                    var jour, mois;
+                    mois = res[0];
+                    if (res[0].length == 1) {
+                        mois = '0' + mois;
+                    }
+                    jour = res[1]
+                    if (res[1].length == 1) {
+                        jour = '0' + jour;
+                    }
+                    laDateAnglais = annee + mois + jour;
 
                     trace = ligne.gsx$tracemontre.$t;
                     if (trace == "") {
@@ -111,11 +121,51 @@ function getInfoSessions(spot) {
                             html = html + '</td><td>Spot</td><td><a href="' + spotURL + '">' + leSpot + '</a></td></tr>';
                         }
                     }
+                    
+                    var station;
+                    switch (leSpot) {
+                        case 'Léry-Poses' :
+                            station = 'louviers';
+                            break;
+                        case 'Vaires sur Marne' : 
+                            station = 'torcy';
+                            break;
+                        case 'Moisson' :
+                            station = 'mantes-la-jolie';
+                            break;
+                        case 'Foret-Orient' :
+                            station = 'lusigny-sur-barse';
+                            break;
+                        case 'Jablines' :
+                            station = 'torcy';
+                            break;
+                        case 'Mézières-Ecluzelles' :
+                            station = 'dreux';
+                            break;
+                        case 'Grande-Paroisse' :
+                            station = 'montereau-fault-yonne';
+                            break;                        
+                        default :
+                            station = '';
+                    }
+                      
+                    lienMeteo = "http://meteoflask.herokuapp.com/plot/" + station + "/" + laDateAnglais;
+                    
                     if (ventMini != '' && ventMaxi != '') {
-                        html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';
+                        if (station != '') {
+                            html = html + '</td><td><a href="' + lienMeteo + '" target="_blank">Conditions</a></td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';
+                        }
+                        else {
+                            html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';     
+                        }
                     }
                     else {
-                        html = html + '</td><td>Conditions</td><td>Vent de ' + vent + '</td></tr>';
+                        if (station != '') {
+                            html = html + '</td><td>a href="' + lienMeteo + '" target="_blank">Conditions</a></td><td>Vent de ' + vent + '</td></tr>';
+                        }
+                        else {
+                            html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';     
+                        }
                     }
                     if (aile != '') {
                         //html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + ' - aile ' + aile + reglage + '</td></tr>';
