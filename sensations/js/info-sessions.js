@@ -69,7 +69,12 @@ function getInfoSessions(spot) {
                     html = html + '<div id="' + ancre + '" class="row session" data-annee="' + annee + '" style="display: none;"><div class="col-sm-8 fond">'; 
 
                     if (laVideo != '') {
-                        html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><div><img title="Vidéo" alt="Vidéo" class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"><img style="position: absolute; width: 50px; top: 10px;" src="images/lecture-video.png"></div></a></p>';
+                        if (laVideo.substring(0, 13) == 'https://youtu') {
+                            html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><div><img title="Vidéo" alt="Vidéo" class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"><img style="position: absolute; width: 50px; top: 10px;" src="images/lecture-video.png"></div></a></p>';
+                        }
+                        else {
+                            html = html + '<p align="center"><img src="' + laVideo + '" class="img-responsive ombre-image"></p>';
+                        }
                     }
 
                     html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
