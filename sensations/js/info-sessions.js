@@ -29,11 +29,11 @@ function getInfoSessions(spot) {
 
                     laDate = res[1] + '/' + res[0] + '/' + annee;
                     var jour, mois;
-                    jour = res[0];
+                    jour = res[1];
                     if (jour.length == 1) {
                         jour = '0' + jour;
                     }
-                    mois = res[1]
+                    mois = res[0]
                     if (mois.length == 1) {
                         mois = '0' + mois;
                     }
