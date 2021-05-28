@@ -166,7 +166,7 @@ function getInfoSessions(spot) {
                     }
                     else {
                         if (station != '') {
-                            html = html + '</td><td>a href="' + lienMeteo + '" target="_blank">Conditions</a></td><td>Vent de ' + vent + '</td></tr>';
+                            html = html + '</td><td><a href="' + lienMeteo + '" target="_blank">Conditions</a></td><td>Vent de ' + vent + '</td></tr>';
                         }
                         else {
                             html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';     
