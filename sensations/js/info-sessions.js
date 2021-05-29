@@ -180,53 +180,20 @@ function getInfoSessions(spot) {
                         html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
                     }
 
-                    var lieuGPS;
-                    switch (leSpot) {
-                        case 'Léry-Poses' :
-                            lieuGPS = 'poses';
-                            break;
-                        case 'Vaires sur Marne' : 
-                            lieuGPS = 'vaires-sur-marne';
-                            break;
-                        case 'Moisson' :
-                            lieuGPS = 'moisson';
-                            break;
-                        case 'Foret-Orient' :
-                            lieuGPS = 'foret-orient';
-                            break;
-                        case 'Jablines' :
-                            lieuGPS = 'jablines';
-                            break;
-                        case 'Mézières-Ecluzelles' :
-                            lieuGPS = 'ecluzelles';
-                            break;
-                        case 'La Justice' :
-                            lieuGPS = 'saint-jacut-mer';
-                            break;
-                        case 'Pissotte' :
-                            lieuGPS = 'saint-jacut-mer';
-                            break;
-                        case 'Les Haas' :
-                            lieuGPS = 'saint-jacut-mer';
-                            break;
-                        case 'Grande-Paroisse' :
-                            lieuGPS = 'grande-paroisse';
-                            break;
-                        case 'Saint-Quentin-en-Yvelines' :
-                            lieuGPS = 'saint-quentin-yvelines';
-                            break;                            
-                        default :
-                            lieuGPS = '';
-                   }
-                   var fichierGPX = "GPX/" + annee + '_' + mois + '_' + jour + '_' + lieuGPS + ".gpx"
+                    var lienGPX = ligne.gsx$gpx.$t;
                     
                     if (distance != '') {
                         if (trace == '') {
-                            html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
+                            if (lienGPX != "") {
+                                html = html + '<tr><td>Parcours</td><td>' + distance + ' km  <a href="' + lienGPX + '"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                            }
+                            else {
+                                html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
+                            }
                         }
                         else {
-                            if (lieuGPS != "") {
-                                html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km  <a href="' + fichierGPX + '"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                            if (lienGPX != "") {
+                                html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km  <a href="' + lienGPX + '"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
                             }
                             else {
                                 html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km</td></tr>';
