@@ -1034,11 +1034,13 @@
 <div class="col-xs-12 fond">
 				  <a name="outils"></a>
 				  <h2>Outils</h2>
-				 <p>
-								<a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers FIT et SML en GPX</a>
-								<a href="https://joewein.net/bike/gpxmerge/" target="_blank">Fusion de GPX</a>
-								<a href="https://www.mygpsfiles.com/app/" target="_blank">Lecteur de traces GPX</a>								
-								</p>
+				
+								<ul>
+								<li><p><a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers FIT et SML en GPX</a></p></li>
+								<li><p><a href="https://joewein.net/bike/gpxmerge/" target="_blank">Fusion de GPX</a></p></li>
+								<li><p><a href="https://www.mygpsfiles.com/app/" target="_blank">Lecteur de traces GPX</a></p></li>								
+								</ul>
+								
 
 </div>
 </div>
