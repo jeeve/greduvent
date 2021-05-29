@@ -185,7 +185,7 @@ function getInfoSessions(spot) {
                     if (distance != '') {
                         if (trace == '') {
                             if (lienGPX != "") {
-                                html = html + '<tr><td>Parcours</td><td>' + distance + ' km  <a href="' + lienGPX + '"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                                html = html + '<tr><td>Parcours</td><td>' + distance + ' km  <a href="' + lienGPX + '" target="_blank"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
                             }
                             else {
                                 html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
@@ -193,7 +193,7 @@ function getInfoSessions(spot) {
                         }
                         else {
                             if (lienGPX != "") {
-                                html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km  <a href="' + lienGPX + '"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                                html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km  <a href="' + lienGPX + '" target="_blank"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
                             }
                             else {
                                 html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km</td></tr>';
