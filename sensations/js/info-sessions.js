@@ -210,7 +210,7 @@ function getInfoSessions(spot) {
                             lieuGPS = 'saint-jacut-mer';
                             break;
                         case 'Grande-Paroisse' :
-                            spotURL = 'grande-paroisse';
+                            lieuGPS = 'grande-paroisse';
                             break;
                         case 'Saint-Quentin-en-Yvelines' :
                             lieuGPS = 'saint-quentin-yvelines';
