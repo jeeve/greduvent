@@ -225,7 +225,7 @@ function getInfoSessions(spot) {
                             html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
                         }
                         else {
-                            if (lieuGPS != ) {
+                            if (lieuGPS != "") {
                                 html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km  <a href="' + fichierGPX + '"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
                             }
                             else {
