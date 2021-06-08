@@ -166,7 +166,7 @@ function getInfoSessions(spot) {
                     }
                     else {
                         if (station != '') {
-                            html = html + '</td><td>a href="' + lienMeteo + '" target="_blank">Conditions</a></td><td>Vent de ' + vent + '</td></tr>';
+                            html = html + '</td><td><a href="' + lienMeteo + '" target="_blank">Conditions</a></td><td>Vent de ' + vent + '</td></tr>';
                         }
                         else {
                             html = html + '</td><td>Conditions</td><td>Vent de ' + vent + ' ' + ventMini + ' à ' + ventMaxi + ' kts</td></tr>';     
@@ -178,12 +178,26 @@ function getInfoSessions(spot) {
                     }
                     else {
                         html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
-                    } if (distance != '') {
+                    }
+
+                    var lienGPX = ligne.gsx$gpx.$t;
+                    
+                    if (distance != '') {
                         if (trace == '') {
-                            html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
+                            if (lienGPX != "") {
+                                html = html + '<tr><td>Parcours</td><td>' + distance + ' km  <a href="' + lienGPX + '" target="_blank"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                            }
+                            else {
+                                html = html + '<tr><td>Parcours</td><td>' + distance + ' km</td></tr>';
+                            }
                         }
                         else {
-                            html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km</td></tr>';
+                            if (lienGPX != "") {
+                                html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km  <a href="' + lienGPX + '" target="_blank"><img src="images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                            }
+                            else {
+                                html = html + '<tr><td><a href="' + trace + '" target="_blank">Parcours</a></td><td>' + distance + ' km</td></tr>';
+                            }
                         }
                     }
                     if (vmax != '') {
