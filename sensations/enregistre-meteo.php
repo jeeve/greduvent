@@ -10,13 +10,13 @@
 	$h = localtime(); 
 	$current_time = $h[2] . ':' . $h[1] . ':' . $h[0];
 	
-	$difference = strtotime( $current_time ) - strtotime( "09:00:00" );
+	$difference = strtotime( $current_time ) - strtotime( "10:00:00" );
 	
 	if ($difference < 0) {
 		return;
 	}
 	
-	$difference = strtotime( $current_time ) - strtotime( "20:10:00" );
+	$difference = strtotime( $current_time ) - strtotime( "21:10:00" );
 	if ($difference >= 0) {
 		return;
 	}	
