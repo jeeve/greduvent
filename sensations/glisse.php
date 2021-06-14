@@ -7,29 +7,29 @@
       <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>
       <style>
          .chart {
-         width: 100%; 
-         min-height: 400px;
+            width: 100%; 
+            min-height: 400px;
          }
          .row {
-         margin:0 !important;
+            
          }
       </style>
    </head>
    <body>
-      <div class="page-container">
+   <div class="page-container">
          <!-- top navbar -->
          <?php include("../includes/navbar.php"); ?>	  
          <div class="container">
             <div class="row row-offcanvas row-offcanvas-left">
                <!-- sidebar -->
-               <?php include("../includes/sidebar.php"); ?>		
+        	       <?php include("../includes/sidebar.php"); ?>		
                <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
                   <div class="row">
-                     <div class="col-xs-7">
+                     <div class="col-xs-8">
                         <h1>glisse</h1>
                      </div>
-                     <div class="col-xs-5">
+                     <div class="col-xs-4">
                         <br>
                         <p style="text-align:right;">
                            <a href="#liste-sessions">liste des sessions</a>
