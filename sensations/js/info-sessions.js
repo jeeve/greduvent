@@ -7,7 +7,7 @@ function getInfoSessions(spot) {
 	}).then(function(data) {
 			var ligne, html, ancre, ligne0, dateheure0, annee0, annee;
             premiereAnnee = true;
-			html = '';
+			html = '<link rel="stylesheet" type="text/css" href="css/info-sessions.css" media="all"/>';
 			var dateheure, laDateAnglais, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
 			annee0 = 0;
             for (i=data.feed.entry.length-1; i >= 0 ; i--) {
@@ -70,7 +70,7 @@ function getInfoSessions(spot) {
 
                     if (laVideo != '') {
                         if (laVideo.substring(0, 13) == 'https://youtu') {
-                            html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><div><img title="Vidéo" alt="Vidéo" class="img-responsive ombre-image" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg"><img style="position: absolute; width: 50px; top: 10px;" src="images/lecture-video.png"></div></a></p>';
+                            html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><div class="image"><img title="Vidéo" alt="Vidéo" class="img-responsive ombre-image video" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg" style="display: block; text-align: center; margin: auto;"><img title="Vidéo" alt="Vidéo" class="icone-lecture" src="images/lecture-video-2.png"></div></a></p>';
                         }
                         else {
                             html = html + '<p align="center"><img src="' + laVideo + '" class="img-responsive ombre-image"></p>';
