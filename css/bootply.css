@@ -23,6 +23,9 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+#sidebar .nav .active3 a  {
+  text-decoration: underline;
+}
 #bouton-bas-page {
 	  right: 110px;
 	  padding-bottom: 6px;
@@ -42,7 +45,7 @@ body {
 }
 #sidebar .nav .active .active2 a {
   font-weight: bold;
-  text-decoration: none;	
+  text-decoration: none;
 }
 @media screen and (max-width: 767px) {
   #bouton-bas-page {
