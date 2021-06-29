@@ -23,7 +23,7 @@ function getInfoSessions(spot) {
                     annee = res[2];
 
                     if (annee != annee0) {
-                        html = html + '<h3 class="titre-annee" data-annee="' + annee + '">+ <span class="annee">' + annee + '</span></h3>';   
+                        html = html + '<h3 class="titre-annee" data-annee="' + annee + '">+ <span class="annee">' + annee + '</span><span data-annee="' + annee + '" class="nombre"></span></h3>';   
                         annee0 = annee;
                     }
 
@@ -237,6 +237,13 @@ function getInfoSessions(spot) {
                     $(this).html($(this).html().replace('-', '+'));
                 }
             });
+
+            var annee;
+            $('.nombre').each(function () {
+                annee = $(this).attr('data-annee');
+                $(this).html(' (' + $('.session[data-annee="' + annee + '"]').length + ')');
+            });
+
        });	
 
 	});
