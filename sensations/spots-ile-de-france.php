@@ -1035,7 +1035,7 @@
 				  <a name="outils"></a>
 				  <h2>Outils</h2>
 				
-								<ul>
+								<ul class="outils">
 								<li><p><a href="https://outilsflask.herokuapp.com/gps/" >Convertisseur fichiers FIT et SML en GPX</a></p></li>
 								<li><p><a href="https://joewein.net/bike/gpxmerge/" target="_blank">Fusion de GPX</a></p></li>
 								<li><p><a href="https://www.mygpsfiles.com/app/" target="_blank">Lecteur de traces GPX</a></p></li>								
