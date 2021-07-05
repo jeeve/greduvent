@@ -28,7 +28,7 @@
                 }).addTo(map);
 
 
-            var url = 'https://statmeteo.000webhostapp.com/tmp/tmp.gpx';
+            var url = 'https://drive.google.com/u/0/uc?id=1TPeWECgdgdtau9RWGLcrnwIHMhyTwzND&export=download';
 
             new L.GPX(url, {async: true}).on('loaded', function(e) {
             map.fitBounds(e.target.getBounds());
