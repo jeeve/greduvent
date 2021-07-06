@@ -24,6 +24,8 @@
        
         <script>
 
+            reportWindowSize();
+            
             var map = L.map('map'); //.setView([51.5, -0.09], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -47,7 +49,13 @@
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}            
+    }            
+
+    function reportWindowSize() {
+        document.getElementById("map").style.height = window.innerHeight-20 + 'px';
+    }
+
+    document.getElementsByTagName("body")[0].onresize = reportWindowSize;
         </script>
 
     </body>
