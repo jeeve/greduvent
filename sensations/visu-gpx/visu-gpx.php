@@ -17,7 +17,7 @@
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
+        <script src="gpx.js"></script>
        
         <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
 

@@ -48,7 +48,7 @@ function getInfoSessions(spot) {
 
                     trace = '';
                     if (ligne.gsx$gpx.$t != '') {
-                        trace = 'visu-gpx.php?url=' + ligne.gsx$gpx.$t;
+                        trace = 'visu-gpx/visu-gpx.php?url=' + ligne.gsx$gpx.$t;
                     }
 
                     leMWS = ligne.gsx$mws.$t;
