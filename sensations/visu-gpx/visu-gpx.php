@@ -3,6 +3,7 @@
 <html lang="fr">
    <head>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+   <script src="/js/jquery.min.js"></script>
    <style>
 		#map {
 			width: auto;
@@ -38,6 +39,26 @@
             new L.GPX(url, {async: true}).on('loaded', function(e) {
             map.fitBounds(e.target.getBounds());
             }).addTo(map);
+
+
+            var time, lat, lon;
+
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "xml",
+                success: function(xml) {                      
+                    $(xml).find('trkpt').each(function() {
+                        if ($(this).find('time').length == 1) {
+                            time = $(this).find('time').text();
+                            lat = $(this).attr('lat');
+                            lon = $(this).attr('lon');
+                            //console.log(time + " " + lat + " " + lon);
+                        }
+                    });
+                }
+            });
+
 
 
 
