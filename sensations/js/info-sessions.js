@@ -39,10 +39,18 @@ function getInfoSessions(spot) {
                     }
                     laDateAnglais = annee + mois + jour;
 
+                    /*
                     trace = ligne.gsx$tracemontre.$t;
                     if (trace == "") {
                         trace = ligne.gsx$tracek72.$t;
                     }
+                    */
+
+                    trace = '';
+                    if (ligne.gsx$gpx.$t != '') {
+                        trace = 'visu-gpx.php?url=' + ligne.gsx$gpx.$t;
+                    }
+
                     leMWS = ligne.gsx$mws.$t;
                     laVideo = ligne.gsx$youtube.$t;
                     leCommentaire = ligne.gsx$commentaire.$t;
@@ -288,4 +296,3 @@ function goSession() {
 
 
 	
-
