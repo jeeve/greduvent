@@ -24,6 +24,7 @@ var xy = [];
 var v = [];
 var polylignes = [];
 var trace;
+var vmax;
 
 function litGPX(url, times, xy, v, ready) {
   $.ajax({
@@ -59,6 +60,10 @@ function litGPX(url, times, xy, v, ready) {
               v.push((dd / dt) * 1.94384);
             }
         }
+        vmax = v.reduce((a, b) => { return Math.max(a, b) });
+        $("#seuil").val((vmax/2).toFixed(2));
+        var polyline = L.polyline(xy, {color: 'red'});
+        map.fitBounds(polyline.getBounds());
         ready();
      }
   }
@@ -98,8 +103,6 @@ function dessine() {
         }
       }      
       trace = L.layerGroup(polylignes).addTo(map);
-      var polyline = L.polyline(xy, {color: 'red'});
-      map.fitBounds(polyline.getBounds());
 }      
 
 var map = L.map('map');
@@ -111,10 +114,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   reportWindowSize();
 
 $("#seuil").change(function() {
+  $("#curseur").val(($("#seuil").val())/vmax*100);
   map.removeLayer(trace);
   dessine();
 });
 
+$("#curseur").change(function() {
+  $("#seuil").val((($("#curseur").val())*vmax/100).toFixed(2));
+  map.removeLayer(trace);
+  dessine();
+});
 
 
      function reportWindowSize() {
