@@ -382,7 +382,10 @@
           
          });
          	  
-         google.load("visualization", "1", {packages:["corechart"]});
+         google.load('visualization', '1.0', {'packages':['corechart']});
+         google.setOnLoadCallback(drawChart1);
+         google.setOnLoadCallback(drawChart2);
+
          function drawChart1() {
          var data = google.visualization.arrayToDataTable(vitesses1);
          

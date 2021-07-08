@@ -25,6 +25,8 @@ var v = [];
 var polylignes = [];
 var trace;
 var vmax;
+var chartxy = [];
+var marker;
 
 function litGPX(url, times, xy, v, ready) {
   $.ajax({
@@ -48,6 +50,10 @@ function litGPX(url, times, xy, v, ready) {
                 xy.push(coord);
               }             
           });
+      
+        var d = 0;
+        chartxy = [];
+        chartxy.push(['Temps', 'Vitesse']);
         for (i = 0; i < times.length; i++) {
             if (i == 0) {
               v.push(0.0);
@@ -57,14 +63,22 @@ function litGPX(url, times, xy, v, ready) {
               t1 = new Date(times[i-1]);
               t2 = new Date(times[i]);
               dt = (t2.getTime()-t1.getTime())/1000;
-              v.push((dd / dt) * 1.94384);
+              var vitesse = (dd / dt) * 1.94384;
+              v.push(vitesse);
+              chartxy.push([d, vitesse]);
+              d = d + dd;
             }
         }
         vmax = v.reduce((a, b) => { return Math.max(a, b) });
         $("#seuil").val((vmax/2).toFixed(2));
         var polyline = L.polyline(xy, {color: 'red'});
         map.fitBounds(polyline.getBounds());
-        ready();
+      
+      ready();
+      
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+     
      }
   }
  )}
@@ -72,37 +86,44 @@ function litGPX(url, times, xy, v, ready) {
 litGPX(getParameterByName('url'), times, xy, v, dessine);
 
 function dessine() {
+  
   polylignes= [];
+  if (marker != null) {
+    marker.remove();
+  }
+  
   var vmax = v.reduce(function(a,b) {
         return Math.max(a, b);
-      });
-      console.log(vmax);
-      var seuil = $("#seuil").val();
+  });
 
-      var xy2 = [];
-      var cat;
-      var cat0 = 0;
-      for (i = 0; i < v.length; i++) {
-        xy2.push(xy[i]);
-        if (v[i] > seuil) {
-          cat = 1;
-        }
-        else {
-          cat = 0;
-        }
-        if (cat0 != cat) {
-          if (cat0 == 0) {
-            polylignes.push(L.polyline(xy2, {color: 'blue'}));
-          }
-          else {
-            polylignes.push(L.polyline(xy2, {color: 'red'}));
-          }
-          xy2= [];
-          xy2.push(xy[i]);
-          cat0 = cat;
-        }
-      }      
-      trace = L.layerGroup(polylignes).addTo(map);
+  var seuil = $("#seuil").val();
+
+  var xy2 = [];
+  var cat;
+  var cat0 = 0;
+  for (i = 0; i < v.length; i++) {
+    xy2.push(xy[i]);
+    if (v[i] > seuil) {
+      cat = 1;
+    }
+    else {
+      cat = 0;
+    }
+    if (cat0 != cat) {
+      if (cat0 == 0) {
+        polylignes.push(L.polyline(xy2, {color: 'blue'}));
+      }
+      else {
+        polylignes.push(L.polyline(xy2, {color: 'red'}));
+      }
+      xy2= [];
+      xy2.push(xy[i]);
+      cat0 = cat;
+    }
+  }      
+  trace = L.layerGroup(polylignes).addTo(map);
+  
+  marker = L.marker(xy[0]).addTo(map);
 }      
 
 var map = L.map('map');
@@ -126,18 +147,46 @@ $("#curseur").change(function() {
 });
 
 
-     function reportWindowSize() {
-        document.getElementById("map").style.height = window.innerHeight-100-20 + 'px';
-    }
+function reportWindowSize() {
+  document.getElementById("map").style.height = window.innerHeight-150-20 + 'px';
+}
+document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
-    document.getElementsByTagName("body")[0].onresize = reportWindowSize;
+// ------------------------------------------------------------------------ chart
 
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }  
+function drawChart() {
+  
+  var data = google.visualization.arrayToDataTable(chartxy);
+
+  var options = {
+    vAxis: {viewWindowMode: "explicit",   
+            viewWindow: {min: 0,max:vmax}
+           }, 
+    pointSize: 1,
+    legend: { position: "none" }
+  };
+
+  var chart = new google.visualization.LineChart(document.getElementById('chart'));     
+  chart.draw(data, options);
+  
+  google.visualization.events.addListener(chart, 'onmouseover', function(e) {
+        console.log(chartxy[e.row]);
+      marker.setLatLng(xy[e.row]);
+    });
+}
+
+$(window).resize(function(){
+  drawChart();
+});
+                 
+// ----------------------------------------
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}  
