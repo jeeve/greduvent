@@ -27,6 +27,7 @@ var trace;
 var vmax;
 var chartxy = [];
 var marker;
+var chart, line;
 
 function litGPX(url, times, xy, v, ready) {
   $.ajax({
@@ -138,12 +139,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 $("#seuil").change(function() {
   $("#curseur").val(($("#seuil").val())/vmax*100);
+  drawAdditionalHAxis(chart, $("#seuil").val()); 
   map.removeLayer(trace);
   dessine();
 });
 
 $("#curseur").change(function() {
   $("#seuil").val((($("#curseur").val())*vmax/100).toFixed(2));
+  drawAdditionalHAxis(chart, $("#seuil").val()); 
   map.removeLayer(trace);
   dessine();
 });
@@ -167,8 +170,9 @@ function drawChart() {
     legend: { position: "none" }
   };
 
-  var chart = new google.visualization.LineChart(document.getElementById('chart'));     
+chart = new google.visualization.LineChart(document.getElementById('chart'));     
   chart.draw(data, options);
+  drawAdditionalHAxis(chart, $("#seuil").val()); 
   
   google.visualization.events.addListener(chart, 'onmouseover', function(e) {
         console.log(chartxy[e.row]);
@@ -179,6 +183,27 @@ function drawChart() {
 $(window).resize(function(){
   drawChart();
 });
+
+function drawAdditionalHAxis(chart, y){
+  var layout = chart.getChartLayoutInterface();
+  var chartArea = layout.getChartAreaBoundingBox();
+  var svg = chart.getContainer().getElementsByTagName("svg")[0];
+  var yLoc = layout.getYLocation(y);
+  $("line").remove();
+  line = createLine(chartArea.left, yLoc, chartArea.width + chartArea.left, yLoc, "#FF0000", 1); 
+  svg.appendChild(line); 
+}
+
+function createLine(x1, y1, x2, y2, color, w) {
+  var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line.setAttribute("x1", x1);
+  line.setAttribute("y1", y1);
+  line.setAttribute("x2", x2);
+  line.setAttribute("y2", y2);
+  line.setAttribute("stroke", color);
+  line.setAttribute("stroke-width", w);
+  return line;
+}
                  
 // ----------------------------------------
 
