@@ -51,35 +51,41 @@ function litGPX(url, times, xy, v, ready) {
               }             
           });
       
-        var d = 0;
-        chartxy = [];
-        chartxy.push(['Temps', 'Vitesse']);
-        for (i = 0; i < times.length; i++) {
-            if (i == 0) {
-              v.push(0.0);
-            }
-            else {
-              dd = calcCrow(xy[i][0], xy[i][1], xy[i-1][0], xy[i-1][1])*1000;
-              t1 = new Date(times[i-1]);
-              t2 = new Date(times[i]);
-              dt = (t2.getTime()-t1.getTime())/1000;
-              var vitesse = (dd / dt) * 1.94384;
-              v.push(vitesse);
-              chartxy.push([d, vitesse]);
-              d = d + dd;
-            }
-        }
-        vmax = v.reduce((a, b) => { return Math.max(a, b) });
-        $("#seuil").val((vmax/2).toFixed(2));
-        var polyline = L.polyline(xy, {color: 'red'});
-        map.fitBounds(polyline.getBounds());
+          var d = 0;
+          chartxy = [];
+          chartxy.push(['Temps', 'Vitesse']);
+          for (i = 0; i < times.length; i++) {
+              if (i == 0) {
+                v.push(0.0);
+              }
+              else {
+                dd = calcCrow(xy[i][0], xy[i][1], xy[i-1][0], xy[i-1][1])*1000;
+                t1 = new Date(times[i-1]);
+                t2 = new Date(times[i]);
+                dt = (t2.getTime()-t1.getTime())/1000;
+                var vitesse;
+                if (dt != 0) {
+                  vitesse = (dd / dt) * 1.94384;
+                }
+                else {
+                  vitesse = 0;
+                }
+                v.push(vitesse);
+                chartxy.push([d, vitesse]);
+                d = d + dd;
+              }
+          }
+          vmax = v.reduce((a, b) => { return Math.max(a, b) });
+          $("#seuil").val((vmax/2).toFixed(2));
+          var polyline = L.polyline(xy, {color: 'black'});
+          map.fitBounds(polyline.getBounds());
+        
+        ready();
+        
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
       
-      ready();
-      
-      google.load('visualization', '1.0', {'packages':['corechart']});
-      google.setOnLoadCallback(drawChart);
-     
-     }
+      }
   }
  )}
 
@@ -92,15 +98,11 @@ function dessine() {
     marker.remove();
   }
   
-  var vmax = v.reduce(function(a,b) {
-        return Math.max(a, b);
-  });
-
   var seuil = $("#seuil").val();
 
   var xy2 = [];
-  var cat;
-  var cat0 = 0;
+  var cat0, cat;
+  cat0 = 0;
   for (i = 0; i < v.length; i++) {
     xy2.push(xy[i]);
     if (v[i] > seuil) {
@@ -109,14 +111,14 @@ function dessine() {
     else {
       cat = 0;
     }
-    if (cat0 != cat) {
+    if (cat0 != cat || xy2.length >= 100) {
       if (cat0 == 0) {
         polylignes.push(L.polyline(xy2, {color: 'blue'}));
       }
       else {
         polylignes.push(L.polyline(xy2, {color: 'red'}));
       }
-      xy2= [];
+      xy2 = [];
       xy2.push(xy[i]);
       cat0 = cat;
     }
@@ -145,7 +147,6 @@ $("#curseur").change(function() {
   map.removeLayer(trace);
   dessine();
 });
-
 
 function reportWindowSize() {
   document.getElementById("map").style.height = window.innerHeight-150-20 + 'px';
