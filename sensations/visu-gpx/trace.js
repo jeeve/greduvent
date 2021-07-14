@@ -27,7 +27,7 @@ var trace;
 var vmax;
 var chartxy = [];
 var marker;
-var chart, line;
+var chart, line, down;
 
 function litGPX(url, times, xy, v, ready) {
   $.ajax({
@@ -175,9 +175,30 @@ chart = new google.visualization.LineChart(document.getElementById('chart'));
   drawAdditionalHAxis(chart, $("#seuil").val()); 
   
   google.visualization.events.addListener(chart, 'onmouseover', function(e) {
-        console.log(chartxy[e.row]);
       marker.setLatLng(xy[e.row]);
     });
+
+/*    
+  $("line").mousedown(function() {
+      down = true;
+    });  
+
+    $("line").mouseup(function() {
+      down = false;
+    });  
+    
+    $("line").mousemove(function(e) {
+      if (down) {
+        var layout = chart.getChartLayoutInterface();
+        var chartArea = layout.getChartAreaBoundingBox();
+        var H = layout.getChartAreaBoundingBox().height;
+        var Y = $("#chart").last().offset().top + H - e.clientY + 30;
+        var y = Y * vmax / H;
+        console.log(Y);
+        drawAdditionalHAxis(chart, y); 
+      }
+    });  
+*/
 }
 
 $(window).resize(function(){
@@ -190,7 +211,7 @@ function drawAdditionalHAxis(chart, y){
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var yLoc = layout.getYLocation(y);
   $("line").remove();
-  line = createLine(chartArea.left, yLoc, chartArea.width + chartArea.left, yLoc, "#FF0000", 1); 
+  line = createLine(chartArea.left, yLoc, chartArea.width + chartArea.left, yLoc, "#FF0000", 2); 
   svg.appendChild(line); 
 }
 

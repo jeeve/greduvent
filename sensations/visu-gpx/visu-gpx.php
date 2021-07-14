@@ -52,6 +52,11 @@
       width: 100%;
       height: 100%;
     }
+/*
+    line {
+      cursor: row-resize;
+    }
+ */   
    </style>
 
    </head>
