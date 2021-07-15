@@ -168,6 +168,7 @@ function drawChart() {
     vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
     pointSize: 1,
     legend: { position: "none" },
+    chartArea: { width: "100%" },
     // enableInteractivity: false
   };
 
