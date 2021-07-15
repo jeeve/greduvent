@@ -168,6 +168,7 @@ function drawChart() {
     vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
     pointSize: 1,
     legend: { position: "none" },
+    // enableInteractivity: false
   };
 
   chart = new google.visualization.LineChart(document.getElementById("chart"));
@@ -185,30 +186,24 @@ $(window).resize(function () {
 });
 
 function CreeLigneSeuil(chart, y) {
-  var layout = chart.getChartLayoutInterface();
-  var chartArea = layout.getChartAreaBoundingBox();
-  var yLoc = layout.getYLocation(y);
-  $(".ligne").remove();
-  createLine(
-    chart,
-    chartArea.left,
-    yLoc,
-    chartArea.width + chartArea.left,
-    yLoc,
-    "#FF0000",
-    2
-  );
-
+  $(".ligne-seuil").remove();
+  createLineSeuilSVG(chart, y);
   selectedElement = null;
   currentY = 0;
-  registercb();
+  registerEvtLigneSeuilSVG();
 }
 
-function createLine(chart, x1, y1, x2, y2, color, w) {
+function createLineSeuilSVG(chart, y) {
+  var layout = chart.getChartLayoutInterface();
+  var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
+  var yLoc = layout.getYLocation(y);
+  var x1 = chartArea.left;
+  var y1 = yLoc;
+  var x2 = chartArea.width + chartArea.left;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg2.setAttribute("class", "ligne");
+  svg2.setAttribute("class", "ligne ligne-seuil");
   svg2.setAttribute("x", x1);
   svg2.setAttribute("y", y1);
   svg2.setAttribute("width", x2 - x1);
@@ -220,7 +215,7 @@ function createLine(chart, x1, y1, x2, y2, color, w) {
   rect.setAttribute("y", 0);
   rect.setAttribute("width", "100%");
   rect.setAttribute("height", "100%");
-  rect.setAttribute("stroke", color);
+  rect.setAttribute("stroke", "#FF0000");
   rect.setAttribute("stroke-width", 1);
   rect.setAttribute("fill-opacity", 0);
   rect.setAttribute("stroke-opacity", 0);
@@ -231,20 +226,20 @@ function createLine(chart, x1, y1, x2, y2, color, w) {
   line.setAttribute("y1", LARGEUR_LIGNE / 2);
   line.setAttribute("x2", x2 - x1);
   line.setAttribute("y2", LARGEUR_LIGNE / 2);
-  line.setAttribute("stroke", color);
-  line.setAttribute("stroke-width", w);
+  line.setAttribute("stroke", "#FF0000");
+  line.setAttribute("stroke-width", 2);
   svg2.appendChild(line);
 }
 
-var registercb = function () {
-  $(".ligne")
+var registerEvtLigneSeuilSVG = function () {
+  $(".ligne-seuil")
     .mousedown(function (e) {
       currentY = e.clientY;
       selectedElement = e.target;
     })
     .mousemove(function (e) {
       if (selectedElement) {
-        var y = ligneGety(e, e.clientY);
+        var y = chartGety(chart, e.clientY);
         if (y >= 0 && y <= vmax) {
           var dy =
             parseInt($(this)[0].getAttribute("y")) + e.clientY - currentY;
@@ -263,11 +258,11 @@ var registercb = function () {
     });
 };
 
-function ligneGety(e, Y) {
+function chartGety(chart, Y) {
   var layout = chart.getChartLayoutInterface();
   var H = layout.getChartAreaBoundingBox().height;
-  var Y = $("#chart").last().offset().top + H - e.clientY + 30;
-  return (y = (Y * vmax) / H);
+  var Y2 = $("#chart").last().offset().top + H - Y + 30;
+  return (Y2 * vmax) / H;
 }
 
 // ----------------------------------------
