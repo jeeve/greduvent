@@ -159,6 +159,7 @@ document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
 var selectedElement = null;
 var currentY = 0;
+const LARGEUR_LIGNE = 10;
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable(chartxy);
@@ -211,7 +212,7 @@ function createLine(chart, x1, y1, x2, y2, color, w) {
   svg2.setAttribute("x", x1);
   svg2.setAttribute("y", y1);
   svg2.setAttribute("width", x2 - x1);
-  svg2.setAttribute("height", 10);
+  svg2.setAttribute("height", LARGEUR_LIGNE);
   svg.appendChild(svg2);
 
   var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
@@ -227,9 +228,9 @@ function createLine(chart, x1, y1, x2, y2, color, w) {
 
   var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
   line.setAttribute("x1", 0);
-  line.setAttribute("y1", 5);
+  line.setAttribute("y1", LARGEUR_LIGNE / 2);
   line.setAttribute("x2", x2 - x1);
-  line.setAttribute("y2", 5);
+  line.setAttribute("y2", LARGEUR_LIGNE / 2);
   line.setAttribute("stroke", color);
   line.setAttribute("stroke-width", w);
   svg2.appendChild(line);
@@ -249,7 +250,7 @@ var registercb = function () {
             parseInt($(this)[0].getAttribute("y")) + e.clientY - currentY;
           $(this)[0].setAttribute("y", dy);
           currentY = e.clientY;
-  
+
           $("#seuil").val(y.toFixed(2));
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           map.removeLayer(trace);
