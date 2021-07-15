@@ -23,10 +23,10 @@ var xy = [];
 var v = [];
 var polylignes = [];
 var trace;
-var vmax;
+var vmax, dmax;
 var chartxy = [];
 var marker;
-var chart, rect, down;
+//var chart, rect, down;
 
 function litGPX(url, times, xy, v, ready) {
   $.ajax({
@@ -78,7 +78,11 @@ function litGPX(url, times, xy, v, ready) {
       vmax = v.reduce((a, b) => {
         return Math.max(a, b);
       });
+      dmax = d - dd;
+
       $("#seuil").val((vmax / 2).toFixed(2));
+      $("#position").val("0.00");
+
       var polyline = L.polyline(xy, { color: "black" });
       map.fitBounds(polyline.getBounds());
 
@@ -157,7 +161,9 @@ document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
 // ------------------------------------------------------------------------ chart
 
-var selectedElement = null;
+var selectedElementSeuil = null;
+var selectedElementPosition = null;
+var currentX = 0;
 var currentY = 0;
 const LARGEUR_LIGNE = 10;
 
@@ -168,7 +174,7 @@ function drawChart() {
     vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
     pointSize: 1,
     legend: { position: "none" },
-    chartArea: { left: '30', right: "0" },
+    chartArea: { left: "30", right: "0" },
     // enableInteractivity: false
   };
 
@@ -176,6 +182,7 @@ function drawChart() {
   chart.draw(data, options);
 
   CreeLigneSeuil(chart, $("#seuil").val());
+  CreeLignePosition(chart, $("#position").val());
 
   google.visualization.events.addListener(chart, "onmouseover", function (e) {
     marker.setLatLng(xy[e.row]);
@@ -189,9 +196,17 @@ $(window).resize(function () {
 function CreeLigneSeuil(chart, y) {
   $(".ligne-seuil").remove();
   createLineSeuilSVG(chart, y);
-  selectedElement = null;
+  selectedElementSeuil = null;
   currentY = 0;
   registerEvtLigneSeuilSVG();
+}
+
+function CreeLignePosition(chart, x) {
+  $(".ligne-position").remove();
+  createLinePositionSVG(chart, x);
+  selectedElementPosition = null;
+  currentX = 0;
+  registerEvtLignePositionSVG();
 }
 
 function createLineSeuilSVG(chart, y) {
@@ -200,13 +215,12 @@ function createLineSeuilSVG(chart, y) {
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var yLoc = layout.getYLocation(y);
   var x1 = chartArea.left;
-  var y1 = yLoc;
   var x2 = chartArea.width + chartArea.left;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg2.setAttribute("class", "ligne ligne-seuil");
   svg2.setAttribute("x", x1);
-  svg2.setAttribute("y", y1);
+  svg2.setAttribute("y", yLoc);
   svg2.setAttribute("width", x2 - x1);
   svg2.setAttribute("height", LARGEUR_LIGNE);
   svg.appendChild(svg2);
@@ -232,14 +246,51 @@ function createLineSeuilSVG(chart, y) {
   svg2.appendChild(line);
 }
 
+function createLinePositionSVG(chart, x) {
+  var layout = chart.getChartLayoutInterface();
+  var chartArea = layout.getChartAreaBoundingBox();
+  var svg = chart.getContainer().getElementsByTagName("svg")[0];
+  var xLoc = layout.getXLocation(x);
+  var y1 = chartArea.top;
+  var y2 = chartArea.height + chartArea.top;
+
+  var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg2.setAttribute("class", "ligne ligne-position");
+  svg2.setAttribute("x", xLoc);
+  svg2.setAttribute("y", y1);
+  svg2.setAttribute("width", LARGEUR_LIGNE);
+  svg2.setAttribute("height", y2 - y1);
+  svg.appendChild(svg2);
+
+  var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rect.setAttribute("x", 0);
+  rect.setAttribute("y", 0);
+  rect.setAttribute("width", "100%");
+  rect.setAttribute("height", "100%");
+  rect.setAttribute("stroke", "#FF0000");
+  rect.setAttribute("stroke-width", 1);
+  rect.setAttribute("fill-opacity", 0);
+  rect.setAttribute("stroke-opacity", 0);
+  svg2.appendChild(rect);
+
+  var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line.setAttribute("x1", LARGEUR_LIGNE / 2);
+  line.setAttribute("y1", 0);
+  line.setAttribute("x2", LARGEUR_LIGNE / 2);
+  line.setAttribute("y2", y2 - y1);
+  line.setAttribute("stroke", "#000000");
+  line.setAttribute("stroke-width", 2);
+  svg2.appendChild(line);
+}
+
 var registerEvtLigneSeuilSVG = function () {
   $(".ligne-seuil")
     .mousedown(function (e) {
       currentY = e.clientY;
-      selectedElement = e.target;
+      selectedElementSeuil = e.target;
     })
     .mousemove(function (e) {
-      if (selectedElement) {
+      if (selectedElementSeuil) {
         var y = chartGety(chart, e.clientY);
         if (y >= 0 && y <= vmax) {
           var dy =
@@ -255,8 +306,45 @@ var registerEvtLigneSeuilSVG = function () {
       }
     })
     .mouseup(function (e) {
-      selectedElement = null;
+      selectedElementSeuil = null;
     });
+};
+
+var registerEvtLignePositionSVG = function () {
+  $(".ligne-position")
+    .mousedown(function (e) {
+      currentX = e.clientX;
+      selectedElementPosition = e.target;
+    })
+    .mousemove(function (e) {
+      if (selectedElementPosition) {
+        var x = chartGetx(chart, e.clientX);
+        if (x >= 0 && x <= dmax) {
+          var dx =
+            parseInt($(this)[0].getAttribute("x")) + e.clientX - currentX;
+          $(this)[0].setAttribute("x", dx);
+          currentX = e.clientX;
+
+          $("#position").val((x / 1000).toFixed(2));
+        }
+      }
+    })
+    .mouseup(function (e) {
+      selectedElementPosition = null;
+    });
+
+  $("#chart").mousemove(function (e) {
+    if (elementEstLignePosition(e)) {
+      var x = chartGetx(chart, e.clientX);
+      if (x >= 0 && x <= dmax) {
+        var dx = parseInt($(this)[0].getAttribute("x")) + e.clientX - currentX;
+        selectedElementPosition.setAttribute("x", dx);
+        currentX = e.clientX;
+
+        $("#position").val((x / 1000).toFixed(2));
+      }
+    }
+  });
 };
 
 function chartGety(chart, Y) {
@@ -264,6 +352,24 @@ function chartGety(chart, Y) {
   var H = layout.getChartAreaBoundingBox().height;
   var Y2 = $("#chart").last().offset().top + H - Y + 30;
   return (Y2 * vmax) / H;
+}
+
+function chartGetx(chart, X) {
+  var layout = chart.getChartLayoutInterface();
+  var L = layout.getChartAreaBoundingBox().width - 30;
+  var X2 = X - $("#chart").last().offset().left - 30;
+  return (X2 * dmax) / L;
+}
+
+function elementEstLignePosition(e) {
+  if (e != null) {
+    if (e.getAttribute("class") != "") {
+      if (e.getAttribute("class").indexOf("ligne-position") > -1) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 // ----------------------------------------
