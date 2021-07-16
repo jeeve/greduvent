@@ -381,6 +381,15 @@ var registerEvtLignePositionSVG = function () {
         $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
       }
     }
+  }).click(function (e) {
+      var x = chartGetx(chart, e.clientX);
+      if (x >= 0 && x <= dmax) {
+        var dx = e.clientX - 176;
+        $(".ligne-position")[0].setAttribute("x", dx);
+        $("#position").val((x / 1000).toFixed(2));
+        UpdatePosition();
+        $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+      }
   });
 };
 
