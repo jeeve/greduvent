@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
     <link rel="stylesheet" href="visu-gpx.css ">
-
 </head>
 
 <body>
@@ -32,7 +31,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="https://www.google.com/jsapi"></script>
     <script src="trace.js"></script>
-
 </body>
 
 </html>
