@@ -10,10 +10,12 @@
 #seuil {
   width: 40px;
   color: red;
+  text-align: right;
 }
 
 #position {
   width: 40px;
+  text-align: right;
 }
 
 #vitesse {

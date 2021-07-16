@@ -127,11 +127,7 @@ function dessine() {
   trace = L.layerGroup(polylignes).addTo(map);
 
   marker = L.marker(xy[0]).addTo(map);
-}
-
-function getVitesse(x) {
-  var i = Math.floor(x / v.length);
-  return v[i];
+  UpdatePosition();
 }
 
 var map = L.map("map");
@@ -167,6 +163,16 @@ function reportWindowSize() {
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
+function getVitesse(x) {
+  var i = Math.floor((x / 1000 * v.length) / dmax);
+  return v[i];
+}
+
+function UpdatePosition() {
+  var i = Math.floor(($("#position").val() * 1000 * xy.length) / dmax);
+  marker.setLatLng(xy[i]); 
+}
+
 // ------------------------------------------------------------------------ chart
 
 var selectedElementSeuil = null;
@@ -191,7 +197,8 @@ function drawChart() {
   chart.draw(data, options);
 
   CreeLigneSeuil(chart, $("#seuil").val());
-  CreeLignePosition(chart, $("#position").val());
+  CreeLignePosition(chart, $("#position").val() * 1000);
+  UpdatePosition();
 /*
   google.visualization.events.addListener(chart, "onmouseover", function (e) {
     marker.setLatLng(xy[e.row]);
@@ -352,6 +359,7 @@ var registerEvtLignePositionSVG = function () {
           currentX = e.clientX;
 
           $("#position").val((x / 1000).toFixed(2));
+          UpdatePosition();
           $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
         }
       }
@@ -369,6 +377,7 @@ var registerEvtLignePositionSVG = function () {
         currentX = e.clientX;
 
         $("#position").val((x / 1000).toFixed(2));
+        UpdatePosition();
         $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
       }
     }
