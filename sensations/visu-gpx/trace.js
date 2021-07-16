@@ -314,11 +314,11 @@ var registerEvtLigneSeuilSVG = function () {
     });
 
     $("#chart").mousemove(function (e) {
-      if (elementEstLigneSeuil(selectedElementPosition)) {
+      if (elementEstLigneSeuil(selectedElementSeuil)) {
         var y = chartGety(chart, e.clientY);
         if (y >= 0 && y <= vmax) {
-          var dy = parseInt(selectedElementPosition.getAttribute("y")) + e.clientY - currentY;
-          selectedElementPosition.setAttribute("y", dy);
+          var dy = parseInt(selectedElementSeuil.getAttribute("y")) + e.clientY - currentY;
+          selectedElementSeuil.setAttribute("y", dy);
           currentY = e.clientY;
   
           $("#seuil").val(y.toFixed(2));
