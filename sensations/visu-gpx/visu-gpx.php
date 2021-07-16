@@ -21,6 +21,10 @@
                 <label for="name">Position</label>
                 <input type="text" id="position"></input>
             </div>
+            <div class="position">
+                <label for="name">Vitesse</label>
+                <div id="vitesse"></div>
+            </div>
         </div>
         <div id="courbe">
             <div id="chart"></div>
