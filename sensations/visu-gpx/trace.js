@@ -27,7 +27,7 @@ var vmax, dmax;
 var chartxy = [];
 var marker;
 
-function litGPX(url, times, xy, v, ready) {
+function litGPX(url, ready) {
   $.ajax({
     type: "GET",
     url: url,
@@ -52,9 +52,9 @@ function litGPX(url, times, xy, v, ready) {
           }
         });
 
-      var d = 0;
+      var distance = 0;
       chartxy = [];
-      chartxy.push(["Temps", "Vitesse"]);
+      chartxy.push(["Distance", "Vitesse"]);
       for (i = 0; i < times.length; i++) {
         if (i == 0) {
           v.push(0.0);
@@ -70,14 +70,14 @@ function litGPX(url, times, xy, v, ready) {
             vitesse = 0;
           }
           v.push(vitesse);
-          chartxy.push([d, vitesse]);
-          d = d + dd;
+          chartxy.push([distance, vitesse]);
+          distance = distance + dd;
         }
       }
       vmax = v.reduce((a, b) => {
         return Math.max(a, b);
       });
-      dmax = d - dd;
+      dmax = distance - dd;
 
       $("#seuil").val((vmax / 2).toFixed(2));
       $("#position").val("0.00");
@@ -93,7 +93,7 @@ function litGPX(url, times, xy, v, ready) {
   });
 }
 
-litGPX(getParameterByName("url"), times, xy, v, dessine);
+litGPX(getParameterByName("url"), dessine);
 
 function dessine() {
   polylignes = [];
@@ -164,8 +164,16 @@ function reportWindowSize() {
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
 function getVitesse(x) {
-  var i = Math.floor(((x / 1000) * v.length) / dmax);
-  return v[i];
+  var j = 0;
+  var delta = 10000000000.0;
+  var d = x / 1000;
+  for (i = 0; i < chartxy.length; i++) {
+    if (Math.abs(chartxy[i][0] - d) < delta) {
+      j = i;
+      delta = Math.abs(chartxy[i][0] - d);
+    }
+  }
+  return chartxy[j][1];
 }
 
 function UpdatePosition() {
