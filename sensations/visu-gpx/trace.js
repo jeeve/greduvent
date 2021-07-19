@@ -79,9 +79,7 @@ function litGPX(url, ready) {
       });
       dmax = distance - dd;
 
-      $("#seuil").val((vmax / 2).toFixed(2));
-      $("#position").val("0.00");
-
+      initParametres();
       var polyline = L.polyline(xy, { color: "black" });
       map.fitBounds(polyline.getBounds());
 
@@ -93,9 +91,15 @@ function litGPX(url, ready) {
   });
 }
 
-litGPX(getParameterByName("url"), dessine);
+function initParametres() {
+  $("#seuil").val((vmax / 2).toFixed(2));
+  $("#position").val("0.00");
+  $('#vitesse').text('0.00');
+}
 
-function dessine() {
+litGPX(getParameterByName("url"), dessineTrace);
+
+function dessineTrace() {
   polylignes = [];
   if (marker != null) {
     marker.remove();
@@ -125,8 +129,8 @@ function dessine() {
     }
   }
   trace = L.layerGroup(polylignes).addTo(map);
-
   marker = L.marker(xy[0]).addTo(map);
+  marker.bindTooltip("0", {permanent: true}).openTooltip();
   UpdatePosition();
 }
 
@@ -143,14 +147,14 @@ $("#seuil").change(function () {
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   CreeLigneSeuil(chart, $("#seuil").val());
   map.removeLayer(trace);
-  dessine();
+  dessineTrace();
 });
 
 $("#curseur").change(function () {
   $("#seuil").val((($("#curseur").val() * vmax) / 100).toFixed(2));
   CreeLigneSeuil(chart, $("#seuil").val());
   map.removeLayer(trace);
-  dessine();
+  dessineTrace();
 });
 
 $("#position").change(function () {
@@ -179,6 +183,7 @@ function getVitesse(x) {
 function UpdatePosition() {
   var i = Math.floor(($("#position").val() * 1000 * xy.length) / dmax);
   marker.setLatLng(xy[i]);
+  $("#map .leaflet-tooltip").html($("#vitesse").text());
 }
 
 // ------------------------------------------------------------------------ chart
@@ -327,7 +332,7 @@ var registerEvtLigneSeuilSVG = function () {
           $("#seuil").val(y.toFixed(2));
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           map.removeLayer(trace);
-          dessine();
+          dessineTrace();
         }
       }
     })
@@ -353,7 +358,7 @@ var registerEvtLigneSeuilSVG = function () {
           $("#seuil").val(y.toFixed(2));
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           map.removeLayer(trace);
-          dessine();
+          dessineTrace();
         }
       }
     })
