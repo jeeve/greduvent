@@ -1,4 +1,4 @@
-function calcCrow(lat1, lon1, lat2, lon2) {
+function calculeDistance(lat1, lon1, lat2, lon2) {
   var R = 6371; // km
   var dLat = toRad(lat2 - lat1);
   var dLon = toRad(lon2 - lon1);
@@ -59,7 +59,7 @@ function litGPX(url, ready) {
         if (i == 0) {
           v.push(0.0);
         } else {
-          dd = calcCrow(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]) * 1000;
+          dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]) * 1000;
           t1 = new Date(times[i - 1]);
           t2 = new Date(times[i]);
           dt = (t2.getTime() - t1.getTime()) / 1000;
@@ -110,7 +110,7 @@ function dessineTrace() {
   var xy2 = [];
   var cat0, cat;
   cat0 = 0;
-  for (i = 0; i < v.length; i++) {
+  for (i = 0; i < xy.length; i++) {
     xy2.push(xy[i]);
     if (v[i] > seuil) {
       cat = 1;
@@ -140,6 +140,27 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   layers: [trace],
 }).addTo(map);
+
+map.on('click', function(e) {
+  $("#map path").click(function () {
+     $('#position').val(calculexLePlusPresDe(e.latlng.lat, e.latlng.lng).toFixed(2));
+    UpdatePosition();
+  });
+});
+
+function calculexLePlusPresDe(lat, lng) {
+  var dmin = 10000000000.0;
+  var d;
+  var j = 0;
+  for (i = 0; i < xy.length; i++) {
+    d = calculeDistance(lat, lng, xy[i][0], xy[i][1]);
+    if (d < dmin) {
+      j = i;
+      dmin = d;
+    }
+  }
+  return chartxy[j][0] / 1000;
+}
 
 reportWindowSize();
 
