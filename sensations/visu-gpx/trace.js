@@ -383,8 +383,8 @@ var registerEvtLignePositionSVG = function () {
           currentX = e.clientX;
 
           $("#position").val((x / 1000).toFixed(2));
-          UpdatePosition();
           $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+          UpdatePosition();
         }
       }
     })
@@ -405,8 +405,8 @@ var registerEvtLignePositionSVG = function () {
           currentX = e.clientX;
 
           $("#position").val((x / 1000).toFixed(2));
-          UpdatePosition();
           $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+          UpdatePosition();
         }
       }
     })
@@ -419,8 +419,8 @@ var registerEvtLignePositionSVG = function () {
         var dx = e.clientX - 176;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val((x / 1000).toFixed(2));
-        UpdatePosition();
         $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+        UpdatePosition();
       }
     });
 };
