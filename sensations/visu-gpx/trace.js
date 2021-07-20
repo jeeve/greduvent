@@ -142,17 +142,17 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 map.on("click", function (e) {
-  $("#map path").click(function () {
-    var x = calculexLePlusPresDe(e.latlng.lat, e.latlng.lng);
-    $("#position").val((x / 1000).toFixed(2));
-    $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
-    CreeLignePosition(chart, x);
+  var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
+  if (i != -1) {
+    $("#position").val(chartxy[i][0].toFixed(2));
+    $("#vitesse").text(chartxy[i][1].toFixed(2));
+    CreeLignePosition(chart, chartxy[i][0]);
     UpdatePosition();
-  });
+  }
 });
 
-function calculexLePlusPresDe(lat, lng) {
-  var dmin = 10000000000.0;
+function calculeIndiceLePlusPresDe(lat, lng) {
+  var dmin = 1000000.0;
   var d;
   var j = 0;
   for (i = 0; i < xy.length; i++) {
@@ -162,7 +162,12 @@ function calculexLePlusPresDe(lat, lng) {
       dmin = d;
     }
   }
-  return chartxy[j][0];
+  if (dmin < 0.1) {
+    // ne prend que si moins de 100m
+    return j;
+  } else {
+    return -1;
+  }
 }
 
 reportWindowSize();
@@ -192,19 +197,23 @@ function reportWindowSize() {
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
 function getVitesse(x) {
+  return chartxy[getIndiceDistance(x)][1];
+}
+
+function getIndiceDistance(x) {
   var j = 0;
-  var delta = 10000000000.0;
+  var delta = 10000000.0;
   for (i = 0; i < chartxy.length; i++) {
     if (Math.abs(chartxy[i][0] - x) < delta) {
       j = i;
       delta = Math.abs(chartxy[i][0] - x);
     }
   }
-  return chartxy[j][1];
+  return j;
 }
 
 function UpdatePosition() {
-  var i = Math.floor(($("#position").val() * xy.length) / dmax);
+  var i = getIndiceDistance($("#position").val());
   marker.setLatLng(xy[i]);
   $("#map .leaflet-tooltip").html($("#vitesse").text());
 }
@@ -405,7 +414,7 @@ var registerEvtLignePositionSVG = function () {
           $(this)[0].setAttribute("x", dx);
           currentX = e.clientX;
 
-          $("#position").val((x).toFixed(2));
+          $("#position").val(x.toFixed(2));
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
@@ -427,7 +436,7 @@ var registerEvtLignePositionSVG = function () {
           selectedElementPosition.setAttribute("x", dx);
           currentX = e.clientX;
 
-          $("#position").val((x).toFixed(2));
+          $("#position").val(x.toFixed(2));
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
@@ -441,7 +450,7 @@ var registerEvtLignePositionSVG = function () {
       if (x >= 0 && x <= dmax) {
         var dx = e.clientX - 176;
         $(".ligne-position")[0].setAttribute("x", dx);
-        $("#position").val((x).toFixed(2));
+        $("#position").val(x.toFixed(2));
         $("#vitesse").text(getVitesse(x).toFixed(2));
         UpdatePosition();
       }
