@@ -59,15 +59,13 @@ function litGPX(url, ready) {
         if (i == 0) {
           v.push(0.0);
         } else {
-          dd =
-            calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]) *
-            1000;
+          dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]);
           t1 = new Date(times[i - 1]);
           t2 = new Date(times[i]);
           dt = (t2.getTime() - t1.getTime()) / 1000;
           var vitesse;
           if (dt != 0) {
-            vitesse = (dd / dt) * 1.94384;
+            vitesse = ((dd * 1000) / dt) * 1.94384;
           } else {
             vitesse = 0;
           }
@@ -196,18 +194,17 @@ document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 function getVitesse(x) {
   var j = 0;
   var delta = 10000000000.0;
-  var d = x / 1000;
   for (i = 0; i < chartxy.length; i++) {
-    if (Math.abs(chartxy[i][0] - d) < delta) {
+    if (Math.abs(chartxy[i][0] - x) < delta) {
       j = i;
-      delta = Math.abs(chartxy[i][0] - d);
+      delta = Math.abs(chartxy[i][0] - x);
     }
   }
   return chartxy[j][1];
 }
 
 function UpdatePosition() {
-  var i = Math.floor(($("#position").val() * 1000 * xy.length) / dmax);
+  var i = Math.floor(($("#position").val() * xy.length) / dmax);
   marker.setLatLng(xy[i]);
   $("#map .leaflet-tooltip").html($("#vitesse").text());
 }
@@ -408,8 +405,8 @@ var registerEvtLignePositionSVG = function () {
           $(this)[0].setAttribute("x", dx);
           currentX = e.clientX;
 
-          $("#position").val((x / 1000).toFixed(2));
-          $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+          $("#position").val((x).toFixed(2));
+          $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
       }
@@ -430,8 +427,8 @@ var registerEvtLignePositionSVG = function () {
           selectedElementPosition.setAttribute("x", dx);
           currentX = e.clientX;
 
-          $("#position").val((x / 1000).toFixed(2));
-          $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+          $("#position").val((x).toFixed(2));
+          $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
       }
@@ -444,8 +441,8 @@ var registerEvtLignePositionSVG = function () {
       if (x >= 0 && x <= dmax) {
         var dx = e.clientX - 176;
         $(".ligne-position")[0].setAttribute("x", dx);
-        $("#position").val((x / 1000).toFixed(2));
-        $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+        $("#position").val((x).toFixed(2));
+        $("#vitesse").text(getVitesse(x).toFixed(2));
         UpdatePosition();
       }
     });
