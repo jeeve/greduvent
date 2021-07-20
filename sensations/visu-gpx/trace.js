@@ -59,7 +59,9 @@ function litGPX(url, ready) {
         if (i == 0) {
           v.push(0.0);
         } else {
-          dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]) * 1000;
+          dd =
+            calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]) *
+            1000;
           t1 = new Date(times[i - 1]);
           t2 = new Date(times[i]);
           dt = (t2.getTime() - t1.getTime()) / 1000;
@@ -94,7 +96,7 @@ function litGPX(url, ready) {
 function initParametres() {
   $("#seuil").val((vmax / 2).toFixed(2));
   $("#position").val("0.00");
-  $('#vitesse').text('0.00');
+  $("#vitesse").text("0.00");
 }
 
 litGPX(getParameterByName("url"), dessineTrace);
@@ -130,7 +132,7 @@ function dessineTrace() {
   }
   trace = L.layerGroup(polylignes).addTo(map);
   marker = L.marker(xy[0]).addTo(map);
-  marker.bindTooltip("0", {permanent: true}).openTooltip();
+  marker.bindTooltip("0", { permanent: true }).openTooltip();
   UpdatePosition();
 }
 
@@ -141,9 +143,12 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   layers: [trace],
 }).addTo(map);
 
-map.on('click', function(e) {
+map.on("click", function (e) {
   $("#map path").click(function () {
-     $('#position').val(calculexLePlusPresDe(e.latlng.lat, e.latlng.lng).toFixed(2));
+    var x = calculexLePlusPresDe(e.latlng.lat, e.latlng.lng);
+    $("#position").val((x / 1000).toFixed(2));
+    $("#vitesse").text(getVitesse(x * 1000).toFixed(2));
+    CreeLignePosition(chart, x);
     UpdatePosition();
   });
 });
@@ -159,7 +164,7 @@ function calculexLePlusPresDe(lat, lng) {
       dmin = d;
     }
   }
-  return chartxy[j][0] / 1000;
+  return chartxy[j][0];
 }
 
 reportWindowSize();
