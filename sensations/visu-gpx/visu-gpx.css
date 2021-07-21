@@ -80,3 +80,11 @@
 .ligne-position {
   cursor: col-resize;
 }
+
+.ligne-gauche {
+  cursor: col-resize;
+}
+
+.ligne-droite {
+  cursor: col-resize;
+}

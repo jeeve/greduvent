@@ -222,8 +222,10 @@ function UpdatePosition() {
 
 var selectedElementSeuil = null;
 var selectedElementPosition = null;
-var currentX = 0;
-var currentY = 0;
+var currentXPosition = 0;
+var currentYSeuil = 0;
+var gauche = { currentX: 0, selectedElement: null };
+var droite = { currentX: 0, selectedElement: null };
 const LARGEUR_LIGNE = 10;
 
 function drawChart() {
@@ -240,10 +242,13 @@ function drawChart() {
 
   chart = new google.visualization.LineChart(document.getElementById("chart"));
   chart.draw(data, options);
-
+  registerEvtChart();
   CreeLigneSeuil(chart, $("#seuil").val());
   CreeLignePosition(chart, $("#position").val() * 1000);
+  CreeLigneGauche(chart, 0.5);
+  CreeLigneDroite(chart, dmax - 0.5);
   UpdatePosition();
+
   /*
   google.visualization.events.addListener(chart, "onmouseover", function (e) {
     marker.setLatLng(xy[e.row]);
@@ -257,21 +262,37 @@ $(window).resize(function () {
 
 function CreeLigneSeuil(chart, y) {
   $(".ligne-seuil").remove();
-  createLineSeuilSVG(chart, y);
+  createLineHorizontaleSVG(chart, y);
   selectedElementSeuil = null;
-  currentY = 0;
+  currentYSeuil = 0;
   registerEvtLigneSeuilSVG();
 }
 
 function CreeLignePosition(chart, x) {
   $(".ligne-position").remove();
-  createLinePositionSVG(chart, x);
+  createLineVerticaleSVG(chart, x, "ligne-position", true);
   selectedElementPosition = null;
-  currentX = 0;
+  currentXPosition = 0;
   registerEvtLignePositionSVG();
 }
 
-function createLineSeuilSVG(chart, y) {
+function CreeLigneGauche(chart, x) {
+  $(".ligne-gauche").remove();
+  createLineVerticaleSVG(chart, x, "ligne-gauche", false);
+  gauche.selectedElement = null;
+  gauche.currentX = 0;
+  registerEvtLigneVerticaleSVG("ligne-gauche", gauche);
+}
+
+function CreeLigneDroite(chart, x) {
+  $(".ligne-droite").remove();
+  createLineVerticaleSVG(chart, x, "ligne-droite", false);
+  droite.selectedElement = null;
+  droite.currentX = 0;
+  registerEvtLigneVerticaleSVG("ligne-droite", droite);
+}
+
+function createLineHorizontaleSVG(chart, y) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
@@ -308,7 +329,7 @@ function createLineSeuilSVG(chart, y) {
   svg2.appendChild(line);
 }
 
-function createLinePositionSVG(chart, x) {
+function createLineVerticaleSVG(chart, x, classeName, pointille) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
@@ -317,7 +338,7 @@ function createLinePositionSVG(chart, x) {
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg2.setAttribute("class", "ligne ligne-position");
+  svg2.setAttribute("class", "ligne " + classeName);
   svg2.setAttribute("x", xLoc);
   svg2.setAttribute("y", y1);
   svg2.setAttribute("width", LARGEUR_LIGNE);
@@ -342,14 +363,51 @@ function createLinePositionSVG(chart, x) {
   line.setAttribute("y2", y2 - y1);
   line.setAttribute("stroke", "#000000");
   line.setAttribute("stroke-width", 3);
-  line.setAttribute("stroke-dasharray", "5, 5");
+  if (pointille) {
+    line.setAttribute("stroke-dasharray", "5, 5");
+  }
   svg2.appendChild(line);
 }
+
+var registerEvtChart = function () {
+  $("#chart")
+    .mousemove(function (e) {
+      if (elementEstLignePosition(selectedElementPosition)) {
+        var x = chartGetx(chart, e.clientX);
+        if (x >= 0 && x <= dmax) {
+          var dx =
+            parseInt(selectedElementPosition.getAttribute("x")) +
+            e.clientX -
+            currentXPosition;
+          selectedElementPosition.setAttribute("x", dx);
+          currentXPosition = e.clientX;
+
+          $("#position").val(x.toFixed(2));
+          $("#vitesse").text(getVitesse(x).toFixed(2));
+          UpdatePosition();
+        }
+      }
+    })
+    .mouseleave(function (e) {
+      selectedElementSeuil = null;
+      selectedElementPosition = null;
+    })
+    .click(function (e) {
+      var x = chartGetx(chart, e.clientX);
+      if (x >= 0 && x <= dmax) {
+        var dx = e.clientX - 176;
+        $(".ligne-position")[0].setAttribute("x", dx);
+        $("#position").val(x.toFixed(2));
+        $("#vitesse").text(getVitesse(x).toFixed(2));
+        UpdatePosition();
+      }
+    });
+};
 
 var registerEvtLigneSeuilSVG = function () {
   $(".ligne-seuil")
     .mousedown(function (e) {
-      currentY = e.clientY;
+      currentYSeuil = e.clientY;
       selectedElementSeuil = $(this)[0];
     })
     .mousemove(function (e) {
@@ -357,9 +415,9 @@ var registerEvtLigneSeuilSVG = function () {
         var y = chartGety(chart, e.clientY);
         if (y >= 0 && y <= vmax) {
           var dy =
-            parseInt($(this)[0].getAttribute("y")) + e.clientY - currentY;
+            parseInt($(this)[0].getAttribute("y")) + e.clientY - currentYSeuil;
           $(this)[0].setAttribute("y", dy);
-          currentY = e.clientY;
+          currentYSeuil = e.clientY;
 
           $("#seuil").val(y.toFixed(2));
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
@@ -374,35 +432,12 @@ var registerEvtLigneSeuilSVG = function () {
     .click(function (e) {
       e.stopPropagation();
     });
-
-  $("#chart")
-    .mousemove(function (e) {
-      if (elementEstLigneSeuil(selectedElementSeuil)) {
-        var y = chartGety(chart, e.clientY);
-        if (y >= 0 && y <= vmax) {
-          var dy =
-            parseInt(selectedElementSeuil.getAttribute("y")) +
-            e.clientY -
-            currentY;
-          selectedElementSeuil.setAttribute("y", dy);
-          currentY = e.clientY;
-
-          $("#seuil").val(y.toFixed(2));
-          $("#curseur").val(($("#seuil").val() / vmax) * 100);
-          map.removeLayer(trace);
-          dessineTrace();
-        }
-      }
-    })
-    .mouseleave(function (e) {
-      selectedElementSeuil = null;
-    });
 };
 
 var registerEvtLignePositionSVG = function () {
   $(".ligne-position")
     .mousedown(function (e) {
-      currentX = e.clientX;
+      currentXPosition = e.clientX;
       selectedElementPosition = $(this)[0];
     })
     .mousemove(function (e) {
@@ -410,9 +445,11 @@ var registerEvtLignePositionSVG = function () {
         var x = chartGetx(chart, e.clientX);
         if (x >= 0 && x <= dmax) {
           var dx =
-            parseInt($(this)[0].getAttribute("x")) + e.clientX - currentX;
+            parseInt($(this)[0].getAttribute("x")) +
+            e.clientX -
+            currentXPosition;
           $(this)[0].setAttribute("x", dx);
-          currentX = e.clientX;
+          currentXPosition = e.clientX;
 
           $("#position").val(x.toFixed(2));
           $("#vitesse").text(getVitesse(x).toFixed(2));
@@ -423,38 +460,62 @@ var registerEvtLignePositionSVG = function () {
     .mouseup(function (e) {
       selectedElementPosition = null;
     });
+};
 
-  $("#chart")
+var registerEvtLigneVerticaleSVG = function (className, parametres) {
+  $(className)
+    .mousedown(function (e) {
+      parametres.currentX = e.clientX;
+      parametres.selectedElement = $(this)[0];
+    })
     .mousemove(function (e) {
-      if (elementEstLignePosition(selectedElementPosition)) {
+      if (parametres.selectedElement) {
         var x = chartGetx(chart, e.clientX);
         if (x >= 0 && x <= dmax) {
           var dx =
-            parseInt(selectedElementPosition.getAttribute("x")) +
+            parseInt($(this)[0].getAttribute("x")) +
+            e.clientX -
+            parametres.currentX;
+          $(this)[0].setAttribute("x", dx);
+          parametres.currentX = e.clientX;
+
+          //          $("#position").val(x.toFixed(2));
+          //          $("#vitesse").text(getVitesse(x).toFixed(2));
+          //          UpdatePosition();
+        }
+      }
+    })
+    .mouseup(function (e) {
+      parametres.selectedElement = null;
+    })
+    .click(function (e) {
+      e.stopPropagation();
+    });
+  /*
+  $("#chart")
+    .mousemove(function (e) {
+      var ok = false;
+      if (e != null) {
+        if (e.getAttribute("class").indexOf(className) > -1) {
+          ok = true;
+        }
+      }
+      if (ok) {
+        var x = chartGetx(chart, e.clientX);
+        if (x >= 0 && x <= dmax) {
+          var dx =
+            parseInt(selectedElementGauche.getAttribute("x")) +
             e.clientX -
             currentX;
-          selectedElementPosition.setAttribute("x", dx);
-          currentX = e.clientX;
-
-          $("#position").val(x.toFixed(2));
-          $("#vitesse").text(getVitesse(x).toFixed(2));
-          UpdatePosition();
+            parametres.selectedElement.setAttribute("x", dx);
+            parametres.currentX = e.clientX;
         }
       }
     })
     .mouseleave(function (e) {
-      selectedElementPosition = null;
-    })
-    .click(function (e) {
-      var x = chartGetx(chart, e.clientX);
-      if (x >= 0 && x <= dmax) {
-        var dx = e.clientX - 176;
-        $(".ligne-position")[0].setAttribute("x", dx);
-        $("#position").val(x.toFixed(2));
-        $("#vitesse").text(getVitesse(x).toFixed(2));
-        UpdatePosition();
-      }
+      parametres.selectedElement = null;
     });
+    */
 };
 
 function chartGety(chart, Y) {
@@ -483,6 +544,15 @@ function elementEstLigneSeuil(e) {
 function elementEstLignePosition(e) {
   if (e != null) {
     if (e.getAttribute("class").indexOf("ligne-position") > -1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function elementEstLigneGauche(e) {
+  if (e != null) {
+    if (e.getAttribute("class").indexOf("ligne-gauche") > -1) {
       return true;
     }
   }
