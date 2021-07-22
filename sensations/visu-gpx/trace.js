@@ -164,12 +164,53 @@ function indiceEndehorsBornes(i) {
 }
 
 function updateBornes() {
-  $(".borne-a").attr("width", parseInt($(".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2 - 30);
-  $(".borne-b").attr("x", parseInt($(".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2);
-  $(".borne-b").attr("width", chart.getChartLayoutInterface().getXLocation(dmax) - parseInt($(".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2);
+  if (
+    parseInt($(".ligne-gauche").attr("x")) <=
+    parseInt($(".ligne-droite").attr("x"))
+  ) {
+    $(".borne-a").attr(
+      "width",
+      parseInt($(".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2 - 30
+    );
+    $(".borne-b").attr(
+      "x",
+      parseInt($(".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2
+    );
+    $(".borne-b").attr(
+      "width",
+      chart.getChartLayoutInterface().getXLocation(dmax) -
+        parseInt($(".ligne-droite").attr("x")) +
+        LARGEUR_LIGNE / 2
+    );
+  } else {
+    $(".borne-a").attr(
+      "width",
+      parseInt($(".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2 - 30
+    );
+    $(".borne-b").attr(
+      "x",
+      parseInt($(".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2
+    );
+    $(".borne-ab").attr(
+      "width",
+      chart.getChartLayoutInterface().getXLocation(dmax) -
+        parseInt($(".ligne-gauche").attr("x")) +
+        LARGEUR_LIGNE / 2
+    );
+  }
 
-  var i = getIndiceDistance(chartGetx(chart, $(".ligne-gauche").last().offset().left + LARGEUR_LIGNE/2));
-  var j = getIndiceDistance(chartGetx(chart, $(".ligne-droite").last().offset().left + LARGEUR_LIGNE/2));
+  var i = getIndiceDistance(
+    chartGetx(
+      chart,
+      $(".ligne-gauche").last().offset().left + LARGEUR_LIGNE / 2
+    )
+  );
+  var j = getIndiceDistance(
+    chartGetx(
+      chart,
+      $(".ligne-droite").last().offset().left + LARGEUR_LIGNE / 2
+    )
+  );
   if (i < j) {
     borneA = i;
     borneB = j;
@@ -288,11 +329,11 @@ function drawChart() {
   chart = new google.visualization.LineChart(document.getElementById("chart"));
   chart.draw(data, options);
   registerEvtChart();
-  createLineBornesSVG(chart, dmax*0.1, dmax - dmax*0.1);
+  createLineBornesSVG(chart, dmax * 0.1, dmax - dmax * 0.1);
   CreeLigneSeuil(chart, $("#seuil").val());
   CreeLignePosition(chart, $("#position").val() * 1000);
-  CreeLigneGauche(chart, dmax*0.1);
-  CreeLigneDroite(chart, dmax - dmax*0.1);
+  CreeLigneGauche(chart, dmax * 0.1);
+  CreeLigneDroite(chart, dmax - dmax * 0.1);
   UpdatePosition();
   updateBornes();
 }
