@@ -368,43 +368,55 @@ function createLineVerticaleSVG(chart, x, classeName, pointille) {
   }
   svg2.appendChild(line);
 }
-/*
+
 var registerEvtChart = function () {
   $("#chart")
     .mousemove(function (e) {
       var elt = null;
       var parametres;
-      if (e.target.getAttribute("class") != null) {
-        if (e.target.getAttribute("class").indexOf("ligne-position") > -1) {
-          var x = chartGetx(chart, e.clientX);
-          if (x >= 0 && x <= dmax) {
-            var dx = parseInt(selectedElementPosition.getAttribute("x")) + e.clientX - currentX;
-            selectedElementPosition.setAttribute("x", dx);
-            currentXPosition = e.clientX;
 
-            $("#position").val(x.toFixed(2));
-            $("#vitesse").text(getVitesse(x).toFixed(2));
-            UpdatePosition();
-          }
-      } 
-    
-        if (e.target.getAttribute("class").indexOf("ligne-gauche") > -1) {
-          parametres = curseurA;
-        }
-        if (e.target.getAttribute("class").indexOf("ligne-droite") > -1) {
-          parametres = curseurB;
-        }
-    
-      if (elt != null) {
+      if (elementEstClasse(selectedElementPosition, "ligne-position")) {
         var x = chartGetx(chart, e.clientX);
         if (x >= 0 && x <= dmax) {
-          var dx = parseInt(elt.getAttribute("x")) + e.clientX - parametres.currentX;
-          parametres.selectedElement.setAttribute("x", dx);
-          parametres.currentX = e.clientX;
+          var dx =
+            parseInt(selectedElementPosition.getAttribute("x")) +
+            e.clientX -
+            currentXPosition;
+          selectedElementPosition.setAttribute("x", dx);
+          currentXPosition = e.clientX;
+
+          $("#position").val(x.toFixed(2));
+          $("#vitesse").text(getVitesse(x).toFixed(2));
+          UpdatePosition();
+        }
+      } else {
+        if (
+          elementEstClasse(curseurA.selectedElement, "ligne-gauche")
+        ) {
+          {
+            parametres = curseurA;
+          }
+        }
+        if (
+          elementEstClasse(curseurB.selectedElement, "ligne-droite")
+        ) {
+          parametres = curseurB;
+        }
+        if (parametres != undefined) {
+          var x = chartGetx(chart, e.clientX);
+          if (x >= 0 && x <= dmax) {
+            var dx =
+              parseInt(parametres.selectedElement.getAttribute("x")) +
+              e.clientX -
+              parametres.currentX;
+            parametres.selectedElement.setAttribute("x", dx);
+            parametres.currentX = e.clientX;
+          }
         }
       }
     })
     .mouseleave(function (e) {
+      selectedElementSeuil = null;
       selectedElementPosition = null;
       curseurA.selectedElement = null;
       curseurB.selectedElement = null;
@@ -420,7 +432,8 @@ var registerEvtChart = function () {
       }
     });
 };
-*/
+
+/*
 var registerEvtChart = function () {
   $("#chart")
     .mousemove(function (e) {
@@ -455,6 +468,8 @@ var registerEvtChart = function () {
       }
     });
   }
+*/
+
 var registerEvtLigneSeuilSVG = function () {
   $(".ligne-seuil")
     .mousedown(function (e) {
@@ -554,18 +569,9 @@ function chartGetx(chart, X) {
   return (X2 * dmax) / L;
 }
 
-function elementEstLigneSeuil(e) {
+function elementEstClasse(e, className) {
   if (e != null) {
-    if (e.getAttribute("class").indexOf("ligne-seuil") > -1) {
-      return true;
-    }
-  }
-  return false;
-}
-
-function elementEstLignePosition(e) {
-  if (e != null) {
-    if (e.getAttribute("class").indexOf("ligne-position") > -1) {
+    if (e.getAttribute("class").indexOf(className) > -1) {
       return true;
     }
   }
