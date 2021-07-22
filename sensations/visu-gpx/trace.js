@@ -220,10 +220,8 @@ function UpdatePosition() {
 
 // ------------------------------------------------------------------------ chart
 
-var selectedElementSeuil = null;
-var selectedElementPosition = null;
-var currentXPosition = 0;
-var currentYSeuil = 0;
+var curseurSeuil = { currentX: 0, selectedElement: null };
+var curseurPosition = { currentX: 0, selectedElement: null };
 var curseurA = { currentX: 0, selectedElement: null };
 var curseurB = { currentX: 0, selectedElement: null };
 const LARGEUR_LIGNE = 10;
@@ -263,16 +261,16 @@ $(window).resize(function () {
 function CreeLigneSeuil(chart, y) {
   $(".ligne-seuil").remove();
   createLineHorizontaleSVG(chart, y);
-  selectedElementSeuil = null;
-  currentYSeuil = 0;
+  curseurSeuil.selectedElement = null;
+  curseurSeuil.currentX = 0;
   registerEvtLigneSeuilSVG();
 }
 
 function CreeLignePosition(chart, x) {
   $(".ligne-position").remove();
   createLineVerticaleSVG(chart, x, "ligne-position", true);
-  selectedElementPosition = null;
-  currentXPosition = 0;
+  curseurPosition.selectedElement = null;
+  curseurPosition.currentX = 0;
   registerEvtLignePositionSVG();
 }
 
@@ -375,31 +373,43 @@ var registerEvtChart = function () {
       var elt = null;
       var parametres;
 
-      if (elementEstClasse(selectedElementPosition, "ligne-position")) {
+      if (elementEstClasse(curseurPosition.selectedElement, "ligne-position")) {
         var x = chartGetx(chart, e.clientX);
         if (x >= 0 && x <= dmax) {
           var dx =
-            parseInt(selectedElementPosition.getAttribute("x")) +
+            parseInt(curseurPosition.selectedElement.getAttribute("x")) +
             e.clientX -
-            currentXPosition;
-          selectedElementPosition.setAttribute("x", dx);
-          currentXPosition = e.clientX;
+            curseurPosition.currentX;
+          curseurPosition.selectedElement.setAttribute("x", dx);
+          curseurPosition.currentX = e.clientX;
 
           $("#position").val(x.toFixed(2));
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
       } else {
-        if (
-          elementEstClasse(curseurA.selectedElement, "ligne-gauche")
-        ) {
+        if (elementEstClasse(curseurSeuil.selectedElement, "ligne-seuil")) {
+          var y = chartGety(chart, e.clientY);
+          if (y >= 0 && y <= vmax) {
+            var dy =
+              parseInt(curseurSeuil.selectedElement.getAttribute("y")) +
+              e.clientY -
+              curseurSeuil.currentX;
+            curseurSeuil.selectedElement.setAttribute("y", dy);
+            curseurSeuil.currentX = e.clientY;
+
+            $("#seuil").val(y.toFixed(2));
+            $("#curseur").val(($("#seuil").val() / vmax) * 100);
+            map.removeLayer(trace);
+            dessineTrace();
+          }
+        }
+        if (elementEstClasse(curseurA.selectedElement, "ligne-gauche")) {
           {
             parametres = curseurA;
           }
         }
-        if (
-          elementEstClasse(curseurB.selectedElement, "ligne-droite")
-        ) {
+        if (elementEstClasse(curseurB.selectedElement, "ligne-droite")) {
           parametres = curseurB;
         }
         if (parametres != undefined) {
@@ -416,8 +426,8 @@ var registerEvtChart = function () {
       }
     })
     .mouseleave(function (e) {
-      selectedElementSeuil = null;
-      selectedElementPosition = null;
+      curseurSeuil.selectedElement = null;
+      curseurPosition.selectedElement = null;
       curseurA.selectedElement = null;
       curseurB.selectedElement = null;
     })
@@ -433,57 +443,22 @@ var registerEvtChart = function () {
     });
 };
 
-/*
-var registerEvtChart = function () {
-  $("#chart")
-    .mousemove(function (e) {
-      if (elementEstLignePosition(selectedElementPosition)) {
-        var x = chartGetx(chart, e.clientX);
-        if (x >= 0 && x <= dmax) {
-          var dx =
-            parseInt(selectedElementPosition.getAttribute("x")) +
-            e.clientX -
-            currentXPosition;
-          selectedElementPosition.setAttribute("x", dx);
-          currentXPosition = e.clientX;
-
-          $("#position").val(x.toFixed(2));
-          $("#vitesse").text(getVitesse(x).toFixed(2));
-          UpdatePosition();
-        }
-      }
-    })
-    .mouseleave(function (e) {
-      selectedElementSeuil = null;
-      selectedElementPosition = null;
-    })
-    .click(function (e) {
-      var x = chartGetx(chart, e.clientX);
-      if (x >= 0 && x <= dmax) {
-        var dx = e.clientX - 176;
-        $(".ligne-position")[0].setAttribute("x", dx);
-        $("#position").val(x.toFixed(2));
-        $("#vitesse").text(getVitesse(x).toFixed(2));
-        UpdatePosition();
-      }
-    });
-  }
-*/
-
 var registerEvtLigneSeuilSVG = function () {
   $(".ligne-seuil")
     .mousedown(function (e) {
-      currentYSeuil = e.clientY;
-      selectedElementSeuil = $(this)[0];
+      curseurSeuil.currentX = e.clientY;
+      curseurSeuil.selectedElement = $(this)[0];
     })
     .mousemove(function (e) {
-      if (selectedElementSeuil) {
+      if (curseurSeuil.selectedElement) {
         var y = chartGety(chart, e.clientY);
         if (y >= 0 && y <= vmax) {
           var dy =
-            parseInt($(this)[0].getAttribute("y")) + e.clientY - currentYSeuil;
+            parseInt($(this)[0].getAttribute("y")) +
+            e.clientY -
+            curseurSeuil.currentX;
           $(this)[0].setAttribute("y", dy);
-          currentYSeuil = e.clientY;
+          curseurSeuil.currentX = e.clientY;
 
           $("#seuil").val(y.toFixed(2));
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
@@ -493,7 +468,7 @@ var registerEvtLigneSeuilSVG = function () {
       }
     })
     .mouseup(function (e) {
-      selectedElementSeuil = null;
+      curseurSeuil.selectedElement = null;
     })
     .click(function (e) {
       e.stopPropagation();
@@ -503,19 +478,19 @@ var registerEvtLigneSeuilSVG = function () {
 var registerEvtLignePositionSVG = function () {
   $(".ligne-position")
     .mousedown(function (e) {
-      currentXPosition = e.clientX;
-      selectedElementPosition = $(this)[0];
+      curseurPosition.currentX = e.clientX;
+      curseurPosition.selectedElement = $(this)[0];
     })
     .mousemove(function (e) {
-      if (selectedElementPosition) {
+      if (curseurPosition.selectedElement) {
         var x = chartGetx(chart, e.clientX);
         if (x >= 0 && x <= dmax) {
           var dx =
             parseInt($(this)[0].getAttribute("x")) +
             e.clientX -
-            currentXPosition;
+            curseurPosition.currentX;
           $(this)[0].setAttribute("x", dx);
-          currentXPosition = e.clientX;
+          curseurPosition.currentX = e.clientX;
 
           $("#position").val(x.toFixed(2));
           $("#vitesse").text(getVitesse(x).toFixed(2));
@@ -524,7 +499,7 @@ var registerEvtLignePositionSVG = function () {
       }
     })
     .mouseup(function (e) {
-      selectedElementPosition = null;
+      curseurPosition.selectedElement = null;
     });
 };
 
