@@ -164,6 +164,10 @@ function indiceEndehorsBornes(i) {
 }
 
 function updateBornes() {
+  $(".borne-a").attr("width", parseInt($(".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2 - 30);
+  $(".borne-b").attr("x", parseInt($(".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2);
+  $(".borne-b").attr("width", chart.getChartLayoutInterface().getXLocation(dmax) - parseInt($(".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2);
+
   var i = getIndiceDistance(chartGetx(chart, $(".ligne-gauche").last().offset().left + LARGEUR_LIGNE/2));
   var j = getIndiceDistance(chartGetx(chart, $(".ligne-droite").last().offset().left + LARGEUR_LIGNE/2));
   if (i < j) {
@@ -284,6 +288,7 @@ function drawChart() {
   chart = new google.visualization.LineChart(document.getElementById("chart"));
   chart.draw(data, options);
   registerEvtChart();
+  createLineBornesSVG(chart, dmax*0.1, dmax - dmax*0.1);
   CreeLigneSeuil(chart, $("#seuil").val());
   CreeLignePosition(chart, $("#position").val() * 1000);
   CreeLigneGauche(chart, dmax*0.1);
@@ -403,6 +408,41 @@ function createLineVerticaleSVG(chart, x, classeName, pointille) {
     line.setAttribute("stroke-dasharray", "5, 5");
   }
   svg2.appendChild(line);
+}
+
+function createLineBornesSVG(chart, a, b) {
+  $(".borne").remove();
+  var layout = chart.getChartLayoutInterface();
+  var chartArea = layout.getChartAreaBoundingBox();
+  var svg = chart.getContainer().getElementsByTagName("svg")[0];
+
+  var xLocA = layout.getXLocation(a);
+
+  var rectA = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rectA.setAttribute("class", "ligne borne-a");
+  rectA.setAttribute("x", 30);
+  rectA.setAttribute("y", 30);
+  rectA.setAttribute("width", xLocA - 30);
+  rectA.setAttribute("height", 93);
+  rectA.setAttribute("stroke", "#C0C0C0");
+  rectA.setAttribute("stroke-width", 1);
+  rectA.setAttribute("fill-opacity", 0.1);
+  rectA.setAttribute("stroke-opacity", 0.1);
+  svg.appendChild(rectA);
+
+  var xLocB = layout.getXLocation(b);
+
+  var rectB = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rectB.setAttribute("class", "ligne borne-b");
+  rectB.setAttribute("x", xLocB);
+  rectB.setAttribute("y", 30);
+  rectB.setAttribute("width", layout.getXLocation(dmax) - xLocB);
+  rectB.setAttribute("height", 93);
+  rectB.setAttribute("stroke", "#C0C0C0");
+  rectB.setAttribute("stroke-width", 1);
+  rectB.setAttribute("fill-opacity", 0.1);
+  rectB.setAttribute("stroke-opacity", 0.1);
+  svg.appendChild(rectB);
 }
 
 var registerEvtChart = function () {
