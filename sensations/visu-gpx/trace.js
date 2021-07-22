@@ -164,8 +164,8 @@ function indiceEndehorsBornes(i) {
 }
 
 function updateBornes() {
-  var i = getIndiceDistance(chartGetx(chart, curseurA.currentX));
-  var j = getIndiceDistance(chartGetx(chart, curseurB.currentX));
+  var i = getIndiceDistance(chartGetx(chart, $(".ligne-gauche").last().offset().left + LARGEUR_LIGNE/2));
+  var j = getIndiceDistance(chartGetx(chart, $(".ligne-droite").last().offset().left + LARGEUR_LIGNE/2));
   if (i < j) {
     borneA = i;
     borneB = j;
@@ -286,15 +286,10 @@ function drawChart() {
   registerEvtChart();
   CreeLigneSeuil(chart, $("#seuil").val());
   CreeLignePosition(chart, $("#position").val() * 1000);
-  CreeLigneGauche(chart, 0.5);
-  CreeLigneDroite(chart, dmax - 0.5);
+  CreeLigneGauche(chart, dmax*0.1);
+  CreeLigneDroite(chart, dmax - dmax*0.1);
   UpdatePosition();
-
-  /*
-  google.visualization.events.addListener(chart, "onmouseover", function (e) {
-    marker.setLatLng(xy[e.row]);
-  });
-  */
+  updateBornes();
 }
 
 $(window).resize(function () {
