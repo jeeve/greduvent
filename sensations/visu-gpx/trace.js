@@ -26,8 +26,11 @@ var trace;
 var vmax, dmax;
 var chartxy = [];
 var marker;
+var borneA, borneB;
 
 function litGPX(url, ready) {
+  borneA = 0;
+  borneB = 0;
   $.ajax({
     type: "GET",
     url: url,
@@ -50,6 +53,7 @@ function litGPX(url, ready) {
             coord[1] = lon;
             xy.push(coord);
           }
+          borneB = xy.length;
         });
 
       var distance = 0;
@@ -108,6 +112,8 @@ function dessineTrace() {
   var seuil = $("#seuil").val();
 
   var xy2 = [];
+  var opacite0, opacite;
+  opacite0 = 1.0;
   var cat0, cat;
   cat0 = 0;
   for (i = 0; i < xy.length; i++) {
@@ -117,21 +123,58 @@ function dessineTrace() {
     } else {
       cat = 0;
     }
-    if (cat0 != cat || xy2.length >= 100) {
-      if (cat0 == 0) {
-        polylignes.push(L.polyline(xy2, { color: "blue" }));
+    if (indiceEndehorsBornes(i)) {
+      opacite = 0.1;
+    } else {
+      opacite = 1.0;
+    }
+    if (opacite0 != opacite || xy2.length >= 100) {
+      if (cat == 0) {
+        polylignes.push(L.polyline(xy2, { color: "blue", opacity: opacite0 }));
       } else {
-        polylignes.push(L.polyline(xy2, { color: "red" }));
+        polylignes.push(L.polyline(xy2, { color: "red", opacity: opacite0 }));
       }
       xy2 = [];
       xy2.push(xy[i]);
-      cat0 = cat;
+      opacite0 = opacite;
+    } else {
+      if (cat0 != cat || xy2.length >= 100) {
+        if (cat0 == 0) {
+          polylignes.push(L.polyline(xy2, { color: "blue", opacity: opacite }));
+        } else {
+          polylignes.push(L.polyline(xy2, { color: "red", opacity: opacite }));
+        }
+        xy2 = [];
+        xy2.push(xy[i]);
+        cat0 = cat;
+      }
     }
   }
   trace = L.layerGroup(polylignes).addTo(map);
   marker = L.marker(xy[0]).addTo(map);
   marker.bindTooltip("0", { permanent: true }).openTooltip();
   UpdatePosition();
+}
+
+function indiceEndehorsBornes(i) {
+  if (i < borneA || i > borneB) {
+    return true;
+  }
+  return false;
+}
+
+function updateBornes() {
+  var i = getIndiceDistance(chartGetx(chart, curseurA.currentX));
+  var j = getIndiceDistance(chartGetx(chart, curseurB.currentX));
+  if (i < j) {
+    borneA = i;
+    borneB = j;
+  } else {
+    borneA = j;
+    borneB = i;
+  }
+  map.removeLayer(trace);
+  dessineTrace();
 }
 
 var map = L.map("map");
@@ -421,6 +464,13 @@ var registerEvtChart = function () {
               parametres.currentX;
             parametres.selectedElement.setAttribute("x", dx);
             parametres.currentX = e.clientX;
+
+            if (
+              elementEstClasse(parametres.selectedElement, "ligne-gauche") ||
+              elementEstClasse(parametres.selectedElement, "ligne-droite")
+            ) {
+              updateBornes();
+            }
           }
         }
       }
@@ -519,6 +569,13 @@ var registerEvtLigneVerticaleSVG = function (className, parametres) {
             parametres.currentX;
           $(this)[0].setAttribute("x", dx);
           parametres.currentX = e.clientX;
+
+          if (
+            elementEstClasse(parametres.selectedElement, "ligne-gauche") ||
+            elementEstClasse(parametres.selectedElement, "ligne-droite")
+          ) {
+            updateBornes();
+          }
         }
       }
     })
