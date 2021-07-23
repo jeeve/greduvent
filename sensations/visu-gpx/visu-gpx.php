@@ -50,6 +50,18 @@
                     </tr>
                 </table>
             </div>
+            <div id="fenetre">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="fenetre-auto">
+                            <label>Fenêtre auto</label>
+                        </td>
+                        <td class="fenetre-largeur"><input type="text" id="fenetre-largeur"></input></td>
+                        <td class="fenetre-largeur">km</input></td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div id="map"></div>
     </div>

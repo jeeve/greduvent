@@ -10,7 +10,7 @@ body {
 
 #control {
   display: inline-block;
-  width: 180px;
+  width: 200px;
  /* background-color: #b1bfd6;*/
 }
 
@@ -36,6 +36,17 @@ body {
 #magneto {
   width: 120px;
   margin: auto;
+}
+
+#fenetre {
+  height: 150px;
+  bottom: 50px;
+  position: absolute;
+}
+
+#fenetre-largeur {
+  width: 40px;
+  text-align: right;
 }
 
 #seuil {

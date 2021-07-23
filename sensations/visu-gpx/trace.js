@@ -102,6 +102,8 @@ function initParametres() {
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.000");
   $("#vitesse").text("0.00");
+  $("#fenetre-auto").prop('checked', true);
+  $("#fenetre-largeur").val("5.000");
 }
 
 litGPX(getParameterByName("url"), dessineTrace);
@@ -109,10 +111,11 @@ litGPX(getParameterByName("url"), dessineTrace);
 function calculeDistanceSeuil(seuil) {
   var distance = 0;
   var delta;
-  for (i = 1; i < chartxy.length; i++) { // attention indice 0 est entete
+  for (i = 1; i < chartxy.length; i++) {
+    // attention indice 0 est entete
     if (i > 1) {
       if (chartxy[i][1] >= seuil) {
-        delta = chartxy[i][0] - chartxy[i-1][0];
+        delta = chartxy[i][0] - chartxy[i - 1][0];
         distance += delta;
       }
     }
@@ -299,6 +302,10 @@ $("#position").change(function () {
   UpdatePosition();
 });
 
+$("#fenetre-largeur").change(function () {
+  calculeBornes();
+});
+
 function reportWindowSize() {
   document.getElementById("map").style.height =
     window.innerHeight - 150 - 20 + "px";
@@ -339,6 +346,14 @@ $("#stop").click(function () {
   lectureTimer = null;
 });
 
+$("#fenetre-auto").click(function () {
+  if ($("#fenetre-auto").is(":checked")) {
+    $(".fenetre-largeur").css("visibility", "visible");
+  } else {
+    $(".fenetre-largeur").css("visibility", "hidden");
+  }
+});
+
 function avance() {
   if (lecturei < chartxy.length) {
     lecturei += 1;
@@ -346,6 +361,9 @@ function avance() {
     CreeLignePosition(chart, $("#position").val());
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
     UpdatePosition();
+    if ($("#fenetre-auto").is(":checked")) {
+      calculeBornes();
+    }
   } else {
     clearInterval(lectureTimer);
     lectureTimer = null;
@@ -382,6 +400,7 @@ function drawChart() {
   CreeLigneDroite(chart, dmax - dmax * 0.1);
   UpdatePosition();
   updateBornes();
+  calculeBornes();
 }
 
 $(window).resize(function () {
@@ -564,7 +583,9 @@ var registerEvtChart = function () {
             curseurSeuil.currentX = e.clientY;
 
             $("#seuil").val(y.toFixed(2));
-            $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
+            $("#distance-seuil").text(
+              calculeDistanceSeuil($("#seuil").val()).toFixed(3)
+            );
             $("#curseur").val(($("#seuil").val() / vmax) * 100);
             map.removeLayer(trace);
             dessineTrace();
@@ -612,6 +633,9 @@ var registerEvtChart = function () {
         $("#position").val(x.toFixed(3));
         $("#vitesse").text(getVitesse(x).toFixed(2));
         UpdatePosition();
+        if ($("#fenetre-auto").is(":checked")) {
+          calculeBornes();
+        }
       }
     });
 };
@@ -634,7 +658,9 @@ var registerEvtLigneSeuilSVG = function () {
           curseurSeuil.currentX = e.clientY;
 
           $("#seuil").val(y.toFixed(2));
-          $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
+          $("#distance-seuil").text(
+            calculeDistanceSeuil($("#seuil").val()).toFixed(3)
+          );
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           map.removeLayer(trace);
           dessineTrace();
@@ -734,6 +760,22 @@ function elementEstClasse(e, className) {
   return false;
 }
 
+function calculeBornes() {
+  var x = parseFloat($("#position").val());
+  var l = parseFloat($("#fenetre-largeur").val());
+  var L = chart.getChartLayoutInterface().getChartAreaBoundingBox().width;
+  var a = x - l / 2;
+  var b = x + l / 2;
+  if (a < 0) {
+    a = 0;
+  }
+  if (b > dmax) {
+    b = dmax;
+  }
+  $(".ligne-gauche").attr("x", 30 + (L * a) / dmax - LARGEUR_LIGNE / 2);
+  $(".ligne-droite").attr("x", 30 + (L * b) / dmax - LARGEUR_LIGNE / 2);
+  updateBornes();
+}
 // ----------------------------------------
 
 function getParameterByName(name, url) {
