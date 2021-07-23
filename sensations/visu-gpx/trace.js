@@ -13,14 +13,36 @@ function calculeDistance(lat1, lon1, lat2, lon2) {
   return d;
 }
 
-// Converts numeric degrees to radians
 function toRad(Value) {
   return (Value * Math.PI) / 180;
+}
+
+function toDeg(radians) {
+  var pi = Math.PI;
+  return radians * (180 / pi);
+}
+
+function angleFromCoordinate(lat1, lon1, lat2, lon2) {
+  var dLon = lon2 - lon1;
+
+  var y = Math.sin(dLon) * Math.cos(lat2);
+  var x =
+    Math.cos(lat1) * Math.sin(lat2) -
+    Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
+
+  var brng = Math.atan2(y, x);
+
+  brng = toDeg(brng);
+  brng = (brng + 360) % 360;
+  brng = 360 - brng; // count degrees counter-clockwise - remove to make clockwise
+
+  return brng;
 }
 
 var times = [];
 var xy = [];
 var v = [];
+var a = [];
 var polylignes = [];
 var trace;
 var vmax, dmax;
@@ -39,7 +61,7 @@ function litGPX(url, ready) {
     dataType: "xml",
     success: function (xml) {
       var i;
-      var t1, t2, dd, dt;
+      var t1, t2, dd, dt, angle;
 
       $(xml)
         .find("trkpt")
@@ -64,8 +86,15 @@ function litGPX(url, ready) {
       for (i = 0; i < times.length; i++) {
         if (i == 0) {
           v.push(0.0);
+          a.push(0.0);
         } else {
           dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]);
+          angle = angleFromCoordinate(
+            xy[i - 1][0],
+            xy[i - 1][1],
+            xy[i][0],
+            xy[i][1]
+          );
           t1 = new Date(times[i - 1]);
           t2 = new Date(times[i]);
           dt = (t2.getTime() - t1.getTime()) / 1000;
@@ -76,6 +105,7 @@ function litGPX(url, ready) {
             vitesse = 0;
           }
           v.push(vitesse);
+          a.push(angle);
           chartxy.push([distance, vitesse]);
           distance = distance + dd;
         }
@@ -103,7 +133,7 @@ function initParametres() {
   $("#position").val("0.000");
   $("#vitesse").text("0.00");
   $("#rapidite").val("1");
-  $("#fenetre-auto").prop('checked', true);
+  $("#fenetre-auto").prop("checked", true);
   $("#fenetre-largeur").val("5.000");
 }
 
@@ -172,7 +202,16 @@ function dessineTrace() {
     }
   }
   trace = L.layerGroup(polylignes).addTo(map);
-  marker = L.marker(xy[0]).addTo(map);
+
+  var myIcon = L.icon({
+    iconUrl: "fleche.png",
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+    tooltipAnchor: [30, 30],
+    className: "marker"
+  });
+
+  marker = L.marker(xy[0], { icon: myIcon, rotationAngle: 0.0 }).addTo(map);
   marker.bindTooltip("0", { permanent: true }).openTooltip();
   UpdatePosition();
 }
@@ -335,6 +374,7 @@ function getIndiceDistance(x) {
 function UpdatePosition() {
   var i = getIndiceDistance($("#position").val());
   marker.setLatLng(xy[i]);
+  marker.setRotationAngle(a[i] + -90.0);
   $("#map .leaflet-tooltip").html($("#vitesse").text());
 }
 
@@ -389,7 +429,7 @@ function drawChart() {
     vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
     pointSize: 1,
     legend: { position: "none" },
-    chartArea: { left: "30", right: "0", top: "10", bottom: "20"},
+    chartArea: { left: "30", right: "0", top: "10", bottom: "20" },
     enableInteractivity: false,
     dataOpacity: 0.0,
   };
