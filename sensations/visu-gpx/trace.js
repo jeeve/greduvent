@@ -28,6 +28,7 @@ var vmax, dmax;
 var chartxy = [];
 var marker;
 var borneA, borneB;
+var timer = null;
 
 function litGPX(url, ready) {
   borneA = 0;
@@ -111,7 +112,7 @@ function calculeDistanceSeuil(seuil) {
   var distance = 0;
   for (i = 0; i < d.length; i++) {
     if (v[i] >= seuil) {
-      distance += d[i]
+      distance += d[i];
     }
   }
   return distance;
@@ -322,6 +323,26 @@ function UpdatePosition() {
   var i = getIndiceDistance($("#position").val());
   marker.setLatLng(xy[i]);
   $("#map .leaflet-tooltip").html($("#vitesse").text());
+}
+
+$("#lecture").click(function () {
+  if (timer == null) {
+    timer = setInterval(avance, 100);
+  }
+});
+
+$("#stop").click(function () {
+  clearInterval(timer);
+  timer = null;
+});
+
+function avance() {
+  if (parseFloat($("#position").val()) < dmax) {
+    $("#position").val((parseFloat($("#position").val()) + 0.01).toFixed(2));
+    CreeLignePosition(chart, $("#position").val());
+    $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
+    UpdatePosition();
+  }
 }
 
 // ------------------------------------------------------------------------ chart

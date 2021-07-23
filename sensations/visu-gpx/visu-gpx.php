@@ -22,7 +22,9 @@
                         </tr>
                         <tr>
                             <td><label for="name">Distance</label></td>
-                            <td><div id="distance-seuil"></div></td>
+                            <td>
+                                <div id="distance-seuil"></div>
+                            </td>
                             <td>km</td>
                         </tr>
                         <tr>
@@ -32,11 +34,21 @@
                         </tr>
                         <tr>
                             <td><label for="name">Vitesse</label></td>
-                            <td><div id="vitesse"></td>
+                            <td>
+                                <div id="vitesse">
+                            </td>
                             <td>kts</td>
                         </tr>
                     </table>
                 </div>
+            </div>
+            <div id="magneto">
+                <table>
+                    <tr>
+                        <td><button id="lecture" type="button">Lecture</button></td>
+                        <td><button id="stop" type="button">Stop</button></td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div id="map"></div>
