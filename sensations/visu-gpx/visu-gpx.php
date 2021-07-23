@@ -14,16 +14,30 @@
                     <input type="range" id="curseur" min="0" max="100" step="any">
                 </div>
                 <div class="seuil">
-                    <label for="name">Seuil (kts)</label>
-                    <input type="text" id="seuil"></input>
-                </div>
-                <div class="position">
-                    <label for="name">Position</label>
-                    <input type="text" id="position"></input>
-                </div>
-                <div class="position">
-                    <label for="name">Vitesse</label>
-                    <div id="vitesse"></div>
+                    <table>
+                        <tr>
+                            <td><label for="name">Seuil</label></td>
+                            <td><input type="text" id="seuil"></input></td>
+                            <td>kts</td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Distance</label></td>
+                            <td>
+                                <div id="distance-seuil">
+                            </td>
+                            <td>km</td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Position</label></td>
+                            <td><input type="text" id="position"></input></td>
+                            <td>km</td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Vitesse</label></td>
+                            <td><div id="vitesse"></td>
+                            <td>kts</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

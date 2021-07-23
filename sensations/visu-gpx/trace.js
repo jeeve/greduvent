@@ -275,7 +275,9 @@ $("#curseur").change(function () {
 });
 
 $("#position").change(function () {
-  CreeLignePosition(chart, $("#position").val() * 1000);
+  CreeLignePosition(chart, $("#position").val());
+  $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
+  UpdatePosition();
 });
 
 function reportWindowSize() {
