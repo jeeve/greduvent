@@ -40,6 +40,13 @@
 
 #vitesse {
   width: 40px;
+  text-align: right;
+}
+
+#distance-seuil {
+  width: 40px;
+  text-align: right;
+  color: red;
 }
 
 .slider-wrapper {

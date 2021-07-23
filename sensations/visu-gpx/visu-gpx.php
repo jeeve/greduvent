@@ -22,9 +22,7 @@
                         </tr>
                         <tr>
                             <td><label for="name">Distance</label></td>
-                            <td>
-                                <div id="distance-seuil">
-                            </td>
+                            <td><div id="distance-seuil"></div></td>
                             <td>km</td>
                         </tr>
                         <tr>
