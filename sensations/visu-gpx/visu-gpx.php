@@ -16,26 +16,26 @@
                 <div class="seuil">
                     <table>
                         <tr>
-                            <td><label for="name">Seuil</label></td>
+                            <td><label>Seuil</label></td>
                             <td><input type="text" id="seuil"></input></td>
                             <td>kts</td>
                         </tr>
                         <tr>
-                            <td><label for="name">Distance</label></td>
+                            <td><label>Distance</label></td>
                             <td>
                                 <div id="distance-seuil"></div>
                             </td>
                             <td>km</td>
                         </tr>
                         <tr>
-                            <td><label for="name">Position</label></td>
+                            <td><label>Position</label></td>
                             <td><input type="text" id="position"></input></td>
                             <td>km</td>
                         </tr>
                         <tr>
-                            <td><label for="name">Vitesse</label></td>
+                            <td><label>Vitesse</label></td>
                             <td>
-                                <div id="vitesse">
+                                <div id="vitesse"></div>
                             </td>
                             <td>kts</td>
                         </tr>
@@ -47,6 +47,8 @@
                     <tr>
                         <td><button id="lecture" type="button">Lecture</button></td>
                         <td><button id="stop" type="button">Stop</button></td>
+                        <td><label>x</label></td>
+                        <td><input type="text" id="rapidite"></input></td>
                     </tr>
                 </table>
             </div>

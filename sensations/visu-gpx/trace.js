@@ -102,6 +102,7 @@ function initParametres() {
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.000");
   $("#vitesse").text("0.00");
+  $("#rapidite").val("1");
   $("#fenetre-auto").prop('checked', true);
   $("#fenetre-largeur").val("5.000");
 }
@@ -320,9 +321,9 @@ function getVitesse(x) {
 }
 
 function getIndiceDistance(x) {
-  var j = 0;
+  var j = 1;
   var delta = 10000000.0;
-  for (i = 0; i < chartxy.length; i++) {
+  for (i = 1; i < chartxy.length; i++) {
     if (Math.abs(chartxy[i][0] - x) < delta) {
       j = i;
       delta = Math.abs(chartxy[i][0] - x);
@@ -359,7 +360,7 @@ $("#fenetre-auto").click(function () {
 
 function avance() {
   if (lecturei < chartxy.length) {
-    lecturei += 1;
+    lecturei += parseInt($("#rapidite").val());
     $("#position").val(chartxy[lecturei][0].toFixed(3));
     CreeLignePosition(chart, $("#position").val());
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));

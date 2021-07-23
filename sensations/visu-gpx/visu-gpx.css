@@ -34,8 +34,12 @@ body {
 }
 
 #magneto {
-  width: 120px;
+  width: 180px;
   margin: auto;
+}
+
+#rapidite {
+  width: 40px;
 }
 
 #fenetre {
@@ -100,16 +104,20 @@ body {
 
 .ligne-seuil {
   cursor: row-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
 .ligne-position {
   cursor: col-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
 .ligne-gauche {
   cursor: col-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
 .ligne-droite {
   cursor: col-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
 }
