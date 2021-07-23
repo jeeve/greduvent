@@ -98,7 +98,7 @@ function litGPX(url, ready) {
 }
 
 function initParametres() {
-  $("#seuil").val((vmax / 2).toFixed(2));
+  $("#seuil").val("12.00");
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.000");
   $("#vitesse").text("0.00");
@@ -256,6 +256,9 @@ map.on("click", function (e) {
     $("#vitesse").text(chartxy[i][1].toFixed(2));
     CreeLignePosition(chart, chartxy[i][0]);
     UpdatePosition();
+    if ($("#fenetre-auto").is(":checked")) {
+      calculeBornes();
+    }
   }
 });
 
