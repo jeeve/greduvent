@@ -46,9 +46,9 @@
                 <table>
                     <tr>
                         <td><button id="lecture" type="button">Lecture</button></td>
-                        <td><button id="stop" type="button">Stop</button></td>
                         <td><label>x</label></td>
                         <td><input type="text" id="rapidite"></input></td>
+                        <td><button id="stop" type="button">Stop</button></td>
                     </tr>
                 </table>
             </div>
