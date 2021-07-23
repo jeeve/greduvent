@@ -28,7 +28,8 @@ var vmax, dmax;
 var chartxy = [];
 var marker;
 var borneA, borneB;
-var timer = null;
+var lectureTimer = null;
+var lecturei;
 
 function litGPX(url, ready) {
   borneA = 0;
@@ -101,7 +102,7 @@ function litGPX(url, ready) {
 
 function initParametres() {
   $("#seuil").val((vmax / 2).toFixed(2));
-  $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(2));
+  $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.00");
   $("#vitesse").text("0.00");
 }
@@ -247,7 +248,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
   if (i != -1) {
-    $("#position").val(chartxy[i][0].toFixed(2));
+    $("#position").val(chartxy[i][0].toFixed(3));
     $("#vitesse").text(chartxy[i][1].toFixed(2));
     CreeLignePosition(chart, chartxy[i][0]);
     UpdatePosition();
@@ -278,7 +279,7 @@ reportWindowSize();
 $("#seuil").change(function () {
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   CreeLigneSeuil(chart, $("#seuil").val());
-  $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(2));
+  $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   map.removeLayer(trace);
   dessineTrace();
 });
@@ -286,7 +287,7 @@ $("#seuil").change(function () {
 $("#curseur").change(function () {
   $("#seuil").val((($("#curseur").val() * vmax) / 100).toFixed(2));
   CreeLigneSeuil(chart, $("#seuil").val());
-  $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(2));
+  $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   map.removeLayer(trace);
   dessineTrace();
 });
@@ -326,25 +327,27 @@ function UpdatePosition() {
 }
 
 $("#lecture").click(function () {
-  if (timer == null) {
-    timer = setInterval(avance, 100);
+  if (lectureTimer == null) {
+    lecturei = getIndiceDistance(parseFloat($("#position").val()));
+    lectureTimer = setInterval(avance, 10);
   }
 });
 
 $("#stop").click(function () {
-  clearInterval(timer);
-  timer = null;
+  clearInterval(lectureTimer);
+  lectureTimer = null;
 });
 
 function avance() {
-  if (parseFloat($("#position").val()) < dmax) {
-    $("#position").val((parseFloat($("#position").val()) + 0.01).toFixed(2));
+  if (lecturei < d.length) {
+    lecturei += 1;
+    $("#position").val(chartxy[lecturei][0].toFixed(3));
     CreeLignePosition(chart, $("#position").val());
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
     UpdatePosition();
   } else {
-    clearInterval(timer);
-    timer = null;
+    clearInterval(lectureTimer);
+    lectureTimer = null;
   }
 }
 
@@ -544,7 +547,7 @@ var registerEvtChart = function () {
           curseurPosition.selectedElement.setAttribute("x", dx);
           curseurPosition.currentX = e.clientX;
 
-          $("#position").val(x.toFixed(2));
+          $("#position").val(x.toFixed(3));
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
@@ -604,7 +607,7 @@ var registerEvtChart = function () {
       if (x >= 0 && x <= dmax) {
         var dx = e.clientX - 12;
         $(".ligne-position")[0].setAttribute("x", dx);
-        $("#position").val(x.toFixed(2));
+        $("#position").val(x.toFixed(3));
         $("#vitesse").text(getVitesse(x).toFixed(2));
         UpdatePosition();
       }
@@ -660,7 +663,7 @@ var registerEvtLignePositionSVG = function () {
           $(this)[0].setAttribute("x", dx);
           curseurPosition.currentX = e.clientX;
 
-          $("#position").val(x.toFixed(2));
+          $("#position").val(x.toFixed(3));
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
