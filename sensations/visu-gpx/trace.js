@@ -205,9 +205,9 @@ function dessineTrace() {
 
   var myIcon = L.icon({
     iconUrl: "fleche.png",
-    iconSize: [30, 30],
-    iconAnchor: [15, 15],
-    tooltipAnchor: [30, 30],
+    iconSize: [26, 26],
+    iconAnchor: [13, 13],
+    tooltipAnchor: [26, 26],
     className: "marker"
   });
 
