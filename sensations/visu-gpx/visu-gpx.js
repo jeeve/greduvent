@@ -323,6 +323,16 @@ function calculeIndiceLePlusPresDe(lat, lng) {
 
 reportWindowSize();
 
+$("#map").keypress(function (e) {
+  if (e.which == 32) {
+    if (lectureTimer == null) {
+      $("#lecture").click();
+    } else {
+      $("#stop").click();     
+    }
+  }
+});
+
 $("#seuil").change(function () {
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   CreeLigneSeuil(chart, $("#seuil").val());
