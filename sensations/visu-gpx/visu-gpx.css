@@ -11,7 +11,7 @@ body {
 #control {
   display: inline-block;
   width: 180px;
-  background-color: #b1bfd6;
+ /* background-color: #b1bfd6;*/
 }
 
 #map {

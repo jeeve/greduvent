@@ -20,7 +20,6 @@ function toRad(Value) {
 
 var times = [];
 var xy = [];
-var d = [];
 var v = [];
 var polylignes = [];
 var trace;
@@ -61,7 +60,6 @@ function litGPX(url, ready) {
 
       var distance = 0;
       chartxy = [];
-      d = [];
       chartxy.push(["Distance", "Vitesse"]);
       for (i = 0; i < times.length; i++) {
         if (i == 0) {
@@ -77,7 +75,6 @@ function litGPX(url, ready) {
           } else {
             vitesse = 0;
           }
-          d.push(dd);
           v.push(vitesse);
           chartxy.push([distance, vitesse]);
           distance = distance + dd;
@@ -103,7 +100,7 @@ function litGPX(url, ready) {
 function initParametres() {
   $("#seuil").val((vmax / 2).toFixed(2));
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
-  $("#position").val("0.00");
+  $("#position").val("0.000");
   $("#vitesse").text("0.00");
 }
 
@@ -111,9 +108,13 @@ litGPX(getParameterByName("url"), dessineTrace);
 
 function calculeDistanceSeuil(seuil) {
   var distance = 0;
-  for (i = 0; i < d.length; i++) {
-    if (v[i] >= seuil) {
-      distance += d[i];
+  var delta;
+  for (i = 1; i < chartxy.length; i++) { // attention indice 0 est entete
+    if (i > 1) {
+      if (chartxy[i][1] >= seuil) {
+        delta = chartxy[i][0] - chartxy[i-1][0];
+        distance += delta;
+      }
     }
   }
   return distance;
@@ -339,7 +340,7 @@ $("#stop").click(function () {
 });
 
 function avance() {
-  if (lecturei < d.length) {
+  if (lecturei < chartxy.length) {
     lecturei += 1;
     $("#position").val(chartxy[lecturei][0].toFixed(3));
     CreeLignePosition(chart, $("#position").val());
@@ -563,6 +564,7 @@ var registerEvtChart = function () {
             curseurSeuil.currentX = e.clientY;
 
             $("#seuil").val(y.toFixed(2));
+            $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
             $("#curseur").val(($("#seuil").val() / vmax) * 100);
             map.removeLayer(trace);
             dessineTrace();
@@ -632,6 +634,7 @@ var registerEvtLigneSeuilSVG = function () {
           curseurSeuil.currentX = e.clientY;
 
           $("#seuil").val(y.toFixed(2));
+          $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           map.removeLayer(trace);
           dessineTrace();
