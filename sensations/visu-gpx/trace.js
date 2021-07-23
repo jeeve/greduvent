@@ -388,7 +388,7 @@ function drawChart() {
     vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
     pointSize: 1,
     legend: { position: "none" },
-    chartArea: { left: "30", right: "0" },
+    chartArea: { left: "30", right: "0", top: "10", bottom: "20"},
     enableInteractivity: false,
     dataOpacity: 0.0,
   };
@@ -530,9 +530,9 @@ function createLineBornesSVG(chart, a, b) {
   var rectA = document.createElementNS("http://www.w3.org/2000/svg", "rect");
   rectA.setAttribute("class", "ligne borne-a");
   rectA.setAttribute("x", 30);
-  rectA.setAttribute("y", 30);
+  rectA.setAttribute("y", 10);
   rectA.setAttribute("width", xLocA - 30);
-  rectA.setAttribute("height", 93);
+  rectA.setAttribute("height", 120);
   rectA.setAttribute("stroke", "#C0C0C0");
   rectA.setAttribute("stroke-width", 1);
   rectA.setAttribute("fill-opacity", 0.1);
@@ -544,9 +544,9 @@ function createLineBornesSVG(chart, a, b) {
   var rectB = document.createElementNS("http://www.w3.org/2000/svg", "rect");
   rectB.setAttribute("class", "ligne borne-b");
   rectB.setAttribute("x", xLocB);
-  rectB.setAttribute("y", 30);
+  rectB.setAttribute("y", 10);
   rectB.setAttribute("width", layout.getXLocation(dmax) - xLocB);
-  rectB.setAttribute("height", 93);
+  rectB.setAttribute("height", 120);
   rectB.setAttribute("stroke", "#C0C0C0");
   rectB.setAttribute("stroke-width", 1);
   rectB.setAttribute("fill-opacity", 0.1);
@@ -743,7 +743,7 @@ var registerEvtLigneVerticaleSVG = function (className, parametres) {
 function chartGety(chart, Y) {
   var layout = chart.getChartLayoutInterface();
   var H = layout.getChartAreaBoundingBox().height;
-  var Y2 = $("#chart").last().offset().top + H - Y + 30;
+  var Y2 = $("#chart").last().offset().top + H - Y + 10;
   return (Y2 * vmax) / H;
 }
 
