@@ -342,6 +342,9 @@ function avance() {
     CreeLignePosition(chart, $("#position").val());
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
     UpdatePosition();
+  } else {
+    clearInterval(timer);
+    timer = null;
   }
 }
 
