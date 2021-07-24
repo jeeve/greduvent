@@ -48,16 +48,6 @@
                                     </table>
                                 </div>
                             </div>
-                            <div id="magneto">
-                                <table>
-                                    <tr>
-                                        <td><button id="lecture" type="button">Lecture</button></td>
-                                        <td><label>x</label></td>
-                                        <td><input type="text" id="rapidite"></input></td>
-                                        <td><button id="stop" type="button">Stop</button></td>
-                                    </tr>
-                                </table>
-                            </div>
                             <div id="fenetre">
                                 <table>
                                     <tr>
@@ -68,6 +58,16 @@
                                         <td class="fenetre-largeur"><input type="text" id="fenetre-largeur"></input>
                                         </td>
                                         <td class="fenetre-largeur">km</input></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="magneto">
+                                <table>
+                                    <tr>
+                                        <td><button id="lecture" type="button">Lecture</button></td>
+                                        <td><label>x</label></td>
+                                        <td><input type="text" id="rapidite"></input></td>
+                                        <td><button id="stop" type="button">Stop</button></td>
                                     </tr>
                                 </table>
                             </div>
