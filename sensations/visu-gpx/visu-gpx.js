@@ -129,6 +129,7 @@ function litGPX(url, ready) {
 
 function initParametres() {
   $("#seuil").val("12.00");
+  $("#curseur").val(($("#seuil").val() / vmax) * 100);
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.000");
   $("#vitesse").text("0.00");
