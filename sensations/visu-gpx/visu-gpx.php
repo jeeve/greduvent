@@ -63,7 +63,7 @@
                                     <tr>
                                         <td>
                                             <input type="checkbox" id="fenetre-auto">
-                                            <label>Fenêtre auto</label>
+                                            <label class="label-fenetre-auto">Fenêtre auto</label>
                                         </td>
                                         <td class="fenetre-largeur"><input type="text" id="fenetre-largeur"></input>
                                         </td>

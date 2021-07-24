@@ -411,6 +411,10 @@ $("#fenetre-auto").click(function () {
   }
 });
 
+$(".label-fenetre-auto").click(function () { // on peut cliquer sur le label
+  $("#fenetre-auto").click();
+});
+
 function avance() {
   if (lecturei < chartxy.length) {
     lecturei += parseInt($("#rapidite").val());
