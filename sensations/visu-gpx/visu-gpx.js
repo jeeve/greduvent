@@ -360,8 +360,11 @@ $("#fenetre-largeur").change(function () {
 });
 
 function reportWindowSize() {
-  document.getElementById("map").style.height =
-    window.innerHeight - 150 - 20 + "px";
+  if ($("#map").offset().top < 20) {
+    $("#map").height(window.innerHeight - $("#chart").height() - 20); // 2 colonnes
+  } else {
+    $("#map").height(window.innerHeight - $("#chart").height() - 20 - $("#control").height()); // 1 colonne
+  }
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
@@ -391,7 +394,7 @@ function UpdatePosition() {
 $("#lecture").click(function () {
   if (lectureTimer == null) {
     lecturei = getIndiceDistance(parseFloat($("#position").val()));
-    lectureTimer = setInterval(avance, 10);
+    lectureTimer = setInterval(avance, 100);
   }
 });
 

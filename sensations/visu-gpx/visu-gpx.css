@@ -1,22 +1,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+  font-size: 14px;
 }
 
-#haut {
-  display: flex;
-  height: calc(100% - 160px);
-}
-
-#control {
-  display: inline-block;
-  width: 200px;
- /* background-color: #b1bfd6;*/
+td {
+padding: 5px;
 }
 
 #map {
   display: inline-block;
-  width: calc(100% - 200px);
+  width: 100%;
   height: 800px;
 }
 
@@ -30,58 +23,49 @@ body {
 
 #reglages {
   display: flex;
-  height: 180px;
 }
 
 #magneto {
   width: 180px;
   margin: auto;
+  height: 50px;
+  padding-top: 10px;
 }
 
 #rapidite {
-  width: 40px;
-}
-
-#fenetre {
-  height: 150px;
-  bottom: 50px;
-  position: absolute;
+  width: 60px;
 }
 
 #fenetre-largeur {
-  width: 40px;
+  width: 60px;
   text-align: right;
 }
 
 #seuil {
-  width: 40px;
+  width: 60px;
   color: red;
   text-align: right;
 }
 
-.seuil tr td {
-  padding-bottom: 20px;
-}
-
 #position {
-  width: 40px;
+  width: 60px;
   text-align: right;
 }
 
 #vitesse {
-  width: 40px;
+  width: 60px;
   text-align: right;
 }
 
 #distance-seuil {
-  width: 40px;
+  width: 60px;
   text-align: right;
   color: red;
 }
 
 .slider-wrapper {
   display: inline-block;
-  width: 40px;
+  width: 60px;
   padding: 5px;
 }
 
@@ -94,8 +78,8 @@ body {
 }
 
 .seuil {
-  display: inline;
-  width: 130px;
+  margin-left: 0;
+  margin-top: 10px;
 }
 
 #chart path {
