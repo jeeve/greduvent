@@ -23,19 +23,10 @@ function toDeg(radians) {
 }
 
 function angleFromCoordinate(lat1, lon1, lat2, lon2) {
-  var dLon = lon2 - lon1;
-
-  var y = Math.sin(dLon) * Math.cos(lat2);
-  var x =
-    Math.cos(lat1) * Math.sin(lat2) -
-    Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
-
-  var brng = Math.atan2(y, x);
-
-  brng = toDeg(brng);
+  brng = Math.atan2(lat2 - lat1, lon2 - lon1);
+  brng = brng * (180 / Math.PI);
   brng = (brng + 360) % 360;
-  brng = 360 - brng; // count degrees counter-clockwise - remove to make clockwise
-
+  brng = 360 - brng;
   return brng;
 }
 
@@ -388,7 +379,7 @@ function getIndiceDistance(x) {
 function UpdatePosition() {
   var i = getIndiceDistance($("#position").val());
   marker.setLatLng(xy[i]);
-  marker.setRotationAngle(a[i] + -90.0);
+  marker.setRotationAngle(a[i]);
   $("#map .leaflet-tooltip").html($("#vitesse").text());
 }
 
