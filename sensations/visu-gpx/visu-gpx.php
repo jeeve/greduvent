@@ -15,61 +15,55 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-xl-1">
                     <div id="control">
-                        <div id="reglages">
-                            <div class="slider-wrapper">
-                                <input type="range" id="curseur" min="0" max="100" step="any">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-12">
+                                <div id="reglages">
+                                    <div class="slider-wrapper">
+                                        <input type="range" id="curseur" min="0" max="100" step="any">
+                                    </div>
+                                    <div class="seuil">
+                                        <table>
+                                            <tr>
+                                                <td><label>Seuil</label></td>
+                                                <td><input type="text" id="seuil"></input></td>
+                                                <td>kts</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Distance</label></td>
+                                                <td>
+                                                    <div id="distance-seuil"></div>
+                                                </td>
+                                                <td>km</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Position</label></td>
+                                                <td><input type="text" id="position"></input></td>
+                                                <td>km</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Vitesse</label></td>
+                                                <td>
+                                                    <div id="vitesse"></div>
+                                                </td>
+                                                <td>kts</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="seuil">
-                                <table>
-                                    <tr>
-                                        <td><label>Seuil</label></td>
-                                        <td><input type="text" id="seuil"></input></td>
-                                        <td>kts</td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Distance</label></td>
-                                        <td>
-                                            <div id="distance-seuil"></div>
-                                        </td>
-                                        <td>km</td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Position</label></td>
-                                        <td><input type="text" id="position"></input></td>
-                                        <td>km</td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Vitesse</label></td>
-                                        <td>
-                                            <div id="vitesse"></div>
-                                        </td>
-                                        <td>kts</td>
-                                    </tr>
-                                </table>
+                            <div class="col-xs-6 col-sm-6 col-md-12" id="fenetre-magneto">
+                                <div id="fenetre">
+                                    <input type="checkbox" id="fenetre-auto">
+                                    <label class="label-fenetre-auto">Fenêtre auto</label>
+                                    <input type="text" id="fenetre-largeur"></input> km</input>
+                                </div>
+                                <div id="magneto">
+                                    <button id="lecture" type="button">Lecture</button>
+                                    <label>x</label>
+                                    <input type="text" id="rapidite"></input>
+                                    <button id="stop" type="button">Stop</button>
+                                </div>
                             </div>
-                        </div>
-                        <div id="fenetre">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="fenetre-auto">
-                                        <label class="label-fenetre-auto">Fenêtre auto</label>
-                                    </td>
-                                    <td class="fenetre-largeur"><input type="text" id="fenetre-largeur"></input>
-                                    </td>
-                                    <td class="fenetre-largeur">km</input></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="magneto">
-                            <table>
-                                <tr>
-                                    <td><button id="lecture" type="button">Lecture</button></td>
-                                    <td><label>x</label></td>
-                                    <td><input type="text" id="rapidite"></input></td>
-                                    <td><button id="stop" type="button">Stop</button></td>
-                                </tr>
-                            </table>
                         </div>
                     </div>
                 </div>

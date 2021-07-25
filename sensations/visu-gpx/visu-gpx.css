@@ -4,7 +4,7 @@ body {
 }
 
 td {
-padding: 5px;
+  padding: 5px;
 }
 
 #map {
@@ -29,27 +29,22 @@ padding: 5px;
   width: 200px;
 }
 
-#magneto {
-  width: 180px;
-  margin: auto;
-  height: 50px;
-  padding-top: 10px;
-}
-
 #rapidite {
   width: 40px;
 }
 
 #fenetre {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#fenetre label {
-  width: 90px;
+#fenetre-magneto {
+  padding-left: 40px;
+  padding-right: 0;
 }
 
 #fenetre-largeur {
-  width: 60px;
+  width: 50px;
 }
 
 #seuil {
