@@ -67,8 +67,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-11">
+                <div id="carte" class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-11">
                     <div id="map"></div>
+                    <div id="time"></div>
                 </div>
             </div>
             <div class="row">

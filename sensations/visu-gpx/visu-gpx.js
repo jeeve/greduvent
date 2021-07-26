@@ -284,8 +284,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
   if (i != -1) {
-    $("#position").val(chartxy[i][0].toFixed(3));
-    $("#vitesse").text(chartxy[i][1].toFixed(2));
+    $("#position").val(chartxy[i + 1][0].toFixed(3));
+    $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
     CreeLignePosition(chart, chartxy[i][0]);
     UpdatePosition();
     if ($("#fenetre-auto").is(":checked")) {
@@ -381,6 +381,7 @@ function UpdatePosition() {
   marker.setLatLng(xy[i]);
   marker.setRotationAngle(a[i]);
   $("#map .leaflet-tooltip").html($("#vitesse").text());
+  $("#carte #time").text(times[i]);
 }
 
 $("#lecture").click(function () {
