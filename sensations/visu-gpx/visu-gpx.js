@@ -36,9 +36,9 @@ var v = [];
 var a = [];
 var polylignes = [];
 var trace;
-var vmax, dmax;
+var vmax, ivamx, dmax;
 var chartxy = [];
-var marker;
+var markerVitesse, markerVmax;
 var borneA, borneB;
 var lectureTimer = null;
 var lecturei;
@@ -72,6 +72,8 @@ function litGPX(url, ready) {
         });
 
       var distance = 0;
+      vmax = 0;
+      ivmax = 0;
       chartxy = [];
       chartxy.push(["Distance", "Vitesse"]);
       for (i = 0; i < times.length; i++) {
@@ -95,15 +97,16 @@ function litGPX(url, ready) {
           } else {
             vitesse = 0;
           }
+          if (vitesse > vmax) {
+            vmax = vitesse;
+            ivmax = i;
+          }
           v.push(vitesse);
           a.push(angle);
           chartxy.push([distance, vitesse]);
           distance = distance + dd;
         }
       }
-      vmax = v.reduce((a, b) => {
-        return Math.max(a, b);
-      });
       dmax = distance - dd;
 
       initParametres();
@@ -148,8 +151,8 @@ function calculeDistanceSeuil(seuil) {
 
 function dessineTrace() {
   polylignes = [];
-  if (marker != null) {
-    marker.remove();
+  if (markerVitesse != null) {
+    markerVitesse.remove();
   }
 
   var seuil = $("#seuil").val();
@@ -200,11 +203,20 @@ function dessineTrace() {
     iconSize: [26, 26],
     iconAnchor: [13, 13],
     tooltipAnchor: [26, 26],
-    className: "marker"
+    className: "vitesse"
   });
 
-  marker = L.marker(xy[0], { icon: myIcon, rotationAngle: 0.0 }).addTo(map);
-  marker.bindTooltip("0", { permanent: true }).openTooltip();
+  if (markerVitesse != null) {
+    markerVitesse.remove();
+  }
+  markerVitesse = L.marker(xy[0], { icon: myIcon, rotationAngle: 0.0 }).bindTooltip("0", { permanent: true }).addTo(map);
+  markerVitesse.openTooltip();
+
+  if (markerVmax != null) {
+    markerVmax.remove();
+  }
+  markerVmax = L.marker(xy[ivmax]).bindTooltip(vmax.toFixed(2)).addTo(map);
+
   UpdatePosition();
 }
 
@@ -378,9 +390,9 @@ function getIndiceDistance(x) {
 
 function UpdatePosition() {
   var i = getIndiceDistance($("#position").val());
-  marker.setLatLng(xy[i]);
-  marker.setRotationAngle(a[i]);
-  $("#map .leaflet-tooltip").html($("#vitesse").text());
+  markerVitesse.setLatLng(xy[i]);
+  markerVitesse.setRotationAngle(a[i]);
+  markerVitesse.setTooltipContent($("#vitesse").text());
   $("#carte #time").text(times[i]);
 }
 
