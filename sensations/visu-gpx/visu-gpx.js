@@ -30,6 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
+const SEUIL_ACCELERATION = 0.5;
 var times = [];
 var xy = [];
 var v = [];
@@ -52,8 +53,9 @@ function litGPX(url, ready) {
     dataType: "xml",
     success: function (xml) {
       var i;
-      var t1, t2, dd, dt, angle;
-
+      var t1, t2, dd, dt, angle, v0, v1;
+      var times0 = [];
+      var xy0 = [];
       $(xml)
         .find("trkpt")
         .each(function () {
@@ -62,14 +64,29 @@ function litGPX(url, ready) {
             lat = parseFloat($(this).attr("lat"));
             lon = parseFloat($(this).attr("lon"));
 
-            times.push(time);
+            times0.push(time);
             var coord = [];
             coord[0] = lat;
             coord[1] = lon;
-            xy.push(coord);
+            xy0.push(coord);
           }
-          borneB = xy.length;
         });
+
+      for (i = 0; i < times0.length; i++) {
+        if (i == 0) {
+          times.push(times0[i]);
+          xy.push(xy0[i]);
+        } else {
+          v0 = calculeVitesse(i - 1, times0, xy0);
+          v1 = calculeVitesse(i, times0, xy0);
+          if (v1 < v0 + v0 * SEUIL_ACCELERATION) {
+            // filtre valeurs aberrante acceleration
+            times.push(times0[i]);
+            xy.push(xy0[i]);
+          }
+        }
+      }
+      borneB = xy.length;
 
       var distance = 0;
       vmax = 0;
@@ -88,15 +105,7 @@ function litGPX(url, ready) {
             xy[i][0],
             xy[i][1]
           );
-          t1 = new Date(times[i - 1]);
-          t2 = new Date(times[i]);
-          dt = (t2.getTime() - t1.getTime()) / 1000;
-          var vitesse;
-          if (dt != 0) {
-            vitesse = ((dd * 1000) / dt) * 1.94384;
-          } else {
-            vitesse = 0;
-          }
+          var vitesse = calculeVitesse(i, times, xy);
           if (vitesse > vmax) {
             vmax = vitesse;
             ivmax = i;
@@ -119,6 +128,23 @@ function litGPX(url, ready) {
       google.setOnLoadCallback(drawChart);
     },
   });
+}
+
+function calculeVitesse(i, times, xy) {
+  if (i == 0) {
+    return 0;
+  }
+  var dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]);
+  var t1 = new Date(times[i - 1]);
+  var t2 = new Date(times[i]);
+  var dt = (t2.getTime() - t1.getTime()) / 1000;
+  var vitesse;
+  if (dt != 0) {
+    vitesse = ((dd * 1000) / dt) * 1.94384;
+  } else {
+    vitesse = 0;
+  }
+  return vitesse;
 }
 
 function initParametres() {
@@ -204,13 +230,15 @@ function dessineTrace() {
     iconSize: [26, 26],
     iconAnchor: [13, 13],
     tooltipAnchor: [26, 26],
-    className: "vitesse"
+    className: "vitesse",
   });
 
   if (markerVitesse != null) {
     markerVitesse.remove();
   }
-  markerVitesse = L.marker(xy[0], { icon: myIcon, rotationAngle: 0.0 }).bindTooltip("0", { permanent: true }).addTo(map);
+  markerVitesse = L.marker(xy[0], { icon: myIcon, rotationAngle: 0.0 })
+    .bindTooltip("0", { permanent: true })
+    .addTo(map);
   markerVitesse.openTooltip();
 
   if (markerVmax != null) {
@@ -333,7 +361,7 @@ $("#map").keypress(function (e) {
     if (lectureTimer == null) {
       $("#lecture").click();
     } else {
-      $("#stop").click();     
+      $("#stop").click();
     }
   }
 });
@@ -368,7 +396,9 @@ function reportWindowSize() {
   if ($("#map").offset().top < 20) {
     $("#map").height(window.innerHeight - $("#chart").height() - 20); // 2 colonnes
   } else {
-    $("#map").height(window.innerHeight - $("#chart").height() - 20 - $("#control").height()); // 1 colonne
+    $("#map").height(
+      window.innerHeight - $("#chart").height() - 20 - $("#control").height()
+    ); // 1 colonne
   }
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
@@ -417,7 +447,8 @@ $("#fenetre-auto").click(function () {
   }
 });
 
-$(".label-fenetre-auto").click(function () { // on peut cliquer sur le label
+$(".label-fenetre-auto").click(function () {
+  // on peut cliquer sur le label
   $("#fenetre-auto").click();
 });
 
