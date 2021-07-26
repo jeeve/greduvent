@@ -682,7 +682,7 @@ var registerEvtChart = function () {
     .click(function (e) {
       var x = chartGetx(chart, e.clientX);
       if (x >= 0 && x <= dmax) {
-        var dx = e.clientX - 12;
+        var dx = e.clientX - 20;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
         $("#vitesse").text(getVitesse(x).toFixed(2));
