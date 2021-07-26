@@ -55,7 +55,9 @@
                                 <div id="fenetre">
                                     <input type="checkbox" id="fenetre-auto">
                                     <label class="label-fenetre-auto">Fenêtre auto</label>
-                                    <input type="text" id="fenetre-largeur"></input> km</input>
+                                    <div class="fenetre-largeur">
+                                        <input type="text" id="fenetre-largeur"></input> km
+                                    </div>
                                 </div>
                                 <div id="magneto">
                                     <button id="lecture" type="button">Lecture</button>

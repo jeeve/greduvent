@@ -822,6 +822,8 @@ var registerEvtLigneVerticaleSVG = function (className, parametres) {
             elementEstClasse(parametres.selectedElement, "ligne-gauche") ||
             elementEstClasse(parametres.selectedElement, "ligne-droite")
           ) {
+            $("#fenetre-auto").prop("checked", "");
+            $(".fenetre-largeur").css("visibility", "hidden");
             updateBornes();
           }
         }
