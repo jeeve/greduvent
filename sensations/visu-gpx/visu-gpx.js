@@ -437,7 +437,7 @@ function drawChart() {
 
   var options = {
     vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
-    pointSize: 1,
+    pointSize: 0,
     legend: { position: "none" },
     chartArea: { left: "30", right: "0", top: "10", bottom: "20" },
     enableInteractivity: false,
