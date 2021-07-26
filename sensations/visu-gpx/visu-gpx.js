@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 0.5;
+const SEUIL_ACCELERATION = 70;
 var times = [];
 var xy = [];
 var v = [];
@@ -79,7 +79,7 @@ function litGPX(url, ready) {
         } else {
           v0 = calculeVitesse(i - 1, times0, xy0);
           v1 = calculeVitesse(i, times0, xy0);
-          if (v1 < v0 + v0 * SEUIL_ACCELERATION) {
+          if (v1 < v0 + v0 * SEUIL_ACCELERATION/100) {
             // filtre valeurs aberrante acceleration
             times.push(times0[i]);
             xy.push(xy0[i]);
@@ -619,6 +619,7 @@ function createLineBornesSVG(chart, a, b) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
+  var H = $("#chart").innerHeight();
 
   var xLocA = layout.getXLocation(a);
 
@@ -627,7 +628,7 @@ function createLineBornesSVG(chart, a, b) {
   rectA.setAttribute("x", 30);
   rectA.setAttribute("y", 10);
   rectA.setAttribute("width", xLocA - 30);
-  rectA.setAttribute("height", 120);
+  rectA.setAttribute("height", H - 30);
   rectA.setAttribute("stroke", "#C0C0C0");
   rectA.setAttribute("stroke-width", 1);
   rectA.setAttribute("fill-opacity", 0.1);
@@ -641,7 +642,7 @@ function createLineBornesSVG(chart, a, b) {
   rectB.setAttribute("x", xLocB);
   rectB.setAttribute("y", 10);
   rectB.setAttribute("width", layout.getXLocation(dmax) - xLocB);
-  rectB.setAttribute("height", 120);
+  rectB.setAttribute("height", H - 30);
   rectB.setAttribute("stroke", "#C0C0C0");
   rectB.setAttribute("stroke-width", 1);
   rectB.setAttribute("fill-opacity", 0.1);

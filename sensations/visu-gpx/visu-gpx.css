@@ -12,8 +12,21 @@ td {
   height: 800px;
 }
 
+@media screen and (max-width: 767px) { 
+  #chart {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  #chart {
+    height: 150px;
+  }
+}
+
+
 #chart {
-  height: 150px;
+
   width: 100%;
   bottom: 12px;
   right: 8px;
