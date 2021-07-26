@@ -151,9 +151,6 @@ function calculeDistanceSeuil(seuil) {
 
 function dessineTrace() {
   polylignes = [];
-  if (markerVitesse != null) {
-    markerVitesse.remove();
-  }
 
   var seuil = $("#seuil").val();
 
@@ -195,6 +192,10 @@ function dessineTrace() {
         cat0 = cat;
       }
     }
+  }
+
+  if (trace != null) {
+    trace.remove();
   }
   trace = L.layerGroup(polylignes).addTo(map);
 
