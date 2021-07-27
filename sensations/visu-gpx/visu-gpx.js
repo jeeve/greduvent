@@ -248,6 +248,10 @@ function dessineTrace() {
   UpdatePosition();
 }
 
+if ($("#stats #calcule").prop("checked")) {
+  afficheStats();
+}
+
 function indiceEndehorsBornes(i) {
   if (i < borneA || i > borneB) {
     return true;
@@ -480,19 +484,19 @@ $("#calcule").click(function () {
   $("#stats table").toggle();
 
   if ($("#stats #calcule").prop("checked")) {
+    /*
     xLigneGaucheOld = $(".ligne-gauche").attr("x");
     xLigneDroiteOld = $(".ligne-droite").attr("x");
     $(".ligne-gauche").attr("x", +30 - LARGEUR_LIGNE / 2);
     $(".ligne-droite").attr("x", +30 - LARGEUR_LIGNE / 2);
     updateBornes();
+    */
     $("#stats table td input").prop("checked", true);
-    //afficheStats();
   } else {
     $(".ligne-gauche").attr("x", xLigneGaucheOld);
     $(".ligne-droite").attr("x", xLigneDroiteOld);
     updateBornes();
     $("#stats table td input").prop("checked", false);
-    //afficheStats();
   }
 
   if ($("#vmax").text() == "") {
@@ -605,31 +609,31 @@ function afficheStats() {
     markerVmax.remove();
   }
   if ($("#affiche-vmax").prop("checked")) {
-    markerVmax = L.marker(xy[ivmax]).bindTooltip(vmax.toFixed(2)).addTo(map);
+    markerVmax = L.marker(xy[ivmax]).bindTooltip("VMax : " + vmax.toFixed(2) + " kts").addTo(map);
   }
 
   if (tracev100m != null) {
     tracev100m.remove();
   }
-  tracev100m = afficheTraceVitesse("v100m");
+  tracev100m = afficheTraceVitesse("v100m", "V100m : " + $("#v100m").text() + " kts");
 
   if (tracev500m != null) {
     tracev500m.remove();
   }
-  tracev500m = afficheTraceVitesse("v500m");
+  tracev500m = afficheTraceVitesse("v500m", "V500m : " + $("#v500m").text() + " kts");
 
   if (tracev2s != null) {
     tracev2s.remove();
   }
-  tracev2s = afficheTraceVitesse("v2s");
+  tracev2s = afficheTraceVitesse("v2s", "V2s : " + $("#v2s").text()) + " kts";
 
   if (tracev5s != null) {
     tracev5s.remove();
   }
-  tracev5s = afficheTraceVitesse("v5s");
+  tracev5s = afficheTraceVitesse("v5s", "V5s : " + $("#v5s").text() + " kts");
 }
 
-function afficheTraceVitesse(id) {
+function afficheTraceVitesse(id, texte) {
   if ($("#affiche-" + id).prop("checked")) {
     var xy2 = [];
     var a = parseInt($("#" + id).attr("data-a"));
@@ -643,7 +647,9 @@ function afficheTraceVitesse(id) {
       weight: "3",
       dashArray: "5, 5",
       dashOffset: "0",
-    }).addTo(map);
+    })
+      .bindTooltip(texte)
+      .addTo(map);
   }
 }
 
