@@ -473,7 +473,6 @@ function avance() {
 
 // ------------------------------------------------------------------------ stats
 var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s;
-var xLigneGaucheOld, xLigneDroiteOld;
 
 $("#stats label").click(function () {
   // on peut cliquer sur le label
@@ -481,24 +480,6 @@ $("#stats label").click(function () {
 });
 
 $("#calcule").click(function () {
-  $("#stats table").toggle();
-
-  if ($("#stats #calcule").prop("checked")) {
-    /*
-    xLigneGaucheOld = $(".ligne-gauche").attr("x");
-    xLigneDroiteOld = $(".ligne-droite").attr("x");
-    $(".ligne-gauche").attr("x", +30 - LARGEUR_LIGNE / 2);
-    $(".ligne-droite").attr("x", +30 - LARGEUR_LIGNE / 2);
-    updateBornes();
-    */
-    $("#stats table td input").prop("checked", true);
-  } else {
-    $(".ligne-gauche").attr("x", xLigneGaucheOld);
-    $(".ligne-droite").attr("x", xLigneDroiteOld);
-    updateBornes();
-    $("#stats table td input").prop("checked", false);
-  }
-
   if ($("#vmax").text() == "") {
     // on calcule qu'une fois
     $("#vmax").text(vmax.toFixed(2));
@@ -523,10 +504,19 @@ $("#calcule").click(function () {
     $("#v5s").attr("data-a", v.a);
     $("#v5s").attr("data-b", v.b);
   }
-  afficheStats();
+
+  if ($("#calcule").prop("checked")) {
+    $("#stats table td input").prop("checked", true);
+    afficheStats();
+  } else {
+    $("#stats table td input").prop("checked", false);
+    afficheStats();
+  }
+
+  $("#stats table").toggle();
 });
 
-$("#stats td input").click(function () {
+$("#stats table td input").click(function () {
   afficheStats();
 });
 
@@ -609,48 +599,62 @@ function afficheStats() {
     markerVmax.remove();
   }
   if ($("#affiche-vmax").prop("checked")) {
-    markerVmax = L.marker(xy[ivmax]).bindTooltip("VMax : " + vmax.toFixed(2) + " kts").addTo(map);
+    markerVmax = L.marker(xy[ivmax])
+      .bindTooltip("VMax : " + vmax.toFixed(2) + " kts")
+      .addTo(map);
   }
 
   if (tracev100m != null) {
     tracev100m.remove();
   }
-  tracev100m = afficheTraceVitesse("v100m", "V100m : " + $("#v100m").text() + " kts");
+  if ($("#affiche-v100m").prop("checked")) {
+    tracev100m = afficheTraceVitesse(
+      "v100m",
+      "V100m : " + $("#v100m").text() + " kts"
+    );
+  }
 
   if (tracev500m != null) {
     tracev500m.remove();
   }
-  tracev500m = afficheTraceVitesse("v500m", "V500m : " + $("#v500m").text() + " kts");
+  if ($("#affiche-v500m").prop("checked")) {
+    tracev500m = afficheTraceVitesse(
+      "v500m",
+      "V500m : " + $("#v500m").text() + " kts"
+    );
+  }
 
   if (tracev2s != null) {
     tracev2s.remove();
   }
-  tracev2s = afficheTraceVitesse("v2s", "V2s : " + $("#v2s").text()) + " kts";
+  if ($("#affiche-v2s").prop("checked")) {
+    tracev2s = afficheTraceVitesse("v2s", "V2s : " + $("#v2s").text() + " kts");
+  }
 
   if (tracev5s != null) {
     tracev5s.remove();
   }
-  tracev5s = afficheTraceVitesse("v5s", "V5s : " + $("#v5s").text() + " kts");
+  if ($("#affiche-v5s").prop("checked")) {
+    tracev5s = afficheTraceVitesse("v5s", "V5s : " + $("#v5s").text() + " kts");
+  }
 }
 
 function afficheTraceVitesse(id, texte) {
-  if ($("#affiche-" + id).prop("checked")) {
-    var xy2 = [];
-    var a = parseInt($("#" + id).attr("data-a"));
-    var b = parseInt($("#" + id).attr("data-b"));
-    for (i = a; i <= b; i++) {
-      xy2.push(xy[i]);
-    }
-    return L.polyline(xy2, {
-      color: "green",
-      opacity: 1.0,
-      weight: "3",
-      dashArray: "5, 5",
-      dashOffset: "0",
-    })
-      .bindTooltip(texte)
-      .addTo(map);
+  var xy2 = [];
+  var a = parseInt($("#" + id).attr("data-a"));
+  var b = parseInt($("#" + id).attr("data-b"));
+  for (i = a; i <= b; i++) {
+    xy2.push(xy[i]);
   }
+  return L.polyline(xy2, {
+    color: "green",
+    opacity: 1.0,
+    weight: "3",
+    dashArray: "5, 5",
+    dashOffset: "0",
+  })
+    .bindTooltip(texte)
+    .addTo(map);
 }
 
 // ------------------------------------------------------------------------ chart
