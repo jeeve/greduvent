@@ -40,7 +40,7 @@ var polylignes = [];
 var trace;
 var vmax, ivamx, dmax;
 var chartxy = [];
-var markerVitesse, markerVmax;
+var markerVitesse;
 var borneA, borneB;
 var lectureTimer = null;
 var lecturei;
@@ -243,11 +243,6 @@ function dessineTrace() {
     .bindTooltip("0", { permanent: true })
     .addTo(map);
   markerVitesse.openTooltip();
-
-  if (markerVmax != null) {
-    markerVmax.remove();
-  }
-  markerVmax = L.marker(xy[ivmax]).bindTooltip(vmax.toFixed(2)).addTo(map);
 
   UpdatePosition();
 }
@@ -472,6 +467,7 @@ function avance() {
 }
 
 // ------------------------------------------------------------------------ stats
+var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s;
 
 $("#stats label").click(function () {
   // on peut cliquer sur le label
@@ -479,33 +475,65 @@ $("#stats label").click(function () {
 });
 
 $("#calcule").click(function () {
+  var v;
   $("#stats table").toggle();
-  $("#vmax").text(vmax.toFixed(2));
-  $("#v100m").text(calculeVSur(0.1).toFixed(2));
-  $("#v500m").text(calculeVSur(0.5).toFixed(2));
-  $("#v2s").text(calculeVPendnant(2).toFixed(2));
-  $("#v5s").text(calculeVPendnant(5).toFixed(2));
+
+  if ($("#vmax").text() == "") { // on calcule qu'une fois
+    $("#vmax").text(vmax.toFixed(2));
+
+    v = calculeVSur(0.1);
+    $("#v100m").text(v.v.toFixed(2));
+    $("#v100m").attr("data-a", v.a);
+    $("#v100m").attr("data-b", v.b);
+
+    v = calculeVSur(0.5);
+    $("#v500m").text(v.v.toFixed(2));
+    $("#v500m").attr("data-a", v.a);
+    $("#v500m").attr("data-b", v.b);
+
+    v = calculeVPendant(2);
+    $("#v2s").text(v.v.toFixed(2));
+    $("#v2s").attr("data-a", v.a);
+    $("#v2s").attr("data-b", v.b);
+
+    v = calculeVPendant(5);
+    $("#v5s").text(v.v.toFixed(2));
+    $("#v5s").attr("data-a", v.a);
+    $("#v5s").attr("data-b", v.b);
+  }
+});
+
+$("#stats td input").click(function () {
+  afficheStats();
 });
 
 function calculeVSur(distanceReference) {
-  var vmax = 0;
+  var vmax = { v: 0, a: 0, b: 0 };
   var vitesse;
   for (i = 0; i < v.length; i++) {
     vitesse = calculeVIndiceSur(i, distanceReference);
-    if (vitesse > vmax) {
-      vmax = vitesse;
+    if (vitesse.a > -1) {
+      if (vitesse.v > vmax.v) {
+        vmax.v = vitesse.v;
+        vmax.a = vitesse.a;
+        vmax.b = vitesse.b;
+      }
     }
   }
   return vmax;
 }
 
-function calculeVPendnant(dureeeReference) {
-  var vmax = 0;
+function calculeVPendant(dureeeReference) {
+  var vmax = { v: 0, a: 0, b: 0 };
   var vitesse;
   for (i = 0; i < v.length; i++) {
     vitesse = calculeVIndicePendant(i, dureeeReference);
-    if (vitesse > vmax) {
-      vmax = vitesse;
+    if (vitesse.a > -1) {
+      if (vitesse.v > vmax.v) {
+        vmax.v = vitesse.v;
+        vmax.a = vitesse.a;
+        vmax.b = vitesse.b;
+      }
     }
   }
   return vmax;
@@ -524,10 +552,11 @@ function calculeVIndiceSur(n, distanceReference) {
       } else {
         vitesse = 0;
       }
-      return vitesse;
+      return { v: vitesse, a: n, b: i };
     }
     distance = distance + d[i];
   }
+  return { v: 0, a: -1, b: -1 };
 }
 
 function calculeVIndicePendant(n, dureeReference) {
@@ -544,10 +573,58 @@ function calculeVIndicePendant(n, dureeReference) {
       } else {
         vitesse = 0;
       }
-      return vitesse;
+      return { v: vitesse, a: n, b: i };
     }
     duree = duree + dt;
     distance = distance + d[i];
+  }
+  return { v: 0, a: -1, b: -1 };
+}
+
+function afficheStats() {
+  if (markerVmax != null) {
+    markerVmax.remove();
+  }
+  if ($("#affiche-vmax").prop("checked")) {
+    markerVmax = L.marker(xy[ivmax]).bindTooltip(vmax.toFixed(2)).addTo(map);
+  }
+
+  if (tracev100m != null) {
+    tracev100m.remove();
+  }
+  tracev100m = afficheTraceVitesse("v100m");
+
+  if (tracev500m != null) {
+    tracev500m.remove();
+  }
+  tracev500m = afficheTraceVitesse("v500m");
+
+  if (tracev2s != null) {
+    tracev2s.remove();
+  }
+  tracev2s = afficheTraceVitesse("v2s");
+
+  if (tracev5s != null) {
+    tracev5s.remove();
+  }
+  tracev5s = afficheTraceVitesse("v5s");
+}
+
+function afficheTraceVitesse(id) {
+  if ($("#affiche-" + id).prop("checked")) {
+    var xy2 = [];
+    var a = parseInt($("#" + id).attr("data-a"));
+    var b = parseInt($("#" + id).attr("data-b"));
+    for (i = a; i <= b; i++) {
+      xy2.push(xy[i]);
+    }
+    return L.polyline(xy2, {
+      color: "green",
+      opacity: 1.0,
+      weight: "3",
+      dashArray: "5, 5",
+      dashOffset: "0",
+    }).addTo(map);
   }
 }
 

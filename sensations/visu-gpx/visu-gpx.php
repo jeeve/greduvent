@@ -70,26 +70,31 @@
                                     <label>Statistiques</label>
                                     <table>
                                         <tr>
+                                            <td><input id="affiche-vmax" type="checkbox"></input></td>
                                             <td>VMax</td>
                                             <td id="vmax"></td>
                                             <td>kts</td>
                                         </tr>
                                         <tr>
+                                            <td><input id="affiche-v100m" type="checkbox"></input></td>
                                             <td>V100m</td>
                                             <td id="v100m"></td>
                                             <td>kts</td>
                                         </tr>
                                         <tr>
+                                            <td><input id="affiche-v500m" type="checkbox"></input></td>
                                             <td>V500m</td>
                                             <td id="v500m"></td>
                                             <td>kts</td>
                                         </tr>
                                         <tr>
+                                            <td><input id="affiche-v2s" type="checkbox"></input></td>
                                             <td>V2s</td>
                                             <td id="v2s"></td>
                                             <td>kts</td>
                                         </tr>
                                         <tr>
+                                            <td><input id="affiche-v5s" type="checkbox"></input></td>
                                             <td>V5s</td>
                                             <td id="v5s"></td>
                                             <td>kts</td>
