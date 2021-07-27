@@ -44,6 +44,7 @@ var markerVitesse;
 var borneA, borneB;
 var lectureTimer = null;
 var lecturei;
+const LARGEUR_LIGNE = 10;
 
 function litGPX(url, ready) {
   borneA = 0;
@@ -282,7 +283,7 @@ function updateBornes() {
       "x",
       parseInt($(".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2
     );
-    $(".borne-ab").attr(
+    $(".borne-b").attr(
       "width",
       chart.getChartLayoutInterface().getXLocation(dmax) -
         parseInt($(".ligne-gauche").attr("x")) +
@@ -468,6 +469,7 @@ function avance() {
 
 // ------------------------------------------------------------------------ stats
 var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s;
+var xLigneGaucheOld, xLigneDroiteOld;
 
 $("#stats label").click(function () {
   // on peut cliquer sur le label
@@ -475,13 +477,29 @@ $("#stats label").click(function () {
 });
 
 $("#calcule").click(function () {
-  var v;
   $("#stats table").toggle();
 
-  if ($("#vmax").text() == "") { // on calcule qu'une fois
+  if ($("#stats #calcule").prop("checked")) {
+    xLigneGaucheOld = $(".ligne-gauche").attr("x");
+    xLigneDroiteOld = $(".ligne-droite").attr("x");
+    $(".ligne-gauche").attr("x", +30 - LARGEUR_LIGNE / 2);
+    $(".ligne-droite").attr("x", +30 - LARGEUR_LIGNE / 2);
+    updateBornes();
+    $("#calcule table td input").prop("checked", true);
+    afficheStats();
+  } else {
+    $(".ligne-gauche").attr("x", xLigneGaucheOld);
+    $(".ligne-droite").attr("x", xLigneDroiteOld);
+    updateBornes();
+    $("#calcule table td input").prop("checked", false);
+    afficheStats();
+  }
+
+  if ($("#vmax").text() == "") {
+    // on calcule qu'une fois
     $("#vmax").text(vmax.toFixed(2));
 
-    v = calculeVSur(0.1);
+    var v = calculeVSur(0.1);
     $("#v100m").text(v.v.toFixed(2));
     $("#v100m").attr("data-a", v.a);
     $("#v100m").attr("data-b", v.b);
@@ -634,7 +652,6 @@ var curseurSeuil = { currentX: 0, selectedElement: null };
 var curseurPosition = { currentX: 0, selectedElement: null };
 var curseurA = { currentX: 0, selectedElement: null };
 var curseurB = { currentX: 0, selectedElement: null };
-const LARGEUR_LIGNE = 10;
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable(chartxy);
