@@ -485,14 +485,14 @@ $("#calcule").click(function () {
     $(".ligne-gauche").attr("x", +30 - LARGEUR_LIGNE / 2);
     $(".ligne-droite").attr("x", +30 - LARGEUR_LIGNE / 2);
     updateBornes();
-    $("#calcule table td input").prop("checked", true);
-    afficheStats();
+    $("#stats table td input").prop("checked", true);
+    //afficheStats();
   } else {
     $(".ligne-gauche").attr("x", xLigneGaucheOld);
     $(".ligne-droite").attr("x", xLigneDroiteOld);
     updateBornes();
-    $("#calcule table td input").prop("checked", false);
-    afficheStats();
+    $("#stats table td input").prop("checked", false);
+    //afficheStats();
   }
 
   if ($("#vmax").text() == "") {
@@ -519,6 +519,7 @@ $("#calcule").click(function () {
     $("#v5s").attr("data-a", v.a);
     $("#v5s").attr("data-b", v.b);
   }
+  afficheStats();
 });
 
 $("#stats td input").click(function () {
