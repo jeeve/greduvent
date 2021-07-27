@@ -473,6 +473,11 @@ function avance() {
 
 // ------------------------------------------------------------------------ stats
 
+$("#stats label").click(function () {
+  // on peut cliquer sur le label
+  $("#calcule").click();
+});
+
 $("#calcule").click(function () {
   $("#stats table").toggle();
   $("#vmax").text(vmax.toFixed(2));
