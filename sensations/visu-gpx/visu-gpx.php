@@ -65,6 +65,37 @@
                                     <input type="text" id="rapidite"></input>
                                     <button id="stop" type="button">Stop</button>
                                 </div>
+                                <div id="stats">
+                                    <input id="calcule" type="checkbox"></input>
+                                    <label>Statistiques</label>
+                                    <table>
+                                        <tr>
+                                            <td>VMax</td>
+                                            <td id="vmax"></td>
+                                            <td>kts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>V100m</td>
+                                            <td id="v100m"></td>
+                                            <td>kts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>V500m</td>
+                                            <td id="v500m"></td>
+                                            <td>kts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>V2s</td>
+                                            <td id="v2s"></td>
+                                            <td>kts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>V5s</td>
+                                            <td id="v5s"></td>
+                                            <td>kts</td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

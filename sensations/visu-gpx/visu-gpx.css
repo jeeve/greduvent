@@ -24,9 +24,11 @@ td {
   }
 }
 
+#stats table {
+  display: none;
+}
 
 #chart {
-
   width: 100%;
   bottom: 12px;
   right: 8px;
@@ -49,6 +51,10 @@ td {
 #fenetre {
   margin-top: 20px;
   margin-bottom: 15px;
+}
+
+#magneto {
+  margin-bottom: 10px;
 }
 
 #fenetre-magneto {

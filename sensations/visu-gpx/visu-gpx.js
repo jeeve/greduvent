@@ -33,6 +33,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
 const SEUIL_ACCELERATION = 200;
 var times = [];
 var xy = [];
+var d = [];
 var v = [];
 var a = [];
 var polylignes = [];
@@ -72,6 +73,7 @@ function litGPX(url, ready) {
           }
         });
 
+      // filtre valeurs aberrante selon acceleration
       for (i = 0; i < times0.length; i++) {
         if (i == 0) {
           times.push(times0[i]);
@@ -79,8 +81,7 @@ function litGPX(url, ready) {
         } else {
           v0 = calculeVitesse(i - 1, times0, xy0);
           v1 = calculeVitesse(i, times0, xy0);
-          if (v1 < v0 + v0 * SEUIL_ACCELERATION/100) {
-            // filtre valeurs aberrante acceleration
+          if (v1 < v0 + (v0 * SEUIL_ACCELERATION) / 100) {
             times.push(times0[i]);
             xy.push(xy0[i]);
           }
@@ -97,8 +98,10 @@ function litGPX(url, ready) {
         if (i == 0) {
           v.push(0.0);
           a.push(0.0);
+          d.push(0.0);
         } else {
           dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]);
+          d.push(dd);
           angle = angleFromCoordinate(
             xy[i - 1][0],
             xy[i - 1][1],
@@ -465,6 +468,81 @@ function avance() {
   } else {
     clearInterval(lectureTimer);
     lectureTimer = null;
+  }
+}
+
+// ------------------------------------------------------------------------ stats
+
+$("#calcule").click(function () {
+  $("#stats table").toggle();
+  $("#vmax").text(vmax.toFixed(2));
+  $("#v100m").text(calculeVSur(0.1).toFixed(2));
+  $("#v500m").text(calculeVSur(0.5).toFixed(2));
+  $("#v2s").text(calculeVPendnant(2).toFixed(2));
+  $("#v5s").text(calculeVPendnant(5).toFixed(2));
+});
+
+function calculeVSur(distanceReference) {
+  var vmax = 0;
+  var vitesse;
+  for (i = 0; i < v.length; i++) {
+    vitesse = calculeVIndiceSur(i, distanceReference);
+    if (vitesse > vmax) {
+      vmax = vitesse;
+    }
+  }
+  return vmax;
+}
+
+function calculeVPendnant(dureeeReference) {
+  var vmax = 0;
+  var vitesse;
+  for (i = 0; i < v.length; i++) {
+    vitesse = calculeVIndicePendant(i, dureeeReference);
+    if (vitesse > vmax) {
+      vmax = vitesse;
+    }
+  }
+  return vmax;
+}
+
+function calculeVIndiceSur(n, distanceReference) {
+  var t1, t2, dt, vitesse;
+  var distance = 0;
+  for (i = n; i < v.length; i++) {
+    if (distance >= distanceReference) {
+      t1 = new Date(times[n]);
+      t2 = new Date(times[i]);
+      dt = (t2.getTime() - t1.getTime()) / 1000;
+      if (dt != 0) {
+        vitesse = ((distance * 1000) / dt) * 1.94384;
+      } else {
+        vitesse = 0;
+      }
+      return vitesse;
+    }
+    distance = distance + d[i];
+  }
+}
+
+function calculeVIndicePendant(n, dureeReference) {
+  var t1, t2, dt, vitesse;
+  var duree = 0;
+  var distance = 0;
+  for (i = n; i < v.length; i++) {
+    t1 = new Date(times[n]);
+    t2 = new Date(times[i]);
+    dt = (t2.getTime() - t1.getTime()) / 1000;
+    if (duree >= dureeReference) {
+      if (dt != 0) {
+        vitesse = ((distance * 1000) / dt) * 1.94384;
+      } else {
+        vitesse = 0;
+      }
+      return vitesse;
+    }
+    duree = duree + dt;
+    distance = distance + d[i];
   }
 }
 
