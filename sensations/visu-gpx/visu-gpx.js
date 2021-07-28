@@ -82,7 +82,7 @@ function litGPX(url, ready) {
         } else {
           v0 = calculeVitesse(i - 1, times0, xy0);
           v1 = calculeVitesse(i, times0, xy0);
-          if (v1 < v0 + (v0 * SEUIL_ACCELERATION) / 100) {
+          if (v1 < v0 + (v0 * SEUIL_ACCELERATION/100) || v1 > v0 - (v0 * SEUIL_ACCELERATION/100)) {
             times.push(times0[i]);
             xy.push(xy0[i]);
           }
@@ -554,11 +554,11 @@ function calculeVPendant(dureeeReference) {
 }
 
 function calculeVIndiceSur(n, distanceReference) {
-  var t1, t2, dt, vitesse;
+  var t1 = new Date(times[n]);
+  var t2, dt, vitesse;
   var distance = 0;
   for (i = n; i < v.length; i++) {
     if (distance >= distanceReference) {
-      t1 = new Date(times[n]);
       t2 = new Date(times[i]);
       dt = (t2.getTime() - t1.getTime()) / 1000;
       if (dt != 0) {
@@ -574,10 +574,10 @@ function calculeVIndiceSur(n, distanceReference) {
 }
 
 function calculeVIndicePendant(n, dureeReference) {
-  var t1, t2, dt, vitesse;
+  var t1 = new Date(times[n]);
+  var t2, dt, vitesse;
   var distance = 0;
   for (i = n; i < v.length; i++) {
-    t1 = new Date(times[n]);
     t2 = new Date(times[i]);
     dt = (t2.getTime() - t1.getTime()) / 1000;
     if (dt >= dureeReference) {
