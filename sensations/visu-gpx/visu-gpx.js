@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 1.0;
+const SEUIL_ACCELERATION = 2.0;
 var times = [];
 var xy = [];
 var d = [];
