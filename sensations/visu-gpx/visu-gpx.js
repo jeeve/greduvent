@@ -374,6 +374,7 @@ $("#seuil").change(function () {
   CreeLigneSeuil(chart, $("#seuil").val());
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   dessineTrace();
+  afficheStats();
 });
 
 $("#curseur").change(function () {
@@ -381,6 +382,7 @@ $("#curseur").change(function () {
   CreeLigneSeuil(chart, $("#seuil").val());
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   dessineTrace();
+  afficheStats();
 });
 
 $("#position").change(function () {
@@ -872,6 +874,7 @@ var registerEvtChart = function () {
             );
             $("#curseur").val(($("#seuil").val() / vmax) * 100);
             dessineTrace();
+            afficheStats();
           }
         }
         if (elementEstClasse(curseurA.selectedElement, "ligne-gauche")) {
@@ -946,6 +949,7 @@ var registerEvtLigneSeuilSVG = function () {
           );
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           dessineTrace();
+          afficheStats();
         }
       }
     })
