@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 2.0;
+const SEUIL_ACCELERATION = 1.0;
 var times = [];
 var xy = [];
 var d = [];
@@ -76,13 +76,11 @@ function litGPX(url, ready) {
 
       // filtre valeurs aberrante selon acceleration
       var k0 = 0;
-      var k1 = 1;
-      while (k1 < times0.length) {
+      for (k1 = 1; k1 < times0.length; k1++) {
         if (k0 == 0) {
           times.push(times0[k0]);
           xy.push(xy0[k0]);
           k0 = k0 + 1;
-          k1 = k1 + 1;
         } else {
           v0 = calculeVitesse(k0, times0, xy0);
           v1 = calculeVitesse(k1, times0, xy0);
@@ -94,13 +92,9 @@ function litGPX(url, ready) {
             times.push(times0[k1]);
             xy.push(xy0[k1]);
             k0 = k0 + 1;
-            k1 = k1 + 1;
-          } else {
-            k1 = k1 + 1;
           }
         }
       }
-      //   borneB = xy.length;
 
       var distance = 0;
       vmax = 0;
