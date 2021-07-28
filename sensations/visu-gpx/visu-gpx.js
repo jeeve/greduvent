@@ -314,7 +314,6 @@ function updateBornes() {
     borneA = j;
     borneB = i;
   }
-  map.removeLayer(trace);
   dessineTrace();
   afficheStats();
 }
@@ -331,7 +330,7 @@ map.on("click", function (e) {
   if (i != -1) {
     $("#position").val(chartxy[i + 1][0].toFixed(3));
     $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
-    CreeLignePosition(chart, chartxy[i][0]);
+    CreeLignePosition(chart);
     UpdatePosition();
     if ($("#fenetre-auto").is(":checked")) {
       calculeBornes();
@@ -374,7 +373,6 @@ $("#seuil").change(function () {
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   CreeLigneSeuil(chart, $("#seuil").val());
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
-  map.removeLayer(trace);
   dessineTrace();
 });
 
@@ -382,12 +380,11 @@ $("#curseur").change(function () {
   $("#seuil").val((($("#curseur").val() * vmax) / 100).toFixed(2));
   CreeLigneSeuil(chart, $("#seuil").val());
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
-  map.removeLayer(trace);
   dessineTrace();
 });
 
 $("#position").change(function () {
-  CreeLignePosition(chart, $("#position").val());
+  CreeLignePosition(chart);
   $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
   UpdatePosition();
 });
@@ -460,7 +457,7 @@ function avance() {
   if (lecturei < chartxy.length) {
     lecturei += parseInt($("#rapidite").val());
     $("#position").val(chartxy[lecturei][0].toFixed(3));
-    CreeLignePosition(chart, $("#position").val());
+    CreeLignePosition(chart);
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
     UpdatePosition();
     if ($("#fenetre-auto").is(":checked")) {
@@ -680,7 +677,7 @@ function drawChart() {
   registerEvtChart();
   createLineBornesSVG(chart, dmax * 0.1, dmax - dmax * 0.1);
   CreeLigneSeuil(chart, $("#seuil").val());
-  CreeLignePosition(chart, $("#position").val() * 1000);
+  CreeLignePosition(chart);
   CreeLigneGauche(chart, dmax * 0.1);
   CreeLigneDroite(chart, dmax - dmax * 0.1);
   UpdatePosition();
@@ -700,8 +697,9 @@ function CreeLigneSeuil(chart, y) {
   registerEvtLigneSeuilSVG();
 }
 
-function CreeLignePosition(chart, x) {
+function CreeLignePosition(chart) {
   $(".ligne-position").remove();
+  var x = $("#position").val();
   createLineVerticaleSVG(chart, x, "ligne-position", true);
   curseurPosition.selectedElement = null;
   curseurPosition.currentX = 0;
@@ -765,7 +763,7 @@ function createLineVerticaleSVG(chart, x, classeName, pointille) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
-  var xLoc = layout.getXLocation(x);
+  var xLoc = layout.getXLocation(x) - LARGEUR_LIGNE/2;
   var y1 = chartArea.top;
   var y2 = chartArea.height + chartArea.top;
 
@@ -873,7 +871,6 @@ var registerEvtChart = function () {
               calculeDistanceSeuil($("#seuil").val()).toFixed(3)
             );
             $("#curseur").val(($("#seuil").val() / vmax) * 100);
-            map.removeLayer(trace);
             dessineTrace();
           }
         }
@@ -948,7 +945,6 @@ var registerEvtLigneSeuilSVG = function () {
             calculeDistanceSeuil($("#seuil").val()).toFixed(3)
           );
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
-          map.removeLayer(trace);
           dessineTrace();
         }
       }
