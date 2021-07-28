@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <title>Visualisation trace GPX</title>
+    <title>Visualisation trace GPS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />

@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 200;
+const SEUIL_ACCELERATION = 2.0;
 var times = [];
 var xy = [];
 var d = [];
@@ -75,20 +75,32 @@ function litGPX(url, ready) {
         });
 
       // filtre valeurs aberrante selon acceleration
-      for (i = 0; i < times0.length; i++) {
-        if (i == 0) {
-          times.push(times0[i]);
-          xy.push(xy0[i]);
+      var k0 = 0;
+      var k1 = 1;
+      while (k1 < times0.length) {
+        if (k0 == 0) {
+          times.push(times0[k0]);
+          xy.push(xy0[k0]);
+          k0 = k0 + 1;
+          k1 = k1 + 1;
         } else {
-          v0 = calculeVitesse(i - 1, times0, xy0);
-          v1 = calculeVitesse(i, times0, xy0);
-          if (v1 < v0 + (v0 * SEUIL_ACCELERATION/100) || v1 > v0 - (v0 * SEUIL_ACCELERATION/100)) {
-            times.push(times0[i]);
-            xy.push(xy0[i]);
+          v0 = calculeVitesse(k0, times0, xy0);
+          v1 = calculeVitesse(k1, times0, xy0);
+          t0 = new Date(times0[k0]);
+          t1 = new Date(times0[k1]);
+          dt = (t1.getTime() - t0.getTime()) / 1000;
+          var acceleration = Math.abs((v1 - v0) / dt);
+          if (acceleration <= SEUIL_ACCELERATION) {
+            times.push(times0[k1]);
+            xy.push(xy0[k1]);
+            k0 = k0 + 1;
+            k1 = k1 + 1;
+          } else {
+            k1 = k1 + 1;
           }
         }
       }
-      borneB = xy.length;
+      //   borneB = xy.length;
 
       var distance = 0;
       vmax = 0;
@@ -246,10 +258,12 @@ function dessineTrace() {
   markerVitesse.openTooltip();
 
   UpdatePosition();
+
+  dessineStats();
 }
 
 if ($("#stats #calcule").prop("checked")) {
-  afficheStats();
+  dessineStats();
 }
 
 function indiceEndehorsBornes(i) {
@@ -315,7 +329,6 @@ function updateBornes() {
     borneB = i;
   }
   dessineTrace();
-  afficheStats();
 }
 
 var map = L.map("map");
@@ -374,7 +387,6 @@ $("#seuil").change(function () {
   CreeLigneSeuil(chart, $("#seuil").val());
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   dessineTrace();
-  afficheStats();
 });
 
 $("#curseur").change(function () {
@@ -382,7 +394,6 @@ $("#curseur").change(function () {
   CreeLigneSeuil(chart, $("#seuil").val());
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   dessineTrace();
-  afficheStats();
 });
 
 $("#position").change(function () {
@@ -400,7 +411,10 @@ function reportWindowSize() {
     $("#map").height(window.innerHeight - $("#chart").height() - 20); // 2 colonnes
   } else {
     $("#map").height(
-      window.innerHeight - $("#chart").height() - 20 - ($("#vitesse").last().offset().top + $("#vitesse").height() + 4)
+      window.innerHeight -
+        $("#chart").height() -
+        20 -
+        ($("#vitesse").last().offset().top + $("#vitesse").height() + 4)
     ); // 1 colonne
   }
 }
@@ -507,17 +521,16 @@ $("#calcule").click(function () {
 
   if ($("#calcule").prop("checked")) {
     $("#stats table td input").prop("checked", true);
-    afficheStats();
   } else {
     $("#stats table td input").prop("checked", false);
-    afficheStats();
   }
+  dessineStats();
 
   $("#stats table").toggle();
 });
 
 $("#stats table td input").click(function () {
-  afficheStats();
+  dessineStats();
 });
 
 function calculeVSur(distanceReference) {
@@ -592,7 +605,7 @@ function calculeVIndicePendant(n, dureeReference) {
   return { v: 0, a: -1, b: -1 };
 }
 
-function afficheStats() {
+function dessineStats() {
   if (markerVmax != null) {
     markerVmax.remove();
   }
@@ -765,7 +778,7 @@ function createLineVerticaleSVG(chart, x, classeName, pointille) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
-  var xLoc = layout.getXLocation(x) - LARGEUR_LIGNE/2;
+  var xLoc = layout.getXLocation(x) - LARGEUR_LIGNE / 2;
   var y1 = chartArea.top;
   var y2 = chartArea.height + chartArea.top;
 
@@ -874,7 +887,6 @@ var registerEvtChart = function () {
             );
             $("#curseur").val(($("#seuil").val() / vmax) * 100);
             dessineTrace();
-            afficheStats();
           }
         }
         if (elementEstClasse(curseurA.selectedElement, "ligne-gauche")) {
@@ -949,7 +961,6 @@ var registerEvtLigneSeuilSVG = function () {
           );
           $("#curseur").val(($("#seuil").val() / vmax) * 100);
           dessineTrace();
-          afficheStats();
         }
       }
     })
