@@ -67,7 +67,7 @@
                                 </div>
                                 <div id="stats">
                                     <input id="calcule" type="checkbox"></input>
-                                    <label>Statistiques</label>
+                                    <label>Statistiques</label>           
                                     <table>
                                         <tr>
                                             <td><input id="affiche-vmax" type="checkbox"></input></td>

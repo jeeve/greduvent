@@ -401,7 +401,7 @@ function reportWindowSize() {
     $("#map").height(window.innerHeight - $("#chart").height() - 20); // 2 colonnes
   } else {
     $("#map").height(
-      window.innerHeight - $("#chart").height() - 20 - $("#control").height()
+      window.innerHeight - $("#chart").height() - 20 - ($("#vitesse").last().offset().top + $("#vitesse").height() + 4)
     ); // 1 colonne
   }
 }
