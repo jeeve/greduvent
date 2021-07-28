@@ -316,6 +316,7 @@ function updateBornes() {
   }
   map.removeLayer(trace);
   dessineTrace();
+  afficheStats();
 }
 
 var map = L.map("map");
@@ -574,13 +575,12 @@ function calculeVIndiceSur(n, distanceReference) {
 
 function calculeVIndicePendant(n, dureeReference) {
   var t1, t2, dt, vitesse;
-  var duree = 0;
   var distance = 0;
   for (i = n; i < v.length; i++) {
     t1 = new Date(times[n]);
     t2 = new Date(times[i]);
     dt = (t2.getTime() - t1.getTime()) / 1000;
-    if (duree >= dureeReference) {
+    if (dt >= dureeReference) {
       if (dt != 0) {
         vitesse = ((distance * 1000) / dt) * 1.94384;
       } else {
@@ -588,7 +588,6 @@ function calculeVIndicePendant(n, dureeReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    duree = duree + dt;
     distance = distance + d[i];
   }
   return { v: 0, a: -1, b: -1 };
