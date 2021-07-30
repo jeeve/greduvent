@@ -168,7 +168,9 @@ function initParametres() {
   $("#fenetre-largeur").val("5.000");
 }
 
-litGPX(getParameterByName("url"), dessineTrace);
+if (getParameterByName("url") != "") {
+  litGPX(getParameterByName("url"), dessineTrace);
+}
 
 function calculeDistanceSeuil(seuil) {
   var distance = 0;
@@ -687,6 +689,9 @@ var curseurA = { currentX: 0, selectedElement: null };
 var curseurB = { currentX: 0, selectedElement: null };
 
 function drawChart() {
+  if (chartxy.length == 0) {
+    return;
+  }
   var data = google.visualization.arrayToDataTable(chartxy);
 
   var options = {
