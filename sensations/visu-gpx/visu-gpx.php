@@ -17,6 +17,13 @@
                     <div id="control">
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-12">
+
+                                <form enctype="multipart/form-data" action="fileupload.php" method="post">
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+                                    Lire un GPX<input type="file" name="monfichier" />
+                                    <input type="submit" />
+                                </form>
+
                                 <div id="reglages">
                                     <div class="slider-wrapper">
                                         <input type="range" id="curseur" min="0" max="100" step="any">
@@ -67,7 +74,7 @@
                                 </div>
                                 <div id="stats">
                                     <input id="calcule" type="checkbox"></input>
-                                    <label>Statistiques</label>           
+                                    <label>Statistiques</label>
                                     <table>
                                         <tr>
                                             <td><input id="affiche-vmax" type="checkbox"></input></td>
