@@ -20,7 +20,7 @@
 
                                 <form enctype="multipart/form-data" action="fileupload.php" method="post">
                                     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                    Lire un GPX<input type="file" name="monfichier" />
+                                    Lire un GPX<input type="file" name="monfichier" accept=".gpx" />
                                     <input type="submit" />
                                 </form>
 
