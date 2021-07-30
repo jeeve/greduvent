@@ -480,6 +480,8 @@ function avance() {
 }
 
 // ------------------------------------------------------------------------ stats
+
+const NB_MINI_MESURES = 3;
 var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s, tracev10s;
 
 $("#stats label").click(function () {
@@ -569,7 +571,7 @@ function calculeVIndiceSur(n, distanceReference) {
   var t2, dt, vitesse;
   var distance = 0;
   for (i = n; i < v.length; i++) {
-    if (distance >= distanceReference) {
+    if (distance >= distanceReference && i > n + NB_MINI_MESURES) { 
       t2 = new Date(times[i]);
       dt = (t2.getTime() - t1.getTime()) / 1000;
       if (dt != 0) {
@@ -591,7 +593,7 @@ function calculeVIndicePendant(n, dureeReference) {
   for (i = n; i < v.length; i++) {
     t2 = new Date(times[i]);
     dt = (t2.getTime() - t1.getTime()) / 1000;
-    if (dt >= dureeReference) {
+    if (dt >= dureeReference && i > n + NB_MINI_MESURES) { 
       if (dt != 0) {
         vitesse = ((distance * 1000) / dt) * 1.94384;
       } else {
@@ -652,7 +654,10 @@ function dessineStats() {
     tracev10s.remove();
   }
   if ($("#affiche-v10s").prop("checked")) {
-    tracev10s = afficheTraceVitesse("v10s", "V10s : " + $("#v10s").text() + " kts");
+    tracev10s = afficheTraceVitesse(
+      "v10s",
+      "V10s : " + $("#v10s").text() + " kts"
+    );
   }
 }
 
