@@ -2,7 +2,7 @@
 $nomOrigine = $_FILES['monfichier']['name'];
 $elementsChemin = pathinfo($nomOrigine);
 $extensionFichier = $elementsChemin['extension'];
-$extensionsAutorisees = array("gpx");
+$extensionsAutorisees = array("gpx", "GPX", "Gpx");
 if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     echo "Le fichier n'a pas l'extension attendue";
 } else {    

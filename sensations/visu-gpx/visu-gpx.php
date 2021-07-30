@@ -17,7 +17,7 @@
                     <div id="control">
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-12">
-                                <span id="lire-gpx">Lire fichier GPX</span>
+                                <div id="lire-gpx">Lire fichier GPX</div>
                                 <form id="upload" enctype="multipart/form-data" action="fileupload.php" method="post">
                                     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
                                     <input type="file" name="monfichier" accept=".gpx" />
