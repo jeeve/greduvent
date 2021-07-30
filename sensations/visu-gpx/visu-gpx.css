@@ -10,7 +10,7 @@ td {
 #lire-gpx {
   padding-top: 10px;
   text-decoration: underline;
-  color:mediumblue;
+  color: mediumblue;
   cursor: pointer;
 }
 
@@ -32,13 +32,13 @@ td {
   height: 800px;
 }
 
-@media screen and (max-width: 767px) { 
+@media screen and (max-width: 767px) {
   #chart {
     height: 100px;
   }
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   #chart {
     height: 150px;
   }
@@ -130,6 +130,10 @@ td {
 
 #chart path {
   stroke-width: 1;
+}
+
+#stats table {
+  border: 3px solid rgb(110, 110, 112);
 }
 
 #time {
