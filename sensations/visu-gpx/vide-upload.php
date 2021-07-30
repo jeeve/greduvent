@@ -1,3 +1,3 @@
 <?php
-    array_map('unlink', glob("upload/*.*"));
+    array_map('unlink', glob("upload/*.gpx"));
 ?>
