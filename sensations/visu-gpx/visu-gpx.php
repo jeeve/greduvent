@@ -17,13 +17,16 @@
                     <div id="control">
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-12">
-
-                                <form enctype="multipart/form-data" action="fileupload.php" method="post">
+                                <span id="lire-gpx">Lire fichier GPX</span>
+                                <form id="upload" enctype="multipart/form-data" action="fileupload.php" method="post">
                                     <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                    Lire un GPX<input type="file" name="monfichier" accept=".gpx" />
+                                    <input type="file" name="monfichier" accept=".gpx" />
                                     <input type="submit" />
                                 </form>
-
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-12">
                                 <div id="reglages">
                                     <div class="slider-wrapper">
                                         <input type="range" id="curseur" min="0" max="100" step="any">

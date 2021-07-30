@@ -165,7 +165,7 @@ function initParametres() {
   $("#vitesse").text("0.00");
   $("#rapidite").val("1");
   $("#fenetre-auto").prop("checked", true);
-  $("#fenetre-largeur").val("5.000");
+  $("#fenetre-largeur").val("2.000");
 }
 
 if (getParameterByName("url") != "") {
@@ -257,6 +257,10 @@ function dessineTrace() {
 
   dessineStats();
 }
+
+$("#lire-gpx").click(function () {
+  $("#upload").toggle();
+})
 
 if ($("#stats #calcule").prop("checked")) {
   dessineStats();

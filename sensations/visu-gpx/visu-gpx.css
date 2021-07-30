@@ -7,6 +7,25 @@ td {
   padding: 5px;
 }
 
+#lire-gpx {
+  text-decoration: underline;
+  color:mediumblue;
+  cursor: pointer;
+}
+
+#upload {
+  border: 3px solid rgb(110, 110, 112);
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 2px;
+  width: 280px;
+  display: none;
+}
+
+#upload input[type="submit"] {
+  margin-top: 5px;
+}
+
 #map {
   width: 100%;
   height: 800px;
