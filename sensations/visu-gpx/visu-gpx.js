@@ -91,7 +91,7 @@ function litGPX(url, ready) {
           if (acceleration <= SEUIL_ACCELERATION) {
             times.push(times0[k1]);
             xy.push(xy0[k1]);
-            k0 = k0 + 1;
+            k0 = k1;
           }
         }
       }
@@ -480,7 +480,7 @@ function avance() {
 }
 
 // ------------------------------------------------------------------------ stats
-var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s;
+var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s, tracev10s;
 
 $("#stats label").click(function () {
   // on peut cliquer sur le label
@@ -511,6 +511,11 @@ $("#calcule").click(function () {
     $("#v5s").text(v.v.toFixed(2));
     $("#v5s").attr("data-a", v.a);
     $("#v5s").attr("data-b", v.b);
+
+    v = calculeVPendant(10);
+    $("#v10s").text(v.v.toFixed(2));
+    $("#v10s").attr("data-a", v.a);
+    $("#v10s").attr("data-b", v.b);
   }
 
   if ($("#calcule").prop("checked")) {
@@ -641,6 +646,13 @@ function dessineStats() {
   }
   if ($("#affiche-v5s").prop("checked")) {
     tracev5s = afficheTraceVitesse("v5s", "V5s : " + $("#v5s").text() + " kts");
+  }
+
+  if (tracev10s != null) {
+    tracev10s.remove();
+  }
+  if ($("#affiche-v10s").prop("checked")) {
+    tracev10s = afficheTraceVitesse("v10s", "V10s : " + $("#v10s").text() + " kts");
   }
 }
 

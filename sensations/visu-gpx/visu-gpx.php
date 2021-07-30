@@ -99,6 +99,12 @@
                                             <td id="v5s"></td>
                                             <td>kts</td>
                                         </tr>
+                                        <tr>
+                                            <td><input id="affiche-v10s" type="checkbox"></input></td>
+                                            <td>V10s</td>
+                                            <td id="v10s"></td>
+                                            <td>kts</td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>
