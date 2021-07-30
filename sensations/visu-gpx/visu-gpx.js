@@ -571,7 +571,7 @@ function calculeVIndiceSur(n, distanceReference) {
   var t2, dt, vitesse;
   var distance = 0;
   for (i = n; i < v.length; i++) {
-    if (distance >= distanceReference && i > n + NB_MINI_MESURES) { 
+    if (distance >= distanceReference && i - n > NB_MINI_MESURES) { 
       t2 = new Date(times[i]);
       dt = (t2.getTime() - t1.getTime()) / 1000;
       if (dt != 0) {
@@ -593,7 +593,7 @@ function calculeVIndicePendant(n, dureeReference) {
   for (i = n; i < v.length; i++) {
     t2 = new Date(times[i]);
     dt = (t2.getTime() - t1.getTime()) / 1000;
-    if (dt >= dureeReference && i > n + NB_MINI_MESURES) { 
+    if (dt >= dureeReference && i - n > NB_MINI_MESURES) { 
       if (dt != 0) {
         vitesse = ((distance * 1000) / dt) * 1.94384;
       } else {
