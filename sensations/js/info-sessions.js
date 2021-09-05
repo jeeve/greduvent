@@ -1,6 +1,6 @@
 function getInfoSessions(spot) {
 	$.ajax({
-		url: "https://spreadsheets.google.com/feeds/list/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/default/public/values?alt=json",
+		url: "https://sheets.googleapis.com/v4/spreadsheets/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/values/Liste?key=AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o", //"https://spreadsheets.google.com/feeds/list/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/default/public/values?alt=json",
 		type: 'GET',
 		crossDomain: true,
 		dataType: 'json'
@@ -10,14 +10,14 @@ function getInfoSessions(spot) {
 			html = '<link rel="stylesheet" type="text/css" href="css/info-sessions.css" media="all"/>';
 			var dateheure, laDateAnglais, laDate, leSpot, leMWS, laVideo, leCommentaire, codeYoutube, vmax, v100m, distance, flotteur, voile, aileron, vent, pratique, res, trace, aile, reglage;
 			annee0 = 0;
-            for (i=data.feed.entry.length-1; i >= 0 ; i--) {
+            for (i=data.values.length-1; i >= 1 ; i--) {
 				
-				ligne = data.feed.entry[i];
-				leSpot = ligne.gsx$spot.$t;
+				ligne = data.values[i];
+				leSpot = ligne[1];
 
                 if ((leSpot != '') && ((spot != '' && spot == leSpot) || spot == '')) {											
 		
-                    dateheure = ligne.gsx$date.$t;
+                    dateheure = ligne[0];
                     laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
                     res = laDate.split("/");
                     annee = res[2];
@@ -47,30 +47,30 @@ function getInfoSessions(spot) {
                     */
 
                     trace = '';
-                    if (ligne.gsx$gpx.$t != '') {
-                        trace = 'visu-gpx/visu-gpx.php?url=' + ligne.gsx$gpx.$t;
+                    if (ligne[27] != '') {
+                        trace = 'visu-gpx/visu-gpx.php?url=' + ligne[27];
                     }
 
-                    leMWS = ligne.gsx$mws.$t;
-                    laVideo = ligne.gsx$youtube.$t;
-                    leCommentaire = ligne.gsx$commentaire.$t;
+                    leMWS = ligne[22];
+                    laVideo = ligne[23];
+                    leCommentaire = ligne[28];
                     codeYoutube = laVideo.substring(laVideo.lastIndexOf('/') + 1, laVideo.length);
-                    pratique = ligne.gsx$pratique.$t;
-                    vent = ligne.gsx$vent.$t;
-                    flotteur = ligne.gsx$flotteur.$t;
-                    voile = ligne.gsx$voile.$t;
-                    aileron = ligne.gsx$aileron.$t;
-                    aile = ligne.gsx$aile.$t;
-                    reglage = ligne.gsx$réglage.$t;
+                    pratique = ligne[2];
+                    vent = ligne[3];
+                    flotteur = ligne[12];
+                    voile = ligne[13];
+                    aileron = ligne[14];
+                    aile = ligne[15];
+                    reglage = ligne[16];
                     if (reglage != '') {
                         reglage = ' R' + reglage;
                     }
 
-                    distance = ligne.gsx$distancekm.$t;
-                    vmax = ligne.gsx$vmaxk72noeuds.$t;
-                    v100m = ligne.gsx$v100mk72.$t;
-                    ventMini = ligne.gsx$mini.$t;
-                    ventMaxi = ligne.gsx$maxi.$t;
+                    distance = ligne[7];
+                    vmax = ligne[9];
+                    v100m = ligne[10];
+                    ventMini = ligne[4];
+                    ventMaxi = ligne[5];
 
                     ancre = laDate.replace(new RegExp('/', 'g'), '-');
 
@@ -188,7 +188,7 @@ function getInfoSessions(spot) {
                         html = html + '<tr><td>Equipement</td><td>' + flotteur + '<br>' + voile + '<br>' + aileron + '</td></tr>';
                     }
 
-                    var lienGPX = ligne.gsx$gpx.$t;
+                    var lienGPX = ligne[27];
                     
                     if (distance != '') {
                         if (trace == '') {

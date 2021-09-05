@@ -316,7 +316,7 @@
          
          $(document).ready(function($) {
          $.ajax({
-         	url: "https://spreadsheets.google.com/feeds/list/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/default/public/values?alt=json",
+         	url: "https://sheets.googleapis.com/v4/spreadsheets/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/values/Liste?key=AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o",
          	type: 'GET',
          	crossDomain: true,
          	dataType: 'json'
@@ -333,13 +333,13 @@
          	vitesses2[0] = ['Date', 'V 100m', 'V Max'];
          	var j1 = 1;
          	var j2 = 1;
-         	for (i=0; i < data.feed.entry.length; i++) {
-         		ligne = data.feed.entry[i];
-         		d = ligne.gsx$date.$t;
-         		pratique = ligne.gsx$pratique.$t; 
-         		vmax = ligne.gsx$vmaxk72noeuds.$t;
-         		v100 = ligne.gsx$v100mk72.$t;
-         		distanceFoil = ligne.gsx$distancekm.$t;
+         	for (i=1; i < data.values.length; i++) {
+         		ligne = data.values[i];
+         		d = ligne[0];
+         		pratique = ligne[2]; 
+         		vmax = ligne[9];
+         		v100 = ligne[10];
+         		distanceFoil = ligne[7];
          		if (distanceFoil == "") {
          			distanceFoil = 0.0;
          		}
