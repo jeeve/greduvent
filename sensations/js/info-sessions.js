@@ -1,6 +1,7 @@
 function getInfoSessions(spot) {
+    var sheetapi = "AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o";
 	$.ajax({
-		url: "https://sheets.googleapis.com/v4/spreadsheets/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/values/Liste?key=AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o", //"https://spreadsheets.google.com/feeds/list/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/default/public/values?alt=json",
+		url: "https://sheets.googleapis.com/v4/spreadsheets/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/values/Liste?key=" + sheetapi, //"https://spreadsheets.google.com/feeds/list/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/default/public/values?alt=json",
 		type: 'GET',
 		crossDomain: true,
 		dataType: 'json'
