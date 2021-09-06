@@ -1,6 +1,7 @@
 function getCommentaires() {
+	var sheetapi = "AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o";
 		$.ajax({
-			url: "https://spreadsheets.google.com/feeds/list/1osyy0y3vFQc8v6doGTuzaLyGmhV4Sgs7MaPTASUbJNc/default/public/values?alt=json",
+			url: "https://sheets.googleapis.com/v4/spreadsheets/1osyy0y3vFQc8v6doGTuzaLyGmhV4Sgs7MaPTASUbJNc/values/Formresponses1?key=" + sheetapi, // "https://spreadsheets.google.com/feeds/list/1osyy0y3vFQc8v6doGTuzaLyGmhV4Sgs7MaPTASUbJNc/default/public/values?alt=json",
 			type: 'GET',
 			crossDomain: true,
 			dataType: 'json'
@@ -10,16 +11,16 @@ function getCommentaires() {
 				var ligneHtml, html;
 				var node = document.getElementById("tableCommentaires");
 				html = "<table>";
-				for (i=data.feed.entry.length-1; i >= 0 ; i--) {
+				for (i=data.values.length-1; i >= 1 ; i--) {
 					ligneHtml = "<tr>";
-					ligne = data.feed.entry[i];
-					dateheure = ligne.title.$t;
+					ligne = data.values[i];
+					dateheure = ligne[0];
 					laDate = dateheure.substring(0, dateheure.search(' '));
 					res = laDate.split("/");
 					laDate = res[0] + '/' + res[1] + '/' + res[2];
-					nom = ligne.gsx$nompseudo.$t;
-					commentaire = ligne.gsx$commentaire.$t;
-					reponse = ligne.gsx$réponse.$t;
+					nom = ligne[1];
+					commentaire = ligne[2];
+					reponse = ligne[3];
 					ligneHtml = ligneHtml + "<td><p>" + laDate + "</p></td>";
 					ligneHtml = ligneHtml + "<td><p>" + nom + "</p></td>";
 					ligneHtml = ligneHtml + "<td><p>" + commentaire + "</p></td>";	
