@@ -49,7 +49,7 @@ function getInfoSessions(spot) {
 
                     trace = '';
                     if (ligne[27] != '') {
-                        trace = 'visu-gpx/visu-gpx.php?url=' + ligne[27];
+                        trace = '/sensations/visu-gpx/visu-gpx.php?url=' + ligne[27];
                     }
 
                     leMWS = ligne[22];
