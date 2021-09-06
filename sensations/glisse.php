@@ -315,7 +315,6 @@
          var vitesses2 = [];
          
          $(document).ready(function($) {
-            var sheetapi = "AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o";
          $.ajax({
          	url: "https://sheets.googleapis.com/v4/spreadsheets/1eCnnsOdcwRKJ_kpx1uS-XXJoJGFSvm3l3ez2K9PpPv4/values/Liste?key=" + sheetapi,
          	type: 'GET',

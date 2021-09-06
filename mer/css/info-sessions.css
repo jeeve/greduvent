@@ -1,0 +1,21 @@
+.video {
+    display: block; 
+    text-align: center; 
+    margin: auto;
+}
+
+.image:hover .icone-lecture {
+    filter: invert(1);
+}
+
+.icone-lecture:hover {
+    filter: invert(1);
+}
+
+.icone-lecture {
+    width: 80px; 
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}

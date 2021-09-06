@@ -16,7 +16,7 @@ function getInfoSessions(spot) {
 				ligne = data.values[i];
 				leSpot = ligne[1];
 
-                if ((leSpot != '') && ((spot != '' && spot == leSpot) || spot == '')) {											
+                if ((leSpot != '') && ((spot != '' && spot.toLowerCase().indexOf(leSpot.toLowerCase()) > -1) || spot == '')) {											
 		
                     dateheure = ligne[0];
                     laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
@@ -49,7 +49,7 @@ function getInfoSessions(spot) {
 
                     trace = '';
                     if (ligne[27] != '') {
-                        trace = 'visu-gpx/visu-gpx.php?url=' + ligne[27];
+                        trace = '/sensations/visu-gpx/visu-gpx.php?url=' + ligne[27];
                     }
 
                     leMWS = ligne[22];
@@ -89,7 +89,7 @@ function getInfoSessions(spot) {
                     html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
                     html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
                     
-                    if (spot == '') {
+                    if (spot == '' || spot.indexOf(",") > -1) {
                         var spotURL;
                         switch (leSpot) {
                             case 'Léry-Poses' :

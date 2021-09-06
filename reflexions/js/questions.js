@@ -29,7 +29,7 @@ function getRandomInt(max) {
 
 function getQuestion() {
 		$.ajax({
-			url: "https://spreadsheets.google.com/feeds/list/1M2Fe51WZl598zw2sx3iQC0UrHlIczLKJ6Yi15yPoTrs/default/public/values?alt=json",
+			url: "https://sheets.googleapis.com/v4/spreadsheets/1M2Fe51WZl598zw2sx3iQC0UrHlIczLKJ6Yi15yPoTrs/values/Formresponses1?key=" + sheetapi, // "https://spreadsheets.google.com/feeds/list/1M2Fe51WZl598zw2sx3iQC0UrHlIczLKJ6Yi15yPoTrs/default/public/values?alt=json",
 			type: 'GET',
 			crossDomain: true,
 			dataType: 'json'
@@ -40,39 +40,39 @@ function getQuestion() {
 				var i;
 				var paramQuestion = decodeURIComponent($.urlParam('question'));
 				if (paramQuestion == "null") {
-					i = getRandomInt(data.feed.entry.length);
+					i = getRandomInt(data.values.length-1) + 1;
 				}
 				else {
 					i = -1;
-					for (j=0; j < data.feed.entry.length; j++) {
-						if (data.feed.entry[j].gsx$votrequestion.$t == paramQuestion) {
+					for (j=1; j < data.values.length; j++) {
+						if (data.values[j][2] == paramQuestion) {
 							i = j;	
 							break;
 						}
 					}
 				}
 				if (i == -1) {
-					i = getRandomInt(data.feed.entry.length);
+					i = getRandomInt(data.values.length-1) + 1;
 				}
-				ligne = data.feed.entry[i];
-				nom = ligne.gsx$nompseudo.$t;
+				ligne = data.values[i];
+				nom = ligne[1];
 				if (nom == "") {
 					nom = "anonyme";
 				}
-				question = ligne.gsx$votrequestion.$t;
+				question = ligne[2];
 				var paramPermalien = '';
 				if (paramQuestion == "null") {
 					paramPermalien = '?question=' + encodeURIComponent(question);
 				}
 				node.innerHTML = '<p><u>La question du jour de ' + nom + '</u> : <b>' + question + '</b><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSfcCrNawvdiorWRtXlkL16VHePNTI47YPe8UmTwGDMVWOoQcQ/viewform?usp=pp_url&entry.1388707615=' + question + '&entry.664735575&entry.115939093" target="_blank"><br>Votre réponse <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdm50yNnhBLyAku2Z2QuQ6UY7OU2QA6JWtAk9lRhMI3NmUV0A/viewform?usp=sf_link" target="_blank">Posez une question <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>, <a href="' + window.location + paramPermalien + '">#Permalien</a></p>';
 				getReponses(question);
-				getAutresReponses(question, data.feed.entry);
+				getAutresReponses(question, data);
 			});
 }
 
 function getReponses(question) {
 		$.ajax({
-			url: "https://spreadsheets.google.com/feeds/list/1g7ZtQOYmo2FoewC9x8fgwhD-ll6hZPP7yrSp4UPxkqc/default/public/values?alt=json",
+			url: "https://sheets.googleapis.com/v4/spreadsheets/1g7ZtQOYmo2FoewC9x8fgwhD-ll6hZPP7yrSp4UPxkqc/values/Formresponses1?key=" + sheetapi, //"https://spreadsheets.google.com/feeds/list/1g7ZtQOYmo2FoewC9x8fgwhD-ll6hZPP7yrSp4UPxkqc/default/public/values?alt=json",
 			type: 'GET',
 			crossDomain: true,
 			dataType: 'json'
@@ -82,16 +82,16 @@ function getReponses(question) {
 				var ligneHtml, html;
 				var node = document.getElementById("lignes-reponses");
 				html = "<p><ul>";
-				for (i = 0; i < data.feed.entry.length; i++) {
-					ligne = data.feed.entry[i];
-					dateheure = ligne.title.$t;
-					nom = ligne.gsx$nompseudo.$t;
+				for (i = 1; i < data.values.length; i++) {
+					ligne = data.values[i];
+					dateheure = ligne[0];
+					nom = ligne[2];
 					if (nom == "") {
 						nom = "anonyme";
 					}
-					votreQuestion = ligne.gsx$question.$t;
+					votreQuestion = ligne[1];
 					if (votreQuestion == question) {
-						reponse = ligne.gsx$votreréponse.$t;
+						reponse = ligne[3];
 						ligneHtml = "<li><u>" + nom + " répond</u> : " + reponse + "</li>";
 						html = html + ligneHtml;
 					}
@@ -102,7 +102,7 @@ function getReponses(question) {
 			});
 }
 
-function getAutresReponses(question, entry) {
+function getAutresReponses(question, data) {
 		var ligne;
 		var votreQuestion;
 		var ligneHtml, html;
@@ -110,9 +110,9 @@ function getAutresReponses(question, entry) {
 		var node = document.getElementById("autres-questions");
 		var paramQuestion = decodeURIComponent($.urlParam('question'));
 		html = '<p><ul>';
-		for (i = 0; i < entry.length; i++) {
-			ligne = entry[i];
-			votreQuestion = ligne.gsx$votrequestion.$t;
+		for (i = 1; i < data.values.length; i++) {
+			ligne = data.values[i];
+			votreQuestion = ligne[2];
 			if (votreQuestion != question) {
 				if (paramQuestion == "null") {
 					permalien = window.location.href + '?question=' + encodeURIComponent(votreQuestion);
