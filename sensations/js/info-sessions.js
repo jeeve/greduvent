@@ -89,7 +89,7 @@ function getInfoSessions(spot) {
                     html = html + '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
                     html = html + '<tr><td><a href="' + leMWS + '" target="_blank">Session</a></td><td>' + pratique + ' du ' + laDate + '</td></tr>';
                     
-                    if (spot == '') {
+                    if (spot == '' || spot.indexOf(",") > -1) {
                         var spotURL;
                         switch (leSpot) {
                             case 'Léry-Poses' :
