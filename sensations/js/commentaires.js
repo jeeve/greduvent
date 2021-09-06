@@ -1,5 +1,4 @@
 function getCommentaires() {
-	var sheetapi = "AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o";
 		$.ajax({
 			url: "https://sheets.googleapis.com/v4/spreadsheets/1osyy0y3vFQc8v6doGTuzaLyGmhV4Sgs7MaPTASUbJNc/values/Formresponses1?key=" + sheetapi, // "https://spreadsheets.google.com/feeds/list/1osyy0y3vFQc8v6doGTuzaLyGmhV4Sgs7MaPTASUbJNc/default/public/values?alt=json",
 			type: 'GET',
