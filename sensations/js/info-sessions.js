@@ -16,7 +16,7 @@ function getInfoSessions(spot) {
 				ligne = data.values[i];
 				leSpot = ligne[1];
 
-                if ((leSpot != '') && ((spot != '' && spot == leSpot) || spot == '')) {											
+                if ((leSpot != '') && ((spot != '' && spot.toLowerCase().indexOf(leSpot.toLowerCase()) > -1) || spot == '')) {											
 		
                     dateheure = ligne[0];
                     laDate = dateheure; //dateheure.substring(0, dateheure.search(' '));
