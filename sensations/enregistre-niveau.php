@@ -22,7 +22,7 @@ function enregistre_niveau_station($station) {
 			)
 		));
 		
-		$contents = file_get_contents('https://greduvent.herokuapp.com/sensations/niveau-foret-orient.php', false, $ctx);
+		$contents = file_get_contents('https://greduvent.000webhostapp.com/sensations/niveau-foret-orient.php', false, $ctx);
 		
 		$obj = json_decode($contents);
 		
@@ -31,7 +31,7 @@ function enregistre_niveau_station($station) {
 	$niveau = $obj->value;	
 		
 		// BD
-		$mysqli = new mysqli("localhost", "id17550762_jeeve", "?Qh\~nc0~7eu4#X*", "id17550762_bd");
+		$mysqli = new mysqli("localhost", "id17550762_jeeve", "kbYvXhDy!aRmo$*5", "id17550762_bd");
 		$Ajouter = "INSERT INTO niveau (station, hauteur) VALUES ('foret-orient', '" . floatval($niveau) . "')";
 		$mysqli->query($Ajouter);
 		$mysqli->close();				

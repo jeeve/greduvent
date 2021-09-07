@@ -5,6 +5,7 @@
 
 	  <?php
 	//  header("Access-Control-Allow-Origin: *");
+
 	
 	date_default_timezone_set('Europe/Paris');
 	$h = localtime(); 
@@ -20,6 +21,7 @@
 	if ($difference >= 0) {
 		return;
 	}	
+
 	
 	 ob_start();
 //	  set_time_limit(0); 
