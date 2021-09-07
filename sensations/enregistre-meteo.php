@@ -1,6 +1,6 @@
 
 <!-- https://console.cron-job.org/jobs 
-	 https://statmeteo.000webhostapp.com/enregistre-meteo.php?station=louviers
+	 https://greduvent.000webhostapp.com/enregistre-meteo.php?station=louviers
 	-->
 
 	  <?php
@@ -25,11 +25,6 @@
 //	  set_time_limit(0); 
 //	  ini_set('default_socket_timeout', 900); // 900 Seconds = 15 Minutes
 	  
-		$station = 'louviers';
-		if ($_GET['station'] != '') {
-				$station = $_GET['station'];
-		}	
-		
 		
 function enregistre_meteo_station($station) {
 		
@@ -60,7 +55,7 @@ function enregistre_meteo_station($station) {
 		
 		
 		// BD
-		$mysqli = new mysqli("localhost", "id12603904_jeeve", ">(sXJFq=T<0a<MrE", "id12603904_meteo");
+		$mysqli = new mysqli("localhost", "id17550762_jeeve", "kbYvXhDy!aRmo$*5", "id17550762_bd");
 		$Ajouter = "INSERT INTO meteo (station, vitesse, orientation, temperature) VALUES ('" . $station . "', '" . floatval($vitesse) . "', '" . floatval($direction) . "', '" . floatval($temperature) . "')";
 		$mysqli->query($Ajouter);
 		$mysqli->close();				
