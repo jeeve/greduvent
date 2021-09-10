@@ -82,21 +82,14 @@ function litGPX(url, ready) {
           xy.push(xy0[k0]);
           k0 = k0 + 1;
         } else {
-          v0 = calculeVitesse(k0, times0, xy0);
-          v1 = calculeVitesse(k1, times0, xy0);
-          t0 = new Date(times0[k0]);
-          t1 = new Date(times0[k1]);
-          dt = (t1.getTime() - t0.getTime()) / 1000;
-          var acceleration = Math.abs((v1 - v0) / dt);
-          //console.log(dt);
-          if (dt > 1) {
-            if (acceleration <= SEUIL_ACCELERATION) {
-              times.push(times0[k1]);
-              xy.push(xy0[k1]);
-              k0 = k1;
-            } else {
-              k0 = k1;
-            }
+          var x0 = new Date(times0[k0]);
+          var x1 = new Date(times0[k1]);
+          var deltax = Math.abs(x1 - x0);
+          var deltay = calculeDistance(xy0[k1][0], xy0[k1][1], xy0[k0][0], xy0[k0][1]);
+          if (deltay < 0.000011 * deltax) {
+            times.push(times0[k1]);
+            xy.push(xy0[k1]);
+            k0 = k1;
           }
         }
       }
