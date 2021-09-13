@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 2.0;
+const SEUIL_ACCELERATION = 0.9;
 var times = [];
 var xy = [];
 var d = [];
@@ -75,23 +75,25 @@ function litGPX(url, ready) {
         });
 
       // filtre valeurs aberrante selon acceleration
-      var k0 = 0;
-      for (k1 = 1; k1 < times0.length; k1++) {
-        if (k0 == 0) {
-          times.push(times0[k0]);
-          xy.push(xy0[k0]);
-          k0 = k0 + 1;
-        } else {
-          var x0 = new Date(times0[k0]);
-          var x1 = new Date(times0[k1]);
-          var deltax = Math.abs(x1 - x0);
-          var deltay = calculeDistance(xy0[k1][0], xy0[k1][1], xy0[k0][0], xy0[k0][1]);
-          if (deltay < 0.000011 * deltax) {
-            times.push(times0[k1]);
-            xy.push(xy0[k1]);
-            k0 = k1;
+      for (i = 0; i < times0.length; i++) {
+        times.push(times0[i]);
+        xy.push(xy0[i]);
+      }
+      var k = 1;
+      while (k < times.length) {
+          v0 = calculeVitesse(k-1, times, xy);
+          v1 = calculeVitesse(k, times, xy);
+          t0 = new Date(times[k-1]);
+          t1 = new Date(times[k]);
+          dt = (t1.getTime() - t0.getTime()) / 1000;
+          var acceleration = Math.abs((v1 - v0) / dt);
+          console.log(acceleration);
+          if (acceleration > SEUIL_ACCELERATION) {
+            times.splice(k, 1);
+            xy.splice(k, 1);
+            k = k - 1;
           }
-        }
+          k = k + 1;
       }
 
       var distance = 0;
@@ -106,7 +108,6 @@ function litGPX(url, ready) {
           d.push(0.0);
         } else {
           dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]);
-          d.push(dd);
           angle = angleFromCoordinate(
             xy[i - 1][0],
             xy[i - 1][1],
@@ -120,6 +121,7 @@ function litGPX(url, ready) {
           }
           v.push(vitesse);
           a.push(angle);
+          d.push(dd);
           chartxy.push([distance, vitesse]);
           distance = distance + dd;
         }
