@@ -13,25 +13,25 @@ function getOrientationVentSpot() {
 	}
 	else {
 		$.ajax({
-			url: "https://spreadsheets.google.com/feeds/list/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/default/public/values?alt=json",
+			url: "https://sheets.googleapis.com/v4/spreadsheets/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/values/Spots?key=" + sheetapi, // "https://spreadsheets.google.com/feeds/list/1O3WDo7864s7npqM7r7zd2XXVWeVqhuqjgmzfObh40gY/default/public/values?alt=json",
 			type: 'GET',
 			crossDomain: true,
 			dataType: 'json'
 		}).then(function(data) {
 				var ligne, vent, spPoses, spVairessurmarne, spJablines, spMoisson, spGrandeparoisse, spSaintQuentin, spEcluzelles, spForetOrient;
 				var nPoses, nVairessurmarne, nJablines, nMoisson, nGrandeparoisse, nSaintQuentin, nEcluzelles, nForetOrient;
-				for (i=data.feed.entry.length-1; i >= 0 ; i--) {
-					ligne = data.feed.entry[i];
-					vent = ligne.title.$t;
+				for (i=data.values.length-2; i >= 1 ; i--) {
+					ligne = data.values[i];
+					vent = ligne[0];
 					if (vent == orientationVent) {
-						nPoses = ligne.gsx$poses.$t;
-						nVairessurmarne = ligne.gsx$vairessurmarne.$t;
-						nJablines = ligne.gsx$jablines.$t;
-						nMoisson = ligne.gsx$moisson.$t;
-						nGrandeparoisse = ligne.gsx$grandeparoisse.$t;
-						nSaintQuentin = ligne.gsx$saintquentinenyvelines.$t;
-						nEcluzelles = ligne.gsx$ecluzelles.$t;
-						nForetOrient = ligne.gsx$foretorient.$t;
+						nPoses = ligne[1];
+						nVairessurmarne = ligne[2];
+						nJablines = ligne[3];
+						nMoisson = ligne[4];
+						nGrandeparoisse = ligne[5];
+						nSaintQuentin = ligne[6];
+						nEcluzelles = ligne[7];
+						nForetOrient = ligne[8];
 						
 						spPoses = '';
 						spVairessurmarne = '';
@@ -42,28 +42,28 @@ function getOrientationVentSpot() {
 						spEcluzelles = '';
 						spForetOrient = '';
 						
-						if (nPoses != '') {
+						if (nPoses != '' && nPoses != undefined) {
 							spPoses = '<span class="note">' + nPoses + '</span> / 10';
 						}
-						if (nVairessurmarne != '') {
+						if (nVairessurmarne != '' && nVairessurmarne != undefined) {
 							spVairessurmarne = '<span class="note">' + nVairessurmarne + '</span> / 10';
 						}
-						if (nJablines != '') {
+						if (nJablines != '' && nJablines != undefined) {
 							spJablines = '<span class="note">' + nJablines + '</span> / 10';
 						}
-						if (nMoisson != '') {
+						if (nMoisson != ''&& nMoisson != undefined) {
 							spMoisson = '<span class="note">' + nMoisson + '</span> / 10';
 						}
-						if (nGrandeparoisse != '') {
+						if (nGrandeparoisse != '' && nGrandeparoisse != undefined) {
 							spGrandeparoisse = '<span class="note">' + nGrandeparoisse + '</span> / 10';
 						}
-						if (nSaintQuentin != '') {
+						if (nSaintQuentin != '' && nSaintQuentin != undefined) {
 							spSaintQuentin = '<span class="note">' + nSaintQuentin + '</span> / 10';
 						}
-						if (nEcluzelles != '') {
+						if (nEcluzelles != '' && nEcluzelles != undefined) {
 							spEcluzelles = '<span class="note">' + nEcluzelles + '</span> / 10';
 						}
-						if (nForetOrient != '') {
+						if (nForetOrient != '' && nForetOrient != undefined) {
 							spForetOrient = '<span class="note">' + nForetOrient + '</span> / 10';
 						}						
 						
