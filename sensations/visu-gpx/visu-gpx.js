@@ -55,30 +55,24 @@ function litGPX(url, ready) {
     dataType: "xml",
     success: function (xml) {
       var i;
-      var t1, t2, dd, dt, angle, v0, v1;
-      var times0 = [];
-      var xy0 = [];
+      var t1, t2, dd, dt, angle, v0, v1, t;
       $(xml)
         .find("trkpt")
         .each(function () {
           if ($(this).find("time").length == 1) {
-            time = $(this).find("time").text();
+            t = $(this).find("time").text();
             lat = parseFloat($(this).attr("lat"));
             lon = parseFloat($(this).attr("lon"));
 
-            times0.push(time);
+            times.push(t);
             var coord = [];
             coord[0] = lat;
             coord[1] = lon;
-            xy0.push(coord);
+            xy.push(coord);
           }
         });
 
       // filtre valeurs aberrante selon acceleration
-      for (i = 0; i < times0.length; i++) {
-        times.push(times0[i]);
-        xy.push(xy0[i]);
-      }
       var k = 1;
       while (k < times.length) {
           v0 = calculeVitesse(k-1, times, xy);
