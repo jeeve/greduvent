@@ -81,7 +81,6 @@ function litGPX(url, ready) {
           t1 = new Date(times[k]);
           dt = (t1.getTime() - t0.getTime()) / 1000;
           var acceleration = Math.abs((v1 - v0) / dt);
-          console.log(acceleration);
           if (acceleration > SEUIL_ACCELERATION) {
             times.splice(k, 1);
             xy.splice(k, 1);
@@ -571,7 +570,7 @@ function calculeVIndiceSur(n, distanceReference) {
   var t2, dt, vitesse;
   var distance = 0;
   for (i = n; i < v.length; i++) {
-    if (distance >= distanceReference && i - n > NB_MINI_MESURES) {
+    if (distance >= distanceReference) {
       t2 = new Date(times[i]);
       dt = (t2.getTime() - t1.getTime()) / 1000;
       if (dt != 0) {
@@ -581,7 +580,7 @@ function calculeVIndiceSur(n, distanceReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    distance = distance + d[i];
+    distance = distance + d[i+1];
   }
   return { v: 0, a: -1, b: -1 };
 }
@@ -593,7 +592,7 @@ function calculeVIndicePendant(n, dureeReference) {
   for (i = n; i < v.length; i++) {
     t2 = new Date(times[i]);
     dt = (t2.getTime() - t1.getTime()) / 1000;
-    if (dt >= dureeReference && i - n > NB_MINI_MESURES) {
+    if (dt >= dureeReference) {
       if (dt != 0) {
         vitesse = ((distance * 1000) / dt) * 1.94384;
       } else {
@@ -601,7 +600,7 @@ function calculeVIndicePendant(n, dureeReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    distance = distance + d[i];
+    distance = distance + d[i+1];
   }
   return { v: 0, a: -1, b: -1 };
 }
