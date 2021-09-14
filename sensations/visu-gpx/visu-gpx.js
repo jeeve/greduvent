@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 0.9;
+const SEUIL_ACCELERATION = 0.85;
 var times = [];
 var xy = [];
 var d = [];
@@ -580,7 +580,9 @@ function calculeVIndiceSur(n, distanceReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    distance = distance + d[i+1];
+    if (i+1 < v.length) {
+      distance = distance + d[i+1];
+    }
   }
   return { v: 0, a: -1, b: -1 };
 }
@@ -600,7 +602,9 @@ function calculeVIndicePendant(n, dureeReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    distance = distance + d[i+1];
+    if (i+1 < v.length) {
+      distance = distance + d[i+1];
+    }
   }
   return { v: 0, a: -1, b: -1 };
 }
