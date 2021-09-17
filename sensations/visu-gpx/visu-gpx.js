@@ -337,9 +337,13 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
   if (i != -1) {
-    $("#position").val(chartxy[i + 1][0].toFixed(3));
+    var x = chartxy[i + 1][0].toFixed(3);
+    $("#position").val(x);
     $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
     CreeLignePosition(chart);
+    if (lectureTimer != null) {
+      lecturei = getIndiceDistance(x);
+    }
     UpdatePosition();
     if ($("#fenetre-auto").is(":checked")) {
       calculeBornes();
