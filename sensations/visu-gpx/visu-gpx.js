@@ -443,7 +443,7 @@ function UpdatePosition() {
 $("#lecture").click(function () {
   if (lectureTimer == null) {
     lecturei = getIndiceDistance(parseFloat($("#position").val()));
-    lectureTimer = setInterval(avance, 100);
+    lectureTimer = setInterval(avance, 200);
   }
 });
 
@@ -954,6 +954,9 @@ var registerEvtChart = function () {
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
         $("#vitesse").text(getVitesse(x).toFixed(2));
+        if (lectureTimer != null) {
+          lecturei = getIndiceDistance(x);
+        }
         UpdatePosition();
         if ($("#fenetre-auto").is(":checked")) {
           calculeBornes();
