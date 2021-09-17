@@ -327,12 +327,18 @@ function updateBornes() {
   dessineTrace();
 }
 
-var map = L.map("map");
+var map = L.map("map", {zoomControl: false});
+L.control.zoom({
+  position:'topright'
+}).addTo(map);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   layers: [trace],
 }).addTo(map);
+
+
 
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
@@ -699,6 +705,16 @@ var curseurSeuil = { currentX: 0, selectedElement: null };
 var curseurPosition = { currentX: 0, selectedElement: null };
 var curseurA = { currentX: 0, selectedElement: null };
 var curseurB = { currentX: 0, selectedElement: null };
+
+$("#chart").keypress(function (e) {
+  if (e.which == 32) {
+    if (lectureTimer == null) {
+      $("#lecture").click();
+    } else {
+      $("#stop").click();
+    }
+  }
+});
 
 function drawChart() {
   if (chartxy.length == 0) {
