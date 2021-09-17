@@ -180,6 +180,14 @@ function calculeDistanceSeuil(seuil) {
   return distance;
 }
 
+function couleurCategorie(cat) {
+  if (cat == 0) {
+    return "blue";
+  } else {
+    return "red";
+  }
+}
+
 function dessineTrace() {
   polylignes = [];
 
@@ -203,25 +211,20 @@ function dessineTrace() {
       opacite = 1.0;
     }
     if (opacite0 != opacite || xy2.length >= 100) {
-      if (cat == 0) {
-        polylignes.push(L.polyline(xy2, { color: "blue", opacity: opacite0 }));
-      } else {
-        polylignes.push(L.polyline(xy2, { color: "red", opacity: opacite0 }));
-      }
+        polylignes.push(L.polyline(xy2, { color: couleurCategorie(cat), opacity: opacite0 }));
       xy2 = [];
       xy2.push(xy[i]);
       opacite0 = opacite;
     } else {
       if (cat0 != cat || xy2.length >= 100) {
-        if (cat0 == 0) {
-          polylignes.push(L.polyline(xy2, { color: "blue", opacity: opacite }));
-        } else {
-          polylignes.push(L.polyline(xy2, { color: "red", opacity: opacite }));
-        }
+          polylignes.push(L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite }));
         xy2 = [];
         xy2.push(xy[i]);
         cat0 = cat;
       }
+    }
+    if (i == xy.length-1) {
+      polylignes.push(L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite0 }));
     }
   }
 
@@ -478,7 +481,9 @@ function avance() {
   }
 }
 
+// ------------------------------------------------------------------------
 // ------------------------------------------------------------------------ stats
+// ------------------------------------------------------------------------
 
 const NB_MINI_MESURES = 3;
 var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s, tracev10s;
@@ -682,7 +687,9 @@ function afficheTraceVitesse(id, texte) {
     .addTo(map);
 }
 
+// ------------------------------------------------------------------------
 // ------------------------------------------------------------------------ chart
+// ------------------------------------------------------------------------
 
 var curseurSeuil = { currentX: 0, selectedElement: null };
 var curseurPosition = { currentX: 0, selectedElement: null };
