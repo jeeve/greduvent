@@ -142,7 +142,8 @@ td {
 }
 
 #stats {
-  padding: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
 /*
 #stats table {
