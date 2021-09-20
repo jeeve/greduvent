@@ -16,7 +16,7 @@ td {
 }
 
 #upload {
- /* border: 3px solid rgb(110, 110, 112);
+  /* border: 3px solid rgb(110, 110, 112);
   border-radius: 5px;*/
   margin: 10px;
   padding: 10px;
@@ -26,6 +26,10 @@ td {
 
 #upload input[type="submit"] {
   margin-top: 10px;
+}
+
+#carte {
+  position: relative;
 }
 
 #map {
@@ -149,7 +153,6 @@ td {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  left: 15px;
   z-index: 10000;
   margin-right: 16px;
   padding-left: 10px;
