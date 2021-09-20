@@ -9,16 +9,17 @@ td {
 
 #lire-gpx {
   padding-top: 10px;
+  padding-left: 10px;
   text-decoration: underline;
   color: mediumblue;
   cursor: pointer;
 }
 
 #upload {
-  border: 3px solid rgb(110, 110, 112);
-  border-radius: 5px;
+ /* border: 3px solid rgb(110, 110, 112);
+  border-radius: 5px;*/
+  margin: 10px;
   padding: 10px;
-  margin-top: 10px;
   width: 290px;
   display: none;
 }
@@ -57,7 +58,7 @@ td {
 
 #control {
   position: absolute;
-  top: 0;
+  top: 8px;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.75);
   border: 3px solid rgb(110, 110, 112);
@@ -74,10 +75,11 @@ td {
 #fenetre {
   margin-top: 15px;
   margin-bottom: 15px;
+  padding-left: 15px;
 }
 
 #magneto {
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 #fenetre-magneto {
@@ -125,7 +127,7 @@ td {
 
 .slider-wrapper input {
   width: 132px;
-  height: 20px;
+  height: 40px;
   margin: 0;
   transform-origin: 66px 66px;
   transform: rotate(-90deg);
