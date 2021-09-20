@@ -10,10 +10,7 @@
 
 <body>
 
-    <div id="carte">
-        <div id="map"></div>
-        <div id="time"></div>
-    </div>
+
     <div id="control">
 
 
@@ -117,6 +114,11 @@
             </table>
         </div>
 
+    </div>
+
+    <div id="carte">
+        <div id="map"></div>
+        <div id="time"></div>
     </div>
 
     <div id="chart"></div>

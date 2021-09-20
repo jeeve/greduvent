@@ -75,18 +75,18 @@ function litGPX(url, ready) {
       // filtre valeurs aberrante selon acceleration
       var k = 1;
       while (k < times.length) {
-          v0 = calculeVitesse(k-1, times, xy);
-          v1 = calculeVitesse(k, times, xy);
-          t0 = new Date(times[k-1]);
-          t1 = new Date(times[k]);
-          dt = (t1.getTime() - t0.getTime()) / 1000;
-          var acceleration = Math.abs((v1 - v0) / dt);
-          if (acceleration > SEUIL_ACCELERATION) {
-            times.splice(k, 1);
-            xy.splice(k, 1);
-            k = k - 1;
-          }
-          k = k + 1;
+        v0 = calculeVitesse(k - 1, times, xy);
+        v1 = calculeVitesse(k, times, xy);
+        t0 = new Date(times[k - 1]);
+        t1 = new Date(times[k]);
+        dt = (t1.getTime() - t0.getTime()) / 1000;
+        var acceleration = Math.abs((v1 - v0) / dt);
+        if (acceleration > SEUIL_ACCELERATION) {
+          times.splice(k, 1);
+          xy.splice(k, 1);
+          k = k - 1;
+        }
+        k = k + 1;
       }
 
       var distance = 0;
@@ -211,20 +211,26 @@ function dessineTrace() {
       opacite = 1.0;
     }
     if (opacite0 != opacite || xy2.length >= 100) {
-        polylignes.push(L.polyline(xy2, { color: couleurCategorie(cat), opacity: opacite0 }));
+      polylignes.push(
+        L.polyline(xy2, { color: couleurCategorie(cat), opacity: opacite0 })
+      );
       xy2 = [];
       xy2.push(xy[i]);
       opacite0 = opacite;
     } else {
       if (cat0 != cat || xy2.length >= 100) {
-          polylignes.push(L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite }));
+        polylignes.push(
+          L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite })
+        );
         xy2 = [];
         xy2.push(xy[i]);
         cat0 = cat;
       }
     }
-    if (i == xy.length-1) {
-      polylignes.push(L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite0 }));
+    if (i == xy.length - 1) {
+      polylignes.push(
+        L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite0 })
+      );
     }
   }
 
@@ -327,18 +333,18 @@ function updateBornes() {
   dessineTrace();
 }
 
-var map = L.map("map", {zoomControl: false});
-L.control.zoom({
-  position:'topright'
-}).addTo(map);
+var map = L.map("map", { zoomControl: false });
+L.control
+  .zoom({
+    position: "topright",
+  })
+  .addTo(map);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   layers: [trace],
 }).addTo(map);
-
-
 
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
@@ -413,16 +419,7 @@ $("#fenetre-largeur").change(function () {
 });
 
 function reportWindowSize() {
-  if ($("#map").offset().top < 20) {
-    $("#map").height(window.innerHeight - $("#chart").height() - 20); // 2 colonnes
-  } else {
-    $("#map").height(
-      window.innerHeight -
-        $("#chart").height() -
-        20 -
-        ($("#vitesse").last().offset().top + $("#vitesse").height() + 4)
-    ); // 1 colonne
-  }
+  $("#map").height(window.innerHeight - $("#chart").height() - 20); 
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
@@ -595,8 +592,8 @@ function calculeVIndiceSur(n, distanceReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    if (i+1 < v.length) {
-      distance = distance + d[i+1];
+    if (i + 1 < v.length) {
+      distance = distance + d[i + 1];
     }
   }
   return { v: 0, a: -1, b: -1 };
@@ -617,8 +614,8 @@ function calculeVIndicePendant(n, dureeReference) {
       }
       return { v: vitesse, a: n, b: i };
     }
-    if (i+1 < v.length) {
-      distance = distance + d[i+1];
+    if (i + 1 < v.length) {
+      distance = distance + d[i + 1];
     }
   }
   return { v: 0, a: -1, b: -1 };

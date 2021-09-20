@@ -60,8 +60,13 @@ td {
   user-select: none;
 }
 
+@media screen and (min-width: 768px) {
+  #control {
+    position: absolute;
+  }
+}
+
 #control {
-  position: absolute;
   top: 8px;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.75);
