@@ -30,7 +30,7 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   return brng;
 }
 
-const SEUIL_ACCELERATION = 0.85;
+const SEUIL_ACCELERATION = 0.8;
 var times = [];
 var xy = [];
 var d = [];
@@ -968,7 +968,7 @@ var registerEvtChart = function () {
     .click(function (e) {
       var x = chartGetx(chart, e.clientX);
       if (x >= 0 && x <= dmax) {
-        var dx = e.clientX - 15;
+        var dx = e.clientX - 13;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
         $("#vitesse").text(getVitesse(x).toFixed(2));
