@@ -84,6 +84,10 @@
                               </p>
                            </li>
                         </ul>
+                        <p style="margin-bottom: 20px; margin-left: 45px;">
+                           Vmax : <strong><span id="vmax-windsurf"></span></strong> kts<br>
+                           V100m : <strong><span id="v100-windsurf"></span></strong> kts
+                        </p>
                         <p align="center">ça dépote !</p>
                         <h2>Kitesurf</h2>
                         <p>Après quelques années de pratique, j'ai déposé les armes pour me recentrer sur la planche.</p>
@@ -325,7 +329,9 @@
          	vitesses1 = [];
          	vitesses2 = [];
          	var ligne, d, v100, vmax, i, pratique, distanceFoil, distanceFoilTotale;
-         	var vmaxfoilmax, vmaxfoildate, v100mfoilmax, v100mfoildate;
+         	var vmaxfoilmax, vmaxfoildate, v100mfoilmax, v100mfoildate, vmaxwindsurfmax, v100mwindsurfmax, vmaxfoildate, v100mfoildate;
+            vmaxwindsurfmax = 0.0;
+         	v100mwindsurfmax = 0.0;
          	vmaxfoilmax = 0.0;
          	v100mfoilmax = 0.0;
          	var v = [];
@@ -356,6 +362,16 @@
          				v100mfoildate = d;
          			}
          		}
+               if (pratique == "Windsurf") {
+         			if (vmax > vmaxwindsurfmax) {
+         				vmaxwindsurfmax = vmax;
+         				vmaxwindsurfdate = d;
+         			}
+         			if (v100 > v100mwindsurfmax) {
+         				v100mwindsurfmax = v100;
+         				v100mwindsurfdate = d;
+         			}
+         		}
          		if (vmax != '') {
          			v = [];
          			v[0] = new Date(d);
@@ -373,12 +389,18 @@
          	}
          	jQuery("#distance-foil").html(Math.round(distanceFoilTotale).toString());
          	var res;
-                      res = vmaxfoildate.split("/");
+
+            res = vmaxwindsurfdate.split("/");
+         	jQuery("#vmax-windsurf").html('<a href="' + '?session=' + res[1] + '-' + res[0] + '-' + res[2] + '">' + (Math.round(vmaxwindsurfmax*100)/100).toString() + '</a>');
+         	res = v100mwindsurfdate.split("/");
+         	jQuery("#v100-windsurf").html('<a href="' + '?session=' + res[1] + '-' + res[0] + '-' + res[2] + '">' + (Math.round(v100mwindsurfmax*100)/100).toString() + '</a>');
+
+            res = vmaxfoildate.split("/");
          	jQuery("#vmax-foil").html('<a href="' + '?session=' + res[1] + '-' + res[0] + '-' + res[2] + '">' + (Math.round(vmaxfoilmax*100)/100).toString() + '</a>');
          	res = v100mfoildate.split("/");
          	jQuery("#v100-foil").html('<a href="' + '?session=' + res[1] + '-' + res[0] + '-' + res[2] + '">' + (Math.round(v100mfoilmax*100)/100).toString() + '</a>');
          	drawChart1();
-         	drawChart2();
+            drawChart2();
          });
           
          });
