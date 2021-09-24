@@ -22,7 +22,7 @@
                     <br><br>
 
                     <h2>GPS</h2>
-                    <p><a href="/sensations/visu-gpx/visu-gpx.php">Visualisateur de traces</a></p>
+                    <p><a href="/sensations/visu-gpx/visu-gpx.php" target="_blank">Visualisateur de traces</a></p>
                     <p>
                         <a href="https://outilsflask.herokuapp.com/gps/">Convertisseur fichiers FIT et SML en GPX</a>
                     </p>
