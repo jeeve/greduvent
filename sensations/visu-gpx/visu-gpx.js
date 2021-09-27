@@ -888,7 +888,7 @@ function createIndicateurPosition(chart, x, classeName) {
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var xLoc = layout.getXLocation(x);
-  var y1 = chartArea.top;
+  var y1 = chartArea.top-10;
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -913,7 +913,7 @@ function createIndicateurPlage(chart, x1, x2, classeName) {
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var X1 = layout.getXLocation(x1);
   var X2 = layout.getXLocation(x2);
-  var y1 = chartArea.top;
+  var y1 = chartArea.top-10;
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
