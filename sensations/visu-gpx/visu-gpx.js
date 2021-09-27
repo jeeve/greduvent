@@ -419,7 +419,7 @@ $("#fenetre-largeur").change(function () {
 });
 
 function reportWindowSize() {
-  $("#map").height(window.innerHeight - $("#chart").height() - 20); 
+  $("#map").height(window.innerHeight - $("#chart").height() - 20);
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
@@ -675,6 +675,73 @@ function dessineStats() {
       "V10s : " + $("#v10s").text() + " kts"
     );
   }
+
+  $(".vmax").remove();
+  if ($("#affiche-vmax").prop("checked")) {
+    if (chart != null) {
+      createIndicateurPosition(chart, chartxy[ivmax + 1][0], "vmax");
+    }
+  }
+
+  $(".v100m").remove();
+  if ($("#affiche-v100m").prop("checked")) {
+    if (chart != null) {
+      createIndicateurPlage(
+        chart,
+        chartxy[parseInt($("#v100m").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v100m").attr("data-b")) + 1][0],
+        "v100m"
+      );
+    }
+  } 
+  
+  $(".v500m").remove();
+  if ($("#affiche-v500m").prop("checked")) {
+    if (chart != null) {
+      createIndicateurPlage(
+        chart,
+        chartxy[parseInt($("#v500m").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v500m").attr("data-b")) + 1][0],
+        "v500m"
+      );
+    }
+  } 
+
+  $(".v2s").remove();
+  if ($("#affiche-v2s").prop("checked")) {
+    if (chart != null) {
+      createIndicateurPlage(
+        chart,
+        chartxy[parseInt($("#v2s").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v2s").attr("data-b")) + 1][0],
+        "v2s"
+      );
+    }
+  } 
+
+  $(".v5s").remove();
+  if ($("#affiche-v5s").prop("checked")) {
+    if (chart != null) {
+      createIndicateurPlage(
+        chart,
+        chartxy[parseInt($("#v5s").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v5s").attr("data-b")) + 1][0],
+        "v5s"
+      );
+    }
+  } 
+
+  $(".v10s").remove();
+  if ($("#affiche-v10s").prop("checked")) {
+    if (chart != null) {
+      createIndicateurPlage(
+        chart,
+        chartxy[parseInt($("#v10s").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v10s").attr("data-b")) + 1][0],
+        "v10s"
+      );
+    }
+  } 
 }
 
 function afficheTraceVitesse(id, texte) {
@@ -814,6 +881,75 @@ function createLineHorizontaleSVG(chart, y) {
   line.setAttribute("stroke", "#FF0000");
   line.setAttribute("stroke-width", 2);
   svg2.appendChild(line);
+}
+
+function createIndicateurPosition(chart, x, classeName) {
+  var layout = chart.getChartLayoutInterface();
+  var chartArea = layout.getChartAreaBoundingBox();
+  var svg = chart.getContainer().getElementsByTagName("svg")[0];
+  var xLoc = layout.getXLocation(x);
+  var y1 = chartArea.top;
+  var y2 = chartArea.height + chartArea.top;
+
+  var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg2.setAttribute("class", "indicateur " + classeName);
+  svg2.setAttribute("x", xLoc - 5);
+  svg2.setAttribute("y", y1);
+  svg2.setAttribute("width", 10);
+  svg2.setAttribute("height", 10);
+  svg.appendChild(svg2);
+
+  var line = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+  line.setAttribute("points", "0,0 10,0 5,10");
+  svg2.setAttribute("fill", "green");
+  svg2.setAttribute("stroke", "green");
+
+  svg2.appendChild(line);
+}
+
+function createIndicateurPlage(chart, x1, x2, classeName) {
+  var layout = chart.getChartLayoutInterface();
+  var chartArea = layout.getChartAreaBoundingBox();
+  var svg = chart.getContainer().getElementsByTagName("svg")[0];
+  var X1 = layout.getXLocation(x1);
+  var X2 = layout.getXLocation(x2);
+  var y1 = chartArea.top;
+  var y2 = chartArea.height + chartArea.top;
+
+  var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg2.setAttribute("class", "indicateur " + classeName);
+  svg2.setAttribute("x", X1);
+  svg2.setAttribute("y", y1);
+  svg2.setAttribute("width", X2 - X1);
+  svg2.setAttribute("height", 10);
+  svg.appendChild(svg2);
+
+  var line1 = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line1.setAttribute("x1", 0);
+  line1.setAttribute("y1", 0);
+  line1.setAttribute("x2", 0);
+  line1.setAttribute("y2", 10);
+  line1.setAttribute("stroke", "green");
+  line1.setAttribute("stroke-width", 3);
+  svg2.appendChild(line1);
+
+  var line2 = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line2.setAttribute("x1", X2 - X1);
+  line2.setAttribute("y1", 0);
+  line2.setAttribute("x2", X2 - X1);
+  line2.setAttribute("y2", 10);
+  line2.setAttribute("stroke", "green");
+  line2.setAttribute("stroke-width", 3);
+  svg2.appendChild(line2);
+
+  var line3 = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line3.setAttribute("x1", 0);
+  line3.setAttribute("y1", 0);
+  line3.setAttribute("x2", X2 - X1);
+  line3.setAttribute("y2", 0);
+  line3.setAttribute("stroke", "green");
+  line3.setAttribute("stroke-width", 3);
+  svg2.appendChild(line3);
 }
 
 function createLineVerticaleSVG(chart, x, classeName, pointille) {
