@@ -679,7 +679,7 @@ function dessineStats() {
   $("#chart .vmax").remove();
   if ($("#affiche-vmax").prop("checked")) {
     if (chart != null) {
-      createIndicateurPosition(chart, chartxy[ivmax + 1][0], "vmax");
+      createIndicateurPosition(chart, chartxy[ivmax][0], "vmax");
     }
   }
 
@@ -688,8 +688,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v100m").attr("data-a")) + 1][0],
-        chartxy[parseInt($("#v100m").attr("data-b")) + 1][0],
+        chartxy[parseInt($("#v100m").attr("data-a"))][0],
+        chartxy[parseInt($("#v100m").attr("data-b"))][0],
         "v100m"
       );
     }
@@ -700,8 +700,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v500m").attr("data-a")) + 1][0],
-        chartxy[parseInt($("#v500m").attr("data-b")) + 1][0],
+        chartxy[parseInt($("#v500m").attr("data-a"))][0],
+        chartxy[parseInt($("#v500m").attr("data-b"))][0],
         "v500m"
       );
     }
@@ -712,8 +712,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v2s").attr("data-a")) + 1][0],
-        chartxy[parseInt($("#v2s").attr("data-b")) + 1][0],
+        chartxy[parseInt($("#v2s").attr("data-a"))][0],
+        chartxy[parseInt($("#v2s").attr("data-b"))][0],
         "v2s"
       );
     }
@@ -724,8 +724,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v5s").attr("data-a")) + 1][0],
-        chartxy[parseInt($("#v5s").attr("data-b")) + 1][0],
+        chartxy[parseInt($("#v5s").attr("data-a"))][0],
+        chartxy[parseInt($("#v5s").attr("data-b"))][0],
         "v5s"
       );
     }
@@ -736,8 +736,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v10s").attr("data-a")) + 1][0],
-        chartxy[parseInt($("#v10s").attr("data-b")) + 1][0],
+        chartxy[parseInt($("#v10s").attr("data-a"))][0],
+        chartxy[parseInt($("#v10s").attr("data-b"))][0],
         "v10s"
       );
     }
