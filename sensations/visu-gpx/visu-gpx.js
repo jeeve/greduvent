@@ -676,14 +676,14 @@ function dessineStats() {
     );
   }
 
-  $(".vmax").remove();
+  $("#chart .vmax").remove();
   if ($("#affiche-vmax").prop("checked")) {
     if (chart != null) {
       createIndicateurPosition(chart, chartxy[ivmax + 1][0], "vmax");
     }
   }
 
-  $(".v100m").remove();
+  $("#chart .v100m").remove();
   if ($("#affiche-v100m").prop("checked")) {
     if (chart != null) {
       createIndicateurPlage(
@@ -695,7 +695,7 @@ function dessineStats() {
     }
   } 
   
-  $(".v500m").remove();
+  $("#chart .v500m").remove();
   if ($("#affiche-v500m").prop("checked")) {
     if (chart != null) {
       createIndicateurPlage(
@@ -707,7 +707,7 @@ function dessineStats() {
     }
   } 
 
-  $(".v2s").remove();
+  $("#chart .v2s").remove();
   if ($("#affiche-v2s").prop("checked")) {
     if (chart != null) {
       createIndicateurPlage(
@@ -719,7 +719,7 @@ function dessineStats() {
     }
   } 
 
-  $(".v5s").remove();
+  $("#chart .v5s").remove();
   if ($("#affiche-v5s").prop("checked")) {
     if (chart != null) {
       createIndicateurPlage(
@@ -731,7 +731,7 @@ function dessineStats() {
     }
   } 
 
-  $(".v10s").remove();
+  $("#chart .v10s").remove();
   if ($("#affiche-v10s").prop("checked")) {
     if (chart != null) {
       createIndicateurPlage(
