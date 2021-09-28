@@ -888,7 +888,7 @@ function createIndicateurPosition(chart, x, classeName) {
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var xLoc = layout.getXLocation(x);
-  var y1 = chartArea.top-10;
+  var y1 = chartArea.top-5;
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -896,11 +896,11 @@ function createIndicateurPosition(chart, x, classeName) {
   svg2.setAttribute("x", xLoc - 5);
   svg2.setAttribute("y", y1);
   svg2.setAttribute("width", 10);
-  svg2.setAttribute("height", 10);
+  svg2.setAttribute("height", 5);
   svg.appendChild(svg2);
 
   var line = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-  line.setAttribute("points", "0,0 10,0 5,10");
+  line.setAttribute("points", "0,0 10,0 5,5");
   svg2.setAttribute("fill", "green");
   svg2.setAttribute("stroke", "green");
 
@@ -913,7 +913,7 @@ function createIndicateurPlage(chart, x1, x2, classeName) {
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var X1 = layout.getXLocation(x1);
   var X2 = layout.getXLocation(x2);
-  var y1 = chartArea.top-10;
+  var y1 = chartArea.top-5;
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -921,14 +921,14 @@ function createIndicateurPlage(chart, x1, x2, classeName) {
   svg2.setAttribute("x", X1);
   svg2.setAttribute("y", y1);
   svg2.setAttribute("width", X2 - X1);
-  svg2.setAttribute("height", 10);
+  svg2.setAttribute("height", 5);
   svg.appendChild(svg2);
 
   var line1 = document.createElementNS("http://www.w3.org/2000/svg", "line");
   line1.setAttribute("x1", 0);
   line1.setAttribute("y1", 0);
   line1.setAttribute("x2", 0);
-  line1.setAttribute("y2", 10);
+  line1.setAttribute("y2", 5);
   line1.setAttribute("stroke", "green");
   line1.setAttribute("stroke-width", 3);
   svg2.appendChild(line1);
