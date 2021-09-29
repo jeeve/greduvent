@@ -119,6 +119,11 @@
     <div id="carte">
         <div id="map"></div>
         <div id="time"></div>
+
+
+
+        <div id="video" style="display: none;"></div>
+
     </div>
 
     <div id="chart"></div>

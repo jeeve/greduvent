@@ -165,6 +165,56 @@ if (getParameterByName("url") != "") {
   litGPX(getParameterByName("url"), dessineTrace);
 }
 
+var iVideoStart, iVideoEnd;
+var playerReady = false;
+
+if (getParameterByName("video") != "") {
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement("script");
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player("video", {
+      height: "360",
+      width: "640",
+      videoId: getParameterByName("video"),
+      playerVars: {
+        controls: 0,
+        showinfo: 0,
+        modestbranding: 1,
+      },
+      events: {
+        onReady: onPlayerReady,
+      },
+    });
+  }
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  playerReady = true;
+  player.pauseVideo();
+}
+
+function playerSeek() {
+  if (playerReady) {
+    var i = getIndiceDistance(parseFloat($("#position").val()));
+    var t0 = new Date(times[iVideoStart]);
+    var t = new Date(times[i]);
+    var s = (t.getTime() - t0.getTime()) / 1000;
+    player.seekTo(s, true);
+    if (lectureTimer == null) {
+      player.pauseVideo();
+    }
+  }
+}
+
 function calculeDistanceSeuil(seuil) {
   var distance = 0;
   var delta;
@@ -360,6 +410,7 @@ map.on("click", function (e) {
     if ($("#fenetre-auto").is(":checked")) {
       calculeBornes();
     }
+    playerSeek();
   }
 });
 
@@ -412,6 +463,7 @@ $("#position").change(function () {
   CreeLignePosition(chart);
   $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
   UpdatePosition();
+  playerSeek();
 });
 
 $("#fenetre-largeur").change(function () {
@@ -445,16 +497,28 @@ function UpdatePosition() {
   markerVitesse.setRotationAngle(a[i]);
   markerVitesse.setTooltipContent($("#vitesse").text());
   $("#carte #time").text(times[i]);
+  if (getParameterByName("video")) {
+    if (i >= iVideoStart && i <= iVideoEnd) {
+      $("#video").css("display", "block");
+    } else {
+      $("#video").css("display", "none");
+    }
+  }
 }
 
 $("#lecture").click(function () {
   if (lectureTimer == null) {
     lecturei = getIndiceDistance(parseFloat($("#position").val()));
-    lectureTimer = setInterval(avance, 200);
+    lectureTimer = setInterval(avance, 1000);
+    playerSeek();
+    if (playerReady) {
+      player.playVideo();
+    }
   }
 });
 
 $("#stop").click(function () {
+  player.pauseVideo();
   clearInterval(lectureTimer);
   lectureTimer = null;
 });
@@ -690,11 +754,12 @@ function dessineStats() {
         chart,
         chartxy[parseInt($("#v100m").attr("data-a"))][0],
         chartxy[parseInt($("#v100m").attr("data-b"))][0],
-        "v100m"
+        "v100m",
+        "green"
       );
     }
-  } 
-  
+  }
+
   $("#chart .v500m").remove();
   if ($("#affiche-v500m").prop("checked")) {
     if (chart != null) {
@@ -702,10 +767,11 @@ function dessineStats() {
         chart,
         chartxy[parseInt($("#v500m").attr("data-a"))][0],
         chartxy[parseInt($("#v500m").attr("data-b"))][0],
-        "v500m"
+        "v500m",
+        "green"
       );
     }
-  } 
+  }
 
   $("#chart .v2s").remove();
   if ($("#affiche-v2s").prop("checked")) {
@@ -714,10 +780,11 @@ function dessineStats() {
         chart,
         chartxy[parseInt($("#v2s").attr("data-a"))][0],
         chartxy[parseInt($("#v2s").attr("data-b"))][0],
-        "v2s"
+        "v2s",
+        "green"
       );
     }
-  } 
+  }
 
   $("#chart .v5s").remove();
   if ($("#affiche-v5s").prop("checked")) {
@@ -726,10 +793,11 @@ function dessineStats() {
         chart,
         chartxy[parseInt($("#v5s").attr("data-a"))][0],
         chartxy[parseInt($("#v5s").attr("data-b"))][0],
-        "v5s"
+        "v5s",
+        "green"
       );
     }
-  } 
+  }
 
   $("#chart .v10s").remove();
   if ($("#affiche-v10s").prop("checked")) {
@@ -738,10 +806,11 @@ function dessineStats() {
         chart,
         chartxy[parseInt($("#v10s").attr("data-a"))][0],
         chartxy[parseInt($("#v10s").attr("data-b"))][0],
-        "v10s"
+        "v10s",
+        "green"
       );
     }
-  } 
+  }
 }
 
 function afficheTraceVitesse(id, texte) {
@@ -807,6 +876,21 @@ function drawChart() {
   UpdatePosition();
   updateBornes();
   calculeBornes();
+  if (getParameterByName("video") && getParameterByName("videostart") && getParameterByName("videoend")) {
+    CreePlageVideo();
+  }
+}
+
+function CreePlageVideo() {
+  iVideoStart = times.findIndex((el) => el.indexOf(getParameterByName("videostart")) > -1);
+  iVideoEnd = times.findIndex((el) => el.indexOf(getParameterByName("videoend")) > -1);
+  createIndicateurPlage(
+    chart,
+    chartxy[iVideoStart][0],
+    chartxy[iVideoEnd][0],
+    "indicateur",
+    "blue"
+  );
 }
 
 $(window).resize(function () {
@@ -888,7 +972,7 @@ function createIndicateurPosition(chart, x, classeName) {
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var xLoc = layout.getXLocation(x);
-  var y1 = chartArea.top-5;
+  var y1 = chartArea.top - 5;
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -907,13 +991,13 @@ function createIndicateurPosition(chart, x, classeName) {
   svg2.appendChild(line);
 }
 
-function createIndicateurPlage(chart, x1, x2, classeName) {
+function createIndicateurPlage(chart, x1, x2, classeName, couleur) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
   var X1 = layout.getXLocation(x1);
   var X2 = layout.getXLocation(x2);
-  var y1 = chartArea.top-5;
+  var y1 = chartArea.top - 5;
   var y2 = chartArea.height + chartArea.top;
 
   var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -929,7 +1013,7 @@ function createIndicateurPlage(chart, x1, x2, classeName) {
   line1.setAttribute("y1", 0);
   line1.setAttribute("x2", 0);
   line1.setAttribute("y2", 5);
-  line1.setAttribute("stroke", "green");
+  line1.setAttribute("stroke", couleur);
   line1.setAttribute("stroke-width", 3);
   svg2.appendChild(line1);
 
@@ -938,7 +1022,7 @@ function createIndicateurPlage(chart, x1, x2, classeName) {
   line2.setAttribute("y1", 0);
   line2.setAttribute("x2", X2 - X1);
   line2.setAttribute("y2", 10);
-  line2.setAttribute("stroke", "green");
+  line2.setAttribute("stroke", couleur);
   line2.setAttribute("stroke-width", 3);
   svg2.appendChild(line2);
 
@@ -947,7 +1031,7 @@ function createIndicateurPlage(chart, x1, x2, classeName) {
   line3.setAttribute("y1", 0);
   line3.setAttribute("x2", X2 - X1);
   line3.setAttribute("y2", 0);
-  line3.setAttribute("stroke", "green");
+  line3.setAttribute("stroke", couleur);
   line3.setAttribute("stroke-width", 3);
   svg2.appendChild(line3);
 }
@@ -1115,6 +1199,7 @@ var registerEvtChart = function () {
         if ($("#fenetre-auto").is(":checked")) {
           calculeBornes();
         }
+        playerSeek();
       }
     });
 };
