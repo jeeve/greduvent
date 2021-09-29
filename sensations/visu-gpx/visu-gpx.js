@@ -34,6 +34,7 @@ const SEUIL_ACCELERATION = 0.8;
 var times = [];
 var xy = [];
 var d = [];
+var t = [];
 var v = [];
 var a = [];
 var polylignes = [];
@@ -55,16 +56,16 @@ function litGPX(url, ready) {
     dataType: "xml",
     success: function (xml) {
       var i;
-      var t1, t2, dd, dt, angle, v0, v1, t;
+      var t1, t2, dd, dt, angle, v0, v1, texte;
       $(xml)
         .find("trkpt")
         .each(function () {
           if ($(this).find("time").length == 1) {
-            t = $(this).find("time").text();
+            texte = $(this).find("time").text();
             lat = parseFloat($(this).attr("lat"));
             lon = parseFloat($(this).attr("lon"));
 
-            times.push(t);
+            times.push(texte);
             var coord = [];
             coord[0] = lat;
             coord[1] = lon;
@@ -92,6 +93,7 @@ function litGPX(url, ready) {
       var distance = 0;
       vmax = 0;
       ivmax = 0;
+      var t0 = (new Date(times[0])).getTime();
       chartxy = [];
       chartxy.push(["Distance", "Vitesse"]);
       for (i = 0; i < times.length; i++) {
@@ -99,6 +101,7 @@ function litGPX(url, ready) {
           v.push(0.0);
           a.push(0.0);
           d.push(0.0);
+          t.push(0.0);
         } else {
           dd = calculeDistance(xy[i][0], xy[i][1], xy[i - 1][0], xy[i - 1][1]);
           angle = angleFromCoordinate(
@@ -115,6 +118,8 @@ function litGPX(url, ready) {
           v.push(vitesse);
           a.push(angle);
           d.push(dd);
+          var ti = (new Date(times[i])).getTime();
+          t.push((ti - t0)/1000);
           chartxy.push([distance, vitesse]);
           distance = distance + dd;
         }
@@ -876,21 +881,44 @@ function drawChart() {
   UpdatePosition();
   updateBornes();
   calculeBornes();
-  if (getParameterByName("video") && getParameterByName("videostart") && getParameterByName("videoend")) {
+  if (getParameterByName("video")) {
     CreePlageVideo();
   }
 }
 
 function CreePlageVideo() {
-  iVideoStart = times.findIndex((el) => el.indexOf(getParameterByName("videostart")) > -1);
-  iVideoEnd = times.findIndex((el) => el.indexOf(getParameterByName("videoend")) > -1);
+  iVideoStart = 0;
+  var t0 = 0;
+  var t1 = 120;
+  if (getParameterByName("videostart")) {
+    t0 =parseInt(getParameterByName("videostart"));
+    iVideoStart = getIndiceTemps(t0);
+  }
+  if (getParameterByName("videoduration")) {
+    t1 = parseInt(getParameterByName("videoduration"));
+  }
+  iVideoEnd = getIndiceTemps(t0 + t1);
   createIndicateurPlage(
     chart,
-    chartxy[iVideoStart][0],
-    chartxy[iVideoEnd][0],
+    chartxy[iVideoStart+1][0],
+    chartxy[iVideoEnd+1][0],
     "indicateur",
     "blue"
   );
+}
+
+function getIndiceTemps(temps) {
+  var ecart = 1000000000000000;
+  var e;
+  var indice = 0;
+  for (i = 0; i < t.length; i++) {
+    e = Math.abs(t[i] - temps);
+    if (e < ecart) {
+      ecart = e;
+      indice = i;
+    }
+  }
+  return indice;
 }
 
 $(window).resize(function () {
