@@ -46,6 +46,11 @@
                         <td>km</td>
                     </tr>
                     <tr>
+                        <td><label>Temps</label></td>
+                        <td><input type="text" id="temps"></input></td>
+                        <td>s</td>
+                    </tr>
+                    <tr>
                         <td><label>Vitesse</label></td>
                         <td>
                             <div id="vitesse"></div>

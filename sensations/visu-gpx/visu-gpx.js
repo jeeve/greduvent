@@ -44,7 +44,6 @@ var chartxy = [];
 var markerVitesse;
 var borneA, borneB;
 var lectureTimer = null;
-var lecturei;
 const LARGEUR_LIGNE = 10;
 
 function litGPX(url, ready) {
@@ -160,6 +159,7 @@ function initParametres() {
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.000");
+  $("#temps").val("0");
   $("#vitesse").text("0.00");
   $("#rapidite").val("1");
   $("#fenetre-auto").prop("checked", true);
@@ -404,13 +404,11 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
   if (i != -1) {
-    var x = chartxy[i + 1][0].toFixed(3);
-    $("#position").val(x);
+    var x = chartxy[i + 1][0];
+    $("#position").val(x.toFixed(3));
+    $("#temps").val(t[i]);
     $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
     CreeLignePosition(chart);
-    if (lectureTimer != null) {
-      lecturei = getIndiceDistance(x);
-    }
     UpdatePosition();
     if ($("#fenetre-auto").is(":checked")) {
       calculeBornes();
@@ -466,8 +464,26 @@ $("#curseur").change(function () {
 
 $("#position").change(function () {
   CreeLignePosition(chart);
+  var x = $("#position").val();
+  $("#temps").val(t[getIndiceDistance(x)]);
   $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
   UpdatePosition();
+  if ($("#fenetre-auto").is(":checked")) {
+    calculeBornes();
+  }
+  playerSeek();
+});
+
+$("#temps").change(function () {
+  var i = getIndiceTemps(parseInt($("#temps").val()));
+  var x = chartxy[i+1][0];
+  $("#position").val(x.toFixed(3));
+  CreeLignePosition(chart);
+  $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
+  UpdatePosition();
+  if ($("#fenetre-auto").is(":checked")) {
+    calculeBornes();
+  }
   playerSeek();
 });
 
@@ -513,7 +529,6 @@ function UpdatePosition() {
 
 $("#lecture").click(function () {
   if (lectureTimer == null) {
-    lecturei = getIndiceDistance(parseFloat($("#position").val()));
     lectureTimer = setInterval(avance, 1000);
     playerSeek();
     if (playerReady) {
@@ -543,8 +558,9 @@ $(".label-fenetre-auto").click(function () {
 });
 
 function avance() {
-  if (lecturei < chartxy.length) {
-    lecturei += parseInt($("#rapidite").val());
+  if ($("#temps").val() < t[t.length-1]) {
+    $("#temps").val(parseInt($("#temps").val()) + parseInt($("#rapidite").val()));
+    var lecturei = getIndiceTemps($("#temps").val());
     $("#position").val(chartxy[lecturei][0].toFixed(3));
     CreeLignePosition(chart);
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
@@ -889,7 +905,7 @@ function drawChart() {
 function CreePlageVideo() {
   iVideoStart = 0;
   var t0 = 0;
-  var t1 = 120;
+  var t1 = 126;
   if (getParameterByName("videostart")) {
     t0 =parseInt(getParameterByName("videostart"));
     iVideoStart = getIndiceTemps(t0);
@@ -908,7 +924,7 @@ function CreePlageVideo() {
 }
 
 function getIndiceTemps(temps) {
-  var ecart = 1000000000000000;
+  var ecart = +Infinity;
   var e;
   var indice = 0;
   for (i = 0; i < t.length; i++) {
@@ -1157,6 +1173,7 @@ var registerEvtChart = function () {
           curseurPosition.currentX = e.clientX;
 
           $("#position").val(x.toFixed(3));
+          $("#temps").val(t[getIndiceDistance(x)]);
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }
@@ -1219,10 +1236,8 @@ var registerEvtChart = function () {
         var dx = e.clientX - 13;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
+        $("#temps").val(t[getIndiceDistance(x)]);
         $("#vitesse").text(getVitesse(x).toFixed(2));
-        if (lectureTimer != null) {
-          lecturei = getIndiceDistance(x);
-        }
         UpdatePosition();
         if ($("#fenetre-auto").is(":checked")) {
           calculeBornes();
@@ -1284,6 +1299,7 @@ var registerEvtLignePositionSVG = function () {
           curseurPosition.currentX = e.clientX;
 
           $("#position").val(x.toFixed(3));
+          $("#temps").val(t[getIndiceDistance(x)]);
           $("#vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition();
         }

@@ -125,6 +125,11 @@ td {
   text-align: right;
 }
 
+#temps {
+  width: 60px;
+  text-align: right;
+}
+
 #vitesse {
   width: 60px;
   text-align: right;
