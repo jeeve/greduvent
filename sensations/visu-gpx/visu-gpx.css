@@ -68,16 +68,18 @@ td {
 
 #control {
   top: 8px;
-  z-index: 100000;
+  z-index: 20000;
   background-color: rgba(255, 255, 255, 0.75);
   border: 3px solid rgb(110, 110, 112);
 }
 
 #video {
   position: absolute;
-  bottom: 20px;
-  z-index: 50000;
+  bottom: -3px;
+  z-index: 10000;
   opacity: 1;
+  border: 3px solid white;
+  left: -3px;
 }
 
 #reglages {
@@ -133,6 +135,7 @@ td {
 #vitesse {
   width: 60px;
   text-align: right;
+  font-weight: bold;
 }
 
 #distance-seuil {
@@ -171,7 +174,7 @@ td {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  z-index: 10000;
+  z-index: 100000;
   margin-right: 16px;
   padding-left: 10px;
   padding-right: 10px;

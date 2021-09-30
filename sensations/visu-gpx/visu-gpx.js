@@ -186,8 +186,8 @@ if (getParameterByName("videoid") != "") {
   var player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player("video", {
-      height: "360",
-      width: "640",
+      height: "281",
+      width: "500",
       videoId: getParameterByName("videoid"),
       playerVars: {
         controls: 0,
@@ -209,7 +209,7 @@ function onPlayerReady(event) {
 
 function playerSeek() {
   if (playerReady) {
-    var i = getIndiceDistance(parseFloat($("#position").val()));
+    var i = getIndiceTemps(parseInt($("#temps").val()));
     var t0 = new Date(times[iVideoStart]);
     var t = new Date(times[i]);
     var s = (t.getTime() - t0.getTime()) / 1000;
@@ -901,6 +901,10 @@ function drawChart() {
   calculeBornes();
   if (getParameterByName("videoid")) {
     videoOK().then(CreePlageVideo);
+  }
+  if (getParameterByName("play")) {
+    $("#temps").val(getParameterByName("play"));
+    $("#lecture").click();
   }
 }
 
