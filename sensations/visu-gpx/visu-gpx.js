@@ -563,7 +563,7 @@ function avance() {
       parseInt($("#temps").val()) + parseInt($("#rapidite").val())
     );
     var lecturei = getIndiceTemps($("#temps").val());
-    $("#position").val(chartxy[lecturei][0].toFixed(3));
+    $("#position").val(chartxy[lecturei+1][0].toFixed(3));
     CreeLignePosition(chart);
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
     UpdatePosition();
