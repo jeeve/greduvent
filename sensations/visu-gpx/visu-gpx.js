@@ -448,6 +448,13 @@ $("#map").keypress(function (e) {
   }
 });
 
+$("#rapidite").change(function () {
+  if (lectureTimer != null) {
+  $("#stop").click();
+  $("#lecture").click();
+  }
+});
+
 $("#seuil").change(function () {
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   CreeLigneSeuil(chart, $("#seuil").val());
@@ -529,7 +536,7 @@ function UpdatePosition() {
 
 $("#lecture").click(function () {
   if (lectureTimer == null) {
-    lectureTimer = setInterval(avance, 1000);
+    lectureTimer = setInterval(avance, 1000 / parseInt($("#rapidite").val()));
     playerSeek();
     if (playerReady) {
       player.playVideo();
@@ -559,9 +566,7 @@ $(".label-fenetre-auto").click(function () {
 
 function avance() {
   if ($("#temps").val() < t[t.length - 1]) {
-    $("#temps").val(
-      parseInt($("#temps").val()) + parseInt($("#rapidite").val())
-    );
+    $("#temps").val(parseInt($("#temps").val()) + 1);
     var lecturei = getIndiceTemps($("#temps").val());
     $("#position").val(chartxy[lecturei+1][0].toFixed(3));
     CreeLignePosition(chart);
