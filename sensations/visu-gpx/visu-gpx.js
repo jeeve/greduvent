@@ -92,7 +92,7 @@ function litGPX(url, ready) {
       var distance = 0;
       vmax = 0;
       ivmax = 0;
-      var t0 = (new Date(times[0])).getTime();
+      var t0 = new Date(times[0]).getTime();
       chartxy = [];
       chartxy.push(["Distance", "Vitesse"]);
       for (i = 0; i < times.length; i++) {
@@ -117,8 +117,8 @@ function litGPX(url, ready) {
           v.push(vitesse);
           a.push(angle);
           d.push(dd);
-          var ti = (new Date(times[i])).getTime();
-          t.push((ti - t0)/1000);
+          var ti = new Date(times[i]).getTime();
+          t.push((ti - t0) / 1000);
           chartxy.push([distance, vitesse]);
           distance = distance + dd;
         }
@@ -173,7 +173,7 @@ if (getParameterByName("url") != "") {
 var iVideoStart, iVideoEnd;
 var playerReady = false;
 
-if (getParameterByName("video") != "") {
+if (getParameterByName("videoid") != "") {
   // 2. This code loads the IFrame Player API code asynchronously.
   var tag = document.createElement("script");
 
@@ -188,7 +188,7 @@ if (getParameterByName("video") != "") {
     player = new YT.Player("video", {
       height: "360",
       width: "640",
-      videoId: getParameterByName("video"),
+      videoId: getParameterByName("videoid"),
       playerVars: {
         controls: 0,
         showinfo: 0,
@@ -476,7 +476,7 @@ $("#position").change(function () {
 
 $("#temps").change(function () {
   var i = getIndiceTemps(parseInt($("#temps").val()));
-  var x = chartxy[i+1][0];
+  var x = chartxy[i + 1][0];
   $("#position").val(x.toFixed(3));
   CreeLignePosition(chart);
   $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
@@ -518,7 +518,7 @@ function UpdatePosition() {
   markerVitesse.setRotationAngle(a[i]);
   markerVitesse.setTooltipContent($("#vitesse").text());
   $("#carte #time").text(times[i]);
-  if (getParameterByName("video")) {
+  if (getParameterByName("videoid")) {
     if (i >= iVideoStart && i <= iVideoEnd) {
       $("#video").css("display", "block");
     } else {
@@ -558,8 +558,10 @@ $(".label-fenetre-auto").click(function () {
 });
 
 function avance() {
-  if ($("#temps").val() < t[t.length-1]) {
-    $("#temps").val(parseInt($("#temps").val()) + parseInt($("#rapidite").val()));
+  if ($("#temps").val() < t[t.length - 1]) {
+    $("#temps").val(
+      parseInt($("#temps").val()) + parseInt($("#rapidite").val())
+    );
     var lecturei = getIndiceTemps($("#temps").val());
     $("#position").val(chartxy[lecturei][0].toFixed(3));
     CreeLignePosition(chart);
@@ -897,9 +899,15 @@ function drawChart() {
   UpdatePosition();
   updateBornes();
   calculeBornes();
-  if (getParameterByName("video")) {
-    CreePlageVideo();
+  if (getParameterByName("videoid")) {
+    videoOK().then(CreePlageVideo);
   }
+}
+
+function videoOK() {
+  return new Promise((resolve) => {
+    player.then(resolve("resolved"));
+  });
 }
 
 function CreePlageVideo() {
@@ -907,7 +915,7 @@ function CreePlageVideo() {
   var t0 = 0;
   var t1 = 126;
   if (getParameterByName("videostart")) {
-    t0 =parseInt(getParameterByName("videostart"));
+    t0 = parseInt(getParameterByName("videostart"));
     iVideoStart = getIndiceTemps(t0);
   }
   if (getParameterByName("videoduration")) {
@@ -916,8 +924,8 @@ function CreePlageVideo() {
   iVideoEnd = getIndiceTemps(t0 + t1);
   createIndicateurPlage(
     chart,
-    chartxy[iVideoStart+1][0],
-    chartxy[iVideoEnd+1][0],
+    chartxy[iVideoStart + 1][0],
+    chartxy[iVideoEnd + 1][0],
     "indicateur",
     "blue"
   );
