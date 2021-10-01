@@ -29,7 +29,7 @@
             <div class="seuil">
                 <table>
                     <tr>
-                        <td><label>Seuil</label></td>
+                        <td><label>Seuil ></label></td>
                         <td><input type="text" id="seuil"></input></td>
                         <td>kts</td>
                     </tr>
@@ -45,7 +45,7 @@
                         <td><input type="text" id="position"></input></td>
                         <td>km</td>
                     </tr>
-                    <tr>
+                    <tr id="ligne-temps" style="display: none;">
                         <td><label>Temps</label></td>
                         <td><input type="text" id="temps"></input></td>
                         <td>s</td>

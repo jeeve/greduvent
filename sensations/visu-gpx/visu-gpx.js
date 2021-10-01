@@ -162,6 +162,7 @@ function initParametres() {
   $("#temps").val("0");
   $("#vitesse").text("0.00");
   if (getParameterByName("videoid")) {
+    $("#ligne-temps").css("display", "table-row");
     $("#rapidite").val("1");
   } else {
     $("#rapidite").val("10");    
@@ -967,7 +968,6 @@ function CreePlageVideo() {
 function closestSortedValueIndex(array, value) {
   var result = 0;
   var lastDelta = +Infinity;
-
   array.some(function (item, index) {
       var delta = Math.abs(value - item);
       if (delta >= lastDelta) {
