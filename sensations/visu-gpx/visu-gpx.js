@@ -976,7 +976,7 @@ function closestValueIndex(array, value) {
       result = index;
       lastDelta = delta;
   });
-  return index;
+  return result;
 }
 
 function getIndiceTemps(temps) {
