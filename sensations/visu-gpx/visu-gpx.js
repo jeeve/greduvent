@@ -161,7 +161,11 @@ function initParametres() {
   $("#position").val("0.000");
   $("#temps").val("0");
   $("#vitesse").text("0.00");
-  $("#rapidite").val("1");
+  if (getParameterByName("videoid")) {
+    $("#rapidite").val("1");
+  } else {
+    $("#rapidite").val("10");    
+  }
   $("#fenetre-auto").prop("checked", true);
   $("#fenetre-largeur").val("2.000");
 }
@@ -960,7 +964,24 @@ function CreePlageVideo() {
   );
 }
 
+function closestValueIndex(array, value) {
+  var result = 0;
+  var lastDelta;
+
+  array.some(function (item, index) {
+      var delta = Math.abs(value - item);
+      if (delta >= lastDelta) {
+          return true;
+      }
+      result = index;
+      lastDelta = delta;
+  });
+  return index;
+}
+
 function getIndiceTemps(temps) {
+  result = closestValueIndex(t, temps);
+  /*
   var ecart = +Infinity;
   var e;
   var indice = 0;
@@ -972,6 +993,7 @@ function getIndiceTemps(temps) {
     }
   }
   return indice;
+  */
 }
 
 $(window).resize(function () {
