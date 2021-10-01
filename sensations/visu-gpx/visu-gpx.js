@@ -964,14 +964,14 @@ function CreePlageVideo() {
   );
 }
 
-function closestValueIndex(array, value) {
+function closestValueIndex(array, value) { // ne fonctionne pas
   var result = 0;
   var lastDelta;
 
   array.some(function (item, index) {
       var delta = Math.abs(value - item);
       if (delta >= lastDelta) {
-          return true;
+          return 0;
       }
       result = index;
       lastDelta = delta;
@@ -980,8 +980,7 @@ function closestValueIndex(array, value) {
 }
 
 function getIndiceTemps(temps) {
-  result = closestValueIndex(t, temps);
-  /*
+  //result = closestValueIndex(t, temps);
   var ecart = +Infinity;
   var e;
   var indice = 0;
@@ -993,7 +992,6 @@ function getIndiceTemps(temps) {
     }
   }
   return indice;
-  */
 }
 
 $(window).resize(function () {
