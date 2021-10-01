@@ -199,7 +199,7 @@ if (getParameterByName("videoid") != "") {
       };
     } else {
       playerV = {
-        //controls: 0,
+        controls: 0,
         showinfo: 0,
         modestbranding: 1,
       };
@@ -326,7 +326,7 @@ function dessineTrace() {
     .addTo(map);
   markerVitesse.openTooltip();
 
-  UpdatePosition();
+  UpdatePosition(-1);
 
   dessineStats();
 }
@@ -425,7 +425,7 @@ map.on("click", function (e) {
     $("#temps").val(t[i]);
     $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
     CreeLignePosition(chart);
-    UpdatePosition();
+    UpdatePosition(i);
     if ($("#fenetre-auto").is(":checked")) {
       calculeBornes();
     }
@@ -488,9 +488,10 @@ $("#curseur").change(function () {
 $("#position").change(function () {
   CreeLignePosition(chart);
   var x = $("#position").val();
-  $("#temps").val(t[getIndiceDistance(x)]);
-  $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
-  UpdatePosition();
+  var i = getIndiceDistance(x);
+  $("#temps").val(t[i]);
+  $("#vitesse").text(getVitesse(x).toFixed(2));
+  UpdatePosition(i);
   if ($("#fenetre-auto").is(":checked")) {
     calculeBornes();
   }
@@ -503,7 +504,7 @@ $("#temps").change(function () {
   $("#position").val(x.toFixed(3));
   CreeLignePosition(chart);
   $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
-  UpdatePosition();
+  UpdatePosition(i);
   if ($("#fenetre-auto").is(":checked")) {
     calculeBornes();
   }
@@ -537,8 +538,11 @@ function getIndiceDistance(x) {
   return j;
 }
 
-function UpdatePosition() {
-  var i = getIndiceDistance($("#position").val());
+function UpdatePosition(n) {
+  var i = n;
+  if (n == -1) {
+    i = getIndiceDistance($("#position").val());
+  }
   markerVitesse.setLatLng(xy[i]);
   markerVitesse.setRotationAngle(a[i]);
   markerVitesse.setTooltipContent($("#vitesse").text());
@@ -593,7 +597,7 @@ function avance() {
     $("#position").val(chartxy[lecturei + 1][0].toFixed(3));
     CreeLignePosition(chart);
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
-    UpdatePosition();
+    UpdatePosition(lecturei);
     if ($("#fenetre-auto").is(":checked")) {
       calculeBornes();
     }
@@ -923,7 +927,7 @@ function drawChart() {
   CreeLignePosition(chart);
   CreeLigneGauche(chart, dmax * 0.1);
   CreeLigneDroite(chart, dmax - dmax * 0.1);
-  UpdatePosition();
+  UpdatePosition(-1);
   updateBornes();
   calculeBornes();
   if (getParameterByName("videoid")) {
@@ -1230,11 +1234,11 @@ var registerEvtChart = function () {
             curseurPosition.currentX;
           curseurPosition.selectedElement.setAttribute("x", dx);
           curseurPosition.currentX = e.clientX;
-
+          var i = getIndiceDistance(x);
           $("#position").val(x.toFixed(3));
-          $("#temps").val(t[getIndiceDistance(x)]);
+          $("#temps").val(t[i]);
           $("#vitesse").text(getVitesse(x).toFixed(2));
-          UpdatePosition();
+          UpdatePosition(i);
         }
       } else {
         if (elementEstClasse(curseurSeuil.selectedElement, "ligne-seuil")) {
@@ -1295,9 +1299,10 @@ var registerEvtChart = function () {
         var dx = e.clientX - 13;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
-        $("#temps").val(t[getIndiceDistance(x)]);
+        var i = getIndiceDistance(x);
+        $("#temps").val(t[i]);
         $("#vitesse").text(getVitesse(x).toFixed(2));
-        UpdatePosition();
+        UpdatePosition(i);
         if ($("#fenetre-auto").is(":checked")) {
           calculeBornes();
         }
@@ -1358,9 +1363,10 @@ var registerEvtLignePositionSVG = function () {
           curseurPosition.currentX = e.clientX;
 
           $("#position").val(x.toFixed(3));
-          $("#temps").val(t[getIndiceDistance(x)]);
+          var i = getIndiceDistance(x);
+          $("#temps").val(t[i]);
           $("#vitesse").text(getVitesse(x).toFixed(2));
-          UpdatePosition();
+          UpdatePosition(i);
         }
       }
     })
