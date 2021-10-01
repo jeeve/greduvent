@@ -34,14 +34,14 @@
                         <td>kts</td>
                     </tr>
                     <tr>
-                        <td><label>Distance</label></td>
+                        <td></td>
                         <td>
                             <div id="distance-seuil"></div>
                         </td>
                         <td>km</td>
                     </tr>
                     <tr>
-                        <td><label>Position</label></td>
+                        <td><label>Distance</label></td>
                         <td><input type="text" id="position"></input></td>
                         <td>km</td>
                     </tr>
