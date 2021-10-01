@@ -185,15 +185,26 @@ if (getParameterByName("videoid") != "") {
   //    after the API code downloads.
   var player;
   function onYouTubeIframeAPIReady() {
+    var playerV;
+    if (getParameterByName("play")) {
+      playerV = {
+        showinfo: 0,
+        modestbranding: 1,
+        mute: 1,
+      };
+    } else {
+      playerV = {
+        //controls: 0,
+        showinfo: 0,
+        modestbranding: 1,
+      };
+    }
+
     player = new YT.Player("video", {
       height: "281",
       width: "500",
       videoId: getParameterByName("videoid"),
-      playerVars: {
-        controls: 0,
-        showinfo: 0,
-        modestbranding: 1,
-      },
+      playerVars: playerV,
       events: {
         onReady: onPlayerReady,
       },
@@ -450,8 +461,8 @@ $("#map").keypress(function (e) {
 
 $("#rapidite").change(function () {
   if (lectureTimer != null) {
-  $("#stop").click();
-  $("#lecture").click();
+    $("#stop").click();
+    $("#lecture").click();
   }
 });
 
@@ -520,13 +531,17 @@ function getIndiceDistance(x) {
 }
 
 function UpdatePosition() {
-  var i = getIndiceDistance($("#position").val());
+  var i = getIndiceTemps($("#temps").val());
   markerVitesse.setLatLng(xy[i]);
   markerVitesse.setRotationAngle(a[i]);
   markerVitesse.setTooltipContent($("#vitesse").text());
   $("#carte #time").text(times[i]);
   if (getParameterByName("videoid")) {
+    passageStart = false;
     if (i >= iVideoStart && i <= iVideoEnd) {
+      if (i == iVideoStart) {
+        playerSeek();
+      }
       $("#video").css("display", "block");
     } else {
       $("#video").css("display", "none");
@@ -568,7 +583,7 @@ function avance() {
   if ($("#temps").val() < t[t.length - 1]) {
     $("#temps").val(parseInt($("#temps").val()) + 1);
     var lecturei = getIndiceTemps($("#temps").val());
-    $("#position").val(chartxy[lecturei+1][0].toFixed(3));
+    $("#position").val(chartxy[lecturei + 1][0].toFixed(3));
     CreeLignePosition(chart);
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
     UpdatePosition();
@@ -908,9 +923,14 @@ function drawChart() {
     videoOK().then(CreePlageVideo);
   }
   if (getParameterByName("play")) {
-    $("#temps").val(getParameterByName("play"));
-    $("#lecture").click();
+    videoOK().then(play);
   }
+}
+
+function play() {
+  $("#temps").val(getParameterByName("play"));
+  $("#lecture").click();
+  playerSeek();
 }
 
 function videoOK() {
@@ -922,7 +942,7 @@ function videoOK() {
 function CreePlageVideo() {
   iVideoStart = 0;
   var t0 = 0;
-  var t1 = 126;
+  var t1 = player.getDuration();
   if (getParameterByName("videostart")) {
     t0 = parseInt(getParameterByName("videostart"));
     iVideoStart = getIndiceTemps(t0);
