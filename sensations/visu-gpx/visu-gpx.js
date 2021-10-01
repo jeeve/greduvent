@@ -507,7 +507,9 @@ $("#temps").change(function () {
   if ($("#fenetre-auto").is(":checked")) {
     calculeBornes();
   }
-  playerSeek();
+  if (getParameterByName("videoid")) {
+    playerSeek();
+  }
 });
 
 $("#fenetre-largeur").change(function () {
@@ -536,7 +538,7 @@ function getIndiceDistance(x) {
 }
 
 function UpdatePosition() {
-  var i = getIndiceTemps($("#temps").val());
+  var i = getIndiceDistance($("#position").val());
   markerVitesse.setLatLng(xy[i]);
   markerVitesse.setRotationAngle(a[i]);
   markerVitesse.setTooltipContent($("#vitesse").text());
@@ -585,7 +587,7 @@ $(".label-fenetre-auto").click(function () {
 });
 
 function avance() {
-  if ($("#temps").val() < t[t.length - 1]) {
+  if (parseInt($("#temps").val()) < t[t.length - 1]) {
     $("#temps").val(parseInt($("#temps").val()) + 1);
     var lecturei = getIndiceTemps($("#temps").val());
     $("#position").val(chartxy[lecturei + 1][0].toFixed(3));
