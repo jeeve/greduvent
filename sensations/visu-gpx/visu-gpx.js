@@ -39,7 +39,7 @@ var v = [];
 var a = [];
 var polylignes = [];
 var trace;
-var vmax, ivamx, dmax;
+var vmax, dmax;
 var chartxy = [];
 var markerVitesse;
 var borneA, borneB;
@@ -529,10 +529,12 @@ function getVitesse(x) {
 function getIndiceDistance(x) {
   var j = 1;
   var delta = 10000000.0;
+  var dt;
   for (i = 1; i < chartxy.length; i++) {
-    if (Math.abs(chartxy[i][0] - x) < delta) {
+    dt = Math.abs(chartxy[i][0] - x);
+    if (dt < delta) {
       j = i;
-      delta = Math.abs(chartxy[i][0] - x);
+      delta = dt;
     }
   }
   return j;
