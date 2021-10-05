@@ -1,3 +1,86 @@
+const SEUIL_ACCELERATION = 0.8;
+var times = [];
+var xy = [];
+var d = [];
+var t = [];
+var v = [];
+var a = [];
+var polylignes = [];
+var trace;
+var vmax, dmax;
+var chartxy = [];
+var markerVitesse;
+var borneA, borneB;
+var lectureTimer = null;
+const LARGEUR_LIGNE = 10;
+var iVideoStart, iVideoEnd;
+var playerReady = false;
+
+var map = L.map("map", { zoomControl: false });
+L.control
+  .zoom({
+    position: "topright",
+  })
+  .addTo(map);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  layers: [trace],
+}).addTo(map);
+
+reportWindowSize();
+
+if (getParameterByName("url") != "") {
+  litGPX(getParameterByName("url"), dessineTrace);
+}
+
+if (getParameterByName("videoid") != "") {
+  var tag = document.createElement("script");
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    var playerV;
+    if (getParameterByName("play")) {
+      playerV = {
+        showinfo: 0,
+        modestbranding: 1,
+        mute: 1,
+      };
+    } else {
+      playerV = {
+        controls: 0,
+        showinfo: 0,
+        modestbranding: 1,
+      };
+    }
+
+    player = new YT.Player("video", {
+      height: "281",
+      width: "500",
+      videoId: getParameterByName("videoid"),
+      playerVars: playerV,
+      events: {
+        onReady: onPlayerReady,
+      },
+    });
+  }
+}
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 function calculeDistance(lat1, lon1, lat2, lon2) {
   var R = 6371; // km
   var dLat = toRad(lat2 - lat1);
@@ -29,22 +112,6 @@ function angleFromCoordinate(lat1, lon1, lat2, lon2) {
   brng = 360 - brng;
   return brng;
 }
-
-const SEUIL_ACCELERATION = 0.8;
-var times = [];
-var xy = [];
-var d = [];
-var t = [];
-var v = [];
-var a = [];
-var polylignes = [];
-var trace;
-var vmax, dmax;
-var chartxy = [];
-var markerVitesse;
-var borneA, borneB;
-var lectureTimer = null;
-const LARGEUR_LIGNE = 10;
 
 function litGPX(url, ready) {
   borneA = 0;
@@ -171,53 +238,6 @@ function initParametres() {
   $("#fenetre-largeur").val("2.000");
 }
 
-if (getParameterByName("url") != "") {
-  litGPX(getParameterByName("url"), dessineTrace);
-}
-
-var iVideoStart, iVideoEnd;
-var playerReady = false;
-
-if (getParameterByName("videoid") != "") {
-  // 2. This code loads the IFrame Player API code asynchronously.
-  var tag = document.createElement("script");
-
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName("script")[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // 3. This function creates an <iframe> (and YouTube player)
-  //    after the API code downloads.
-  var player;
-  function onYouTubeIframeAPIReady() {
-    var playerV;
-    if (getParameterByName("play")) {
-      playerV = {
-        showinfo: 0,
-        modestbranding: 1,
-        mute: 1,
-      };
-    } else {
-      playerV = {
-        controls: 0,
-        showinfo: 0,
-        modestbranding: 1,
-      };
-    }
-
-    player = new YT.Player("video", {
-      height: "281",
-      width: "500",
-      videoId: getParameterByName("videoid"),
-      playerVars: playerV,
-      events: {
-        onReady: onPlayerReady,
-      },
-    });
-  }
-}
-
-// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   playerReady = true;
   player.pauseVideo();
@@ -233,6 +253,40 @@ function playerSeek() {
     if (lectureTimer == null) {
       player.pauseVideo();
     }
+  }
+}
+map.on("click", function (e) {
+  var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
+  if (i != -1) {
+    var x = chartxy[i + 1][0];
+    $("#position").val(x.toFixed(3));
+    $("#temps").val(t[i]);
+    $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
+    CreeLignePosition(chart);
+    UpdatePosition(i);
+    if ($("#fenetre-auto").is(":checked")) {
+      calculeBornes();
+    }
+    playerSeek();
+  }
+});
+
+function calculeIndiceLePlusPresDe(lat, lng) {
+  var dmin = 1000000.0;
+  var d;
+  var j = 0;
+  for (i = 0; i < xy.length; i++) {
+    d = calculeDistance(lat, lng, xy[i][0], xy[i][1]);
+    if (d < dmin) {
+      j = i;
+      dmin = d;
+    }
+  }
+  if (dmin < 0.1) {
+    // ne prend que si moins de 100m
+    return j;
+  } else {
+    return -1;
   }
 }
 
@@ -403,56 +457,6 @@ function updateBornes() {
   }
   dessineTrace();
 }
-
-var map = L.map("map", { zoomControl: false });
-L.control
-  .zoom({
-    position: "topright",
-  })
-  .addTo(map);
-
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  layers: [trace],
-}).addTo(map);
-
-map.on("click", function (e) {
-  var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
-  if (i != -1) {
-    var x = chartxy[i + 1][0];
-    $("#position").val(x.toFixed(3));
-    $("#temps").val(t[i]);
-    $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
-    CreeLignePosition(chart);
-    UpdatePosition(i);
-    if ($("#fenetre-auto").is(":checked")) {
-      calculeBornes();
-    }
-    playerSeek();
-  }
-});
-
-function calculeIndiceLePlusPresDe(lat, lng) {
-  var dmin = 1000000.0;
-  var d;
-  var j = 0;
-  for (i = 0; i < xy.length; i++) {
-    d = calculeDistance(lat, lng, xy[i][0], xy[i][1]);
-    if (d < dmin) {
-      j = i;
-      dmin = d;
-    }
-  }
-  if (dmin < 0.1) {
-    // ne prend que si moins de 100m
-    return j;
-  } else {
-    return -1;
-  }
-}
-
-reportWindowSize();
 
 $("#map").keypress(function (e) {
   if (e.which == 32) {
@@ -1451,15 +1455,4 @@ function calculeBornes() {
   $(".ligne-gauche").attr("x", 30 + (L * a) / dmax - LARGEUR_LIGNE / 2);
   $(".ligne-droite").attr("x", 30 + (L * b) / dmax - LARGEUR_LIGNE / 2);
   updateBornes();
-}
-// ----------------------------------------
-
-function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return "";
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
