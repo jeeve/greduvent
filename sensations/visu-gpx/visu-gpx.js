@@ -232,7 +232,7 @@ function initParametres() {
     $("#ligne-temps").css("display", "table-row");
     $("#rapidite").val("1");
   } else {
-    $("#rapidite").val("10");    
+    $("#rapidite").val("10");
   }
   $("#fenetre-auto").prop("checked", true);
   $("#fenetre-largeur").val("2.000");
@@ -258,10 +258,10 @@ function playerSeek() {
 map.on("click", function (e) {
   var i = calculeIndiceLePlusPresDe(e.latlng.lat, e.latlng.lng);
   if (i != -1) {
-    var x = chartxy[i+1][0];
+    var x = chartxy[i + 1][0];
     $("#position").val(x.toFixed(3));
     $("#temps").val(t[i]);
-    $("#vitesse").text(chartxy[i+1][1].toFixed(2));
+    $("#vitesse").text(chartxy[i + 1][1].toFixed(2));
     CreeLignePosition(chart);
     UpdatePosition(i);
     if ($("#fenetre-auto").is(":checked")) {
@@ -297,7 +297,7 @@ function calculeDistanceSeuil(seuil) {
     // attention indice 0 est entete
     if (i > 1) {
       if (chartxy[i][1] >= seuil) {
-        delta = chartxy[i][0] - chartxy[i-1][0];
+        delta = chartxy[i][0] - chartxy[i - 1][0];
         distance += delta;
       }
     }
@@ -504,7 +504,7 @@ $("#position").change(function () {
 
 $("#temps").change(function () {
   var i = getIndiceTemps(parseInt($("#temps").val()));
-  var x = chartxy[i+1][0];
+  var x = chartxy[i + 1][0];
   $("#position").val(x.toFixed(3));
   CreeLignePosition(chart);
   $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
@@ -527,7 +527,7 @@ function reportWindowSize() {
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
 function getVitesse(x) {
-  return chartxy[getIndiceDistance(x)+1][1];
+  return chartxy[getIndiceDistance(x) + 1][1];
 }
 
 function getIndiceDistance(x) {
@@ -541,7 +541,7 @@ function getIndiceDistance(x) {
       delta = dt;
     }
   }
-  return j-1;
+  return j - 1;
 }
 
 function UpdatePosition(n) {
@@ -597,9 +597,11 @@ $(".label-fenetre-auto").click(function () {
 });
 
 function avance() {
-  if (parseInt($("#temps").val()) < t[t.length - 1]) {
-    $("#temps").val(parseInt($("#temps").val()) + 1);
-    var lecturei = getIndiceTemps($("#temps").val());
+  var t0 = parseInt($("#temps").val());
+  if (t0 < t[t.length - 1]) {
+    t0 = t0 + 1;
+    $("#temps").val(t0);
+    var lecturei = getIndiceTemps(t0);
     $("#position").val(chartxy[lecturei+1][0].toFixed(3));
     CreeLignePosition(chart);
     $("#vitesse").text(getVitesse($("#position").val()).toFixed(2));
@@ -740,7 +742,7 @@ function calculeVIndicePendant(n, dureeReference) {
       return { v: vitesse, a: n, b: i };
     }
     if (i + 1 < v.length) {
-      distance = distance + d[i+1];
+      distance = distance + d[i + 1];
     }
   }
   return { v: 0, a: -1, b: -1 };
@@ -803,7 +805,7 @@ function dessineStats() {
   $("#chart .vmax").remove();
   if ($("#affiche-vmax").prop("checked")) {
     if (chart != null) {
-      createIndicateurPosition(chart, chartxy[ivmax+1][0], "vmax");
+      createIndicateurPosition(chart, chartxy[ivmax + 1][0], "vmax");
     }
   }
 
@@ -812,8 +814,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v100m").attr("data-a"))+1][0],
-        chartxy[parseInt($("#v100m").attr("data-b"))+1][0],
+        chartxy[parseInt($("#v100m").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v100m").attr("data-b")) + 1][0],
         "v100m",
         "green"
       );
@@ -825,8 +827,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v500m").attr("data-a"))+1][0],
-        chartxy[parseInt($("#v500m").attr("data-b"))+1][0],
+        chartxy[parseInt($("#v500m").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v500m").attr("data-b")) + 1][0],
         "v500m",
         "green"
       );
@@ -838,8 +840,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v2s").attr("data-a"))+1][0],
-        chartxy[parseInt($("#v2s").attr("data-b"))+1][0],
+        chartxy[parseInt($("#v2s").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v2s").attr("data-b")) + 1][0],
         "v2s",
         "green"
       );
@@ -851,8 +853,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v5s").attr("data-a"))+1][0],
-        chartxy[parseInt($("#v5s").attr("data-b"))+1][0],
+        chartxy[parseInt($("#v5s").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v5s").attr("data-b")) + 1][0],
         "v5s",
         "green"
       );
@@ -864,8 +866,8 @@ function dessineStats() {
     if (chart != null) {
       createIndicateurPlage(
         chart,
-        chartxy[parseInt($("#v10s").attr("data-a"))+1][0],
-        chartxy[parseInt($("#v10s").attr("data-b"))+1][0],
+        chartxy[parseInt($("#v10s").attr("data-a")) + 1][0],
+        chartxy[parseInt($("#v10s").attr("data-b")) + 1][0],
         "v10s",
         "green"
       );
@@ -970,8 +972,8 @@ function CreePlageVideo() {
   iVideoEnd = getIndiceTemps(t0 + t1);
   createIndicateurPlage(
     chart,
-    chartxy[iVideoStart+1][0],
-    chartxy[iVideoEnd+1][0],
+    chartxy[iVideoStart + 1][0],
+    chartxy[iVideoEnd + 1][0],
     "indicateur",
     "blue"
   );
@@ -981,18 +983,18 @@ function closestSortedValueIndex(array, value) {
   var result = 0;
   var lastDelta = +Infinity;
   array.some(function (item, index) {
-      var delta = Math.abs(value - item);
-      if (delta >= lastDelta) {
-          return true;
-      }
-      result = index;
-      lastDelta = delta;
+    var delta = Math.abs(value - item);
+    if (delta >= lastDelta) {
+      return true;
+    }
+    result = index;
+    lastDelta = delta;
   });
   return result;
 }
 
 function getIndiceTemps(temps) {
-  return closestSortedValueIndex(t, temps);/*
+  return closestSortedValueIndex(t, temps); /*
   var ecart = +Infinity;
   var e;
   var indice = 0;
