@@ -532,7 +532,7 @@ function getVitesse(x) {
 
 function getIndiceDistance(x) {
   var j = 1;
-  var delta = 10000000.0;
+  var delta = +Infinity;
   var dt;
   for (i = 1; i < chartxy.length; i++) {
     dt = Math.abs(chartxy[i][0] - x);
@@ -740,7 +740,7 @@ function calculeVIndicePendant(n, dureeReference) {
       return { v: vitesse, a: n, b: i };
     }
     if (i + 1 < v.length) {
-      distance = distance + d[i + 1];
+      distance = distance + d[i+1];
     }
   }
   return { v: 0, a: -1, b: -1 };
