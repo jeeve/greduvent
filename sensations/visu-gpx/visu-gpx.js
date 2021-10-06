@@ -619,7 +619,6 @@ function avance() {
 // ------------------------------------------------------------------------ stats
 // ------------------------------------------------------------------------
 
-const NB_MINI_MESURES = 3;
 var markerVmax, tracev100m, tracev500m, tracev2s, tracev5s, tracev10s;
 
 $("#stats label").click(function () {
