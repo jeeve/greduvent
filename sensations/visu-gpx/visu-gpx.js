@@ -1,4 +1,5 @@
 const SEUIL_ACCELERATION = 1.0;
+const SEUIL_DECELERATION = -1.5;
 var txy = [];
 var d = [];
 var t = [];
@@ -220,7 +221,7 @@ function filtre() {
     t1 = new Date(txy[k][0]);
     dt = (t1.getTime() - t0.getTime()) / 1000;
     var acceleration = (v1 - v0) / dt;
-    if (acceleration > SEUIL_ACCELERATION) {
+    if (acceleration > SEUIL_ACCELERATION || acceleration < SEUIL_DECELERATION) {
       txy.splice(k, 1);
       erreur = true;
     }
