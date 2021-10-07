@@ -146,20 +146,10 @@ function litGPX(url, ready) {
       });
 
       // filtre valeurs aberrante selon acceleration
-      var k = 1;
-      while (k < txy.length) {
-        v0 = calculeVitesse(k - 1, txy);
-        v1 = calculeVitesse(k, txy);
-        t0 = new Date(txy[k-1][0]);
-        t1 = new Date(txy[k][0]);
-        dt = (t1.getTime() - t0.getTime()) / 1000;
-        var acceleration = Math.abs((v1 - v0) / dt);
-        if (acceleration > SEUIL_ACCELERATION) {
-          txy.splice(k, 1);
-         // k = k - 1;
-        }
+      var k = 0;
+      while (filtre() && k < 100) {
         k = k + 1;
-      }
+      };
 
       var distance = 0;
       vmax = 0;
@@ -177,12 +167,12 @@ function litGPX(url, ready) {
           dd = calculeDistance(
             txy[i][1],
             txy[i][2],
-            txy[i-1][1],
-            txy[i-1][2]
+            txy[i - 1][1],
+            txy[i - 1][2]
           );
           angle = angleFromCoordinate(
-            txy[i-1][1],
-            txy[i-1][2],
+            txy[i - 1][1],
+            txy[i - 1][2],
             txy[i][1],
             txy[i][2]
           );
@@ -220,12 +210,31 @@ function litGPX(url, ready) {
   });
 }
 
+function filtre() {
+  var k = 1;
+  var erreur = false;
+  while (k < txy.length) {
+    v0 = calculeVitesse(k - 1, txy);
+    v1 = calculeVitesse(k, txy);
+    t0 = new Date(txy[k - 1][0]);
+    t1 = new Date(txy[k][0]);
+    dt = (t1.getTime() - t0.getTime()) / 1000;
+    var acceleration = Math.abs((v1 - v0) / dt);
+    if (acceleration > SEUIL_ACCELERATION) {
+      txy.splice(k, 1);
+      erreur = true;
+    }
+    k = k + 1;
+  }
+  return erreur;
+}
+
 function calculeVitesse(i, txy) {
   if (i == 0) {
     return 0;
   }
-  var dd = calculeDistance(txy[i][1], txy[i][2], txy[i-1][1], txy[i-1][2]);
-  var t1 = new Date(txy[i-1][0]);
+  var dd = calculeDistance(txy[i][1], txy[i][2], txy[i - 1][1], txy[i - 1][2]);
+  var t1 = new Date(txy[i - 1][0]);
   var t2 = new Date(txy[i][0]);
   var dt = (t2.getTime() - t1.getTime()) / 1000;
   var vitesse;
@@ -341,7 +350,7 @@ function dessineTrace() {
   cat0 = 0;
   for (i = 0; i < txy.length; i++) {
     var coord = [];
-    coord.push(txy[i][1], txy[i][2])
+    coord.push(txy[i][1], txy[i][2]);
     xy2.push(coord);
     if (v[i] > seuil) {
       cat = 1;
@@ -359,7 +368,7 @@ function dessineTrace() {
       );
       xy2 = [];
       var coord = [];
-      coord.push(txy[i][1], txy[i][2])
+      coord.push(txy[i][1], txy[i][2]);
       xy2.push(coord);
       opacite0 = opacite;
     } else {
@@ -369,7 +378,7 @@ function dessineTrace() {
         );
         xy2 = [];
         var coord = [];
-        coord.push(txy[i][1], txy[i][2])
+        coord.push(txy[i][1], txy[i][2]);
         xy2.push(coord);
         cat0 = cat;
       }
@@ -908,7 +917,7 @@ function afficheTraceVitesse(id, texte) {
   var b = parseInt($("#" + id).attr("data-b"));
   for (i = a; i <= b; i++) {
     var coord = [];
-    coord.push(txy[i][1], txy[i][2])
+    coord.push(txy[i][1], txy[i][2]);
     xy2.push(coord);
   }
   return L.polyline(xy2, {
@@ -968,7 +977,7 @@ function drawChart() {
   updateBornes();
   calculeBornes();
   if (getParameterByName("stats") == "1") {
-    $("#calcule").click();  
+    $("#calcule").click();
   }
   if (getParameterByName("videoid")) {
     videoOK().then(CreePlageVideo);
