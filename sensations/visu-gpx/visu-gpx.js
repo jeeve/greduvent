@@ -967,6 +967,9 @@ function drawChart() {
   UpdatePosition(-1);
   updateBornes();
   calculeBornes();
+  if (getParameterByName("stats") == "1") {
+    $("#calcule").click();  
+  }
   if (getParameterByName("videoid")) {
     videoOK().then(CreePlageVideo);
   }
