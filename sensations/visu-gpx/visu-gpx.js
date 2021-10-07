@@ -219,7 +219,7 @@ function filtre() {
     t0 = new Date(txy[k - 1][0]);
     t1 = new Date(txy[k][0]);
     dt = (t1.getTime() - t0.getTime()) / 1000;
-    var acceleration = Math.abs((v1 - v0) / dt);
+    var acceleration = (v1 - v0) / dt;
     if (acceleration > SEUIL_ACCELERATION) {
       txy.splice(k, 1);
       erreur = true;
