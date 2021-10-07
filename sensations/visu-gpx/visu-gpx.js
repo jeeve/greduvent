@@ -1,4 +1,4 @@
-const SEUIL_ACCELERATION = 0.8;
+const SEUIL_ACCELERATION = 1.0;
 var txy = [];
 var d = [];
 var t = [];
