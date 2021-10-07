@@ -156,7 +156,7 @@ function litGPX(url, ready) {
         var acceleration = Math.abs((v1 - v0) / dt);
         if (acceleration > SEUIL_ACCELERATION) {
           txy.splice(k, 1);
-          k = k - 1;
+         // k = k - 1;
         }
         k = k + 1;
       }
