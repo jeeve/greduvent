@@ -150,7 +150,7 @@ function litGPX(url, ready) {
       var k = 0;
       while (filtre() && k < 100) {
         k = k + 1;
-      };
+      }
 
       var distance = 0;
       vmax = 0;
@@ -221,7 +221,10 @@ function filtre() {
     t1 = new Date(txy[k][0]);
     dt = (t1.getTime() - t0.getTime()) / 1000;
     var acceleration = (v1 - v0) / dt;
-    if (acceleration > SEUIL_ACCELERATION || acceleration < SEUIL_DECELERATION) {
+    if (
+      acceleration > SEUIL_ACCELERATION ||
+      acceleration < SEUIL_DECELERATION
+    ) {
       txy.splice(k, 1);
       erreur = true;
     }
@@ -229,6 +232,103 @@ function filtre() {
   }
   return erreur;
 }
+
+// const median = (arr) => {
+//   const mid = Math.floor(arr.length / 2),
+//     nums = [...arr].sort((a, b) => a - b);
+//   return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+// };
+
+// /*
+//   Hampel Filter implemented in JavaScript by Adam O'Grady
+//   AN: Very basic (ie: improve before using in production) function I needed for some work stuff, used for detecting and removing outliers in a moving window via Median Absolute Deviation (MAD)
+//   PARAMS:
+//     data - Array of numbers to be examined
+//     half_window: Integer representing half the moving window size to use
+//     threshold: Integer for the maximum multiple of the Median Absolute Deviation before it's considered an outlier and replaced with the median
+//   RETURNS:
+//     object:
+//       data: updated, smoothed array
+//       ind: original indicies of removed outliers
+// */
+// function hampelFilter(data, half_window, threshold) {
+//   if (typeof threshold === "undefined") {
+//     threshold = 3;
+//   }
+//   var n = data.length;
+//   var data_copy = data;
+//   var ind = [];
+//   var L = 1.4826;
+//   for (var i = half_window + 1; i < n - half_window; i++) {
+//     var med = median(data.slice(i - half_window, i + half_window));
+//     var MAD =
+//       L *
+//       median(
+//         data.slice(i - half_window, i + half_window).map(function (e) {
+//           return Math.abs(e - med);
+//         })
+//       );
+//     if (Math.abs(data[i] - med) / MAD > threshold) {
+//       data_copy[i] = med;
+//       ind = ind.concat(i);
+//     }
+//   }
+//   return {
+//     data: data_copy,
+//     outliers: ind,
+//   };
+// }
+
+// function filterOutliers(someArray) {
+//   if (someArray.length < 4) return someArray;
+
+//   let values, q1, q3, iqr, maxValue, minValue;
+
+//   values = someArray.slice().sort((a, b) => a - b); //copy array fast and sort
+
+//   if ((values.length / 4) % 1 === 0) {
+//     //find quartiles
+//     q1 = (1 / 2) * (values[values.length / 4] + values[values.length / 4 + 1]);
+//     q3 =
+//       (1 / 2) *
+//       (values[values.length * (3 / 4)] + values[values.length * (3 / 4) + 1]);
+//   } else {
+//     q1 = values[Math.floor(values.length / 4 + 1)];
+//     q3 = values[Math.ceil(values.length * (3 / 4) + 1)];
+//   }
+
+//   iqr = q3 - q1;
+//   maxValue = q3 + iqr * 1.5;
+//   minValue = q1 - iqr * 1.5;
+
+//   var indices = [];
+//   for (i = 0; i < values.length; i++) {
+//     if (values[i] < minValue || values[i] > maxValue) {
+//       indices.push(i);
+//     }
+//   }
+//   return {
+//     data: values.filter((x) => x >= minValue && x <= maxValue),
+//     outliers: indices,
+//   };
+//   //return values.filter((x) => (x >= minValue) && (x <= maxValue));
+// }
+
+// function filtre(txy) {
+//   var y = [];
+//   for (i = 0; i < txy.length; i++) {
+//     y.push(calculeVitesse(i, txy));
+//   }
+//   //var f = hampelFilter(y, 0.1, 1);
+//   var f = filterOutliers(y);
+//   if (f.outliers.length > 0) {
+//     return txy.filter((elt, index) => {
+//       f.outliers.indexOf(index) != -1;
+//     });
+//   } else {
+//     return txy;
+//   }
+// }
 
 function calculeVitesse(i, txy) {
   if (i == 0) {
@@ -270,14 +370,16 @@ function onPlayerReady(event) {
 }
 
 function playerSeek() {
-  if (playerReady) {
-    var i = getIndiceTemps(parseInt($("#temps").val()));
-    var t0 = new Date(txy[iVideoStart][0]);
-    var t = new Date(txy[i][0]);
-    var s = (t.getTime() - t0.getTime()) / 1000;
-    player.seekTo(s, true);
-    if (lectureTimer == null) {
-      player.pauseVideo();
+  if (getParameterByName("videoid")) {
+    if (playerReady) {
+      var i = getIndiceTemps(parseInt($("#temps").val()));
+      var t0 = new Date(txy[iVideoStart][0]);
+      var t = new Date(txy[i][0]);
+      var s = (t.getTime() - t0.getTime()) / 1000;
+      player.seekTo(s, true);
+      if (lectureTimer == null) {
+        player.pauseVideo();
+      }
     }
   }
 }
