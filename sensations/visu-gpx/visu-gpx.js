@@ -1,5 +1,5 @@
 const SEUIL_ACCELERATION = 1.0;
-const SEUIL_DECELERATION = -1.5;
+const SEUIL_DECELERATION = -3.5;
 var txy = [];
 var d = [];
 var t = [];
@@ -344,7 +344,7 @@ function dessineTrace() {
 
   var seuil = $("#seuil").val();
 
-  var xy2 = [];
+  var txy2 = [];
   var opacite0, opacite;
   opacite0 = 1.0;
   var cat0, cat;
@@ -352,7 +352,7 @@ function dessineTrace() {
   for (i = 0; i < txy.length; i++) {
     var coord = [];
     coord.push(txy[i][1], txy[i][2]);
-    xy2.push(coord);
+    txy2.push(coord);
     if (v[i] > seuil) {
       cat = 1;
     } else {
@@ -363,30 +363,30 @@ function dessineTrace() {
     } else {
       opacite = 1.0;
     }
-    if (opacite0 != opacite || xy2.length >= 100) {
+    if (opacite0 != opacite || txy2.length >= 100) {
       polylignes.push(
-        L.polyline(xy2, { color: couleurCategorie(cat), opacity: opacite0 })
+        L.polyline(txy2, { color: couleurCategorie(cat), opacity: opacite0 })
       );
-      xy2 = [];
+      txy2 = [];
       var coord = [];
       coord.push(txy[i][1], txy[i][2]);
-      xy2.push(coord);
+      txy2.push(coord);
       opacite0 = opacite;
     } else {
-      if (cat0 != cat || xy2.length >= 100) {
+      if (cat0 != cat || txy2.length >= 100) {
         polylignes.push(
-          L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite })
+          L.polyline(txy2, { color: couleurCategorie(cat0), opacity: opacite })
         );
-        xy2 = [];
+        txy2 = [];
         var coord = [];
         coord.push(txy[i][1], txy[i][2]);
-        xy2.push(coord);
+        txy2.push(coord);
         cat0 = cat;
       }
     }
     if (i == txy.length - 1) {
       polylignes.push(
-        L.polyline(xy2, { color: couleurCategorie(cat0), opacity: opacite0 })
+        L.polyline(txy2, { color: couleurCategorie(cat0), opacity: opacite0 })
       );
     }
   }
