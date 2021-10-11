@@ -1,132 +1,140 @@
-		.lien-collapse {
-			cursor: pointer;
-			text-decoration-line: underline;
-		}
+.lien-collapse {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
 
-		.webcam {
-			position: relative;
-		}
-		.webcam img {
-			position: relative;
-			z-index: 1;
-		}
-		.webcam .webcam-texte {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			background: rgba(0, 0, 0, 0.5);
-			z-index: 10;
-		}	  
-		.webcam-texte p {
-			color: silver;
-			text-align: center;
-		}
+.webcam {
+  position: relative;
+}
+.webcam img {
+  position: relative;
+  z-index: 1;
+}
+.webcam .webcam-texte {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.webcam-texte p {
+  color: silver;
+  text-align: center;
+}
 
 #titre-spots {
-	display: inline-block; 
-	text-decoration: underline;
-	margin-top: 10px;
+  display: inline-block;
+  text-decoration: underline;
+  margin-top: 10px;
 }
 
 #menu-vent {
-	position: absolute; 
-	top: -5px; 
-	right: 40px;
+  position: absolute;
+  top: -5px;
+  right: 40px;
 }
 #menu-vent select {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .ferme {
-	background-image: url("../images/sens-interdit-mini.png");
-	background-repeat: no-repeat;
-	background-size: 17px 15px;	
-	background-position: left;
-	padding-left: 20px;
+  background-image: url("../images/sens-interdit-mini.png");
+  background-repeat: no-repeat;
+  background-size: 17px 15px;
+  background-position: left;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
-		.liste-spots table td {
-			padding-top: 8px;
-			padding-bottom: 8px;
-		}			
+  .liste-spots table td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 @media screen and (max-width: 767px) {
-		.liste-spots  table {
-			margin-bottom: 0;
-		}			
+  .liste-spots table {
+    margin-bottom: 0;
+  }
 }
 
 .btn-releve {
-	border-style: outset;
+  border-style: outset;
 }
 .btn-enfonce {
-	border-style: inset;
-	background-color: white;
+  border-style: inset;
+  background-color: white;
 }
-		
+
 @media screen and (max-width: 767px) {
-	.table-commentaires {
-		font-size: 80%;
-	}
+  .table-commentaires {
+    font-size: 80%;
+  }
 }
 
 .table-commentaires td {
-	padding-right: 5px; 
-	padding-bottom: 0;
-	vertical-align: top;
+  padding-right: 5px;
+  padding-bottom: 0;
+  vertical-align: top;
 }
-.note-bonne  {
-	color: green;
+.note-bonne {
+  color: green;
 }
-.note-moyenne  {
-	color: orange;
+.note-moyenne {
+  color: orange;
 }
 .note-mauvaise {
-	color: red;
+  color: red;
 }
 
 @media screen and (min-width: 768px) {
-	#comparer {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 15px;
-	}	
+  #comparer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
 @media screen and (max-width: 767px) {
-	#comparer {
-		position: absolute;
-		right: 40px;
-		bottom: 15px;
-	}	
+  #comparer {
+    position: absolute;
+    right: 40px;
+    bottom: 15px;
+  }
 }
 
 input {
-	margin-top: 0px; 
-	margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 #boutons-deplier-replier {
-	text-align: center;
-	width: 100%;
-	margin-top: 20px;
-	margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 #boutons-deplier-replier button {
-	margin: 2px;
+  margin: 2px;
+}
+
+.loader-container {
+	position: relative;
+	height: 50px;
 }
 
 .histo img {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-.loader{
-		width: 50px;
-		height: 50px;
-}	
+.loader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .outils li p {
-	margin-bottom: 20px;
-	margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

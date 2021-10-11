@@ -39,10 +39,17 @@
 		.histo img {
 			margin: 10px;
 		}
-.loader{
-		widht: 50px;
-		height: 50px;
-}		
+		.loader-container {
+        position: relative;
+        height: 50px;
+    }
+    .loader {
+        widht: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }}		
 	  </style>
    </head>
    <body>
