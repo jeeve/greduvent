@@ -5,6 +5,12 @@
     <title>la boite à outils</title>
     <META NAME="Description" CONTENT="La boite à outils" />
     <?php include("../includes/header.php"); ?>
+    <style>
+    li p {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    </style>
 </head>
 
 <body>
@@ -22,11 +28,23 @@
                     <br><br>
 
                     <h2>GPS</h2>
-                    <p><a href="/sensations/visu-gpx/visu-gpx.php" target="_blank">Visualisateur de traces</a></p>
-                    <p>
-                        <a href="https://outilsflask.herokuapp.com/gps/">Convertisseur fichiers FIT et SML en GPX</a>
-                    </p>
+                    <ul>
+                        <li>
+                            <p><a href="/sensations/visu-gpx/visu-gpx.php" target="_blank">Visualisateur de traces</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p><a href="https://outilsflask.herokuapp.com/gps/">Convertisseur fichiers FIT et SML en
+                                    GPX</a></p>
+                        </li>
+                    </ul>
 
+                    <h2>Divers</h2>
+                    <ul>
+                        <li>
+                            <p><a href="/informatique/informatique.php#scrollscreens">Scroll Screens</a></p>
+                        </li>
+                    </ul>
 
 
 
