@@ -347,7 +347,14 @@ function calculeVitesse(i, txy) {
 }
 
 function initParametres() {
-  $("#seuil").val("12.00");
+  if (getParameterByName("mode") == "rando") {
+    $("#seuil").val("0.00");
+    $("#fenetre-auto").prop("checked", false);
+    $(".fenetre-largeur").css("visibility", "hidden");
+  } else {
+    $("#seuil").val("12.00");
+    $("#fenetre-auto").prop("checked", true);
+  }
   $("#curseur").val(($("#seuil").val() / vmax) * 100);
   $("#distance-seuil").text(calculeDistanceSeuil($("#seuil").val()).toFixed(3));
   $("#position").val("0.000");
@@ -359,7 +366,6 @@ function initParametres() {
   } else {
     $("#rapidite").val("10");
   }
-  $("#fenetre-auto").prop("checked", true);
   $("#fenetre-largeur").val("2.000");
 }
 
@@ -1075,9 +1081,16 @@ function drawChart() {
   CreeLignePosition(chart);
   CreeLigneGauche(chart, dmax * 0.1);
   CreeLigneDroite(chart, dmax - dmax * 0.1);
+  if (getParameterByName("mode") == "rando") {
+    var L = chart.getChartLayoutInterface().getChartAreaBoundingBox().width;
+    $(".ligne-gauche").attr("x", 30 - LARGEUR_LIGNE / 2);
+    $(".ligne-droite").attr("x", 30 + L - LARGEUR_LIGNE / 2);
+  }
   UpdatePosition(-1);
   updateBornes();
-  calculeBornes();
+  if ($("#fenetre-auto").is(":checked")) {
+    calculeBornes();
+  }
   if (getParameterByName("stats") == "1") {
     $("#calcule").click();
   }
