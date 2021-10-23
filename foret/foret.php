@@ -177,10 +177,15 @@
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
-                                <!-- Carte Visorando --><iframe height="300" width="400" frameborder="0" scrolling="no"
-                                    src="https://www.visorando.com/index.php?component=externe&task=showCarte&idRandonnee=16195471&satellite=1&carte=1&navigation=1&panZoom=1&mousePosition=1&scaleLine=1"></iframe><br /><a
-                                    href="https://www.visorando.com/" target="_blank">Visorando</a>
+
+                                <!-- Carte Visorando -->
+                                <iframe height="300" width="400" frameborder="0" scrolling="no"
+                                    src="https://www.visorando.com/index.php?component=externe&task=showCarte&idRandonnee=16195471&satellite=1&carte=1&navigation=1&panZoom=1&mousePosition=1&scaleLine=1">
+                                </iframe><br />
+                                <a href="https://www.visorando.com/" target="_blank">Visorando</a>
                                 <!-- Fin carte Visorando -->
+
+
                             </div>
                         </div>
                     </div>
