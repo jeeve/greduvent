@@ -173,18 +173,19 @@
 
 
                     <br><br>
+                    <a name="rando-23-10-2021"></a>
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
+                            <h2>Randonnée <a href="https://www.visorando.com/randonnee-le-sentier-des-belvederes/" target="_blank">"Le Sentier des Belvédères"</a> - 23 octobre 2021 - <a
+                                    href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">photos</a></h2>
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
 
                                 <!-- Carte Visorando -->
                                 <iframe height="300" width="400" frameborder="0" scrolling="no"
-                                    src="https://www.visorando.com/index.php?component=externe&task=showCarte&idRandonnee=16195471&satellite=1&carte=1&navigation=1&panZoom=1&mousePosition=1&scaleLine=1">
+                                    src="https://www.visorando.com/index.php?component=externe&task=showCarte&idRandonnee=83737&satellite=1&carte=1&navigation=1&panZoom=1&mousePosition=1&scaleLine=1">
                                 </iframe><br />
-                                <a href="https://www.visorando.com/" target="_blank">Visorando</a>
                                 <!-- Fin carte Visorando -->
-
 
                             </div>
                         </div>

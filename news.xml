@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Randonnée "Le Sentier des Belvédères"</title>
+            <link>https://greduvent.herokuapp.com/foret/foret.php#rando-23-10-2021</link>
+            <guid isPermaLink="false">rando-23-10-2021</guid>
+            <description>Randonnée en solitude dans le Massif des Trois Pignon.</description>
+            <pubDate>Sat, 23 Oct 2021 15:00:00 GMT</pubDate>
+		</item>
+
+		<item>
             <title>La mare aux fées</title>
             <link>https://youtu.be/LSeTulJC9fk</link>
             <guid isPermaLink="false">la-mare-aux-fees</guid>
