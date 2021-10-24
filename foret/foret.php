@@ -184,12 +184,17 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
-                            <h2>Randonnée "<a href="https://www.visorando.com/randonnee-le-sentier-des-belvederes/"
-                                    target="_blank">Le Sentier des Belvédères</a>" - 23 octobre 2021 - <a
+
+                            <h2>Randonnée <a href="https://www.visorando.com/randonnee-le-sentier-des-belvederes/"
+                                    target="_blank">Le Sentier des Belvédères</a> - 23 octobre 2021 - <a
                                     href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">photos</a> -
                                 <a href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2021_10_23_rando-3-pignons.gpx&mode=rando"
                                     target="_blank">parcours</a>
                             </h2>
+
+                            <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank"><img
+                                    src="images/rando-23-10-2021.jpg" class="img-responsive ombre-image" /></a>
+                            <br>
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
 
                                 <!-- Carte Visorando -->
