@@ -158,18 +158,25 @@
 
                     <br><br>
                     <a name="le-banc"></a>
-                    <p align="center">
-                        <img alt="Le banc" title="Le banc" src="images/le-banc.jpg"
-                            class="img-responsive ombre-image" />
-                    </p>
 
-                    <p align="right">
-                        <font size="2"><em>Image modélisée avec
-                                <a target="_blank" href="http://www.blender.org">Blender</a>
-                                - rendue avec Indigo<br>
-                                <a target="_blank" href="le-banc.zip">
-                                    Modèle .blend</a> (28 Mo)</em></font>
-                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-10 fond">
+                            <img alt="Le banc" title="Le banc" src="images/le-banc.jpg"
+                                class="img-responsive ombre-image" />
+
+
+                            <p align="right">
+                                <font size="2"><em>Image modélisée avec
+                                        <a target="_blank" href="http://www.blender.org">Blender</a>
+                                        - rendue avec Indigo<br>
+                                        <a target="_blank" href="le-banc.zip">
+                                            Modèle .blend</a> (28 Mo)</em></font>
+                            </p>
+
+                        </div>
+                    </div>
+
 
 
                     <br><br>
@@ -177,8 +184,12 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
-                            <h2>Randonnée "<a href="https://www.visorando.com/randonnee-le-sentier-des-belvederes/" target="_blank">Le Sentier des Belvédères</a>" - 23 octobre 2021 - <a
-                                    href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">photos</a> - <a href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2021_10_23_rando-3-pignons.gpx&mode=rando" target="_blank">parcours</a></h2>
+                            <h2>Randonnée "<a href="https://www.visorando.com/randonnee-le-sentier-des-belvederes/"
+                                    target="_blank">Le Sentier des Belvédères</a>" - 23 octobre 2021 - <a
+                                    href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">photos</a> -
+                                <a href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2021_10_23_rando-3-pignons.gpx&mode=rando"
+                                    target="_blank">parcours</a>
+                            </h2>
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
 
                                 <!-- Carte Visorando -->
@@ -199,8 +210,8 @@
                                 <p><a id="page-precedente" href="../loire/loire.php">au fil de l'eau</a></p>
                             </div>
                             <div class="col-xs-8">
-                                <p align="right"><a id="page-suivante" href="diapo.php">rencontres végétales</a> - <a
-                                        href="../impressions/impressions.php">impressions</a></p>
+                                <p align="right"><a id="page-suivante" href="diapo.php">rencontres végétales</a>
+                                    - <a href="../impressions/impressions.php">impressions</a></p>
                             </div>
                         </div>
                         <div class="row">
