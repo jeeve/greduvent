@@ -1205,7 +1205,7 @@ function createLineHorizontaleSVG(chart, y) {
   var layout = chart.getChartLayoutInterface();
   var chartArea = layout.getChartAreaBoundingBox();
   var svg = chart.getContainer().getElementsByTagName("svg")[0];
-  var yLoc = layout.getYLocation(y);
+  var yLoc = layout.getYLocation(y)-5;
   var x1 = chartArea.left;
   var x2 = chartArea.width + chartArea.left;
 
