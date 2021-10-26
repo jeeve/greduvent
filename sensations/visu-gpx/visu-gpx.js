@@ -352,7 +352,7 @@ function calculeVitesse(i, txy) {
 }
 
 function initParametres() {
-  if ("rando" == "rando") {
+  if (getParameterByName("rando")) {
     $("#seuil").val("0.00");
     $("#fenetre-auto").prop("checked", false);
     $(".fenetre-largeur").css("visibility", "hidden");
@@ -1088,7 +1088,7 @@ function drawChart() {
   CreeLignePosition(chart);
   CreeLigneGauche(chart, dmax * 0.1);
   CreeLigneDroite(chart, dmax - dmax * 0.1);
-  if ("rando" == "rando") {
+  if (getParameterByName("rando")) {
     var L = chart.getChartLayoutInterface().getChartAreaBoundingBox().width;
     $(".ligne-gauche").attr("x", 30 - LARGEUR_LIGNE / 2);
     $(".ligne-droite").attr("x", 30 + L - LARGEUR_LIGNE / 2);
@@ -1586,7 +1586,7 @@ function chartGety(chart, Y) {
   var layout = chart.getChartLayoutInterface();
   var H = layout.getChartAreaBoundingBox().height;
   //var Y2 = $("#chart").last().offset().top + H - Y + 10;
-  var Y2 = Y - $("#chart").last().offset().top + $(window)['scrollTop']() + 10;
+  var Y2 = $("#chart").last().offset().top  - $(window)['scrollTop']() + H - Y + 10;
   return (Y2 * vmax) / H;
 }
 
