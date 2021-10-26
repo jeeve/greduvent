@@ -90,6 +90,10 @@ body {
 
 /* ajouté pour edge et ipad (bug menu sur 2 lignes) */
 
+.navbar {
+  z-index: 20000000;
+}
+
     .navbar-header {
         float: none;
     }

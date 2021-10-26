@@ -668,7 +668,7 @@ $("#fenetre-largeur").change(function () {
 });
 
 function reportWindowSize() {
-   $("#map").height(window.innerHeight - $("#chart").height() - 20);
+  // $("#map").height(window.innerHeight - $("#chart").height() - 20);
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
