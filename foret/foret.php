@@ -216,7 +216,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
-                            <div id="visu-gpx">
+                            <div id="visu-gpx" class="ombre-image">
                                 <div id="control">
 
                                     <div id="lire-gpx">Lire fichier GPX</div>

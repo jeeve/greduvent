@@ -353,7 +353,7 @@ function calculeVitesse(i, txy) {
 
 function initParametres() {
   if ("rando" == "rando") {
-    $("#seuil").val("0.00");
+    $("#seuil").val(vmax);
     $("#fenetre-auto").prop("checked", false);
     $(".fenetre-largeur").css("visibility", "hidden");
   } else {
