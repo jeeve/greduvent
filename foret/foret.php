@@ -194,8 +194,10 @@
                                     target="_blank">parcours</a>
                             </h2>
 
-                            <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank"><img
-                                    src="images/rando-23-10-2021.jpg" class="img-responsive ombre-image" /></a>
+                            <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">
+                                <img src="images/rando-1-23-10-2021.jpg" class="img-responsive ombre-image " />
+                            </a>
+
                             <br>
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
 
@@ -206,9 +208,10 @@
                                 <!-- Fin carte Visorando -->
 
                             </div>
+                            <br>
                         </div>
                     </div>
-                    <br><br>
+
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
@@ -329,6 +332,40 @@
 
                                     <div id="video" style="display: none;"></div>
 
+                                    <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">
+                                        <img src="images/rando-1-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3947222" data-lon="2.545" style="display: none;" />
+                                        <img src="images/rando-2-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3947222" data-lon="2.54639" style="display: none;" />
+                                        <img src="images/rando-3-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3913889" data-lon="2.55222" style="display: none;" />
+                                        <img src="images/rando-4-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3944444" data-lon="2.54778" style="display: none;" />
+                                        <img src="images/rando-5-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3944444" data-lon="2.547222222222222" style="display: none;" />
+                                        <img src="images/rando-6-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3961111" data-lon="2.5380555555555553"
+                                            style="display: none;" />
+                                        <img src="images/rando-7-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3966667" data-lon="2.5377777777777775"
+                                            style="display: none;" />
+                                        <img src="images/rando-8-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3980556" data-lon="2.5280555555555555"
+                                            style="display: none;" />
+                                        <img src="images/rando-9-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3908333" data-lon="2.529166666666667"
+                                            style="display: none;" />
+                                        <img src="images/rando-10-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3922222" data-lon="2.533333333333333"
+                                            style="display: none;" />
+                                        <img src="images/rando-11-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3916667" data-lon="2.5452777777777778"
+                                            style="display: none;" />
+                                        <img src="images/rando-12-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3916667" data-lon="2.5480555555555555"
+                                            style="display: none;" />
+                                    </a>
+
                                 </div>
 
                                 <div id="chart"></div>
@@ -341,7 +378,9 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
                     <script src="rotatedMarker.js"></script>
                     <script src="https://www.google.com/jsapi"></script>
-                    <script> typeMarker = "distance" </script>
+                    <script>
+                    typeMarker = "distance"
+                    </script>
                     <script src="visu-gpx.js"></script>
 
                     <br>

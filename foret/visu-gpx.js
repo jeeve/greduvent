@@ -699,7 +699,7 @@ function UpdatePosition(n) {
   xyi.push(txy[i][1], txy[i][2]);
   markerVitesse.setLatLng(xyi);
   markerVitesse.setRotationAngle(a[i]);
-  if (typeof typeMarker != 'undefined') {
+  if (typeof typeMarker != "undefined") {
     if (typeMarker == "distance") {
       markerVitesse.setTooltipContent(
         parseFloat($("#position").val()).toFixed(3)
@@ -709,6 +709,9 @@ function UpdatePosition(n) {
     markerVitesse.setTooltipContent($("#vitesse").text());
   }
   $("#carte #time").text(txy[i][0]);
+
+  affichePhotoPosition(txy[i][1], txy[i][2]);
+
   if (getParameterByName("videoid")) {
     passageStart = false;
     if (i >= iVideoStart && i <= iVideoEnd) {
@@ -1475,7 +1478,8 @@ var registerEvtChart = function () {
     .click(function (e) {
       var x = chartGetx(chart, e.clientX);
       if (x >= 0 && x <= dmax) {
-        var dx = e.clientX - LARGEUR_LIGNE/2 - $("#chart").last().offset().left;
+        var dx =
+          e.clientX - LARGEUR_LIGNE / 2 - $("#chart").last().offset().left;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
         var i = getIndiceDistance(x);
@@ -1593,7 +1597,8 @@ var registerEvtLigneVerticaleSVG = function (className, parametres) {
 function chartGety(chart, Y) {
   var layout = chart.getChartLayoutInterface();
   var H = layout.getChartAreaBoundingBox().height;
-  var Y2 = $("#chart").last().offset().top  - $(window)['scrollTop']() + H - Y + 10;
+  var Y2 =
+    $("#chart").last().offset().top - $(window)["scrollTop"]() + H - Y + 10;
   return (Y2 * vmax) / H;
 }
 
@@ -1628,4 +1633,17 @@ function calculeBornes() {
   $(".ligne-gauche").attr("x", 30 + (L * a) / dmax - LARGEUR_LIGNE / 2);
   $(".ligne-droite").attr("x", 30 + (L * b) / dmax - LARGEUR_LIGNE / 2);
   updateBornes();
+}
+
+function affichePhotoPosition(x, y) {
+  $(".image-rando").each(function () {
+    var lat = $(this).attr("data-lat");
+    var lon = $(this).attr("data-lon");
+
+    if (calculeDistance(x, y, lat, lon) < 0.05) {
+      $(this).css("display", "block");
+    } else {
+      $(this).css("display", "none");
+    }
+  });
 }
