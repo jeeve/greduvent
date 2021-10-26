@@ -699,7 +699,15 @@ function UpdatePosition(n) {
   xyi.push(txy[i][1], txy[i][2]);
   markerVitesse.setLatLng(xyi);
   markerVitesse.setRotationAngle(a[i]);
-  markerVitesse.setTooltipContent($("#vitesse").text());
+  if (typeof typeMarker != 'undefined') {
+    if (typeMarker == "distance") {
+      markerVitesse.setTooltipContent(
+        parseFloat($("#position").val()).toFixed(3)
+      );
+    }
+  } else {
+    markerVitesse.setTooltipContent($("#vitesse").text());
+  }
   $("#carte #time").text(txy[i][0]);
   if (getParameterByName("videoid")) {
     passageStart = false;

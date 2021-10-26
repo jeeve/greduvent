@@ -668,7 +668,7 @@ $("#fenetre-largeur").change(function () {
 });
 
 function reportWindowSize() {
-   $("#map").height(window.innerHeight - $("#chart").height() - 20);
+  $("#map").height(window.innerHeight - $("#chart").height() - 20);
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
@@ -699,7 +699,17 @@ function UpdatePosition(n) {
   xyi.push(txy[i][1], txy[i][2]);
   markerVitesse.setLatLng(xyi);
   markerVitesse.setRotationAngle(a[i]);
-  markerVitesse.setTooltipContent($("#vitesse").text());
+
+  if (typeof typeMarker != 'undefined') {
+    if (typeMarker == "distance") {
+      markerVitesse.setTooltipContent(
+        parseFloat($("#position").val()).toFixed(3)
+      );
+    }
+  } else {
+    markerVitesse.setTooltipContent($("#vitesse").text());
+  }
+
   $("#carte #time").text(txy[i][0]);
   if (getParameterByName("videoid")) {
     passageStart = false;
@@ -1467,7 +1477,8 @@ var registerEvtChart = function () {
     .click(function (e) {
       var x = chartGetx(chart, e.clientX);
       if (x >= 0 && x <= dmax) {
-        var dx = e.clientX - LARGEUR_LIGNE/2 - $("#chart").last().offset().left;
+        var dx =
+          e.clientX - LARGEUR_LIGNE / 2 - $("#chart").last().offset().left;
         $(".ligne-position")[0].setAttribute("x", dx);
         $("#position").val(x.toFixed(3));
         var i = getIndiceDistance(x);
@@ -1586,7 +1597,8 @@ function chartGety(chart, Y) {
   var layout = chart.getChartLayoutInterface();
   var H = layout.getChartAreaBoundingBox().height;
   //var Y2 = $("#chart").last().offset().top + H - Y + 10;
-  var Y2 = $("#chart").last().offset().top  - $(window)['scrollTop']() + H - Y + 10;
+  var Y2 =
+    $("#chart").last().offset().top - $(window)["scrollTop"]() + H - Y + 10;
   return (Y2 * vmax) / H;
 }
 
