@@ -353,16 +353,17 @@
                                             data-lat="48.3980556" data-lon="2.5280555555555555"
                                             style="display: none;" />
                                         <img src="images/rando-9-23-10-2021.jpg" class="image-rando"
-                                            data-lat="48.3908333" data-lon="2.529166666666667"
-                                            style="display: none;" />
+                                            data-lat="48.3908333" data-lon="2.529166666666667" style="display: none;" />
                                         <img src="images/rando-10-23-10-2021.jpg" class="image-rando"
-                                            data-lat="48.3922222" data-lon="2.533333333333333"
-                                            style="display: none;" />
+                                            data-lat="48.3922222" data-lon="2.533333333333333" style="display: none;" />
                                         <img src="images/rando-11-23-10-2021.jpg" class="image-rando"
                                             data-lat="48.3916667" data-lon="2.5452777777777778"
                                             style="display: none;" />
                                         <img src="images/rando-12-23-10-2021.jpg" class="image-rando"
                                             data-lat="48.3916667" data-lon="2.5480555555555555"
+                                            style="display: none;" />
+                                        <img src="images/rando-13-23-10-2021.jpg" class="image-rando"
+                                            data-lat="48.3958333" data-lon="2.5180555555555557"
                                             style="display: none;" />
                                     </a>
 
