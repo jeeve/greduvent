@@ -1585,7 +1585,7 @@ var registerEvtLigneVerticaleSVG = function (className, parametres) {
 function chartGety(chart, Y) {
   var layout = chart.getChartLayoutInterface();
   var H = layout.getChartAreaBoundingBox().height;
-  var Y2 = $("#chart").last().offset().top + H - Y + 10;
+  var Y2 = Y - $("#chart").last().offset().top + $(window)['scrollTop']() + 10;
   return (Y2 * vmax) / H;
 }
 
