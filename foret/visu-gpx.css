@@ -94,7 +94,7 @@ td {
   z-index: 10000;
   opacity: 1;
   border: 3px solid white;
-  left: -3px;
+  left: 0;
   height: 40%;
 }
 
