@@ -377,12 +377,16 @@
 
                     <script src="/js/jquery.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-                    <script src="rotatedMarker.js"></script>
+                    <script src="/sensations/visu-gpx/rotatedMarker.js"></script>
                     <script src="https://www.google.com/jsapi"></script>
                     <script>
-                    typeMarker = "distance"
+                    var visuGpxOptions = {
+                        typeMarker: "distance",
+                        mode: "rando",
+                        url: "2021_10_23_rando-3-pignons.gpx"
+                    }
                     </script>
-                    <script src="visu-gpx.js"></script>
+                    <script src="/sensations/visu-gpx/visu-gpx.js"></script>
 
                     <br>
                     <div id="swipe">

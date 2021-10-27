@@ -34,10 +34,7 @@ reportWindowSize();
 if (getParameterByName("url")) {
   litGPX(getParameterByName("url"), dessineTrace);
 } else {
-  litGPX(
-    "https://greduvent.000webhostapp.com/sensations/gpx/2021_10_23_rando-3-pignons.gpx",
-    dessineTrace
-  );
+  litGPX(visuGpxOptions.url, dessineTrace);
 }
 
 if (getParameterByName("videoid")) {
@@ -352,8 +349,8 @@ function calculeVitesse(i, txy) {
 }
 
 function initParametres() {
-  if (getParameterByName("rando")) {
-    $("#seuil").val("0.00");
+  if (visuGpxOptions.mode == "rando") {
+    $("#seuil").val(vmax);
     $("#fenetre-auto").prop("checked", false);
     $(".fenetre-largeur").css("visibility", "hidden");
   } else {
@@ -668,7 +665,9 @@ $("#fenetre-largeur").change(function () {
 });
 
 function reportWindowSize() {
-  $("#map").height(window.innerHeight - $("#chart").height() - 20);
+  if (visuGpxOptions.pleinEcran == true) {
+    $("#map").height(window.innerHeight - $("#chart").height() - 20);
+  }
 }
 document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
@@ -700,17 +699,20 @@ function UpdatePosition(n) {
   markerVitesse.setLatLng(xyi);
   markerVitesse.setRotationAngle(a[i]);
 
-  if (typeof typeMarker != 'undefined') {
-    if (typeMarker == "distance") {
-      markerVitesse.setTooltipContent(
-        parseFloat($("#position").val()).toFixed(3)
-      );
-    }
+  if (visuGpxOptions.typeMarker == "distance") {
+    markerVitesse.setTooltipContent(
+      parseFloat($("#position").val()).toFixed(3)
+    );
   } else {
     markerVitesse.setTooltipContent($("#vitesse").text());
   }
 
   $("#carte #time").text(txy[i][0]);
+
+  if (typeof visuGpxOptions.mode !== "rando") {
+    affichePhotoPosition(txy[i][1], txy[i][2]);
+  }
+
   if (getParameterByName("videoid")) {
     passageStart = false;
     if (i >= iVideoStart && i <= iVideoEnd) {
@@ -1098,7 +1100,7 @@ function drawChart() {
   CreeLignePosition(chart);
   CreeLigneGauche(chart, dmax * 0.1);
   CreeLigneDroite(chart, dmax - dmax * 0.1);
-  if (getParameterByName("rando")) {
+  if (visuGpxOptions.mode == "rando") {
     var L = chart.getChartLayoutInterface().getChartAreaBoundingBox().width;
     $(".ligne-gauche").attr("x", 30 - LARGEUR_LIGNE / 2);
     $(".ligne-droite").attr("x", 30 + L - LARGEUR_LIGNE / 2);
@@ -1633,4 +1635,17 @@ function calculeBornes() {
   $(".ligne-gauche").attr("x", 30 + (L * a) / dmax - LARGEUR_LIGNE / 2);
   $(".ligne-droite").attr("x", 30 + (L * b) / dmax - LARGEUR_LIGNE / 2);
   updateBornes();
+}
+
+function affichePhotoPosition(x, y) {
+  $(".image-rando").each(function () {
+    var lat = $(this).attr("data-lat");
+    var lon = $(this).attr("data-lon");
+
+    if (calculeDistance(x, y, lat, lon) < 0.05) {
+      $(this).css("display", "block");
+    } else {
+      $(this).css("display", "none");
+    }
+  });
 }
