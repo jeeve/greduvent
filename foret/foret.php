@@ -198,17 +198,17 @@
                                 <img src="images/rando-1-23-10-2021.jpg" class="img-responsive ombre-image " />
                             </a>
 
-                            <br>
+                            <br><!--
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
 
-                                <!-- Carte Visorando -->
+                         
                                 <iframe height="300" width="400" frameborder="0" scrolling="no"
                                     src="https://www.visorando.com/index.php?component=externe&task=showCarte&idRandonnee=83737&satellite=1&carte=1&navigation=1&panZoom=1&mousePosition=1&scaleLine=1">
                                 </iframe><br />
-                                <!-- Fin carte Visorando -->
+                             
 
-                            </div>
-                            <br>
+                            </div>-->
+                           
                         </div>
                     </div>
 
