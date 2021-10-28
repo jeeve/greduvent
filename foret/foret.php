@@ -194,6 +194,7 @@
                                     target="_blank">parcours</a>
                             </h2>
 
+                            <br>
                             <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">
                                 <img src="images/rando-1-23-10-2021.jpg" class="img-responsive ombre-image " />
                             </a>
