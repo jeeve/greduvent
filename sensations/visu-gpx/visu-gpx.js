@@ -16,6 +16,11 @@ const LARGEUR_LIGNE = 10;
 var iVideoStart, iVideoEnd;
 var playerReady = false;
 
+if (getParameterByName("mode") == "rando") {
+  visuGpxOptions.mode = "rando";
+  visuGpxOptions.typeMarker = "distance";
+}
+
 var map = L.map("map", { zoomControl: false });
 L.control
   .zoom({
