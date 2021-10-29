@@ -528,6 +528,15 @@ function dessineTrace() {
     .addTo(map);
   markerVitesse.openTooltip();
 
+  if (visuGpxOptions.mode == "rando") {
+    $(".image-rando").each(function () {
+      var lat = $(this).attr("data-lat");
+      var lon = $(this).attr("data-lon");
+
+      L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
+    });
+  }
+
   UpdatePosition(-1);
 
   dessineStats();
