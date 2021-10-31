@@ -142,6 +142,7 @@
     <script src="https://www.google.com/jsapi"></script>
     <script>
     var visuGpxOptions = {
+        pleinEcran: true,
         typeMarker: "vitesse",
         mode: "nautique",
     }
