@@ -122,7 +122,8 @@
 
                             <p><input type="button" data-target="#item-meteo" value="Météo" class="btn-enfonce" /> -
                                 <input type="button" value="Géographie" data-target="#item-geographie"
-                                    class="btn-releve" /> </p>
+                                    class="btn-releve" />
+                            </p>
 
                             <div id="item-meteo" class="collapse in">
 
@@ -334,6 +335,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 fond" id="historique-vent-poses"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-poses"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-poses"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -477,6 +479,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 fond" id="historique-vent-moisson"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-moisson"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-moisson"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -611,6 +614,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 fond" id="historique-vent-ecluzelles"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-ecluzelles"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-ecluzelles"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -833,6 +837,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 fond" id="historique-vent-jablines"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-jablines"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-jablines"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -965,6 +970,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 fond" id="historique-vent-vaires"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-vaires"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-vaires"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -1104,6 +1110,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 fond" id="historique-vent-grandeparoisse"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-grandeparoisse"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-grandeparoisse"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -1245,9 +1252,10 @@
                                     </form>
                                     <br>
                                     <div class="row">
+                                        <div class="col-xs-12 fond" id="historique-niveau-foretorient"></div>
                                         <div class="col-xs-12 fond" id="historique-vent-foretorient"></div>
                                         <div class="col-xs-12 fond" id="historique-rose-foretorient"></div>
-                                        <div class="col-xs-12 fond" id="historique-niveau-foretorient"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-foretorient"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -1258,7 +1266,8 @@
                                         href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine"
                                         target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> % -
                                     <a id="lien-webcam-viewsurf-foret-orient"
-                                        href="https://pv.viewsurf.com/1084/Lac-d-Orient" target="_blank">Webcam</a></p>
+                                        href="https://pv.viewsurf.com/1084/Lac-d-Orient" target="_blank">Webcam</a>
+                                </p>
 
 
 

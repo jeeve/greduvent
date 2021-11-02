@@ -37,6 +37,7 @@
         position: relative;
         height: 50px;
     }
+
     .loader {
         widht: 50px;
         height: 50px;
@@ -353,6 +354,10 @@
                         <div class="col-xs-2 fond"></div>
                         <div class="col-xs-8 fond" id="historique-rose-poses"></div>
                     </div>
+                    <div class="row histo">
+                        <div class="col-xs-1 fond"></div>
+                        <div class="col-xs-10 fond" id="historique-temp-poses"></div>
+                    </div>
                     <br><br>
 
 
@@ -420,7 +425,7 @@
             lat1 + '!2d' + lon1 + '!4m5!';
         jQuery('#map-poses').attr('src', itineraireSrc +
             'ls0x47e1289bac44658f%3A0xe940a5c757b0bf2a!2sL%C3%A9ry-Poses+en+Normandie%2C+CD+110%2C+27740+Poses!3m2!1d49.302783!2d1.209404!5e0!3m2!1sfr!2sfr!4v1546773316328'
-            );
+        );
     }
 
     jQuery(document).ready(function($) {
