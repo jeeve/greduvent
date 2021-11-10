@@ -1021,7 +1021,7 @@
                                     <p>
                                         <a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne"
                                             target="_blank">Superforecast</a><br><br>
-                                        <a href="https://meteofrance.com/previsions-meteo-france/jablines/77450"
+                                        <a href="https://meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360"
                                             target="_blank">Météo France</a><br><br>
                                         <a href="https://www.windguru.cz/60276" target="_blank">Windguru</a>
                                     </p>
