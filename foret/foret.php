@@ -217,6 +217,7 @@
                                 <img src="images/rando-11-11-2021-3.jpg"
                                     class="center-block img-responsive ombre-image">
                             </a>
+                            <br>
                         </div>
                     </div>
                     <br>
