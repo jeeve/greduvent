@@ -79,15 +79,6 @@ td {
   border: 3px solid rgb(110, 110, 112);
 }
 
-.video {
-  position: absolute;
-  bottom: -3px;
-  z-index: 10000;
-  opacity: 1;
-  border: 3px solid white;
-  left: -3px;
-}
-
 .image-rando {
   position: absolute;
   bottom: -3px;
@@ -96,6 +87,7 @@ td {
   border: 3px solid white;
   left: 0;
   height: 40%;
+  max-width: 100%;
 }
 
 .reglages {
