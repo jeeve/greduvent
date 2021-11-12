@@ -182,10 +182,10 @@
                     <br><br>
                     <a name="rando-11-11-2021"></a>
                     <h2>Randonnée <a href="https://www.visorando.com/randonnee-la-butte-de-sucremont/"
-                                    target="_blank">La Butte de Sucremont</a> - 11 novembre 2021 - <a
-                                    href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">photos</a>
+                            target="_blank">La Butte de Sucremont</a> - 11 novembre 2021 - <a
+                            href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">photos</a>
 
-                            </h2>
+                    </h2>
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
@@ -201,19 +201,22 @@
                     </div>
 
                     <br>
-                    <a href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">
-                        <div class="row vertical-align">
-                            <div class="col-xs-12 col-sm-6 fond">
+
+                    <div class="row vertical-align">
+                        <div class="col-xs-12 col-sm-6 fond">
+                            <a href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">
                                 <img src="images/rando-11-11-2021-2.jpg"
                                     class="center-block img-responsive ombre-image">
-                            </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-xs-12 col-sm-6 fond">
+                            </a>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-xs-12 col-sm-6 fond">
+                            <a href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">
                                 <img src="images/rando-11-11-2021-3.jpg"
                                     class="center-block img-responsive ombre-image">
-                            </div>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                     <br>
 
                     <div class="row">
@@ -337,14 +340,15 @@
                                         <img src="images/rando-11-11-2021-1.jpg" class="image-rando"
                                             data-lat="48.3969444" data-lon="2.545" style="display: none;" />
                                         <img src="images/rando-11-11-2021-2.jpg" class="image-rando"
-                                            data-lat="48.3997222" data-lon="2.5405555555555552" style="display: none;" />
+                                            data-lat="48.3997222" data-lon="2.5405555555555552"
+                                            style="display: none;" />
                                         <img src="images/rando-11-11-2021-3.jpg" class="image-rando"
                                             data-lat="48.3969444" data-lon="2.5425" style="display: none;" />
                                         <img src="images/rando-11-11-2021-5.jpg" class="image-rando"
-                                            data-lat="48.40151734377023" data-lon="2.5459161917368434" style="display: none;" />
-                                        <img src="images/rando-11-11-2021-6.jpg" class="image-rando"
-                                            data-lat="48.4005556" data-lon="2.546111111111111"
+                                            data-lat="48.40151734377023" data-lon="2.5459161917368434"
                                             style="display: none;" />
+                                        <img src="images/rando-11-11-2021-6.jpg" class="image-rando"
+                                            data-lat="48.4005556" data-lon="2.546111111111111" style="display: none;" />
                                         <img src="images/rando-11-11-2021-7.jpg" class="image-rando"
                                             data-lat="48.3997222" data-lon="2.5394444444444444"
                                             style="display: none;" />
@@ -367,10 +371,10 @@
                     <br><br>
                     <a name="rando-23-10-2021"></a>
                     <h2>Randonnée <a href="https://www.visorando.com/randonnee-le-sentier-des-belvederes/"
-                                    target="_blank">Le Sentier des Belvédères</a> - 23 octobre 2021 - <a
-                                    href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">photos</a>
+                            target="_blank">Le Sentier des Belvédères</a> - 23 octobre 2021 - <a
+                            href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">photos</a>
 
-                            </h2>
+                    </h2>
                     <div class="row">
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
