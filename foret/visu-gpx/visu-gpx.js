@@ -337,7 +337,6 @@ function visuGPX(id, url, visuGpxOptions) {
       if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
         calculeBornes();
       }
-      playerSeek();
     }
   });
 
@@ -1540,6 +1539,11 @@ function visuGPX(id, url, visuGpxOptions) {
 
   function affichePhotoPosition(x, y) {
     $("#" + id + " " + ".image-rando").each(function () {
+
+      if ($(this).height() > $(this).width()) {
+        $(this).addClass("image-rando-vertical ");
+      }
+
       var lat = $(this).attr("data-lat");
       var lon = $(this).attr("data-lon");
 

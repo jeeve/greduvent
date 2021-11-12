@@ -187,7 +187,7 @@
 
                     </h2>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-1 fond"></div>
+                        <div class="col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
 
 
@@ -208,7 +208,9 @@
                                 <img src="images/rando-11-11-2021-2.jpg"
                                     class="center-block img-responsive ombre-image">
                             </a>
+                            <br>
                         </div>
+                       
                         <div class="col-sm-1"></div>
                         <div class="col-xs-12 col-sm-6 fond">
                             <a href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">
