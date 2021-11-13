@@ -181,6 +181,14 @@ function visuGPX(id, url, visuGpxOptions) {
         var polyline = L.polyline(xy, { color: "black" });
         map.fitBounds(polyline.getBounds());
 
+        if (visuGpxOptions.mode == "rando") {
+          $("#" + id + " " + ".image-rando").each(function () {
+            var lat = $(this).attr("data-lat");
+            var lon = $(this).attr("data-lon");
+            L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
+          });
+        }
+
         ready();
 
         google.load("visualization", "1.0", { packages: ["corechart"] });
@@ -483,15 +491,6 @@ function visuGPX(id, url, visuGpxOptions) {
       .bindTooltip("0", { permanent: true })
       .addTo(map);
     markerVitesse.openTooltip();
-
-    if (visuGpxOptions.mode == "rando") {
-      $("#" + id + " " + ".image-rando").each(function () {
-        var lat = $(this).attr("data-lat");
-        var lon = $(this).attr("data-lon");
-
-        L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
-      });
-    }
 
     UpdatePosition(-1);
 
