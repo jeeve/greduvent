@@ -186,10 +186,9 @@ function visuGPX(id, url, visuGpxOptions) {
             var lat = $(this).attr("data-lat");
             var lon = $(this).attr("data-lon");
             L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
-          });
-          $("#" + id + " " + ".image-rando").each(function () {
+
             if ($(this).height() > $(this).width()) {
-              $(this).removeClass("image-rando");
+              //$(this).removeClass("image-rando");
               $(this).addClass("image-rando-vertical");       
             }
           });
@@ -1051,6 +1050,7 @@ function visuGPX(id, url, visuGpxOptions) {
   // ------------------------------------------------------------------------ chart
   // ------------------------------------------------------------------------
 
+  var chart;
   var curseurSeuil = { currentX: 0, selectedElement: null };
   var curseurPosition = { currentX: 0, selectedElement: null };
   var curseurA = { currentX: 0, selectedElement: null };
