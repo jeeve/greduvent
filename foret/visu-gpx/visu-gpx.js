@@ -1627,7 +1627,7 @@ function visuGPX(id, url, visuGpxOptions) {
   function affichePhotoPosition(x, y) {
     $("#" + id + " " + ".image-rando").each(function () {
       if ($(this).height() > $(this).width()) {
-        $(this).removeClass("image-rando");
+     //   $(this).removeClass("image-rando");
         $(this).addClass("image-rando-vertical");
       }
 
