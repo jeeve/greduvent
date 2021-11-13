@@ -6,6 +6,7 @@ function visuGPX(id, url, visuGpxOptions) {
   var t = [];
   var v = [];
   var a = [];
+  var h = [];
   var polylignes = [];
   var trace;
   var ivmax, vmax, dmax;
@@ -17,7 +18,9 @@ function visuGPX(id, url, visuGpxOptions) {
   var iVideoStart, iVideoEnd;
   var playerReady = false;
 
-  var map = L.map(document.querySelector("#" + id + " " + ".map"), { zoomControl: false });
+  var map = L.map(document.querySelector("#" + id + " " + ".map"), {
+    zoomControl: false,
+  });
   L.control
     .zoom({
       position: "topright",
@@ -89,6 +92,15 @@ function visuGPX(id, url, visuGpxOptions) {
               coord[1] = lat;
               coord[2] = lon;
               txy.push(coord);
+
+              if (visuGpxOptions.mode == "rando") {
+                if ($(this).find("ele").length == 1) {
+                  texte = $(this).find("ele").text();
+                  h.push(parseFloat(texte));
+                } else {
+                  h.push(-1.0);
+                }
+              }
             }
           });
 
@@ -111,7 +123,13 @@ function visuGPX(id, url, visuGpxOptions) {
         ivmax = 0;
         var t0 = new Date(txy[0][0]).getTime();
         chartxy = [];
-        chartxy.push(["Distance", "Vitesse"]);
+
+        if (visuGpxOptions.mode == "rando") {
+          chartxy.push(["Distance", "Altitude"]);
+        } else {
+          chartxy.push(["Distance", "Vitesse"]);
+        }
+
         for (i = 0; i < txy.length; i++) {
           if (i == 0) {
             v.push(0.0);
@@ -141,7 +159,13 @@ function visuGPX(id, url, visuGpxOptions) {
             d.push(dd);
             var ti = new Date(txy[i][0]).getTime();
             t.push((ti - t0) / 1000);
-            chartxy.push([distance, vitesse]);
+
+            if (visuGpxOptions.mode == "rando") {
+              chartxy.push([distance, h[i]]);
+            } else {
+              chartxy.push([distance, vitesse]);
+            }
+
             distance = distance + dd;
           }
         }
@@ -496,11 +520,14 @@ function visuGPX(id, url, visuGpxOptions) {
     ) {
       $("#" + id + " " + ".borne-a").attr(
         "width",
-        parseInt($("#" + id + " " + ".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2 - 30
+        parseInt($("#" + id + " " + ".ligne-gauche").attr("x")) +
+          LARGEUR_LIGNE / 2 -
+          30
       );
       $("#" + id + " " + ".borne-b").attr(
         "x",
-        parseInt($("#" + id + " " + ".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2
+        parseInt($("#" + id + " " + ".ligne-droite").attr("x")) +
+          LARGEUR_LIGNE / 2
       );
       $("#" + id + " " + ".borne-b").attr(
         "width",
@@ -511,11 +538,14 @@ function visuGPX(id, url, visuGpxOptions) {
     } else {
       $("#" + id + " " + ".borne-a").attr(
         "width",
-        parseInt($("#" + id + " " + ".ligne-droite").attr("x")) + LARGEUR_LIGNE / 2 - 30
+        parseInt($("#" + id + " " + ".ligne-droite").attr("x")) +
+          LARGEUR_LIGNE / 2 -
+          30
       );
       $("#" + id + " " + ".borne-b").attr(
         "x",
-        parseInt($("#" + id + " " + ".ligne-gauche").attr("x")) + LARGEUR_LIGNE / 2
+        parseInt($("#" + id + " " + ".ligne-gauche").attr("x")) +
+          LARGEUR_LIGNE / 2
       );
       $("#" + id + " " + ".borne-b").attr(
         "width",
@@ -528,13 +558,19 @@ function visuGPX(id, url, visuGpxOptions) {
     var i = getIndiceDistance(
       chartGetx(
         chart,
-        $("#" + id + " " + ".ligne-gauche").last().offset().left + LARGEUR_LIGNE / 2
+        $("#" + id + " " + ".ligne-gauche")
+          .last()
+          .offset().left +
+          LARGEUR_LIGNE / 2
       )
     );
     var j = getIndiceDistance(
       chartGetx(
         chart,
-        $("#" + id + " " + ".ligne-droite").last().offset().left + LARGEUR_LIGNE / 2
+        $("#" + id + " " + ".ligne-droite")
+          .last()
+          .offset().left +
+          LARGEUR_LIGNE / 2
       )
     );
     if (i < j) {
@@ -574,7 +610,9 @@ function visuGPX(id, url, visuGpxOptions) {
   });
 
   $("#" + id + " " + ".curseur").change(function () {
-    $("#" + id + " " + ".seuil").val((($("#" + id + " " + ".curseur").val() * vmax) / 100).toFixed(2));
+    $("#" + id + " " + ".seuil").val(
+      (($("#" + id + " " + ".curseur").val() * vmax) / 100).toFixed(2)
+    );
     CreeLigneSeuil(chart, $("#" + id + " " + ".seuil").val());
     $("#" + id + " " + ".distance-seuil").text(
       calculeDistanceSeuil($("#" + id + " " + ".seuil").val()).toFixed(3)
@@ -599,7 +637,9 @@ function visuGPX(id, url, visuGpxOptions) {
     var x = chartxy[i + 1][0];
     $("#" + id + " " + ".position").val(x.toFixed(3));
     CreeLignePosition(chart);
-    $("#" + id + " " + ".vitesse").text(getVitesse($("#" + id + " " + ".position").val()).toFixed(2));
+    $("#" + id + " " + ".vitesse").text(
+      getVitesse($("#" + id + " " + ".position").val()).toFixed(2)
+    );
     UpdatePosition(i);
     if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
       calculeBornes();
@@ -612,7 +652,9 @@ function visuGPX(id, url, visuGpxOptions) {
 
   function reportWindowSize() {
     if (visuGpxOptions.pleinEcran == true) {
-      $("#" + id + " " + ".map").height(window.innerHeight - $("#" + id + " " + ".chart").height() - 20);
+      $("#" + id + " " + ".map").height(
+        window.innerHeight - $("#" + id + " " + ".chart").height() - 20
+      );
     }
   }
 
@@ -663,7 +705,10 @@ function visuGPX(id, url, visuGpxOptions) {
 
   $("#" + id + " " + ".lecture").click(function () {
     if (lectureTimer == null) {
-      lectureTimer = setInterval(avance, 1000 / parseInt($("#" + id + " " + ".rapidite").val()));
+      lectureTimer = setInterval(
+        avance,
+        1000 / parseInt($("#" + id + " " + ".rapidite").val())
+      );
     }
   });
 
@@ -697,7 +742,9 @@ function visuGPX(id, url, visuGpxOptions) {
       var lecturei = getIndiceTemps(t0);
       $("#" + id + " " + ".position").val(chartxy[lecturei + 1][0].toFixed(3));
       CreeLignePosition(chart);
-      $("#" + id + " " + ".vitesse").text(getVitesse($("#" + id + " " + ".position").val()).toFixed(2));
+      $("#" + id + " " + ".vitesse").text(
+        getVitesse($("#" + id + " " + ".position").val()).toFixed(2)
+      );
       UpdatePosition(lecturei);
       if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
         calculeBornes();
@@ -1019,13 +1066,22 @@ function visuGPX(id, url, visuGpxOptions) {
       return;
     }
     var data = google.visualization.arrayToDataTable(chartxy);
+    
+    var vAxisOptions;
+    var enableInteractivityOptions = false;
+    if (visuGpxOptions.mode == "rando") {
+      vAxisOptions = { viewWindowMode: "explicit", viewWindow: { min: Math.min(...h), max: Math.max(...h) } };
+      enableInteractivityOptions = true;
+    } else {
+      vAxisOptions = { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } };
+    }
 
     var options = {
-      vAxis: { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } },
+      vAxis: vAxisOptions,
       pointSize: 0,
       legend: { position: "none" },
       chartArea: { left: "30", right: "0", top: "10", bottom: "20" },
-      enableInteractivity: false,
+      enableInteractivity: enableInteractivityOptions,
       dataOpacity: 0.0,
     };
 
@@ -1338,9 +1394,13 @@ function visuGPX(id, url, visuGpxOptions) {
 
               $("#" + id + " " + ".seuil").val(y.toFixed(2));
               $("#" + id + " " + ".distance-seuil").text(
-                calculeDistanceSeuil($("#" + id + " " + ".seuil").val()).toFixed(3)
+                calculeDistanceSeuil(
+                  $("#" + id + " " + ".seuil").val()
+                ).toFixed(3)
               );
-              $("#" + id + " " + ".curseur").val(($("#" + id + " " + ".seuil").val() / vmax) * 100);
+              $("#" + id + " " + ".curseur").val(
+                ($("#" + id + " " + ".seuil").val() / vmax) * 100
+              );
               dessineTrace();
             }
           }
@@ -1382,7 +1442,11 @@ function visuGPX(id, url, visuGpxOptions) {
         var x = chartGetx(chart, e.clientX);
         if (x >= 0 && x <= dmax) {
           var dx =
-            e.clientX - LARGEUR_LIGNE / 2 - $("#" + id + " " + ".chart").last().offset().left;
+            e.clientX -
+            LARGEUR_LIGNE / 2 -
+            $("#" + id + " " + ".chart")
+              .last()
+              .offset().left;
           $("#" + id + " " + ".ligne-position")[0].setAttribute("x", dx);
           $("#" + id + " " + ".position").val(x.toFixed(3));
           var i = getIndiceDistance(x);
@@ -1415,9 +1479,13 @@ function visuGPX(id, url, visuGpxOptions) {
 
             $("#" + id + " " + ".seuil").val(y.toFixed(2));
             $("#" + id + " " + ".distance-seuil").text(
-              calculeDistanceSeuil($("#" + id + " " + ".seuil").val()).toFixed(3)
+              calculeDistanceSeuil($("#" + id + " " + ".seuil").val()).toFixed(
+                3
+              )
             );
-            $("#" + id + " " + ".curseur").val(($("#" + id + " " + ".seuil").val() / vmax) * 100);
+            $("#" + id + " " + ".curseur").val(
+              ($("#" + id + " " + ".seuil").val() / vmax) * 100
+            );
             dessineTrace();
           }
         }
@@ -1482,7 +1550,10 @@ function visuGPX(id, url, visuGpxOptions) {
               elementEstClasse(parametres.selectedElement, "ligne-droite")
             ) {
               $("#" + id + " " + ".fenetre-auto").prop("checked", "");
-              $("#" + id + " " + ".fenetre-largeur").css("visibility", "hidden");
+              $("#" + id + " " + ".fenetre-largeur").css(
+                "visibility",
+                "hidden"
+              );
               updateBornes();
             }
           }
@@ -1500,14 +1571,25 @@ function visuGPX(id, url, visuGpxOptions) {
     var layout = chart.getChartLayoutInterface();
     var H = layout.getChartAreaBoundingBox().height;
     var Y2 =
-      $("#" + id + " " + ".chart").last().offset().top - $(window)["scrollTop"]() + H - Y + 10;
+      $("#" + id + " " + ".chart")
+        .last()
+        .offset().top -
+      $(window)["scrollTop"]() +
+      H -
+      Y +
+      10;
     return (Y2 * vmax) / H;
   }
 
   function chartGetx(chart, X) {
     var layout = chart.getChartLayoutInterface();
     var L = layout.getChartAreaBoundingBox().width;
-    var X2 = X - $("#" + id + " " + ".chart").last().offset().left - 30;
+    var X2 =
+      X -
+      $("#" + id + " " + ".chart")
+        .last()
+        .offset().left -
+      30;
     return (X2 * dmax) / L;
   }
 
@@ -1532,16 +1614,22 @@ function visuGPX(id, url, visuGpxOptions) {
     if (b > dmax) {
       b = dmax;
     }
-    $("#" + id + " " + ".ligne-gauche").attr("x", 30 + (L * a) / dmax - LARGEUR_LIGNE / 2);
-    $("#" + id + " " + ".ligne-droite").attr("x", 30 + (L * b) / dmax - LARGEUR_LIGNE / 2);
+    $("#" + id + " " + ".ligne-gauche").attr(
+      "x",
+      30 + (L * a) / dmax - LARGEUR_LIGNE / 2
+    );
+    $("#" + id + " " + ".ligne-droite").attr(
+      "x",
+      30 + (L * b) / dmax - LARGEUR_LIGNE / 2
+    );
     updateBornes();
   }
 
   function affichePhotoPosition(x, y) {
     $("#" + id + " " + ".image-rando").each(function () {
-
       if ($(this).height() > $(this).width()) {
-        $(this).addClass("image-rando-vertical ");
+        $(this).removeClass("image-rando");
+        $(this).addClass("image-rando-vertical");
       }
 
       var lat = $(this).attr("data-lat");
