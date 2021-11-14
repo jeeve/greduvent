@@ -183,7 +183,7 @@ function visuGPX(id, url, visuGpxOptions) {
 
         if (visuGpxOptions.mode == "rando") {
           var images = document.querySelectorAll(
-            "#" + id + " " + ".image-rando"
+            "#" + id + " " + ".photos-rando img"
           );
           images.forEach(function (image) {
             if (
@@ -206,10 +206,9 @@ function visuGPX(id, url, visuGpxOptions) {
             }
           });
 
-          $("#" + id + " " + ".image-rando").each(function () {
+          $("#" + id + " " + ".photos-rando img").each(function () {
             if ($(this).height() > $(this).width()) {
-              //$(this).removeClass("image-rando");
-              $(this).addClass("image-rando-vertical");
+              $(this).addClass("photo-rando-vertical");
             }
           });
         }
@@ -1658,7 +1657,7 @@ function visuGPX(id, url, visuGpxOptions) {
 
   function affichePhotoPosition(x, y) {
     $(
-      "#" + id + " " + ".image-rando, #" + id + " " + ".image-rando-vertical"
+      "#" + id + " " + ".photos-rando img, #" + id + " " + ".photo-rando-vertical"
     ).each(function () {
       var lat = $(this).attr("data-lat");
       var lon = $(this).attr("data-lon");

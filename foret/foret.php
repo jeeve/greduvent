@@ -339,26 +339,19 @@
                                     <div class="map"></div>
                                     <div class="time"></div>
 
-                                    <a href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">
-                                        <img src="images/rando-11-11-2021-1.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-2.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-3.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-5.jpg" class="image-rando"
-                                            data-lat="48.40151734377023" data-lon="2.5459161917368434"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-6.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-7.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-8.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-11-11-2021-11.jpg" class="image-rando"
-                                            style="display: none;" />
-                                    </a>
-
+                                    <div class="photos-rando">
+                                        <a href="https://photos.app.goo.gl/a5MtCTKawCS2iD737" target="_blank">
+                                            <img src="images/rando-11-11-2021-1.jpg" />
+                                            <img src="images/rando-11-11-2021-2.jpg" />
+                                            <img src="images/rando-11-11-2021-3.jpg" />
+                                            <img src="images/rando-11-11-2021-5.jpg" data-lat="48.40151734377023"
+                                                data-lon="2.5459161917368434" />
+                                            <img src="images/rando-11-11-2021-6.jpg" />
+                                            <img src="images/rando-11-11-2021-7.jpg" />
+                                            <img src="images/rando-11-11-2021-8.jpg" />
+                                            <img src="images/rando-11-11-2021-11.jpg">
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <div class="chart"></div>
@@ -513,36 +506,26 @@
                                     <div class="map"></div>
                                     <div class="time"></div>
 
-                                    <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">
-                                        <img src="images/rando-23-10-2021-1.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-2.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-3.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-4.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-5.jpg" class="image-rando"
-                                            data-lat="48.3944444" data-lon="2.547222222222222" style="display: none;" />
-                                        <img src="images/rando-23-10-2021-6.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-7.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-8.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-9.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-10.jpg" class="image-rando"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-11.jpg" class="image-rando"
-                                            data-lat="48.3916667" data-lon="2.5452777777777778"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-12.jpg" class="image-rando"
-                                            data-lat="48.3916667" data-lon="2.5480555555555555"
-                                            style="display: none;" />
-                                        <img src="images/rando-23-10-2021-13.jpg" class="image-rando"
-                                            style="display: none;" />
-                                    </a>
+                                    <div class="photos-rando">
+                                        <a href="https://photos.app.goo.gl/yP4TVzXuq8avWLuV9" target="_blank">
+                                            <img src="images/rando-23-10-2021-1.jpg" />
+                                            <img src="images/rando-23-10-2021-2.jpg" />
+                                            <img src="images/rando-23-10-2021-3.jpg" />
+                                            <img src="images/rando-23-10-2021-4.jpg" />
+                                            <img src="images/rando-23-10-2021-5.jpg" data-lat="48.3944444"
+                                                data-lon="2.547222222222222" />
+                                            <img src="images/rando-23-10-2021-6.jpg" />
+                                            <img src="images/rando-23-10-2021-7.jpg" />
+                                            <img src="images/rando-23-10-2021-8.jpg" />
+                                            <img src="images/rando-23-10-2021-9.jpg" />
+                                            <img src="images/rando-23-10-2021-10.jpg" />
+                                            <img src="images/rando-23-10-2021-11.jpg" data-lat="48.3916667"
+                                                data-lon="2.5452777777777778" />
+                                            <img src="images/rando-23-10-2021-12.jpg" data-lat="48.3916667"
+                                                data-lon="2.5480555555555555" />
+                                            <img src="images/rando-23-10-2021-13.jpg" />
+                                        </a>
+                                    </div>
 
                                 </div>
 

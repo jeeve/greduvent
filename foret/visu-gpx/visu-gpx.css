@@ -79,7 +79,8 @@ td {
   border: 3px solid rgb(110, 110, 112);
 }
 
-.image-rando {
+.photos-rando img {
+  display: none;
   position: absolute;
   bottom: -3px;
   z-index: 10000;
@@ -90,7 +91,8 @@ td {
   max-width: 100%;
 }
 
-.image-rando-vertical {
+.photos-rando .photo-rando-vertical {
+  display: none;
   position: absolute;
   bottom: -3px;
   z-index: 10000;
