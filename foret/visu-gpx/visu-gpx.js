@@ -182,14 +182,34 @@ function visuGPX(id, url, visuGpxOptions) {
         map.fitBounds(polyline.getBounds());
 
         if (visuGpxOptions.mode == "rando") {
-          $("#" + id + " " + ".image-rando").each(function () {
-            var lat = $(this).attr("data-lat");
-            var lon = $(this).attr("data-lon");
-            L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
+          var images = document.querySelectorAll(
+            "#" + id + " " + ".image-rando"
+          );
+          images.forEach(function (image) {
+            if (
+              image.hasAttribute("data-lat") &&
+              image.hasAttribute("data-lon")
+            ) {
+              var lat = image.getAttribute("data-lat");
+              var lon = image.getAttribute("data-lon");
+              L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
+            } else {
+              EXIF.getData(image, function () {
+                var tlat = EXIF.getTag(this, "GPSLatitude");
+                var tlon = EXIF.getTag(this, "GPSLongitude");
+                var lat = tlat[0] + tlat[1] / 60 + tlat[2] / 3600;
+                var lon = tlon[0] + tlon[1] / 60 + tlon[2] / 3600;
+                image.setAttribute("data-lat", lat);
+                image.setAttribute("data-lon", lon);
+                L.marker([lat, lon], { bubblingMouseEvents: true }).addTo(map);
+              });
+            }
+          });
 
+          $("#" + id + " " + ".image-rando").each(function () {
             if ($(this).height() > $(this).width()) {
               //$(this).removeClass("image-rando");
-              $(this).addClass("image-rando-vertical");       
+              $(this).addClass("image-rando-vertical");
             }
           });
         }
@@ -1071,14 +1091,20 @@ function visuGPX(id, url, visuGpxOptions) {
       return;
     }
     var data = google.visualization.arrayToDataTable(chartxy);
-    
+
     var vAxisOptions;
     var enableInteractivityOptions = false;
     if (visuGpxOptions.mode == "rando") {
-      vAxisOptions = { viewWindowMode: "explicit", viewWindow: { min: Math.min(...h), max: Math.max(...h) } };
+      vAxisOptions = {
+        viewWindowMode: "explicit",
+        viewWindow: { min: Math.min(...h), max: Math.max(...h) },
+      };
       enableInteractivityOptions = true;
     } else {
-      vAxisOptions = { viewWindowMode: "explicit", viewWindow: { min: 0, max: vmax } };
+      vAxisOptions = {
+        viewWindowMode: "explicit",
+        viewWindow: { min: 0, max: vmax },
+      };
     }
 
     var options = {
@@ -1631,8 +1657,9 @@ function visuGPX(id, url, visuGpxOptions) {
   }
 
   function affichePhotoPosition(x, y) {
-    $("#" + id + " " + ".image-rando, #" + id + " " + ".image-rando-vertical").each(function () {
-
+    $(
+      "#" + id + " " + ".image-rando, #" + id + " " + ".image-rando-vertical"
+    ).each(function () {
       var lat = $(this).attr("data-lat");
       var lon = $(this).attr("data-lon");
 
