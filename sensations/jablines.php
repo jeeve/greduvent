@@ -9,39 +9,24 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/spots.css" media="all" />
     <style>
-    .webcam {
-        position: relative;
-    }
-
-    .webcam img {
-        position: relative;
-        z-index: 1;
-    }
-
-    .webcam .webcam-texte {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 10;
-    }
-
-    .webcam-texte p {
-        color: silver;
-    }
-
-    .webcam .webcam-titre {
+    #webcam {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 10;
     }
 
-    .webcam-titre p {
+    #meteo-tems-reel {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #meteo-tems-reel p,
+    #webcam p {
         color: silver;
-        text-align: center;
     }
 
     .histo img {
@@ -81,21 +66,21 @@
                         <div class="col-xs-12 col-sm-12 fond">
                             <br>
                             <div class="visible-xs">
-                                <p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le grand
-                                        ballon</a></p>
+                            <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
                             </div>
 
-                            <div class="webcam">
+                            <div class="embed-responsive embed-responsive-4by3 ombre-image">
                                 <div class="ombre-image">
                                     <div>
-                                        <video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1"
-                                            preload="auto" loop="" muted="muted" playsinline="playsinline"
-                                            autoplay=""></video>
-                                        <div class="hidden-xs webcam-titre">
-                                            <p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le
-                                                    grand ballon</a></p>
-                                        </div>
-                                        <div class="hidden-xs webcam-texte">
+                                    <video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto"
+                                        loop="" muted="muted" playsinline="playsinline" autoplay="">
+                                    </video>
+                                    <div id="webcam" class="hidden-xs">
+                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
+                                    </div>
+                                    <div id="meteo-tems-reel" class="hidden-xs">
                                             <table>
                                                 <tr>
                                                     <td>
@@ -394,21 +379,24 @@
     <script src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/meteo.js"></script>
     <script>
-    function getWebCam() {
         /*
-        jQuery.ajax({
-        	url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
-        	type: 'GET',
-        	crossDomain: true,
-        	dataType: 'json'
-        }).then(function(data) {
-        	console.log(data.src);
-        jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);	
-        });
-        */
+    function getWebCam() {
         jQuery('#videojs-viewsurf_html5_api').replaceWith(
             '<img src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg" class="img-responsive"/>'
             );
+    }
+    */
+
+    function getWebCam() {
+        jQuery.ajax({
+            url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
+            type: 'GET',
+            crossDomain: true,
+            dataType: 'json'
+        }).then(function(data) {
+            console.log(data.src);
+            jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);
+        });
     }
 
     var myCam = setInterval(getWebCam, 30000); // 30 s

@@ -27,9 +27,9 @@
 			getWebCamPoses();
 			getWebCamMoisson();
 			getWebCamSaintQuentin();
-			getWebCamEuroDisney();
 			getWebCamGrandeParoisse();
 			getWebCamEcluzelles();
+			getWebCamJablines();
 			// getWebCamForetOrient();
 		}
 		
@@ -94,8 +94,8 @@
 		}
 		
 				
-		function getWebCamEuroDisney() {
-			/*
+		function getWebCamJablines() {
+			
 			jQuery.ajax({
 				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
 				type: 'GET',
@@ -103,9 +103,9 @@
 				dataType: 'json'
 			}).then(function(data) {
 				console.log(data.src);
-				jQuery('.video-eurodisney').attr('src', data.src);
+				jQuery('.video-jablines').attr('src', data.src);
 		});
-		*/
+		
 		jQuery('.video-eurodisney').replaceWith('<img src="https://www.panoramagique.com/wp-content/uploads/webcam/webcampanoraMagique.jpg" class="img-responsive"/>');
 		}
 		

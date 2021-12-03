@@ -302,7 +302,7 @@
                                 </div>
 
                                 <div id="item-webcam-poses" class="collapse">
-                                    <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
+                                    <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
 
                                         <video id="video-poses" class="vjs-tech" tabindex="-1" preload="auto" loop=""
                                             muted="muted" playsinline="playsinline" autoplay=""></video>
@@ -447,7 +447,7 @@
                                 </div>
 
                                 <div id="item-webcam-moisson" class="collapse">
-                                    <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
+                                    <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
 
                                         <video id="video-moisson" class="vjs-tech" tabindex="-1" preload="auto" loop=""
                                             muted="muted" playsinline="playsinline" autoplay=""></video>
@@ -582,7 +582,7 @@
                                 </div>
 
                                 <div id="item-webcam-ecluzelles" class="collapse">
-                                    <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
+                                    <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
 
                                         <video id="video-ecluzelles" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
@@ -808,11 +808,11 @@
                                 <div id="item-webcam-jablines" class="collapse">
                                     <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
 
-                                        <video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto"
+                                        <video class="video-jablines" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
                                         <div class="webcam-texte">
-                                            <p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le
-                                                    grand ballon</a></p>
+                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
                                         </div>
 
                                     </div>
@@ -941,11 +941,11 @@
                                 <div id="item-webcam-vaires" class="collapse">
                                     <div class="embed-responsive embed-responsive-4by3 ombre-image webcam">
 
-                                        <video class="video-eurodisney" class="vjs-tech" tabindex="-1" preload="auto"
+                                        <video class="video-jablines" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
                                         <div class="webcam-texte">
-                                            <p>Euro Disney, <a href='https://www.panoramagique.com/' target="_blank">le
-                                                    grand ballon</a></p>
+                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
                                         </div>
 
                                     </div>
