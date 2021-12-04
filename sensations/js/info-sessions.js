@@ -82,7 +82,7 @@ function getInfoSessions(spot) {
                             html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><div class="image"><img title="Vidéo" alt="Vidéo" class="img-responsive ombre-image video" src="http://img.youtube.com/vi/' + codeYoutube + '/0.jpg" style="display: block; text-align: center; margin: auto;"><img title="Vidéo" alt="Vidéo" class="icone-lecture" src="images/lecture-video-2.png"></div></a></p>';
                         }
                         else {
-                            html = html + '<p align="center"><img src="' + laVideo + '" class="img-responsive ombre-image"></p>';
+                            html = html + '<p align="center"><a href="' + laVideo + '" target="_blank"><img src="' + laVideo + '" class="img-responsive ombre-image"></a></p>';
                         }
                     }
 
