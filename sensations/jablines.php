@@ -66,8 +66,8 @@
                         <div class="col-xs-12 col-sm-12 fond">
                             <br>
                             <div class="visible-xs">
-                            <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
-                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
+                            <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris</p>
                             </div>
 
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
@@ -77,8 +77,8 @@
                                         loop="" muted="muted" playsinline="playsinline" autoplay="">
                                     </video>
                                     <div id="webcam" class="hidden-xs">
-                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
-                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
+                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris</p>
                                     </div>
                                     <div id="meteo-tems-reel" class="hidden-xs">
                                             <table>
@@ -389,7 +389,7 @@
 
     function getWebCam() {
         jQuery.ajax({
-            url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
+            url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris',
             type: 'GET',
             crossDomain: true,
             dataType: 'json'

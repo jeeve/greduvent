@@ -50,6 +50,10 @@
 	if ($url == "https://www.webcam-autoroute.eu/fr/caméra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims") {
 		$line2  = "https://gieat.viewsurf.com?id=6968&action=mediaRedirect";
 	}
+
+	if ($url == "https://www.webcam-autoroute.eu/fr/caméra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris") {
+		$line2  = "https://gieat.viewsurf.com?id=6960&action=mediaRedirect";
+	}
 		
 if ($url == "https://www.viewsurf.com/univers/ville/vue/17714-france-champagne-ardenne-mesnil-saint-pere-lac-dorient-le-lac") {
 	$lines = file($url);

@@ -811,8 +811,8 @@
                                         <video class="video-jablines" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
                                         <div class="webcam-texte">
-                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
-                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
+                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris</p>
                                         </div>
 
                                     </div>
@@ -944,8 +944,8 @@
                                         <video class="video-jablines" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
                                         <div class="webcam-texte">
-                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims'
-                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Reims</p>
+                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
+                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris</p>
                                         </div>
 
                                     </div>

@@ -97,7 +97,7 @@
 		function getWebCamJablines() {
 			
 			jQuery.ajax({
-				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/344/ile-de-france/bailly-romainvilliers/paris-vers-reims',
+				url: '/sensations/webcam-viewsurf-src-video.php?url=https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris',
 				type: 'GET',
 				crossDomain: true,
 				dataType: 'json'
