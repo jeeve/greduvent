@@ -138,3 +138,7 @@ input {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+.datetimeform label {
+  font-weight: normal;
+}
