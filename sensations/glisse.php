@@ -163,15 +163,8 @@
                      </table>
                   </div>
                   <br>	  
-                  <div class="row">
-                     <div class="col-xs-12 col-sm-1 fond"></div>
-                     <div class="col-xs-12 col-sm-10 fond">
-                        <div id="chart_div_2" class="chart fond ombre-image"></div>
-                        <p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windfoil</a></p>
-                     </div>
-                  </div>
-                  <br>   
-                  <br>	  
+
+
                   <div class="row">
                      <div class="col-xs-12 col-sm-1 fond"></div>
                      <div class="col-xs-12 col-sm-10 fond">
@@ -179,6 +172,17 @@
                         <p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windsurf</a></p>
                      </div>
                   </div>
+                  <br>   
+                  <br>	 
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-1 fond"></div>
+                     <div class="col-xs-12 col-sm-10 fond">
+                        <div id="chart_div_2" class="chart fond ombre-image"></div>
+                        <p class="legende"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml" target="_blank">Vitesses windfoil</a></p>
+                     </div>
+                  </div>
+ 
+
                   <br>	
                   <br>
                   <div class="row">

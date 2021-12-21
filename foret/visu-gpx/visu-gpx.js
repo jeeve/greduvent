@@ -377,7 +377,7 @@ function visuGPX(id, url, visuGpxOptions) {
     $("#" + id + " " + ".position").val("0.000");
     $("#" + id + " " + ".temps").val("0");
     $("#" + id + " " + ".vitesse").text("0.00");
-    $("#" + id + " " + ".rapidite").val("10");
+    $("#" + id + " " + ".rapidite").val("50");
     $("#" + id + " " + ".fenetre-largeur").val("2.000");
   }
 
