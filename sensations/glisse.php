@@ -64,7 +64,7 @@
                         <ul>
                            <li>
                               <p>
-                                 flotteur&nbsp; Starboard Isonic 111 litres modèle 2009<br>
+                                 flotteur&nbsp;Starboard Isonic 111 litres modèle 2009<br>
                                  dimensions : 234 x 68,5 cm
                               </p>
                            </li>
@@ -82,7 +82,7 @@
                               <p>voile Neilpryde V8 modèle 2017<br>
                                  surface : 7,7 m²
                               </p>
-                           </li>
+                           </li>                           
                         </ul>
                         <p style="margin-bottom: 20px; margin-left: 45px;">
                            Vmax : <strong><span id="vmax-windsurf"></span></strong> kts<br>
@@ -95,7 +95,7 @@
                         <h2>Windfoil</h2>
                         <ul>
                            <li>
-                              <p>flotteur&nbsp; JP Hydrofoil 135 modèle 2018<br>
+                              <p>flotteur&nbsp;JP Hydrofoil 135 modèle 2018<br>
                                  dimensions : 215 x 86 cm
                               </p>
                            </li>
