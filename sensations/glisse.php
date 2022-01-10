@@ -90,7 +90,7 @@
                         </p>
                         <p align="center">ça dépote !</p>
                         <h2>Kitesurf</h2>
-                        <p>Après quelques années de pratique, j'ai déposé les armes pour me recentrer sur la planche.</p>
+                        <p>Après quelques années de pratique, je me suis recentré sur la planche.</p>
                         <p><br></p>
                         <h2>Windfoil</h2>
                         <ul>
@@ -101,7 +101,7 @@
                            </li>
                            <li>
                               <p>foil Taaroa Noé Freerace modèle 2020<br>
-                                 ailes 800 et 1050
+                                 ailes 600, 800 et 1050
                               </p>
                            </li>
                         </ul>
