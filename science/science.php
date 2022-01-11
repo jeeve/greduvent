@@ -87,7 +87,7 @@
                                                         <font size="1">Sommaire</font>
                                                     </a>
                                                     <font size="1">
-                                                        - <a href="#relativite-restreinte">La relativité resteinte</a> -
+                                                        - <a href="#relativite-restreinte">La relativité restreinte</a> -
                                                     </font>
                                                     <a href="#relativite-restreinte-fin">
                                                         <font size="1">Fin</font>
@@ -128,7 +128,7 @@ Et donc plus l'objet se déplace vite, plus il a d'énergie... car il se contrac
                                                         <font size="1">Sommaire</font>
                                                     </a>
                                                     <font size="1">
-                                                        - <a href="#relativite-restreinte">La relativité resteinte</a> -
+                                                        - <a href="#relativite-restreinte">La relativité restreinte</a> -
                                                     </font>
                                                     <a href="#relativite-restreinte-fin">
                                                         <font size="1">Fin</font>
