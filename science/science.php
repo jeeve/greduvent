@@ -36,6 +36,7 @@
                             </p>
                             <br>
                             <ul class="sommaire">
+                                <li><a href="#relativite-restreinte">La relativité restreinte</a></li>
                                 <li><a href="#hypothese-riemann">L'hypothèse de Riemann</a></li>
                                 <li><a href="#espace-temps">Espace-temps</a></li>
                                 <li><a href="#mouvement-perpetuel">Mouvement perpétuel</a></li>
@@ -46,6 +47,64 @@
                                 <li><a href="#principe-inertie">Principe d'inertie</a></li>
                                 <li><a href="#teleportation-ionique">Téléportation ionique</a></li>
                             </ul>
+
+                            <a name="relativite-restreinte"></a>
+                            <table class="table-externe">
+                                <tr>
+                                    <td>
+                                        <table border="0" width="100%">
+                                            <tr>
+                                                <td class="titre-externe">
+                                                    <h2>La relativité resteinte</h2>
+                                                </td>
+                                                <td class="titre-externe" align="right">
+                                                    <a target="_blank"
+                                                        href="https://docs.google.com/forms/d/e/1FAIpQLScpCsx9wor9hE0LNdcuTTVBB-SsaCMG988-MqC-ml5l2HP79g/viewform?usp=pp_url&entry.532531437=La+relativit%C3%A9+restreinte">
+                                                        <span class="glyphicon glyphicon-edit"
+                                                            aria-hidden="true"></span> contribuer</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table class="table-interne">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p><a name="relativite-resteinte-fin"></a>Trois épisodes présentant les effets de la relavité restreinte sur le ralentissement du temps et la contraction des longueurs. L'auteur nous explique les phénomènes uniquement avec le concet d'espace-temps et ne fait pas appel à l'invariance de la lumière.</p>
+                                                    <br>
+                                                    <p align="center">
+                                                    <div class="embed-responsive embed-responsive-16by9 ombre-image">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLfmoC4rulCxiIcLznaGY-gO52RKLl0HpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    </div>
+                                                    </p><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="colonne-lien">
+                                                    <a href="#sommaire">
+                                                        <font size="1">Sommaire</font>
+                                                    </a>
+                                                    <font size="1">
+                                                        - <a href="#relativite-restreinte">La relativité resteinte</a> -
+                                                    </font>
+                                                    <a href="#relativite-restreinte-fin">
+                                                        <font size="1">Fin</font>
+                                                    </a>
+                                                </td>
+                                                <td class="colonne-auteur">
+                                                    <a target="_blank" href="https://www.crm.umontreal.ca/~durand/">
+                                                        <font size="1">Stéphane Durand</font>
+                                                    </a>
+                                                    <font size="1">,
+                                                        11/01/2022 14h08</font>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
 
                             <a name="hypothese-riemann"></a>
                             <table class="table-externe">
