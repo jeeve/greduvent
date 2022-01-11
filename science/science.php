@@ -72,7 +72,7 @@
                                         <table class="table-interne">
                                             <tr>
                                                 <td colspan="2">
-                                                    <p><a name="relativite-resteinte-fin"></a>Trois épisodes présentant les effets de la relavité restreinte sur le ralentissement du temps et la contraction des longueurs. L'auteur nous explique les phénomènes uniquement avec le concet d'espace-temps et ne fait pas appel à l'invariance de la lumière.</p>
+                                                    <p>Trois épisodes présentant les effets de la relavité restreinte sur le ralentissement du temps et la contraction des longueurs. L'auteur nous explique les phénomènes uniquement avec le concet d'espace-temps et ne fait pas appel à l'invariance de la lumière.</p>
                                                     <br>
                                                     <p align="center">
                                                     <div class="embed-responsive embed-responsive-16by9 ombre-image">
@@ -98,12 +98,53 @@
                                                         <font size="1">Stéphane Durand</font>
                                                     </a>
                                                     <font size="1">,
-                                                        11/01/2022 14h08</font>
+                                                        10/01/2022 22h41</font>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        <table class="table-interne">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p><a name="relativite-restreinte-fin"></a>Petit raisonnement de physique fondamentale :
+
+Il est assez intuitif de se dire que les objets ont plus d'énergie quand ils se déplacent plus vite... Mais pourquoi ?<br><br>
+Les objets sont constitués de particules. La physique quantique nous enseigne qu'une particule peut-être imaginée comme une petite onde.<br><br>
+Mais la relativité restreinte nous enseigne que lorsqu'un objet se déplace, il se contracte dans le sens de son mouvement.
+<br><br>
+Par conséquent, toutes les particules qui le composent se contractent également. Globalement, leurs longueurs d'ondes rétrécissent.<br><br>
+Mais plus la longueur d'onde est petite, plus l'onde a d'énergie : en se contractant, les particules gagnent en énergie !
+<br><br>
+Et donc plus l'objet se déplace vite, plus il a d'énergie... car il se contracte, d'après la relativité restreinte.
+                                                    </p><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="colonne-lien">
+                                                    <a href="#sommaire">
+                                                        <font size="1">Sommaire</font>
+                                                    </a>
+                                                    <font size="1">
+                                                        - <a href="#relativite-restreinte">La relativité resteinte</a> -
+                                                    </font>
+                                                    <a href="#relativite-restreinte-fin">
+                                                        <font size="1">Fin</font>
+                                                    </a>
+                                                </td>
+                                                <td class="colonne-auteur">
+                                                    <a target="_blank" href="https://twitter.com/ScienceClic">
+                                                        <font size="1">@ScienceClic</font>
+                                                    </a>
+                                                    <font size="1">,
+                                                        11/01/2022 14h08</font>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>                                
                             </table>
 
                             <a name="hypothese-riemann"></a>
