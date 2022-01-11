@@ -55,7 +55,7 @@
                                         <table border="0" width="100%">
                                             <tr>
                                                 <td class="titre-externe">
-                                                    <h2>La relativité resteinte</h2>
+                                                    <h2>La relativité restreinte</h2>
                                                 </td>
                                                 <td class="titre-externe" align="right">
                                                     <a target="_blank"
