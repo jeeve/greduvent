@@ -54,7 +54,7 @@
                             <font size="2">lundi 9 novembre 2020</font>
                         </em></p>
 
-                    <hr>
+                   <hr>
 
 
                     <a name="jeudejose"></a>
@@ -263,7 +263,7 @@
                                 
                             </p>
                             <p class="legende">
-                                    target="_blank">Défauthèque
+                                    Défauthèque
                             </p>
                             </a>
                         </div>
