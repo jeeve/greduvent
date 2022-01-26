@@ -257,13 +257,13 @@
                         <div class="col-xs-12 col-sm-3 fond"></div>
                         <div class="col-xs-12 col-sm-6 fond">
                             <p align="center">
-                                <a href="http://defautheque.000webhostapp.com" target="blank">
+                                
                                     <img alt="Défauthèque" title="Défauthèque" src="images/defautheque.jpg"
                                         class="img-responsive ombre-image" />
-                                </a>
+                                
                             </p>
-                            <p class="legende"><a href="http://defautheque.000webhostapp.com"
-                                    target="_blank">Défauthèque</a>
+                            <p class="legende">
+                                    target="_blank">Défauthèque
                             </p>
                             </a>
                         </div>
