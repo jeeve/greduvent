@@ -188,7 +188,7 @@
 
                     <a name="scrollscreens"></a>
                     <h2>Scroll Screens</h2>
-                    <p>Un <a href="appli/scrollscreens.zip" target="_blank">petit programme Windows</a> maison écrit
+                    <p>Un <a href="https://github.com/jeeve/scrollscreens" target="_blank">petit programme Windows</a> maison écrit
                         en
                         Windev 19 pour faire défiler une image sur autant d'écrans que l'on veut. Pour cela il
                         suffit de
