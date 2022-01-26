@@ -67,8 +67,8 @@
                             target="_blank">programme</a> écrit en Python :<br>
                         <br>
                     <div class="row row-cadre">
-                        <div class="col-sd-12 col-sm-2"></div>
-                        <div class="col-sd-12 col-sm-8 fond-table encadrement-table">
+                        <div class="col-sd-12 col-sm-1"></div>
+                        <div class="col-sd-12 col-sm-10 fond-table encadrement-table">
                             <div class="font-code">
                                 <div>import random</div>
                                 <div>from copy import copy</div>
