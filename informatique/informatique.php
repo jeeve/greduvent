@@ -27,7 +27,6 @@
                         <li><a href="#scrollscreens">Scroll Screens</a></li>
                         <li><a href="#angular">Angular</a></li>
                         <li><a href="#lecteur-audio">Lecteur audio HTML5</a></li>
-                        <li><a href="#informatique-cognitive">Informatique cognitive</a></li>
                         <li><a href="#ia">Intelligence artificielle</a></li>
                         <li><a href="#scheme">Le langage Scheme</a></li>
                     </ul>
@@ -334,85 +333,6 @@
 
                     <hr>
 
-                    <a name="informatique-cognitive"></a>
-                    <h2>Informatique cognitive</h2>
-                    <p>IMB travaille activement dans le domaine émergent de l'informatique cognitive
-                        qui serait la 3ème ère de l'informatique (hardware, software, cognitive). </p>
-                    <p>Pour
-                        inciter les étudiants, chercheurs, industriels à tester ces technologies
-                        capables d'extraire des concepts et leurs relations d'un texte par exemple, IBM
-                        met à disposition ses
-                        <a target="_blank"
-                            href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/services-catalog.html">API
-                            dans le cloud</a>.
-                    </p>
-                    <!--
-<p>Un exemple de traduction automatique, entrez votre texte en anglais :</p>
-		<p>
-	
-			<textarea style="width:80%" id="texte" rows="4">The IBM Watson Dialog service enables a developer to automate branching conversations between a user and your application. The Dialog service enables your applications to use natural language to automatically respond to user questions, cross-sell and up-sell, walk users through processes or applications, or even hand-hold users through difficult tasks. The Dialog service can track and store user profile information to learn more about end users, guide them through processes based on their unique situation, or pass their information to a back-end system to help them take action and get the help they need.</textarea>
-		
-		</p>
-		
-
-		<button id="btn">Traduire en français</button>
-		
-        <div><em>
-            <p id="traduction"></p></em>
-        </div>
-<br>-->
-                    <!--
-<p>Un autre exemple avec la reconnaissance 
-d'images <a target="_blank" href="http://vision.alchemy.ai/">
-http://vision.alchemy.ai</a> où il suffit d'uploader une photo (ou son adresse) 
-pour obtenir sa description (sport, objet...), si c'est une personne, son sexe, son age, si c'est 
-une célébrité son nom et sa fonction...</p>
-
-<p>
-
-<u>Adresse de l'image</u> <input type="text" id="image-url">	
-<button id="image-btn">Analyser</button>	
-</p>
-
-	<div id="image-img">
-	</div>
-	<p></p>
-        <div>
-            <div id="image-classification"></div>
-        </div>
-
-
-<br>
--->
-                    <br>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-2 fond"></div>
-                        <div class="col-xs-12 col-sm-8 fond">
-                            <p align="center">
-                            <div class="embed-responsive embed-responsive-16by9 ombre-image">
-                                <iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/-nxUrBOiWVE?rel=0&amp;showinfo=0" frameborder="0"
-                                    allowfullscreen></iframe>
-                            </div>
-                            </p>
-                            <p class="legende">
-                                Conférence de Jérôme Pesenti, vice-président, Core Technology, chez IBM Watson
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <br>
-                    <a name="traducteur-langue-systran"></a>
-                    <p>Un sytème de traduction automatique à base de réseaux de neurones artificiels : <a
-                            target="_blank"
-                            href="https://demo-pnmt.systran.net/production#/translation">https://demo-pnmt.systran.net/production#/translation</a>
-                    </p>
-                    <p align="right"><em>
-                            <font size="2">mardi 18 octobre 2016</font>
-                        </em></p>
-                    <hr>
 
                     <a name="ia"></a>
                     <a name="tensorflow"></a>
