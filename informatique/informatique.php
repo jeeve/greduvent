@@ -65,7 +65,7 @@
                         infériorité numérique par rapport aux orques.</p>
                     <p>Le <a href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing"
                             target="_blank">programme</a> écrit en Python :<br>
-                        <br>
+                       
                     <div class="row row-cadre">
                         <div class="col-sd-12 col-sm-1"></div>
                         <div class="col-sd-12 col-sm-10 fond-table encadrement-table">
