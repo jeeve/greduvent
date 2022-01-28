@@ -64,7 +64,7 @@
                         infériorité numérique par rapport aux orques.</p>
                     <p>Le <a href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing"
                             target="_blank">programme</a> écrit en Python :<br>
-                       
+                    <br>   
                     <div class="row row-cadre">
                         <div class="col-sd-12 col-sm-1"></div>
                         <div class="col-sd-12 col-sm-10 fond-table encadrement-table">
@@ -343,6 +343,7 @@
                         ouvert,
                         interfaçable en langage Python. A vos claviers !
                     </p>
+                    <br>
                     <div class="row">
                         <div class="col-xs-12 col-sm-2 fond"></div>
                         <div class="col-xs-12 col-sm-8 fond">
@@ -436,6 +437,7 @@
                         l'atmosphère quasi spirituelle du lieu, ce que je découvris ici allait
                         m'élever dans la quête d'absolu. Feuilletant un livre de programmation je lu ceci :<br>
                     </p>
+                    <br>
                     <div class="row row-cadre">
                         <div class="col-sd-12 col-sm-2"></div>
                         <div class="col-sd-12 col-sm-8 fond-table encadrement-table">
@@ -466,7 +468,7 @@
                         un dialecte de Lisp. Ce passage où fleurissent parenthèses et autres
                         curiosités syntaxiques pourrait s'écrire en français :<br>
                     </p>
-
+<br>
                     <div class="row row-cadre">
                         <div class="col-sd-12 col-sm-2"></div>
                         <div class="col-sd-12 col-sm-8 fond-table encadrement-table">
@@ -528,6 +530,7 @@
                         reste à inventer.<span class="hidden-xs"> Dans mon carnet de voyage, à la première page,
                             j'ai
                             recopié ce poème de Shriram Krishnamurthi :</span></p>
+                            <br>
 
                     <div class="hidden-xs row">
                         <div class="col-sd-12 col-sm-1 col-lg-2"></div>
@@ -590,6 +593,7 @@
                         parlent tous un dialecte du Scheme, appelé Hop comme cette île. Les premiers
                         mots que j'appris pour dire bonjour :&nbsp;
                     </p>
+                    <br>
                     <div class="row row-cadre">
                         <div class="col-sd-12 col-sm-2"></div>
                         <div class="col-sd-12 col-sm-8 fond-table encadrement-table">
@@ -615,6 +619,7 @@
                     <br>
                     <p>Voici les explications dispensées par une des plus éminentes personnalités insulaire
                         :</p>
+                        <br>
                     <div class="row">
                         <div class="col-xs-12 col-sm-3"></div>
                         <div class="col-xs-12 col-sm-6">
