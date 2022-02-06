@@ -89,6 +89,7 @@
                    <div class="containerPlayer">
                         <div>
                            <ul id="playListContainer"> 
+                       <li data-src="songs/infection.mp3"><a href="#">Infection</a></li>
 							  <li data-src="songs/la-mare-aux-fees.mp3"><a href="#">La mare aux fées</a></li>
 							  <li data-src="songs/machination.mp3"><a href="#">Machination</a></li>
 							  <li data-src="songs/algorithme.mp3"><a href="#">Algorithme</a></li>							   						   
