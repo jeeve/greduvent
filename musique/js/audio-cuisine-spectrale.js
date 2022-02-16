@@ -5,14 +5,11 @@ var OK = false;
 
 $(document).ready(function () {
   $("#lecteur").click(function () {
-    OK = true;
-  });
 
   $("#playListContainer").audioControls({
     autoPlay: true,
     timer: "increment",
     onAudioChange: function (response) {
-      if (OK) {
         $(".songPlay").text(response.title);
 
         var audio = this._audio;
@@ -77,7 +74,6 @@ $(document).ready(function () {
           requestAnimationFrame(renderFrame);
         }
         renderFrame();
-      }
     },
     onVolumeChange: function (vol) {
       var obj = $(".volume");
@@ -92,6 +88,7 @@ $(document).ready(function () {
       } else {
         obj.attr("class", "volume volume1");
       }
-    },
+    }
   });
+});
 });
