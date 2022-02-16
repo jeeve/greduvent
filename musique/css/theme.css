@@ -54,11 +54,11 @@
 
 #lecteur {
 	border: 1px solid silver;
-	/*border-style: inset;*/
 	position: absolute;
 	background-color: #f8f8f8;;
 	height: 100%;
 	width: 310px;
+	display: inline-block;
 }
 
 #player {
@@ -84,4 +84,9 @@
 
 #playListContainer li:hover {
 	background-color: #d9dff2;
+}
+
+#visu {
+	background-color: black;
+	height: 100vh;
 }
