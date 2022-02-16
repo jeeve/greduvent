@@ -79,7 +79,7 @@
             <button type="button" id="BtnPlay" class="btn btn-default btn-lg" data-attr="playPauseAudio">
                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
             </button>
-            <button type="button" id="BtnPause" class="btn btn-default btn-lg" data-attr="playPauseAudio">
+            <button type="button" id="BtnPause" class="btn btn-default btn-lg pauseAudio" data-attr="playPauseAudio">
                 <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
             </button>
             <button type="button" class="btn btn-default btn-lg" data-attr="nextAudio">

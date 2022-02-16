@@ -5,15 +5,14 @@ var OK = false;
 
 $(document).ready(function () {
   $("#lecteur").click(function () {
-
-  $("#playListContainer").audioControls({
-    autoPlay: true,
-    timer: "increment",
-    onAudioChange: function (response) {
+    $("#playListContainer").audioControls({
+      autoPlay: true,
+      timer: "increment",
+      onAudioChange: function (response) {
         $(".songPlay").text(response.title);
 
         var audio = this._audio;
-        var ctx = new AudioContext;
+        var ctx = new AudioContext();
         var analyser = ctx.createAnalyser();
         var audioSrc = ctx.createMediaElementSource(audio);
         // we have to connect the MediaElementSource with the analyser
@@ -74,21 +73,21 @@ $(document).ready(function () {
           requestAnimationFrame(renderFrame);
         }
         renderFrame();
-    },
-    onVolumeChange: function (vol) {
-      var obj = $(".volume");
-      if (vol <= 0) {
-        obj.attr("class", "volume mute");
-      } else if (vol <= 33) {
-        obj.attr("class", "volume volume1");
-      } else if (vol > 33 && vol <= 66) {
-        obj.attr("class", "volume volume2");
-      } else if (vol > 66) {
-        obj.attr("class", "volume volume3");
-      } else {
-        obj.attr("class", "volume volume1");
-      }
-    }
+      },
+      onVolumeChange: function (vol) {
+        var obj = $(".volume");
+        if (vol <= 0) {
+          obj.attr("class", "volume mute");
+        } else if (vol <= 33) {
+          obj.attr("class", "volume volume1");
+        } else if (vol > 33 && vol <= 66) {
+          obj.attr("class", "volume volume2");
+        } else if (vol > 66) {
+          obj.attr("class", "volume volume3");
+        } else {
+          obj.attr("class", "volume volume1");
+        }
+      },
+    });
   });
-});
 });
