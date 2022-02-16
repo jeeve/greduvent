@@ -16,7 +16,7 @@ $(document).ready(function () {
         $(".songPlay").text(response.title);
 
         var audio = this._audio;
-        var ctx = window.AudioContext;
+        var ctx = new AudioContext;
         var analyser = ctx.createAnalyser();
         var audioSrc = ctx.createMediaElementSource(audio);
         // we have to connect the MediaElementSource with the analyser
