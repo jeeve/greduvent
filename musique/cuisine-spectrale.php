@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="css/theme.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.audioControls.min.js"></script>
-    <script src="js/audio.js"></script>
+    <script src="js/audio-cuisine-spectrale.js"></script>
 
     <script type="text/javascript">
     $(function() {
@@ -168,7 +168,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
-    <script src="js/visu.js"></script>
+   <!-- <script src="js/visu.js"></script> -->
 </body>
 
 </html>
