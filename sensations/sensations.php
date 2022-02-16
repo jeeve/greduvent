@@ -63,7 +63,7 @@
 
                                 </p>
                                 <p class="legende">
-                                    <a href="lac-lery-poses.php">Léry-Poses</a> - samedi 26 mai 2018
+                                    <a href="lery-poses.php">Léry-Poses</a> - samedi 26 mai 2018
                                 </p>
                             </div>
 
