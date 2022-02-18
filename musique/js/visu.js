@@ -1,808 +1,307 @@
-var mContainer;
-var mCamera, mRenderer;
-var mControls;
+// https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js
+// https://cdnjs.cloudflare.com/ajax/libs/pixi.js/1.6.1/pixi.js
+// https://codepen.io/ma77os/pen/xxyywo
 
-var mShadowColor = 0x13091B; //0x1B0914
+(
+  function() {
+  var AUDIO_URL, TOTAL_BANDS, analyser, analyserDataArray, arrCircles, audio, build, buildCircles, canplay, changeMode, changeTheme, circlesContainer, cp, createCircleTex, gui, hammertime, init, initAudio, initGUI, initGestures, isPlaying, k, message, modes, mousePt, mouseX, mouseY, params, play, renderer, resize, stage, startAnimation, texCircle, themes, themesNames, update, v, windowH, windowW;
 
-var mScene;
-var mLight;
-var mLight2;
-var mLight3;
+  AUDIO_URL = "https://lab.ma77os.com/audio-cloud/music/paradise_circus.mp3";
 
-var mUseAA = true;
-var mParticleCount = 250000;
-var mParticleSystem;
+  modes = ["cubic", "conic"];
 
-var mDuration;
-var mPathLength = 32;
+  themes = {
+    pinkBlue: [0xFF0032, 0xFF5C00, 0x00FFB8, 0x53FF00],
+    yellowGreen: [0xF7F6AF, 0x9BD6A3, 0x4E8264, 0x1C2124, 0xD62822],
+    yellowRed: [0xECD078, 0xD95B43, 0xC02942, 0x542437, 0x53777A],
+    blueGray: [0x343838, 0x005F6B, 0x008C9E, 0x00B4CC, 0x00DFFC],
+    blackWhite: [0xFFFFFF, 0x000000, 0xFFFFFF, 0x000000, 0xFFFFFF]
+  };
 
-var mAudioElement = document.getElementById('song');
-var mAnalyser;
+  themesNames = [];
 
-var mPlayBtn = document.querySelector('.play-btn');
-var mPlayBtnContainer = document.querySelector('.container');
+  for (k in themes) {
+    v = themes[k];
+    themesNames.push(k);
+  }
 
-mPlayBtn.addEventListener('click', function() {
-	
-	mAnalyser.context.resume().then(() => {
-    console.log('Playback resumed successfully');
-  });
-	
-	mPlayBtnContainer.style.display = 'none';
-	mAudioElement.currentTime = 0;
-	mAudioElement.play();
-	
-	mCamera.position.set(0, 0, 1200);
-});
-mAudioElement.addEventListener('ended', function() {
-		mPlayBtnContainer.style.display = 'flex';
-})
+  // PARAMETERS
+  params = {
+    // public
+    mode: modes[0],
+    theme: themesNames[0],
+    radius: 3,
+    distance: 600,
+    size: .5,
+    // private
+    numParticles: 5000,
+    sizeW: 1,
+    sizeH: 1,
+    radiusParticle: 60,
+    themeArr: themes[this.theme]
+  };
 
+  TOTAL_BANDS = 256;
+  cp = new PIXI.Point();
+  mouseX = 0;
+  mouseY = 0;
+  mousePt = new PIXI.Point();
+  windowW = 0;
+  windowH = 0;
+  stage = null;
+  renderer = null;
+  texCircle = null;
+  circlesContainer = null;
+  arrCircles = [];
+  hammertime = null;
+  message = null;
 
-window.onload = function () {
-  init();
-};
+  // audio
+  audio = null;
+  analyser = null;
+  analyserDataArray = null;
+  isPlaying = false;
+  canplay = false;
 
-function init() {
-  initAudio();
-  initTHREE();
-  initControls();
-  initParticleSystem();
+  // gui
+  gui = null;
 
-  requestAnimationFrame(tick);
-  window.addEventListener('resize', resize, false);
-}
+  init = function() {
+    initGestures();
+    message = $(".message");
+    message.on("click", play);
+    resize();
+    build();
+    resize();
+    mousePt.x = cp.x;
+    mousePt.y = cp.y;
+    $(window).resize(resize);
+    startAnimation();
+    return initGUI();
+  };
 
-function initAudio() {
-  mAudioElement.crossOrigin = "anonymous";
-  mAudioElement.src = 'https://raw.githubusercontent.com/zadvorsky/three.bas/master/examples/_audio/song.mp3';
-
-  mAnalyser = new SpectrumAnalyzer(mPathLength * 0.5, 0.80);
-  mAnalyser.setSource(mAudioElement);
-}
-
-function initTHREE() {
-  mRenderer = new THREE.WebGLRenderer({antialias: mUseAA});
-  mRenderer.setSize(window.innerWidth, window.innerHeight);
-  //mRenderer.setClearColor(0xffffff);
-  mRenderer.setClearColor(mShadowColor);
-
-  mContainer = document.getElementById('three-container');
-  mContainer.appendChild(mRenderer.domElement);
-
-  mCamera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 5000);
-  mCamera.position.set(0, 0, 1200);
-
-  mScene = new THREE.Scene();
-
-  mLight = new THREE.PointLight(0xffffff, 1, 1200, 2);
-  mLight.position.set(0, 0, 0);
-  mScene.add(mLight);
-
-  mLight2 = new THREE.DirectionalLight(0xFF311F, 0.25);
-  mLight2.position.set(0, 1, 1);
-  mScene.add(mLight2);
-
-  mLight3 = new THREE.DirectionalLight(0x007A99, 0.25);
-  mLight3.position.set(0, 1, -1);
-  mScene.add(mLight3);
-}
-
-function initControls() {
-  mControls = new THREE.OrbitControls(mCamera, mRenderer.domElement);
-  mControls.autoRotate = true;
-  mControls.enableZoom = true;
-  mControls.enablePan = false;
-	mControls.constraint.minDistance = 10;
-	mControls.constraint.maxDistance = 1200;
-  mControls.constraint.minPolarAngle = Math.PI * 0.4;
-	mControls.constraint.maxPolarAngle = Math.PI * 0.6;
-}
-
-function initParticleSystem() {
-  var prefabGeometry = new THREE.PlaneGeometry(4, 4);
-  var bufferGeometry = new THREE.BAS.PrefabBufferGeometry(prefabGeometry, mParticleCount);
-
-  //bufferGeometry.computeVertexNormals();
-
-  // generate additional geometry data
-  var aDelayDuration = bufferGeometry.createAttribute('aDelayDuration', 2);
-  var aPivot = bufferGeometry.createAttribute('aPivot', 3);
-  var aAxisAngle = bufferGeometry.createAttribute('aAxisAngle', 4);
-  var aColor = bufferGeometry.createAttribute('color', 3);
-
-  var i, j, offset;
-
-  // buffer time offset
-  var delay;
-  var duration;
-  var prefabDelay = 0.00015;
-  var vertexDelay = 0.0175;
-  var minDuration = 32.0;
-  var maxDuration = 56.5;
-
-  mDuration = maxDuration + prefabDelay * mParticleCount + vertexDelay * prefabGeometry.vertices.length;
-
-  for (i = 0, offset = 0; i < mParticleCount; i++) {
-    delay = i * prefabDelay;
-    duration = THREE.Math.randFloat(minDuration, maxDuration);
-
-    for (j = 0; j < prefabGeometry.vertices.length; j++) {
-      aDelayDuration.array[offset++] = delay + j * vertexDelay;
-      aDelayDuration.array[offset++] = duration;
+  play = function() {
+    if (isPlaying) {
+      return;
     }
-  }
-
-  // buffer pivot
-  var pivot = new THREE.Vector3();
-
-  for (i = 0, offset = 0; i < mParticleCount; i++) {
-    pivot.x = THREE.Math.randFloat(0, 2);
-    pivot.y = THREE.Math.randFloat(0, 2);
-    pivot.z = THREE.Math.randFloat(0, 2);
-
-    for (j = 0; j < prefabGeometry.vertices.length; j++) {
-      aPivot.array[offset++] = pivot.x;
-      aPivot.array[offset++] = pivot.y;
-      aPivot.array[offset++] = pivot.z;
+    initAudio();
+    message.css("cursor", "default");
+    if (canplay) {
+      message.hide();
+    } else {
+      message.html("LOADING MUSIC...");
     }
-  }
+    audio.play();
+    return isPlaying = true;
+  };
 
-  // buffer axis angle
-  var axis = new THREE.Vector3();
-  var angle = 0;
+  initGUI = function() {
+    var modeController, sizeController, themeController;
+    gui = new dat.GUI();
+    // if window.innerWidth < 500
+    gui.close();
+    modeController = gui.add(params, 'mode', modes);
+    modeController.onChange(function(value) {
+      return changeMode(value);
+    });
+    themeController = gui.add(params, 'theme', themesNames);
+    themeController.onChange(function(value) {
+      return changeTheme(params.theme);
+    });
+    gui.add(params, 'radius', 1, 8);
+    gui.add(params, 'distance', 100, 1000);
+    sizeController = gui.add(params, 'size', 0, 1);
+    return sizeController.onChange(function(value) {
+      return resize(value);
+    });
+  };
 
-  for (i = 0, offset = 0; i < mParticleCount; i++) {
-    axis.x = THREE.Math.randFloatSpread(2);
-    axis.y = THREE.Math.randFloatSpread(2);
-    axis.z = THREE.Math.randFloatSpread(2);
-    axis.normalize();
+  initAudio = function() {
+    var context, source;
+    context = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = context.createAnalyser();
+    //   analyser.smoothingTimeConstant = 0.5
+    source = null;
+    audio = new Audio();
+    audio.crossOrigin = "anonymous";
+    audio.src = AUDIO_URL;
+    return audio.addEventListener('canplay', function() {
+      var bufferLength;
+      if (isPlaying) {
+        message.hide();
+      }
+      canplay = true;
+      source = context.createMediaElementSource(audio);
+      source.connect(analyser);
+      source.connect(context.destination);
+      analyser.fftSize = TOTAL_BANDS * 2;
+      bufferLength = analyser.frequencyBinCount;
+      return analyserDataArray = new Uint8Array(bufferLength);
+    });
+  };
 
-    angle = Math.PI * THREE.Math.randInt(48, 64);
+  startAnimation = function() {
+    return requestAnimFrame(update);
+  };
 
-    for (j = 0; j < prefabGeometry.vertices.length; j++) {
-      aAxisAngle.array[offset++] = axis.x;
-      aAxisAngle.array[offset++] = axis.y;
-      aAxisAngle.array[offset++] = axis.z;
-      aAxisAngle.array[offset++] = angle;
+  initGestures = function() {
+    return $(window).on('mousemove touchmove', function(e) {
+      if (e.type === 'mousemove') {
+        mouseX = e.clientX;
+        return mouseY = e.clientY;
+      } else {
+        mouseX = e.originalEvent.changedTouches[0].clientX;
+        return mouseY = e.originalEvent.changedTouches[0].clientY;
+      }
+    });
+  };
+
+  build = function() {
+    stage = new PIXI.Stage(0x000000);
+    renderer = PIXI.autoDetectRenderer({
+      width: $(window).width(),
+      height: $(window).height(),
+      antialias: true,
+      resolution: window.devicePixelRatio
+    });
+    $(document.body).append(renderer.view);
+    texCircle = createCircleTex();
+    return buildCircles();
+  };
+
+  buildCircles = function() {
+    var circle, i, j, ref;
+    circlesContainer = new PIXI.DisplayObjectContainer();
+    stage.addChild(circlesContainer);
+    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
+      circle = new PIXI.Sprite(texCircle);
+      circle.anchor.x = 0.5;
+      circle.anchor.y = 0.5;
+      circle.position.x = circle.xInit = cp.x;
+      circle.position.y = circle.yInit = cp.y;
+      circle.mouseRad = Math.random();
+      circlesContainer.addChild(circle);
+      arrCircles.push(circle);
     }
-  }
+    return changeTheme(params.theme);
+  };
 
-  // buffer color
-  var color = new THREE.Color();
-  var h, s, l;
+  createCircleTex = function() {
+    var gCircle;
+    gCircle = new PIXI.Graphics();
+    gCircle.beginFill(0xFFFFFF);
+    gCircle.drawCircle(0, 0, params.radiusParticle);
+    gCircle.endFill();
+    return gCircle.generateTexture();
+  };
 
-  for (i = 0, offset = 0; i < mParticleCount; i++) {
-    //h = i / mParticleCount;
-    h = THREE.Math.randFloat(0.5, 1.00);
-    s = THREE.Math.randFloat(0.5, 0.75);
-    l = THREE.Math.randFloat(0.25, 0.5);
-
-    color.setHSL(h, s, l);
-
-    for (j = 0; j < prefabGeometry.vertices.length; j++) {
-      aColor.array[offset++] = color.r;
-      aColor.array[offset++] = color.g;
-      aColor.array[offset++] = color.b;
+  resize = function() {
+    windowW = $(window).width();
+    windowH = $(window).height();
+    cp.x = windowW * .5;
+    cp.y = windowH * .5;
+    params.sizeW = windowH * params.size;
+    params.sizeH = windowH * params.size;
+    changeMode(params.mode);
+    if (renderer) {
+      return renderer.resize(windowW, windowH);
     }
-  }
+  };
 
-  // buffer spline (uniform)
-  var pathArray = [];
-  var radiusArray = [];
-  var length = mPathLength;
-  var x, y, z;
-
-  for (i = 0; i < length; i++) {
-    if (!i) {
-      x = 0;
-      y = -1400;
-      z = 0;
+  changeTheme = function(name) {
+    var circle, group, i, indexColor, j, padColor, ref, results;
+    params.themeArr = themes[name];
+    indexColor = 0;
+    padColor = Math.ceil(params.numParticles / params.themeArr.length);
+    results = [];
+    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
+      circle = arrCircles[i];
+      group = indexColor * padColor / params.numParticles;
+      circle.blendMode = params.theme === "blackWhite" ? PIXI.blendModes.NORMAL : PIXI.blendModes.ADD;
+      circle.indexBand = Math.round(group * (TOTAL_BANDS - 56)) - 1;
+      if (circle.indexBand <= 0) {
+        circle.indexBand = 49;
+      }
+      circle.s = (Math.random() + (params.themeArr.length - indexColor) * 0.2) * 0.1;
+      circle.scale = new PIXI.Point(circle.s, circle.s);
+      if (i % padColor === 0) {
+        indexColor++;
+      }
+      results.push(circle.tint = params.themeArr[indexColor - 1]);
     }
-    else if (!(i - length + 1)) {
-      x = 0;
-      y = 1200;
-      z = 0;
+    return results;
+  };
+
+  changeMode = function(value) {
+    var angle, circle, i, j, ref, results;
+    if (!arrCircles || arrCircles.length === 0) {
+      return;
     }
-    else {
-      x = THREE.Math.randFloatSpread(600);
-      y = (-400 + (800 / length) * i) + THREE.Math.randFloatSpread(200);
-      z = THREE.Math.randFloatSpread(600);
+    if (!value) {
+      value = modes[Math.floor(Math.random() * modes.length)];
     }
-
-    pathArray.push(x, y, z);
-    radiusArray.push(0);
-  }
-
-  var material = new THREE.BAS.PhongAnimationMaterial(
-    // custom parameters & THREE.MeshPhongMaterial parameters
-    {
-      vertexColors: THREE.VertexColors,
-      shading: THREE.FlatShading,
-      side: THREE.DoubleSide,
-      defines: {
-        PATH_LENGTH:pathArray.length / 3
-      },
-      uniforms: {
-        uTime: {type: 'f', value: 0},
-        uPath: {type: 'fv', value: pathArray},
-        uRadius: {type: 'fv1', value: radiusArray},
-        uRoundness: {type: 'v2', value: new THREE.Vector2(2, 2)}
-      },
-      shaderFunctions: [
-        THREE.BAS.ShaderChunk['quaternion_rotation'],
-        THREE.BAS.ShaderChunk['catmull-rom'],
-        THREE.BAS.ShaderChunk['ease_in_out_cubic']
-      ],
-      shaderParameters: [
-        'uniform float uTime;',
-        'uniform vec3 uPath[PATH_LENGTH];',
-        'uniform float uRadius[PATH_LENGTH];',
-        'uniform vec2 uRoundness;',
-        'attribute vec2 aDelayDuration;',
-        'attribute vec3 aPivot;',
-        'attribute vec4 aAxisAngle;'
-      ],
-      shaderVertexInit: [
-        'float tDelay = aDelayDuration.x;',
-        'float tDuration = aDelayDuration.y;',
-        'float tTime = clamp(uTime - tDelay, 0.0, tDuration);',
-        'float tProgress = tTime / tDuration;',
-
-        'float angle = aAxisAngle.w * tProgress;',
-        'vec4 tQuat = quatFromAxisAngle(aAxisAngle.xyz, angle);'
-      ],
-      shaderTransformNormal: [
-        'objectNormal = rotateVector(tQuat, objectNormal);'
-      ],
-      shaderTransformPosition: [
-        'float tMax = float(PATH_LENGTH - 1);',
-        'float tPoint = tMax * tProgress;',
-        'float tIndex = floor(tPoint);',
-        'float tWeight = tPoint - tIndex;',
-
-        'int i0 = int(max(0.0, tIndex - 1.0));',
-        'int i1 = int(tIndex);',
-        'int i2 = int(min(tIndex + 1.0, tMax));',
-        'int i3 = int(min(tIndex + 2.0, tMax));',
-        'vec3 p0 = uPath[i0];',
-        'vec3 p1 = uPath[i1];',
-        'vec3 p2 = uPath[i2];',
-        'vec3 p3 = uPath[i3];',
-
-        'float radius = catmullRom(uRadius[i0], uRadius[i1], uRadius[i2], uRadius[i3], tWeight);',
-        'transformed += aPivot * radius;',
-
-        'transformed = rotateVector(tQuat, transformed);',
-
-        'transformed += catmullRom(p0, p1, p2, p3, uRoundness, tWeight);'
-      ]
-    },
-    // THREE.MeshPhongMaterial uniforms
-    {
-      shininess: 16,
-      specular: 0xffd700,
-      emissive: mShadowColor
-    }
-  );
-
-  mParticleSystem = new THREE.Mesh(bufferGeometry, material);
-  mParticleSystem.frustumCulled = false;
-
-  mScene.add(mParticleSystem);
-}
-
-function tick() {
-  update();
-  render();
-
-  requestAnimationFrame(tick);
-}
-
-function update() {
-  mControls.update();
-  mAnalyser.updateSample();
-
-  var uniform = mParticleSystem.material.uniforms['uRadius'].value;
-  var data = mAnalyser.frequencyByteData;
-
-  var dataArray = [];
-  var cap = data.length * 0.5;
-  var i;
-
-  //for (i = cap - 1; i >= 0; i--) {
-  for (i = 0; i < cap; i++) {
-    dataArray.push(data[i]);
-  }
-
-  for (i = cap - 1; i >= 0; i--) {
-  //for (i = 0; i < cap; i++) {
-    dataArray.push(data[i]);
-  }
-
-  //for (i = cap - 1; i >= 0; i--) {
-  for (i = 0; i < cap; i++) {
-    dataArray.push(data[i]);
-  }
-
-  for (i = cap - 1; i >= 0; i--) {
-  //for (i = 0; i < cap; i++) {
-    dataArray.push(data[i]);
-  }
-
-  for (i = 0; i < dataArray.length; i++) {
-    if (i && dataArray.length - i > 1) {
-      var val = dataArray[i] / 255;
-      uniform[i] = Math.max(1, val * val * val * 48);
-    }
-    else {
-      uniform[i] = 128;
-    }
-  }
-
-  var a0 = mAnalyser.getAverageFloat();
-  var r = 8 * a0 * a0 * a0 + 1;
-  mParticleSystem.material.uniforms['uRoundness'].value.set(r, r);
-
-  var a1 = mAnalyser.getAverageFloat() * 2;
-  mLight.intensity = a1 * a1;
-  mLight2.intensity = a1 * a1 * a1 * a1 * 0.5;
-  mLight3.intensity = a1 * a1 * a1 * a1 * 0.5;
-
-  mParticleSystem.material.uniforms['uTime'].value = mAudioElement.currentTime || 0;
-}
-
-function render() {
-  mRenderer.render(mScene, mCamera);
-}
-
-function resize() {
-  mCamera.aspect = window.innerWidth / window.innerHeight;
-  mCamera.updateProjectionMatrix();
-
-  mRenderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-/////////////////////////////////
-// Spectrum Analyser
-/////////////////////////////////
-
-// https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
-function SpectrumAnalyzer(binCount, smoothingTimeConstant) {
-  var Context = window["AudioContext"] || window["webkitAudioContext"];
-
-  this.context = new Context();
-  this.analyzerNode = this.context.createAnalyser();
-
-  this.setBinCount(binCount);
-  this.setSmoothingTimeConstant(smoothingTimeConstant);
-}
-
-SpectrumAnalyzer.prototype = {
-  setSource: function (source) {
-    //this.source = source;
-    this.source = this.context.createMediaElementSource(source);
-    this.source.connect(this.analyzerNode);
-    this.analyzerNode.connect(this.context.destination);
-  },
-
-  setBinCount: function (binCount) {
-    this.binCount = binCount;
-    this.analyzerNode.fftSize = binCount * 2;
-
-    this.frequencyByteData = new Uint8Array(binCount); 	// frequency
-    this.timeByteData = new Uint8Array(binCount);		// waveform
-  },
-
-  setSmoothingTimeConstant: function (smoothingTimeConstant) {
-    this.analyzerNode.smoothingTimeConstant = smoothingTimeConstant;
-  },
-
-  getFrequencyData: function () {
-    return this.frequencyByteData;
-  },
-
-  getTimeData: function () {
-    return this.timeByteData;
-  },
-  // not save if out of bounds
-  getAverage: function (index, count) {
-    var total = 0;
-    var start = index || 0;
-    var end = start + (count || this.binCount);
-
-    for (var i = start; i < end; i++) {
-      total += this.frequencyByteData[i];
-    }
-
-    return total / (end - start);
-  },
-  getAverageFloat:function(index, count) {
-    return this.getAverage(index, count) / 255;
-  },
-
-  updateSample: function () {
-    this.analyzerNode.getByteFrequencyData(this.frequencyByteData);
-    this.analyzerNode.getByteTimeDomainData(this.timeByteData);
-  }
-};
-
-///////////////
-// buffer animation system 
-///////////////
-
-THREE.BAS = {};
-
-THREE.BAS.ShaderChunk = {};
-
-THREE.BAS.ShaderChunk["animation_time"] = "float tDelay = aAnimation.x;\nfloat tDuration = aAnimation.y;\nfloat tTime = clamp(uTime - tDelay, 0.0, tDuration);\nfloat tProgress = ease(tTime, 0.0, 1.0, tDuration);\n";
-
-THREE.BAS.ShaderChunk["catmull-rom"] = "vec3 catmullRom(vec3 p0, vec3 p1, vec3 p2, vec3 p3, float t)\n{\n    vec3 v0 = (p2 - p0) * 0.5;\n    vec3 v1 = (p3 - p1) * 0.5;\n    float t2 = t * t;\n    float t3 = t * t * t;\n\n    return vec3((2.0 * p1 - 2.0 * p2 + v0 + v1) * t3 + (-3.0 * p1 + 3.0 * p2 - 2.0 * v0 - v1) * t2 + v0 * t + p1);\n}\n\nvec3 catmullRom(vec3 p0, vec3 p1, vec3 p2, vec3 p3, vec2 c, float t)\n{\n    vec3 v0 = (p2 - p0) * c.x;\n    vec3 v1 = (p3 - p1) * c.y;\n    float t2 = t * t;\n    float t3 = t * t * t;\n\n    return vec3((2.0 * p1 - 2.0 * p2 + v0 + v1) * t3 + (-3.0 * p1 + 3.0 * p2 - 2.0 * v0 - v1) * t2 + v0 * t + p1);\n}\n\nfloat catmullRom(float p0, float p1, float p2, float p3, float t)\n{\n    float v0 = (p2 - p0) * 0.5;\n    float v1 = (p3 - p1) * 0.5;\n    float t2 = t * t;\n    float t3 = t * t * t;\n\n    return float((2.0 * p1 - 2.0 * p2 + v0 + v1) * t3 + (-3.0 * p1 + 3.0 * p2 - 2.0 * v0 - v1) * t2 + v0 * t + p1);\n}\n\nfloat catmullRom(float p0, float p1, float p2, float p3, vec2 c, float t)\n{\n    float v0 = (p2 - p0) * c.x;\n    float v1 = (p3 - p1) * c.y;\n    float t2 = t * t;\n    float t3 = t * t * t;\n\n    return float((2.0 * p1 - 2.0 * p2 + v0 + v1) * t3 + (-3.0 * p1 + 3.0 * p2 - 2.0 * v0 - v1) * t2 + v0 * t + p1);\n}\n";
-
-THREE.BAS.ShaderChunk["cubic_bezier"] = "vec3 cubicBezier(vec3 p0, vec3 c0, vec3 c1, vec3 p1, float t)\n{\n    vec3 tp;\n    float tn = 1.0 - t;\n\n    tp.xyz = tn * tn * tn * p0.xyz + 3.0 * tn * tn * t * c0.xyz + 3.0 * tn * t * t * c1.xyz + t * t * t * p1.xyz;\n\n    return tp;\n}\n";
-
-THREE.BAS.ShaderChunk["ease_in_cubic"] = "float ease(float t, float b, float c, float d) {\n  return c*(t/=d)*t*t + b;\n}\n";
-
-THREE.BAS.ShaderChunk["ease_in_out_cubic"] = "float ease(float t, float b, float c, float d) {\n  if ((t/=d/2.0) < 1.0) return c/2.0*t*t*t + b;\n  return c/2.0*((t-=2.0)*t*t + 2.0) + b;\n}\n";
-
-THREE.BAS.ShaderChunk["ease_in_quad"] = "float ease(float t, float b, float c, float d) {\n  return c*(t/=d)*t + b;\n}\n";
-
-THREE.BAS.ShaderChunk["ease_out_cubic"] = "float ease(float t, float b, float c, float d) {\n  return c*((t=t/d - 1.0)*t*t + 1.0) + b;\n}\n";
-
-THREE.BAS.ShaderChunk["quaternion_rotation"] = "vec3 rotateVector(vec4 q, vec3 v)\n{\n    return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);\n}\n\nvec4 quatFromAxisAngle(vec3 axis, float angle)\n{\n    float halfAngle = angle * 0.5;\n    return vec4(axis.xyz * sin(halfAngle), cos(halfAngle));\n}\n";
-
-
-THREE.BAS.PrefabBufferGeometry = function (prefab, count) {
-  THREE.BufferGeometry.call(this);
-
-  this.prefabGeometry = prefab;
-  this.prefabCount = count;
-  this.prefabVertexCount = prefab.vertices.length;
-
-  this.bufferDefaults();
-};
-THREE.BAS.PrefabBufferGeometry.prototype = Object.create(THREE.BufferGeometry.prototype);
-THREE.BAS.PrefabBufferGeometry.prototype.constructor = THREE.BAS.PrefabBufferGeometry;
-
-THREE.BAS.PrefabBufferGeometry.prototype.bufferDefaults = function () {
-  var prefabFaceCount = this.prefabGeometry.faces.length;
-  var prefabIndexCount = this.prefabGeometry.faces.length * 3;
-  var prefabVertexCount = this.prefabVertexCount = this.prefabGeometry.vertices.length;
-  var prefabIndices = [];
-
-  //console.log('prefabCount', this.prefabCount);
-  //console.log('prefabFaceCount', prefabFaceCount);
-  //console.log('prefabIndexCount', prefabIndexCount);
-  //console.log('prefabVertexCount', prefabVertexCount);
-  //console.log('triangles', prefabFaceCount * this.prefabCount);
-
-  for (var h = 0; h < prefabFaceCount; h++) {
-    var face = this.prefabGeometry.faces[h];
-    prefabIndices.push(face.a, face.b, face.c);
-  }
-
-  var indexBuffer = new Uint32Array(this.prefabCount * prefabIndexCount);
-  var positionBuffer = new Float32Array(this.prefabCount * prefabVertexCount * 3);
-
-  this.setIndex(new THREE.BufferAttribute(indexBuffer, 1));
-  this.addAttribute('position', new THREE.BufferAttribute(positionBuffer, 3));
-
-  for (var i = 0, offset = 0; i < this.prefabCount; i++) {
-    for (var j = 0; j < prefabVertexCount; j++, offset += 3) {
-      var prefabVertex = this.prefabGeometry.vertices[j];
-
-      positionBuffer[offset    ] = prefabVertex.x;
-      positionBuffer[offset + 1] = prefabVertex.y;
-      positionBuffer[offset + 2] = prefabVertex.z;
-    }
-
-    for (var k = 0; k < prefabIndexCount; k++) {
-      indexBuffer[i * prefabIndexCount + k] = prefabIndices[k] + i * prefabVertexCount;
-    }
-  }
-};
-
-// todo test
-THREE.BAS.PrefabBufferGeometry.prototype.bufferUvs = function() {
-  var prefabFaceCount = this.prefabGeometry.faces.length;
-  var prefabVertexCount = this.prefabVertexCount = this.prefabGeometry.vertices.length;
-  var prefabUvs = [];
-
-  for (var h = 0; h < prefabFaceCount; h++) {
-    var face = this.prefabGeometry.faces[h];
-    var uv = this.prefabGeometry.faceVertexUvs[0][h];
-
-    prefabUvs[face.a] = uv[0];
-    prefabUvs[face.b] = uv[1];
-    prefabUvs[face.c] = uv[2];
-  }
-
-  var uvBuffer = this.createAttribute('uv', 2);
-
-  for (var i = 0, offset = 0; i < this.prefabCount; i++) {
-    for (var j = 0; j < prefabVertexCount; j++, offset += 2) {
-      var prefabUv = prefabUvs[j];
-
-      uvBuffer.array[offset] = prefabUv.x;
-      uvBuffer.array[offset + 1] = prefabUv.y;
-    }
-  }
-};
-
-/**
- * based on BufferGeometry.computeVertexNormals
- * calculate vertex normals for a prefab, and repeat the data in the normal buffer
- */
-THREE.BAS.PrefabBufferGeometry.prototype.computeVertexNormals = function () {
-  var index = this.index;
-  var attributes = this.attributes;
-  var positions = attributes.position.array;
-
-  if (attributes.normal === undefined) {
-    this.addAttribute('normal', new THREE.BufferAttribute(new Float32Array(positions.length), 3));
-  }
-
-  var normals = attributes.normal.array;
-
-  var vA, vB, vC,
-
-  pA = new THREE.Vector3(),
-  pB = new THREE.Vector3(),
-  pC = new THREE.Vector3(),
-
-  cb = new THREE.Vector3(),
-  ab = new THREE.Vector3();
-
-  var indices = index.array;
-  var prefabIndexCount = this.prefabGeometry.faces.length * 3;
-
-  for (var i = 0; i < prefabIndexCount; i += 3) {
-    vA = indices[i + 0] * 3;
-    vB = indices[i + 1] * 3;
-    vC = indices[i + 2] * 3;
-
-    pA.fromArray(positions, vA);
-    pB.fromArray(positions, vB);
-    pC.fromArray(positions, vC);
-
-    cb.subVectors(pC, pB);
-    ab.subVectors(pA, pB);
-    cb.cross(ab);
-
-    normals[vA] += cb.x;
-    normals[vA + 1] += cb.y;
-    normals[vA + 2] += cb.z;
-
-    normals[vB] += cb.x;
-    normals[vB + 1] += cb.y;
-    normals[vB + 2] += cb.z;
-
-    normals[vC] += cb.x;
-    normals[vC + 1] += cb.y;
-    normals[vC + 2] += cb.z;
-  }
-
-  for (var j = 1; j < this.prefabCount; j++) {
-    for (var k = 0; k < prefabIndexCount; k++) {
-      normals[j * prefabIndexCount + k] = normals[k];
-    }
-  }
-
-  this.normalizeNormals();
-
-  attributes.normal.needsUpdate = true;
-};
-
-THREE.BAS.PrefabBufferGeometry.prototype.createAttribute = function (name, itemSize) {
-  var buffer = new Float32Array(this.prefabCount * this.prefabVertexCount * itemSize);
-  var attribute = new THREE.BufferAttribute(buffer, itemSize);
-
-  this.addAttribute(name, attribute);
-
-  return attribute;
-};
-
-THREE.BAS.PrefabBufferGeometry.prototype.setAttribute4 = function (name, data) {
-  var offset = 0;
-  var array = this.geometry.attributes[name].array;
-  var i, j;
-
-  for (i = 0; i < data.length; i++) {
-    var v = data[i];
-
-    for (j = 0; j < this.prefabVertexCount; j++) {
-      array[offset++] = v.x;
-      array[offset++] = v.y;
-      array[offset++] = v.z;
-      array[offset++] = v.w;
-    }
-  }
-
-  this.geometry.attributes[name].needsUpdate = true;
-};
-THREE.BAS.PrefabBufferGeometry.prototype.setAttribute3 = function (name, data) {
-  var offset = 0;
-  var array = this.geometry.attributes[name].array;
-  var i, j;
-
-  for (i = 0; i < data.length; i++) {
-    var v = data[i];
-
-    for (j = 0; j < this.prefabVertexCount; j++) {
-      array[offset++] = v.x;
-      array[offset++] = v.y;
-      array[offset++] = v.z;
-    }
-  }
-
-  this.geometry.attributes[name].needsUpdate = true;
-};
-THREE.BAS.PrefabBufferGeometry.prototype.setAttribute2 = function (name, data) {
-  var offset = 0;
-  var array = this.geometry.attributes[name].array;
-  var i, j;
-
-  for (i = 0; i < this.prefabCount; i++) {
-    var v = data[i];
-
-    for (j = 0; j < this.prefabVertexCount; j++) {
-      array[offset++] = v.x;
-      array[offset++] = v.y;
-    }
-  }
-
-  this.geometry.attributes[name].needsUpdate = true;
-};
-
-THREE.BAS.BaseAnimationMaterial = function (parameters) {
-  THREE.ShaderMaterial.call(this);
-
-  this.shaderFunctions = [];
-  this.shaderParameters = [];
-  this.shaderVertexInit = [];
-  this.shaderTransformNormal = [];
-  this.shaderTransformPosition = [];
-
-  this.setValues(parameters);
-};
-THREE.BAS.BaseAnimationMaterial.prototype = Object.create(THREE.ShaderMaterial.prototype);
-THREE.BAS.BaseAnimationMaterial.prototype.constructor = THREE.BAS.BaseAnimationMaterial;
-
-// abstract
-THREE.BAS.BaseAnimationMaterial.prototype._concatVertexShader = function () {
-  return '';
-};
-
-THREE.BAS.BaseAnimationMaterial.prototype._concatFunctions = function () {
-  return this.shaderFunctions.join('\n');
-};
-THREE.BAS.BaseAnimationMaterial.prototype._concatParameters = function () {
-  return this.shaderParameters.join('\n');
-};
-THREE.BAS.BaseAnimationMaterial.prototype._concatVertexInit = function () {
-  return this.shaderVertexInit.join('\n');
-};
-THREE.BAS.BaseAnimationMaterial.prototype._concatTransformNormal = function () {
-  return this.shaderTransformNormal.join('\n');
-};
-THREE.BAS.BaseAnimationMaterial.prototype._concatTransformPosition = function () {
-  return this.shaderTransformPosition.join('\n');
-};
-
-
-THREE.BAS.BaseAnimationMaterial.prototype.setUniformValues = function (values) {
-  for (var key in values) {
-    if (key in this.uniforms) {
-      var uniform = this.uniforms[key];
-      var value = values[key];
-
-      // todo add matrix uniform types
-      switch (uniform.type) {
-        case 'c': // color
-          uniform.value.set(value);
+    params.mode = value;
+    results = [];
+    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
+      circle = arrCircles[i];
+      switch (params.mode) {
+        // cubic
+        case modes[0]:
+          circle.xInit = cp.x + (Math.random() * params.sizeW - params.sizeW / 2);
+          results.push(circle.yInit = cp.y + (Math.random() * params.sizeH - params.sizeH / 2));
           break;
-        case 'v2': // vectors
-        case 'v3':
-        case 'v4':
-          uniform.value.copy(value);
+        // circular
+        case modes[1]:
+          angle = Math.random() * (Math.PI * 2);
+          circle.xInit = cp.x + (Math.cos(angle) * params.sizeW);
+          results.push(circle.yInit = cp.y + (Math.sin(angle) * params.sizeH));
           break;
-        case 'f': // float
-        case 't': // texture
         default:
-          uniform.value = value;
+          results.push(void 0);
       }
     }
-  }
-};
+    return results;
+  };
 
-THREE.BAS.PhongAnimationMaterial = function(parameters, uniformValues) {
-    THREE.BAS.BaseAnimationMaterial.call(this, parameters);
+  update = function() {
+    var a, angle, circle, dist, dx, dy, i, j, n, r, ref, scale, t, xpos, ypos;
+    requestAnimFrame(update);
+    t = performance.now() / 60;
+    if (analyserDataArray && isPlaying) {
+      analyser.getByteFrequencyData(analyserDataArray);
+    }
+    if (mouseX > 0 && mouseY > 0) {
+      mousePt.x += (mouseX - mousePt.x) * 0.03;
+      mousePt.y += (mouseY - mousePt.y) * 0.03;
+    } else {
+      a = t * 0.05;
+      mousePt.x = cp.x + Math.cos(a) * 100;
+      mousePt.y = cp.y + Math.sin(a) * 100;
+    }
+    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
+      circle = arrCircles[i];
+      if (analyserDataArray && isPlaying) {
+        n = analyserDataArray[circle.indexBand];
+        scale = (n / 256) * circle.s * 2;
+      } else {
+        scale = circle.s * .1;
+      }
+      scale *= params.radius;
+      circle.scale.x += (scale - circle.scale.x) * 0.3;
+      circle.scale.y = circle.scale.x;
+      dx = mousePt.x - circle.xInit;
+      dy = mousePt.y - circle.yInit;
+      dist = Math.sqrt(dx * dx + dy * dy);
+      angle = Math.atan2(dy, dx);
+      r = circle.mouseRad * params.distance + 30;
+      xpos = circle.xInit - Math.cos(angle) * r;
+      ypos = circle.yInit - Math.sin(angle) * r;
+      circle.position.x += (xpos - circle.position.x) * 0.1;
+      circle.position.y += (ypos - circle.position.y) * 0.1;
+    }
+    return renderer.render(stage);
+  };
 
-    var phongShader = THREE.ShaderLib['phong'];
+  init();
 
-    this.uniforms = THREE.UniformsUtils.merge([phongShader.uniforms, this.uniforms]);
-    this.lights = true;
-    this.vertexShader = this._concatVertexShader();
-    this.fragmentShader = phongShader.fragmentShader;
-
-    // todo add missing default defines
-    uniformValues.map && (this.defines['USE_MAP'] = '');
-    uniformValues.normalMap && (this.defines['USE_NORMALMAP'] = '');
-
-    this.setUniformValues(uniformValues);
-};
-THREE.BAS.PhongAnimationMaterial.prototype = Object.create(THREE.BAS.BaseAnimationMaterial.prototype);
-THREE.BAS.PhongAnimationMaterial.prototype.constructor = THREE.BAS.PhongAnimationMaterial;
-
-THREE.BAS.PhongAnimationMaterial.prototype._concatVertexShader = function() {
-    // based on THREE.ShaderLib.phong
-    return [
-        "#define PHONG",
-
-        "varying vec3 vViewPosition;",
-
-        "#ifndef FLAT_SHADED",
-
-        "	varying vec3 vNormal;",
-
-        "#endif",
-
-        THREE.ShaderChunk[ "common" ],
-        THREE.ShaderChunk[ "uv_pars_vertex" ],
-        THREE.ShaderChunk[ "uv2_pars_vertex" ],
-        THREE.ShaderChunk[ "displacementmap_pars_vertex" ],
-        THREE.ShaderChunk[ "envmap_pars_vertex" ],
-        THREE.ShaderChunk[ "lights_phong_pars_vertex" ],
-        THREE.ShaderChunk[ "color_pars_vertex" ],
-        THREE.ShaderChunk[ "morphtarget_pars_vertex" ],
-        THREE.ShaderChunk[ "skinning_pars_vertex" ],
-        THREE.ShaderChunk[ "shadowmap_pars_vertex" ],
-        THREE.ShaderChunk[ "logdepthbuf_pars_vertex" ],
-
-        this._concatFunctions(),
-
-        this._concatParameters(),
-
-        "void main() {",
-
-        this._concatVertexInit(),
-
-        THREE.ShaderChunk[ "uv_vertex" ],
-        THREE.ShaderChunk[ "uv2_vertex" ],
-        THREE.ShaderChunk[ "color_vertex" ],
-        THREE.ShaderChunk[ "beginnormal_vertex" ],
-
-        this._concatTransformNormal(),
-
-        THREE.ShaderChunk[ "morphnormal_vertex" ],
-        THREE.ShaderChunk[ "skinbase_vertex" ],
-        THREE.ShaderChunk[ "skinnormal_vertex" ],
-        THREE.ShaderChunk[ "defaultnormal_vertex" ],
-
-        "#ifndef FLAT_SHADED", // Normal computed with derivatives when FLAT_SHADED
-
-        "	vNormal = normalize( transformedNormal );",
-
-        "#endif",
-
-        THREE.ShaderChunk[ "begin_vertex" ],
-
-        this._concatTransformPosition(),
-
-        THREE.ShaderChunk[ "displacementmap_vertex" ],
-        THREE.ShaderChunk[ "morphtarget_vertex" ],
-        THREE.ShaderChunk[ "skinning_vertex" ],
-        THREE.ShaderChunk[ "project_vertex" ],
-        THREE.ShaderChunk[ "logdepthbuf_vertex" ],
-
-        "	vViewPosition = - mvPosition.xyz;",
-
-        THREE.ShaderChunk[ "worldpos_vertex" ],
-        THREE.ShaderChunk[ "envmap_vertex" ],
-        THREE.ShaderChunk[ "lights_phong_vertex" ],
-        THREE.ShaderChunk[ "shadowmap_vertex" ],
-
-        "}"
-
-    ].join( "\n" );
-};
+}).call(this);
