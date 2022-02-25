@@ -1,7 +1,7 @@
 body, .fond {
 	background-image: url('/images/stars.gif');
     background-repeat: repeat;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	color: #FFC;
 }
 
