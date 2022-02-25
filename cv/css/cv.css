@@ -24,3 +24,20 @@ h3 {
     text-align: right;
     margin: 10px;
 }
+
+.developpement li {
+    margin: 10px;
+    list-style: none;
+}
+
+.legende {
+    text-align: left;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.sous-legende {
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+}
