@@ -16,6 +16,7 @@ h3 {
 .photo {
     float: left;
     margin-left: 5px;
+    width: 200px;
 }
 
 .nom {

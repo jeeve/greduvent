@@ -28,7 +28,7 @@
                         <div class="col-xs-1 col-md-7 fond"></div>
                         <div class="col-xs-10 col-md-5 fond-table encadrement-table">
                             <div>
-                                <img class="photo" src="images/jvj.jpg" />
+                                <img class="photo" src="images/jvj.png" />
                                 <div class="nom">Jean-Valéry</div>
                                 <div class="nom">JULIEN</div>
                             </div>
