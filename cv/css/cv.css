@@ -1,0 +1,26 @@
+
+h2 {
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+}
+
+.section {
+    display: inline-block;
+}
+
+.photo {
+    float: left;
+    margin-left: 5px;
+}
+
+.nom {
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+    text-align: right;
+    margin: 10px;
+}
