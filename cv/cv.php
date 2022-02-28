@@ -22,6 +22,18 @@
                 <div class="row">
                     <div class="col-xs-1 col-md-8 fond">
                         <h1>Curriculum vitæ</h1>
+
+                        <h2>Compétences</h2>
+                        <ul>
+                            <li><h3>Développement logiciel</h3></li>
+                            <li><h3>Programmation orientée objet</h3></li>
+                            <li><h3>Applications web, HTML 5</h3></li>
+                            <li><h3>SharePoint</h3></li>
+                            <li><h3>c#, Javascript, Python, Php, Delphi</h3></li>
+                            <li><h3>Windev, Webdev</h3></li>
+                            <li><h3>Anglais lu et écrit</h3></li>
+                        </ul>
+
                     </div>
                     <div class="col-xs-10 col-md-4 fond-table encadrement-table encadre">
                         <div>
@@ -54,7 +66,8 @@
                         <h2 class="experience">Expérience professionnelle</h2>
                         <ul>
                             <li>
-                                <h3><strong>C</strong>entre <strong>T</strong>echnique des <strong>I</strong>ndustries de la <strong>F</strong>onderie - Sèvres (92)</h3>
+                                <h3><strong>C</strong>entre <strong>T</strong>echnique des <strong>I</strong>ndustries
+                                    de la <strong>F</strong>onderie - Sèvres (92)</h3>
                                 <p>Technicien informatique</p>
                                 <p>De Septembre 1997 à aujourd'hui</p>
                                 <ul class="realisation">
@@ -191,20 +204,21 @@
                             <li>
                                 <h3>Manutentionnaire au sein de la société des Transports Urbains Blaisois</h3>
                                 <p>août 1994</p>
-                            </li> 
+                            </li>
                             <li>
                                 <h3>Stage industriel au Laboratoire de Biophysique Médicale de Tours</h3>
                                 <p>04/94 - 06/94</p>
                                 <ul class="realisation">
                                     <li>
-                                        <h4>Réalisation d’une interface utilisateur pour un instrument médical (langage Pascal avec objets Turbo Vision)</h4>
+                                        <h4>Réalisation d’une interface utilisateur pour un instrument médical (langage
+                                            Pascal avec objets Turbo Vision)</h4>
                                     </li>
                                 </ul>
-                            </li> 
+                            </li>
                             <li>
                                 <h3>Agent de service à la colonie de vacances MGET de Lourdes</h3>
                                 <p>août 1993</p>
-                            </li> 
+                            </li>
                             <li>
                                 <h3>Stage industriel dans la Société VERMON (ultrasons) de Tours</h3>
                                 <p>04/93 - 06/93</p>
@@ -213,7 +227,7 @@
                                         <h4>Réalisation d’une unité centrale à micro-contrôleur</h4>
                                     </li>
                                 </ul>
-                            </li>                                                                                                              
+                            </li>
 
                         </ul>
 
@@ -228,12 +242,12 @@
                     <li>
                         <h3>Bac +2 (BTS, DUT, DEUG), Informatique</h3>
                         <p>IUT Informatique - Le Havre (76)</p>
-                        <p>De Septembre 1994 à Septembre 1995</p>
+                        <p>1994 - 1995</p>
                     </li>
                     <li>
                         <h3>Bac +2 (BTS, DUT, DEUG), Electronique et Informatique Industrielle</h3>
                         <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
-                        <p>De Septembre 1992 à Septembre 1994</p>
+                        <p>1992 - 1994</p>
                     </li>
                     <li>
                         <h3>Bac E (Mathématiques et Techniques)</h3>
