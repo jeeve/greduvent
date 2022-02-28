@@ -26,6 +26,12 @@ h3 {
     margin: 10px;
 }
 
+.developpement ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .developpement li {
     margin: 10px;
     list-style: none;
@@ -33,12 +39,21 @@ h3 {
 
 .legende {
     text-align: left;
-    display: inline-block;
+  /*  display: inline-block;*/
     font-weight: bold;
 }
 
 .sous-legende {
-    display: inline-block;
+   /* display: inline-block;*/
     width: 100%;
     font-weight: normal;
 }
+
+.windows li {
+    width: 300px;
+}
+
+.internet img, .intranet img, .webdev img {
+    width: 300px;
+}
+
