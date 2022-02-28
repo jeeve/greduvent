@@ -1,7 +1,20 @@
+body, .fond {
+    background-image: none;
+    background-color: white;
+}
+
+.encadre {
+    margin-top: 10px;
+}
 
 h2 {
+    color: white;
     font-size: 24px;
     font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+    background-color:#398efd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 h3 {
@@ -26,25 +39,28 @@ h3 {
     margin: 10px;
 }
 
-.developpement ul {
+.realisation ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.developpement li {
+.realisation li {
     margin: 10px;
     list-style: none;
 }
 
-.legende {
-    text-align: left;
-  /*  display: inline-block;*/
+.realisation h4 {
     font-weight: bold;
 }
 
+.legende {
+    text-align: left;
+    font-weight: bold;
+    text-align: center;
+}
+
 .sous-legende {
-   /* display: inline-block;*/
     width: 100%;
     font-weight: normal;
 }

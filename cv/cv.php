@@ -18,12 +18,12 @@
 
             <!-- main area -->
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
-                <h1>Curriculum vitæ</h1>
 
-                <br>
                 <div class="row">
-                    <div class="col-xs-1 col-md-7 fond"></div>
-                    <div class="col-xs-10 col-md-5 fond-table encadrement-table">
+                    <div class="col-xs-1 col-md-8 fond">
+                        <h1>Curriculum vitæ</h1>
+                    </div>
+                    <div class="col-xs-10 col-md-4 fond-table encadrement-table encadre">
                         <div>
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
@@ -54,12 +54,12 @@
                         <h2 class="experience">Expérience professionnelle</h2>
                         <ul>
                             <li>
-                                <h3>Technicien informatique</h3>
-                                <p>CTIF - Sèvres (92)</p>
+                                <h3><strong>C</strong>entre <strong>T</strong>echnique des <strong>I</strong>ndustries de la <strong>F</strong>onderie - Sèvres (92)</h3>
+                                <p>Technicien informatique</p>
                                 <p>De Septembre 1997 à aujourd'hui</p>
-                                <ul class="developpement">
+                                <ul class="realisation">
                                     <li>
-                                        Développement d'applications métier sous Windows avec Delphi
+                                        <h4>Développement d'applications métier sous Windows avec Delphi</h4>
                                         <ul class="windows">
                                             <li>
                                                 <img class="img-responsive ombre-image" src="images/elisa.gif" />
@@ -82,7 +82,7 @@
                                                     <div class="sous-legende">Calcul poids de pièce</div>
                                                 </div>
                                             </li>
-                                           <li>
+                                            <li>
                                                 <img class="img-responsive ombre-image" src="images/qualital.png" />
                                                 <div class="legende">Qualital
                                                     <div class="sous-legende">Indice de qualité des alliages
@@ -112,7 +112,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        Mise en place d'un portail intranet sous SharePoint
+                                        <h4>Mise en place d'un portail intranet sous SharePoint</h4>
                                         <ul class="intranet">
                                             <li>
                                                 <img class="img-responsive ombre-image" src="images/intranet2.png" />
@@ -125,7 +125,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        Création de sites internet avec WordPress
+                                        <h4>Création de sites internet avec WordPress</h4>
                                         <ul class="internet">
                                             <li>
                                                 <img class="img-responsive ombre-image" src="images/metalblog.png" />
@@ -145,10 +145,10 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        Développement d'interfaces entre progiciels avec Windev
+                                        <h4>Développement d'interfaces entre progiciels avec Windev</h4>
                                     </li>
                                     <li>
-                                        Développements Webdev
+                                        <h4>Développements Webdev</h4>
                                         <ul class="webdev">
                                             <li>
                                                 <img class="img-responsive ombre-image" src="images/webdev.png" />
@@ -161,19 +161,88 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        Assistance aux utilisateurs
+                                        <h4>Assistance aux utilisateurs</h4>
                                     </li>
                                     <li>
-                                        Maintenance des postes de travail
+                                        <h4>Maintenance des postes de travail</h4>
                                     </li>
                                 </ul>
                             </li>
+
+
+                            <li>
+                                <h3>Service militaire à l’Etablissement d’Impression de Château-Chinon</h3>
+                                <p>08/96 - 05/97</p>
+                                <ul class="realisation">
+                                    <li>
+                                        <h4>Développement d’un fichier informatique pour gérer l’approvisionnement</h4>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>Stage au Laboratoire d’Informatique du Havre</h3>
+                                <p>06/95 - 08/95</p>
+                                <ul class="realisation">
+                                    <li>
+                                        <h4>Conception d’algorithmes (langage C++) pour architectures parallèles</h4>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>Manutentionnaire au sein de la société des Transports Urbains Blaisois</h3>
+                                <p>août 1994</p>
+                            </li> 
+                            <li>
+                                <h3>Stage industriel au Laboratoire de Biophysique Médicale de Tours</h3>
+                                <p>04/94 - 06/94</p>
+                                <ul class="realisation">
+                                    <li>
+                                        <h4>Réalisation d’une interface utilisateur pour un instrument médical (langage Pascal avec objets Turbo Vision)</h4>
+                                    </li>
+                                </ul>
+                            </li> 
+                            <li>
+                                <h3>Agent de service à la colonie de vacances MGET de Lourdes</h3>
+                                <p>août 1993</p>
+                            </li> 
+                            <li>
+                                <h3>Stage industriel dans la Société VERMON (ultrasons) de Tours</h3>
+                                <p>04/93 - 06/93</p>
+                                <ul class="realisation">
+                                    <li>
+                                        <h4>Réalisation d’une unité centrale à micro-contrôleur</h4>
+                                    </li>
+                                </ul>
+                            </li>                                                                                                              
+
                         </ul>
+
+
+
 
                     </div>
                 </div>
 
                 <h2>Formation</h2>
+                <ul>
+                    <li>
+                        <h3>Bac +2 (BTS, DUT, DEUG), Informatique</h3>
+                        <p>IUT Informatique - Le Havre (76)</p>
+                        <p>De Septembre 1994 à Septembre 1995</p>
+                    </li>
+                    <li>
+                        <h3>Bac +2 (BTS, DUT, DEUG), Electronique et Informatique Industrielle</h3>
+                        <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
+                        <p>De Septembre 1992 à Septembre 1994</p>
+                    </li>
+                    <li>
+                        <h3>Bac E (Mathématiques et Techniques)</h3>
+                        <p>Lycée Augustin Thierry à Blois (académie Orléans-Tours)</p>
+                        <p>1991</p>
+                    </li>
+                </ul>
+
+                <h2>Divers</h2>
                 <ul>
                     <li>
                         <h3>Bac +2 (BTS, DUT, DEUG), Informatique</h3>
