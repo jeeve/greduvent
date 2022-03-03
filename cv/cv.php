@@ -32,17 +32,18 @@
                                 <h3>Programmation orientée objet</h3>
                             </li>
                             <li>
-                                <h3>Applications web, HTML 5</h3>
+                                <h3>Applications web, HTML 5, Services Web</h3>
                             </li>
                             <li>
                                 <h3>SharePoint</h3>
                             </li>
                             <li>
-                                <h3>c#, Javascript, Python, Php, Delphi</h3>
+                                <h3>c#, Javascript, Python, Php, Delphi, Sql</h3>
                             </li>
                             <li>
                                 <h3>Windev, Webdev</h3>
                             </li>
+                            <br>
                             <li>
                                 <h3>Anglais lu et écrit</h3>
                             </li>
@@ -57,8 +58,8 @@
                         </div>
                         <div class="section">
                             <h3>Développeur informatique</h3>
-                            <p>Date de naissance : 28/11/1972</p>
-                            <p>Gentilly (94) 94250</p>
+                            <p>Date de naissance : 1972 (49 ans)</p>
+                            <p>Gentilly (94)</p>
 
                             <br>
                             <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
@@ -88,7 +89,7 @@
                                     <li>
                                         <h4><input id="div-delphi" type="button" value=" + " data-toggle="collapse"
                                                 data-target="#item-div-delphi" /> Développement d'applications métier
-                                            sous Windows avec Delphi</h4>
+                                            sous Windows avec <strong>Delphi</strong></h4>
                                         <div id="item-div-delphi" class="collapse">
                                             <ul class="windows">
                                                 <li>
@@ -146,12 +147,21 @@
                                     <li>
                                         <h4><input id="div-sharepoint" type="button" value=" + " data-toggle="collapse"
                                                 data-target="#item-div-sharepoint" /> Mise en place d'un portail
-                                            intranet sous SharePoint</h4>
+                                            intranet sous <strong>SharePoint</strong></h4>
                                         <div id="item-div-sharepoint" class="collapse">
                                             <ul class="intranet">
                                                 <li>
                                                     <img class="img-responsive ombre-image"
-                                                        src="images/intranet2.png" />
+                                                        src="images/sharepoint.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/powerautomate.png" />
                                                     <div class="legende">Elisa
                                                         <div class="sous-legende">Calcul système d'attaques en moulage
                                                             sable
@@ -164,7 +174,8 @@
                                     <li>
                                         <h4><input id="div-wordpress" type="button" value=" + " data-toggle="collapse"
                                                 data-target="#item-div-wordpress" /> Création de sites internet avec
-                                            WordPress</h4>
+                                            <strong>WordPress</strong>
+                                        </h4>
                                         <div id="item-div-wordpress" class="collapse">
                                             <ul class="internet">
                                                 <li>
@@ -190,7 +201,7 @@
                                     <li>
                                         <h4><input id="div-windev" type="button" value=" + " data-toggle="collapse"
                                                 data-target="#item-div-windev" /> Développement d'interfaces entre
-                                            progiciels avec Windev</h4>
+                                            progiciels avec <strong>Windev</strong></h4>
                                         <div id="item-div-windev" class="collapse">
                                             <ul class="windev">
                                                 <li>
@@ -207,9 +218,28 @@
                                     </li>
                                     <li>
                                         <h4><input id="div-webdev" type="button" value=" + " data-toggle="collapse"
-                                                data-target="#item-div-webdev" /> Développements Webdev</h4>
+                                                data-target="#item-div-webdev" /> Développements <strong>Webdev</strong>
+                                        </h4>
                                         <div id="item-div-webdev" class="collapse">
                                             <ul class="webdev">
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/webdev-dev.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/webdev-ana.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
+                                                    </div>
+                                                </li>                                                
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/webdev.png" />
                                                     <div class="legende">Elisa
