@@ -35,7 +35,7 @@
                                 <h3>Applications web, HTML 5, Services Web</h3>
                             </li>
                             <li>
-                                <h3>SharePoint</h3>
+                                <h3>SharePoint, Wordpress</h3>
                             </li>
                             <li>
                                 <h3>c#, Javascript, Python, Php, Delphi, Sql</h3>
