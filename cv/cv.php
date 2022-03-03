@@ -25,13 +25,27 @@
 
                         <h2>Compétences</h2>
                         <ul>
-                            <li><h3>Développement logiciel</h3></li>
-                            <li><h3>Programmation orientée objet</h3></li>
-                            <li><h3>Applications web, HTML 5</h3></li>
-                            <li><h3>SharePoint</h3></li>
-                            <li><h3>c#, Javascript, Python, Php, Delphi</h3></li>
-                            <li><h3>Windev, Webdev</h3></li>
-                            <li><h3>Anglais lu et écrit</h3></li>
+                            <li>
+                                <h3>Développement logiciel</h3>
+                            </li>
+                            <li>
+                                <h3>Programmation orientée objet</h3>
+                            </li>
+                            <li>
+                                <h3>Applications web, HTML 5</h3>
+                            </li>
+                            <li>
+                                <h3>SharePoint</h3>
+                            </li>
+                            <li>
+                                <h3>c#, Javascript, Python, Php, Delphi</h3>
+                            </li>
+                            <li>
+                                <h3>Windev, Webdev</h3>
+                            </li>
+                            <li>
+                                <h3>Anglais lu et écrit</h3>
+                            </li>
                         </ul>
 
                     </div>
@@ -72,106 +86,140 @@
                                 <p>De Septembre 1997 à aujourd'hui</p>
                                 <ul class="realisation">
                                     <li>
-                                        <h4>Développement d'applications métier sous Windows avec Delphi</h4>
-                                        <ul class="windows">
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/elisa.gif" />
-                                                <div class="legende">Elisa
-                                                    <div class="sous-legende">Calcul système d'attaques en moulage
-                                                        sable
+                                        <h4><input id="div-delphi" type="button" value=" + " data-toggle="collapse"
+                                                data-target="#item-div-delphi" /> Développement d'applications métier
+                                            sous Windows avec Delphi</h4>
+                                        <div id="item-div-delphi" class="collapse">
+                                            <ul class="windows">
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/elisa.gif" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/optima.gif" />
-                                                <div class="legende">Optima
-                                                    <div class="sous-legende">Calcul de charge et correction de bain
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/optima.gif" />
+                                                    <div class="legende">Optima
+                                                        <div class="sous-legende">Calcul de charge et correction de bain
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/poids.gif" />
-                                                <div class="legende">Poids
-                                                    <div class="sous-legende">Calcul poids de pièce</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/qualital.png" />
-                                                <div class="legende">Qualital
-                                                    <div class="sous-legende">Indice de qualité des alliages
-                                                        aluminium</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/materialis.png" />
-                                                <div class="legende">Materialis
-                                                    <div class="sous-legende">Base de données matériaux</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/adagio.gif" />
-                                                <div class="legende">Adagio
-                                                    <div class="sous-legende">Aide à la conduite de sablerie</div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/salsa3d.png" />
-                                                <div class="legende">Salsa 3D
-                                                    <div class="sous-legende">Conception système de remplissage en
-                                                        sous
-                                                        pression</div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/poids.gif" />
+                                                    <div class="legende">Poids
+                                                        <div class="sous-legende">Calcul poids de pièce</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/qualital.png" />
+                                                    <div class="legende">Qualital
+                                                        <div class="sous-legende">Indice de qualité des alliages
+                                                            aluminium</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/materialis.png" />
+                                                    <div class="legende">Materialis
+                                                        <div class="sous-legende">Base de données matériaux</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/adagio.gif" />
+                                                    <div class="legende">Adagio
+                                                        <div class="sous-legende">Aide à la conduite de sablerie</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/salsa3d.png" />
+                                                    <div class="legende">Salsa 3D
+                                                        <div class="sous-legende">Conception système de remplissage en
+                                                            sous
+                                                            pression</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li>
-                                        <h4>Mise en place d'un portail intranet sous SharePoint</h4>
-                                        <ul class="intranet">
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/intranet2.png" />
-                                                <div class="legende">Elisa
-                                                    <div class="sous-legende">Calcul système d'attaques en moulage
-                                                        sable
+                                        <h4><input id="div-sharepoint" type="button" value=" + " data-toggle="collapse"
+                                                data-target="#item-div-sharepoint" /> Mise en place d'un portail
+                                            intranet sous SharePoint</h4>
+                                        <div id="item-div-sharepoint" class="collapse">
+                                            <ul class="intranet">
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/intranet2.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li>
-                                        <h4>Création de sites internet avec WordPress</h4>
-                                        <ul class="internet">
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/metalblog.png" />
-                                                <div class="legende">Elisa
-                                                    <div class="sous-legende">Calcul système d'attaques en moulage
-                                                        sable
+                                        <h4><input id="div-wordpress" type="button" value=" + " data-toggle="collapse"
+                                                data-target="#item-div-wordpress" /> Création de sites internet avec
+                                            WordPress</h4>
+                                        <div id="item-div-wordpress" class="collapse">
+                                            <ul class="internet">
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/metalblog.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/formation.png" />
-                                                <div class="legende">Optima
-                                                    <div class="sous-legende">Calcul de charge et correction de bain
+                                                </li>
+                                                <li>
+                                                    <img class="img-responsive ombre-image"
+                                                        src="images/formation.png" />
+                                                    <div class="legende">Optima
+                                                        <div class="sous-legende">Calcul de charge et correction de bain
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li>
-                                        <h4>Développement d'interfaces entre progiciels avec Windev</h4>
+                                        <h4><input id="div-windev" type="button" value=" + " data-toggle="collapse"
+                                                data-target="#item-div-windev" /> Développement d'interfaces entre
+                                            progiciels avec Windev</h4>
+                                        <div id="item-div-windev" class="collapse">
+                                            <ul class="windev">
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/windev.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
                                     </li>
                                     <li>
-                                        <h4>Développements Webdev</h4>
-                                        <ul class="webdev">
-                                            <li>
-                                                <img class="img-responsive ombre-image" src="images/webdev.png" />
-                                                <div class="legende">Elisa
-                                                    <div class="sous-legende">Calcul système d'attaques en moulage
-                                                        sable
+                                        <h4><input id="div-webdev" type="button" value=" + " data-toggle="collapse"
+                                                data-target="#item-div-webdev" /> Développements Webdev</h4>
+                                        <div id="item-div-webdev" class="collapse">
+                                            <ul class="webdev">
+                                                <li>
+                                                    <img class="img-responsive ombre-image" src="images/webdev.png" />
+                                                    <div class="legende">Elisa
+                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li>
                                         <h4>Assistance aux utilisateurs</h4>
@@ -281,4 +329,13 @@
     </div>
     <!--/.page-container-->
     <?php include("../includes/footer.php"); ?>
+    <script>
+    jQuery("input[data-target^='#item-div']").click(function() {
+        if (jQuery(this).attr('value') == ' + ') {
+            jQuery(this).attr('value', ' - ');
+        } else {
+            jQuery(this).attr('value', ' + ');
+        }
+    });
+    </script>
 </body>
