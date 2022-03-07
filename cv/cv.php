@@ -31,7 +31,7 @@
                                 <h3>Programmation orientée objet</h3>
                             </li>
                             <li>
-                                <h3>Applications web, HTML 5, Services Web</h3>
+                                <h3>Applications Web, HTML 5, Services Web</h3>
                             </li>
                             <li>
                                 <h3>SharePoint, Wordpress</h3>
@@ -152,19 +152,13 @@
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/sharepoint.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
-                                                        </div>
+                                                    <div class="legende">Page Intranet des formulaires de l'entreprise
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/powerautomate.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
-                                                        </div>
+                                                    <div class="legende">Exemple de flux PowerAutomate
                                                     </div>
                                                 </li>
                                             </ul>
@@ -178,19 +172,25 @@
                                         <div id="item-div-wordpress" class="collapse">
                                             <ul class="internet">
                                                 <li>
-                                                    <img class="img-responsive ombre-image"
-                                                        src="images/metalblog.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
+                                                    <a href="https://metalblog.ctif.com" target="_blank">
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/metalblog.png" />
+                                                    </a>
+                                                    <div class="legende"><a href="https://metalblog.ctif.com"
+                                                            target="_blank">MetalBlog</a>
+                                                        <div class="sous-legende">Wordpress multi-sites
                                                         </div>
                                                     </div>
+
                                                 </li>
                                                 <li>
-                                                    <img class="img-responsive ombre-image"
-                                                        src="images/formation.png" />
-                                                    <div class="legende">Optima
-                                                        <div class="sous-legende">Calcul de charge et correction de bain
+                                                    <a href="https://formation.ctif.com" target="_blank">
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/formation.png" />
+                                                    </a>
+                                                    <div class="legende"><a href="https://formation.ctif.com"
+                                                            target="_blank"> Site Formation</a>
+                                                        <div class="sous-legende">Wordpress multi-sites
                                                         </div>
                                                     </div>
                                                 </li>
@@ -205,9 +205,9 @@
                                             <ul class="windev">
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/windev.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
+                                                    <div class="legende">Exemple d'interface entre un ERP et un LIMS
+                                                        <div class="sous-legende">Les données transitent via services
+                                                            web
                                                         </div>
                                                     </div>
                                                 </li>
@@ -224,18 +224,18 @@
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/webdev-dev.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
+                                                    <div class="legende">Exemple de formulaire de réservation de
+                                                        véhicules
+                                                        <div class="sous-legende">Ce formulaire utilise un service web
+                                                            de réservation écrit en c#
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/webdev-ana.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
+                                                    <div class="legende">Logiciel de gestion de la qualité
+                                                        <div class="sous-legende">Base de données sur SQL Server
                                                         </div>
                                                     </div>
                                                 </li>
@@ -253,7 +253,7 @@
 
 
                             <li>
-                                <h3>Service militaire à l’Etablissement d’Impression de Château-Chinon</h3>
+                                <h3><strong>Service militaire</strong> à l’Etablissement d’Impression de Château-Chinon</h3>
                                 <p>08/96 - 05/97</p>
                                 <ul class="realisation">
                                     <li>
@@ -262,7 +262,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <h3>Stage au Laboratoire d’Informatique du Havre</h3>
+                                <h3>Stage au <strong>Laboratoire d’Informatique</strong> du Havre</h3>
                                 <p>06/95 - 08/95</p>
                                 <ul class="realisation">
                                     <li>
@@ -271,11 +271,11 @@
                                 </ul>
                             </li>
                             <li>
-                                <h3>Manutentionnaire au sein de la société des Transports Urbains Blaisois</h3>
+                                <h3><strong>Manutentionnaire</strong> au sein de la société des Transports Urbains Blaisois</h3>
                                 <p>août 1994</p>
                             </li>
                             <li>
-                                <h3>Stage industriel au Laboratoire de Biophysique Médicale de Tours</h3>
+                                <h3>Stage industriel au <strong>Laboratoire de Biophysique Médicale</strong> de Tours</h3>
                                 <p>04/94 - 06/94</p>
                                 <ul class="realisation">
                                     <li>
@@ -285,11 +285,11 @@
                                 </ul>
                             </li>
                             <li>
-                                <h3>Agent de service à la colonie de vacances MGET de Lourdes</h3>
+                                <h3><strong>Agent de service</strong> à la colonie de vacances MGET de Lourdes</h3>
                                 <p>août 1993</p>
                             </li>
                             <li>
-                                <h3>Stage industriel dans la Société VERMON (ultrasons) de Tours</h3>
+                                <h3>Stage industriel dans la <strong>Société VERMON (ultrasons)</strong> de Tours</h3>
                                 <p>04/93 - 06/93</p>
                                 <ul class="realisation">
                                     <li>
@@ -308,19 +308,24 @@
 
                 <h2>Formation</h2>
                 <ul>
+                <li>
+                        <h3>IUP Génie Informatique 2ème année</h3>
+                        <p>IUP Informatique - La Rochelle (17)</p>
+                        <p>1995 - 1996</p>
+                    </li>
                     <li>
-                        <h3>Bac +2 (BTS, DUT, DEUG), Informatique</h3>
+                        <h3>Obtention du DUT Informatique Année Spéciale au Havre</h3>
                         <p>IUT Informatique - Le Havre (76)</p>
                         <p>1994 - 1995</p>
                     </li>
                     <li>
-                        <h3>Bac +2 (BTS, DUT, DEUG), Electronique et Informatique Industrielle</h3>
+                        <h3>Obtention du DUT Génie Electrique et Informatique Industrielle</h3>
                         <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
-                        <p>1992 - 1994</p>
+                        <p>1991 - 1994</p>
                     </li>
                     <li>
                         <h3>Bac E (Mathématiques et Techniques)</h3>
-                        <p>Lycée Augustin Thierry à Blois (académie Orléans-Tours)</p>
+                        <p>Lycée Augustin Thierry - Blois (41) - académie Orléans-Tours</p>
                         <p>1991</p>
                     </li>
                 </ul>
