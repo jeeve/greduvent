@@ -93,51 +93,47 @@
                                             <ul class="windows">
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/elisa.gif" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
+                                                    <div class="legende">Calcul système d'attaques en moulage
                                                             sable
+                                                        <div class="sous-legende">Utilisation de DirectX pour la vue 3D
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/optima.gif" />
-                                                    <div class="legende">Optima
-                                                        <div class="sous-legende">Calcul de charge et correction de bain
+                                                    <div class="legende">Calcul de charge et correction de bain
+                                                        <div class="sous-legende">Implémentation de l'algorithme du Simplex
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/poids.gif" />
-                                                    <div class="legende">Poids
-                                                        <div class="sous-legende">Calcul poids de pièce</div>
+                                                    <div class="legende">Calcul poids de pièce
+                                                        <div class="sous-legende">Association d'éléments géométriques</div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/qualital.png" />
                                                     <div class="legende">Qualital
-                                                        <div class="sous-legende">Indice de qualité des alliages
-                                                            aluminium</div>
-                                                    </div>
+                                                    <div class="sous-legende">Indice de qualité des alliages aluminium</div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/materialis.png" />
                                                     <div class="legende">Materialis
-                                                        <div class="sous-legende">Base de données matériaux</div>
+                                                    <div class="sous-legende">Base de données matériaux</div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/adagio.gif" />
                                                     <div class="legende">Adagio
-                                                        <div class="sous-legende">Aide à la conduite de sablerie</div>
+                                                    <div class="sous-legende">Aide à la conduite de sablerie</div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/salsa3d.png" />
                                                     <div class="legende">Salsa 3D
-                                                        <div class="sous-legende">Conception système de remplissage en
-                                                            sous
-                                                            pression</div>
+                                                        <div class="sous-legende">Conception d'un plugin métier au sein de l'environnement 3DShop</div>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -178,7 +174,7 @@
                                                     </a>
                                                     <div class="legende"><a href="https://metalblog.ctif.com"
                                                             target="_blank">MetalBlog</a>
-                                                        <div class="sous-legende">Wordpress multi-sites
+                                                        <div class="sous-legende">Wordpress multi-sites avec Thème personnalisé
                                                         </div>
                                                     </div>
 
@@ -190,7 +186,7 @@
                                                     </a>
                                                     <div class="legende"><a href="https://formation.ctif.com"
                                                             target="_blank"> Site Formation</a>
-                                                        <div class="sous-legende">Wordpress multi-sites
+                                                        <div class="sous-legende">Wordpress multi-sites avec Content Type personnalisés
                                                         </div>
                                                     </div>
                                                 </li>
@@ -253,7 +249,8 @@
 
 
                             <li>
-                                <h3><strong>Service militaire</strong> à l’Etablissement d’Impression de Château-Chinon</h3>
+                                <h3><strong>Service militaire</strong> à l’Etablissement d’Impression de Château-Chinon
+                                </h3>
                                 <p>08/96 - 05/97</p>
                                 <ul class="realisation">
                                     <li>
@@ -271,11 +268,13 @@
                                 </ul>
                             </li>
                             <li>
-                                <h3><strong>Manutentionnaire</strong> au sein de la société des Transports Urbains Blaisois</h3>
+                                <h3><strong>Manutentionnaire</strong> au sein de la société des Transports Urbains
+                                    Blaisois</h3>
                                 <p>août 1994</p>
                             </li>
                             <li>
-                                <h3>Stage industriel au <strong>Laboratoire de Biophysique Médicale</strong> de Tours</h3>
+                                <h3>Stage industriel au <strong>Laboratoire de Biophysique Médicale</strong> de Tours
+                                </h3>
                                 <p>04/94 - 06/94</p>
                                 <ul class="realisation">
                                     <li>
@@ -308,7 +307,7 @@
 
                 <h2>Formation</h2>
                 <ul>
-                <li>
+                    <li>
                         <h3>IUP Génie Informatique 2ème année</h3>
                         <p>IUP Informatique - La Rochelle (17)</p>
                         <p>1995 - 1996</p>

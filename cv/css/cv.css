@@ -47,9 +47,17 @@ h3 {
     justify-content: space-around;
 }
 
+ul.realisation {
+    padding-left: 0;
+}
+
 .realisation li {
     margin: 10px;
     list-style: none;
+}
+
+.realisation img {
+    width: 450px;
 }
 
 .legende {
