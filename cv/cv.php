@@ -22,7 +22,6 @@
                 <div class="row">
                     <div class="col-xs-1 col-md-8 fond">
                         <h1>Curriculum vitæ</h1>
-
                         <h2>Compétences</h2>
                         <ul>
                             <li>
@@ -38,10 +37,10 @@
                                 <h3>SharePoint, Wordpress</h3>
                             </li>
                             <li>
-                                <h3>c#, Javascript, Python, Php, Delphi, Sql</h3>
+                                <h3>Windev, Webdev, ASP.NET</h3>
                             </li>
                             <li>
-                                <h3>Windev, Webdev</h3>
+                                <h3>Langages : c#, Javascript, Python, Php, Delphi, Sql</h3>
                             </li>
                             <br>
                             <li>
@@ -234,14 +233,6 @@
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/webdev-ana.png" />
-                                                    <div class="legende">Elisa
-                                                        <div class="sous-legende">Calcul système d'attaques en moulage
-                                                            sable
-                                                        </div>
-                                                    </div>
-                                                </li>                                                
-                                                <li>
-                                                    <img class="img-responsive ombre-image" src="images/webdev.png" />
                                                     <div class="legende">Elisa
                                                         <div class="sous-legende">Calcul système d'attaques en moulage
                                                             sable
