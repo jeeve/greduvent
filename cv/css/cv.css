@@ -1,3 +1,7 @@
+* {
+    font-size: 12px;
+}
+
 body, .fond {
     background-image: none;
     background-color: white;
@@ -22,6 +26,14 @@ h2 {
 h3 {
     font-size: 1.3em;
     font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+strong {
+    font-size: 1em;
 }
 
 .section {
@@ -61,15 +73,17 @@ ul.realisation {
 }
 
 .legende {
-    text-align: left;
+    font-size: 1.1em;
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
 }
 
 .sous-legende {
+    font-size: 1em;
     width: 100%;
     font-weight: normal;
+    text-transform: lowercase;
 }
 
 .windows li {
