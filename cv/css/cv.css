@@ -8,9 +8,16 @@ body,
   background-color: white;
 }
 
+.navbar-brand.navbar-brand-texte {
+  color: #398efd;
+  text-decoration: none; 
+  font-size: 1.2em;
+}
+
 @media (max-width: 767px) {
-  .navbar-brand {
+  .navbar-brand.navbar-brand-texte {
     margin-right: -25px;
+    font-size: 1em;
   }
 }
 
@@ -89,6 +96,10 @@ ul.realisation {
 
 .realisation img {
   width: 450px;
+}
+
+.realisation .taille-double {
+  width: 100%;
 }
 
 .legende {
