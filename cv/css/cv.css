@@ -7,6 +7,10 @@ body, .fond {
     background-color: white;
 }
 
+#bouton-bas-page {
+    right: 50px;
+}
+
 .encadre {
     margin-top: 10px;
 }

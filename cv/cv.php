@@ -12,7 +12,7 @@
 <body>
     <div class="page-container">
         <!-- top navbar -->
-        <?php include("../includes/navbar.php"); ?>
+        <?php include("includes/navbar.php"); ?>
 
         <div class="container">
 
@@ -49,7 +49,8 @@
                         </ul>
 
                     </div>
-                    <div class="col-xs-12 col-md-4 fond-table encadrement-table encadre">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10 col-md-4 fond-table encadrement-table encadre">
                         <div>
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
@@ -77,6 +78,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
 
+                        <a name="experience"></a>
                         <h2 class="experience">Expérience professionnelle</h2>
                         <ul>
                             <li>
@@ -94,7 +96,7 @@
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/elisa.gif" />
                                                     <div class="legende">Calcul système d'attaques en moulage
-                                                            sable
+                                                        sable
                                                         <div class="sous-legende">Utilisation de DirectX pour la vue 3D
                                                         </div>
                                                     </div>
@@ -102,38 +104,42 @@
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/optima.gif" />
                                                     <div class="legende">Calcul de charge et correction de bain
-                                                        <div class="sous-legende">Implémentation de l'algorithme du Simplex
+                                                        <div class="sous-legende">Implémentation de l'algorithme du
+                                                            Simplex
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/poids.gif" />
                                                     <div class="legende">Calcul poids de pièce
-                                                        <div class="sous-legende">Association d'éléments géométriques</div>
+                                                        <div class="sous-legende">Association d'éléments géométriques
+                                                        </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/qualital.png" />
                                                     <div class="legende">Qualital
-                                                    <div class="sous-legende">Indice de qualité des alliages aluminium</div>
+                                                        <div class="sous-legende">Indice de qualité des alliages
+                                                            aluminium</div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image"
                                                         src="images/materialis.png" />
                                                     <div class="legende">Materialis
-                                                    <div class="sous-legende">Base de données matériaux</div>
+                                                        <div class="sous-legende">Base de données matériaux</div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/adagio.gif" />
                                                     <div class="legende">Adagio
-                                                    <div class="sous-legende">Aide à la conduite de sablerie</div>
+                                                        <div class="sous-legende">Aide à la conduite de sablerie</div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <img class="img-responsive ombre-image" src="images/salsa3d.png" />
                                                     <div class="legende">Salsa 3D
-                                                        <div class="sous-legende">Conception d'un plugin métier au sein de l'environnement 3DShop</div>
+                                                        <div class="sous-legende">Conception d'un plugin métier au sein
+                                                            de l'environnement 3DShop</div>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -174,7 +180,8 @@
                                                     </a>
                                                     <div class="legende"><a href="https://metalblog.ctif.com"
                                                             target="_blank">MetalBlog</a>
-                                                        <div class="sous-legende">Wordpress multi-sites avec Thème personnalisé
+                                                        <div class="sous-legende">Wordpress multi-sites avec Thème
+                                                            personnalisé
                                                         </div>
                                                     </div>
 
@@ -186,7 +193,8 @@
                                                     </a>
                                                     <div class="legende"><a href="https://formation.ctif.com"
                                                             target="_blank"> Site Formation</a>
-                                                        <div class="sous-legende">Wordpress multi-sites avec Content Type personnalisés
+                                                        <div class="sous-legende">Wordpress multi-sites avec Content
+                                                            Type personnalisés
                                                         </div>
                                                     </div>
                                                 </li>
@@ -305,6 +313,7 @@
                     </div>
                 </div>
 
+                <a name="formation"></a>
                 <h2>Formation</h2>
                 <ul>
                     <li>
