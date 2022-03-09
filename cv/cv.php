@@ -20,7 +20,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
 
                 <div class="row">
-                    <div class="col-xs-1 col-md-8 fond">
+                    <div class="col-xs-12 col-md-8 fond">
                         <h1>Curriculum vitæ</h1>
                         <h2>Compétences</h2>
                         <ul>
@@ -34,10 +34,10 @@
                                 <h3>Applications Web, HTML 5, Services Web</h3>
                             </li>
                             <li>
-                                <h3>SharePoint, Wordpress</h3>
+                                <h3>ASP.NET, SharePoint, Wordpress</h3>
                             </li>
                             <li>
-                                <h3>Windev, Webdev, ASP.NET</h3>
+                                <h3>Windev, Webdev</h3>
                             </li>
                             <li>
                                 <h3>Langages : c#, Javascript, Python, Php, Delphi, Sql</h3>
@@ -49,7 +49,7 @@
                         </ul>
 
                     </div>
-                    <div class="col-xs-10 col-md-4 fond-table encadrement-table encadre">
+                    <div class="col-xs-12 col-md-4 fond-table encadrement-table encadre">
                         <div>
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
