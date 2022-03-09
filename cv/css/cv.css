@@ -7,6 +7,10 @@ body, .fond {
     background-color: white;
 }
 
+.navbar-brand {
+    margin: 7.5px 0px;
+}
+
 #bouton-bas-page {
     right: 50px;
 }
