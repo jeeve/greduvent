@@ -22,8 +22,7 @@
                 <h1>Curriculum vitæ</h1>
 
                 <div class="row">
-                <div class="col-xs-1 visible-xs fond"></div>
-                    <div class="col-xs-9 col-md-4 fond-table encadrement-table encadre">
+                    <div class="col-xs-11 col-md-4 fond-table encadrement-table encadre">
                         <div>
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
