@@ -5,7 +5,7 @@
     <title>CV</title>
     <META NAME="Description"
         CONTENT="Quelques mots sur l'auteur, ses motivations, lectures, playlist musicale et citation préférée." />
-    <?php include("../includes/header.php"); ?>
+    <?php include("./includes/header.php"); ?>
     <link href="css/cv.css" rel="stylesheet">
 </head>
 
@@ -17,11 +17,37 @@
         <div class="container">
 
             <!-- main area -->
+
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
+                <h1>Curriculum vitæ</h1>
 
                 <div class="row">
-                    <div class="col-xs-12 col-md-8 fond">
-                        <h1>Curriculum vitæ</h1>
+                <div class="col-xs-1 visible-xs fond"></div>
+                    <div class="col-xs-9 col-md-4 fond-table encadrement-table encadre">
+                        <div>
+                            <img class="photo" src="images/jvj.png" />
+                            <div class="nom">Jean-Valéry</div>
+                            <div class="nom">JULIEN</div>
+                        </div>
+                        <div class="section">
+                            <h3>Développeur informatique</h3>
+                            <p>Date de naissance : 1972 (49 ans)</p>
+                            <p>Gentilly (94)</p>
+
+                            <br>
+                            <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
+                                participer à la création d'outils numériques.
+                            </p>
+                            <p>
+                                Ecouter le besoin des utilisateurs, répondre avec les technologies modernes,
+                                leur
+                                porter
+                                assistance sont une autre source de motivation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 fond"></div>
+                    <div class="col-xs-12 col-md-6 fond">
                         <h2>Compétences</h2>
                         <ul>
                             <li>
@@ -47,37 +73,11 @@
                                 <h3>Anglais lu et écrit</h3>
                             </li>
                         </ul>
-
-                    </div>
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-10 col-md-4 fond-table encadrement-table encadre">
-                        <div>
-                            <img class="photo" src="images/jvj.png" />
-                            <div class="nom">Jean-Valéry</div>
-                            <div class="nom">JULIEN</div>
-                        </div>
-                        <div class="section">
-                            <h3>Développeur informatique</h3>
-                            <p>Date de naissance : 1972 (49 ans)</p>
-                            <p>Gentilly (94)</p>
-
-                            <br>
-                            <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
-                                participer à la création d'outils numériques.
-                            </p>
-                            <p>
-                                Ecouter le besoin des utilisateurs, répondre avec les technologies modernes,
-                                leur
-                                porter
-                                assistance sont une autre source de motivation.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
-
                         <a name="experience"></a>
                         <h2 class="experience">Expérience professionnelle</h2>
                         <ul>
@@ -254,8 +254,6 @@
                                     </li>
                                 </ul>
                             </li>
-
-
                             <li>
                                 <h3><strong>Service militaire</strong> à l’Etablissement d’Impression de Château-Chinon
                                 </h3>
@@ -306,10 +304,6 @@
                             </li>
 
                         </ul>
-
-
-
-
                     </div>
                 </div>
 
@@ -362,7 +356,7 @@
         <!--/.container-->
     </div>
     <!--/.page-container-->
-    <?php include("../includes/footer.php"); ?>
+    <?php include("./includes/footer.php"); ?>
     <script>
     jQuery("input[data-target^='#item-div']").click(function() {
         if (jQuery(this).attr('value') == ' + ') {
