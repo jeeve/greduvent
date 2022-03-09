@@ -30,7 +30,7 @@
                             <div class="nom">JULIEN</div>
                         </div>
                         <div class="section">
-                            <h3>Développeur informatique</h3>
+                            <h3><strong>Développeur informatique</strong></h3>
                             <p>Date de naissance : 1972 (49 ans)</p>
                             <p>Gentilly (94)</p>
 
@@ -46,7 +46,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-xs-1 fond"></div>
+                    <div class="col-md-1 fond"></div>
                     <div class="col-xs-12 col-md-6 fond">
                         <h2>Compétences</h2>
                         <ul>
@@ -311,22 +311,22 @@
                 <h2>Formation</h2>
                 <ul>
                     <li>
-                        <h3>IUP Génie Informatique 2ème année</h3>
+                        <h3><strong>IUP Génie Informatique</strong> 2ème année</h3>
                         <p>IUP Informatique - La Rochelle (17)</p>
                         <p>1995 - 1996</p>
                     </li>
                     <li>
-                        <h3>Obtention du DUT Informatique Année Spéciale au Havre</h3>
+                        <h3>Obtention du <strong>DUT Informatique</strong> Année Spéciale au Havre</h3>
                         <p>IUT Informatique - Le Havre (76)</p>
                         <p>1994 - 1995</p>
                     </li>
                     <li>
-                        <h3>Obtention du DUT Génie Electrique et Informatique Industrielle</h3>
+                        <h3>Obtention du <strong>DUT Génie Electrique et Informatique Industrielle</strong></h3>
                         <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
                         <p>1991 - 1994</p>
                     </li>
                     <li>
-                        <h3>Bac E (Mathématiques et Techniques)</h3>
+                        <h3><strong>Bac E</strong> (Mathématiques et Techniques)</h3>
                         <p>Lycée Augustin Thierry - Blois (41) - académie Orléans-Tours</p>
                         <p>1991</p>
                     </li>
