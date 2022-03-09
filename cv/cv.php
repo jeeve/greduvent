@@ -19,6 +19,7 @@
             <!-- main area -->
 
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
+                <a name="home"></a>
                 <h1>Curriculum vitæ</h1>
 
                 <div class="row">
@@ -81,7 +82,8 @@
                         <h2 class="experience">Expérience professionnelle</h2>
                         <ul>
                             <li>
-                                <h3><strong>CTIF</strong> - <strong>C</strong>entre <strong>T</strong>echnique des <strong>I</strong>ndustries
+                                <h3><strong>CTIF</strong> - <strong>C</strong>entre <strong>T</strong>echnique des
+                                    <strong>I</strong>ndustries
                                     de la <strong>F</strong>onderie - Sèvres (92)</h3>
                                 <p>Technicien informatique</p>
                                 <p>De Septembre 1997 à aujourd'hui</p>
