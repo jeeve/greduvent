@@ -153,13 +153,13 @@
                                         <div id="item-div-sharepoint" class="collapse">
                                             <ul class="intranet">
                                                 <li>
-                                                    <img class="img-responsive ombre-image"
+                                                    <img class="img-responsive ombre-image taille-double"
                                                         src="images/sharepoint.png" />
                                                     <div class="legende">Page Intranet des formulaires de l'entreprise
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <img class="img-responsive ombre-image"
+                                                    <img class="img-responsive ombre-image taille-double"
                                                         src="images/powerautomate.png" />
                                                     <div class="legende">Exemple de flux PowerAutomate
                                                     </div>
@@ -209,7 +209,7 @@
                                         <div id="item-div-windev" class="collapse">
                                             <ul class="windev">
                                                 <li>
-                                                    <img class="img-responsive ombre-image" src="images/windev.png" />
+                                                    <img class="img-responsive ombre-image taille-double" src="images/windev.png" />
                                                     <div class="legende">Exemple d'interface entre un ERP et un LIMS
                                                         <div class="sous-legende">Les données transitent via services
                                                             web
@@ -227,7 +227,7 @@
                                         <div id="item-div-webdev" class="collapse">
                                             <ul class="webdev">
                                                 <li>
-                                                    <img class="img-responsive ombre-image"
+                                                    <img class="img-responsive ombre-image taille-double"
                                                         src="images/webdev-dev.png" />
                                                     <div class="legende">Exemple de formulaire de réservation de
                                                         véhicules
@@ -237,7 +237,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <img class="img-responsive ombre-image"
+                                                    <img class="img-responsive ombre-image taille-double"
                                                         src="images/webdev-ana.png" />
                                                     <div class="legende">Logiciel de gestion de la qualité
                                                         <div class="sous-legende">Base de données sur SQL Server
@@ -247,6 +247,23 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    <li>
+                                        <h4><input id="div-service-web" type="button" value=" + " data-toggle="collapse"
+                                                data-target="#item-div-service-web" /> Développement de services Web en <strong>c#</strong></h4>
+                                        <div id="item-div-service-web" class="collapse">
+                                            <ul class="service-web">
+                                                <li>
+                                                    <img class="img-responsive ombre-image taille-double" src="images/servicesweb.png" />
+                                                    <div class="legende">Services Web Soap
+                                                        <div class="sous-legende">Visual Studio                                                
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+
                                     <li>
                                         <h4>Assistance aux utilisateurs</h4>
                                     </li>
