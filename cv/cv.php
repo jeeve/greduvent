@@ -86,7 +86,7 @@
                                     <strong>I</strong>ndustries
                                     de la <strong>F</strong>onderie - Sèvres (92)</h3>
                                 <p>Technicien informatique</p>
-                                <p>De Septembre 1997 à aujourd'hui</p>
+                                <p>De septembre 1997 à aujourd'hui</p>
                                 <ul class="realisation">
                                     <li>
                                         <h4><input id="div-delphi" type="button" value=" + " data-toggle="collapse"
