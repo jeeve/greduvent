@@ -414,14 +414,54 @@
                 <div id="item-div-divers" class="collapse in">
                     <ul>
                         <li>
-                            <h3>Bac +2 (BTS, DUT, DEUG), Informatique</h3>
-                            <p>IUT Informatique - Le Havre (76)</p>
-                            <p>De Septembre 1994 à Septembre 1995</p>
+                            <h3>Formation PowerPlatform - PL-100-Microsoft-Power-Platform-App-Maker</h3>
+                            <p>Ekilog</p>
+                            <p>31/01/2022 au 1/02/2022</p>
                         </li>
                         <li>
-                            <h3>Bac +2 (BTS, DUT, DEUG), Electronique et Informatique Industrielle</h3>
-                            <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
-                            <p>De Septembre 1992 à Septembre 1994</p>
+                            <h3>MICROSOFT 365 - EXPLOITER LES OUTILS COLLABORATIFS EN LIGNE</h3>
+                            <p>Cegos</p>
+                            <p>2/09/2021 au 3/09/2021</p>
+                        </li>
+                        <li>
+                            <h3>Formation Python pour la data science</h3>
+                            <p>Stat4Decision</p>
+                            <p>8/03/2021 au 10/03/2021</p>
+                        </li>
+                        <li>
+                            <h3>WordPress développeur</h3>
+                            <p>PLB</p>
+                            <p>7/11/2018 au 9/11/2018</p>
+                        </li>
+                        <li>
+                            <h3>WordPress développeur</h3>
+                            <p>PLB</p>
+                            <p>25/06/2015 au 27/06/2015</p>
+                        </li>
+                        <li>
+                            <h3>Webdev pour Développeurs WINDEV</h3>
+                            <p>PC Soft</p>
+                            <p>1/06/2015 au 2/06/2015 2015</p>
+                        </li>
+                        <li>
+                            <h3>Personnaliser un site SharePoint 2010 avec SharePoint Designer 2010</h3>
+                            <p>IB</p>
+                            <p>4/04/2013 au 5/04/2013</p>
+                        </li>
+                        <li>
+                            <h3>SharePoint 2010,Maitriser SharePoint server 2010</h3>
+                            <p>PLB</p>
+                            <p>26/03/2012 au 30/03/2012</p>
+                        </li>
+                        <li>
+                            <h3>Windev Perfectionnement</h3>
+                            <p>PC Soft</p>
+                            <p>17/02/2010 au 19/02/2010</p>
+                        </li>
+                        <li>
+                            <h3>Windev Prise en main</h3>
+                            <p>PC Soft</p>
+                            <p>15/02/2010 au 16/02/2010</p>
                         </li>
                     </ul>
                 </div>
