@@ -1,2 +1,4 @@
 RewriteEngine On
 RewriteRule cv/$ cv/cv.php
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
