@@ -414,6 +414,7 @@
 
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
+                    <a name="divers"></a>
                         <h2><input style="color:black;" id="div-divers" type="button" value=" - " data-toggle="collapse"
                                 data-target="#item-div-divers" /> Divers
                         </h2>
@@ -422,55 +423,45 @@
                                 <li>
                                     <h3>Formation <strong>PowerPlatform</strong> -
                                         PL-100-Microsoft-Power-Platform-App-Maker</h3>
-                                    <p>Ekilog</p>
-                                    <p>31/01/2022 au 1/02/2022</p>
+                                    <p>Ekilog -  31/01/2022 au 1/02/2022</p>
                                 </li>
                                 <li>
                                     <h3><strong>Microsoft 365</strong> - Exploiter les outils collaboratifs en ligne
                                     </h3>
-                                    <p>Cegos</p>
-                                    <p>2/09/2021 au 3/09/2021</p>
+                                    <p>Cegos - 2/09/2021 au 3/09/2021</p>
                                 </li>
                                 <li>
                                     <h3>Formation <strong>Python</strong> pour la <strong>data science</strong></h3>
-                                    <p>Stat4Decision</p>
-                                    <p>8/03/2021 au 10/03/2021</p>
+                                    <p>Stat4Decision - 8/03/2021 au 10/03/2021</p>
                                 </li>
                                 <li>
                                     <h3><strong>WordPress</strong> développeur</h3>
-                                    <p>PLB</p>
-                                    <p>7/11/2018 au 9/11/2018</p>
+                                    <p>PLB - 7/11/2018 au 9/11/2018</p>
                                 </li>
                                 <li>
                                     <h3><strong>WordPress</strong> développeur</h3>
-                                    <p>PLB</p>
-                                    <p>25/06/2015 au 27/06/2015</p>
+                                    <p>PLB - 25/06/2015 au 27/06/2015</p>
                                 </li>
                                 <li>
                                     <h3><strong>Webdev</strong> pour Développeurs Windev</h3>
-                                    <p>PC Soft</p>
-                                    <p>1/06/2015 au 2/06/2015 2015</p>
+                                    <p>PC Soft - 1/06/2015 au 2/06/2015 2015</p>
                                 </li>
                                 <li>
                                     <h3>Personnaliser un site <strong>SharePoint</strong> 2010 avec SharePoint Designer
                                         2010</h3>
-                                    <p>IB</p>
-                                    <p>4/04/2013 au 5/04/2013</p>
+                                    <p>IB - 4/04/2013 au 5/04/2013</p>
                                 </li>
                                 <li>
                                     <h3><strong>SharePoint</strong> 2010, Maitriser SharePoint server 2010</h3>
-                                    <p>PLB</p>
-                                    <p>26/03/2012 au 30/03/2012</p>
+                                    <p>PLB - 26/03/2012 au 30/03/2012</p>
                                 </li>
                                 <li>
                                     <h3><strong>Windev</strong> Perfectionnement</h3>
-                                    <p>PC Soft</p>
-                                    <p>17/02/2010 au 19/02/2010</p>
+                                    <p>PC Soft - 17/02/2010 au 19/02/2010</p>
                                 </li>
                                 <li>
                                     <h3><strong>Windev</strong> Prise en main</h3>
-                                    <p>PC Soft</p>
-                                    <p>15/02/2010 au 16/02/2010</p>
+                                    <p>PC Soft - 15/02/2010 au 16/02/2010</p>
                                 </li>
                             </ul>
                         </div>
