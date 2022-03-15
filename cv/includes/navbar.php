@@ -10,7 +10,8 @@
                <a class="navbar-brand navbar-brand-texte" href="./#home">Jean-Valéry JULIEN</a>
                <a class="navbar-brand navbar-brand-texte" href="./#experience">Expérience</a>
                <a class="navbar-brand navbar-brand-texte" href="./#formation">Formation</a>
-               <a href="./#divers"><img alt="@jeeve" title="@jeeve" src="/images/logo_twitter.png" class="navbar-brand hidden-xs"/></a>
+               <a class="navbar-brand navbar-brand-texte" href="./#divers">à propos</a>
+
             </div>
          </div>
       </div>

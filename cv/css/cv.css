@@ -119,3 +119,11 @@ ul.realisation {
 .windows li {
   width: 300px;
 }
+
+#item-div-formation h3 {
+  padding-left: 10px;
+}
+
+a {
+  font-size: 1em;
+}
