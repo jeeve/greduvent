@@ -10,7 +10,7 @@ body,
 
 .navbar-brand.navbar-brand-texte {
   color: #398efd;
-  text-decoration: none; 
+  text-decoration: none;
   font-size: 1.2em;
 }
 
@@ -83,8 +83,14 @@ strong {
   background-image: url("../images/icone-mail.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 20px;
+  background-size: 18px;
   padding-left: 30px;
+}
+
+@media (max-width: 767px) {
+  .mail {
+    background-size: 16px;
+  }
 }
 
 .realisation ul {
@@ -133,17 +139,17 @@ ul.realisation {
 }
 
 #item-div-formation li {
-  list-style: none; 
-  padding-left: 0; 
+  list-style: none;
+  padding-left: 0;
 }
 
 #item-div-formation > ul {
-  list-style: none; 
-  padding-left: 10px; 
+  list-style: none;
+  padding-left: 10px;
 }
 
 #item-div-formation p {
-  margin-left: 10px;  
+  margin-left: 10px;
 }
 
 a {
