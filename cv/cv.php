@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <title>CV</title>
+    <title>Jean-Valéry JULIEN</title>
     <META NAME="Description"
         CONTENT="Quelques mots sur l'auteur, ses motivations, lectures, playlist musicale et citation préférée." />
     <?php include("./includes/header.php"); ?>
@@ -33,6 +33,8 @@
                             <h3><strong>Développeur informatique</strong></h3>
                             <p>Date de naissance : 1972 (49 ans)</p>
                             <p>Gentilly (94)</p>
+                            <p><a class="mail" href="mailto:jeanvalery.julien@gmail.com">jeanvalery.julien@gmail.com</a>
+                            </p>
 
                             <br>
                             <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
@@ -69,7 +71,7 @@
                                     <h3>Windev, Webdev</h3>
                                 </li>
                                 <li>
-                                    <h3>Langages : c#, Javascript, Python, Php, Delphi, Sql</h3>
+                                    <h3>Langages : c#, Javascript, Python, Php, Delphi, Sql...</h3>
                                 </li>
                                 <br>
                                 <li>
@@ -98,30 +100,6 @@
                                     <h4>Technicien informatique</h4>
                                     <h4>De septembre 1997 à aujourd'hui</h4>
                                     <ul class="realisation">
-                                        <li>
-                                            <h4><input id="div-sharepoint" type="button" value=" + "
-                                                    data-toggle="collapse" data-target="#item-div-sharepoint" />
-                                                Mise en
-                                                place d'un portail
-                                                intranet sous <strong>SharePoint</strong></h4>
-                                            <div id="item-div-sharepoint" class="collapse">
-                                                <ul class="intranet">
-                                                    <li>
-                                                        <img class="img-responsive ombre-image taille-double"
-                                                            src="images/sharepoint.png" />
-                                                        <div class="legende">Page Intranet des formulaires de
-                                                            l'entreprise
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image taille-double"
-                                                            src="images/powerautomate.png" />
-                                                        <div class="legende">Exemple de flux PowerAutomate
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
                                         <li>
                                             <h4><input id="div-wordpress" type="button" value=" + "
                                                     data-toggle="collapse" data-target="#item-div-wordpress" />
@@ -156,6 +134,31 @@
                                                                 Content
                                                                 Type personnalisés
                                                             </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <h4><input id="div-sharepoint" type="button" value=" + "
+                                                    data-toggle="collapse" data-target="#item-div-sharepoint" />
+                                                Mise en
+                                                place d'un portail
+                                                intranet sous <strong>SharePoint</strong></h4>
+                                            <div id="item-div-sharepoint" class="collapse">
+                                                <ul class="intranet">
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/sharepoint.png" />
+                                                        <div class="legende">Page Intranet des formulaires de
+                                                            l'entreprise
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/powerautomate.png" />
+                                                        <div class="legende">Exemple de flux PowerAutomate
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -413,7 +416,8 @@
                                                 <p>1991 - 1994</p>
                                             </li>
                                             <li>
-                                                <h3><strong>Bac E</strong> (Mathématiques et Techniques)</h3>
+                                                <h3>Obtention du <strong>Bac E</strong> (Mathématiques et Techniques)
+                                                </h3>
                                                 <p>Lycée Augustin Thierry - Blois (41) - académie Orléans-Tours</p>
                                                 <p>1991</p>
                                             </li>
@@ -534,8 +538,8 @@
                             </ul>
                             <br>
 
-                            <p>Site personnel : <a href="https://greduvent.herokuapp.com/" target="_blank">au gré du
-                                    vent 1.0</a></p>
+                            <h3>Site personnel : <a href="https://greduvent.herokuapp.com/" target="_blank">au gré du
+                                    vent 1.0</a></h3>
                         </div>
                     </div>
                 </div>
