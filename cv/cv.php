@@ -518,7 +518,7 @@
                                         <h3>curieux, passionné et aime échanger</h3>
                                     </li>
                                     <li>
-                                        <h3>à l'écoute</h3>
+                                        <h3>créatif</h3>
                                     </li>
                                 </ul>
                                 <li>

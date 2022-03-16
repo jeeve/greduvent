@@ -87,12 +87,6 @@ strong {
   padding-left: 30px;
 }
 
-@media (max-width: 767px) {
-  .mail {
-    background-size: 16px;
-  }
-}
-
 .realisation ul {
   display: flex;
   flex-wrap: wrap;
@@ -154,4 +148,19 @@ ul.realisation {
 
 a {
   font-size: 1em;
+}
+
+@media (max-width: 767px) {
+
+  .realisation li, h3, h4 {
+    margin-left: 0;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .mail {
+    background-size: 16px;
+  }
 }
