@@ -503,7 +503,7 @@
                                     <h3>sérieux et organisé</h3>
                                 </li>
                                 <li>
-                                    <h3>autonomie</h3>
+                                    <h3>autonome</h3>
                                 </li>
                                 <li>
                                     <h3>faculté d'adaptation et polyvalence</h3>
@@ -512,7 +512,7 @@
                                     <h3>expérience dans de nombreuses technologies</h3>
                                 </li>
                                 <li>
-                                    <h3>curieux, passionné et aime échanger</h3>
+                                    <h3>curieux, passionné, aime échanger</h3>
                                 </li>
                                 <li>
                                     <h3>pas le plus efficace en fonctionnement sous stress</h3>
