@@ -92,11 +92,11 @@ strong {
   padding-left: 30px;
 }
 
-.realisation input {
-  font-size: 1.2em;
+.realisation input, #item-div-formation input {
+  font-size: 1.7em;
 }
 
-.realisation li div:first-child {
+.realisation li div:first-child, #item-div-formation li div:first-child {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -104,6 +104,10 @@ strong {
 
 .realisation li div h4 {
   margin-left: 10px;
+}
+
+#item-div-formation li div h3 {
+  margin-top: 10px;
 }
 
 .realisation ul {
@@ -212,4 +216,5 @@ a {
   .mail {
     background-size: 16px;
   }
+
 }

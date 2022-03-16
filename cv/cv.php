@@ -408,11 +408,14 @@
                         <div id="item-div-formation" class="collapse in">
                             <ul>
                                 <li>
-                                    <h3><input id="div-formationsacademiques" type="button" value=" - "
+                                    <div>
+                                        <input id="div-formationsacademiques" type="button" value=" - "
                                             data-toggle="collapse" data-target="#item-div-formationsacademiques" />
-                                        <strong>Formations
-                                            académiques</strong>
-                                    </h3>
+                                        <h3>
+                                            <strong>Formations
+                                                académiques</strong>
+                                        </h3>
+                                    </div>
                                     <div id="item-div-formationsacademiques" class="collapse in">
                                         <ul>
                                             <li>
@@ -443,10 +446,13 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <h3><input id="div-formationsprofessionnelles" type="button" value=" + "
+                                    <div>
+                                        <input id="div-formationsprofessionnelles" type="button" value=" + "
                                             data-toggle="collapse" data-target="#item-div-formationsprofessionnelles" />
-                                        <strong>Formations durant parcours professionnel</strong>
-                                    </h3>
+                                        <h3>
+                                            <strong>Formations durant parcours professionnel</strong>
+                                        </h3>
+                                    </div>
                                     <div id="item-div-formationsprofessionnelles" class="collapse">
                                         <ul>
                                             <li>
