@@ -96,11 +96,15 @@ strong {
   font-size: 1.7em;
 }
 
-.realisation li div:first-child, #item-div-formation li div:first-child {
+.realisation > li > div:first-child, #item-div-formation li div:first-child {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.realisation img {
+    margin-top: 10px;
 }
 
 .realisation li div h4 {
@@ -115,7 +119,7 @@ strong {
   list-style-type: disc;
 }
 
-.realisation ul {
+.realisation li div ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -157,7 +161,6 @@ ul.realisation {
   font-size: 1em;
   width: 100%;
   font-weight: normal;
-  text-align: center;
   text-transform: lowercase;
 }
 
