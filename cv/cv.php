@@ -101,12 +101,15 @@
                                     <h4>De septembre 1997 à aujourd'hui</h4>
                                     <ul class="realisation">
                                         <li>
-                                            <h4><input id="div-wordpress" type="button" value=" + "
+                                            <div>
+                                                <input id="div-wordpress" type="button" value=" + "
                                                     data-toggle="collapse" data-target="#item-div-wordpress" />
-                                                Création
-                                                de sites internet avec
-                                                <strong>WordPress</strong>
-                                            </h4>
+                                                <h4>
+                                                    Création
+                                                    de sites internet avec
+                                                    <strong>WordPress</strong>
+                                                </h4>
+                                            </div>
                                             <div id="item-div-wordpress" class="collapse">
                                                 <ul class="internet">
                                                     <li>
@@ -141,11 +144,14 @@
                                         </li>
 
                                         <li>
-                                            <h4><input id="div-sharepoint" type="button" value=" + "
+                                            <div>
+                                                <input id="div-sharepoint" type="button" value=" + "
                                                     data-toggle="collapse" data-target="#item-div-sharepoint" />
-                                                Mise en
-                                                place d'un portail
-                                                intranet sous <strong>SharePoint</strong></h4>
+                                                <h4>
+                                                    Mise en
+                                                    place d'un portail
+                                                    intranet sous <strong>SharePoint</strong></h4>
+                                            </div>
                                             <div id="item-div-sharepoint" class="collapse">
                                                 <ul class="intranet">
                                                     <li>
@@ -165,10 +171,13 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <h4><input id="div-windev" type="button" value=" + " data-toggle="collapse"
+                                            <div>
+                                                <input id="div-windev" type="button" value=" + " data-toggle="collapse"
                                                     data-target="#item-div-windev" />
-                                                Développement d'interfaces entre
-                                                progiciels avec <strong>Windev</strong></h4>
+                                                <h4>
+                                                    Développement d'interfaces entre
+                                                    progiciels avec <strong>Windev</strong></h4>
+                                            </div>
                                             <div id="item-div-windev" class="collapse">
                                                 <ul class="windev">
                                                     <li>
@@ -187,11 +196,14 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <h4><input id="div-webdev" type="button" value=" + " data-toggle="collapse"
+                                            <div>
+                                                <input id="div-webdev" type="button" value=" + " data-toggle="collapse"
                                                     data-target="#item-div-webdev" />
-                                                Développements
-                                                <strong>Webdev</strong>
-                                            </h4>
+                                                <h4>
+                                                    Développements
+                                                    <strong>Webdev</strong>
+                                                </h4>
+                                            </div>
                                             <div id="item-div-webdev" class="collapse">
                                                 <ul class="webdev">
                                                     <li>
@@ -218,9 +230,12 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <h4><input id="div-service-web" type="button" value=" + "
+                                            <div>
+                                                <input id="div-service-web" type="button" value=" + "
                                                     data-toggle="collapse" data-target="#item-div-service-web" />
-                                                Développement de services Web en <strong>c#</strong></h4>
+                                                <h4>
+                                                    Développement de services Web en <strong>c#</strong></h4>
+                                            </div>
                                             <div id="item-div-service-web" class="collapse">
                                                 <ul class="service-web">
                                                     <li>
@@ -236,11 +251,14 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <h4><input id="div-delphi" type="button" value=" + " data-toggle="collapse"
+                                            <div>
+                                                <input id="div-delphi" type="button" value=" + " data-toggle="collapse"
                                                     data-target="#item-div-delphi" />
-                                                Développement d'applications
-                                                métier
-                                                sous Windows avec <strong>Delphi</strong></h4>
+                                                <h4>
+                                                    Développement d'applications
+                                                    métier
+                                                    sous Windows avec <strong>Delphi</strong></h4>
+                                            </div>
                                             <div id="item-div-delphi" class="collapse">
                                                 <ul class="windows">
                                                     <li>

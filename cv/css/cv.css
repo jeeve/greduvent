@@ -92,6 +92,20 @@ strong {
   padding-left: 30px;
 }
 
+.realisation input {
+  font-size: 1.2em;
+}
+
+.realisation li div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.realisation li div h4 {
+  margin-left: 10px;
+}
+
 .realisation ul {
   display: flex;
   flex-wrap: wrap;
@@ -157,7 +171,6 @@ a {
 
 @media (max-width: 767px) {
   .navbar-toggle {
-
   }
   #bouton-bas-page {
     right: 0px;
@@ -181,7 +194,8 @@ a {
     margin-left: -30px;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     font-size: 1.2em;
   }
 
