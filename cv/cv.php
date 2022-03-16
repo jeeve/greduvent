@@ -427,7 +427,7 @@
                                 <li>
                                     <h3><input id="div-formationsprofessionnelles" type="button" value=" + "
                                             data-toggle="collapse" data-target="#item-div-formationsprofessionnelles" />
-                                        <strong>Formations pendant mon parcours professionnel</strong>
+                                        <strong>Formations durant parcours professionnel</strong>
                                     </h3>
                                     <div id="item-div-formationsprofessionnelles" class="collapse">
                                         <ul>
