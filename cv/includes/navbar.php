@@ -12,7 +12,6 @@
                <a class="navbar-brand navbar-brand-texte" href="./#experience">Expérience</a>
                <a class="navbar-brand navbar-brand-texte" href="./#formation">Formation</a>
                <a class="navbar-brand navbar-brand-texte" href="./#divers">à propos</a>
-
             </div>
          </div>
       </div>
