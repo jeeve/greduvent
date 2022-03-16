@@ -498,43 +498,31 @@
                         </h2>
                         <div id="item-div-divers" class="collapse in">
                             <ul>
+
                                 <li>
-                                    <h3>Points forts</h3>
+                                    <h3>sérieux et organisé</h3>
                                 </li>
-                                <ul>
-                                    <li>
-                                        <h3>sérieux et organisé</h3>
-                                    </li>
-                                    <li>
-                                        <h3>autonomie</h3>
-                                    </li>
-                                    <li>
-                                        <h3>faculté d'adaptation et polyvalence</h3>
-                                    </li>
-                                    <li>
-                                        <h3>expérience dans de nombreuses technologies</h3>
-                                    </li>
-                                    <li>
-                                        <h3>curieux, passionné et aime échanger</h3>
-                                    </li>
-                                    <li>
-                                        <h3>créatif</h3>
-                                    </li>
-                                </ul>
                                 <li>
-                                    <h3>Points faibles</h3>
+                                    <h3>autonomie</h3>
                                 </li>
-                                <ul>
-                                    <li>
-                                        <h3>pas forcément le plus rapide</h3>
-                                    </li>
-                                    <li>
-                                        <h3>pas le plus efficace en fonctionnement sous stress</h3>
-                                    </li>
-                                    <li>
-                                        <h3>anglais à l'oral</h3>
-                                    </li>
-                                </ul>
+                                <li>
+                                    <h3>faculté d'adaptation et polyvalence</h3>
+                                </li>
+                                <li>
+                                    <h3>expérience dans de nombreuses technologies</h3>
+                                </li>
+                                <li>
+                                    <h3>curieux, passionné et aime échanger</h3>
+                                </li>
+                                <li>
+                                    <h3>pas le plus efficace en fonctionnement sous stress</h3>
+                                </li>
+                                <li>
+                                    <h3>pas très à l'aise à l'oral en anglais</h3>
+                                </li>
+                                <li>
+                                    <h3>créatif</h3>
+                                </li>
                             </ul>
                             <br>
 
