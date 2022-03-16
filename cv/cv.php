@@ -99,80 +99,6 @@
                                     <h4>De septembre 1997 à aujourd'hui</h4>
                                     <ul class="realisation">
                                         <li>
-                                            <h4><input id="div-delphi" type="button" value=" + " data-toggle="collapse"
-                                                    data-target="#item-div-delphi" />
-                                                Développement d'applications
-                                                métier
-                                                sous Windows avec <strong>Delphi</strong></h4>
-                                            <div id="item-div-delphi" class="collapse">
-                                                <ul class="windows">
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/elisa.gif" />
-                                                        <div class="legende">Calcul système d'attaques en moulage
-                                                            sable
-                                                            <div class="sous-legende">Utilisation de DirectX pour la
-                                                                vue
-                                                                3D
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/optima.gif" />
-                                                        <div class="legende">Calcul de charge et correction de bain
-                                                            <div class="sous-legende">Implémentation de l'algorithme
-                                                                du
-                                                                Simplex
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/poids.gif" />
-                                                        <div class="legende">Calcul poids de pièce
-                                                            <div class="sous-legende">Association d'éléments
-                                                                géométriques
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/qualital.png" />
-                                                        <div class="legende">Qualital
-                                                            <div class="sous-legende">Indice de qualité des alliages
-                                                                aluminium</div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/materialis.png" />
-                                                        <div class="legende">Materialis
-                                                            <div class="sous-legende">Base de données matériaux
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/adagio.gif" />
-                                                        <div class="legende">Adagio
-                                                            <div class="sous-legende">Aide à la conduite de sablerie
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive ombre-image"
-                                                            src="images/salsa3d.png" />
-                                                        <div class="legende">Salsa 3D
-                                                            <div class="sous-legende">Conception d'un plugin métier
-                                                                au
-                                                                sein
-                                                                de l'environnement 3DShop</div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
                                             <h4><input id="div-sharepoint" type="button" value=" + "
                                                     data-toggle="collapse" data-target="#item-div-sharepoint" />
                                                 Mise en
@@ -225,7 +151,7 @@
                                                                 src="images/formation.png" />
                                                         </a>
                                                         <div class="legende"><a href="https://formation.ctif.com"
-                                                                target="_blank"> Site Formation</a>
+                                                                target="_blank">formation.ctif.com</a>
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Content
                                                                 Type personnalisés
@@ -304,6 +230,80 @@
                                                     </li>
                                                 </ul>
 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4><input id="div-delphi" type="button" value=" + " data-toggle="collapse"
+                                                    data-target="#item-div-delphi" />
+                                                Développement d'applications
+                                                métier
+                                                sous Windows avec <strong>Delphi</strong></h4>
+                                            <div id="item-div-delphi" class="collapse">
+                                                <ul class="windows">
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/elisa.gif" />
+                                                        <div class="legende">Calcul système d'attaques en moulage
+                                                            sable
+                                                            <div class="sous-legende">Utilisation de DirectX pour la
+                                                                vue
+                                                                3D
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/optima.gif" />
+                                                        <div class="legende">Calcul de charge et correction de bain
+                                                            <div class="sous-legende">Implémentation de l'algorithme
+                                                                du
+                                                                Simplex
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/poids.gif" />
+                                                        <div class="legende">Calcul poids de pièce
+                                                            <div class="sous-legende">Association d'éléments
+                                                                géométriques
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/qualital.png" />
+                                                        <div class="legende">Qualital
+                                                            <div class="sous-legende">Indice de qualité des alliages
+                                                                aluminium</div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/materialis.png" />
+                                                        <div class="legende">Materialis
+                                                            <div class="sous-legende">Base de données matériaux
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/adagio.gif" />
+                                                        <div class="legende">Adagio
+                                                            <div class="sous-legende">Aide à la conduite de sablerie
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image"
+                                                            src="images/salsa3d.png" />
+                                                        <div class="legende">Salsa 3D
+                                                            <div class="sous-legende">Conception d'un plugin métier
+                                                                au
+                                                                sein
+                                                                de l'environnement 3DShop</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </li>
 
