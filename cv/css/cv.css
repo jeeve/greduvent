@@ -14,6 +14,14 @@ body,
   font-size: 1.2em;
 }
 
+#bouton-menu {
+  right: 60px;
+}
+
+#bouton-bas-page {
+  right: 10px;
+}
+
 @media (max-width: 767px) {
   .navbar-brand.navbar-brand-texte {
     margin-right: -25px;
@@ -21,14 +29,11 @@ body,
   }
 }
 
-#bouton-bas-page {
-  right: 50px;
-}
-
 .encadre {
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -151,16 +156,38 @@ a {
 }
 
 @media (max-width: 767px) {
-  
   .navbar-toggle {
-    right: 0;
+
   }
-  
+  #bouton-bas-page {
+    right: 0px;
+  }
+
+  #bouton-menu {
+    right: 40px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .encadre {
+    margin-left: 15px;
+  }
+
   #item-div-formation {
     margin-left: -30px;
   }
 
-  .realisation li, h3, h4 {
+  h3, h4 {
+    font-size: 1.2em;
+  }
+
+  .realisation li,
+  h3,
+  h4 {
     margin-left: 0;
   }
 
@@ -171,5 +198,4 @@ a {
   .mail {
     background-size: 16px;
   }
-
 }
