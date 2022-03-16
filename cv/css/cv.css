@@ -121,12 +121,20 @@ strong {
   justify-content: space-around;
 }
 
+#item-div-experience p {
+  margin-left: 0;
+}
+
 ul.realisation {
   padding-left: 0;
 }
 
+#item-div-experience h3 {
+  padding-left: 0;
+}
+
 .realisation li {
-  margin: 10px;
+  margin-left: 0;
   list-style: none;
 }
 
@@ -149,6 +157,7 @@ ul.realisation {
   font-size: 1em;
   width: 100%;
   font-weight: normal;
+  text-align: center;
   text-transform: lowercase;
 }
 

@@ -1,7 +1,7 @@
 	  <script src="/js/jquery.min.js"></script>
       <script src="/js/bootstrap.min.js"></script>
       <script src="/js/bootply.js"></script>
-	  <script src="/js/script.js"></script>
+	  <script src="./js/script.js"></script>
 	  <script src="/js/navbar.js"></script>	  
 	  <script src="/js/jquery.mobile.touch.min.js"></script>
 	  <script>
