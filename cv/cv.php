@@ -33,7 +33,8 @@
                             <h3><strong>Développeur informatique</strong></h3>
                             <p>Date de naissance : 1972 (49 ans)</p>
                             <p>Gentilly (94)</p>
-                            <p><a target="-blank" class="mail" href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
+                            <p><a target="-blank" class="mail"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
                             </p>
 
                             <br>
@@ -51,7 +52,7 @@
                     <div class="col-md-1 fond"></div>
                     <div class="col-xs-12 col-md-6 fond">
                         <h2><input style="color:black;" id="div-competences" type="button" value=" - "
-                                data-toggle="collapse" data-target="#item-div-competences" /> Compétences
+                                data-toggle="collapse" data-target="#item-div-competences" />&nbsp;&nbsp;Compétences
                         </h2>
                         <div id="item-div-competences" class="collapse in">
                             <ul>
@@ -86,7 +87,7 @@
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
                         <h2 class="experience"><input style="color:black;" id="div-experience" type="button" value=" - "
-                                data-toggle="collapse" data-target="#item-div-experience" /> Expérience
+                                data-toggle="collapse" data-target="#item-div-experience" />&nbsp;&nbsp;Expérience
                             professionnelle
                         </h2>
                         <div id="item-div-experience" class="collapse in">
@@ -403,7 +404,7 @@
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="formation"></a>
                         <h2><input style="color:black;" id="div-formation" type="button" value=" - "
-                                data-toggle="collapse" data-target="#item-div-formation" /> Formation
+                                data-toggle="collapse" data-target="#item-div-formation" />&nbsp;&nbsp;Formation
                         </h2>
                         <div id="item-div-formation" class="collapse in">
                             <ul>
@@ -518,11 +519,11 @@
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="divers"></a>
                         <h2><input style="color:black;" id="div-divers" type="button" value=" - " data-toggle="collapse"
-                                data-target="#item-div-divers" /> à propos
+                                data-target="#item-div-divers" />&nbsp;&nbsp;à propos
                         </h2>
                         <div id="item-div-divers" class="collapse in">
-                            <ul>
-
+                            <br>
+                            <!-- <ul>
                                 <li>
                                     <h3>sérieux et organisé</h3>
                                 </li>
@@ -548,9 +549,37 @@
                                     <h3>créatif</h3>
                                 </li>
                             </ul>
+-->
+                            <p>Passionné depuis le plus jeune âge par la création informatique, j'ai acquis une
+                                expérience solide dans différents langages et paragdimes de programmation.</p>
+                            <p>Je suis
+                                sérieux dans mon travail, autonome si besoin, avec je pense, une bonne capacité
+                                d'adaptation.
+                                Curieux de nature, j'aime apprendre et partager de nouvelles technologies.
+                            </p>
+                            <br>
+                            <p>A titre personnel j'utilise noatamment les logiciels</p>
+                            <ul>
+                                <li>
+                                    <h3>Visual Studio Code</h3>
+                                </li>
+                                <li>
+                                    <h3>Gimp</h3>
+                                </li>
+                                <li>
+                                    <h3>Blender (création 3D)</h3>
+                                </li>
+                                <li>
+                                    <h3>Davinci Resolve (montage vidéo)</h3>
+                                </li>
+                                <li>
+                                    <h3>Reason Studio (création musicale)</h3>
+                                </li>
+                            </ul>
                             <br>
 
-                            <h3>Site personnel : <a href="https://greduvent.herokuapp.com/" target="_blank">au gré du
+                            <h3>Site personnel : <a href="https://greduvent.herokuapp.com/" target="_blank">au
+                                    gré du
                                     vent 1.0</a></h3>
                         </div>
                     </div>
