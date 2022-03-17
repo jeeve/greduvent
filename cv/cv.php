@@ -558,7 +558,7 @@
                                 Curieux de nature, j'aime apprendre et partager de nouvelles technologies.
                             </p>
                             <br>
-                            <p>A titre personnel j'utilise noatamment les logiciels</p>
+                            <p>A titre personnel j'utilise notamment les logiciels</p>
                             <ul>
                                 <li>
                                     <h3>Visual Studio Code</h3>
