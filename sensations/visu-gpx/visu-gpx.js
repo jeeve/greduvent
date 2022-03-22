@@ -503,7 +503,7 @@ function visuGPX(id, url, visuGpxOptions) {
       iconSize: [26, 26],
       iconAnchor: [13, 13],
       tooltipAnchor: [26, 26],
-      className: "vitesse",
+      className: "marker",
     });
 
     if (markerVitesse != null) {
