@@ -194,6 +194,10 @@ a {
   font-size: 1em;
 }
 
+.site-perso {
+  margin-bottom: 40px;
+}
+
 @media (max-width: 767px) {
 
   #bouton-bas-page {
