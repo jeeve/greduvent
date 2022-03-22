@@ -464,7 +464,7 @@ function visuGPX(id, url, visuGpxOptions) {
       }
       if (opacite0 != opacite || txy2.length >= 100) {
         polylignes.push(
-          L.polyline(txy2, { color: couleurCategorie(cat), opacity: opacite0 })
+          L.polyline(txy2, { color: couleurCategorie(cat0), opacity: opacite0 })
         );
         txy2 = [];
         var coord = [];
