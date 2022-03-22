@@ -101,7 +101,7 @@ strong {
   font-size: 1.7em;
 }
 
-.realisation > li > div:first-child, #item-div-formation li div:first-child {
+.realisation > li > div:first-child, #item-div-formation li div:first-child, .bouton-realisationspersonnelles {
   margin-top: 10px;
   display: flex;
   flex-direction: row;

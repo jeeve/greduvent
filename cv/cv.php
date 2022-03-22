@@ -580,9 +580,146 @@
                             <p>Je suis passionné par les sciences, pratique le windfoil, et aime profiter de la nature.
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.</p>
 
-                            <h3 class="site-perso">Site personnel : <a href="https://greduvent.herokuapp.com/" target="_blank">au
+
+
+                            <div class="bouton-realisationspersonnelles">
+                                <input id="div-realisationspersonnelles" type="button" value=" + "
+                                    data-toggle="collapse" data-target="#item-div-realisationspersonnelles" />
+                                <h3>
+                                    <strong>Petites réalisations personnelles</strong>
+                                </h3>
+                            </div>
+                            <div id="item-div-realisationspersonnelles" class="collapse">
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond">
+                                        <h3><strong>Le jeu de José</strong></h3>
+                                        <p>
+                                            Une rivière, une barge ne pouvant contenir que 2 individus maximum.
+
+                                            Sur la rive droite, 3 humains et 3 orques.
+
+                                            Le but, que les 3 humains traversent sur la rive gauche sachant qu'ils ne
+                                            doivent
+                                            jamais être en infériorité numérique par rapport aux orques.</p>
+
+                                        <p>Le programme écrit en <strong>Python</strong> :</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
+
+
+                                        <!-- HTML generated using hilite.me -->
+                                        <div>
+                                            <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">copy</span> <span style="color: #008800; font-weight: bold">import</span> copy
+ 
+<span style="color: #DD4422">"""Modèle"""</span>
+ 
+<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">JeuDeJose</span>:
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>):
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>coups <span style="color: #333333">=</span> []
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche <span style="color: #333333">=</span> []
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite <span style="color: #333333">=</span> [<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>]
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">=</span> <span style="background-color: #fff0f0">'droite'</span>
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives_max <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">100</span>
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__str__</span>(<span style="color: #007020">self</span>):
+    chaine <span style="color: #333333">=</span> <span style="color: #007020">str</span>(<span style="color: #007020">len</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>coups) <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">" coups</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">"</span>
+    <span style="color: #008800; font-weight: bold">for</span> coup <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>coups:
+      chaine <span style="color: #333333">+=</span> <span style="background-color: #fff0f0">"Traverse vers "</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(coup[<span style="color: #0000DD; font-weight: bold">0</span>]) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">" --------&gt; "</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(coup[<span style="color: #0000DD; font-weight: bold">1</span>]) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">"</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">"</span>
+    <span style="color: #008800; font-weight: bold">return</span> chaine
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_nombre</span>(<span style="color: #007020">self</span>, categorie, rive):
+    <span style="color: #008800; font-weight: bold">return</span> rive<span style="color: #333333">.</span>count(categorie)  
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">equipage_disponible</span>(<span style="color: #007020">self</span>, equipage, rive):
+    copie_rive <span style="color: #333333">=</span> copy(rive)
+    <span style="color: #008800; font-weight: bold">for</span> membre <span style="color: #000000; font-weight: bold">in</span> equipage:
+      <span style="color: #008800; font-weight: bold">try</span>:
+        copie_rive<span style="color: #333333">.</span>remove(membre)
+      <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">False</span>
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">True</span>      
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_test_viabilite</span>(<span style="color: #007020">self</span>, rive):
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'humain'</span>, rive) <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'orque'</span>, rive) <span style="color: #333333">&lt;=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'humain'</span>, rive)
+    <span style="color: #008800; font-weight: bold">else</span>:
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">True</span>  
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_a_gagne</span>(<span style="color: #007020">self</span>):
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'humain'</span>, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche) <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">3</span>
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_transfert_vers</span>(<span style="color: #007020">self</span>, rive1, rive2, equipage):
+    <span style="color: #008800; font-weight: bold">for</span> membre <span style="color: #000000; font-weight: bold">in</span> equipage:
+      <span style="color: #008800; font-weight: bold">try</span>:
+        rive1<span style="color: #333333">.</span>remove(membre)
+        rive2<span style="color: #333333">.</span>append(membre)
+      <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">pass</span>
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">traverse_vers</span>(<span style="color: #007020">self</span>, rive1, rive2, equipage):
+    copie_rive1 <span style="color: #333333">=</span> copy(rive1)
+    copie_rive2 <span style="color: #333333">=</span> copy(rive2)
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>_transfert_vers(copie_rive1, copie_rive2, equipage)
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_test_viabilite(copie_rive1) <span style="color: #000000; font-weight: bold">and</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_test_viabilite(copie_rive2):
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>_transfert_vers(rive1, rive2, equipage)  
+      <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">==</span> <span style="background-color: #fff0f0">'gauche'</span>:
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">=</span> <span style="background-color: #fff0f0">'droite'</span>
+      <span style="color: #008800; font-weight: bold">else</span>:
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">=</span> <span style="background-color: #fff0f0">'gauche'</span>
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>coups<span style="color: #333333">.</span>append(((<span style="color: #007020">self</span><span style="color: #333333">.</span>barge, equipage), (copy(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche), copy(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite))))
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>  
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">strategie</span>(<span style="color: #007020">self</span>):
+    <span style="color: #008800; font-weight: bold">if</span> random<span style="color: #333333">.</span>choice([<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">2</span>]) <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>:
+      equipage <span style="color: #333333">=</span> [random<span style="color: #333333">.</span>choice([<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>])]
+    <span style="color: #008800; font-weight: bold">else</span>:
+      equipage <span style="color: #333333">=</span> [random<span style="color: #333333">.</span>choice([<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>]), random<span style="color: #333333">.</span>choice([<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>])]
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">==</span> <span style="background-color: #fff0f0">'droite'</span>:
+      <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>equipage_disponible(equipage, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>traverse_vers(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche, equipage)
+    <span style="color: #008800; font-weight: bold">else</span>:
+      <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>equipage_disponible(equipage, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>traverse_vers(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite, equipage)
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">run</span>(<span style="color: #007020">self</span>):
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>coups <span style="color: #333333">=</span> [((), ([], [<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>]))]
+    <span style="color: #008800; font-weight: bold">while</span> <span style="color: #000000; font-weight: bold">not</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>_a_gagne()) <span style="color: #000000; font-weight: bold">and</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives <span style="color: #333333">&lt;</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives_max:
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>strategie()
+ 
+<span style="color: #DD4422">"""Calcul"""</span>
+ 
+random<span style="color: #333333">.</span>seed(<span style="color: #0000DD; font-weight: bold">1</span>)
+nombre_tentatives_max <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1000</span>
+meilleur_jeu <span style="color: #333333">=</span> JeuDeJose()
+meilleur_jeu<span style="color: #333333">.</span>run()
+nombre_tentatives <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #008800; font-weight: bold">while</span> nombre_tentatives <span style="color: #333333">&lt;</span> nombre_tentatives_max:
+  j <span style="color: #333333">=</span> JeuDeJose()
+  j<span style="color: #333333">.</span>run()
+  <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">len</span>(j<span style="color: #333333">.</span>coups) <span style="color: #333333">&lt;</span> <span style="color: #007020">len</span>(meilleur_jeu<span style="color: #333333">.</span>coups):
+    meilleur_jeu <span style="color: #333333">=</span> j
+  nombre_tentatives <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #008800; font-weight: bold">print</span>(meilleur_jeu)
+</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="site-perso">Site personnel : <a href="https://greduvent.herokuapp.com/"
+                                    target="_blank">au
                                     gré du
                                     vent 1.0</a></h3>
+
+
                         </div>
                     </div>
                 </div>
