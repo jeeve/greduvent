@@ -373,7 +373,7 @@ function visuGPX(id, url, visuGpxOptions) {
     }
     $("#" + id + " " + ".curseur").val(($("#seuil").val() / vmax) * 100);
     $("#" + id + " " + ".distance-seuil").text(
-      calculeDistanceSeuil($("#seuil").val()).toFixed(3)
+      calculeDistanceSeuil($("#" + id + " " + ".seuil").val()).toFixed(3)
     );
     $("#" + id + " " + ".position").val("0.000");
     $("#" + id + " " + ".temps").val("0");
