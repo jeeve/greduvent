@@ -1141,8 +1141,8 @@ function visuGPX(id, url, visuGpxOptions) {
   }
 
   function play() {
-    $("#temps").val(getParameterByName("play"));
-    $("#lecture").click();
+    $("#" + id + " " + ".temps").val(getParameterByName("play"));
+    $("#" + id + " " + ".lecture").click();
   }
 
   function closestSortedValueIndex(array, value) {
