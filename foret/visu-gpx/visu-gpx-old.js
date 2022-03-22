@@ -16,6 +16,7 @@ function visuGPX(id, url, visuGpxOptions) {
   var lectureTimer = null;
   const LARGEUR_LIGNE = 10;
   var iVideoStart, iVideoEnd;
+  var playerReady = false;
 
   var map = L.map(document.querySelector("#" + id + " " + ".map"), {
     zoomControl: false,
@@ -365,11 +366,9 @@ function visuGPX(id, url, visuGpxOptions) {
       $("#" + id + " " + ".seuil").val(vmax);
       $("#" + id + " " + ".fenetre-auto").prop("checked", false);
       $("#" + id + " " + ".fenetre-largeur").css("visibility", "hidden");
-      $("#" + id + " " + ".rapidite").val("50");
     } else {
       $("#" + id + " " + ".seuil").val("12.00");
       $("#" + id + " " + ".fenetre-auto").prop("checked", true);
-      $("#" + id + " " + ".rapidite").val("10");
     }
     $("#" + id + " " + ".curseur").val(($("#seuil").val() / vmax) * 100);
     $("#" + id + " " + ".distance-seuil").text(
@@ -378,6 +377,7 @@ function visuGPX(id, url, visuGpxOptions) {
     $("#" + id + " " + ".position").val("0.000");
     $("#" + id + " " + ".temps").val("0");
     $("#" + id + " " + ".vitesse").text("0.00");
+    $("#" + id + " " + ".rapidite").val("50");
     $("#" + id + " " + ".fenetre-largeur").val("2.000");
   }
 
@@ -441,7 +441,7 @@ function visuGPX(id, url, visuGpxOptions) {
   function dessineTrace() {
     polylignes = [];
 
-    var seuil = $("#" + id + " " + ".seuil").val();
+    var seuil = $("#seuil").val();
 
     var txy2 = [];
     var opacite0, opacite;
@@ -464,7 +464,7 @@ function visuGPX(id, url, visuGpxOptions) {
       }
       if (opacite0 != opacite || txy2.length >= 100) {
         polylignes.push(
-          L.polyline(txy2, { color: couleurCategorie(cat0), opacity: opacite0 })
+          L.polyline(txy2, { color: couleurCategorie(cat), opacity: opacite0 })
         );
         txy2 = [];
         var coord = [];
@@ -503,7 +503,7 @@ function visuGPX(id, url, visuGpxOptions) {
       iconSize: [26, 26],
       iconAnchor: [13, 13],
       tooltipAnchor: [26, 26],
-      className: "marker",
+      className: "vitesse",
     });
 
     if (markerVitesse != null) {
@@ -522,7 +522,7 @@ function visuGPX(id, url, visuGpxOptions) {
   }
 
   $("#" + id + " " + ".lire-gpx").click(function () {
-    $(".upload").toggle();
+    $("#upload").toggle();
   });
 
   if ($("#" + id + " " + ".stats .calcule").prop("checked")) {
@@ -736,6 +736,9 @@ function visuGPX(id, url, visuGpxOptions) {
   });
 
   $("#" + id + " " + ".stop").click(function () {
+    if (playerReady) {
+      player.pauseVideo();
+    }
     clearInterval(lectureTimer);
     lectureTimer = null;
   });
@@ -1132,17 +1135,6 @@ function visuGPX(id, url, visuGpxOptions) {
     if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
       calculeBornes();
     }
-    if (getParameterByName("stats") == "1") {
-      $("#" + id + " " + ".calcule").click();
-    }
-    if (getParameterByName("play")) {
-      play();
-    }
-  }
-
-  function play() {
-    $("#" + id + " " + ".temps").val(getParameterByName("play"));
-    $("#" + id + " " + ".lecture").click();
   }
 
   function closestSortedValueIndex(array, value) {
