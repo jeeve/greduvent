@@ -577,7 +577,7 @@
                                 </li>
                             </ul>
                             <br>
-                            <p>Je suis passionné par les sciences, pratique le windfoil, et aime profiter de la nature.
+                            <p>Je suis passionné par les sciences, pratique le <a target="_blank" href="https://greduvent.herokuapp.com/sensations/glisse.php">windfoil</a>, et aime profiter de la nature.
                                 Le contact et le partage avec les autres sont essentiels à mon équilibre.</p>
 
                             <h3 class="site-perso">Site personnel : <a href="https://greduvent.herokuapp.com/" target="_blank">au
