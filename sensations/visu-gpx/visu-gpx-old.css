@@ -7,7 +7,7 @@ td {
   padding: 5px;
 }
 
-.lire-gpx {
+#lire-gpx {
   padding-top: 10px;
   padding-left: 10px;
   text-decoration: underline;
@@ -15,7 +15,7 @@ td {
   cursor: pointer;
 }
 
-.upload {
+#upload {
   /* border: 3px solid rgb(110, 110, 112);
   border-radius: 5px;*/
   margin: 10px;
@@ -24,36 +24,36 @@ td {
   display: none;
 }
 
-.upload input[type="submit"] {
+#upload input[type="submit"] {
   margin-top: 10px;
 }
 
-.carte {
+#carte {
   position: relative;
 }
 
-.map {
+#map {
   width: 100%;
   height: 800px;
 }
 
 @media screen and (max-width: 767px) {
-  .chart {
+  #chart {
     height: 100px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .chart {
+  #chart {
     height: 150px;
   }
 }
 
-.stats table {
+#stats table {
   display: none;
 }
 
-.chart {
+#chart {
   width: 100%;
   bottom: 12px;
   right: 8px;
@@ -61,37 +61,46 @@ td {
 }
 
 @media screen and (min-width: 768px) {
-  .control {
+  #control {
     position: absolute;
   }
 }
 
-.control {
+#control {
   top: 8px;
   z-index: 20000;
   background-color: rgba(255, 255, 255, 0.75);
   border: 3px solid rgb(110, 110, 112);
 }
 
-.reglages {
+#video {
+  position: absolute;
+  bottom: -3px;
+  z-index: 10000;
+  opacity: 1;
+  border: 3px solid white;
+  left: -3px;
+}
+
+#reglages {
   display: block;
 }
 
-.rapidite {
+#rapidite {
   width: 40px;
 }
 
-.fenetre {
+#fenetre {
   margin-top: 15px;
   margin-bottom: 15px;
   padding-left: 15px;
 }
 
-.magneto {
+#magneto {
   margin: 15px;
 }
 
-.fenetre-magneto {
+#fenetre-magneto {
   padding-left: 40px;
   padding-right: 0;
 }
@@ -99,37 +108,37 @@ td {
 .fenetre-largeur {
   display: inline;
 }
-.fenetre-largeur {
+#fenetre-largeur {
   width: 50px;
 }
 
-.seuil {
+#seuil {
   width: 60px;
   color: red;
   text-align: right;
 }
 
-.reglages label {
+#reglages label {
   margin-left: 30px;
 }
 
-.position {
+#position {
   width: 60px;
   text-align: right;
 }
 
-.temps {
+#temps {
   width: 60px;
   text-align: right;
 }
 
-.vitesse {
+#vitesse {
   width: 60px;
   text-align: right;
   font-weight: bold;
 }
 
-.distance-seuil {
+#distance-seuil {
   width: 60px;
   text-align: right;
   color: red;
@@ -148,11 +157,11 @@ td {
   transform: rotate(-90deg);
 }
 
-.chart path {
+#chart path {
   stroke-width: 1;
 }
 
-.stats {
+#stats {
   padding-left: 15px;
   padding-bottom: 10px;
 }
@@ -161,7 +170,7 @@ td {
   border: 3px solid rgb(110, 110, 112);
 }
 */
-.time {
+#time {
   display: inline-block;
   position: absolute;
   bottom: 0;
