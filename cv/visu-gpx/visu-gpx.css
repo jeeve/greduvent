@@ -1,0 +1,194 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+td {
+  padding: 5px;
+}
+
+.lire-gpx {
+  padding-top: 10px;
+  padding-left: 10px;
+  text-decoration: underline;
+  color: mediumblue;
+  cursor: pointer;
+}
+
+.upload {
+  /* border: 3px solid rgb(110, 110, 112);
+  border-radius: 5px;*/
+  margin: 10px;
+  padding: 10px;
+  width: 290px;
+  display: none;
+}
+
+.upload input[type="submit"] {
+  margin-top: 10px;
+}
+
+.carte {
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 450px;
+}
+
+@media screen and (max-width: 767px) {
+  .chart {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chart {
+    height: 150px;
+  }
+}
+
+.stats table {
+  display: none;
+}
+
+.chart {
+  width: 100%;
+  bottom: 12px;
+  right: 8px;
+  user-select: none;
+}
+
+@media screen and (min-width: 768px) {
+  .control {
+    position: absolute;
+  }
+}
+
+.control {
+  top: 8px;
+  z-index: 20000;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 3px solid rgb(110, 110, 112);
+}
+
+.reglages {
+  display: block;
+}
+
+.rapidite {
+  width: 40px;
+}
+
+.fenetre {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+.magneto {
+  margin: 15px;
+}
+
+.fenetre-magneto {
+  padding-left: 40px;
+  padding-right: 0;
+}
+
+.fenetre-largeur {
+  display: inline;
+}
+.fenetre-largeur {
+  width: 50px;
+}
+
+.seuil {
+  width: 60px;
+  color: red;
+  text-align: right;
+}
+
+.reglages label {
+  margin-left: 30px;
+}
+
+.position {
+  width: 60px;
+  text-align: right;
+}
+
+.temps {
+  width: 60px;
+  text-align: right;
+}
+
+.vitesse {
+  width: 60px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.distance-seuil {
+  width: 60px;
+  text-align: right;
+  color: red;
+}
+
+.slider-wrapper {
+  height: 0;
+  padding-top: 10px;
+}
+
+.slider-wrapper input {
+  width: 132px;
+  height: 40px;
+  margin: 0;
+  transform-origin: 66px 66px;
+  transform: rotate(-90deg);
+}
+
+.chart path {
+  stroke-width: 1;
+}
+
+.stats {
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+/*
+#stats table {
+  border: 3px solid rgb(110, 110, 112);
+}
+*/
+.time {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  z-index: 100000;
+  margin-right: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: silver;
+}
+
+.ligne-seuil {
+  cursor: row-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ligne-position {
+  cursor: col-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ligne-gauche {
+  cursor: col-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ligne-droite {
+  cursor: col-resize;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+}
