@@ -267,12 +267,8 @@
                                                     <li>
                                                         <img class="img-responsive ombre-image"
                                                             src="images/elisa.gif" />
-                                                        <div class="legende">
-                                                            Calcul système d'attaques en moulage
-                                                            sable
-                                                            <div class="sous-legende">Utilisation de DirectX pour la
-                                                                vue
-                                                                3D
+                                                        <div class="legende">Elisa
+                                                            <div class="sous-legende">Calcul système d'attaques en moulage sable
                                                             </div>
                                                         </div>
                                                     </li>
@@ -280,10 +276,8 @@
                                                         <img class="img-responsive ombre-image"
                                                             src="images/optima.gif" />
                                                         <div class="legende">
-                                                            Calcul de charge et correction de bain
-                                                            <div class="sous-legende">Implémentation de l'algorithme
-                                                                du
-                                                                Simplex
+                                                            Optima
+                                                            <div class="sous-legende">Calcul de charge et correction de bain
                                                             </div>
                                                         </div>
                                                     </li>
@@ -291,9 +285,8 @@
                                                         <img class="img-responsive ombre-image"
                                                             src="images/poids.gif" />
                                                         <div class="legende">
-                                                            Calcul poids de pièce
-                                                            <div class="sous-legende">Association d'éléments
-                                                                géométriques
+                                                            Poids
+                                                            <div class="sous-legende">Calcul poids de pièce
                                                             </div>
                                                         </div>
                                                     </li>
@@ -326,10 +319,7 @@
                                                         <img class="img-responsive ombre-image"
                                                             src="images/salsa3d.png" />
                                                         <div class="legende">Salsa 3D
-                                                            <div class="sous-legende">Conception d'un plugin métier
-                                                                au
-                                                                sein
-                                                                de l'environnement 3DShop</div>
+                                                            <div class="sous-legende">Conception système de remplissage en sous pression</div>
                                                         </div>
                                                     </li>
                                                 </ul>
