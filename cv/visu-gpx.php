@@ -5,7 +5,12 @@
     <title>Visualisation trace GPS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-    <link rel="stylesheet" href="visu-gpx.css ">
+    <link rel="stylesheet" href="visu-gpx/visu-gpx.css ">
+    <style>
+    .control {
+        top: 8px;
+    }
+    </style>
 </head>
 
 <body>
@@ -134,20 +139,25 @@
 
     <script src="/js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-    <script src="rotatedMarker.js"></script>
+    <script src="visu-gpx/rotatedMarker.js"></script>
     <script src="https://www.google.com/jsapi"></script>
-    <script src="visu-gpx.js"></script>
+    <script src="visu-gpx/visu-gpx.js"></script>
     <script src="exif.js"></script>
     <script>
     window.onload = GPX;
 
+    function Ok() {
+
+    }
+
     function GPX() {
         var visuGpxOptions = {
             typeMarker: "vitesse",
-            mode: "nautique"
+            mode: "nautique",
+            pleinEcran: true
         }
 
-        visuGPX("visu-gpx", getParameterByName("url"), visuGpxOptions);
+        visuGPX("visu-gpx", getParameterByName("url"), visuGpxOptions, Ok);
     }
 
     function getParameterByName(name, url) {

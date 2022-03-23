@@ -610,7 +610,7 @@
 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
-                                    <div class="col-xs-11 col-md-9 fond">
+                                    <div class="col-xs-12 col-md-9 fond">
 
                                         <div id="visu-gpx" class="ombre-image">
                                             <div class="control">
@@ -876,10 +876,15 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
         }
     });
 
+    var premierPassage = true;
+
     function Ok() {
-        $(document).ready(function() {
-            jQuery("#div-realisationspersonnelles").click();
-        });
+        if (premierPassage) {
+            $(document).ready(function() {
+                jQuery("#div-realisationspersonnelles").click();
+            });
+            premierPassage = false;
+        }
     }
     </script>
     <script src="/js/jquery.min.js"></script>
