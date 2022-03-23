@@ -198,6 +198,10 @@ a {
   margin-bottom: 40px;
 }
 
+#item-div-divers > div.bouton-realisationspersonnelles > h3 {
+  margin-top: 15px;
+}
+
 @media (max-width: 767px) {
 
   #bouton-bas-page {
