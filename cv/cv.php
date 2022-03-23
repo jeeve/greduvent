@@ -591,7 +591,7 @@
                                 <input id="div-realisationspersonnelles" type="button" value=" - "
                                     data-toggle="collapse" data-target="#item-div-realisationspersonnelles" />
                                 <h3>
-                                    <strong>Petites réalisations personnelles</strong>
+                                    <strong>Exemples de réalisations personnelles</strong>
                                 </h3>
                             </div>
                             <div id="item-div-realisationspersonnelles" class="collapse in">
