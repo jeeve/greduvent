@@ -17,6 +17,7 @@ td {
   text-decoration: underline;
   color: mediumblue;
   cursor: pointer;
+  display: none;
 }
 
 .upload {
