@@ -7,6 +7,7 @@
         CONTENT="Quelques mots sur l'auteur, ses motivations, lectures, playlist musicale et citation préférée." />
     <?php include("./includes/header.php"); ?>
     <link href="css/cv.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
     <link rel="stylesheet" href="visu-gpx/visu-gpx.css">
 </head>
 
@@ -14,15 +15,11 @@
     <div class="page-container">
         <!-- top navbar -->
         <?php include("includes/navbar.php"); ?>
-
         <div class="container">
-
             <!-- main area -->
-
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
                 <a name="home"></a>
                 <h1 class="hidden-xs">Curriculum vitæ</h1>
-
                 <div class="row">
                     <div class="col-xs-11 col-md-4 fond-table encadrement-table encadre">
                         <div>
@@ -37,7 +34,6 @@
                             <p><a target="-blank" class="mail"
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
                             </p>
-
                             <br>
                             <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
                                 participer à la création d'outils numériques.
@@ -83,7 +79,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
@@ -119,21 +114,22 @@
                                                             <img class="img-responsive ombre-image"
                                                                 src="images/metalblog.png" />
                                                         </a>
-                                                        <div class="legende"><a href="https://metalblog.ctif.com"
+                                                        <div class="legende">
+                                                            <a href="https://metalblog.ctif.com"
                                                                 target="_blank">MetalBlog</a>
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Thème
                                                                 personnalisé
                                                             </div>
                                                         </div>
-
                                                     </li>
                                                     <li>
                                                         <a href="https://formation.ctif.com" target="_blank">
                                                             <img class="img-responsive ombre-image"
                                                                 src="images/formation.png" />
                                                         </a>
-                                                        <div class="legende"><a href="https://formation.ctif.com"
+                                                        <div class="legende">
+                                                            <a href="https://formation.ctif.com"
                                                                 target="_blank">formation.ctif.com</a>
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Content
@@ -144,7 +140,6 @@
                                                 </ul>
                                             </div>
                                         </li>
-
                                         <li>
                                             <div>
                                                 <input id="div-sharepoint" type="button" value=" + "
@@ -152,7 +147,8 @@
                                                 <h4>
                                                     Mise en
                                                     place d'un portail
-                                                    intranet sous <strong>SharePoint</strong></h4>
+                                                    intranet sous <strong>SharePoint</strong>
+                                                </h4>
                                             </div>
                                             <div id="item-div-sharepoint" class="collapse">
                                                 <ul class="intranet">
@@ -178,14 +174,16 @@
                                                     data-target="#item-div-windev" />
                                                 <h4>
                                                     Développement d'interfaces entre
-                                                    progiciels avec <strong>Windev</strong></h4>
+                                                    progiciels avec <strong>Windev</strong>
+                                                </h4>
                                             </div>
                                             <div id="item-div-windev" class="collapse">
                                                 <ul class="windev">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/windev.png" />
-                                                        <div class="legende">Exemple d'interface entre un ERP et un
+                                                        <div class="legende">
+                                                            Exemple d'interface entre un ERP et un
                                                             LIMS
                                                             <div class="sous-legende">Les données transitent via
                                                                 services
@@ -194,7 +192,6 @@
                                                         </div>
                                                     </li>
                                                 </ul>
-
                                             </div>
                                         </li>
                                         <li>
@@ -211,7 +208,8 @@
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/webdev-dev.png" />
-                                                        <div class="legende">Exemple de formulaire de réservation de
+                                                        <div class="legende">
+                                                            Exemple de formulaire de réservation de
                                                             véhicules
                                                             <div class="sous-legende">Ce formulaire utilise un
                                                                 service
@@ -223,7 +221,8 @@
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/webdev-ana.png" />
-                                                        <div class="legende">Logiciel de gestion de la qualité
+                                                        <div class="legende">
+                                                            Logiciel de gestion de la qualité
                                                             <div class="sous-legende">Base de données sur SQL Server
                                                             </div>
                                                         </div>
@@ -236,20 +235,21 @@
                                                 <input id="div-service-web" type="button" value=" + "
                                                     data-toggle="collapse" data-target="#item-div-service-web" />
                                                 <h4>
-                                                    Développement de services Web en <strong>c#</strong></h4>
+                                                    Développement de services Web en <strong>c#</strong>
+                                                </h4>
                                             </div>
                                             <div id="item-div-service-web" class="collapse">
                                                 <ul class="service-web">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/servicesweb.png" />
-                                                        <div class="legende">Services Web Soap
+                                                        <div class="legende">
+                                                            Services Web Soap
                                                             <div class="sous-legende">Visual Studio
                                                             </div>
                                                         </div>
                                                     </li>
                                                 </ul>
-
                                             </div>
                                         </li>
                                         <li>
@@ -259,14 +259,16 @@
                                                 <h4>
                                                     Développement d'applications
                                                     métier
-                                                    sous Windows avec <strong>Delphi</strong></h4>
+                                                    sous Windows avec <strong>Delphi</strong>
+                                                </h4>
                                             </div>
                                             <div id="item-div-delphi" class="collapse">
                                                 <ul class="windows">
                                                     <li>
                                                         <img class="img-responsive ombre-image"
                                                             src="images/elisa.gif" />
-                                                        <div class="legende">Calcul système d'attaques en moulage
+                                                        <div class="legende">
+                                                            Calcul système d'attaques en moulage
                                                             sable
                                                             <div class="sous-legende">Utilisation de DirectX pour la
                                                                 vue
@@ -277,7 +279,8 @@
                                                     <li>
                                                         <img class="img-responsive ombre-image"
                                                             src="images/optima.gif" />
-                                                        <div class="legende">Calcul de charge et correction de bain
+                                                        <div class="legende">
+                                                            Calcul de charge et correction de bain
                                                             <div class="sous-legende">Implémentation de l'algorithme
                                                                 du
                                                                 Simplex
@@ -287,7 +290,8 @@
                                                     <li>
                                                         <img class="img-responsive ombre-image"
                                                             src="images/poids.gif" />
-                                                        <div class="legende">Calcul poids de pièce
+                                                        <div class="legende">
+                                                            Calcul poids de pièce
                                                             <div class="sous-legende">Association d'éléments
                                                                 géométriques
                                                             </div>
@@ -296,9 +300,11 @@
                                                     <li>
                                                         <img class="img-responsive ombre-image"
                                                             src="images/qualital.png" />
-                                                        <div class="legende">Qualital
+                                                        <div class="legende">
+                                                            Qualital
                                                             <div class="sous-legende">Indice de qualité des alliages
-                                                                aluminium</div>
+                                                                aluminium
+                                                            </div>
                                                     </li>
                                                     <li>
                                                         <img class="img-responsive ombre-image"
@@ -329,7 +335,6 @@
                                                 </ul>
                                             </div>
                                         </li>
-
                                         <li>
                                             <h4>Assistance aux utilisateurs</h4>
                                         </li>
@@ -400,7 +405,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="formation"></a>
@@ -427,7 +431,8 @@
                                             </li>
                                             <li>
                                                 <h3>Obtention du <strong>DUT Informatique</strong> Année Spéciale au
-                                                    Havre</h3>
+                                                    Havre
+                                                </h3>
                                                 <p>IUT Informatique - Le Havre (76)</p>
                                                 <p>1994 - 1995</p>
                                             </li>
@@ -459,7 +464,8 @@
                                         <ul>
                                             <li>
                                                 <h3>Formation <strong>PowerPlatform</strong> -
-                                                    PL-100-Microsoft-Power-Platform-App-Maker</h3>
+                                                    PL-100-Microsoft-Power-Platform-App-Maker
+                                                </h3>
                                                 <p>Ekilog - 31/01/2022 au 1/02/2022</p>
                                             </li>
                                             <li>
@@ -491,7 +497,8 @@
                                                 <h3>Personnaliser un site <strong>SharePoint</strong> 2010 avec
                                                     SharePoint
                                                     Designer
-                                                    2010</h3>
+                                                    2010
+                                                </h3>
                                                 <p>IB - 4/04/2013 au 5/04/2013</p>
                                             </li>
                                             <li>
@@ -514,8 +521,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="divers"></a>
@@ -525,34 +530,35 @@
                         <div id="item-div-divers" class="collapse in">
                             <br>
                             <!-- <ul>
-                                <li>
-                                    <h3>sérieux et organisé</h3>
-                                </li>
-                                <li>
-                                    <h3>autonome</h3>
-                                </li>
-                                <li>
-                                    <h3>faculté d'adaptation et polyvalence</h3>
-                                </li>
-                                <li>
-                                    <h3>expérience dans de nombreuses technologies</h3>
-                                </li>
-                                <li>
-                                    <h3>curieux, passionné, aime échanger</h3>
-                                </li>
-                                <li>
-                                    <h3>pas le plus efficace en fonctionnement sous stress</h3>
-                                </li>
-                                <li>
-                                    <h3>pas très à l'aise à l'oral en anglais</h3>
-                                </li>
-                                <li>
-                                    <h3>créatif</h3>
-                                </li>
-                            </ul>
--->
+                           <li>
+                               <h3>sérieux et organisé</h3>
+                           </li>
+                           <li>
+                               <h3>autonome</h3>
+                           </li>
+                           <li>
+                               <h3>faculté d'adaptation et polyvalence</h3>
+                           </li>
+                           <li>
+                               <h3>expérience dans de nombreuses technologies</h3>
+                           </li>
+                           <li>
+                               <h3>curieux, passionné, aime échanger</h3>
+                           </li>
+                           <li>
+                               <h3>pas le plus efficace en fonctionnement sous stress</h3>
+                           </li>
+                           <li>
+                               <h3>pas très à l'aise à l'oral en anglais</h3>
+                           </li>
+                           <li>
+                               <h3>créatif</h3>
+                           </li>
+                           </ul>
+                           -->
                             <p>Passionné depuis le plus jeune âge par la création informatique, j'ai acquis une
-                                expérience solide dans différents langages et paragdimes de programmation.</p>
+                                expérience solide dans différents langages et paragdimes de programmation.
+                            </p>
                             <p>Je suis
                                 sérieux dans mon travail, autonome si besoin, avec je pense, une bonne capacité
                                 d'adaptation.
@@ -579,42 +585,168 @@
                             </ul>
                             <br>
                             <p>Je suis passionné par les sciences, pratique le windfoil, et aime profiter de la nature.
-                                Le contact et l'échange avec les autres sont essentiels à mon équilibre.</p>
-
-
-
+                                Le contact et l'échange avec les autres sont essentiels à mon équilibre.
+                            </p>
                             <div class="bouton-realisationspersonnelles">
-                                <input id="div-realisationspersonnelles" type="button" value=" + "
+                                <input id="div-realisationspersonnelles" type="button" value=" - "
                                     data-toggle="collapse" data-target="#item-div-realisationspersonnelles" />
                                 <h3>
                                     <strong>Petites réalisations personnelles</strong>
                                 </h3>
                             </div>
-                            <div id="item-div-realisationspersonnelles" class="collapse">
+                            <div id="item-div-realisationspersonnelles" class="collapse in">
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond">
+
+                                        <h3><strong>Visualiser les traces GPS</strong></h3>
+                                        <p>
+                                            Petit programme écrit en <strong>Javascript</strong> permettant d'analyser
+                                            les données GPX issues d'un capteur GPS
+                                        </p>
+                                        <br>
+                                    </div>
+                                </div>
 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond">
+
+                                        <div id="visu-gpx" class="ombre-image">
+                                            <div class="control">
+                                                <div class="lire-gpx">Lire fichier GPX</div>
+                                                <form class="upload" enctype="multipart/form-data"
+                                                    action="fileupload.php" method="post">
+                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+                                                    <input type="file" name="monfichier" accept=".gpx" />
+                                                    <input type="submit" />
+                                                </form>
+                                                <div class="reglages">
+                                                    <div class="slider-wrapper">
+                                                        <input type="range" class="curseur" min="0" max="100"
+                                                            step="any">
+                                                    </div>
+                                                    <div class="div-seuil">
+                                                        <table>
+                                                            <tr>
+                                                                <td><label>Seuil ></label></td>
+                                                                <td><input type="text" class="seuil"></input></td>
+                                                                <td>kts</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>
+                                                                    <div class="distance-seuil"></div>
+                                                                </td>
+                                                                <td>km</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><label>Distance</label></td>
+                                                                <td><input type="text" class="position"></input></td>
+                                                                <td>km</td>
+                                                            </tr>
+                                                            <tr class="ligne-temps" style="display: none;">
+                                                                <td><label>Temps</label></td>
+                                                                <td><input type="text" class="temps"></input></td>
+                                                                <td>s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><label>Vitesse</label></td>
+                                                                <td>
+                                                                    <div class="vitesse"></div>
+                                                                </td>
+                                                                <td>kts</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="fenetre">
+                                                    <input type="checkbox" class="fenetre-auto">
+                                                    <label class="label-fenetre-auto">Fenêtre auto</label>
+                                                    <div class="fenetre-largeur">
+                                                        <input type="text" class="fenetre-largeur"></input> km
+                                                    </div>
+                                                </div>
+                                                <div class="magneto">
+                                                    <button class="lecture" type="button">Lecture</button>
+                                                    <label>x</label>
+                                                    <input type="text" class="rapidite"></input>
+                                                    <button class="stop" type="button">Stop</button>
+                                                </div>
+                                                <div class="stats">
+                                                    <input class="calcule" type="checkbox"></input>
+                                                    <label>Statistiques</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td><input class="affiche-vmax" type="checkbox"></input>
+                                                            </td>
+                                                            <td>VMax</td>
+                                                            <td class="vmax"></td>
+                                                            <td>kts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input class="affiche-v100m" type="checkbox"></input>
+                                                            </td>
+                                                            <td>V100m</td>
+                                                            <td class="v100m"></td>
+                                                            <td>kts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input class="affiche-v500m" type="checkbox"></input>
+                                                            </td>
+                                                            <td>V500m</td>
+                                                            <td class="v500m"></td>
+                                                            <td>kts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input class="affiche-v2s" type="checkbox"></input></td>
+                                                            <td>V2s</td>
+                                                            <td class="v2s"></td>
+                                                            <td>kts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input class="affiche-v5s" type="checkbox"></input></td>
+                                                            <td>V5s</td>
+                                                            <td class="v5s"></td>
+                                                            <td>kts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input class="affiche-v10s" type="checkbox"></input>
+                                                            </td>
+                                                            <td>V10s</td>
+                                                            <td class="v10s"></td>
+                                                            <td>kts</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="carte">
+                                                <div class="map"></div>
+                                                <div class="time"></div>
+                                            </div>
+                                            <div class="chart"></div>
+                                        </div>
+
+
+                                        <br>
+
                                         <h3><strong>Le jeu de José</strong></h3>
                                         <p>
                                             Une rivière, une barge ne pouvant contenir que 2 individus maximum.
-
                                             Sur la rive droite, 3 humains et 3 orques.
-
                                             Le but, que les 3 humains traversent sur la rive gauche sachant qu'ils ne
                                             doivent
-                                            jamais être en infériorité numérique par rapport aux orques.</p>
-
+                                            jamais être en infériorité numérique par rapport aux orques.
+                                        </p>
                                         <p>Le <a target="_blank"
                                                 href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a>
-                                            écrit en <strong>Python</strong> :</p>
+                                            écrit en <strong>Python</strong> :
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
-
-
                                         <!-- HTML generated using hilite.me -->
                                         <div>
                                             <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
@@ -716,200 +848,18 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                     </div>
                                 </div>
 
-
-<!--
-
-                                <h3><strong>Visualisaer ses traces GPS</strong></h3>
-                                <p>
-                                    Une rivière, une barge ne pouvant contenir que 2 individus maximum.
-
-                                    Sur la rive droite, 3 humains et 3 orques.
-
-                                    Le but, que les 3 humains traversent sur la rive gauche sachant qu'ils ne
-                                    doivent
-                                    jamais être en infériorité numérique par rapport aux orques.</p>
-
-                                <p>Le <a target="_blank"
-                                        href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a>
-                                    écrit en <strong>Python</strong> :</p>
-
-
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-1 fond"></div>
-                                    <div class="col-xs-12 col-sm-10 fond">
-
-                                        <div id="visu-gpx" class="ombre-image">
-
-                                            <div class="control">
-
-
-                                                <div class="lire-gpx">Lire fichier GPX</div>
-                                                <form class="upload" enctype="multipart/form-data"
-                                                    action="fileupload.php" method="post">
-                                                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                                    <input type="file" name="monfichier" accept=".gpx" />
-                                                    <input type="submit" />
-                                                </form>
-
-
-                                                <div class="reglages">
-                                                    <div class="slider-wrapper">
-                                                        <input type="range" class="curseur" min="0" max="100"
-                                                            step="any">
-                                                    </div>
-                                                    <div class="div-seuil">
-                                                        <table>
-                                                            <tr>
-                                                                <td><label>Seuil ></label></td>
-                                                                <td><input type="text" class="seuil"></input></td>
-                                                                <td>kts</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td></td>
-                                                                <td>
-                                                                    <div class="distance-seuil"></div>
-                                                                </td>
-                                                                <td>km</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><label>Distance</label></td>
-                                                                <td><input type="text" class="position"></input></td>
-                                                                <td>km</td>
-                                                            </tr>
-                                                            <tr class="ligne-temps" style="display: none;">
-                                                                <td><label>Temps</label></td>
-                                                                <td><input type="text" class="temps"></input></td>
-                                                                <td>s</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><label>Vitesse</label></td>
-                                                                <td>
-                                                                    <div class="vitesse"></div>
-                                                                </td>
-                                                                <td>kts</td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="fenetre">
-                                                    <input type="checkbox" class="fenetre-auto">
-                                                    <label class="label-fenetre-auto">Fenêtre auto</label>
-                                                    <div class="fenetre-largeur">
-                                                        <input type="text" class="fenetre-largeur"></input> km
-                                                    </div>
-                                                </div>
-                                                <div class="magneto">
-                                                    <button class="lecture" type="button">Lecture</button>
-                                                    <label>x</label>
-                                                    <input type="text" class="rapidite"></input>
-                                                    <button class="stop" type="button">Stop</button>
-                                                </div>
-
-                                                <div class="stats">
-                                                    <input class="calcule" type="checkbox"></input>
-                                                    <label>Statistiques</label>
-                                                    <table>
-                                                        <tr>
-                                                            <td><input class="affiche-vmax" type="checkbox"></input>
-                                                            </td>
-                                                            <td>VMax</td>
-                                                            <td class="vmax"></td>
-                                                            <td>kts</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input class="affiche-v100m" type="checkbox"></input>
-                                                            </td>
-                                                            <td>V100m</td>
-                                                            <td class="v100m"></td>
-                                                            <td>kts</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input class="affiche-v500m" type="checkbox"></input>
-                                                            </td>
-                                                            <td>V500m</td>
-                                                            <td class="v500m"></td>
-                                                            <td>kts</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input class="affiche-v2s" type="checkbox"></input></td>
-                                                            <td>V2s</td>
-                                                            <td class="v2s"></td>
-                                                            <td>kts</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input class="affiche-v5s" type="checkbox"></input></td>
-                                                            <td>V5s</td>
-                                                            <td class="v5s"></td>
-                                                            <td>kts</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input class="affiche-v10s" type="checkbox"></input>
-                                                            </td>
-                                                            <td>V10s</td>
-                                                            <td class="v10s"></td>
-                                                            <td>kts</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="carte">
-                                                <div class="map"></div>
-                                                <div class="time"></div>
-                                            </div>
-
-                                            <div class="chart"></div>
-
-                                        </div>
-                                    </div>
-                                </div>
-  -->
-
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                             <h3 class="site-perso">Site personnel : <a href="https://greduvent.herokuapp.com/"
                                     target="_blank">au
                                     gré du
-                                    vent 1.0</a></h3>
-
-
+                                    vent 1.0</a>
+                            </h3>
                         </div>
                     </div>
                 </div>
-
                 <br>
-
-
-
             </div>
             <!--/.row-->
         </div>
@@ -925,10 +875,15 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
             jQuery(this).attr('value', ' + ');
         }
     });
+
+    function Ok() {
+        $(document).ready(function() {
+            jQuery("#div-realisationspersonnelles").click();
+        });
+    }
     </script>
     <script src="/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="visu-gpx/rotatedMarker.js"></script>
     <script src="https://www.google.com/jsapi"></script>
     <script src="visu-gpx/visu-gpx.js"></script>
@@ -939,12 +894,13 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     function GPX() {
         var visuGpxOptions = {
             typeMarker: "vitesse",
-            mode: "nautique"
+            mode: "nautique",
+            pleinEcran: false
         }
 
         visuGPX("visu-gpx",
-            "https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx",
-            visuGpxOptions);
+            "visu-gpx/2022_03_19_vaires-sur-marne.gpx",
+            visuGpxOptions, Ok);
     }
 
     function getParameterByName(name, url) {

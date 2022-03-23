@@ -1,4 +1,4 @@
-function visuGPX(id, url, visuGpxOptions) {
+function visuGPX(id, url, visuGpxOptions, Ok) {
   const SEUIL_ACCELERATION = 1.0;
   const SEUIL_DECELERATION = -3.5;
   var txy = [];
@@ -1116,6 +1116,7 @@ function visuGPX(id, url, visuGpxOptions) {
       document.querySelector("#" + id + " " + ".chart")
     );
     chart.draw(data, options);
+    Ok();
     registerEvtChart();
     createLineBornesSVG(chart, dmax * 0.1, dmax - dmax * 0.1);
     CreeLigneSeuil(chart, $("#" + id + " " + ".seuil").val());
