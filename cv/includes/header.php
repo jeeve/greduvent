@@ -11,5 +11,15 @@
       <link href="/css/style.css" rel="stylesheet">
       <link href="/css/fond.css" rel="stylesheet">
 
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0DS98X7343"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0DS98X7343');
+</script>
+
 
 
