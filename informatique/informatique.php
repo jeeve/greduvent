@@ -66,114 +66,106 @@
                             target="_blank">programme</a> écrit en Python :<br>
                     <br>   
                     <div class="row row-cadre">
-                        <div class="col-sd-12 col-sm-1"></div>
-                        <div class="col-sd-12 col-sm-10 fond-table encadrement-table">
+                     
+                        <div class="col-sd-12 fond-table encadrement-table">
                             <div class="font-code">
-                                <div>import random</div>
-                                <div>from copy import copy</div>
-                                <br />
-                                <div>"""# Mod&egrave;le"""</div>
-                                <br />
-                                <div>class JeuDeJose:</div>
-                                <br />
-                                <div>&nbsp; def __init__(self):</div>
-                                <div>&nbsp; &nbsp; self.coups = []</div>
-                                <div>&nbsp; &nbsp; self.rive_gauche = []</div>
-                                <div>&nbsp; &nbsp; self.rive_droite = ['humain', 'humain', 'humain', 'orque', 'orque',
-                                    'orque']</div>
-                                <div>&nbsp; &nbsp; self.barge = 'droite'</div>
-                                <div>&nbsp; &nbsp; self._nombre_tentatives_max = 100</div>
-                                <div>&nbsp; &nbsp; self._nombre_tentatives = 1</div>
-                                <br />
-                                <div>&nbsp; def __str__(self):</div>
-                                <div>&nbsp; &nbsp; chaine = str(len(self.coups) - 1) + " coups\n"</div>
-                                <div>&nbsp; &nbsp; for coup in self.coups:</div>
-                                <div>&nbsp; &nbsp; &nbsp; chaine += "Traverse vers " + str(coup[0]) + " --------&gt; " +
-                                    str(coup[1]) + "\n"</div>
-                                <div>&nbsp; &nbsp; returnchaine</div>
-                                <br />
-                                <div>&nbsp; def _nombre(self, categorie, rive):</div>
-                                <div>&nbsp; &nbsp; return rive.count(categorie) &nbsp;</div>
-                                <br />
-                                <div>&nbsp; def equipage_disponible(self, equipage, rive):</div>
-                                <div>&nbsp; &nbsp; copie_rive = copy(rive)</div>
-                                <div>&nbsp; &nbsp; for membre in equipage:</div>
-                                <div>&nbsp; &nbsp; &nbsp; try:</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; copie_rive.remove(membre)</div>
-                                <div>&nbsp; &nbsp; &nbsp; except:</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; return False</div>
-                                <div>&nbsp; &nbsp; return True &nbsp; &nbsp; &nbsp;</div>
-                                <br />
-                                <div>&nbsp; def _test_viabilite(self, rive):</div>
-                                <div>&nbsp; &nbsp; if self._nombre('humain', rive) &gt; 0:</div>
-                                <div>&nbsp; &nbsp; &nbsp; return self._nombre('orque', rive) &lt;=
-                                    self._nombre('humain', rive)</div>
-                                <div>&nbsp; &nbsp; else:</div>
-                                <div>&nbsp; &nbsp; &nbsp; return True &nbsp;</div>
-                                <br />
-                                <div>&nbsp; def _a_gagne(self):</div>
-                                <div>&nbsp; &nbsp; return self._nombre('humain', self.rive_gauche) == 3</div>
-                                <br />
-                                <div>&nbsp; def _transfert_vers(self, rive1, rive2, equipage):</div>
-                                <div>&nbsp; &nbsp; for membre in equipage:</div>
-                                <div>&nbsp; &nbsp; &nbsp; try:</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; rive1.remove(membre)</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; rive2.append(membre)</div>
-                                <div>&nbsp; &nbsp; &nbsp; except:</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; pass</div>
-                                <br />
-                                <div>&nbsp; def traverse_vers(self, rive1, rive2, equipage):</div>
-                                <div>&nbsp; &nbsp; copie_rive1 = copy(rive1)</div>
-                                <div>&nbsp; &nbsp; copie_rive2 = copy(rive2)</div>
-                                <div>&nbsp; &nbsp; self._transfert_vers(copie_rive1, copie_rive2, equipage)</div>
-                                <div>&nbsp; &nbsp; if self._test_viabilite(copie_rive1) and
-                                    self._test_viabilite(copie_rive2):</div>
-                                <div>&nbsp; &nbsp; &nbsp; self._transfert_vers(rive1, rive2, equipage) &nbsp;</div>
-                                <div>&nbsp; &nbsp; &nbsp; if self.barge == 'gauche':</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; self.barge = 'droite'</div>
-                                <div>&nbsp; &nbsp; &nbsp; else:</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; self.barge = 'gauche'</div>
-                                <div>&nbsp; &nbsp; &nbsp; self.coups.append(((self.barge, equipage),
-                                    (copy(self.rive_gauche), copy(self.rive_droite))))</div>
-                                <div>&nbsp; &nbsp; &nbsp; self._nombre_tentatives += 1 &nbsp;</div>
-                                <br />
-                                <div>&nbsp; def strategie(self):</div>
-                                <div>&nbsp; &nbsp; if random.choice([1, 2]) == 1:</div>
-                                <div>&nbsp; &nbsp; &nbsp; equipage = [random.choice(['humain', 'orque'])]</div>
-                                <div>&nbsp; &nbsp; else:</div>
-                                <div>&nbsp; &nbsp; &nbsp; equipage = [random.choice(['humain', 'orque']),
-                                    random.choice(['humain', 'orque'])]</div>
-                                <div>&nbsp; &nbsp; if self.barge == 'droite':</div>
-                                <div>&nbsp; &nbsp; &nbsp; if self.equipage_disponible(equipage, self.rive_droite):</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; self.traverse_vers(self.rive_droite, self.rive_gauche,
-                                    equipage)</div>
-                                <div>&nbsp; &nbsp; else:</div>
-                                <div>&nbsp; &nbsp; &nbsp; if self.equipage_disponible(equipage, self.rive_gauche):</div>
-                                <div>&nbsp; &nbsp; &nbsp; &nbsp; self.traverse_vers(self.rive_gauche, self.rive_droite,
-                                    equipage)</div>
-                                <br />
-                                <div>&nbsp; def run(self):</div>
-                                <div>&nbsp; &nbsp; self.coups = [((), ([], ['humain', 'humain', 'humain', 'orque',
-                                    'orque', 'orque']))]</div>
-                                <div>&nbsp; &nbsp; while not(self._a_gagne()) and self._nombre_tentatives &lt;
-                                    self._nombre_tentatives_max:</div>
-                                <div>&nbsp; &nbsp; &nbsp; self.strategie()</div>
-                                <br />
-                                <div>"""# Calcul"""</div>
-                                <br />
-                                <div>random.seed(1)</div>
-                                <div>nombre_tentatives_max = 1000</div>
-                                <div>meilleur_jeu = JeuDeJose()</div>
-                                <div>meilleur_jeu.run()</div>
-                                <div>nombre_tentatives = 1</div>
-                                <div>while nombre_tentatives &lt; nombre_tentatives_max:</div>
-                                <div>&nbsp; j = JeuDeJose()</div>
-                                <div>&nbsp; j.run()</div>
-                                <div>&nbsp; if len(j.coups) &lt; len(meilleur_jeu.coups):</div>
-                                <div>&nbsp; &nbsp; meilleur_jeu = j</div>
-                                <div>&nbsp; nombre_tentatives += 1</div>
-                                <div>print(meilleur_jeu)</div>
-                            </div>
+                            <div>
+                                            <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">copy</span> <span style="color: #008800; font-weight: bold">import</span> copy
+ 
+<span style="color: #DD4422">"""Modèle"""</span>
+ 
+<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">JeuDeJose</span>:
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>):
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>coups <span style="color: #333333">=</span> []
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche <span style="color: #333333">=</span> []
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite <span style="color: #333333">=</span> [<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>]
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">=</span> <span style="background-color: #fff0f0">'droite'</span>
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives_max <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">100</span>
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__str__</span>(<span style="color: #007020">self</span>):
+    chaine <span style="color: #333333">=</span> <span style="color: #007020">str</span>(<span style="color: #007020">len</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>coups) <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">" coups</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">"</span>
+    <span style="color: #008800; font-weight: bold">for</span> coup <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>coups:
+      chaine <span style="color: #333333">+=</span> <span style="background-color: #fff0f0">"Traverse vers "</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(coup[<span style="color: #0000DD; font-weight: bold">0</span>]) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">" --------&gt; "</span> <span style="color: #333333">+</span> <span style="color: #007020">str</span>(coup[<span style="color: #0000DD; font-weight: bold">1</span>]) <span style="color: #333333">+</span> <span style="background-color: #fff0f0">"</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">"</span>
+    <span style="color: #008800; font-weight: bold">return</span> chaine
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_nombre</span>(<span style="color: #007020">self</span>, categorie, rive):
+    <span style="color: #008800; font-weight: bold">return</span> rive<span style="color: #333333">.</span>count(categorie)  
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">equipage_disponible</span>(<span style="color: #007020">self</span>, equipage, rive):
+    copie_rive <span style="color: #333333">=</span> copy(rive)
+    <span style="color: #008800; font-weight: bold">for</span> membre <span style="color: #000000; font-weight: bold">in</span> equipage:
+      <span style="color: #008800; font-weight: bold">try</span>:
+        copie_rive<span style="color: #333333">.</span>remove(membre)
+      <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">False</span>
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">True</span>      
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_test_viabilite</span>(<span style="color: #007020">self</span>, rive):
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'humain'</span>, rive) <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'orque'</span>, rive) <span style="color: #333333">&lt;=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'humain'</span>, rive)
+    <span style="color: #008800; font-weight: bold">else</span>:
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">True</span>  
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_a_gagne</span>(<span style="color: #007020">self</span>):
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre(<span style="background-color: #fff0f0">'humain'</span>, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche) <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">3</span>
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_transfert_vers</span>(<span style="color: #007020">self</span>, rive1, rive2, equipage):
+    <span style="color: #008800; font-weight: bold">for</span> membre <span style="color: #000000; font-weight: bold">in</span> equipage:
+      <span style="color: #008800; font-weight: bold">try</span>:
+        rive1<span style="color: #333333">.</span>remove(membre)
+        rive2<span style="color: #333333">.</span>append(membre)
+      <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">pass</span>
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">traverse_vers</span>(<span style="color: #007020">self</span>, rive1, rive2, equipage):
+    copie_rive1 <span style="color: #333333">=</span> copy(rive1)
+    copie_rive2 <span style="color: #333333">=</span> copy(rive2)
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>_transfert_vers(copie_rive1, copie_rive2, equipage)
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_test_viabilite(copie_rive1) <span style="color: #000000; font-weight: bold">and</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_test_viabilite(copie_rive2):
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>_transfert_vers(rive1, rive2, equipage)  
+      <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">==</span> <span style="background-color: #fff0f0">'gauche'</span>:
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">=</span> <span style="background-color: #fff0f0">'droite'</span>
+      <span style="color: #008800; font-weight: bold">else</span>:
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">=</span> <span style="background-color: #fff0f0">'gauche'</span>
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>coups<span style="color: #333333">.</span>append(((<span style="color: #007020">self</span><span style="color: #333333">.</span>barge, equipage), (copy(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche), copy(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite))))
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>  
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">strategie</span>(<span style="color: #007020">self</span>):
+    <span style="color: #008800; font-weight: bold">if</span> random<span style="color: #333333">.</span>choice([<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">2</span>]) <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>:
+      equipage <span style="color: #333333">=</span> [random<span style="color: #333333">.</span>choice([<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>])]
+    <span style="color: #008800; font-weight: bold">else</span>:
+      equipage <span style="color: #333333">=</span> [random<span style="color: #333333">.</span>choice([<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>]), random<span style="color: #333333">.</span>choice([<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>])]
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>barge <span style="color: #333333">==</span> <span style="background-color: #fff0f0">'droite'</span>:
+      <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>equipage_disponible(equipage, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>traverse_vers(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche, equipage)
+    <span style="color: #008800; font-weight: bold">else</span>:
+      <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>equipage_disponible(equipage, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>traverse_vers(<span style="color: #007020">self</span><span style="color: #333333">.</span>rive_gauche, <span style="color: #007020">self</span><span style="color: #333333">.</span>rive_droite, equipage)
+ 
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">run</span>(<span style="color: #007020">self</span>):
+    <span style="color: #007020">self</span><span style="color: #333333">.</span>coups <span style="color: #333333">=</span> [((), ([], [<span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'humain'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>, <span style="background-color: #fff0f0">'orque'</span>]))]
+    <span style="color: #008800; font-weight: bold">while</span> <span style="color: #000000; font-weight: bold">not</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>_a_gagne()) <span style="color: #000000; font-weight: bold">and</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives <span style="color: #333333">&lt;</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_nombre_tentatives_max:
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>strategie()
+ 
+<span style="color: #DD4422">"""Calcul"""</span>
+ 
+random<span style="color: #333333">.</span>seed(<span style="color: #0000DD; font-weight: bold">1</span>)
+nombre_tentatives_max <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1000</span>
+meilleur_jeu <span style="color: #333333">=</span> JeuDeJose()
+meilleur_jeu<span style="color: #333333">.</span>run()
+nombre_tentatives <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #008800; font-weight: bold">while</span> nombre_tentatives <span style="color: #333333">&lt;</span> nombre_tentatives_max:
+  j <span style="color: #333333">=</span> JeuDeJose()
+  j<span style="color: #333333">.</span>run()
+  <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">len</span>(j<span style="color: #333333">.</span>coups) <span style="color: #333333">&lt;</span> <span style="color: #007020">len</span>(meilleur_jeu<span style="color: #333333">.</span>coups):
+    meilleur_jeu <span style="color: #333333">=</span> j
+  nombre_tentatives <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #008800; font-weight: bold">print</span>(meilleur_jeu)
+</pre>
+                                        </div>
                         </div>
                     </div>
 
