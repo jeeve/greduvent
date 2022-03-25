@@ -6,7 +6,7 @@ String.prototype.replaceAll = function(search, replacement) {
 $(document).ready(function() {
 	
 	$('a').filter(function() {
-		return this.hostname && this.hostname != location.hostname &&
+		return this.hostname && /*this.hostname != location.hostname && */
 						this.hostname.indexOf('docs.google') == -1 && 
 					//	document.location.href.indexOf('sommaire') == - 1 &&
                         $(this).children('img').length == 0 && 
