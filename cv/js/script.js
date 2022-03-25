@@ -13,7 +13,7 @@ $(document).ready(function() {
 						$(this).children('span').length == 0 &&  
 						this.hostname.indexOf('outilsflask') == -1 &&
                         $(this).text().indexOf('@') == -1 // && $(this).text().indexOf('contrib') == -1;
-	}).addClass('external').attr("target","_blank");;
+	}).addClass('external').attr("target","_blank");
 /*
 	var images = $('img').filter(function() {
 		var attr = $(this).attr('title');

@@ -841,7 +841,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                             </div>
 
 
-                            <h3 class="site-perso">Site personnel : <a href="https://greduvent.herokuapp.com/"
+                            <h3 class="site-perso external">Site personnel : <a href="https://greduvent.herokuapp.com/"
                                     target="_blank">au
                                     gré du
                                     vent 1.0</a>
