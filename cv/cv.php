@@ -115,7 +115,7 @@
                                                                 src="images/metalblog.png" />
                                                         </a>
                                                         <div class="legende">
-                                                            <a href="https://metalblog.ctif.com"
+                                                            <a class="external" href="https://metalblog.ctif.com"
                                                                 target="_blank">MetalBlog</a>
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Thème
@@ -129,7 +129,7 @@
                                                                 src="images/formation.png" />
                                                         </a>
                                                         <div class="legende">
-                                                            <a href="https://formation.ctif.com"
+                                                            <a class="external" href="https://formation.ctif.com"
                                                                 target="_blank">formation.ctif.com</a>
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Content
@@ -453,7 +453,7 @@
                                     <div id="item-div-formationsprofessionnelles" class="collapse">
                                         <ul>
                                             <li>
-                                                <h3>Formation <strong>PowerPlatform</strong> -
+                                                <h3><strong>PowerPlatform</strong> -
                                                     PL-100-Microsoft-Power-Platform-App-Maker
                                                 </h3>
                                                 <p>Ekilog - 31/01/2022 au 1/02/2022</p>
@@ -466,7 +466,7 @@
                                                 <p>Cegos - 2/09/2021 au 3/09/2021</p>
                                             </li>
                                             <li>
-                                                <h3>Formation <strong>Python</strong> pour la <strong>data
+                                                <h3><strong>Python</strong> pour la <strong>data
                                                         science</strong>
                                                 </h3>
                                                 <p>Stat4Decision - 8/03/2021 au 10/03/2021</p>
@@ -841,7 +841,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                             </div>
 
 
-                            <h3 class="site-perso external">Site personnel : <a href="https://greduvent.herokuapp.com/"
+                            <h3 class="site-perso">Site personnel : <a class="external" href="https://greduvent.herokuapp.com/"
                                     target="_blank">au
                                     gré du
                                     vent 1.0</a>
