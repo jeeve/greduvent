@@ -26,5 +26,3 @@ $(document).ready(function() {
 	});
 */
 });
-
-var sheetapi = "AIzaSyBPTPh6ApJE0F_bSkbwtD6jd2trhiZJy5o";
