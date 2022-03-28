@@ -203,6 +203,7 @@
                               <div class="item"> <img src="images/diapos/le-crotoy-kitesurf.jpg" alt="Kitesurf au Crotoy - 1er mai 2009 - prise de vue Mireille M." title="Kitesurf au Crotoy - 1er mai 2009 - prise de vue Mireille M."></div>
                               <div class="item"> <img src="images/diapos/run-beaussais.jpg" alt="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M." title="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M."></div>
                               <div class="item"> <img src="images/diapos/ride-embarque-lancieux.jpg" alt="Ride en baie de Beaussais - 17 août 2021" title="Ride en baie de Beaussais - 17 août 2021"></div>
+                              <div class="item"> <img src="images/diapos/onboard-loft.jpg" alt="Moisson - 26 mars 2022" title="Moisson - 26 mars 2022"></div>
                            </div>
                            <!-- Controls -->
                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
