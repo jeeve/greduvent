@@ -74,8 +74,8 @@
                               </p>
                            </li>
                            <li>
-                              <p>voile Simmer Style Vmax modèle 2018<br>
-                                 surface : 6,6 m²
+                              <p>voile Loftsails Skyscape modèle 2021<br>
+                                 surface : 6,4 m²
                               </p>
                            </li>
                            <li>
