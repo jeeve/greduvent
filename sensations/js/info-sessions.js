@@ -419,7 +419,7 @@ function getInfoSessions(spot) {
             stats.find((elt) => elt.annee == annee).distance.toFixed(3) +
             " km - Vmax : " +
             stats.find((elt) => elt.annee == annee).vmax.toFixed(2) +
-            "kts - V100m : " +
+            " kts - V100m : " +
             stats.find((elt) => elt.annee == annee).v100m.toFixed(2) +
             " kts</span>"
         );
