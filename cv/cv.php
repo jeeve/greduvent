@@ -601,58 +601,16 @@
                                             <li>
                                                 <p><a class="external"
                                                         href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                        target="_blank">version nautique</a></p>
-                                                <div class="row">
-                                                    <div class="col-md-1 fond"></div>
-                                                    <div
-                                                        class="col-xs-12 col-md-10 fond-table encadrement-table encadre">
-                                                        <!-- HTML generated using hilite.me -->
-                                                        <div>
-                                                            <pre style="margin: 0; line-height: 125%"><span style="color: #007020">window</span>.onload <span style="color: #333333">=</span> GPX;
-
-<span style="color: #008800; font-weight: bold">function</span> GPX() {
-	<span style="color: #008800; font-weight: bold">let</span> visuGpxOptions <span style="color: #333333">=</span> {
-		typeMarker<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;vitesse&quot;</span>,
-		mode<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;nautique&quot;</span>,
-		pleinEcran<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">true</span>
-	}
-
-	visuGPX(<span style="background-color: #fff0f0">&quot;visu-gpx&quot;</span>, getParameterByName(<span style="background-color: #fff0f0">&quot;url&quot;</span>), visuGpxOptions);
-}
-</pre>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                                        target="_blank">exemple nautique</a></p>
+ 
 
 
                                             </li>
                                             <li>
                                                 <p><a class="external" href="/foret/foret.php#visu-gpx-1"
-                                                        target="_blank">version randonnée</a></p>
-                                                <div class="row">
-                                                    <div class="col-md-1 fond"></div>
-                                                    <div
-                                                        class="col-xs-12 col-md-10 fond-table encadrement-table encadre">
-                                                        <!-- HTML generated using hilite.me -->
-                                                        <!-- HTML generated using hilite.me -->
-                                                        <div>
-                                                            <pre style="margin: 0; line-height: 125%"><span style="color: #007020">window</span>.onload <span style="color: #333333">=</span> GPX;
+                                                        target="_blank">exemple randonnée</a></p>
 
-<span style="color: #008800; font-weight: bold">function</span> GPX() {
-	<span style="color: #008800; font-weight: bold">let</span> visuGpxOptions <span style="color: #333333">=</span> {
-		typeMarker<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;distance&quot;</span>,
-		mode<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;rando&quot;</span>
-	}
-
-	visuGPX(<span style="background-color: #fff0f0">&quot;visu-gpx-1&quot;</span>, <span style="background-color: #fff0f0">&quot;2021_10_23_rando-3-pignons.gpx&quot;</span>, visuGpxOptions);
-}
-</pre>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </li>
+                                              </li>
                                         </ul>
                                         <br>
                                     </div>
