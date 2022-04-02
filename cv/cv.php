@@ -613,8 +613,7 @@
                                             jamais être en infériorité numérique par rapport aux orques.
                                         </p>
                                         <p>Le <a class="external" target="_blank"
-                                                href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a>
-                                            écrit en <strong>Python</strong> :
+                                                href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a> écrit en <strong>Python</strong> :
                                         </p>
                                     </div>
                                 </div>
