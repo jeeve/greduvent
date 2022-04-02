@@ -576,13 +576,13 @@
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.
                             </p>
                             <div class="bouton-realisationspersonnelles">
-                                <input id="div-realisationspersonnelles" type="button" value=" - "
+                                <input id="div-realisationspersonnelles" type="button" value=" + "
                                     data-toggle="collapse" data-target="#item-div-realisationspersonnelles" />
                                 <h3>
                                     <strong>Exemples de réalisations personnelles</strong>
                                 </h3>
                             </div>
-                            <div id="item-div-realisationspersonnelles" class="collapse in">
+                            <div id="item-div-realisationspersonnelles" class="collapse">
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond">
