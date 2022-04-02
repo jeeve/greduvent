@@ -144,7 +144,8 @@
     function GPX() {
         var visuGpxOptions = {
             typeMarker: "vitesse",
-            mode: "nautique"
+            mode: "nautique",
+            pleinEcran: true
         }
 
         visuGPX("visu-gpx", getParameterByName("url"), visuGpxOptions);
