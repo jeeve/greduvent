@@ -266,7 +266,8 @@
                                                         <img class="img-responsive ombre-image"
                                                             src="images/elisa.gif" />
                                                         <div class="legende">Elisa
-                                                            <div class="sous-legende">Calcul système d'attaques en moulage sable
+                                                            <div class="sous-legende">Calcul système d'attaques en
+                                                                moulage sable
                                                             </div>
                                                         </div>
                                                     </li>
@@ -275,7 +276,8 @@
                                                             src="images/optima.gif" />
                                                         <div class="legende">
                                                             Optima
-                                                            <div class="sous-legende">Calcul de charge et correction de bain
+                                                            <div class="sous-legende">Calcul de charge et correction de
+                                                                bain
                                                             </div>
                                                         </div>
                                                     </li>
@@ -317,7 +319,8 @@
                                                         <img class="img-responsive ombre-image"
                                                             src="images/salsa3d.png" />
                                                         <div class="legende">Salsa 3D
-                                                            <div class="sous-legende">Conception système de remplissage en sous pression</div>
+                                                            <div class="sous-legende">Conception système de remplissage
+                                                                en sous pression</div>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -589,7 +592,10 @@
 
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
-                                            <a class="external" href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx" target="_blank">Programme</a> écrit en <strong>Javascript</strong> permettant d'analyser
+                                            <a class="external"
+                                                href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                target="_blank">Programme</a> écrit en <strong>Javascript</strong>
+                                            permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
                                         <br>
@@ -602,7 +608,7 @@
 
 
 
-                                     
+
 
                                         <h3><strong>Le jeu de José</strong></h3>
                                         <p>
@@ -613,7 +619,8 @@
                                             jamais être en infériorité numérique par rapport aux orques.
                                         </p>
                                         <p>Le <a class="external" target="_blank"
-                                                href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a> écrit en <strong>Python</strong> :
+                                                href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a>
+                                            écrit en <strong>Python</strong> :
                                         </p>
                                     </div>
                                 </div>
@@ -724,8 +731,8 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                             </div>
 
 
-                            <h3 class="site-perso">Site personnel : <a class="external" href="https://greduvent.herokuapp.com/"
-                                    target="_blank">au
+                            <h3 class="site-perso">Site personnel : <a class="external"
+                                    href="https://greduvent.herokuapp.com/" target="_blank">au
                                     gré du
                                     vent 1.0</a>
                             </h3>
@@ -750,15 +757,6 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     });
     </script>
     <script src="/js/jquery.min.js"></script>
-    <script>
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return "";
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-    </script>
 </body>
+
+</html>
