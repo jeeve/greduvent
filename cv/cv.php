@@ -605,7 +605,7 @@
                                                 <div class="row">
                                                     <div class="col-md-1 fond"></div>
                                                     <div
-                                                        class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
+                                                        class="col-xs-12 col-md-10 fond-table encadrement-table encadre">
                                                         <!-- HTML generated using hilite.me -->
                                                         <div>
                                                             <pre style="margin: 0; line-height: 125%"><span style="color: #007020">window</span>.onload <span style="color: #333333">=</span> GPX;
@@ -630,12 +630,14 @@
                                             <li>
                                                 <p><a class="external" href="/foret/foret.php#visu-gpx-1"
                                                         target="_blank">version terrestre</a></p>
-                                                        <div class="row">
+                                                <div class="row">
                                                     <div class="col-md-1 fond"></div>
                                                     <div
-                                                        class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
+                                                        class="col-xs-12 col-md-10 fond-table encadrement-table encadre">
                                                         <!-- HTML generated using hilite.me -->
-<!-- HTML generated using hilite.me --><div><pre style="margin: 0; line-height: 125%"><span style="color: #007020">window</span>.onload <span style="color: #333333">=</span> GPX;
+                                                        <!-- HTML generated using hilite.me -->
+                                                        <div>
+                                                            <pre style="margin: 0; line-height: 125%"><span style="color: #007020">window</span>.onload <span style="color: #333333">=</span> GPX;
 
 <span style="color: #008800; font-weight: bold">function</span> GPX() {
 	<span style="color: #008800; font-weight: bold">let</span> visuGpxOptions <span style="color: #333333">=</span> {
@@ -644,7 +646,8 @@
 	}
 	visuGPX(<span style="background-color: #fff0f0">&quot;visu-gpx-1&quot;</span>, <span style="background-color: #fff0f0">&quot;2021_10_23_rando-3-pignons.gpx&quot;</span>, visuGpxOptions);
 }
-</pre></div>
+</pre>
+                                                        </div>
 
                                                     </div>
                                                 </div>
