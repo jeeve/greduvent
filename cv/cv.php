@@ -25,7 +25,7 @@
                             <div class="nom">Jean-Valéry</div>
                             <div class="nom">JULIEN</div>
                         </div>
-                        <div class="section">
+                        <div class="section-perso">
                             <h3><strong>Développeur informatique</strong></h3>
                             <p>Date de naissance : 1972 (49 ans)</p>
                             <p>Gentilly (94)</p>
@@ -46,10 +46,10 @@
                     </div>
                     <div class="col-md-1 fond"></div>
                     <div class="col-xs-12 col-md-6 fond">
-                        <h2><input style="color:black;" id="div-competences" type="button" value=" - "
-                                data-toggle="collapse" data-target="#item-div-competences" />&nbsp;&nbsp;Compétences
+                        <h2 class="cliquable" data-section="competences"><input style="color:black;" id="div-competences" type="button" value=" - "
+                                 />&nbsp;&nbsp;Compétences
                         </h2>
-                        <div id="item-div-competences" class="collapse in">
+                        <div id="item-div-competences" class="section" data-section="competences">
                             <ul>
                                 <li>
                                     <h3>Développement logiciel</h3>
@@ -80,11 +80,11 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
-                        <h2 class="experience"><input style="color:black;" id="div-experience" type="button" value=" - "
-                                data-toggle="collapse" data-target="#item-div-experience" />&nbsp;&nbsp;Expérience
+                        <h2 class="experience cliquable" data-section="experience"><input style="color:black;" id="div-experience" type="button" value=" - "
+                                 />&nbsp;&nbsp;Expérience
                             professionnelle
                         </h2>
-                        <div id="item-div-experience" class="collapse in">
+                        <div id="item-div-experience" class="section" data-section="experience">
                             <ul>
                                 <li>
                                     <h3><strong>CTIF</strong> - <strong>C</strong>entre <strong>T</strong>echnique
@@ -96,16 +96,15 @@
                                     <h4>De septembre 1997 à aujourd'hui</h4>
                                     <ul class="realisation">
                                         <li>
-                                            <div>
-                                                <input id="div-wordpress" type="button" value=" + "
-                                                    data-toggle="collapse" data-target="#item-div-wordpress" />
+                                            <div class="cliquable" data-section="wordpress">
+                                                <input id="div-wordpress" type="button" value=" + " />
                                                 <h4>
                                                     Création
                                                     de sites internet avec
                                                     <strong>WordPress</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-wordpress" class="collapse">
+                                            <div id="item-div-wordpress" class="section" data-section="wordpress" style="display:none">
                                                 <ul class="internet">
                                                     <li>
                                                         <a href="https://metalblog.ctif.com" target="_blank">
@@ -139,16 +138,16 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div>
+                                            <div class="cliquable" data-section="sharepoint">
                                                 <input id="div-sharepoint" type="button" value=" + "
-                                                    data-toggle="collapse" data-target="#item-div-sharepoint" />
+                                                   />
                                                 <h4>
                                                     Mise en
                                                     place d'un portail
                                                     intranet sous <strong>SharePoint</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-sharepoint" class="collapse">
+                                            <div id="item-div-sharepoint" class="section" data-section="sharepoint" style="display:none">
                                                 <ul class="intranet">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -167,15 +166,14 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div>
-                                                <input id="div-windev" type="button" value=" + " data-toggle="collapse"
-                                                    data-target="#item-div-windev" />
+                                            <div class="cliquable" data-section="windev">
+                                                <input id="div-windev" type="button" value=" + " />
                                                 <h4>
                                                     Développement d'interfaces entre
                                                     progiciels avec <strong>Windev</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-windev" class="collapse">
+                                            <div id="item-div-windev" class="section" data-section="windev" style="display:none">
                                                 <ul class="windev">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -193,15 +191,14 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div>
-                                                <input id="div-webdev" type="button" value=" + " data-toggle="collapse"
-                                                    data-target="#item-div-webdev" />
+                                            <div class="cliquable" data-section="webdev">
+                                                <input id="div-webdev" type="button" value=" + " />
                                                 <h4>
                                                     Développements
                                                     <strong>Webdev</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-webdev" class="collapse">
+                                            <div id="item-div-webdev" class="section" data-section="webdev" style="display:none"> 
                                                 <ul class="webdev">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -229,14 +226,14 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div>
+                                            <div class="cliquable" data-section="service-web">
                                                 <input id="div-service-web" type="button" value=" + "
-                                                    data-toggle="collapse" data-target="#item-div-service-web" />
+                                                    />
                                                 <h4>
                                                     Développement de services Web en <strong>c#</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-service-web" class="collapse">
+                                            <div id="item-div-service-web" class="section" data-section="service-web" style="display:none">
                                                 <ul class="service-web">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -251,16 +248,15 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div>
-                                                <input id="div-delphi" type="button" value=" + " data-toggle="collapse"
-                                                    data-target="#item-div-delphi" />
+                                            <div class="cliquable" data-section="delphi">
+                                                <input id="div-delphi" type="button" value=" + " />
                                                 <h4>
                                                     Développement d'applications
                                                     métier
                                                     sous Windows avec <strong>Delphi</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-delphi" class="collapse">
+                                            <div id="item-div-delphi" class="section" data-section="delphi" style="display:none">
                                                 <ul class="windows">
                                                     <li>
                                                         <img class="img-responsive ombre-image"
@@ -399,21 +395,19 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="formation"></a>
-                        <h2><input style="color:black;" id="div-formation" type="button" value=" - "
-                                data-toggle="collapse" data-target="#item-div-formation" />&nbsp;&nbsp;Formation
+                        <h2 class="cliquable" data-section="formation"><input style="color:black;" id="div-formation" type="button" value=" - " />&nbsp;&nbsp;Formation
                         </h2>
-                        <div id="item-div-formation" class="collapse in">
+                        <div id="item-div-formation" class="section" data-section="formation">
                             <ul>
                                 <li>
-                                    <div>
-                                        <input id="div-formationsacademiques" type="button" value=" - "
-                                            data-toggle="collapse" data-target="#item-div-formationsacademiques" />
+                                    <div class="cliquable" data-section="formation-academique">
+                                        <input id="div-formationsacademiques" type="button" value=" - " />
                                         <h3>
                                             <strong>Formations
                                                 académiques</strong>
                                         </h3>
                                     </div>
-                                    <div id="item-div-formationsacademiques" class="collapse in">
+                                    <div id="item-div-formationsacademiques" class="section" data-section="formation-academique">
                                         <ul>
                                             <li>
                                                 <h3><strong>IUP Génie Informatique</strong> 2ème année</h3>
@@ -444,14 +438,13 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div>
-                                        <input id="div-formationsprofessionnelles" type="button" value=" + "
-                                            data-toggle="collapse" data-target="#item-div-formationsprofessionnelles" />
+                                    <div class="cliquable" data-section="formation-professionnelle">
+                                        <input id="div-formationsprofessionnelles" type="button" value=" + " />
                                         <h3>
                                             <strong>Formations durant mon parcours professionnel</strong>
                                         </h3>
                                     </div>
-                                    <div id="item-div-formationsprofessionnelles" class="collapse">
+                                    <div id="item-div-formationsprofessionnelles" class="section" data-section="formation-professionnelle" style="display:none">
                                         <ul>
                                             <li>
                                                 <h3><strong>PowerPlatform</strong> -
@@ -515,10 +508,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="divers"></a>
-                        <h2><input style="color:black;" id="div-divers" type="button" value=" - " data-toggle="collapse"
-                                data-target="#item-div-divers" />&nbsp;&nbsp;à propos
+                        <h2 class="cliquable" data-section="divers"><input style="color:black;" id="div-divers" type="button" value=" - " />&nbsp;&nbsp;à propos
                         </h2>
-                        <div id="item-div-divers" class="collapse in">
+                        <div id="item-div-divers" class="section" data-section="divers">
                             <br>
                             <!-- <ul>
                            <li>
@@ -578,14 +570,13 @@
                             <p>Je suis passionné par les sciences, pratique le windfoil, et aime profiter de la nature.
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.
                             </p>
-                            <div class="bouton-realisationspersonnelles">
-                                <input id="div-realisationspersonnelles" type="button" value=" + "
-                                    data-toggle="collapse" data-target="#item-div-realisationspersonnelles" />
+                            <div class="bouton-realisationspersonnelles cliquable" data-section="realisation-personnelle">
+                                <input id="div-realisationspersonnelles" type="button" value=" + " />
                                 <h3>
                                     <strong>Exemples de réalisations personnelles</strong>
                                 </h3>
                             </div>
-                            <div id="item-div-realisationspersonnelles" class="collapse">
+                            <div id="item-div-realisationspersonnelles" class="section" data-section="realisation-personnelle" style="display:none">
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond">
@@ -748,13 +739,19 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     <!--/.page-container-->
     <?php include("./includes/footer.php"); ?>
     <script>
-    jQuery("input[data-target^='#item-div']").click(function() {
-        if (jQuery(this).attr('value') == ' + ') {
-            jQuery(this).attr('value', ' - ');
+      $(".cliquable").click(function () {
+        var section = $(this).attr("data-section");
+        $('.section[data-section="' + section + '"]').slideToggle(
+          "fast",
+          function () {}
+        );
+        var bouton = $('.cliquable[data-section="' + section + '"] input');
+        if (bouton.attr('value').indexOf("+") > -1) {
+            bouton.attr('value', bouton.attr('value').replace("+", "-"));
         } else {
-            jQuery(this).attr('value', ' + ');
+            bouton.attr('value', bouton.attr('value').replace("-", "+"));
         }
-    });
+      });
     </script>
     <script src="/js/jquery.min.js"></script>
 </body>
