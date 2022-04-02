@@ -46,8 +46,8 @@
                     </div>
                     <div class="col-md-1 fond"></div>
                     <div class="col-xs-12 col-md-6 fond">
-                        <h2 class="cliquable" data-section="competences"><input style="color:black;" id="div-competences" type="button" value=" - "
-                                 />&nbsp;&nbsp;Compétences
+                        <h2 class="cliquable" data-section="competences"><input style="color:black;"
+                                id="div-competences" type="button" value=" - " />&nbsp;&nbsp;Compétences
                         </h2>
                         <div id="item-div-competences" class="section" data-section="competences">
                             <ul>
@@ -80,8 +80,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
-                        <h2 class="experience cliquable" data-section="experience"><input style="color:black;" id="div-experience" type="button" value=" - "
-                                 />&nbsp;&nbsp;Expérience
+                        <h2 class="experience cliquable" data-section="experience"><input style="color:black;"
+                                id="div-experience" type="button" value=" - " />&nbsp;&nbsp;Expérience
                             professionnelle
                         </h2>
                         <div id="item-div-experience" class="section" data-section="experience">
@@ -104,7 +104,8 @@
                                                     <strong>WordPress</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-wordpress" class="section" data-section="wordpress" style="display:none">
+                                            <div id="item-div-wordpress" class="section" data-section="wordpress"
+                                                style="display:none">
                                                 <ul class="internet">
                                                     <li>
                                                         <a href="https://metalblog.ctif.com" target="_blank">
@@ -139,15 +140,15 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="sharepoint">
-                                                <input id="div-sharepoint" type="button" value=" + "
-                                                   />
+                                                <input id="div-sharepoint" type="button" value=" + " />
                                                 <h4>
                                                     Mise en
                                                     place d'un portail
                                                     intranet sous <strong>SharePoint</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-sharepoint" class="section" data-section="sharepoint" style="display:none">
+                                            <div id="item-div-sharepoint" class="section" data-section="sharepoint"
+                                                style="display:none">
                                                 <ul class="intranet">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -173,7 +174,8 @@
                                                     progiciels avec <strong>Windev</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-windev" class="section" data-section="windev" style="display:none">
+                                            <div id="item-div-windev" class="section" data-section="windev"
+                                                style="display:none">
                                                 <ul class="windev">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -198,7 +200,8 @@
                                                     <strong>Webdev</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-webdev" class="section" data-section="webdev" style="display:none"> 
+                                            <div id="item-div-webdev" class="section" data-section="webdev"
+                                                style="display:none">
                                                 <ul class="webdev">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -227,13 +230,13 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="service-web">
-                                                <input id="div-service-web" type="button" value=" + "
-                                                    />
+                                                <input id="div-service-web" type="button" value=" + " />
                                                 <h4>
                                                     Développement de services Web en <strong>c#</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-service-web" class="section" data-section="service-web" style="display:none">
+                                            <div id="item-div-service-web" class="section" data-section="service-web"
+                                                style="display:none">
                                                 <ul class="service-web">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
@@ -256,7 +259,8 @@
                                                     sous Windows avec <strong>Delphi</strong>
                                                 </h4>
                                             </div>
-                                            <div id="item-div-delphi" class="section" data-section="delphi" style="display:none">
+                                            <div id="item-div-delphi" class="section" data-section="delphi"
+                                                style="display:none">
                                                 <ul class="windows">
                                                     <li>
                                                         <img class="img-responsive ombre-image"
@@ -395,7 +399,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="formation"></a>
-                        <h2 class="cliquable" data-section="formation"><input style="color:black;" id="div-formation" type="button" value=" - " />&nbsp;&nbsp;Formation
+                        <h2 class="cliquable" data-section="formation"><input style="color:black;" id="div-formation"
+                                type="button" value=" - " />&nbsp;&nbsp;Formation
                         </h2>
                         <div id="item-div-formation" class="section" data-section="formation">
                             <ul>
@@ -407,7 +412,8 @@
                                                 académiques</strong>
                                         </h3>
                                     </div>
-                                    <div id="item-div-formationsacademiques" class="section" data-section="formation-academique">
+                                    <div id="item-div-formationsacademiques" class="section"
+                                        data-section="formation-academique">
                                         <ul>
                                             <li>
                                                 <h3><strong>IUP Génie Informatique</strong> 2ème année</h3>
@@ -444,7 +450,8 @@
                                             <strong>Formations durant mon parcours professionnel</strong>
                                         </h3>
                                     </div>
-                                    <div id="item-div-formationsprofessionnelles" class="section" data-section="formation-professionnelle" style="display:none">
+                                    <div id="item-div-formationsprofessionnelles" class="section"
+                                        data-section="formation-professionnelle" style="display:none">
                                         <ul>
                                             <li>
                                                 <h3><strong>PowerPlatform</strong> -
@@ -508,7 +515,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="divers"></a>
-                        <h2 class="cliquable" data-section="divers"><input style="color:black;" id="div-divers" type="button" value=" - " />&nbsp;&nbsp;à propos
+                        <h2 class="cliquable" data-section="divers"><input style="color:black;" id="div-divers"
+                                type="button" value=" - " />&nbsp;&nbsp;à propos
                         </h2>
                         <div id="item-div-divers" class="section" data-section="divers">
                             <br>
@@ -570,25 +578,33 @@
                             <p>Je suis passionné par les sciences, pratique le windfoil, et aime profiter de la nature.
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.
                             </p>
-                            <div class="bouton-realisationspersonnelles cliquable" data-section="realisation-personnelle">
+                            <div class="bouton-realisationspersonnelles cliquable"
+                                data-section="realisation-personnelle">
                                 <input id="div-realisationspersonnelles" type="button" value=" + " />
                                 <h3>
                                     <strong>Exemples de réalisations personnelles</strong>
                                 </h3>
                             </div>
-                            <div id="item-div-realisationspersonnelles" class="section" data-section="realisation-personnelle" style="display:none">
+                            <div id="item-div-realisationspersonnelles" class="section"
+                                data-section="realisation-personnelle" style="display:none">
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond">
 
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
-                                            <a class="external"
-                                                href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                target="_blank">Programme</a> écrit en <strong>Javascript</strong>
+                                            Programme écrit en <strong>Javascript</strong>
                                             permettant d'analyser
-                                            les données GPX issues d'un capteur GPS.
+                                            les données GPX issues d'un capteur GPS
                                         </p>
+                                        <ul>
+                                            <li><p><a class="external"
+                                                href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                target="_blank">version nautique</a></p></li>
+                                            <li><p><a class="external"
+                                                href="/foret/foret.php#visu-gpx-1"
+                                                target="_blank">version terrestre</a></p></li>
+                                        </ul>
                                         <br>
                                     </div>
                                 </div>
@@ -739,11 +755,11 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     <!--/.page-container-->
     <?php include("./includes/footer.php"); ?>
     <script>
-      $(".cliquable").click(function () {
+    $(".cliquable").click(function() {
         var section = $(this).attr("data-section");
         $('.section[data-section="' + section + '"]').slideToggle(
-          "fast",
-          function () {}
+            "fast",
+            function() {}
         );
         var bouton = $('.cliquable[data-section="' + section + '"] input');
         if (bouton.attr('value').indexOf("+") > -1) {
@@ -751,7 +767,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
         } else {
             bouton.attr('value', bouton.attr('value').replace("-", "+"));
         }
-      });
+    });
     </script>
     <script src="/js/jquery.min.js"></script>
 </body>
