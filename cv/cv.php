@@ -629,7 +629,7 @@
                                             </li>
                                             <li>
                                                 <p><a class="external" href="/foret/foret.php#visu-gpx-1"
-                                                        target="_blank">version terrestre</a></p>
+                                                        target="_blank">version randonnée</a></p>
                                                 <div class="row">
                                                     <div class="col-md-1 fond"></div>
                                                     <div
@@ -644,7 +644,7 @@
 		typeMarker<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;distance&quot;</span>,
 		mode<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;rando&quot;</span>
 	}
-    
+
 	visuGPX(<span style="background-color: #fff0f0">&quot;visu-gpx-1&quot;</span>, <span style="background-color: #fff0f0">&quot;2021_10_23_rando-3-pignons.gpx&quot;</span>, visuGpxOptions);
 }
 </pre>
