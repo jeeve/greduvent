@@ -593,25 +593,12 @@
 
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
-                                            Programme écrit en <strong>Javascript</strong>
-                                            permettant d'analyser
-                                            les données GPX issues d'un capteur GPS
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                <p><a class="external"
+                                        <a class="external"
                                                         href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                        target="_blank">exemple nautique</a></p>
- 
-
-
-                                            </li>
-                                            <li>
-                                                <p><a class="external" href="/foret/foret.php#visu-gpx-1"
-                                                        target="_blank">exemple randonnée</a></p>
-
-                                              </li>
-                                        </ul>
+                                                        target="_blank">Programme</a> écrit en <strong>Javascript</strong>
+                                            permettant d'analyser
+                                            les données GPX issues d'un capteur GPS.
+                                        </p>
                                         <br>
                                     </div>
                                 </div>
