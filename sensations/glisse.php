@@ -79,11 +79,6 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <p>voile Loftsails Skyscape modèle 2021<br>
-                                        surface : 6,4 m²
-                                    </p>
-                                </li>
-                                <li>
                                     <p>voile Neilpryde V8 modèle 2017<br>
                                         surface : 7,7 m²
                                     </p>
@@ -102,6 +97,11 @@
                                 <li>
                                     <p>flotteur&nbsp;JP Hydrofoil 135 modèle 2018<br>
                                         dimensions : 215 x 86 cm
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>voile Loftsails Skyscape modèle 2021<br>
+                                        surface : 6,4 m²
                                     </p>
                                 </li>
                                 <li>
