@@ -6,6 +6,7 @@
     <META NAME="Description"
         CONTENT="Quelques mots sur l'auteur, ses motivations, lectures, playlist musicale et citation préférée." />
     <?php include("./includes/header.php"); ?>
+    <link rel="stylesheet" href="/sensations/css/jquery-ui.min.css">
     <link href="css/cv.css" rel="stylesheet">
 </head>
 
@@ -619,9 +620,35 @@
                                                 target="_blank">Programme</a> écrit en <strong>Python</strong> utilisant
                                             le micro framework <strong>Flask</strong>.
                                         </p>
-                                        <br>
+                            
                                     </div>
                                 </div>
+
+                                <!--
+                                <form id="datetimeform">
+                                    <div>
+                                        <p><label for="ma-date" style="margin-right: 10px;">Date <span
+                                                    style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                                style="width: 130px;" id="ma-date-moisson" type="text" name="date"
+                                                value="25/02/2017"></input></p>
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="row histo">
+                                    <div class="col-xs-1 fond"></div>
+                                    <div class="col-xs-10 fond" id="historique-vent-moisson"></div>
+                                </div>
+                                <div class="row histo">
+                                    <div class="col-xs-2 fond"></div>
+                                    <div class="col-xs-8 fond" id="historique-rose-moisson"></div>
+                                </div>
+                                <div class="row histo">
+                                    <div class="col-xs-1 fond"></div>
+                                    <div class="col-xs-10 fond" id="historique-temp-moisson"></div>
+                                </div>
+                                <br><br>
+
+-->
 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
@@ -968,6 +995,9 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     </div>
     <!--/.page-container-->
     <?php include("./includes/footer.php"); ?>
+
+    <script src="/sensations/js/jquery-ui.min.js"></script>
+
     <script>
     $(".cliquable").click(function() {
         var section = $(this).attr("data-section");
@@ -982,8 +1012,17 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
             bouton.attr('value', bouton.attr('value').replace("-", "+"));
         }
     });
+
+    jQuery(document).ready(function() {
+        initHistorique('moisson');
+        getHistoriqueVent('moisson');
+        $("#ma-date-moisson").change(function() {
+            getHistoriqueVent('moisson');
+        });
+    });
     </script>
     <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/sensations/js/historique-vent.js"></script>
 </body>
 
 </html>
