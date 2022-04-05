@@ -443,7 +443,14 @@ function goSession() {
   if (d != null) {
     var words = d.split("-");
     var a = words[2];
-    $('.session[data-annee="' + a + '"]').show();
+    $('.session[data-annee="' + a + '"]').show("fast", function () {
+      jQuery("html, body").animate( // on se deplace sur la date demandee en parametre
+        {
+          scrollTop: jQuery("#" + d).offset().top - 50,
+        },
+        "slow"
+      );
+    });
     if (
       $('.titre-annee[data-annee="' + a + '"]')
         .html()
@@ -461,13 +468,6 @@ function goSession() {
           .replace("-", "+")
       );
     }
-
-    jQuery("html, body").animate(
-      {
-        scrollTop: jQuery("#" + d).offset().top - 50,
-      },
-      "slow"
-    );
   } else {
     var premiereAnnee;
     premiereAnnee = $("#sessions .titre-annee").first().attr("data-annee");
