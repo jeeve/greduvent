@@ -559,19 +559,24 @@
                             <p>A titre personnel j'utilise notamment les logiciels</p>
                             <ul>
                                 <li>
-                                    <h3>Visual Studio Code</h3>
+                                    <h3><strong>Visual Studio Code</strong> avec Python / Flask, Php, Javascript, Html,
+                                        Css, Xml, Json...</h3>
                                 </li>
                                 <li>
-                                    <h3>Gimp</h3>
+                                    <h3>Racket, programmation fonctionnelle basée sur langage <strong>Scheme</strong>
+                                    </h3>
                                 </li>
                                 <li>
-                                    <h3>Blender (création 3D)</h3>
+                                    <h3><strong>Gimp, Paint.net</strong></h3>
                                 </li>
                                 <li>
-                                    <h3>Davinci Resolve (montage vidéo)</h3>
+                                    <h3><strong>Blender</strong>, création 3D</h3>
                                 </li>
                                 <li>
-                                    <h3>Reason Studio (création musicale)</h3>
+                                    <h3><strong>Davinci Resolve</strong>, montage vidéo</h3>
+                                </li>
+                                <li>
+                                    <h3><strong>Reason Studio</strong>, création musicale</h3>
                                 </li>
                             </ul>
                             <br>
@@ -593,15 +598,230 @@
 
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
-                                        <a class="external"
-                                                        href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                        target="_blank">Programme</a> écrit en <strong>Javascript</strong>
+                                            <a class="external"
+                                                href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                target="_blank">Programme</a> écrit en <strong>Javascript</strong>
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
                                         <br>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond">
+
+                                        <h3><strong>Visualiser l'historique de stations météo</strong></h3>
+                                        <p>
+                                            <a class="external"
+                                                href="http://meteoflask.herokuapp.com/plot/mantes-la-jolie/20220326/"
+                                                target="_blank">Programme</a> écrit en <strong>Python</strong> utilisant
+                                            le micro framework <strong>Flask</strong>.
+                                        </p>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
+                                        <!-- HTML generated using hilite.me -->
+                                        <div>
+                                            <pre><span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">flask</span> <span style="color: #008800; font-weight: bold">import</span> Flask, render_template, url_for, request
+
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">io</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">flask</span> <span style="color: #008800; font-weight: bold">import</span> Response
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">matplotlib</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">matplotlib.backends.backend_agg</span> <span style="color: #008800; font-weight: bold">import</span> FigureCanvasAgg <span style="color: #008800; font-weight: bold">as</span> FigureCanvas
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">matplotlib.figure</span> <span style="color: #008800; font-weight: bold">import</span> Figure
+
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">matplotlib.pyplot</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">plt</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">datetime</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">dateutil.relativedelta</span> <span style="color: #008800; font-weight: bold">import</span> relativedelta
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">matplotlib.dates</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">mdates</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #008800; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">np</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">windrose</span> <span style="color: #008800; font-weight: bold">import</span> WindroseAxes
+
+matplotlib<span style="color: #333333">.</span>rcParams[<span style="background-color: #fff0f0">&#39;timezone&#39;</span>] <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;Europe/Paris&#39;</span>
+
+app <span style="color: #333333">=</span> Flask(__name__)
+
+<span style="color: #888888"># Config options - Make sure you created a &#39;config.py&#39; file.</span>
+app<span style="color: #333333">.</span>config<span style="color: #333333">.</span>from_object(<span style="background-color: #fff0f0">&#39;config&#39;</span>)
+<span style="color: #888888"># To get one variable, tape app.config[&#39;MY_VARIABLE&#39;]</span>
+
+stations <span style="color: #333333">=</span> [{<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;louviers&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;mantes-la-jolie&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;dreux&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;torcy&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;montereau-fault-yonne&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;lusigny-sur-barse&#39;</span>}]
+variables <span style="color: #333333">=</span> [{<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;temperature&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;vent&#39;</span>}, {<span style="background-color: #fff0f0">&#39;name&#39;</span>:<span style="background-color: #fff0f0">&#39;orientation&#39;</span>}]
+
+station <span style="color: #333333">=</span> stations[<span style="color: #0000DD; font-weight: bold">1</span>]
+variable <span style="color: #333333">=</span> variables[<span style="color: #0000DD; font-weight: bold">0</span>]
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/&#39;</span>)
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/index/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">index</span>():
+    <span style="color: #008800; font-weight: bold">return</span> render_template(<span style="background-color: #fff0f0">&#39;index.html&#39;</span>, station<span style="color: #333333">=</span>station, variable<span style="color: #333333">=</span>variable, stations<span style="color: #333333">=</span>stations, variables<span style="color: #333333">=</span>variables)
+    
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/result/&#39;</span>, methods<span style="color: #333333">=</span>[<span style="background-color: #fff0f0">&#39;GET&#39;</span>, <span style="background-color: #fff0f0">&#39;POST&#39;</span>])
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">result</span>():
+    s <span style="color: #333333">=</span> request<span style="color: #333333">.</span>form<span style="color: #333333">.</span>get(<span style="background-color: #fff0f0">&#39;station_select&#39;</span>)
+    v <span style="color: #333333">=</span> request<span style="color: #333333">.</span>form<span style="color: #333333">.</span>get(<span style="background-color: #fff0f0">&#39;variable_select&#39;</span>)
+    <span style="color: #008800; font-weight: bold">global</span> station
+    <span style="color: #008800; font-weight: bold">global</span> variable
+    station <span style="color: #333333">=</span> s
+    variable <span style="color: #333333">=</span> v
+    <span style="color: #008800; font-weight: bold">return</span> render_template(<span style="background-color: #fff0f0">&#39;result.html&#39;</span>, station<span style="color: #333333">=</span>s, variable<span style="color: #333333">=</span>v, stations<span style="color: #333333">=</span>stations, variables<span style="color: #333333">=</span>variables)   
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/plot/&lt;station&gt;/&lt;date&gt;/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">plot_rose_png_date</span>(station, date):
+    <span style="color: #008800; font-weight: bold">return</span> render_template(<span style="background-color: #fff0f0">&#39;plot.html&#39;</span>, station<span style="color: #333333">=</span>station, date<span style="color: #333333">=</span>date)   
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/plot/&lt;station&gt;/&lt;variable&gt;/&lt;date&gt;/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">plot_png_date</span>(station, variable, date):
+    fig <span style="color: #333333">=</span> create_plot_date(station, variable, date)
+    output <span style="color: #333333">=</span> io<span style="color: #333333">.</span>BytesIO()
+    FigureCanvas(fig)<span style="color: #333333">.</span>print_png(output)
+    <span style="color: #008800; font-weight: bold">return</span> Response(output<span style="color: #333333">.</span>getvalue(), mimetype<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;image/png&#39;</span>)
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/plot/&lt;station&gt;/&lt;variable&gt;/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">plot_png</span>(station, variable):
+    fig <span style="color: #333333">=</span> create_plot_date(station, variable, <span style="background-color: #fff0f0">&quot;&quot;</span>)
+    output <span style="color: #333333">=</span> io<span style="color: #333333">.</span>BytesIO()
+    FigureCanvas(fig)<span style="color: #333333">.</span>print_png(output)
+    <span style="color: #008800; font-weight: bold">return</span> Response(output<span style="color: #333333">.</span>getvalue(), mimetype<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;image/png&#39;</span>)
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/rose/&lt;station&gt;/&lt;date&gt;/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">rose_png_date</span>(station, date):
+    fig <span style="color: #333333">=</span> create_rose_date(station, date)
+    output <span style="color: #333333">=</span> io<span style="color: #333333">.</span>BytesIO()
+    FigureCanvas(fig)<span style="color: #333333">.</span>print_png(output)
+    <span style="color: #008800; font-weight: bold">return</span> Response(output<span style="color: #333333">.</span>getvalue(), mimetype<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;image/png&#39;</span>)
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/rose/&lt;station&gt;/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">rose_png</span>(station):
+    fig <span style="color: #333333">=</span> create_rose_date(station, <span style="background-color: #fff0f0">&quot;&quot;</span>)
+    output <span style="color: #333333">=</span> io<span style="color: #333333">.</span>BytesIO()
+    FigureCanvas(fig)<span style="color: #333333">.</span>print_png(output)
+    <span style="color: #008800; font-weight: bold">return</span> Response(output<span style="color: #333333">.</span>getvalue(), mimetype<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;image/png&#39;</span>)
+
+<span style="color: #555555; font-weight: bold">@app</span><span style="color: #333333">.</span>route(<span style="background-color: #fff0f0">&#39;/niveau/&#39;</span>)
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">niveau_png</span>():
+    fig <span style="color: #333333">=</span> create_niveau()
+    output <span style="color: #333333">=</span> io<span style="color: #333333">.</span>BytesIO()
+    FigureCanvas(fig)<span style="color: #333333">.</span>print_png(output)
+    <span style="color: #008800; font-weight: bold">return</span> Response(output<span style="color: #333333">.</span>getvalue(), mimetype<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;image/png&#39;</span>)
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">create_niveau</span>():
+    df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>read_csv(<span style="background-color: #fff0f0">&quot;https://greduvent.000webhostapp.com/sensations/get-niveau.php&quot;</span>)    
+    df<span style="color: #333333">.</span>columns <span style="color: #333333">=</span> [<span style="background-color: #fff0f0">&#39;date_heure&#39;</span>, <span style="background-color: #fff0f0">&#39;station&#39;</span>, <span style="background-color: #fff0f0">&#39;hauteur&#39;</span>]
+    df[<span style="background-color: #fff0f0">&quot;date_heure&quot;</span>] <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>to_datetime(df[<span style="background-color: #fff0f0">&quot;date_heure&quot;</span>], <span style="color: #007020">format</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;%Y-%m-%d %H:%M&#39;</span>)
+
+    df[[<span style="background-color: #fff0f0">&quot;hauteur&quot;</span>]] <span style="color: #333333">=</span> df[[<span style="background-color: #fff0f0">&quot;hauteur&quot;</span>]]<span style="color: #333333">.</span>apply(pd<span style="color: #333333">.</span>to_numeric)
+    
+    df<span style="color: #333333">.</span>drop(df<span style="color: #333333">.</span>loc[df[<span style="background-color: #fff0f0">&#39;hauteur&#39;</span>]<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>]<span style="color: #333333">.</span>index, inplace<span style="color: #333333">=</span><span style="color: #008800; font-weight: bold">True</span>)
+      
+    fig <span style="color: #333333">=</span> Figure()
+    fig<span style="color: #333333">.</span>set_size_inches(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">7</span>, forward<span style="color: #333333">=</span><span style="color: #008800; font-weight: bold">True</span>)
+    fig<span style="color: #333333">.</span>suptitle(<span style="background-color: #fff0f0">&#39;niveau&#39;</span>)
+
+    axis <span style="color: #333333">=</span> fig<span style="color: #333333">.</span>add_subplot(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>)
+    xs <span style="color: #333333">=</span> df[<span style="background-color: #fff0f0">&#39;date_heure&#39;</span>]
+    ys <span style="color: #333333">=</span> df[<span style="background-color: #fff0f0">&#39;hauteur&#39;</span>]
+    
+    axis<span style="color: #333333">.</span>set_ylabel(<span style="background-color: #fff0f0">&#39;hauteur (%)&#39;</span>)
+    
+    axis<span style="color: #333333">.</span>set_xlim([datetime<span style="color: #333333">.</span>date<span style="color: #333333">.</span>today() <span style="color: #333333">+</span> relativedelta(months<span style="color: #333333">=-</span><span style="color: #0000DD; font-weight: bold">12</span>), datetime<span style="color: #333333">.</span>date<span style="color: #333333">.</span>today() <span style="color: #333333">+</span> relativedelta(days<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>)])
+    axis<span style="color: #333333">.</span>set_ylim(<span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #0000DD; font-weight: bold">100</span>)
+    axis<span style="color: #333333">.</span>grid()
+   
+    axis<span style="color: #333333">.</span>xaxis<span style="color: #333333">.</span>set_major_locator(mdates<span style="color: #333333">.</span>MonthLocator())
+    axis<span style="color: #333333">.</span>xaxis<span style="color: #333333">.</span>set_major_formatter(mdates<span style="color: #333333">.</span>DateFormatter(<span style="background-color: #fff0f0">&#39;%m/%Y&#39;</span>))
+    axis<span style="color: #333333">.</span>xaxis<span style="color: #333333">.</span>set_minor_locator(mdates<span style="color: #333333">.</span>DayLocator())
+ 
+    <span style="color: #008800; font-weight: bold">for</span> label <span style="color: #000000; font-weight: bold">in</span> axis<span style="color: #333333">.</span>xaxis<span style="color: #333333">.</span>get_ticklabels():
+        label<span style="color: #333333">.</span>set_rotation(<span style="color: #0000DD; font-weight: bold">45</span>)
+    
+    axis<span style="color: #333333">.</span>plot(xs, ys)
+
+    <span style="color: #008800; font-weight: bold">return</span> fig 
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">create_plot_date</span>(station, variable, date):
+    <span style="color: #008800; font-weight: bold">if</span> date <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;&quot;</span>:
+        df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>read_csv(<span style="background-color: #fff0f0">&quot;https://greduvent.000webhostapp.com/sensations/get-meteo.php&quot;</span>)    
+    <span style="color: #008800; font-weight: bold">else</span>:                         
+        df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>read_csv(<span style="background-color: #fff0f0">&quot;https://greduvent.000webhostapp.com/sensations/get-meteo.php?date=&quot;</span> <span style="color: #333333">+</span> date)
+    df<span style="color: #333333">.</span>columns <span style="color: #333333">=</span> [<span style="background-color: #fff0f0">&#39;date_heure&#39;</span>, <span style="background-color: #fff0f0">&#39;station&#39;</span>, <span style="background-color: #fff0f0">&#39;vent&#39;</span>, <span style="background-color: #fff0f0">&#39;orientation&#39;</span>, <span style="background-color: #fff0f0">&#39;temperature&#39;</span>]
+    <span style="color: #888888">#df[&quot;date_heure&quot;] = pd.to_datetime(df[&quot;date_heure&quot;], format=&#39;%Y-%m-%d %H:%M&#39;)</span>
+
+    df[<span style="background-color: #fff0f0">&quot;date_heure&quot;</span>] <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>to_datetime(df[<span style="background-color: #fff0f0">&quot;date_heure&quot;</span>])<span style="color: #333333">.</span>dt<span style="color: #333333">.</span>tz_localize(tz<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;UTC&#39;</span>)<span style="color: #333333">.</span>dt<span style="color: #333333">.</span>tz_convert(<span style="background-color: #fff0f0">&#39;Europe/Paris&#39;</span>)
+
+    df[[<span style="background-color: #fff0f0">&quot;vent&quot;</span>, <span style="background-color: #fff0f0">&quot;orientation&quot;</span>, <span style="background-color: #fff0f0">&quot;temperature&quot;</span>]] <span style="color: #333333">=</span> df[[<span style="background-color: #fff0f0">&quot;vent&quot;</span>, <span style="background-color: #fff0f0">&quot;orientation&quot;</span>, <span style="background-color: #fff0f0">&quot;temperature&quot;</span>]]<span style="color: #333333">.</span>apply(pd<span style="color: #333333">.</span>to_numeric)
+    
+    df_station <span style="color: #333333">=</span> df[df[<span style="background-color: #fff0f0">&#39;station&#39;</span>] <span style="color: #333333">==</span> station]
+    
+    fig <span style="color: #333333">=</span> Figure()
+    fig<span style="color: #333333">.</span>set_size_inches(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">7</span>, forward<span style="color: #333333">=</span><span style="color: #008800; font-weight: bold">True</span>)
+    fig<span style="color: #333333">.</span>suptitle(station)
+
+    axis <span style="color: #333333">=</span> fig<span style="color: #333333">.</span>add_subplot(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>)
+    xs <span style="color: #333333">=</span> df_station[<span style="background-color: #fff0f0">&#39;date_heure&#39;</span>]
+    ys <span style="color: #333333">=</span> df_station[variable]
+    
+    axis<span style="color: #333333">.</span>set_xlabel(<span style="background-color: #fff0f0">&#39;date&#39;</span>)
+    axis<span style="color: #333333">.</span>set_ylabel(variable)
+    <span style="color: #008800; font-weight: bold">if</span> variable <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;vent&quot;</span>:
+        axis<span style="color: #333333">.</span>set_ylabel(<span style="background-color: #fff0f0">&quot;Vent (kts)&quot;</span>)
+    <span style="color: #008800; font-weight: bold">if</span> variable <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;temperature&quot;</span>:
+        axis<span style="color: #333333">.</span>set_ylabel(<span style="background-color: #fff0f0">&quot;Température (°C)&quot;</span>)         
+    <span style="color: #008800; font-weight: bold">if</span> ys<span style="color: #333333">.</span>min() <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+        axis<span style="color: #333333">.</span>set_ylim(ys<span style="color: #333333">.</span>min() <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">*</span>ys<span style="color: #333333">.</span>min()<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>, ys<span style="color: #333333">.</span>max() <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">*</span>ys<span style="color: #333333">.</span>max()<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>)         
+    <span style="color: #008800; font-weight: bold">else</span>:   
+        axis<span style="color: #333333">.</span>set_ylim(<span style="color: #0000DD; font-weight: bold">0</span>, ys<span style="color: #333333">.</span>max() <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">*</span>ys<span style="color: #333333">.</span>max()<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>) 
+    axis<span style="color: #333333">.</span>set_ylim(<span style="color: #0000DD; font-weight: bold">0</span>, ys<span style="color: #333333">.</span>max() <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">*</span>ys<span style="color: #333333">.</span>max()<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>)    
+    axis<span style="color: #333333">.</span>grid()
+    
+    axis<span style="color: #333333">.</span>xaxis<span style="color: #333333">.</span>set_major_locator(mdates<span style="color: #333333">.</span>HourLocator())
+
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">len</span>(date) <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">8</span>:
+        axis<span style="color: #333333">.</span>set_xlabel(date[<span style="color: #0000DD; font-weight: bold">6</span>:<span style="color: #0000DD; font-weight: bold">8</span>] <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39;/&#39;</span> <span style="color: #333333">+</span> date[<span style="color: #0000DD; font-weight: bold">4</span>:<span style="color: #0000DD; font-weight: bold">6</span>] <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39;/&#39;</span> <span style="color: #333333">+</span> date[<span style="color: #0000DD; font-weight: bold">0</span>:<span style="color: #0000DD; font-weight: bold">4</span>])
+        xfmt <span style="color: #333333">=</span> mdates<span style="color: #333333">.</span>DateFormatter(<span style="background-color: #fff0f0">&quot;%H:%M&quot;</span>)
+        axis<span style="color: #333333">.</span>xaxis<span style="color: #333333">.</span>set_major_formatter(xfmt)
+    
+    axis<span style="color: #333333">.</span>plot(xs, ys)
+
+    <span style="color: #008800; font-weight: bold">return</span> fig 
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">create_rose_date</span>(station, date):
+    <span style="color: #008800; font-weight: bold">if</span> date <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;&quot;</span>:
+        df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>read_csv(<span style="background-color: #fff0f0">&quot;https://greduvent.000webhostapp.com/sensations/get-meteo.php&quot;</span>)    
+    <span style="color: #008800; font-weight: bold">else</span>:                         
+        df <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>read_csv(<span style="background-color: #fff0f0">&quot;https://greduvent.000webhostapp.com/sensations/get-meteo.php?date=&quot;</span> <span style="color: #333333">+</span> date)
+    df<span style="color: #333333">.</span>columns <span style="color: #333333">=</span> [<span style="background-color: #fff0f0">&#39;date_heure&#39;</span>, <span style="background-color: #fff0f0">&#39;station&#39;</span>, <span style="background-color: #fff0f0">&#39;vent&#39;</span>, <span style="background-color: #fff0f0">&#39;orientation&#39;</span>, <span style="background-color: #fff0f0">&#39;temperature&#39;</span>]
+    df[<span style="background-color: #fff0f0">&quot;date_heure&quot;</span>] <span style="color: #333333">=</span> pd<span style="color: #333333">.</span>to_datetime(df[<span style="background-color: #fff0f0">&quot;date_heure&quot;</span>], <span style="color: #007020">format</span><span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;%Y-%m-%d %H:%M&#39;</span>)
+    df[[<span style="background-color: #fff0f0">&quot;vent&quot;</span>, <span style="background-color: #fff0f0">&quot;orientation&quot;</span>, <span style="background-color: #fff0f0">&quot;temperature&quot;</span>]] <span style="color: #333333">=</span> df[[<span style="background-color: #fff0f0">&quot;vent&quot;</span>, <span style="background-color: #fff0f0">&quot;orientation&quot;</span>, <span style="background-color: #fff0f0">&quot;temperature&quot;</span>]]<span style="color: #333333">.</span>apply(pd<span style="color: #333333">.</span>to_numeric)
+    
+    df_station <span style="color: #333333">=</span> df[df[<span style="background-color: #fff0f0">&#39;station&#39;</span>] <span style="color: #333333">==</span> station]
+    
+    fig <span style="color: #333333">=</span> Figure()
+    fig<span style="color: #333333">.</span>set_size_inches(<span style="color: #0000DD; font-weight: bold">7</span>, <span style="color: #0000DD; font-weight: bold">7</span>, forward<span style="color: #333333">=</span><span style="color: #008800; font-weight: bold">True</span>)
+    fig<span style="color: #333333">.</span>suptitle(station)
+
+
+    ax <span style="color: #333333">=</span> fig<span style="color: #333333">.</span>add_subplot(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">1</span>, projection<span style="color: #333333">=</span><span style="background-color: #fff0f0">&quot;windrose&quot;</span>)    
+    wd <span style="color: #333333">=</span> df_station[<span style="background-color: #fff0f0">&#39;orientation&#39;</span>]
+    ws <span style="color: #333333">=</span> df_station[<span style="background-color: #fff0f0">&#39;vent&#39;</span>]
+    ax<span style="color: #333333">.</span>bar(wd, ws, normed<span style="color: #333333">=</span><span style="color: #008800; font-weight: bold">True</span>, opening<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">0.8</span>, edgecolor<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;white&#39;</span>)
+    ax<span style="color: #333333">.</span>set_legend()
+    
+    <span style="color: #008800; font-weight: bold">return</span> fig
+</pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+
 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
