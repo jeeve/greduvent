@@ -650,7 +650,7 @@
                                                 <p style="display:inline-block"><label for="ma-station"
                                                         style="margin-right: 10px; font-size:1em">Station</label>
                                                     <select name="station">
-                                                        <option vaule="moisson">Mantes la jolie</option>
+                                                        <option value="moisson" selected>Mantes la jolie</option>
                                                     </select>
                                                 </p>
                                             </div>
@@ -1041,8 +1041,8 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     });
 
     jQuery(document).ready(function() {
-        initHistorique('moisson');
-        getHistoriqueVent('moisson');
+        initHistorique($('select[name="station"] > option:selected').val());
+        getHistoriqueVent($('select[name="station"] > option:selected').val());
         $("#ma-date-moisson").change(function() {
             getHistoriqueVent('moisson');
         });
