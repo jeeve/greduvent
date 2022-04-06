@@ -8,6 +8,24 @@
     <?php include("./includes/header.php"); ?>
     <link rel="stylesheet" href="/sensations/css/jquery-ui.min.css">
     <link href="css/cv.css" rel="stylesheet">
+    <style>
+    .histo img {
+        margin: 10px;
+    }
+
+    .loader-container {
+        position: relative;
+        height: 50px;
+    }
+
+    .loader {
+        widht: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    </style>
 </head>
 
 <body>
@@ -620,19 +638,28 @@
                                                 target="_blank">Programme</a> écrit en <strong>Python</strong> utilisant
                                             le micro framework <strong>Flask</strong>.
                                         </p>
-                            
+
+                                        <br>
+                                        <form id="datetimeform">
+                                            <div>
+                                                <p style="display:inline-block"><label for="ma-date" style="margin-right: 10px; font-size:1em">Date
+                                                        <span style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                                        style="width: 130px;" id="ma-date-moisson" type="text"
+                                                        name="date" value="25/02/2017"></input>
+                                                </p>
+                                                <p style="display:inline-block"><label for="ma-station"
+                                                        style="margin-right: 10px; font-size:1em">Station</label>
+                                                    <select name="station">
+                                                        <option vaule="moisson">Mantes la jolie</option>
+                                                    </select>
+                                                </p>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
 
-                                <!--
-                                <form id="datetimeform">
-                                    <div>
-                                        <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                    style="color:grey">(JJ/MM/AAAA) </span></label><input
-                                                style="width: 130px;" id="ma-date-moisson" type="text" name="date"
-                                                value="25/02/2017"></input></p>
-                                    </div>
-                                </form>
+
+
                                 <br>
                                 <div class="row histo">
                                     <div class="col-xs-1 fond"></div>
@@ -648,7 +675,7 @@
                                 </div>
                                 <br><br>
 
--->
+
 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
@@ -995,8 +1022,8 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     </div>
     <!--/.page-container-->
     <?php include("./includes/footer.php"); ?>
-
     <script src="/sensations/js/jquery-ui.min.js"></script>
+    <script src="/sensations/js/historique-vent.js"></script>
 
     <script>
     $(".cliquable").click(function() {
@@ -1021,8 +1048,6 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
         });
     });
     </script>
-    <script src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/sensations/js/historique-vent.js"></script>
 </body>
 
 </html>
