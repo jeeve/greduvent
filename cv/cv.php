@@ -613,7 +613,7 @@
                                 data-section="realisation-personnelle" style="display:none">
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
-                                    <div class="col-xs-11 col-md-9 fond">
+                                    <div class="col-xs-12 col-md-10 fond">
 
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
@@ -623,6 +623,10 @@
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
+                                        <br>
+                                        <a href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                target="_blank"><img class="img-responsive ombre-image taille-double"
+                                            src="images/visu-gpx.jpg" /></a>
                                         <br>
                                     </div>
                                 </div>
