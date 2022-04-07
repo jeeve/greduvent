@@ -632,10 +632,7 @@
                                     <div class="col-xs-11 col-md-9 fond">
 
                                         <h3><strong>Visualiser l'historique de stations météo</strong></h3>
-                                        <p>
-                                            <a class="external"
-                                                href="http://meteoflask.herokuapp.com/plot/mantes-la-jolie/20220326/"
-                                                target="_blank">Programme</a> écrit en <strong>Python</strong> utilisant
+                                        <p>Programme écrit en <strong>Python</strong> utilisant
                                             le micro framework <strong>Flask</strong>.
                                         </p>
 
@@ -643,7 +640,7 @@
                                         <form id="datetimeform">
                                             <div>
                                                 <p style="display:inline-block"><label for="ma-date"
-                                                        style="margin-right: 10px; font-size:1em">Date
+                                                        style="margin-right: 10px; font-size:1em; font-weight:normal;">Date
                                                         <span style="color:grey">(JJ/MM/AAAA) </span></label><input
                                                         style="width: 130px;" id="ma-date-moisson" type="text"
                                                         name="date" value="25/02/2017"></input>
