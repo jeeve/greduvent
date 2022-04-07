@@ -679,7 +679,7 @@
                                         <div class="bouton-programme cliquable" data-section="programme-meteo">
                                             <input id="div-programme-meteo" type="button" value=" + " />
 
-                                            <p>Programme écrit en <strong>Python</strong> utilisant
+                                            <p>Le programme écrit en <strong>Python</strong> utilisant
                                                 le micro framework <strong>Flask</strong>
                                             </p>
                                         </div>
