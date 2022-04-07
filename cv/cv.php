@@ -677,7 +677,7 @@
                                     <div class="col-xs-11 col-md-9 fond">
 
                                         <p>Programme écrit en <strong>Python</strong> utilisant
-                                            le micro framework <strong>Flask</strong>.
+                                            le micro framework <strong>Flask</strong> :
                                         </p>
 
                                     </div>
