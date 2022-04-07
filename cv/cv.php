@@ -642,17 +642,23 @@
                                         <br>
                                         <form id="datetimeform">
                                             <div>
-                                                <p style="display:inline-block"><label for="ma-date" style="margin-right: 10px; font-size:1em">Date
+                                                <p style="display:inline-block"><label for="ma-date"
+                                                        style="margin-right: 10px; font-size:1em">Date
                                                         <span style="color:grey">(JJ/MM/AAAA) </span></label><input
                                                         style="width: 130px;" id="ma-date-moisson" type="text"
                                                         name="date" value="25/02/2017"></input>
                                                 </p>
+                                                <!--
                                                 <p style="display:inline-block"><label for="ma-station"
                                                         style="margin-right: 10px; font-size:1em">Station</label>
                                                     <select name="station">
                                                         <option value="moisson" selected>Mantes la jolie</option>
+                                                        <option value="ecluzelles">Ecluzelles</option>
+                                                        <option value="grandeparoisse">Grande-Paroisse</option>
+                                                        <option value="foretorient">Lac de la Forêt d'Orient</option>
                                                     </select>
                                                 </p>
+-->
                                             </div>
                                         </form>
                                     </div>
@@ -669,10 +675,7 @@
                                     <div class="col-xs-2 fond"></div>
                                     <div class="col-xs-8 fond" id="historique-rose-moisson"></div>
                                 </div>
-                                <div class="row histo">
-                                    <div class="col-xs-1 fond"></div>
-                                    <div class="col-xs-10 fond" id="historique-temp-moisson"></div>
-                                </div>
+
                                 <br><br>
 
 
@@ -1041,11 +1044,20 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     });
 
     jQuery(document).ready(function() {
-        initHistorique($('select[name="station"] > option:selected').val());
-        getHistoriqueVent($('select[name="station"] > option:selected').val());
+        initHistorique('moisson');
+        getHistoriqueVent('moisson');
         $("#ma-date-moisson").change(function() {
             getHistoriqueVent('moisson');
         });
+        /*
+                jQuery('select[name="station"]').change(function() {
+                    initHistorique($('select[name="station"] > option:selected').val());
+                    getHistoriqueVent($('select[name="station"] > option:selected').val());
+                    $("#ma-date-moisson").change(function() {
+                        getHistoriqueVent('moisson');
+                    });
+                });
+                */
     });
     </script>
 </body>
