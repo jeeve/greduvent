@@ -893,12 +893,44 @@ variable <span style="color: #333333">=</span> variables[<span style="color: #00
                                             doivent
                                             jamais être en infériorité numérique par rapport aux orques.
                                         </p>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
+
+                                        <!-- HTML generated using hilite.me -->
+                                        <div>
+                                            <pre style="margin: 0; line-height: 125%"><span style="color: #0000DD; font-weight: bold">7</span> coups
+Traverse vers () <span style="color: #333333">--------&gt;</span> ([], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;gauche&#39;</span>, [<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;droite&#39;</span>, [<span style="background-color: #fff0f0">&#39;humain&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;gauche&#39;</span>, [<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;droite&#39;</span>, [<span style="background-color: #fff0f0">&#39;orque&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;gauche&#39;</span>, [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;droite&#39;</span>, [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>], [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>])
+Traverse vers (<span style="background-color: #fff0f0">&#39;gauche&#39;</span>, [<span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>]) <span style="color: #333333">--------&gt;</span> ([<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>, <span style="background-color: #fff0f0">&#39;humain&#39;</span>], [<span style="background-color: #fff0f0">&#39;orque&#39;</span>, <span style="background-color: #fff0f0">&#39;orque&#39;</span>])
+</pre>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-12 col-md-9 fond">
                                         <p>Le <a class="external" target="_blank"
                                                 href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a>
                                             écrit en <strong>Python</strong> :
                                         </p>
                                     </div>
                                 </div>
+
+
+
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
