@@ -676,14 +676,19 @@
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond">
 
-                                        <p>Programme écrit en <strong>Python</strong> utilisant
-                                            le micro framework <strong>Flask</strong> :
-                                        </p>
+                                        <div class="bouton-programme cliquable" data-section="programme-meteo">
+                                            <input id="div-programme-meteo" type="button" value=" + " />
+
+                                            <p>Programme écrit en <strong>Python</strong> utilisant
+                                                le micro framework <strong>Flask</strong>
+                                            </p>
+                                        </div>
 
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div id="item-div-programme-meteo" class="row section" data-section="programme-meteo"
+                                    style="display:none">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
                                         <!-- HTML generated using hilite.me -->
@@ -928,16 +933,21 @@ Traverse vers (<span style="background-color: #fff0f0">&#39;gauche&#39;</span>, 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-12 col-md-9 fond">
-                                        <p>Le <a class="external" target="_blank"
-                                                href="https://colab.research.google.com/drive/1KrXzsHiDZ6HedbwkeOuFGYqRRNZ1MzIH?usp=sharing">programme</a>
-                                            écrit en <strong>Python</strong> :
-                                        </p>
+
+                                        <div class="bouton-programme cliquable" data-section="programme-jeujose">
+                                            <input id="div-programme-jeufose" type="button" value=" + " />
+
+                                            <p>Le programme écrit en <strong>Python</strong></p>
+                                        </div>
+
                                     </div>
                                 </div>
 
+                                <div id="item-div-programme-jeujose" class="row section"
+                                    data-section="programme-jeujose" style="display:none">
 
 
-                                <div class="row">
+
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-11 col-md-9 fond-table encadrement-table encadre">
                                         <!-- HTML generated using hilite.me -->
@@ -1064,6 +1074,10 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     <script src="/sensations/js/historique-vent.js"></script>
 
     <script>
+    function goSession() {
+
+    }
+
     $(".cliquable").click(function() {
         var section = $(this).attr("data-section");
         $('.section[data-section="' + section + '"]').slideToggle(
