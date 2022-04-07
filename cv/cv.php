@@ -632,9 +632,6 @@
                                     <div class="col-xs-11 col-md-9 fond">
 
                                         <h3><strong>Visualiser l'historique de stations météo</strong></h3>
-                                        <p>Programme écrit en <strong>Python</strong> utilisant
-                                            le micro framework <strong>Flask</strong>.
-                                        </p>
 
                                         <br>
                                         <form id="datetimeform">
@@ -675,7 +672,16 @@
 
                                 <br><br>
 
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-11 col-md-9 fond">
 
+                                        <p>Programme écrit en <strong>Python</strong> utilisant
+                                            le micro framework <strong>Flask</strong>.
+                                        </p>
+
+                                    </div>
+                                </div>
 
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
