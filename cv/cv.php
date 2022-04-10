@@ -64,8 +64,7 @@
                     </div>
                     <div class="col-md-1 fond"></div>
                     <div class="col-xs-12 col-md-6 fond">
-                        <h2 class="cliquable" data-section="competences"><input style="color:black;"
-                                id="div-competences" type="button" value=" - " />&nbsp;&nbsp;Compétences
+                        <h2>Compétences
                         </h2>
                         <div id="item-div-competences" class="section" data-section="competences">
                             <ul>
@@ -98,8 +97,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
-                        <h2 class="experience cliquable" data-section="experience"><input style="color:black;"
-                                id="div-experience" type="button" value=" - " />&nbsp;&nbsp;Expérience
+                        <h2 class="experience" data-section="experience">Expérience
                             professionnelle
                         </h2>
                         <div id="item-div-experience" class="section" data-section="experience">
@@ -417,8 +415,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="formation"></a>
-                        <h2 class="cliquable" data-section="formation"><input style="color:black;" id="div-formation"
-                                type="button" value=" - " />&nbsp;&nbsp;Formation
+                        <h2 data-section="formation">Formation
                         </h2>
                         <div id="item-div-formation" class="section" data-section="formation">
                             <ul>
@@ -533,8 +530,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="divers"></a>
-                        <h2 class="cliquable" data-section="divers"><input style="color:black;" id="div-divers"
-                                type="button" value=" - " />&nbsp;&nbsp;à propos
+                        <h2 data-section="divers">à propos
                         </h2>
                         <div id="item-div-divers" class="section" data-section="divers">
                             <br>

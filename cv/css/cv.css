@@ -202,6 +202,12 @@ a {
   margin-top: 15px;
 }
 
+h2.cliquable:hover, .cliquable h4:hover, .cliquable h3:hover, .cliquable p:hover {
+  color: darkblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
 
   #bouton-bas-page {
