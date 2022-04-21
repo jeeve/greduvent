@@ -249,6 +249,8 @@
                                             title="Ride en baie de Beaussais - 17 août 2021"></div>
                                     <div class="item"> <img src="images/diapos/onboard-loft.jpg"
                                             alt="Moisson - 26 mars 2022" title="Moisson - 26 mars 2022"></div>
+                                    <div class="item"> <img src="images/diapos/jvj-par-tom77.jpg"
+                                            alt="Forêt d'Orient - 16 avril 2022" title="Forêt d'Orient - 16 avril 2022"></div>
                                 </div>
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#carousel-example-generic" role="button"
