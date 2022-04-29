@@ -1,4 +1,4 @@
-function visuGPX(id, url, visuGpxOptions, Ok) {
+function visuGPX(id, url, visuGpxOptions) {
   const SEUIL_ACCELERATION = 1.0;
   const SEUIL_DECELERATION = -3.5;
   var txy = [];
@@ -1042,10 +1042,10 @@ function visuGPX(id, url, visuGpxOptions, Ok) {
     }
   }
 
-  function afficheTraceVitesse(id, texte) {
+  function afficheTraceVitesse(stat, texte) {
     var xy2 = [];
-    var a = parseInt($("#" + id).attr("data-a"));
-    var b = parseInt($("#" + id).attr("data-b"));
+    var a = parseInt($("#" + id + " ." + stat).attr("data-a"));
+    var b = parseInt($("#" + id + " ." + stat).attr("data-b"));
     for (i = a; i <= b; i++) {
       var coord = [];
       coord.push(txy[i][1], txy[i][2]);
@@ -1116,7 +1116,6 @@ function visuGPX(id, url, visuGpxOptions, Ok) {
       document.querySelector("#" + id + " " + ".chart")
     );
     chart.draw(data, options);
-    Ok();
     registerEvtChart();
     createLineBornesSVG(chart, dmax * 0.1, dmax - dmax * 0.1);
     CreeLigneSeuil(chart, $("#" + id + " " + ".seuil").val());

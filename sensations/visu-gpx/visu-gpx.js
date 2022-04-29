@@ -1042,10 +1042,10 @@ function visuGPX(id, url, visuGpxOptions) {
     }
   }
 
-  function afficheTraceVitesse(id, texte) {
+  function afficheTraceVitesse(stat, texte) {
     var xy2 = [];
-    var a = parseInt($("#" + id).attr("data-a"));
-    var b = parseInt($("#" + id).attr("data-b"));
+    var a = parseInt($("#" + id + " ." + stat).attr("data-a"));
+    var b = parseInt($("#" + id + " ." + stat).attr("data-b"));
     for (i = a; i <= b; i++) {
       var coord = [];
       coord.push(txy[i][1], txy[i][2]);
