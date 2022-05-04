@@ -581,8 +581,6 @@
                                     </h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Gimp, Paint.net</strong></h3>
-                                </li>
                                 <li>
                                     <h3><strong>Blender</strong>, création 3D</h3>
                                 </li>
