@@ -573,14 +573,12 @@
                             <p>A titre personnel j'utilise notamment les logiciels</p>
                             <ul>
                                 <li>
-                                    <h3><strong>Visual Studio Code</strong> avec Python / Flask, Php, Javascript, Html,
-                                        Css, Xml, Json...</h3>
+                                    <h3><strong>Visual Studio Code</strong></h3>
                                 </li>
                                 <li>
                                     <h3>Racket, programmation fonctionnelle basée sur langage <strong>Scheme</strong>
                                     </h3>
                                 </li>
-                                <li>
                                 <li>
                                     <h3><strong>Blender</strong>, création 3D</h3>
                                 </li>
@@ -623,7 +621,7 @@
                                         <br>
                                     </div>
                                 </div>
- 
+
                                 <div class="row">
                                     <div class="col-md-1 fond"></div>
                                     <div class="col-xs-12 col-md-9 fond">
