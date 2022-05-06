@@ -32,3 +32,15 @@
 	font-size: 100%;
 	}	
 }
+
+#openai label {
+	display: block;
+}
+
+#openai button {
+	float: right;
+}
+
+#openai #reponse-openai {
+	text-align: center;
+}

@@ -21,16 +21,24 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 fond">
                     <h1>?!?</h1>
 
+                    <br><br>
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 fond"></div>
+                        <div class="col-xs-10 col-sm-10 fond">
 
-                    <h3>Jeeve AI</h3>
-                    <label>Entrez un énoncé</label>
-                    <textarea id="question-openai" rows="10"
-                        name="animal">Quel est le président de la république française ?</textarea>
-                    <button id="bouton-openai" type="button">
-                        Demander à OpenAI
-                    </button>
-                    <div id="reponse-openai"></div>
+                            <div id="openai">
+                                <p>Entrez un énoncé</p>
+                                <textarea id="question-openai" rows="5" cols="50"
+                                    name="animal">Si pour gagner à un loto on a une chance sur 1 million, si l'on gagne, la prochaine fois que l'on joue aura-t-on la même probabilité de gagner ?</textarea>
+                                <button id="bouton-openai" type="button">
+                                    Demander à OpenAI
+                                </button>
+                                <p id="reponse-openai"></p>
+                                <br>
+                            </div>
 
+                        </div>
+                    </div>
 
                     <br><br>
                     <div class="row">
@@ -458,29 +466,29 @@
     <script type="text/javascript" src="js/questions.js"></script>
     <script>
     $('#bouton-openai').click(function() {
-/*
-        var myHeaders = new Headers();
+        /*
+                var myHeaders = new Headers();
 
-        var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'no-cors',
-               cache: 'default' };
+                var myInit = { method: 'GET',
+                       headers: myHeaders,
+                       mode: 'no-cors',
+                       cache: 'default' };
 
-        fetch('https://nodejv.herokuapp.com/question?q=' + $("#question-openai").text(), myInit).then(function(response) {
-            return response.text().then(function(t) {
-                alert(t);
-            })
-        })
-        */
+                fetch('https://nodejv.herokuapp.com/question?q=' + $("#question-openai").text(), myInit).then(function(response) {
+                    return response.text().then(function(t) {
+                        alert(t);
+                    })
+                })
+                */
 
 
         $.ajax({
-			url: 'https://nodejv.herokuapp.com/question?q=' + $("#question-openai").text(),
-			type: 'GET',
-			crossDomain: true,
-			dataType: 'text'
-		}).then(function(data) {
-            $('#reponse-openai').text(data);
+            url: 'https://nodejv.herokuapp.com/question?q=' + $("#question-openai").val(),
+            type: 'GET',
+            crossDomain: true,
+            dataType: 'text'
+        }).then(function(data) {
+            $('#reponse-openai').text('@OpenAI : ' + data);
         });
     });
     </script>
