@@ -29,7 +29,7 @@
                             <div id="openai">
                                 <p>Entrez un énoncé</p>
                                 <textarea id="question-openai" rows="5" cols="50"
-                                    name="animal">Si pour gagner à un loto on a une chance sur 1 million, si l'on gagne, la prochaine fois que l'on joue aura-t-on la même probabilité de gagner ?</textarea>
+                                    name="animal">Pourquoi un miroir inverse la gauche et la droite et pas le haut et le bas ?</textarea>
                                 <button id="bouton-openai" type="button">
                                     Demander à OpenAI
                                 </button>
@@ -466,6 +466,7 @@
     <script type="text/javascript" src="js/questions.js"></script>
     <script>
     $('#bouton-openai').click(function() {
+        $('#reponse-openai').text('');
         /*
                 var myHeaders = new Headers();
 
