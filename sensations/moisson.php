@@ -39,7 +39,6 @@
     }
 
     .loader {
-        widht: 50px;
         height: 50px;
         position: absolute;
         left: 50%;

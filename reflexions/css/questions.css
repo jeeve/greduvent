@@ -39,10 +39,21 @@
 
 #openai button {
 	margin-left: 10px;
-	float: right;
+	/*float: right;*/
 }
 
 #openai #reponse-openai {
 	text-align: left;
 	display: inline-block;
+}
+
+#openai #entree {
+	display: flex;
+	align-items: flex-start;
+}
+
+.loader {
+	height: 20px;
+	margin-left: 10px;
+	visibility: hidden;
 }

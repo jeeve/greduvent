@@ -28,11 +28,14 @@
 
                             <div id="openai">
                                 <p>Entrez un énoncé</p>
-                                <textarea id="question-openai" rows="5"
-                                    cols="50">Pourquoi un miroir inverse la gauche et la droite et pas le haut et le bas ?</textarea>
-                                <button id="bouton-openai" type="button">
-                                    Demander à OpenAI
-                                </button>
+                                <div id="entree">
+                                    <textarea id="question-openai" rows="5"
+                                        cols="45">Pourquoi un miroir inverse la gauche et la droite et pas le haut et le bas ?</textarea>
+                                    <button id="bouton-openai" type="button">
+                                        Demander à OpenAI <img src="images/loading.gif" class="loader">
+                                    </button>
+                                </div>
+
                                 <p id="reponse-openai"></p>
                                 <br>
                             </div>
@@ -466,6 +469,7 @@
     <script type="text/javascript" src="js/questions.js"></script>
     <script>
     $('#bouton-openai').click(function() {
+        $('#openai .loader').css('visibility', 'visible');
         $('#reponse-openai').text('');
         /*
                 var myHeaders = new Headers();
@@ -489,6 +493,7 @@
             crossDomain: true,
             dataType: 'text'
         }).then(function(data) {
+            $('#openai .loader').css('visibility', 'hidden');
             $('#reponse-openai').text('@OpenAI : ' + data);
         });
     });
