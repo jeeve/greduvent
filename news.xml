@@ -7,9 +7,17 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>OpenAI</title>
+            <link>https://greduvent.herokuapp.com/reflexions/reflexions.php</link>
+            <guid isPermaLink="false">openai</guid>
+            <description>Intégration d'appel à l'API OpenAI.</description>
+            <pubDate>Sat, 7 May 2022 21:44:00 GMT</pubDate>
+		</item>
+
+		<item>
             <title>Exploitation</title>
             <link>https://greduvent.herokuapp.com/impressions/impressions.php#exploitation</link>
-            <guid isPermaLink="false">infection</guid>
+            <guid isPermaLink="false">exploitation</guid>
             <description>Interrogation sur une menace à venir.</description>
             <pubDate>Sun, 3 Apr 2022 19:04:00 GMT</pubDate>
 		</item>

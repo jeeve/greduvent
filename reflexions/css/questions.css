@@ -38,6 +38,7 @@
 }
 
 #openai button {
+	margin-left: 10px;
 	float: right;
 }
 
