@@ -23,13 +23,13 @@
 
                     <br><br>
                     <div class="row">
-                        <div class="col-xs-1 col-sm-1 fond"></div>
-                        <div class="col-xs-10 col-sm-10 fond">
+                        <div class="col-xs-1 col-sm-2 fond"></div>
+                        <div class="col-xs-10 col-sm-8 fond">
 
                             <div id="openai">
                                 <p>Entrez un énoncé</p>
-                                <textarea id="question-openai" rows="5" cols="50"
-                                    name="animal">Pourquoi un miroir inverse la gauche et la droite et pas le haut et le bas ?</textarea>
+                                <textarea id="question-openai" rows="5"
+                                    cols="50">Pourquoi un miroir inverse la gauche et la droite et pas le haut et le bas ?</textarea>
                                 <button id="bouton-openai" type="button">
                                     Demander à OpenAI
                                 </button>
