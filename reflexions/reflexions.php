@@ -29,8 +29,7 @@
                             <div id="openai">
                                 <p>Entrez un énoncé</p>
                                 <div id="entree">
-                                    <textarea id="question-openai" rows="5"
-                                        cols="45">Pourquoi un miroir inverse la gauche et la droite et pas le haut et le bas ?</textarea>
+                                    <textarea id="question-openai" rows="5" cols="45"></textarea>
                                     <button id="bouton-openai" type="button">
                                         Demander à OpenAI <img src="images/loading.gif" class="loader">
                                     </button>
