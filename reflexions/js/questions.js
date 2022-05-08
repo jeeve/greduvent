@@ -28,6 +28,12 @@ function getRandomInt(max) {
 }
 
 function getQuestion() {
+
+	var paramQuestion = decodeURIComponent($.urlParam('question'));
+	if (paramQuestion != "null") {
+		$('#question-openai').val(paramQuestion);
+	}
+
 		$.ajax({
 			url: "https://sheets.googleapis.com/v4/spreadsheets/1M2Fe51WZl598zw2sx3iQC0UrHlIczLKJ6Yi15yPoTrs/values/Formresponses1?key=" + sheetapi, // "https://spreadsheets.google.com/feeds/list/1M2Fe51WZl598zw2sx3iQC0UrHlIczLKJ6Yi15yPoTrs/default/public/values?alt=json",
 			type: 'GET',
@@ -38,7 +44,6 @@ function getQuestion() {
 				var nom, question;
 				var node = document.getElementById("ligne-question");
 				var i;
-				var paramQuestion = decodeURIComponent($.urlParam('question'));
 				if (paramQuestion == "null") {
 					i = getRandomInt(data.values.length-1) + 1;
 				}
@@ -61,13 +66,15 @@ function getQuestion() {
 				}
 				question = ligne[2];
 				var paramPermalien = '';
-				if (paramQuestion == "null") {
+			//	if (paramQuestion == "null") {
 					paramPermalien = '?question=' + encodeURIComponent(question);
+			//	}
+
+				if (paramQuestion == "null") {
+					$('#question-openai').val(question);
 				}
 
-				$('#question-openai').val(question);
-
-				node.innerHTML = '<p><u>La question du jour de ' + nom + '</u> : <b>' + question + '</b><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSfcCrNawvdiorWRtXlkL16VHePNTI47YPe8UmTwGDMVWOoQcQ/viewform?usp=pp_url&entry.1388707615=' + question + '&entry.664735575&entry.115939093" target="_blank"><br>Votre réponse <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdm50yNnhBLyAku2Z2QuQ6UY7OU2QA6JWtAk9lRhMI3NmUV0A/viewform?usp=sf_link" target="_blank">Posez une question <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>, <a href="' + window.location + paramPermalien + '">#Permalien</a></p>';
+				node.innerHTML = '<p><u>La question du jour de ' + nom + '</u> : <b>' + question + '</b><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSfcCrNawvdiorWRtXlkL16VHePNTI47YPe8UmTwGDMVWOoQcQ/viewform?usp=pp_url&entry.1388707615=' + question + '&entry.664735575&entry.115939093" target="_blank"><br>Votre réponse <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdm50yNnhBLyAku2Z2QuQ6UY7OU2QA6JWtAk9lRhMI3NmUV0A/viewform?usp=sf_link" target="_blank">Posez une question <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>, <a href="' + window.location.pathname + paramPermalien + '">#Permalien</a></p>';
 				getReponses(question);
 				getAutresReponses(question, data);
 			});
