@@ -13,6 +13,19 @@
     }
 
     .row {}
+
+    .loader-container {
+        position: relative;
+        height: 50px;
+    }
+
+    .loader {
+        widht: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     </style>
 </head>
 
@@ -202,6 +215,15 @@
                         </div>
                     </div>
 
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-10 fond">
+                            <div id="regression" class="fond"></div>
+                            <p class="legende">Régression linéaire par équation normale</p> 
+                        </div>
+                    </div>
 
                     <br>
                     <br>
@@ -219,7 +241,8 @@
                                             title="Moisson Lavacourt - 12 juillet 2020"></div>
                                     <div class="item"> <img src="images/diapos/haut.jpg"
                                             alt="Vaires sur Marne - 14 mars 2021"
-                                            title="Vaires sur Marne - 14 mars 2021"></div>
+                                            title="Vaires sur Marne - 14 mars 2021">
+                                    </div>
                                     <div class="item"> <img src="images/diapos/david-foil.jpg"
                                             alt="Moisson Lavacourt - 4 juillet 2020 - photo Kumi H."
                                             title="Moisson Lavacourt - 4 juillet 2020 - photo Kumi H."></div>
@@ -528,8 +551,17 @@
         drawChart2();
     });
 
+    function imageChargee(elt) {
+        jQuery(elt).parent().prev().css("display", "none");
+    }
+
     $(document).ready(function($) {
-        getInfoSessions('');
+
+        $("#regression").html(
+            '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/sessions/">' +
+            '<img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/sessions/" class="img-responsive ombre-image histo-image"></a>'
+        );
+
     });
 
     // Reminder: you need to put https://www.google.com/jsapi in the head of your document or as an external resource on codepen //	
