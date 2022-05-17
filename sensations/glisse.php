@@ -12,15 +12,14 @@
         min-height: 400px;
     }
 
-    .row {}
-
     .loader-container {
         position: relative;
-        height: 50px;
+        display: flex;
+        flex-direction: column; /* direction d'affichage verticale */
+        justify-content: center; /* alignement vertical */
     }
 
     .loader {
-        widht: 50px;
         height: 50px;
         position: absolute;
         left: 50%;
@@ -553,14 +552,17 @@
 
     function imageChargee(elt) {
         jQuery(elt).parent().prev().css("display", "none");
+        jQuery(elt).parent().prev().prev().css("display", "none");
     }
 
     $(document).ready(function($) {
 
         $("#regression").html(
-            '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/sessions/">' +
+            '<div class="loader-container"><img src="images/image-vierge.jpg" class="img-responsive ombre-image"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/sessions/">' +
             '<img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/sessions/" class="img-responsive ombre-image histo-image"></a>'
         );
+
+        getInfoSessions('');
 
     });
 
