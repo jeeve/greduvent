@@ -558,8 +558,8 @@
     $(document).ready(function($) {
 
         $("#regression").html(
-            '<div class="loader-container"><img src="images/image-vierge.jpg" class="img-responsive ombre-image"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/sessions/ia/regressionlineaire/">' +
-            '<img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/sessions/" class="img-responsive ombre-image histo-image"></a>'
+            '<div class="loader-container"><img src="images/image-vierge.jpg" class="img-responsive ombre-image"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/sessions/ia/regressionlineaire">' +
+            '<img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/sessions/ia/regressionlineaire" class="img-responsive ombre-image histo-image"></a>'
         );
 
         getInfoSessions('');
