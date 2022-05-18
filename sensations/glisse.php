@@ -220,7 +220,7 @@
                         <div class="col-xs-12 col-sm-1 fond"></div>
                         <div class="col-xs-12 col-sm-10 fond">
                             <div id="regression" class="fond"></div>
-                            <p class="legende">Régression linéaire par équation normale</p> 
+                            <p class="legende"><a target="_bank" href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing">Régression linéaire par équation normale</a></p> 
                         </div>
                     </div>
 
