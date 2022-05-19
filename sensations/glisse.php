@@ -15,8 +15,10 @@
     .loader-container {
         position: relative;
         display: flex;
-        flex-direction: column; /* direction d'affichage verticale */
-        justify-content: center; /* alignement vertical */
+        flex-direction: column;
+        /* direction d'affichage verticale */
+        justify-content: center;
+        /* alignement vertical */
     }
 
     .loader {
@@ -213,15 +215,21 @@
                                     target="_blank">Vitesses windfoil</a></p>
                         </div>
                     </div>
-
                     <br>
                     <br>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-1 fond"></div>
-                        <div class="col-xs-12 col-sm-10 fond">
-                            <div id="regression" class="fond"></div>
-                            <p class="legende"><a target="_bank" href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing">Régression linéaire par équation normale</a></p> 
-                        </div>
+                    <div align="center">
+                        <table border="0" width="270">
+                            <tbody>
+                                <tr>
+                                    <td width="258">
+                                        <p align="center">
+                                            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                                        <h2 align="center"><a href="https://outilsflask.herokuapp.com/sessions/ia">Analyse de sessions</a></h2>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <br>
@@ -550,17 +558,7 @@
         drawChart2();
     });
 
-    function imageChargee(elt) {
-        jQuery(elt).parent().prev().css("display", "none");
-        jQuery(elt).parent().prev().prev().css("display", "none");
-    }
-
     $(document).ready(function($) {
-
-        $("#regression").html(
-            '<div class="loader-container"><img src="images/image-vierge.jpg" class="img-responsive ombre-image"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/sessions/ia/regressionlineaire">' +
-            '<img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/sessions/ia/regressionlineaire" class="img-responsive ombre-image histo-image"></a>'
-        );
 
         getInfoSessions('');
 
