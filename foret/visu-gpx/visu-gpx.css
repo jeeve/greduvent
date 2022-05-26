@@ -127,8 +127,11 @@ td {
   padding-right: 0;
 }
 
-.fenetre-largeur {
+.div-fenetre-largeur {
   display: inline;
+}
+
+.fenetre-largeur {
   width: 50px;
 }
 
