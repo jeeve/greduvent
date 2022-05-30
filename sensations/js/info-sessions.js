@@ -263,7 +263,7 @@ function getInfoSessions(spot) {
               html +
               '</td><td><a href="' +
               lienMeteo +
-              '" target="_blank">Conditions</a></td><td>Vent de ' +
+              '" >Conditions</a></td><td>Vent de ' +
               vent +
               " " +
               ventMini +
