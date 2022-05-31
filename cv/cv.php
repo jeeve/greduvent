@@ -580,9 +580,6 @@
                                     </h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Blender</strong>, création 3D</h3>
-                                </li>
-                                <li>
                                     <h3><strong>Davinci Resolve</strong>, montage vidéo</h3>
                                 </li>
                                 <li>
