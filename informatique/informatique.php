@@ -52,7 +52,7 @@
                         <div class="col-xs-12 col-sm-8 fond">
                             <p align="center">
                                 <a href="images/metapong.gif" target="blank">
-                                    <img alt="Scroll Screens" title="Scroll Screens" src="images/metapong.gif"
+                                    <img alt="Metapong" title="Metapong" src="images/metapong.gif"
                                         class="img-responsive ombre-image" />
                                 </a>
                             </p>
