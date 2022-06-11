@@ -7,6 +7,14 @@
         <description>Pour des balades en textes et en images les soirs d'hiver et les autres aussi.</description>
 
 		<item>
+            <title>Metapong</title>
+            <link>https://greduvent.herokuapp.com/informatique/informatique.php#metapong</link>
+            <guid isPermaLink="false">metapong</guid>
+            <description>Un petit jeu Pong multijoueurs tournant sur un serveur Nodejs. L'espace de jeu s'agrandit au fur et à mesure que les utilisateurs se connectent.</description>
+            <pubDate>Thu, 9 Jun 2022 20:44:00 GMT</pubDate>
+		</item>
+
+		<item>
             <title>OpenAI</title>
             <link>https://greduvent.herokuapp.com/reflexions/reflexions.php</link>
             <guid isPermaLink="false">openai</guid>

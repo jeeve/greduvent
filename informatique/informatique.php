@@ -22,6 +22,7 @@
                     <br>
                     <ul class="sommaire">
                         <!--						<li><a href="#meteo-temps-reel">Service Web de météo temps réel</a></li> -->
+                        <li><a href="#metapong">Metapong</a></li>
                         <li><a href="#floutage-visages">Floutage de visages</a></li>
                         <li><a href="#jeudejose">Le jeu de José</a></li>
                         <li><a href="#scrollscreens">Scroll Screens</a></li>
@@ -39,6 +40,34 @@
 
 <hr>
 -->
+
+<a name="metapong"></a>
+                    <h2>Metapong</h2>
+                    <p>Un petit jeu Pong multijoueurs tournant sur un serveur Nodejs. L'espace de jeu s'agrandit au fur et à mesure que les utilisateurs se connectent.<br>
+                    </p>
+                    <br>
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-2 fond"></div>
+                        <div class="col-xs-12 col-sm-8 fond">
+                            <p align="center">
+                                <a href="images/metapong.gif" target="blank">
+                                    <img alt="Scroll Screens" title="Scroll Screens" src="images/metapong.gif"
+                                        class="img-responsive ombre-image" />
+                                </a>
+                            </p>
+                            <p class="legende"><a href="https://github.com/jeeve/metapong" target="_blank">Télécharger Metapong</a>
+                            </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p align="right"><em>
+                            <font size="2">jeudi 9 juin 2022</font>
+                        </em></p>
+
+                    <hr>
+
 
                     <a name="floutage-visages"></a>
                     <h2>Floutage de visages</h2>
