@@ -788,12 +788,11 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                     <div class="col-xs-12 col-md-10 fond">
 
 
-
-
-
                                         <h3><strong>Metapong</strong></h3>
                                         <p>
-                                            Un <a target="_blank" href="/informatique/informatique.php#metapong">programme</a><strong> Javascript</strong> multijoueurs tournant sur un
+                                            Un <a target="_blank"
+                                                href="/informatique/informatique.php#metapong">programme</a><strong>
+                                                Javascript</strong> multijoueurs tournant sur un
                                             serveur <strong>Nodejs</strong>. L'espace de jeu s'agrandit au fur et à
                                             mesure que les utilisateurs se connectent.
                                         </p>
@@ -802,6 +801,21 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                             <a href="/informatique/informatique.php#metapong" target="blank">
                                                 <img alt="Metapong" title="Metapong"
                                                     src="/informatique/images/metapong.gif"
+                                                    class="img-responsive ombre-image" />
+                                            </a>
+                                        </p>
+
+
+                                        <br>
+                                        <h3><strong>Analyse de sessions en windfoil</strong></h3>
+                                        <p>
+                                        <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">Implémentation</a> en <strong>Python</strong> sous <strong>Flask</strong> d'un perceptron multicouche avec <strong>Tensorflow</strong>. Le programme en <a href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing" target="_blank">Notebook Collabs</a>
+                                        </p>
+                                        <br>
+                                        <p align="center">
+                                            <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">
+                                                <img alt="Metapong" title="Metapong"
+                                                    src="images/perceptron.jpg"
                                                     class="img-responsive ombre-image" />
                                             </a>
                                         </p>
