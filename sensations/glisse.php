@@ -224,7 +224,9 @@
                                     <td width="258">
                                         <p align="center">
                                             <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                        <h2 align="center"><a href="https://outilsflask.herokuapp.com/sessions/ia">Analyse de sessions</a></h2>
+                                        <h2 align="center"><a
+                                                href="https://outilsflask.herokuapp.com/sessions/ia">Analyse de
+                                                sessions</a></h2>
                                         </p>
                                     </td>
                                 </tr>
@@ -284,6 +286,9 @@
                                     </div>
                                     <div class="item"> <img src="images/diapos/plage-jablines.jpg"
                                             alt="Jablines - 30 avril 2022" title="Jablines - 30 avril 2022">
+                                    </div>
+                                    <div class="item"> <img src="images/diapos/jvjgp-par-oliv91.jpg"
+                                            alt="Grande-Paroisse - 5 juin 2022 - photo Olive91" title="Grande-Paroisse - 5 juin 2022 - photo Olive91">
                                     </div>
                                 </div>
                                 <!-- Controls -->
