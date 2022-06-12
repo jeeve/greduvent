@@ -809,12 +809,12 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                         <br>
                                         <h3><strong>Analyse de sessions en windfoil</strong></h3>
                                         <p>
-                                        <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">Implémentation</a> en <strong>Python</strong> sous <strong>Flask</strong> d'un perceptron multicouche avec <strong>Tensorflow</strong>. Le programme en <a href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing" target="_blank">Notebook Collabs</a>
+                                        <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">Implémentation</a> en <strong>Python</strong> sous <strong>Flask</strong> d'un perceptron multicouche avec <strong>Tensorflow</strong>. <a href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing" target="_blank">Notebook Colab</a>
                                         </p>
                                         <br>
                                         <p align="center">
                                             <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">
-                                                <img alt="Metapong" title="Metapong"
+                                                <img alt="Analyse de sessions" title="Analyse de sessions"
                                                     src="images/perceptron.jpg"
                                                     class="img-responsive ombre-image" />
                                             </a>
