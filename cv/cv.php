@@ -782,6 +782,34 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                     </div>
                                 </div>
 
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-12 col-md-10 fond">
+
+
+
+
+
+                                        <h3><strong>Metapong</strong></h3>
+                                        <p>
+                                            Un <a target="_blank" href="/informatique/informatique.php#metapong">programme</a><strong> Javascript</strong> multijoueurs tournant sur un
+                                            serveur <strong>Nodejs</strong>. L'espace de jeu s'agrandit au fur et à
+                                            mesure que les utilisateurs se connectent.
+                                        </p>
+                                        <br>
+                                        <p align="center">
+                                            <a href="/informatique/informatique.php#metapong" target="blank">
+                                                <img alt="Metapong" title="Metapong"
+                                                    src="/informatique/images/metapong.gif"
+                                                    class="img-responsive ombre-image" />
+                                            </a>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+
                             </div>
 
 
