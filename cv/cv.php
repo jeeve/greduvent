@@ -809,7 +809,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                     </div>
                                 </div>
 
-
+                                <br>
                             </div>
 
 
