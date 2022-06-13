@@ -84,7 +84,7 @@
                                     <h3>Windev, Webdev</h3>
                                 </li>
                                 <li>
-                                    <h3>Langages : c#, Javascript, Python, Php, Delphi, Sql...</h3>
+                                    <h3>Langages : c#, Javascript, Python, Php, Delphi...</h3>
                                 </li>
                                 <br>
                                 <li>
