@@ -50,7 +50,7 @@
 <hr> 
   
 <p><a name="dynablaster"></a><strong>Dynablaster</strong></p>
-<p align="left">Un autre petit jeu largement inspiré du fameux <em>Dynablaster</em>. 
+<p align="left">Un autre <a href="http://planet.racket-lang.org/package-source/jeeve/dynablaster.plt/1/14/manual.html" target="_blank">petit jeu</a> largement inspiré du fameux <em>Dynablaster</em>. 
 Ecrit en <a target="_blank" href="http://racket-lang.org/">Racket</a> (dialecte 
 de Scheme), vous pouvez
 			<a target="_blank" href="http://planet.racket-lang.org/display.ss?package=dynablaster.plt&owner=jeeve">modifier</a> le comportement du joueur &quot;robot&quot; dans l&#39;éditeur
