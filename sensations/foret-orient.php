@@ -59,95 +59,121 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 fond">
 
                     <h1>La Forêt d'Orient</h1>
-                    <div class="row">
 
-                        <div class="col-xs-12 col-sm-8 fond">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 fond">
                             <br>
-                            <p style="margin-bottom: 15px;"><a
-                                    href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine"
-                                    target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> % - <a
-                                    id="lien-webcam-viewsurf-foret-orient"
-                                    href="https://pv.viewsurf.com/1084/Lac-d-Orient" target="_blank">Webcam</a></p>
-                            <br>
+                            <div class="visible-xs">
+                                <p><a href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine"
+                                        target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span>
+                                    %</p>
+                            </div>
+
+                            <div class="embed-responsive embed-responsive-16by9 ombre-image">
+                                <div>
+
+                                    <iframe src="https://pv.viewsurf.com/1084/Lac-d-Orient?i=NDkzMjp1bmRlZmluZWQ">
+                                    </iframe>
+                                    <div id="webcam" class="hidden-xs">
+                                        <p><a
+                                                href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine"
+                                                target="_blank">Niveau d'eau</a> : <span
+                                                class="niveau-foret-orient"></span>
+                                            %</p>
+                                    </div>
+                                    <div id="meteo-tems-reel" class="hidden-xs">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <p>Vitesse vent </p>
+                                                </td>
+                                                <td>
+                                                    <p id="vitesse-vent" class="vitesse-vent"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Orientation </p>
+                                                </td>
+                                                <td>
+                                                    <p id="orientation-vent" class="orientation-vent"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Air </p>
+                                                </td>
+                                                <td>
+                                                    <p id="temperature-air" class="temperature-air"></p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan=2>
+                                                    <p style="font-size: 10px;">Données temps réel <em><a
+                                                                id="nom-sation" class="nom-sation"
+                                                                href="https://openweathermap.org/city/2992671"
+                                                                target="_blank">Montereau-Fault-Yonne</a></em></p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="visible-xs"><br></div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
-                                <iframe src="meteo-temps-reel.php?station=lusigny-sur-barse&credit=0"></iframe>
+
+
+                        <div class="visible-xs">
+                            <div class="col-xs-1"></div>
+
+                            <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>Vitesse vent </p>
+                                        </td>
+                                        <td>
+                                            <p id="vitesse-vent" class="vitesse-vent"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Orientation </p>
+                                        </td>
+                                        <td>
+                                            <p id="orientation-vent" class="orientation-vent"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Air </p>
+                                        </td>
+                                        <td>
+                                            <p id="temperature-air" class="temperature-air"></p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan=2>
+                                            <p style="font-size: 10px;">Données temps réel <em><a id="nom-sation"
+                                                        class="nom-sation"
+                                                        href="https://openweathermap.org/city/2992671"
+                                                        target="_blank">Montereau-Fault-Yonne</a></em></p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
 
                         </div>
+
                     </div>
 
 
 
 
-                    <!--	
-  <div class="col-xs-12 col-sm-12 fond">
-    <br>
-	<div class="visible-xs">
-		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
-	</div>
-	
-  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-    <div>
-	<video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto" loop="" muted="muted" playsinline="playsinline" autoplay="">
-    </video>
-	<div id="webcam" class="hidden-xs">
-		<p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon' target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue orientée vers Lyon</p>  
-	</div>
-					  <div id="meteo-tems-reel" class="hidden-xs">
-				  <table>
-					<tr>
-						<td><p>Vitesse vent </p></td><td><p id="vitesse-vent" class="vitesse-vent"></p></td>
-					</tr>
-					<tr>
-						<td><p>Orientation </p></td><td><p id="orientation-vent" class="orientation-vent"></p></td>
-					</tr>				
-					<tr>
-						<td><p>Air </p></td><td><p id="temperature-air" class="temperature-air"></p></td>
-					</tr>
-					
-					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2992671" target="_blank">Montereau-Fault-Yonne</a></em></p></td>
-					</tr>						
-				</table>
-				</div>
-  </div>
-</div>  
-  
-  <div class="visible-xs"><br></div>
-  </div> 
-  
-  
-  <div class="visible-xs">
-   <div class="col-xs-1"></div>
-
-				  <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
-				  <table>
-					<tr>
-						<td><p>Vitesse vent </p></td><td><p id="vitesse-vent" class="vitesse-vent"></p></td>
-					</tr>
-					<tr>
-						<td><p>Orientation </p></td><td><p id="orientation-vent" class="orientation-vent"></p></td>
-					</tr>				
-					<tr>
-						<td><p>Air </p></td><td><p id="temperature-air" class="temperature-air"></p></td>
-					</tr>
-					
-					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2992671" target="_blank">Montereau-Fault-Yonne</a></em></p></td>
-					</tr>						
-				</table>
-				</div>
-											
-				</div>	
-
-</div>				
-
--->
                     <br><br>
-
-
                     <div class="row">
                         <!-- <div class="col-xs-12 col-sm-2"></div> -->
                         <div class="col-xs-12 col-sm-6 fond">
@@ -171,7 +197,8 @@
                             </div>
                             <p class="legende">Le spot sur <a
                                     href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=276"
-                                    target="_blank">My wind session</a></p>
+                                    target="_blank">My
+                                    wind session</a></p>
                         </div>
 
                     </div>
@@ -208,7 +235,8 @@
                                         ];
                                         var script = document.createElement("script");
                                         var tag = document.getElementsByTagName("script")[0];
-                                        script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join("&"));
+                                        script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join(
+                                            "&"));
                                         tag.parentNode.insertBefore(script, tag);
                                     };
                                     window.addEventListener ? window.addEventListener("load", loader, false) :
@@ -252,7 +280,8 @@
                                         ];
                                         var script = document.createElement("script");
                                         var tag = document.getElementsByTagName("script")[0];
-                                        script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join("&"));
+                                        script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join(
+                                            "&"));
                                         tag.parentNode.insertBefore(script, tag);
                                     };
                                     window.addEventListener ? window.addEventListener("load", loader, false) :
@@ -289,8 +318,9 @@
 
                         <div>
                             <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                        style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;"
-                                    id="ma-date-foretorient" type="text" name="date" value="25/02/2017"></input></p>
+                                        style="color:grey">(JJ/MM/AAAA)
+                                    </span></label><input style="width: 130px;" id="ma-date-foretorient" type="text"
+                                    name="date" value="25/02/2017"></input></p>
                         </div>
                         <!-- 
  					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>
@@ -304,7 +334,7 @@
                     </form>
                     <br>
 
-					<div class="row histo">
+                    <div class="row histo">
                         <div class="col-xs-2 fond"></div>
                         <div class="col-xs-8 fond" id="historique-niveau-foretorient"></div>
                     </div>
@@ -316,7 +346,7 @@
                         <div class="col-xs-2 fond"></div>
                         <div class="col-xs-8 fond" id="historique-rose-foretorient"></div>
                     </div>
-					<div class="row histo">
+                    <div class="row histo">
                         <div class="col-xs-1 fond"></div>
                         <div class="col-xs-10 fond" id="historique-temp-foretorient"></div>
                     </div>
@@ -333,7 +363,8 @@
                         <div class="row">
                             <div class="col-xs-7">
                                 <p><a href="sensations.php">sensations</a> - <a href="windsurf-kitesurf.php">windsurf /
-                                        kitesurf</a> - <a id="page-precedente" href="spots-ile-de-france.php">les spots
+                                        kitesurf</a> - <a id="page-precedente" href="spots-ile-de-france.php">les
+                                        spots
                                         d'Ile-de-France</a></p>
                             </div>
                             <div class="col-xs-5">
@@ -379,7 +410,7 @@
             lat1 + '!2d' + lon1 + '!4m5!';
         jQuery('#map-foret-orient').attr('src', itineraireSrc +
             '1s0x47ec2375d1e1f51d%3A0x40a5fb99a3f4060!2s10140%20Mesnil-Saint-P%C3%A8re!3m2!1d48.248976899999995!2d4.333515!5e0!3m2!1sfr!2sfr!4v1614520308696'
-            );
+        );
     }
 
 
