@@ -811,8 +811,9 @@
                                         <video class="video-jablines" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
                                         <div class="webcam-texte">
-                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
-                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris</p>
+                                            <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
+                                                    target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris
+                                            </p>
                                         </div>
 
                                     </div>
@@ -944,8 +945,9 @@
                                         <video class="video-jablines" class="vjs-tech" tabindex="-1" preload="auto"
                                             loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
                                         <div class="webcam-texte">
-                                        <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
-                                                target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris</p>
+                                            <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a4/343/ile-de-france/bailly-romainvilliers/reims-vers-paris'
+                                                    target="_blank">Bailly-Romainvilliers</a> sur A4, direction Paris
+                                            </p>
                                         </div>
 
                                     </div>
@@ -1192,8 +1194,9 @@
                             <div class="col-sm-8">
 
                                 <p><input type="button" data-toggle="collapse" data-target="#item-vue-foretorient"
-                                        value="Satellite" class="btn-releve" />
-                                    <!-- - <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient" value="Webcam" class="btn-releve" />-->
+                                        value="Satellite" class="btn-releve" /> -
+                                    <input type="button" data-toggle="collapse" data-target="#item-webcam-foretorient"
+                                        value="Webcam" class="btn-releve" />
                                     - <span class="hidden-xs"><input type="button" data-target="#item-infos-foretorient"
                                             value="Informations" class="btn-releve" /></span><span
                                         class="visible-xs-inline"><input type="button"
@@ -1224,14 +1227,15 @@
                                 <div id="item-webcam-foretorient" class="collapse">
                                     <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
 
-                                        <video id="video-foret-orient" class="vjs-tech" tabindex="-1" preload="auto"
-                                            loop="" muted="muted" playsinline="playsinline" autoplay=""></video>
+                                        <iframe src="https://pv.viewsurf.com/1084/Lac-d-Orient?i=NDkzMjp1bmRlZmluZWQ">
+                                        </iframe>
+                                        <!--
                                         <div class="webcam-texte">
                                             <p><a href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a6/50/ile-de-france/fleury-en-bi-re/paris-vers-lyon'
                                                     target="_blank">Melun</a> / A6 près de Melun et Fontainebleau, vue
                                                 orientée vers Lyon</p>
                                         </div>
-
+                                        -->        
                                     </div>
                                     <br>
                                 </div>
@@ -1264,9 +1268,7 @@
 
                                 <p style="margin-bottom: 15px;"><a
                                         href="https://www.seinegrandslacs.fr/quatre-lacs-reservoirs/lac-reservoir-seine"
-                                        target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> % -
-                                    <a id="lien-webcam-viewsurf-foret-orient"
-                                        href="https://pv.viewsurf.com/1084/Lac-d-Orient" target="_blank">Webcam</a>
+                                        target="_blank">Niveau d'eau</a> : <span class="niveau-foret-orient"></span> %                         
                                 </p>
 
 
