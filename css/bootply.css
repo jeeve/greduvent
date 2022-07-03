@@ -13,6 +13,9 @@ body {
   left: 300px;
   width: calc(100% - 300px);
 }
+.navbar-default {
+  border-color:  #f8f8f8;
+}
 #sidebar {
   position: fixed;
   left: 0;
