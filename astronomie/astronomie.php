@@ -336,9 +336,9 @@ De la Terre, un sourire, s’envole, traverse la Voie Lactée pour rejoindre le 
 					<table align="right" cellpadding="10">
 						<tr>
 							<td>
-								<div class="embed-responsive embed-responsive-4by3">						
+								<div class="embed-responsive embed-responsive-16by9">						
 							
-<iframe src="http://www.ustream.tv/embed/9408562?html5ui&autoplay=true" allowfullscreen webkitallowfullscreen scrolling="no" frameborder="0" style="border: 0 none transparent;" class="embed-responsive-item" ></iframe>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/86YLFOog4GM?controls=0&rel=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								
 								</div>
 							</td>
@@ -346,7 +346,7 @@ De la Terre, un sourire, s’envole, traverse la Voie Lactée pour rejoindre le 
 					<tr>
 						<td>
 						<p align="center"><em><font size="2">
-						<a target="_blank" href="http://www.ustream.tv/channel/live-iss-stream">en direct de la 
+						<a target="_blank" href="https://youtu.be/86YLFOog4GM">en direct de la 
 							station spatiale internationale</a></font></em></td>
 					</tr>
 				</table>
@@ -383,7 +383,7 @@ De la Terre, un sourire, s’envole, traverse la Voie Lactée pour rejoindre le 
 				  <div class="col-xs-12 col-sm-8 fond">
 				  <p align="center">
 				  <div class="embed-responsive embed-responsive-16by9 ombre-image">
-				 <iframe width="560" height="315" src="https://www.youtube.com/embed/CBOD7zg4zpA?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/ACzR8l9X3-k?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  </div>
 				  </p>
 				  <p class="legende">
