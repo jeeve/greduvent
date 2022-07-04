@@ -33,7 +33,7 @@ body {
   overflow-y: scroll;
   width: 300px;
   height: calc(100% - 50px);
-  /*background-color: #f8f8f8;*/
+  background-color: #f8f8f8;
 }
 
 #sidebar .nav {
