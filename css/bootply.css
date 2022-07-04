@@ -8,14 +8,26 @@ body {
   background-color: #fff;
 }
 
-.navbar-header {
+.navbar.navbar-default.navbar-fixed-top .container {
   left: 0;
   padding-left: 20px;
   position: absolute;
+  width: 100%;
 }
-.navbar-header button {
-  position: relative;
-  right: 0;
+#bouton-menu {
+  left: 20px;
+  width: 100px;
+}
+.navbar-header {
+  position: absolute;
+  left: 300px;
+}
+#bouton-bas-page {
+  margin-right: 60px;
+}
+#bouton-haut-page {
+  float:right;
+  margin-right: 10px;
 }
 .container > div > div:last-child {
   left: 300px;
