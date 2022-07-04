@@ -9,7 +9,6 @@ body {
 }
 
 .container > div > div:last-child {
-  position: relative;
   left: 300px;
   width: calc(100% - 300px);
 }
@@ -19,7 +18,6 @@ body {
 #sidebar {
   position: fixed;
   left: 0;
-  height: 100%;
   padding: 0;
   margin: 0;
   overflow-y: scroll;
@@ -97,42 +95,8 @@ body {
   }
   .sidebar-offcanvas {
     position: absolute;
-    top: 0;
+    
     width: 41.6%;
   }
-  #sidebar {
-    padding-top:0;
-  } 
 }
-
-/* ajouté pour edge et ipad (bug menu sur 2 lignes) */
-
-.navbar {
-  z-index: 20000000;
-}
-
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
 
