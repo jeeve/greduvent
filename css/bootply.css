@@ -8,22 +8,32 @@ body {
   background-color: #fff;
 }
 
+.navbar-header {
+  left: 0;
+  padding-left: 20px;
+  position: absolute;
+}
+.navbar-header button {
+  position: relative;
+  right: 0;
+}
 .container > div > div:last-child {
   left: 300px;
   width: calc(100% - 300px);
 }
 .navbar-default {
-  border-color:  #f8f8f8;
+  border-color: #f8f8f8;
 }
 #sidebar {
   position: fixed;
   left: 0;
+  top: 50px;
   padding: 0;
   margin: 0;
   overflow-y: scroll;
   width: 300px;
   height: calc(100% - 50px);
-  background-color: #f8f8f8;
+  /*background-color: #f8f8f8;*/
 }
 
 #sidebar .nav {
