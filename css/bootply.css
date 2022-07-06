@@ -1,5 +1,5 @@
 body {
-  padding-top: 51px;  
+  padding-top: 51px;
 }
 .text-center {
   padding-top: 20px;
@@ -17,6 +17,7 @@ body {
 #bouton-menu {
   left: 20px;
   width: 100px;
+  visibility: hidden;
 }
 .navbar-header {
   position: absolute;
@@ -26,7 +27,7 @@ body {
   margin-right: 60px;
 }
 #bouton-haut-page {
-  float:right;
+  float: right;
   margin-right: 10px;
 }
 .container > div > div:last-child {
@@ -37,6 +38,7 @@ body {
   border-color: #f8f8f8;
 }
 #sidebar {
+  display: block;
   position: fixed;
   left: 0;
   top: 50px;
@@ -52,73 +54,64 @@ body {
   width: 95%;
 }
 #sidebar li {
-  border:0 #f2f2f2 solid;
-  border-bottom-width:1px;
+  border: 0 #f2f2f2 solid;
+  border-bottom-width: 1px;
   padding-left: 10px;
 }
-#sidebar .nav .active a  {
+#sidebar .nav .active a {
   font-weight: bold;
   text-decoration: none;
 }
-#sidebar .nav .active3 a  {
+#sidebar .nav .active3 a {
   text-decoration: none;
 }
 #bouton-bas-page {
-	  right: 110px;
-	  padding-bottom: 6px;
+  right: 110px;
+  padding-bottom: 6px;
 }
 #sidebar .nav .active > ul {
-	list-style: none;
-	text-align: center;
-	padding: 0;
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 #sidebar .nav .active > ul > li > a {
-	font-size: 80%;
-	font-weight: normal;
-	padding: 5px;
-	width: 100%;
-	display: block;
-	text-decoration: none;
+  font-size: 80%;
+  font-weight: normal;
+  padding: 5px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
 }
 #sidebar .nav .active .active2 a {
   font-weight: bold;
   text-decoration: none;
 }
-@media screen and (max-width: 767px) {
-  #bouton-bas-page {
-	  right: 65px;
-	/*  padding-bottom: 6px; */
-  }
-}
-  
+
 /* collapsed sidebar styles */
-@media screen and (max-width: 990px) { /* initial 767px */
-
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
+@media screen and (max-width: 990px) {
+  /* initial 767px */
+  #sidebar {
+    display: none;
   }
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -41.6%;
+  .container > div > div:last-child {
+    left: 0;
+    width: 100%;
   }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -41.6%;
-  }
-  .row-offcanvas-right.active {
-    right: 41.6%;
-  }
-  .row-offcanvas-left.active {
-    left: 41.6%;
-  }
-  .sidebar-offcanvas {
+  .navbar-header {
     position: absolute;
-    
-    width: 41.6%;
+    left: 130px;
+  }
+  #bouton-menu {
+    visibility: visible;
   }
 }
 
+@media screen and (max-width: 767px) {
+  /* initial 767px */
+  #bouton-bas-page {
+    right: 10px;
+  }
+  #bouton-menu {
+    width: 45px;
+  }
+}

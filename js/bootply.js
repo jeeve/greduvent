@@ -1,7 +1,15 @@
 $(document).ready(function () {
-  $("[data-toggle=offcanvas]").click(function () {
-    $(".row-offcanvas").toggleClass("active");
-    $("html,body").animate({ scrollTop: 0 }, "slow");
+
+  $("#bouton-menu").click(function () {
+    if ($("#sidebar").css('display') == 'none') {
+      $("#sidebar").css('display', 'block');
+      $(".container > div > div:last-child").css('left', '300px');
+      $(".container > div > div:last-child").css('width', 'calc(100% - 300px)');
+    } else {
+      $("#sidebar").css('display', 'none');
+      $(".container > div > div:last-child").css('left', '0');
+      $(".container > div > div:last-child").css('width', '100%');     
+    }
   });
 
   $("#bouton-bas-page").click(function () {
@@ -18,13 +26,6 @@ $(document).ready(function () {
 });
 
 function showHideBoutonMenu(event) {
-  var st = $(this).scrollTop();
-  if (st <= 0 && $("body").width() > 980) {
-    $("#bouton-menu").addClass("hidden");
-  } else {
-    $("#bouton-menu").removeClass("hidden");
-  }
-
   if (
     $(window).scrollTop() >= $(document).height() - $(window).height() &&
     $("body").width() > 980

@@ -1,8 +1,8 @@
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
-              <button id="bouton-menu" type="button" class="navbar-toggle hidden"
+              <button id="bouton-menu" type="button" class="navbar-toggle"
                   style="padding-bottom:5px; padding-top:5px" data-toggle="offcanvas" data-target=".sidebar-nav">
-                  <span style="float: left; margin-right: 10px" class="hidden-xs">
+                  <span class="hidden-xs">
                       <font color="grey" style="font-family: 'Raleway', sans-serif;">menu</font>
                   </span>
                   <span style="float: right; margin-top:4px; margin-bottom:5px">
