@@ -104,6 +104,14 @@ body {
   #bouton-menu {
     visibility: visible;
   }
+
+  #sidebar.sidebar-show {
+    display: block;
+  }
+  .container > div > div:last-child.sidebar-show {
+    left: 300px;
+    width: calc(100% - 300px);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -114,4 +122,5 @@ body {
   #bouton-menu {
     width: 45px;
   }
+
 }

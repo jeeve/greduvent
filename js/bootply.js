@@ -1,15 +1,8 @@
 $(document).ready(function () {
 
   $("#bouton-menu").click(function () {
-    if ($("#sidebar").css('display') == 'none') {
-      $("#sidebar").css('display', 'block');
-      $(".container > div > div:last-child").css('left', '300px');
-      $(".container > div > div:last-child").css('width', 'calc(100% - 300px)');
-    } else {
-      $("#sidebar").css('display', 'none');
-      $(".container > div > div:last-child").css('left', '0');
-      $(".container > div > div:last-child").css('width', '100%');     
-    }
+      $("#sidebar").toggleClass("sidebar-show");
+      $(".container > div > div:last-child").toggleClass("sidebar-show");
   });
 
   $("#bouton-bas-page").click(function () {
