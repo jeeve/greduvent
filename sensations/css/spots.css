@@ -134,3 +134,7 @@ label {
 #sessions .session {
 	padding-top: 20px;
 }
+
+#sessions .stats-annee {
+	font-weight: normal;
+}
