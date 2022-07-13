@@ -85,6 +85,9 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+#sidebar .active li {
+  padding-left: 0;
+}
 
 /* collapsed sidebar styles */
 @media screen and (max-width: 990px) {
