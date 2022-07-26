@@ -468,7 +468,7 @@
     <script type="text/javascript" src="js/questions.js"></script>
     <script>
     $('#bouton-openai').click(function() {
-        $('#openai .loader').css('visibility', 'visible');
+        $('#openai .loader').css('display', 'inline-block');
         $('#reponse-openai').text('');
         /*
                 var myHeaders = new Headers();
@@ -492,7 +492,7 @@
             crossDomain: true,
             dataType: 'text'
         }).then(function(data) {
-            $('#openai .loader').css('visibility', 'hidden');
+            $('#openai .loader').css('display', 'none');
             $('#reponse-openai').text('@OpenAI : ' + data);
         });
     });

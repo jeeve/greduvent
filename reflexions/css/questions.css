@@ -55,5 +55,5 @@
 .loader {
 	height: 20px;
 	margin-left: 10px;
-	visibility: hidden;
+	display: none;
 }
