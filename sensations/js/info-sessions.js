@@ -340,10 +340,10 @@ function getInfoSessions(spot) {
                 distance +
                 ' km  <a href="' +
                 lienGPX +
-                '" target="_blank"><img src="/sensations/images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                '" target="_blank"><img src="/sensations/images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a>';
             } else {
               html =
-                html + "<tr><td>Parcours</td><td>" + distance + " km</td></tr>";
+                html + "<tr><td>Parcours</td><td>" + distance + " km";
             }
           } else {
             if (lienGPX != "") {
@@ -365,11 +365,11 @@ function getInfoSessions(spot) {
                 distance +
                 " km";
             }
-            if (replay != "") {
-              html = html + ' - <a href="' + replay + '" target="_blank">Replay</a>';
-            }
-            html = html + "</td></tr>";
           }
+          if (replay != "") {
+              html = html + ' - <a href="' + replay + '" target="_blank">Replay</a>';
+          }
+          html = html + "</td></tr>";
         }
         if (vmax != "") {
           html = html + "<tr><td>VMax</td><td>" + vmax + " kts</td></tr>";
