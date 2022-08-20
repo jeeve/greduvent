@@ -367,6 +367,7 @@ function getInfoSessions(spot) {
             }
             if (replay != "") {
               html = html + ' - <a href="' + replay + '" target="_blank">Replay</a>';
+            }
             html = html + "</td></tr>";
           }
         }
