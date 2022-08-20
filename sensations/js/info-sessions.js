@@ -20,6 +20,7 @@ function getInfoSessions(spot) {
       leMWS,
       laVideo,
       leCommentaire,
+      replay,
       codeYoutube,
       vmax,
       v100m,
@@ -93,6 +94,7 @@ function getInfoSessions(spot) {
         leMWS = ligne[22];
         laVideo = ligne[23];
         leCommentaire = ligne[28];
+        replay = ligne[29];
         codeYoutube = laVideo.substring(
           laVideo.lastIndexOf("/") + 1,
           laVideo.length
@@ -353,7 +355,7 @@ function getInfoSessions(spot) {
                 distance +
                 ' km  <a href="' +
                 lienGPX +
-                '" target="_blank"><img src="/sensations/images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a></td></tr>';
+                '" target="_blank"><img src="/sensations/images/icone-gpx.png" title="Fichier GPX" alt"Fichier GPX" style="width: 20px;"></a>';
             } else {
               html =
                 html +
@@ -361,8 +363,11 @@ function getInfoSessions(spot) {
                 trace +
                 '" target="_blank">Parcours</a></td><td>' +
                 distance +
-                " km</td></tr>";
+                " km";
             }
+            if (replay != "") {
+              html = html + ' - <a href="' + replay + '" target="_blank">Replay</a>';
+            html = html + "</td></tr>";
           }
         }
         if (vmax != "") {
