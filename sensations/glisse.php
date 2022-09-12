@@ -448,8 +448,8 @@
                 ligne = data.values[i];
                 d = ligne[0];
                 pratique = ligne[2];
-                vmax = ligne[9];
-                v100 = ligne[10];
+                vmax = parseFloat(ligne[9]);
+                v100 = parseFloat(ligne[10]);
                 distanceFoil = ligne[7];
                 if (distanceFoil == "") {
                     distanceFoil = 0.0;
