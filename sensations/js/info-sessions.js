@@ -366,7 +366,7 @@ function getInfoSessions(spot) {
                 " km";
             }
           }
-          if (replay != "") {
+          if (replay != "" && replay != undefined) {
               html = html + ' - <a href="' + replay + '" target="_blank">Replay</a>';
           }
           html = html + "</td></tr>";
