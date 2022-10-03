@@ -9,13 +9,14 @@ function visuGPX(id, url, visuGpxOptions) {
   var h = [];
   var polylignes = [];
   var trace;
-  var ivmax, vmax, dmax;
+  var ivmax, vmax, dmax, tmax;
   var chartxy = [];
+  var chartty = [];
   var markerVitesse;
   var borneA, borneB;
   var lectureTimer = null;
   const LARGEUR_LIGNE = 10;
-  var iVideoStart, iVideoEnd;
+  const modeX = 'temps';
 
   var map = L.map(document.querySelector("#" + id + " " + ".map"), {
     zoomControl: false,
@@ -68,6 +69,14 @@ function visuGPX(id, url, visuGpxOptions) {
     return brng;
   }
 
+function xmax() {
+  if (modeX == 'distance') {
+    return dmax;
+  } else {
+    return tmax;
+  }
+} 
+
   function litGPX(url, ready) {
     borneA = 0;
     borneB = 0;
@@ -118,15 +127,19 @@ function visuGPX(id, url, visuGpxOptions) {
         //txy = filtre(txy);
 
         var distance = 0;
+        var temps = 0;
         vmax = 0;
         ivmax = 0;
         var t0 = new Date(txy[0][0]).getTime();
         chartxy = [];
+        chartty = [];
 
         if (visuGpxOptions.mode == "rando") {
           chartxy.push(["Distance", "Altitude"]);
+          chartty.push(["Distance", "Altitude"]);
         } else {
           chartxy.push(["Distance", "Vitesse"]);
+          chartty.push(["Distance", "Vitesse"]);
         }
 
         for (i = 0; i < txy.length; i++) {
@@ -157,18 +170,23 @@ function visuGPX(id, url, visuGpxOptions) {
             a.push(angle);
             d.push(dd);
             var ti = new Date(txy[i][0]).getTime();
-            t.push((ti - t0) / 1000);
+
+            temps = (ti - t0) / 1000;
+            t.push(temps);
 
             if (visuGpxOptions.mode == "rando") {
               chartxy.push([distance, h[i]]);
+              chartty.push([temps, h[i]]);
             } else {
               chartxy.push([distance, vitesse]);
+              chartty.push([temps, vitesse]);
             }
 
             distance = distance + dd;
           }
         }
         dmax = distance - dd;
+        tmax = temps;
 
         initParametres();
         var xy = [];
@@ -378,7 +396,11 @@ function visuGPX(id, url, visuGpxOptions) {
     $("#" + id + " " + ".position").val("0.000");
     $("#" + id + " " + ".temps").val("0");
     $("#" + id + " " + ".vitesse").text("0.00");
-    $("#" + id + " " + ".fenetre-largeur").val("2.000");
+    if (modeX == 'distance') {
+      $("#" + id + " " + ".fenetre-largeur").val("2.000");
+    } else {
+      $("#" + id + " " + ".fenetre-largeur").val("600");
+    }
   }
 
   map.on("click", function (e) {
@@ -554,7 +576,7 @@ function visuGPX(id, url, visuGpxOptions) {
       );
       $("#" + id + " " + ".borne-b").attr(
         "width",
-        chart.getChartLayoutInterface().getXLocation(dmax) -
+        chart.getChartLayoutInterface().getXLocation(xmax()) -
           parseInt($("#" + id + " " + ".ligne-droite").attr("x")) +
           LARGEUR_LIGNE / 2
       );
@@ -572,30 +594,75 @@ function visuGPX(id, url, visuGpxOptions) {
       );
       $("#" + id + " " + ".borne-b").attr(
         "width",
-        chart.getChartLayoutInterface().getXLocation(dmax) -
+        chart.getChartLayoutInterface().getXLocation(xmax()) -
           parseInt($("#" + id + " " + ".ligne-gauche").attr("x")) +
           LARGEUR_LIGNE / 2
       );
     }
 
-    var i = getIndiceDistance(
-      chartGetx(
-        chart,
-        $("#" + id + " " + ".ligne-gauche")
-          .last()
-          .offset().left +
-          LARGEUR_LIGNE / 2
-      )
-    );
-    var j = getIndiceDistance(
-      chartGetx(
-        chart,
-        $("#" + id + " " + ".ligne-droite")
-          .last()
-          .offset().left +
-          LARGEUR_LIGNE / 2
-      )
-    );
+    if (modeX == 'distance') {
+      var i = getIndiceDistance(
+        chartGetx(
+          chart,
+          $("#" + id + " " + ".ligne-gauche")
+            .last()
+            .offset().left +
+            LARGEUR_LIGNE / 2
+        )
+      );
+    } else {
+      var i = getIndiceTemps(
+        chartGetx(
+          chart,
+          $("#" + id + " " + ".ligne-gauche")
+            .last()
+            .offset().left +
+            LARGEUR_LIGNE / 2
+        )
+      );
+    }
+    if (modeX == 'distance') {
+      var i = getIndiceDistance(
+        chartGetx(
+          chart,
+          $("#" + id + " " + ".ligne-gauche")
+            .last()
+            .offset().left +
+            LARGEUR_LIGNE / 2
+        )
+      ); 
+    } else {
+      var i = getIndiceTemps(
+        chartGetx(
+          chart,
+          $("#" + id + " " + ".ligne-gauche")
+            .last()
+            .offset().left +
+            LARGEUR_LIGNE / 2
+        )
+      );      
+    }
+    if (modeX == 'distance') {
+      var j = getIndiceDistance(
+        chartGetx(
+          chart,
+          $("#" + id + " " + ".ligne-droite")
+            .last()
+            .offset().left +
+            LARGEUR_LIGNE / 2
+        )
+      );
+    } else {
+      var j = getIndiceTemps(
+        chartGetx(
+          chart,
+          $("#" + id + " " + ".ligne-droite")
+            .last()
+            .offset().left +
+            LARGEUR_LIGNE / 2
+        )
+      );      
+    }
     if (i < j) {
       borneA = i;
       borneB = j;
@@ -693,6 +760,20 @@ function visuGPX(id, url, visuGpxOptions) {
     var dt;
     for (i = 1; i < chartxy.length; i++) {
       dt = Math.abs(chartxy[i][0] - x);
+      if (dt < delta) {
+        j = i;
+        delta = dt;
+      }
+    }
+    return j - 1;
+  }
+
+  function getIndiceTemps(x) {
+    var j = 1;
+    var delta = +Infinity;
+    var dt;
+    for (i = 1; i < chartty.length; i++) {
+      dt = Math.abs(chartty[i][0] - x);
       if (dt < delta) {
         j = i;
         delta = dt;
@@ -1086,7 +1167,12 @@ function visuGPX(id, url, visuGpxOptions) {
     if (chartxy.length == 0) {
       return;
     }
-    var data = google.visualization.arrayToDataTable(chartxy);
+    
+    if (modeX == 'distance') {
+      var data = google.visualization.arrayToDataTable(chartxy);
+    } else {
+      var data = google.visualization.arrayToDataTable(chartty);
+    }
 
     var vAxisOptions;
     var enableInteractivityOptions = false;
@@ -1117,11 +1203,11 @@ function visuGPX(id, url, visuGpxOptions) {
     );
     chart.draw(data, options);
     registerEvtChart();
-    createLineBornesSVG(chart, dmax * 0.1, dmax - dmax * 0.1);
+    createLineBornesSVG(chart, xmax() * 0.1, xmax() - xmax() * 0.1);
     CreeLigneSeuil(chart, $("#" + id + " " + ".seuil").val());
     CreeLignePosition(chart);
-    CreeLigneGauche(chart, dmax * 0.1);
-    CreeLigneDroite(chart, dmax - dmax * 0.1);
+    CreeLigneGauche(chart, xmax() * 0.1);
+    CreeLigneDroite(chart, xmax() - xmax() * 0.1);
     if (visuGpxOptions.mode == "rando") {
       var L = chart.getChartLayoutInterface().getChartAreaBoundingBox().width;
       $("#" + id + " " + ".ligne-gauche").attr("x", 30 - LARGEUR_LIGNE / 2);
@@ -1158,9 +1244,9 @@ function visuGPX(id, url, visuGpxOptions) {
     });
     return result;
   }
-
+/*
   function getIndiceTemps(temps) {
-    return closestSortedValueIndex(t, temps); /*
+    return closestSortedValueIndex(t, temps);
   var ecart = +Infinity;
   var e;
   var indice = 0;
@@ -1171,9 +1257,10 @@ function visuGPX(id, url, visuGpxOptions) {
       indice = i;
     }
   }
-  return indice;*/
+  return indice;
   }
 
+  */
   $(window).resize(function () {
     drawChart();
   });
@@ -1188,8 +1275,12 @@ function visuGPX(id, url, visuGpxOptions) {
 
   function CreeLignePosition(chart) {
     $("#" + id + " " + ".ligne-position").remove();
-    var x = $("#" + id + " " + ".position").val();
-    createLineVerticaleSVG(chart, x, "ligne-position", true);
+    if (modeX == 'distance') {
+      var x = $("#" + id + " " + ".position").val();
+    } else {
+      var x = $("#" + id + " " + ".temps").val();
+    }
+    createLineVerticaleSVG(chart, x, "ligne-position", true); 
     curseurPosition.selectedElement = null;
     curseurPosition.currentX = 0;
     registerEvtLignePositionSVG();
@@ -1387,7 +1478,7 @@ function visuGPX(id, url, visuGpxOptions) {
     rectB.setAttribute("class", "ligne borne-b");
     rectB.setAttribute("x", xLocB);
     rectB.setAttribute("y", 10);
-    rectB.setAttribute("width", layout.getXLocation(dmax) - xLocB);
+    rectB.setAttribute("width", layout.getXLocation(xmax()) - xLocB);
     rectB.setAttribute("height", H - 30);
     rectB.setAttribute("stroke", "#C0C0C0");
     rectB.setAttribute("stroke-width", 1);
@@ -1406,14 +1497,18 @@ function visuGPX(id, url, visuGpxOptions) {
           elementEstClasse(curseurPosition.selectedElement, "ligne-position")
         ) {
           var x = chartGetx(chart, e.clientX);
-          if (x >= 0 && x <= dmax) {
+          if (x >= 0 && x <= xmax()) {
             var dx =
               parseInt(curseurPosition.selectedElement.getAttribute("x")) +
               e.clientX -
               curseurPosition.currentX;
             curseurPosition.selectedElement.setAttribute("x", dx);
             curseurPosition.currentX = e.clientX;
-            var i = getIndiceDistance(x);
+            if (modeX == 'distance') {
+              var i = getIndiceDistance(x);
+            } else {
+              var i = getIndiceTemps(x);
+            }
             $("#" + id + " " + ".position").val(x.toFixed(3));
             $("#" + id + " " + ".temps").val(t[i]);
             $("#" + id + " " + ".vitesse").text(getVitesse(x).toFixed(2));
@@ -1452,7 +1547,7 @@ function visuGPX(id, url, visuGpxOptions) {
           }
           if (parametres != undefined) {
             var x = chartGetx(chart, e.clientX);
-            if (x >= 0 && x <= dmax) {
+            if (x >= 0 && x <= xmax()) {
               var dx =
                 parseInt(parametres.selectedElement.getAttribute("x")) +
                 e.clientX -
@@ -1478,7 +1573,7 @@ function visuGPX(id, url, visuGpxOptions) {
       })
       .click(function (e) {
         var x = chartGetx(chart, e.clientX);
-        if (x >= 0 && x <= dmax) {
+        if (x >= 0 && x <= xmax()) {
           var dx =
             e.clientX -
             LARGEUR_LIGNE / 2 -
@@ -1487,7 +1582,11 @@ function visuGPX(id, url, visuGpxOptions) {
               .offset().left;
           $("#" + id + " " + ".ligne-position")[0].setAttribute("x", dx);
           $("#" + id + " " + ".position").val(x.toFixed(3));
-          var i = getIndiceDistance(x);
+          if (modeX == 'distance') {
+            var i = getIndiceDistance(x);
+          } else {
+            var i = getIndiceTemps(x);
+          }
           $("#" + id + " " + ".temps").val(t[i]);
           $("#" + id + " " + ".vitesse").text(getVitesse(x).toFixed(2));
           UpdatePosition(i);
@@ -1545,7 +1644,7 @@ function visuGPX(id, url, visuGpxOptions) {
       .mousemove(function (e) {
         if (curseurPosition.selectedElement) {
           var x = chartGetx(chart, e.clientX);
-          if (x >= 0 && x <= dmax) {
+          if (x >= 0 && x <= xmax()) {
             var dx =
               parseInt($(this)[0].getAttribute("x")) +
               e.clientX -
@@ -1575,7 +1674,7 @@ function visuGPX(id, url, visuGpxOptions) {
       .mousemove(function (e) {
         if (parametres.selectedElement) {
           var x = chartGetx(chart, e.clientX);
-          if (x >= 0 && x <= dmax) {
+          if (x >= 0 && x <= xmax()) {
             var dx =
               parseInt($(this)[0].getAttribute("x")) +
               e.clientX -
@@ -1627,8 +1726,8 @@ function visuGPX(id, url, visuGpxOptions) {
       $("#" + id + " " + ".chart")
         .last()
         .offset().left -
-      30;
-    return (X2 * dmax) / L;
+      30;      
+    return (X2 * xmax()) / L;
   }
 
   function elementEstClasse(e, className) {
@@ -1648,17 +1747,17 @@ function visuGPX(id, url, visuGpxOptions) {
     var b = x + l / 2;
     if (a < 0) {
       a = 0;
-    }
-    if (b > dmax) {
-      b = dmax;
+    }    
+    if (b > xmax()) {
+      b = xmax();
     }
     $("#" + id + " " + ".ligne-gauche").attr(
       "x",
-      30 + (L * a) / dmax - LARGEUR_LIGNE / 2
+      30 + (L * a) / xmax() - LARGEUR_LIGNE / 2
     );
     $("#" + id + " " + ".ligne-droite").attr(
       "x",
-      30 + (L * b) / dmax - LARGEUR_LIGNE / 2
+      30 + (L * b) / xmax() - LARGEUR_LIGNE / 2
     );
     updateBornes();
   }

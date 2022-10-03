@@ -46,7 +46,7 @@
                             <td><input type="text" class="position"></input></td>
                             <td>km</td>
                         </tr>
-                        <tr class="ligne-temps" style="display: none;">
+                        <tr class="ligne-temps"> <!--style="display: none;"-->
                             <td><label>Temps</label></td>
                             <td><input type="text" class="temps"></input></td>
                             <td>s</td>
