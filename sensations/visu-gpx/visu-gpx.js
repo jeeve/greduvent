@@ -16,7 +16,7 @@ function visuGPX(id, url, visuGpxOptions) {
   var borneA, borneB;
   var lectureTimer = null;
   const LARGEUR_LIGNE = 10;
-  const modeX = 'temps';
+  const modeX = "temps";
 
   var map = L.map(document.querySelector("#" + id + " " + ".map"), {
     zoomControl: false,
@@ -69,13 +69,13 @@ function visuGPX(id, url, visuGpxOptions) {
     return brng;
   }
 
-function xmax() {
-  if (modeX == 'distance') {
-    return dmax;
-  } else {
-    return tmax;
+  function xmax() {
+    if (modeX == "distance") {
+      return dmax;
+    } else {
+      return tmax;
+    }
   }
-} 
 
   function litGPX(url, ready) {
     borneA = 0;
@@ -396,7 +396,7 @@ function xmax() {
     $("#" + id + " " + ".position").val("0.000");
     $("#" + id + " " + ".temps").val("0");
     $("#" + id + " " + ".vitesse").text("0.00");
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       $("#" + id + " " + ".fenetre-largeur").val("2.000");
     } else {
       $("#" + id + " " + ".fenetre-largeur").val("600");
@@ -600,7 +600,7 @@ function xmax() {
       );
     }
 
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       var i = getIndiceDistance(
         chartGetx(
           chart,
@@ -621,7 +621,7 @@ function xmax() {
         )
       );
     }
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       var i = getIndiceDistance(
         chartGetx(
           chart,
@@ -630,7 +630,7 @@ function xmax() {
             .offset().left +
             LARGEUR_LIGNE / 2
         )
-      ); 
+      );
     } else {
       var i = getIndiceTemps(
         chartGetx(
@@ -640,9 +640,9 @@ function xmax() {
             .offset().left +
             LARGEUR_LIGNE / 2
         )
-      );      
+      );
     }
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       var j = getIndiceDistance(
         chartGetx(
           chart,
@@ -661,7 +661,7 @@ function xmax() {
             .offset().left +
             LARGEUR_LIGNE / 2
         )
-      );      
+      );
     }
     if (i < j) {
       borneA = i;
@@ -751,7 +751,11 @@ function xmax() {
   document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
   function getVitesse(x) {
-    return chartxy[getIndiceDistance(x) + 1][1];
+    if (modeX == "distance") {
+      return chartxy[getIndiceDistance(x) + 1][1];
+    } else {
+      return chartty[getIndiceTemps(x) + 1][1];
+    }
   }
 
   function getIndiceDistance(x) {
@@ -1167,8 +1171,8 @@ function xmax() {
     if (chartxy.length == 0) {
       return;
     }
-    
-    if (modeX == 'distance') {
+
+    if (modeX == "distance") {
       var data = google.visualization.arrayToDataTable(chartxy);
     } else {
       var data = google.visualization.arrayToDataTable(chartty);
@@ -1244,7 +1248,7 @@ function xmax() {
     });
     return result;
   }
-/*
+  /*
   function getIndiceTemps(temps) {
     return closestSortedValueIndex(t, temps);
   var ecart = +Infinity;
@@ -1275,12 +1279,12 @@ function xmax() {
 
   function CreeLignePosition(chart) {
     $("#" + id + " " + ".ligne-position").remove();
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       var x = $("#" + id + " " + ".position").val();
     } else {
       var x = $("#" + id + " " + ".temps").val();
     }
-    createLineVerticaleSVG(chart, x, "ligne-position", true); 
+    createLineVerticaleSVG(chart, x, "ligne-position", true);
     curseurPosition.selectedElement = null;
     curseurPosition.currentX = 0;
     registerEvtLignePositionSVG();
@@ -1504,7 +1508,7 @@ function xmax() {
               curseurPosition.currentX;
             curseurPosition.selectedElement.setAttribute("x", dx);
             curseurPosition.currentX = e.clientX;
-            if (modeX == 'distance') {
+            if (modeX == "distance") {
               var i = getIndiceDistance(x);
             } else {
               var i = getIndiceTemps(x);
@@ -1582,7 +1586,7 @@ function xmax() {
               .offset().left;
           $("#" + id + " " + ".ligne-position")[0].setAttribute("x", dx);
           $("#" + id + " " + ".position").val(x.toFixed(3));
-          if (modeX == 'distance') {
+          if (modeX == "distance") {
             var i = getIndiceDistance(x);
           } else {
             var i = getIndiceTemps(x);
@@ -1726,7 +1730,7 @@ function xmax() {
       $("#" + id + " " + ".chart")
         .last()
         .offset().left -
-      30;      
+      30;
     return (X2 * xmax()) / L;
   }
 
@@ -1747,7 +1751,7 @@ function xmax() {
     var b = x + l / 2;
     if (a < 0) {
       a = 0;
-    }    
+    }
     if (b > xmax()) {
       b = xmax();
     }
@@ -1764,7 +1768,13 @@ function xmax() {
 
   function affichePhotoPosition(x, y) {
     $(
-      "#" + id + " " + ".photos-rando img, #" + id + " " + ".photo-rando-vertical"
+      "#" +
+        id +
+        " " +
+        ".photos-rando img, #" +
+        id +
+        " " +
+        ".photo-rando-vertical"
     ).each(function () {
       var lat = $(this).attr("data-lat");
       var lon = $(this).attr("data-lon");
