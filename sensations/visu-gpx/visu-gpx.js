@@ -600,8 +600,9 @@ function visuGPX(id, url, visuGpxOptions) {
       );
     }
 
+    var i;
     if (modeX == "distance") {
-      var i = getIndiceDistance(
+      i = getIndiceDistance(
         chartGetx(
           chart,
           $("#" + id + " " + ".ligne-gauche")
@@ -611,7 +612,7 @@ function visuGPX(id, url, visuGpxOptions) {
         )
       );
     } else {
-      var i = getIndiceTemps(
+      i = getIndiceTemps(
         chartGetx(
           chart,
           $("#" + id + " " + ".ligne-gauche")
@@ -621,29 +622,10 @@ function visuGPX(id, url, visuGpxOptions) {
         )
       );
     }
+
+    var j;
     if (modeX == "distance") {
-      var i = getIndiceDistance(
-        chartGetx(
-          chart,
-          $("#" + id + " " + ".ligne-gauche")
-            .last()
-            .offset().left +
-            LARGEUR_LIGNE / 2
-        )
-      );
-    } else {
-      var i = getIndiceTemps(
-        chartGetx(
-          chart,
-          $("#" + id + " " + ".ligne-gauche")
-            .last()
-            .offset().left +
-            LARGEUR_LIGNE / 2
-        )
-      );
-    }
-    if (modeX == "distance") {
-      var j = getIndiceDistance(
+      j = getIndiceDistance(
         chartGetx(
           chart,
           $("#" + id + " " + ".ligne-droite")
@@ -653,7 +635,7 @@ function visuGPX(id, url, visuGpxOptions) {
         )
       );
     } else {
-      var j = getIndiceTemps(
+      j = getIndiceTemps(
         chartGetx(
           chart,
           $("#" + id + " " + ".ligne-droite")
@@ -1455,6 +1437,16 @@ function visuGPX(id, url, visuGpxOptions) {
     svg2.appendChild(line);
   }
 
+  function getDistanceCurseur(chart, X) {
+    var x = chartGetx(chart, X);
+    if (modeX == "distance") {
+      return x;
+    } else {
+      i = getIndiceTemps(x);
+      return chartxy[i][0];
+    }
+  }
+
   function createLineBornesSVG(chart, a, b) {
     $("#" + id + " " + ".borne").remove();
     var layout = chart.getChartLayoutInterface();
@@ -1508,12 +1500,13 @@ function visuGPX(id, url, visuGpxOptions) {
               curseurPosition.currentX;
             curseurPosition.selectedElement.setAttribute("x", dx);
             curseurPosition.currentX = e.clientX;
+            var i;
             if (modeX == "distance") {
-              var i = getIndiceDistance(x);
+              i = getIndiceDistance(x);
             } else {
-              var i = getIndiceTemps(x);
+              i = getIndiceTemps(x);
             }
-            $("#" + id + " " + ".position").val(x.toFixed(3));
+            $("#" + id + " " + ".position").val(getDistanceCurseur(chart, e.clientX).toFixed(3));
             $("#" + id + " " + ".temps").val(t[i]);
             $("#" + id + " " + ".vitesse").text(getVitesse(x).toFixed(2));
             UpdatePosition(i);
@@ -1585,7 +1578,7 @@ function visuGPX(id, url, visuGpxOptions) {
               .last()
               .offset().left;
           $("#" + id + " " + ".ligne-position")[0].setAttribute("x", dx);
-          $("#" + id + " " + ".position").val(x.toFixed(3));
+          $("#" + id + " " + ".position").val(getDistanceCurseur(chart, e.clientX).toFixed(3));
           if (modeX == "distance") {
             var i = getIndiceDistance(x);
           } else {
