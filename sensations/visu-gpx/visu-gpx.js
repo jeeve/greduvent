@@ -1585,7 +1585,7 @@ function visuGPX(id, url, visuGpxOptions) {
             var i = getIndiceTemps(x);
           }
           $("#" + id + " " + ".temps").val(t[i]);
-          $("#" + id + " " + ".vitesse").text(getVitesse(x).toFixed(2));
+          $("#" + id + " " + ".vitesse").text(getVitesse(getDistanceCurseur(chart, e.clientX)).toFixed(2));
           UpdatePosition(i);
           if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
             calculeBornes();
@@ -1737,7 +1737,12 @@ function visuGPX(id, url, visuGpxOptions) {
   }
 
   function calculeBornes() {
-    var x = parseFloat($("#" + id + " " + ".position").val());
+    var x;
+    if (modeX == 'distance') {
+      x = parseFloat($("#" + id + " " + ".position").val());
+    } else {
+      x = parseFloat($("#" + id + " " + ".temps").val());
+    }
     var l = parseFloat($("#" + id + " " + ".fenetre-largeur").val());
     var L = chart.getChartLayoutInterface().getChartAreaBoundingBox().width;
     var a = x - l / 2;
