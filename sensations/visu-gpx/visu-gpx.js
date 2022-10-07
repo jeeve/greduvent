@@ -771,7 +771,11 @@ function visuGPX(id, url, visuGpxOptions) {
   function UpdatePosition(n) {
     var i = n;
     if (n == -1) {
-      i = getIndiceDistance($("#" + id + " " + ".position").val());
+      if (modeX == 'distance') {
+        i = getIndiceDistance($("#" + id + " " + ".position").val());
+      } else {
+        i = getIndiceTemps($("#" + id + " " + ".temps").val());
+      }
     }
     var xyi = [];
     xyi.push(txy[i][1], txy[i][2]);
