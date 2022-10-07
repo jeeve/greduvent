@@ -1579,12 +1579,14 @@ function visuGPX(id, url, visuGpxOptions) {
               .offset().left;
           $("#" + id + " " + ".ligne-position")[0].setAttribute("x", dx);
           $("#" + id + " " + ".position").val(getDistanceCurseur(chart, e.clientX).toFixed(3));
+          var i;
           if (modeX == "distance") {
-            var i = getIndiceDistance(x);
+            i = getIndiceDistance(x);
+            $("#" + id + " " + ".temps").val(t[getIndiceDistance(x)]);
           } else {
-            var i = getIndiceTemps(x);
+            i = getIndiceTemps(x);
+            $("#" + id + " " + ".temps").val(Math.round(chartGetx(chart, e.clientX)));
           }
-          $("#" + id + " " + ".temps").val(t[i]);
           $("#" + id + " " + ".vitesse").text(getVitesse(getDistanceCurseur(chart, e.clientX)).toFixed(2));
           UpdatePosition(i);
           if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
