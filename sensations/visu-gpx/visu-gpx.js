@@ -733,11 +733,7 @@ function visuGPX(id, url, visuGpxOptions) {
   document.getElementsByTagName("body")[0].onresize = reportWindowSize;
 
   function getVitesse(x) {
-    if (modeX == "distance") {
-      return chartxy[getIndiceDistance(x) + 1][1];
-    } else {
-      return chartty[getIndiceTemps(x) + 1][1];
-    }
+    return chartxy[getIndiceDistance(x) + 1][1];
   }
 
   function getIndiceDistance(x) {
