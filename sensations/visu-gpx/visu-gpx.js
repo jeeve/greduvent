@@ -16,7 +16,7 @@ function visuGPX(id, url, visuGpxOptions) {
   var borneA, borneB;
   var lectureTimer = null;
   const LARGEUR_LIGNE = 10;
-  const modeX = "temps";
+  var modeX = 'distance';
 
   var map = L.map(document.querySelector("#" + id + " " + ".map"), {
     zoomControl: false,
@@ -1138,6 +1138,24 @@ function visuGPX(id, url, visuGpxOptions) {
   var curseurPosition = { currentX: 0, selectedElement: null };
   var curseurA = { currentX: 0, selectedElement: null };
   var curseurB = { currentX: 0, selectedElement: null };
+
+  $("#" + id + " " + ".radio-distance").click(function () {
+    if ($("#" + id + " " + ".radio-distance").is(":checked")) {
+      modeX = 'distance';
+      $("#" + id + " " + ".fenetre-largeur").val("2.000");
+      $("#" + id + " " + ".fenetre-unite").text("km");
+      drawChart();
+    }
+  });
+
+  $("#" + id + " " + ".radio-temps").click(function () {
+    if ($("#" + id + " " + ".radio-temps").is(":checked")) {
+      modeX = 'temps';
+      $("#" + id + " " + ".fenetre-largeur").val("300");
+      $("#" + id + " " + ".fenetre-unite").text("s");
+      drawChart();
+    }
+  });  
 
   $("#" + id + " " + ".chart").keypress(function (e) {
     if (e.which == 32) {

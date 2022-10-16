@@ -46,7 +46,7 @@
                             <td><input type="text" class="position"></input></td>
                             <td>km</td>
                         </tr>
-                        <tr class="ligne-temps"> <!--style="display: none;"-->
+                        <tr class="ligne-temps" style="display: none;">
                             <td><label>Temps</label></td>
                             <td><input type="text" class="temps"></input></td>
                             <td>s</td>
@@ -67,7 +67,7 @@
                 <input type="checkbox" class="fenetre-auto">
                 <label class="label-fenetre-auto">Fenêtre auto</label>
                 <div class="div-fenetre-largeur">
-                    <input type="text" class="fenetre-largeur"></input> km
+                    <input type="text" class="fenetre-largeur"></input> <span class="fenetre-unite">km</span>
                 </div>
             </div>
             <div class="magneto">
@@ -128,6 +128,17 @@
         </div>
 
         <div class="chart"></div>
+
+        <div class="radio-x">
+            <div>
+                <input type="radio" class="radio-distance" value="distance" name="radio" checked>
+                <label>Distance</label>
+            </div>
+            <div>
+                <input type="radio" class="radio-temps" value="temps" name="radio">
+                <label>Temps</label>
+            </div>
+        </div>
 
     </div>
 
