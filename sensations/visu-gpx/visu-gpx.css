@@ -101,7 +101,12 @@ td {
 }
 
 .fenetre-largeur {
-  width: 50px;
+  width: 40px;
+  text-align: right;
+}
+
+.fenetre-unite {
+  margin-left: 10px;
 }
 
 .seuil {

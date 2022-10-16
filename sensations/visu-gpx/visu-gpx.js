@@ -1225,12 +1225,6 @@ function visuGPX(id, url, visuGpxOptions) {
     if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
       calculeBornes();
     }
-    if (getParameterByName("stats") == "1") {
-      $("#" + id + " " + ".calcule").click();
-    }
-    if (getParameterByName("play")) {
-      play();
-    }
   }
 
   function play() {

@@ -67,7 +67,7 @@
                 <input type="checkbox" class="fenetre-auto">
                 <label class="label-fenetre-auto">Fenêtre auto</label>
                 <div class="div-fenetre-largeur">
-                    <input type="text" class="fenetre-largeur"></input> <span class="fenetre-unite">km</span>
+                    <input type="text" class="fenetre-largeur"></input><span class="fenetre-unite">km</span>
                 </div>
             </div>
             <div class="magneto">
