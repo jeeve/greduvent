@@ -16,7 +16,7 @@ function visuGPX(id, url, visuGpxOptions) {
   var borneA, borneB;
   var lectureTimer = null;
   const LARGEUR_LIGNE = 10;
-  var modeX = 'distance';
+  var modeX = "distance";
 
   var map = L.map(document.querySelector("#" + id + " " + ".map"), {
     zoomControl: false,
@@ -767,7 +767,7 @@ function visuGPX(id, url, visuGpxOptions) {
   function UpdatePosition(n) {
     var i = n;
     if (n == -1) {
-      if (modeX == 'distance') {
+      if (modeX == "distance") {
         i = getIndiceDistance($("#" + id + " " + ".position").val());
       } else {
         i = getIndiceTemps($("#" + id + " " + ".temps").val());
@@ -1141,7 +1141,7 @@ function visuGPX(id, url, visuGpxOptions) {
 
   $("#" + id + " " + ".radio-distance").click(function () {
     if ($("#" + id + " " + ".radio-distance").is(":checked")) {
-      modeX = 'distance';
+      modeX = "distance";
       $("#" + id + " " + ".fenetre-largeur").val("2.000");
       $("#" + id + " " + ".fenetre-unite").text("km");
       drawChart();
@@ -1150,12 +1150,12 @@ function visuGPX(id, url, visuGpxOptions) {
 
   $("#" + id + " " + ".radio-temps").click(function () {
     if ($("#" + id + " " + ".radio-temps").is(":checked")) {
-      modeX = 'temps';
+      modeX = "temps";
       $("#" + id + " " + ".fenetre-largeur").val("300");
       $("#" + id + " " + ".fenetre-unite").text("s");
       drawChart();
     }
-  });  
+  });
 
   $("#" + id + " " + ".chart").keypress(function (e) {
     if (e.which == 32) {
@@ -1202,6 +1202,9 @@ function visuGPX(id, url, visuGpxOptions) {
       dataOpacity: 0.0,
     };
 
+    if (chart != null) {
+      delete chart;
+    }
     chart = new google.visualization.LineChart(
       document.querySelector("#" + id + " " + ".chart")
     );
@@ -1344,10 +1347,10 @@ function visuGPX(id, url, visuGpxOptions) {
   }
 
   function createIndicateurPosition(chart, i, classeName) {
-    if (modeX == 'distance') {
-      var x = chartxy[i+1][0];
+    if (modeX == "distance") {
+      var x = chartxy[i + 1][0];
     } else {
-      var x = chartty[i+1][0];      
+      var x = chartty[i + 1][0];
     }
     var layout = chart.getChartLayoutInterface();
     var chartArea = layout.getChartAreaBoundingBox();
@@ -1376,13 +1379,13 @@ function visuGPX(id, url, visuGpxOptions) {
   }
 
   function createIndicateurPlage(chart, i1, i2, classeName, couleur) {
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       var x1 = chartxy[i1][0];
       var x2 = chartxy[i2][0];
     } else {
       var x1 = chartty[i1][0];
-      var x2 = chartty[i2][0];     
-    }    
+      var x2 = chartty[i2][0];
+    }
     var layout = chart.getChartLayoutInterface();
     var chartArea = layout.getChartAreaBoundingBox();
     var svg = chart.getContainer().getElementsByTagName("svg")[0];
@@ -1536,7 +1539,9 @@ function visuGPX(id, url, visuGpxOptions) {
             } else {
               i = getIndiceTemps(x);
             }
-            $("#" + id + " " + ".position").val(getDistanceCurseur(chart, e.clientX).toFixed(3));
+            $("#" + id + " " + ".position").val(
+              getDistanceCurseur(chart, e.clientX).toFixed(3)
+            );
             $("#" + id + " " + ".temps").val(t[i]);
             $("#" + id + " " + ".vitesse").text(getVitesse(x).toFixed(2));
             UpdatePosition(i);
@@ -1608,16 +1613,22 @@ function visuGPX(id, url, visuGpxOptions) {
               .last()
               .offset().left;
           $("#" + id + " " + ".ligne-position")[0].setAttribute("x", dx);
-          $("#" + id + " " + ".position").val(getDistanceCurseur(chart, e.clientX).toFixed(3));
+          $("#" + id + " " + ".position").val(
+            getDistanceCurseur(chart, e.clientX).toFixed(3)
+          );
           var i;
           if (modeX == "distance") {
             i = getIndiceDistance(x);
             $("#" + id + " " + ".temps").val(t[getIndiceDistance(x)]);
           } else {
             i = getIndiceTemps(x);
-            $("#" + id + " " + ".temps").val(Math.round(chartGetx(chart, e.clientX)));
+            $("#" + id + " " + ".temps").val(
+              Math.round(chartGetx(chart, e.clientX))
+            );
           }
-          $("#" + id + " " + ".vitesse").text(getVitesse(getDistanceCurseur(chart, e.clientX)).toFixed(2));
+          $("#" + id + " " + ".vitesse").text(
+            getVitesse(getDistanceCurseur(chart, e.clientX)).toFixed(2)
+          );
           UpdatePosition(i);
           if ($("#" + id + " " + ".fenetre-auto").is(":checked")) {
             calculeBornes();
@@ -1770,7 +1781,7 @@ function visuGPX(id, url, visuGpxOptions) {
 
   function calculeBornes() {
     var x;
-    if (modeX == 'distance') {
+    if (modeX == "distance") {
       x = parseFloat($("#" + id + " " + ".position").val());
     } else {
       x = parseFloat($("#" + id + " " + ".temps").val());
