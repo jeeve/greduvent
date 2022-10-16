@@ -1039,7 +1039,7 @@ function visuGPX(id, url, visuGpxOptions) {
     $("#" + id + " " + ".chart .vmax").remove();
     if ($("#" + id + " " + ".affiche-vmax").prop("checked")) {
       if (chart != null) {
-        createIndicateurPosition(chart, chartxy[ivmax + 1][0], "vmax");
+        createIndicateurPosition(chart, ivmax, "vmax");
       }
     }
 
@@ -1048,8 +1048,8 @@ function visuGPX(id, url, visuGpxOptions) {
       if (chart != null) {
         createIndicateurPlage(
           chart,
-          chartxy[parseInt($("#" + id + " " + ".v100m").attr("data-a")) + 1][0],
-          chartxy[parseInt($("#" + id + " " + ".v100m").attr("data-b")) + 1][0],
+          parseInt($("#" + id + " " + ".v100m").attr("data-a")),
+          parseInt($("#" + id + " " + ".v100m").attr("data-b")),
           "v100m",
           "green"
         );
@@ -1061,8 +1061,8 @@ function visuGPX(id, url, visuGpxOptions) {
       if (chart != null) {
         createIndicateurPlage(
           chart,
-          chartxy[parseInt($("#" + id + " " + ".v500m").attr("data-a")) + 1][0],
-          chartxy[parseInt($("#" + id + " " + ".v500m").attr("data-b")) + 1][0],
+          parseInt($("#" + id + " " + ".v500m").attr("data-a")),
+          parseInt($("#" + id + " " + ".v500m").attr("data-b")),
           "v500m",
           "green"
         );
@@ -1074,8 +1074,8 @@ function visuGPX(id, url, visuGpxOptions) {
       if (chart != null) {
         createIndicateurPlage(
           chart,
-          chartxy[parseInt($("#" + id + " " + ".v2s").attr("data-a")) + 1][0],
-          chartxy[parseInt($("#" + id + " " + ".v2s").attr("data-b")) + 1][0],
+          parseInt($("#" + id + " " + ".v2s").attr("data-a")),
+          parseInt($("#" + id + " " + ".v2s").attr("data-b")),
           "v2s",
           "green"
         );
@@ -1087,8 +1087,8 @@ function visuGPX(id, url, visuGpxOptions) {
       if (chart != null) {
         createIndicateurPlage(
           chart,
-          chartxy[parseInt($("#" + id + " " + ".v5s").attr("data-a")) + 1][0],
-          chartxy[parseInt($("#" + id + " " + ".v5s").attr("data-b")) + 1][0],
+          parseInt($("#" + id + " " + ".v5s").attr("data-a")),
+          parseInt($("#" + id + " " + ".v5s").attr("data-b")),
           "v5s",
           "green"
         );
@@ -1100,8 +1100,8 @@ function visuGPX(id, url, visuGpxOptions) {
       if (chart != null) {
         createIndicateurPlage(
           chart,
-          chartxy[parseInt($("#" + id + " " + ".v10s").attr("data-a")) + 1][0],
-          chartxy[parseInt($("#" + id + " " + ".v10s").attr("data-b")) + 1][0],
+          parseInt($("#" + id + " " + ".v10s").attr("data-a")),
+          parseInt($("#" + id + " " + ".v10s").attr("data-b")),
           "v10s",
           "green"
         );
@@ -1325,7 +1325,12 @@ function visuGPX(id, url, visuGpxOptions) {
     svg2.appendChild(line);
   }
 
-  function createIndicateurPosition(chart, x, classeName) {
+  function createIndicateurPosition(chart, i, classeName) {
+    if (modeX == 'distance') {
+      var x = chartxy[i+1][0];
+    } else {
+      var x = chartty[i+1][0];      
+    }
     var layout = chart.getChartLayoutInterface();
     var chartArea = layout.getChartAreaBoundingBox();
     var svg = chart.getContainer().getElementsByTagName("svg")[0];
@@ -1352,7 +1357,14 @@ function visuGPX(id, url, visuGpxOptions) {
     svg2.appendChild(line);
   }
 
-  function createIndicateurPlage(chart, x1, x2, classeName, couleur) {
+  function createIndicateurPlage(chart, i1, i2, classeName, couleur) {
+    if (modeX == 'distance') {
+      var x1 = chartxy[i1][0];
+      var x2 = chartxy[i2][0];
+    } else {
+      var x1 = chartty[i1][0];
+      var x2 = chartty[i2][0];     
+    }    
     var layout = chart.getChartLayoutInterface();
     var chartArea = layout.getChartAreaBoundingBox();
     var svg = chart.getContainer().getElementsByTagName("svg")[0];
