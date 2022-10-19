@@ -166,12 +166,7 @@ function getInfoSessions(spot) {
           '</div><div class="visible-xs"><br></div><div class="col-sm-4"><div class="fond-table encadrement-table"><table class="info-sessions">';
         html =
           html +
-          '<tr><td><a href="' +
-          leMWS +
-          '" target="_blank">Session</a></td><td>' +
-          pratique +
-          " du " +
-          laDate +
+          '<tr><td>' + pratique + '</td><td>' + laDate +
           "</td></tr>";
 
         if (spot == "" || spot.indexOf(",") > -1) {
@@ -367,7 +362,7 @@ function getInfoSessions(spot) {
             }
           }
           if (replay != "" && replay != undefined) {
-              html = html + ' - <a href="' + replay + '" target="_blank">Replay</a>';
+              html = html + '<a style="padding-left: 5px;" href="' + replay + '" target="_blank"><img src="/sensations/images/icone-play.png" title="Replay" alt"Replay" style="height: 20px;"></a>';
           }
           html = html + "</td></tr>";
         }
