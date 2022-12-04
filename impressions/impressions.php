@@ -27,7 +27,7 @@
                         <div class="col-xs-10 col-md-8 fond-table encadrement-table">
                             <p>Plus les humains font progresser les intelligences artificielles, plus celles-ci vont les aider à faire progresser les intelligences artificielles.
                                 <br>
-                                Sommes-nous à l'aube d'une nouvelle ère technologuique ?
+                                Sommes-nous à l'aube d'une nouvelle ère technologique ?
                                 </p>
                                 <p align="right"><em><font size="2">
                                 Gentilly, 2 novembre 2022 en essayant <a href="https://openai.com/blog/chatgpt/" target="_blank" >ChatGPT</a></font></em></p>	
