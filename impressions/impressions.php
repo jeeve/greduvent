@@ -21,6 +21,19 @@
                     <h1>impressions</h1>
 
                     <br>
+                    <a name="chatGPT"></a>
+                    <div class="row">
+                        <div class="col-xs-1 col-md-2 fond"></div>
+                        <div class="col-xs-10 col-md-8 fond-table encadrement-table">
+                            <p>Plus les humains font progresser les intelligences artificielles, plus celles-ci vont les aider à faire progresser les intelligences artificielles.
+                                </p>
+                                <p align="right"><em><font size="2">
+                                Gentilly, 2 novembre 2022 en essayant <a href="https://openai.com/blog/chatgpt/" target="_blank" >ChatGPT</a></font></em></p>	
+                        </div>
+                    </div>
+                    <br>
+
+                    <br>
                     <a name="explotation"></a>
                     <div class="row">
                         <div class="col-xs-1 col-md-3 fond"></div>
