@@ -21,7 +21,7 @@
                     <h1>impressions</h1>
 
                     <br>
-                    <a name="chatGPT"></a>
+                    <a name="chatgpt"></a>
                     <div class="row">
                         <div class="col-xs-1 col-md-2 fond"></div>
                         <div class="col-xs-10 col-md-8 fond-table encadrement-table">

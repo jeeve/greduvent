@@ -8,7 +8,7 @@
 
 		<item>
             <title>ChatGPT</title>
-            <link>https://greduvent.herokuapp.com/impressions.php#ChatGPT</link>
+            <link>https://greduvent.herokuapp.com/impressions/impressions.php#ChatGPT</link>
             <guid isPermaLink="false">chatgpt</guid>
             <description>Plus les humains font progresser les intelligences artificielles, plus celles-ci vont les aider à faire progresser les intelligences artificielles.</description>
             <pubDate>Fri, 2 dec 2022 23:31:00 GMT</pubDate>
