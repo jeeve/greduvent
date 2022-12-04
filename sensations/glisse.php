@@ -109,7 +109,7 @@
                             <h2>Windfoil</h2>
                             <ul>
                                 <li>
-                                    <p>flotteur&nbsp;JP Hydrofoil 135 modèle 2018<br>
+                                    <p>flotteur&nbsp;JP Hydrofoil 135 modèle 2017<br>
                                         dimensions : 215 x 86 cm
                                     </p>
                                 </li>
