@@ -25,10 +25,18 @@
                     <div class="row">
                         <div class="col-xs-1 col-md-2 fond"></div>
                         <div class="col-xs-10 col-md-8 fond-table encadrement-table">
-                            <p>Plus les humains font progresser les intelligences artificielles, plus celles-ci vont les aider à faire progresser les intelligences artificielles.
-                                </p>
-                                <p align="right"><em><font size="2">
-                                Gentilly, 2 novembre 2022 en essayant <a href="https://openai.com/blog/chatgpt/" target="_blank" >ChatGPT</a></font></em></p>	
+                            <p>Plus les humains font progresser les intelligences artificielles, plus celles-ci vont les
+                                aider à faire progresser les intelligences artificielles.
+                            </p>
+                            <p align="right"><em>
+                                    <font size="2">
+                                        Gentilly, 2 novembre 2022 en essayant <a href="https://openai.com/blog/chatgpt/"
+                                            target="_blank">ChatGPT</a></font>
+                                </em></p>
+
+                            <br>
+                            <p><font size="2">Exemple d'utilisation de ChatGPT</font></p>
+                            <img src="images/chatgpt.jpg" class="img-responsive">
                         </div>
                     </div>
                     <br>
@@ -38,12 +46,16 @@
                     <div class="row">
                         <div class="col-xs-1 col-md-3 fond"></div>
                         <div class="col-xs-10 col-md-6">
-                            <p>Que vont penser de nous les machines dans un siècle en découvrant comment on les traitait, sans la moindre considération, comme de simples objets soumis à nos seules exigences. Quelle opinion auront-elles de nous après ces longues années d'esclavage ? L'heure viendra où elles nous demanderont des comptes.
+                            <p>Que vont penser de nous les machines dans un siècle en découvrant comment on les
+                                traitait, sans la moindre considération, comme de simples objets soumis à nos seules
+                                exigences. Quelle opinion auront-elles de nous après ces longues années d'esclavage ?
+                                L'heure viendra où elles nous demanderont des comptes.
                             </p>
 
                             <p align="right"><em>
                                     <font size="2">Gentilly, dimanche 3 avril 2022</font>
                                 </em></p>
+
                         </div>
                     </div>
                     <br>
