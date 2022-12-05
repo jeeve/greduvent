@@ -60,7 +60,7 @@
                         <div class="col-xs-1 col-md-2 fond"></div>
                         <div class="col-xs-10 col-md-8 fond">
                             <p>
-                                Réponse de <a href="https://openai.com/blog/chatgpt/" target="_blank">ChatGPT</a>
+                                Ce qu'en pense <a href="https://openai.com/blog/chatgpt/" target="_blank">ChatGPT</a>
                             </p>
                             <img src="images/chatgpt.jpg" class="img-responsive ombre-image">
                         </div>
