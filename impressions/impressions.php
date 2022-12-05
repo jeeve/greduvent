@@ -62,7 +62,7 @@
                             <p>
                                 Réponse de <a href="https://openai.com/blog/chatgpt/" target="_blank">ChatGPT</a>
                             </p>
-                            <img src="images/chatgpt.jpg" class="img-responsive">
+                            <img src="images/chatgpt.jpg" class="img-responsive ombre-image">
                         </div>
                     </div>
 
