@@ -356,6 +356,27 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
 
 
                     <a name="ia"></a>
+                    
+                    <a name="chatgpt"></a>
+                    <h2>ChatGPT</h2>
+                    <p>Intelligence artificielle conversationnelle d'OpenAI</p>
+                            <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-9 fond">
+                            <p align="center">
+                            <img src="images/chatgpt.jpg" class="img-responsive ombre-image">
+                            </p>
+                            <p class="legende">
+                                Exemple de conversation avec <a href="https://openai.com/blog/chatgpt/" target="_blank">ChatGPT</a>
+                            </p>
+                        </div>
+                    </div>   
+                    <p align="right"><em>
+                            <font size="2">vendredi 2 décembre 2022</font>
+                        </em></p>
+                    <br>     
+                    
                     <a name="tensorflow"></a>
                     <h2>TensorFlow, le deep learning à portée de main</h2>
                     <p>Une vidéo très instructive pour appréhender l'apprentissage automatique à travers l'outil
