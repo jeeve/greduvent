@@ -30,8 +30,7 @@
                             </p>
                             <p align="right"><em>
                                     <font size="2">
-                                        Gentilly, 2 novembre 2022 en essayant <a href="https://openai.com/blog/chatgpt/"
-                                            target="_blank">ChatGPT</a></font>
+                                        Gentilly, 2 décembre 2022 en essayant <a href="/informatique/informatique.php#chatgpt">ChatGPT</a></font>
                                 </em></p>
                         </div>
                     </div>
@@ -55,16 +54,6 @@
                         </div>
                     </div>
                     <br>
-
-                    <div class="row">
-                        <div class="col-xs-1 col-md-2 fond"></div>
-                        <div class="col-xs-10 col-md-8 fond">
-                            <p>
-                                Ce qu'en pense <a href="https://openai.com/blog/chatgpt/" target="_blank">ChatGPT</a>
-                            </p>
-                            <img src="images/chatgpt.jpg" class="img-responsive ombre-image">
-                        </div>
-                    </div>
 
                     <br>
                     <a name="horloge"></a>
