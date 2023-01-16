@@ -86,6 +86,9 @@
                                 <li>
                                     <h3>Langages : c#, Javascript, Python, Php, Delphi...</h3>
                                 </li>
+                                <li>
+                                    <h3>Gestionnaire de versions GIT</h3>
+                                </li>
                                 <br>
                                 <li>
                                     <h3>Anglais lu et écrit</h3>
