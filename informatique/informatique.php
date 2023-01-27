@@ -388,7 +388,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                             </div>
                             </p>
                             <p class="legende">
-                                Thibault Neveu nous explique Les concepts et type d'apprentissage en jeu dans cet intelligence artificielle
+                                Thibault Neveu nous explique Les concepts et type d'apprentissage en jeu dans cette intelligence artificielle
                             </p>
                         </div>
                     </div>
