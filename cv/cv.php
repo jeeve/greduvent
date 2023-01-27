@@ -45,7 +45,7 @@
                         </div>
                         <div class="section-perso">
                             <h3><strong>Développeur informatique</strong></h3>
-                            <p>Date de naissance : 1972 (49 ans)</p>
+                            <p>Date de naissance : 1972 (50 ans)</p>
                             <p>Gentilly (94)</p>
                             <p><a target="-blank" class="mail"
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
