@@ -375,7 +375,23 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                     <p align="right"><em>
                             <font size="2">vendredi 2 décembre 2022</font>
                         </em></p>
-                    <br>     
+                    <br> 
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 fond"></div>
+                        <div class="col-xs-12 col-sm-8 fond">
+                            <p align="center">
+                            <div class="embed-responsive embed-responsive-16by9 ombre-image">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/6_N_n72so04?rel=0&amp;showinfo=0" frameborder="0"
+                                    allowfullscreen></iframe>
+                            </div>
+                            </p>
+                            <p class="legende">
+                                Thibault Neveu nous explique Les concepts et type d'apprentissage en jeu dans cet intelligence artificielle
+                            </p>
+                        </div>
+                    </div>
                     
                     <a name="tensorflow"></a>
                     <h2>TensorFlow, le deep learning à portée de main</h2>
