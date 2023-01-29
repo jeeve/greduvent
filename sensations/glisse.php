@@ -290,6 +290,9 @@
                                     <div class="item"> <img src="images/diapos/jvjgp-par-oliv91.jpg"
                                             alt="Grande-Paroisse - 5 juin 2022 - photo Olive91" title="Grande-Paroisse - 5 juin 2022 - photo Olive91">
                                     </div>
+                                    <div class="item"> <img src="images/diapos/jablines-28-12-22-phil95.jpg"
+                                            alt="Jablines - 28 décembre 2022 - photo Phil95" title="Jablines - 28 décembre 2022 - photo Phil95">
+                                    </div>
                                 </div>
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#carousel-example-generic" role="button"
