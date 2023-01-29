@@ -293,6 +293,9 @@
                                     <div class="item"> <img src="images/diapos/jablines-28-12-22-phil95.jpg"
                                             alt="Jablines - 28 décembre 2022 - photo Phil95" title="Jablines - 28 décembre 2022 - photo Phil95">
                                     </div>
+                                    <div class="item"> <img src="images/diapos/suivi-planche-poses.jpg"
+                                            alt="Poses - 29 décembre 2022" title="Poses - 29 décembre 2022">
+                                    </div>
                                 </div>
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#carousel-example-generic" role="button"
