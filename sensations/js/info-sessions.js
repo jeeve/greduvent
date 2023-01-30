@@ -249,7 +249,7 @@ function getInfoSessions(spot) {
         }
 
         lienMeteo =
-          "http://meteoflask.herokuapp.com/plot/" +
+          "http://outilsflask.herokuapp.com/meteo/plot/" +
           station +
           "/" +
           laDateAnglais;
