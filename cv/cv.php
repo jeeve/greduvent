@@ -84,7 +84,7 @@
                                     <h3>Windev, Webdev</h3>
                                 </li>
                                 <li>
-                                    <h3>Langages : c#, Javascript, Python, Php, Delphi...</h3>
+                                    <h3>Langages : c#, Typescript, Python, Php, Delphi...</h3>
                                 </li>
                                 <li>
                                     <h3>Gestionnaire de versions GIT</h3>
