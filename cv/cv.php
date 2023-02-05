@@ -3,8 +3,6 @@
 
 <head>
     <title>Jean-Valéry JULIEN</title>
-    <META NAME="Description"
-        CONTENT="Quelques mots sur l'auteur, ses motivations, lectures, playlist musicale et citation préférée." />
     <?php include("./includes/header.php"); ?>
     <link href="css/cv.css" rel="stylesheet">
     <style>
@@ -47,10 +45,14 @@
                             <h3><strong>Développeur informatique</strong></h3>
                             <p>Date de naissance : 1972 (50 ans)</p>
                             <p>Gentilly (94)</p>
-                            <p><a target="-blank" class="mail"
+                            <!--<p><a target="-blank" class="mail"
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
+                            </p>-->
+                            <p><a target="-blank" class="mail"
+                                    href="mailto:jeanvalery.julien@gmail.com">jeanvalery.julien@gmail.com</a>
                             </p>
                             <br>
+                            <!--
                             <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
                                 participer à la création d'outils numériques.
                             </p>
@@ -59,7 +61,8 @@
                                 leur
                                 porter
                                 assistance sont une autre source de motivation.
-                            </p>
+                            </p>-->
+                            <p>Développeur informatique, c'est pour moi avant tout un moyen d'exprimer la créativité. Le domaine est vaste et une multitude de technologies émergent et évoluent en permanence. Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt. Je m'investis actuellement plus particulièrement dans le framework Angular. L'informatique est pour moi une aventure au long cours, source intarissable de curiosité.</p>
                         </div>
                     </div>
                     <div class="col-md-1 fond"></div>
@@ -78,13 +81,13 @@
                                     <h3>Applications Windows, Web, HTML 5, Services Web</h3>
                                 </li>
                                 <li>
-                                    <h3>.NET, SharePoint, Wordpress</h3>
+                                    <h3>Langages : Typescript, Python, c#, Php, Delphi...</h3>
+                                </li>                                
+                                <li>
+                                    <h3>Angular, .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
-                                </li>
-                                <li>
-                                    <h3>Langages : c#, Typescript, Python, Php, Delphi...</h3>
                                 </li>
                                 <li>
                                     <h3>Gestionnaire de versions GIT</h3>
@@ -570,7 +573,7 @@
                             <p>Je suis
                                 sérieux dans mon travail, autonome si besoin, avec je pense, une bonne capacité
                                 d'adaptation.
-                                Curieux de nature, j'aime apprendre et partager de nouvelles technologies.
+                                Curieux de nature, j'aime apprendre et partager l'attrait pour les nouvelles technologies.
                             </p>
                             <br>
                             <p>A titre personnel j'utilise notamment les logiciels</p>
