@@ -16,7 +16,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
                                      $repertoireDestination.$nomDestination)) {
       /*  echo "Le fichier temporaire ".$_FILES["monfichier"]["tmp_name"].
                 " a été déplacé vers ".$repertoireDestination.$nomDestination;*/
-               echo "sensations/visu-gpx/visu-gpx.php?url=upload/".$nomDestination; 
+               echo "visu-gpx.php?url=upload/".$nomDestination; 
                //exit(header("Location: "."visu-gpx.php?url=upload/".$nomDestination));
      
 
