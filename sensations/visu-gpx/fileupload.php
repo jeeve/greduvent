@@ -10,7 +10,7 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
     // Copie dans le repertoire du script avec un nom
     // incluant l'heure a la seconde pres 
     $repertoireDestination = dirname(__FILE__)."//upload//";
-    $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
+    $nomDestination = uniqid().".".$extensionFichier;
 
     if (move_uploaded_file($_FILES["file"]["tmp_name"], 
                                      $repertoireDestination.$nomDestination)) {
