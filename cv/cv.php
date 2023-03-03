@@ -618,7 +618,7 @@
                                             les données GPX issues d'un capteur GPS.
                                         </p>
                                         <br>
-                                        <a href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                        <a href="/sensations/visu-gpx/index.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
                                             target="_blank"><img class="img-responsive ombre-image taille-double"
                                                 src="images/visu-gpx.jpg" /></a>
                                         <br>
