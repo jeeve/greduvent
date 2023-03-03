@@ -612,8 +612,8 @@
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
                                             <a class="external"
-                                                href="/sensations/visu-gpx/visu-gpx.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                target="_blank">Programme</a> écrit en <strong>Javascript</strong>
+                                                href="/sensations/visu-gpx/index.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                target="_blank">Programme</a> écrit en <strong>Typescript / Angular</strong>
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
