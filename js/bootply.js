@@ -13,9 +13,24 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
+  if (jQuery.support.touch) {	
+	
+    $("#sidebar + div").swipeleft(function() {
+      $("#sidebar").toggleClass("sidebar-show");
+      $(".container > div > div:last-child").toggleClass("sidebar-show");
+    });
+
+    $("#sidebar + div").swiperight(function() {
+      $("#sidebar").toggleClass("sidebar-show");
+      $(".container > div > div:last-child").toggleClass("sidebar-show");
+    });
+
+  }
+
   showHideBoutonMenu();
   $(window).scroll(showHideBoutonMenu);
   $(window).resize(showHideBoutonMenu);
+
 });
 
 function showHideBoutonMenu(event) {
