@@ -15,7 +15,7 @@ $(document).ready(function () {
 
   if (jQuery.support.touch) {	
 	
-    $("#sidebar + div").swipeleft(function() {
+    $("#sidebar").swipeleft(function() {
       $("#sidebar").toggleClass("sidebar-show");
       $(".container > div > div:last-child").toggleClass("sidebar-show");
     });
