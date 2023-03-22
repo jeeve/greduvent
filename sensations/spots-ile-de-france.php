@@ -1364,7 +1364,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <p><a href="/sensations/visu-gpx/visu-gpx.php" target="_blank">Visualisateur de
+                                    <p><a href="http://gpxweb.000webhostapp.com/" target="_blank">Visualisateur de
                                             traces GPS</a></p>
                                 </li>
                             </ul>
