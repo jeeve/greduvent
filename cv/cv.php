@@ -612,13 +612,13 @@
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
                                             <a class="external"
-                                                href="/sensations/visu-gpx/index.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
                                                 target="_blank">Programme</a> écrit en <strong>Typescript / Angular</strong>
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
                                         <br>
-                                        <a href="/sensations/visu-gpx/index.php?url=https://greduvent.000webhostapp.com/sensations/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                        <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
                                             target="_blank"><img class="img-responsive ombre-image taille-double"
                                                 src="images/visu-gpx.jpg" /></a>
                                         <br>
