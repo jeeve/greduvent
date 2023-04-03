@@ -31,7 +31,7 @@ function enregistre_niveau_station($station) {
 	$niveau = $obj->value;	
 		
 		// BD
-		$mysqli = new mysqli("localhost", "id17550762_jeeve", "kbYvXhDy!aRmo$*5", "id17550762_bd");
+		$mysqli = new mysqli("localhost", "id20378620_jeeve", "#o2sNJ]|)pWi8i9k", "id20378620_bd");
 		$Ajouter = "INSERT INTO niveau (station, hauteur) VALUES ('foret-orient', '" . floatval($niveau) . "')";
 		$mysqli->query($Ajouter);
 		$mysqli->close();				

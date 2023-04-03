@@ -3,7 +3,7 @@
 
 	
 		// BD
-		$mysqli = new mysqli("localhost", "id17550762_jeeve", "kbYvXhDy!aRmo$*5", "id17550762_bd");
+		$mysqli = new mysqli("localhost", "id20378620_jeeve", "#o2sNJ]|)pWi8i9k", "id20378620_bd");
 		
 	if (isset($_GET['date'])) {
 		$d = $_GET['date'];

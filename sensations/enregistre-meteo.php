@@ -57,7 +57,7 @@ function enregistre_meteo_station($station) {
 		
 		
 		// BD
-		$mysqli = new mysqli("localhost", "id17550762_jeeve", "kbYvXhDy!aRmo$*5", "id17550762_bd");
+		$mysqli = new mysqli("localhost", "id20378620_jeeve", "#o2sNJ]|)pWi8i9k", "id20378620_bd");
 		$Ajouter = "INSERT INTO meteo (station, vitesse, orientation, temperature) VALUES ('" . $station . "', '" . floatval($vitesse) . "', '" . floatval($direction) . "', '" . floatval($temperature) . "')";
 		$mysqli->query($Ajouter);
 		$mysqli->close();				
