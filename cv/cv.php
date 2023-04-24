@@ -84,7 +84,7 @@
                                     <h3>Langages : Typescript, Python, c#, Php, Delphi...</h3>
                                 </li>                                
                                 <li>
-                                    <h3>Angular, .NET, SharePoint, Wordpress</h3>
+                                    <h3><strong>Angular</strong>, .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
