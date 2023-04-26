@@ -90,8 +90,7 @@
                                 </li>
                                 <li>
                                     <h3><strong>Angular</strong> (<a
-                                            href="?go=realisationspersonnelles"
-                                            target="_blank">exemple</a>), .NET, SharePoint, Wordpress</h3>
+                                            href="?go=realisationspersonnelles">exemple</a>), .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
