@@ -62,7 +62,12 @@
                                 porter
                                 assistance sont une autre source de motivation.
                             </p>-->
-                            <p>Développeur informatique, c'est pour moi avant tout un moyen d'exprimer la créativité. Le domaine est vaste et une multitude de technologies émergent et évoluent en permanence. Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt. Je m'investis actuellement plus particulièrement dans le framework Angular. L'informatique est pour moi une aventure au long cours, source intarissable de curiosité.</p>
+                            <p>Développeur informatique, c'est pour moi avant tout un moyen d'exprimer la créativité. Le
+                                domaine est vaste et une multitude de technologies émergent et évoluent en permanence.
+                                Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt.
+                                Je m'investis actuellement plus particulièrement dans le framework Angular.
+                                L'informatique est pour moi une aventure au long cours, source intarissable de
+                                curiosité.</p>
                         </div>
                     </div>
                     <div class="col-md-1 fond"></div>
@@ -82,9 +87,11 @@
                                 </li>
                                 <li>
                                     <h3>Langages : Typescript, Python, c#, Php, Delphi...</h3>
-                                </li>                                
+                                </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="https://gpxweb.000webhostapp.com/?url=https://gpxweb.000webhostapp.com/gpx/2023_01_07_jablines.gpx" target="_blank">exemple</a>), .NET, SharePoint, Wordpress</h3>
+                                    <h3><strong>Angular</strong> (<a
+                                            href="?go=realisationspersonnelles"
+                                            target="_blank">exemple</a>), .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
@@ -573,7 +580,8 @@
                             <p>Je suis
                                 sérieux dans mon travail, autonome si besoin, avec je pense, une bonne capacité
                                 d'adaptation.
-                                Curieux de nature, j'aime apprendre et partager l'attrait pour les nouvelles technologies.
+                                Curieux de nature, j'aime apprendre et partager l'attrait pour les nouvelles
+                                technologies.
                             </p>
                             <br>
                             <p>A titre personnel j'utilise notamment les logiciels</p>
@@ -613,7 +621,8 @@
                                         <p>
                                             <a class="external"
                                                 href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                target="_blank">Programme</a> écrit en <strong>Typescript / Angular</strong>
+                                                target="_blank">Programme</a> écrit en <strong>Typescript /
+                                                Angular</strong>
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
@@ -815,14 +824,18 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                         <br>
                                         <h3><strong>Analyse de sessions en windfoil</strong></h3>
                                         <p>
-                                        <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">Implémentation</a> en <strong>Python</strong> sous <strong>Flask</strong> d'un perceptron multicouche avec <strong>Tensorflow</strong>. <a href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing" target="_blank">Notebook Colab</a>
+                                            <a href="https://outilsflask.herokuapp.com/sessions/ia"
+                                                target="blank">Implémentation</a> en <strong>Python</strong> sous
+                                            <strong>Flask</strong> d'un perceptron multicouche avec
+                                            <strong>Tensorflow</strong>. <a
+                                                href="https://colab.research.google.com/drive/1uQXnXweKwFYDEXRFHhVaowr5-HcVUg4u?usp=sharing"
+                                                target="_blank">Notebook Colab</a>
                                         </p>
                                         <br>
                                         <p align="center">
                                             <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">
                                                 <img alt="Analyse de sessions" title="Analyse de sessions"
-                                                    src="images/perceptron.jpg"
-                                                    class="img-responsive ombre-image" />
+                                                    src="images/perceptron.jpg" class="img-responsive ombre-image" />
                                             </a>
                                         </p>
 
@@ -863,6 +876,28 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
             bouton.attr('value', bouton.attr('value').replace("-", "+"));
         }
     });
+
+    $(document).ready(function() {
+        var g = getParameterByName("go");
+        $('#item-div-' + g).show("fast", function() {
+            jQuery("html, body").animate( 
+                {
+                    scrollTop: jQuery('#item-div-' + g).offset().top - 50,
+                },
+                "slow"
+            );
+        });
+    });
+
+    function getParameterByName(name) {
+        const url = window.location.href;
+        const n = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + n + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
     </script>
 </body>
 
