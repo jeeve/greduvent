@@ -84,7 +84,7 @@
                                     <h3>Langages : Typescript, Python, c#, Php, Delphi...</h3>
                                 </li>                                
                                 <li>
-                                    <h3><strong>Angular</strong>, .NET, SharePoint, Wordpress</h3>
+                                    <h3><strong>Angular</strong> (<a href="https://gpxweb.000webhostapp.com/?url=https://gpxweb.000webhostapp.com/gpx/2023_01_07_jablines.gpx" target="_blank">exemple</a>), .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
