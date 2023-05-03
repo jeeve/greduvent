@@ -46,7 +46,7 @@ Le message était clair. J'ai ouvert mon album pour
 en délivrer quelques <a href="https://goo.gl/photos/3NGxj62QN1ZVVo4w9" target="_blank"> photos</a> 
 		/
 		<a target="_blank" href="https://goo.gl/photos/X4zaahp45c1xGV7g9">croquis</a> et les conduire tout droit vers la lumière      
-du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font size="2"><a target="_blank" href="https://www.facebook.com/cuisine.spectrale">Jean-Valéry</a></font></em><br>
+du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font size="2"><a href="/cv">Jean-Valéry</a></font></em><br>
 <em><font size="2"><a target="_blank" href="https://twitter.com/jeeve">@jeeve</a></font></em><br></p>
 
 				 

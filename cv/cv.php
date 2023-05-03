@@ -625,6 +625,10 @@
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
                                         </p>
+                                        <p>
+                                        <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                            target="_blank">Tester l'application</a>
+                                        </p>
                                         <br>
                                         <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
                                             target="_blank"><img class="img-responsive ombre-image taille-double"
