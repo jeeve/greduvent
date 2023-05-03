@@ -620,14 +620,10 @@
                                         <p>
                                             <a class="external"
                                                 href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                target="_blank">Programme</a> écrit en <strong>Typescript /
+                                                target="_blank">Application</a> développée en <strong>Typescript /
                                                 Angular</strong>
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS.
-                                        </p>
-                                        <p>
-                                        <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                            target="_blank">Tester l'application</a>
                                         </p>
                                         <br>
                                         <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
