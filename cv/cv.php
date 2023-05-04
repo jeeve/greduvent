@@ -62,7 +62,7 @@
                                 porter
                                 assistance sont une autre source de motivation.
                             </p>-->
-                            <p>Développeur informatique, c'est pour moi avant tout un moyen d'exprimer la créativité. Le
+                            <p>Développeur informatique depuis tout jeune, c'est pour moi avant tout un moyen d'exprimer la créativité. Le
                                 domaine est vaste et une multitude de technologies émergent et évoluent en permanence.
                                 Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt.
                                 Je m'investis actuellement plus particulièrement dans le framework Angular.
