@@ -878,6 +878,8 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
 
     $(document).ready(function() {
         var g = getParameterByName("go");
+        var bouton = $('#div-' + g);
+        bouton.attr('value', bouton.attr('value').replace("+", "-"));
         $('#item-div-' + g).show("fast", function() {
             jQuery("html, body").animate( 
                 {
