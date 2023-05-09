@@ -12,6 +12,10 @@ p {
   font-size: 1.3em;
 }
 
+.justifie {
+  text-align: justify;
+}
+
 .navbar-brand.navbar-brand-texte {
   color: #398efd;
   text-decoration: none;
