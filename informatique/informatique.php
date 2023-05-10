@@ -283,7 +283,6 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                              
                             </p>
                             <p class="legende">Défauthèque</p>
-                            </a>
                         </div>
                     </div>
 
