@@ -277,14 +277,12 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                         <div class="col-xs-12 col-sm-3 fond"></div>
                         <div class="col-xs-12 col-sm-6 fond">
                             <p align="center">
-                                <a target="_blank" href="https://defautheque.herokuapp.com">
+                               
                                     <img alt="Défauthèque" title="Défauthèque" src="images/defautheque.jpg"
                                         class="img-responsive ombre-image" />
-                                </a>
+                             
                             </p>
-                            <p class="legende"><a target="_blank" href="https://defautheque.herokuapp.com">
-                                    Défauthèque</a>
-                            </p>
+                            <p class="legende">Défauthèque</p>
                             </a>
                         </div>
                     </div>
