@@ -101,6 +101,10 @@ strong {
   padding-left: 30px;
 }
 
+.fa-envelope {
+  margin-right: 10px;
+}
+
 .realisation input, #item-div-formation input {
   font-size: 1.7em;
 }

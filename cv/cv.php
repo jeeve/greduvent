@@ -49,8 +49,8 @@
                             <!--<p><a target="-blank" class="mail"
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
                             </p>-->
-                            <p><a target="-blank" class="mail"
-                                    href="mailto:jeanvalery.julien@gmail.com">jeanvalery.julien@gmail.com</a>
+                            <p><a target="-blank"
+                                    href="mailto:jeanvalery.julien@gmail.com"><i class="fa-solid fa-envelope"></i>jeanvalery.julien@gmail.com</a>
                             </p>
                             <br>
                             <!--
