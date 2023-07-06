@@ -212,6 +212,14 @@ h2.cliquable:hover, .cliquable h4:hover, .cliquable h3:hover, .cliquable p:hover
   cursor: pointer;
 }
 
+i {
+  font-size: 20px;
+  cursor: pointer;
+}
+i:hover {
+  background-color: #f8f8f8;
+}
+
 @media (max-width: 767px) {
 
   #bouton-bas-page {

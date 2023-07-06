@@ -5,6 +5,7 @@
     <title>Jean-Valéry JULIEN</title>
     <?php include("./includes/header.php"); ?>
     <link href="css/cv.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d3ea7d43a4.js" crossorigin="anonymous"></script>
     <style>
     .histo img {
         margin: 10px;
@@ -62,7 +63,8 @@
                                 porter
                                 assistance sont une autre source de motivation.
                             </p>-->
-                            <p class="justifie">Développeur informatique depuis tout jeune, c'est pour moi avant tout un moyen d'exprimer la créativité. Le
+                            <p class="justifie">Développeur informatique depuis tout jeune, c'est pour moi avant tout un
+                                moyen d'exprimer la créativité. Le
                                 domaine est vaste et une multitude de technologies émergent et évoluent en permanence.
                                 Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt.
                                 Je m'investis actuellement plus particulièrement dans le framework Angular.
@@ -89,8 +91,8 @@
                                     <h3>Langages : Typescript, Python, c#, Php, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a
-                                            href="?go=realisationspersonnelles">exemple</a>), .NET, SharePoint, Wordpress</h3>
+                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>),
+                                        .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
@@ -125,7 +127,7 @@
                                     <ul class="realisation">
                                         <li>
                                             <div class="cliquable" data-section="wordpress">
-                                                <input id="div-wordpress" type="button" value=" + " />
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Création
                                                     de sites internet avec
@@ -168,7 +170,7 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="sharepoint">
-                                                <input id="div-sharepoint" type="button" value=" + " />
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Mise en
                                                     place d'un portail
@@ -196,7 +198,7 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="windev">
-                                                <input id="div-windev" type="button" value=" + " />
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Développement d'interfaces entre
                                                     progiciels avec <strong>Windev</strong>
@@ -222,7 +224,7 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="webdev">
-                                                <input id="div-webdev" type="button" value=" + " />
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Développements
                                                     <strong>Webdev</strong>
@@ -258,7 +260,7 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="service-web">
-                                                <input id="div-service-web" type="button" value=" + " />
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Développement de services Web en <strong>c#</strong>
                                                 </h4>
@@ -280,7 +282,7 @@
                                         </li>
                                         <li>
                                             <div class="cliquable" data-section="delphi">
-                                                <input id="div-delphi" type="button" value=" + " />
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Développement d'applications
                                                     métier
@@ -433,8 +435,8 @@
                             <ul>
                                 <li>
                                     <div class="cliquable" data-section="formation-academique">
-                                        <input id="div-formationsacademiques" type="button" value=" - " />
                                         <h3>
+                                            <i class="fa-solid fa-angle-up fa-rotate-180"></i>
                                             <strong>Formations
                                                 académiques</strong>
                                         </h3>
@@ -472,8 +474,8 @@
                                 </li>
                                 <li>
                                     <div class="cliquable" data-section="formation-professionnelle">
-                                        <input id="div-formationsprofessionnelles" type="button" value=" + " />
                                         <h3>
+                                            <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                             <strong>Formations durant mon parcours professionnel</strong>
                                         </h3>
                                     </div>
@@ -605,8 +607,8 @@
                             </p>
                             <div class="bouton-realisationspersonnelles cliquable"
                                 data-section="realisation-personnelle">
-                                <input id="div-realisationspersonnelles" type="button" value=" + " />
                                 <h3>
+                                    <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                     <strong>Exemples de réalisations personnelles</strong>
                                 </h3>
                             </div>
@@ -680,7 +682,7 @@ Traverse vers (<span style="background-color: #fff0f0">&#39;gauche&#39;</span>, 
                                     <div class="col-xs-12 col-md-9 fond">
 
                                         <div class="bouton-programme cliquable" data-section="programme-jeujose">
-                                            <input id="div-programme-jeufose" type="button" value=" + " />
+                                            <i class="fa-solid fa-angle-up fa-rotate-90"></i>
 
                                             <p>Le programme écrit en <strong>Python</strong></p>
                                         </div>
@@ -863,31 +865,41 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     <?php include("./includes/footer.php"); ?>
     <script>
     $(".cliquable").click(function() {
-        var section = $(this).attr("data-section");
+        const section = $(this).attr("data-section");
         $('.section[data-section="' + section + '"]').slideToggle(
             "fast",
             function() {}
         );
-        var bouton = $('.cliquable[data-section="' + section + '"] input');
-        if (bouton.attr('value').indexOf("+") > -1) {
-            bouton.attr('value', bouton.attr('value').replace("+", "-"));
+
+        const icone = $('.cliquable[data-section="' + section + '"] i'); // rotation de l'icone lors du clic
+        if (icone.hasClass("fa-rotate-90")) {
+            icone.removeClass("fa-rotate-90");
+            icone.addClass("fa-rotate-180");
         } else {
-            bouton.attr('value', bouton.attr('value').replace("-", "+"));
+            icone.removeClass("fa-rotate-180");
+            icone.addClass("fa-rotate-90");
         }
     });
 
     $(document).ready(function() {
-        var g = getParameterByName("go");
-        var bouton = $('#div-' + g);
-        bouton.attr('value', bouton.attr('value').replace("+", "-"));
-        $('#item-div-' + g).show("fast", function() {
-            jQuery("html, body").animate( 
-                {
-                    scrollTop: jQuery('#item-div-' + g).offset().top - 50,
-                },
-                "slow"
-            );
-        });
+        const g = getParameterByName("go");
+        if (g != null) {
+            const icone = $('.bouton-' + g + ' i');
+            if (icone.hasClass("fa-rotate-90")) {
+                icone.removeClass("fa-rotate-90");
+                icone.addClass("fa-rotate-180");
+            } else {
+                icone.removeClass("fa-rotate-180");
+                icone.addClass("fa-rotate-90");
+            }
+            $('#item-div-' + g).show("fast", function() {
+                jQuery("html, body").animate({
+                        scrollTop: jQuery('#item-div-' + g).offset().top - 50,
+                    },
+                    "slow"
+                );
+            });
+        }
     });
 
     function getParameterByName(name) {
