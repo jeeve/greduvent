@@ -82,7 +82,7 @@
                                     <h3>Développement logiciel</h3>
                                 </li>
                                 <li>
-                                    <h3>Programmation orientée objet</h3>
+                                    <h3>Programmation orientée objet et fonctionnelle</h3>
                                 </li>
                                 <li>
                                     <h3>Applications Windows, Web, HTML 5, Services Web</h3>
