@@ -44,7 +44,20 @@
                         </div>
                         <div class="section-perso">
                             <h3><strong>Développeur informatique</strong></h3>
-                            <p>Date de naissance : 1972 (50 ans)</p>
+                            <p>Date de naissance : 1972 (<?php
+// Définissez votre date de naissance en tant que variable
+$date_naissance = "1972-11-28";
+$date_naissance = DateTime::createFromFormat('Y-m-d', $date_naissance);
+
+// Obtenez la date actuelle
+$date_actuelle = new DateTime();
+
+// Calculez l'âge
+$age = $date_actuelle->diff($date_naissance)->y;
+
+// Afficher l'âge
+echo $age;
+?> ans)</p>
                             <p>Gentilly (94)</p>
                             <!--<p><a target="-blank" class="mail"
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSeqrcDEWlgXWPVxr-wBuH7s0XvJSQLcMwyXES9m16BSrsYU-g/viewform?usp=pp_url">contact</a>
