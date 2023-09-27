@@ -495,6 +495,11 @@ echo $age;
                                     <div id="item-div-formationsprofessionnelles" class="section"
                                         data-section="formation-professionnelle" style="display:none">
                                         <ul>
+                                        <li>
+                                            <h3>Développer une application <strong>Java</strong> full stack avec les Frameworks <strong>Spring</strong>, <strong>JPA/Hibernate</strong> et <strong>Angular</strong>
+                                            </h3>
+                                                <p>Ib Cegos - 18/09/2023 au 21/09/2023</p>
+                                            </li>
                                             <li>
                                                 <h3><strong>PowerPlatform</strong> -
                                                     PL-100-Microsoft-Power-Platform-App-Maker
