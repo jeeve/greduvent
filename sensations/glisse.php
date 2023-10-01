@@ -296,6 +296,9 @@
                                     <div class="item"> <img src="images/diapos/suivi-planche-poses.jpg"
                                             alt="Poses - 29 décembre 2022" title="Poses - 29 décembre 2022">
                                     </div>
+                                    <div class="item"> <img src="images/diapos/poses-v8.jpg"
+                                            alt="Poses - 24 septembre 2023 - photo Phil95" title="Poses - 24 septembre 2023 - photo Phil95">
+                                    </div>
                                 </div>
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#carousel-example-generic" role="button"
