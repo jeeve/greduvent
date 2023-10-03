@@ -135,7 +135,7 @@ echo $age;
                                         <strong>I</strong>ndustries
                                         de la <strong>F</strong>onderie - Sèvres (92)
                                     </h3>
-                                    <h4>Technicien informatique</h4>
+                                    <h4>Développeur informatique</h4>
                                     <h4>De septembre 1997 à aujourd'hui</h4>
                                     <ul class="realisation">
                                         <li>
