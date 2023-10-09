@@ -104,7 +104,7 @@ echo $age;
                                     <h3>Langages : Typescript, Java, Python, c#, Php, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), Spring,
+                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), React, Spring,
                                         .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
@@ -129,14 +129,39 @@ echo $age;
                         </h2>
                         <div id="item-div-experience" class="section" data-section="experience">
                             <ul>
-                                <li>
+                            <li>
+                                    <h3><strong>CETIM</strong> - <strong>Ce</strong>ntre <strong>T</strong>echnique
+                                        des
+                                        <strong>I</strong>ndustries
+                                         <strong>M</strong>écaniques - Sèvres (92)
+                                    </h3>
+                                    <h4>Développeur informatique</h4>
+                                    <h4>De avril 2023 à aujourd'hui</h4>
+
+                                    <ul class="realisation">
+                                        <li>
+    
+                                    
+                                                <h4>
+                                                    Création
+                                                    d'un site de génération de numéros de dossiers avec
+                                                    <strong>Spring / Hibernate / Thymeleaf</strong>
+                                                </h4>
+                                            
+                                        </li>  
+                                        <li>
+                                            <h4>Développement de notebooks <strong>Python</strong> dans le cadre de l'analyse de données industrielles (traitement fichiers csv, OCR...)</h4>
+                                        </li> 
+                                    </ul>   
+                            </li>                                
+                                    <li>
                                     <h3><strong>CTIF</strong> - <strong>C</strong>entre <strong>T</strong>echnique
                                         des
                                         <strong>I</strong>ndustries
                                         de la <strong>F</strong>onderie - Sèvres (92)
                                     </h3>
                                     <h4>Développeur informatique</h4>
-                                    <h4>De septembre 1997 à aujourd'hui</h4>
+                                    <h4>De septembre 1997 à avril 2023</h4>
                                     <ul class="realisation">
                                         <li>
                                             <div class="cliquable" data-section="wordpress">
