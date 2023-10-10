@@ -82,7 +82,7 @@ echo $age;
                                 Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt.
                                 Je m'investis actuellement plus particulièrement dans le framework Angular.
                                 L'informatique est pour moi une aventure au long cours, source intarissable de
-                                curiosité.</p>
+                                curiosité et de passion.</p>
                         </div>
                     </div>
                     <div class="col-md-1 fond"></div>
