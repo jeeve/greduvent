@@ -64,7 +64,7 @@
                     </div>
 
                     <p align="right"><em>
-                            <font size="2">jeudi 9 juin 2022</font>
+                            <font size="2">mardi 10 octobre 2023</font>
                         </em></p>
 
                     <hr>
