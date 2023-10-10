@@ -22,6 +22,7 @@
                     <br>
                     <ul class="sommaire">
                         <!--						<li><a href="#meteo-temps-reel">Service Web de météo temps réel</a></li> -->
+                        <li><a href="#metablaster">Metablaster</a></li>
                         <li><a href="#metapong">Metapong</a></li>
                         <li><a href="#floutage-visages">Floutage de visages</a></li>
                         <li><a href="#jeudejose">Le jeu de José</a></li>
