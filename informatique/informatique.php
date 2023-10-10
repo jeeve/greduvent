@@ -41,6 +41,33 @@
 <hr>
 -->
 
+<a name="metablaster"></a>
+                    <h2>Metablaster</h2>
+                    <p>Jeu en ligne multijoueurs basé sur le célèbre Dynablaster. React coté navigateur avec Nodejs coté serveur.<br>
+                    </p>
+                    <br>
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-2 fond"></div>
+                        <div class="col-xs-12 col-sm-8 fond">
+                            <p align="center">
+                                <a href="http://metablaster.alwaysdata.net/" target="blank">
+                                    <img alt="Metablaster" title="Jouer à Metablaster" src="images/metablaster.png"
+                                        class="img-responsive ombre-image" />
+                                </a>
+                            </p>
+                            <p class="legende"><a href="https://github.com/jeeve/metablaster" target="_blank">Code source</a>
+                            </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p align="right"><em>
+                            <font size="2">jeudi 9 juin 2022</font>
+                        </em></p>
+
+                    <hr>
+
 <a name="metapong"></a>
                     <h2>Metapong</h2>
                     <p>Un petit jeu Pong multijoueurs tournant sur un serveur Nodejs. L'espace de jeu s'agrandit au fur et à mesure que les utilisateurs se connectent.<br>

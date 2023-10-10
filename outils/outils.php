@@ -42,6 +42,9 @@
                     <h2>Divers</h2>
                     <ul>
                     <li>
+                            <p><a href="/informatique/informatique.php#metablaster">Metablaster</a></p>
+                        </li>
+                    <li>
                             <p><a href="/informatique/informatique.php#metapong">Metapong</a></p>
                         </li>
                         <li>

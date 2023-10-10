@@ -104,7 +104,7 @@ echo $age;
                                     <h3>Langages : Typescript, Java, Python, c#, Php, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), React, Spring,
+                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), <a href="?go=realisationspersonnelles">React</a>, Spring,
                                         .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
@@ -674,6 +674,24 @@ echo $age;
                                         <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
                                             target="_blank"><img class="img-responsive ombre-image taille-double"
                                                 src="images/visu-gpx.jpg" /></a>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-1 fond"></div>
+                                    <div class="col-xs-12 col-md-10 fond">
+
+                                        <h3><strong>Metablaster</strong></h3>
+                                        <p>
+                                            <a class="external"
+                                                href="http://metablaster.alwaysdata.net/"
+                                                target="_blank">Jeu en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong>
+                                        </p>
+                                        <br>
+                                        <a href="http://metablaster.alwaysdata.net/"
+                                            target="_blank"><img class="img-responsive ombre-image taille-double centre" title="Jouer à Metablaster"
+                                                src="../informatique/images/metablaster.png" style="display: block; width: 659px; margin: auto;"/></a>
                                         <br>
                                     </div>
                                 </div>
