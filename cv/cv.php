@@ -65,6 +65,8 @@ echo $age;
                             <p><a target="-blank"
                                     href="mailto:jeanvalery.julien@gmail.com"><i class="fa-solid fa-envelope"></i>jeanvalery.julien@gmail.com</a>
                             </p>
+                            <p><i class="fa-solid fa-phone"></i>06 18 96 19 96
+                            </p>
                             <br>
                             <!--
                             <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
