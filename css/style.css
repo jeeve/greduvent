@@ -145,6 +145,9 @@ a.external {
  .sommaire li {
 	font-size: 100%; 
  }	
+ #sidebar {
+	width: 130px;
+ }
 }
 
 /* utilisé pour compenser le décalage des signets à cause de la navbar fixe */
