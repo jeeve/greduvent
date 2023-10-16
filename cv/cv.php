@@ -79,8 +79,9 @@ echo $age;
                             <p class="justifie">Développeur informatique depuis tout jeune, c'est pour moi avant tout un
                                 moyen d'exprimer la créativité. Le
                                 domaine est vaste et une multitude de technologies émergent et évoluent en permanence.
+                                <!--
                                 Parmi celles-ci, le Web et en particulier la partie "front-end" concentrent mon intérêt.
-                                Je m'investis actuellement plus particulièrement dans le framework Angular.
+                                Je m'investis actuellement plus particulièrement dans le framework Angular.-->
                                 L'informatique est pour moi une aventure au long cours, source intarissable de
                                 curiosité et de passion.</p>
                         </div>
@@ -104,7 +105,7 @@ echo $age;
                                     <h3>Langages : Typescript, Java, Python, c#, Php, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), <a href="?go=realisationspersonnelles">React</a>, Spring,
+                                    <h3>Angular (<a href="?go=realisationspersonnelles">exemple</a>), <a href="?go=realisationspersonnelles">React</a>, Spring,
                                         .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
