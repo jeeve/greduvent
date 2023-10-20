@@ -689,7 +689,7 @@ echo $age;
                                         <p>
                                             <a class="external"
                                                 href="http://metablaster.alwaysdata.net/"
-                                                target="_blank">Jeu en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong>
+                                                target="_blank">Jeu multijoueurs en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong>
                                         </p>
                                         <br>
                                         <a href="http://metablaster.alwaysdata.net/"
