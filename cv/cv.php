@@ -622,7 +622,7 @@ echo $age;
                            </ul>
                            -->
                             <p>Passionné depuis le plus jeune âge par la création informatique, j'ai acquis une
-                                expérience solide dans différents langages et paragdimes de programmation.
+                                expérience solide dans différents langages et paradigmes de programmation.
                             </p>
                             <p>Je suis
                                 sérieux dans mon travail, autonome si besoin, avec je pense, une bonne capacité
