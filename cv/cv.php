@@ -193,13 +193,12 @@ echo $age;
                                                         </div>
                                                     </li>
                                                     <li>
-                                                        <a href="https://formation.ctif.com" target="_blank">
+                                                        
                                                             <img class="img-responsive ombre-image"
                                                                 src="images/formation.png" />
-                                                        </a>
+                                                       
                                                         <div class="legende">
-                                                            <a class="external" href="https://formation.ctif.com"
-                                                                target="_blank">formation.ctif.com</a>
+                                                          
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Content
                                                                 Type personnalisés
