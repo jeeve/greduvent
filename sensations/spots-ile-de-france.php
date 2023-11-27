@@ -302,7 +302,7 @@
                                 </div>
 
                                 <div id="item-webcam-poses" class="collapse">
-                                    <p>Webcam du lac sur le <a href="https://windsurf-lery-poses.soforums.com/" target="_blank">forum WLP</a></p>
+                                    <!--<p>Webcam du lac sur le <a href="https://windsurf-lery-poses.soforums.com/" target="_blank">forum WLP</a></p>-->
                                     <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
 
                                        
