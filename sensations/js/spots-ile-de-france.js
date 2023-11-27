@@ -24,7 +24,7 @@
 	}
 	
 	    function getWebCams() {
-			getWebCamPoses();
+			//getWebCamPoses();
 			getWebCamMoisson();
 			getWebCamSaintQuentin();
 			getWebCamGrandeParoisse();
