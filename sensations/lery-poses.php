@@ -65,6 +65,7 @@
 
                         <div class="col-xs-12 col-sm-12 fond">
                             <br>
+                            <p>Webcam du lac sur le <a href="https://windsurf-lery-poses.soforums.com/" target="_blank">forum WLP</a></p>
                             <div class="visible-xs">
                                 <p>A13 près de Louviers, <a
                                         href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/131/haute-normandie/louviers/rouen-vers-paris'
