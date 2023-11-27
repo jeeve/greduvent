@@ -65,23 +65,22 @@
 
                         <div class="col-xs-12 col-sm-12 fond">
                             <br>
-                              <!--
                             <div class="visible-xs">
                                 <p>A13 près de Louviers, <a
                                         href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/131/haute-normandie/louviers/rouen-vers-paris'
                                         target="_blank">péage de Heudebouville</a>, vue orientée vers Paris</p>
                             </div>
-                            -->
 
                             <div class="embed-responsive embed-responsive-16by9 ombre-image">
                                 <div>
-                                    <img class="img-responsive" src="https://meteocamip.ddns.net/mjpg/video.mjpg?resolution=1280x720&amp;compression=30&amp;rotation=0&amp;textposition=top&amp;textbackgroundcolor=black&amp;textcolor=white&amp;text=0&amp;clock=0&amp;date=0&amp;overlayimage=0&amp;fps=0&amp;keyframe_interval=32&amp;videobitrate=0&amp;maxframesize=0">
-                                    <!--<div id="webcam" class="hidden-xs">
+                                    <video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto"
+                                        loop="" muted="muted" playsinline="playsinline" autoplay="">
+                                    </video>
+                                    <div id="webcam" class="hidden-xs">
                                         <p>A13 près de Louviers, <a
                                                 href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/131/haute-normandie/louviers/rouen-vers-paris'
                                                 target="_blank">péage de Heudebouville</a>, vue orientée vers Paris</p>
                                     </div>
-                                    -->
                                     <div id="meteo-tems-reel" class="hidden-xs">
                                         <table>
                                             <tr>
@@ -409,7 +408,7 @@
             dataType: 'json'
         }).then(function(data) {
             console.log(data.src);
-            jQuery('#videojs-viewsurf_html5_api').attr('src', 'data.src');
+            jQuery('#videojs-viewsurf_html5_api').attr('src', data.src);
         });
     }
 
@@ -434,7 +433,7 @@
 
         getInfoSpot();
         getInfoSessions('Léry-Poses');
-        //getWebCam();
+        getWebCam();
         getMeteo();
 
         if (navigator.geolocation) {
