@@ -202,6 +202,10 @@ a {
   font-size: 1em;
 }
 
+.italique {
+  font-style: italic;
+}
+
 .site-perso {
   margin-bottom: 40px;
 }

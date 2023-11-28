@@ -138,8 +138,7 @@ echo $age;
                                         <strong>I</strong>ndustries
                                          <strong>M</strong>écaniques - Sèvres (92)
                                     </h3>
-                                    <h4>Développeur informatique</h4>
-                                    <h4>De avril 2023 à aujourd'hui</h4>
+                                    <h4 class="italique">Développeur informatique, d'avril 2023 à aujourd'hui</h4>
 
                                     <ul class="realisation">
                                         <li>
@@ -167,8 +166,7 @@ echo $age;
                                         <strong>I</strong>ndustries
                                         de la <strong>F</strong>onderie - Sèvres (92)
                                     </h3>
-                                    <h4>Développeur informatique</h4>
-                                    <h4>De septembre 1997 à avril 2023</h4>
+                                    <h4 class="italique">Développeur informatique, de septembre 1997 à avril 2023</h4>
                                     <ul class="realisation">
                                         <li>
                                             <div class="cliquable" data-section="wordpress">
