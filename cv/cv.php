@@ -144,7 +144,11 @@ echo $age;
                                     <ul class="realisation">
                                         <li>
     
-                                    
+                                            <h4>
+                                                    Réalisation en cours d'un projet saisie de temps avec
+                                                    <strong>Angular</strong>
+                                                </h4>
+
                                                 <h4>
                                                     Création
                                                     d'un site de génération de numéros de dossiers avec
