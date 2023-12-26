@@ -649,7 +649,7 @@ echo $age;
                                 </li>
                             </ul>
                             <br>
-                            <p>Je suis passionné par les sciences, pratique le windfoil, et aime profiter de la nature.
+                            <p>Je suis passionné par les sciences, l'intelligence artificielle, pratique le windfoil, et aime profiter de la nature.
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.
                             </p>
                             <div class="bouton-realisationspersonnelles cliquable"
