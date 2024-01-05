@@ -82,8 +82,8 @@ echo $age;
                                 moyen d'exprimer la créativité. Le
                                 domaine est vaste et une multitude de technologies émergent et évoluent en permanence.
                                 
-                                Parmi celles-ci, le Web <!--et en particulier la partie "front-end"--> concentre mon intérêt.
-                                Je m'investis actuellement plus particulièrement dans le framework <strong>Angular</strong>.
+                                Parmi celles-ci, le Web et en particulier la partie "front-end" concentre mon intérêt.
+                                <!--Je m'investis actuellement plus particulièrement dans le framework <strong>Angular</strong>.-->
                                 L'informatique est pour moi une aventure au long cours, source intarissable de
                                 curiosité et de passion.</p>
                         </div>
