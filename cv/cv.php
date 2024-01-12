@@ -214,6 +214,28 @@ echo $age;
                                             </div>
                                         </li>
                                         <li>
+                                            <div class="cliquable" data-section="service-web">
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
+                                                <h4>
+                                                    Développement de services Web en <strong>c#</strong> sous <strong>ASP.NET</strong>
+                                                </h4>
+                                            </div>
+                                            <div id="item-div-service-web" class="section" data-section="service-web"
+                                                style="display:none">
+                                                <ul class="service-web">
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/servicesweb.png" />
+                                                        <div class="legende">
+                                                            Services Web Soap
+                                                            <div class="sous-legende">Visual Studio
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
                                             <div class="cliquable" data-section="sharepoint">
                                                 <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
@@ -297,28 +319,6 @@ echo $age;
                                                         <div class="legende">
                                                             Logiciel de gestion de la qualité
                                                             <div class="sous-legende">Base de données sur SQL Server
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="cliquable" data-section="service-web">
-                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
-                                                <h4>
-                                                    Développement de services Web en <strong>c#</strong>
-                                                </h4>
-                                            </div>
-                                            <div id="item-div-service-web" class="section" data-section="service-web"
-                                                style="display:none">
-                                                <ul class="service-web">
-                                                    <li>
-                                                        <img class="img-responsive ombre-image taille-double"
-                                                            src="images/servicesweb.png" />
-                                                        <div class="legende">
-                                                            Services Web Soap
-                                                            <div class="sous-legende">Visual Studio
                                                             </div>
                                                         </div>
                                                     </li>
