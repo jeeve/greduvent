@@ -153,7 +153,7 @@ echo $age;
 
                                                 <h4>
                                                     Création
-                                                    d'un site de génération de numéros de dossiers avec
+                                                    d'applications avec
                                                     <strong>Spring / Hibernate / Thymeleaf</strong>
                                                 </h4>
                                             
