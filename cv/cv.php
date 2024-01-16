@@ -34,7 +34,7 @@
             <!-- main area -->
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
                 <a name="home"></a>
-                <h1 class="hidden-xs">Curriculum vitæ</h1>
+                <!--<h1 class="hidden-xs">Curriculum vitæ</h1>-->
                 <div class="row">
                     <div class="col-xs-11 col-md-4 fond-table encadrement-table encadre">
                         <div>
