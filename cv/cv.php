@@ -104,10 +104,10 @@ echo $age;
                                     <h3>Applications Windows, Web, HTML 5, Services Web</h3>
                                 </li>
                                 <li>
-                                    <h3>Langages : Typescript, Java, Python, c#, Php, Delphi...</h3>
+                                    <h3>Langages : Typescript, Java, Python, C#, Php, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), <a href="?go=realisationspersonnelles">React</a>, Spring,
+                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), React, Spring,
                                         .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
@@ -217,7 +217,7 @@ echo $age;
                                             <div class="cliquable" data-section="service-web">
                                                 <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
-                                                    Développement de services Web en <strong>c#</strong> sous <strong>ASP.NET</strong>
+                                                    Développement de services Web en <strong>C#</strong> sous <strong>ASP.NET</strong>
                                                 </h4>
                                             </div>
                                             <div id="item-div-service-web" class="section" data-section="service-web"
