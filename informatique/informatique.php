@@ -52,7 +52,7 @@
                         <div class="col-xs-12 col-sm-2 fond"></div>
                         <div class="col-xs-12 col-sm-8 fond">
                             <p align="center">
-                                <a href="http://metablaster.alwaysdata.net/" target="blank">
+                                <a href="https://metablaster.alwaysdata.net/" target="blank">
                                     <img alt="Metablaster" title="Jouer à Metablaster" src="images/metablaster.png"
                                         class="img-responsive ombre-image" />
                                 </a>
@@ -79,7 +79,7 @@
                         <div class="col-xs-12 col-sm-2 fond"></div>
                         <div class="col-xs-12 col-sm-8 fond">
                             <p align="center">
-                                <a href="images/metapong.gif" target="blank">
+                                <a href="https://metapong.alwaysdata.net/" target="blank">
                                     <img alt="Metapong" title="Metapong" src="images/metapong.gif"
                                         class="img-responsive ombre-image" />
                                 </a>

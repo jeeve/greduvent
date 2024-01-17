@@ -692,11 +692,11 @@ echo $age;
                                         <h3><strong>Metablaster</strong></h3>
                                         <p>
                                             <a class="external"
-                                                href="http://metablaster.alwaysdata.net/"
+                                                href="https://metablaster.alwaysdata.net/"
                                                 target="_blank">Jeu multijoueurs en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong>
                                         </p>
                                         <br>
-                                        <a href="http://metablaster.alwaysdata.net/"
+                                        <a href="https://metablaster.alwaysdata.net/"
                                             target="_blank"><img class="img-responsive ombre-image taille-double centre" title="Jouer à Metablaster"
                                                 src="../informatique/images/metablaster.png" style="display: block; width: 659px; margin: auto;"/></a>
                                         <br>
@@ -875,14 +875,14 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                         <h3><strong>Metapong</strong></h3>
                                         <p>
                                             Un <a target="_blank"
-                                                href="/informatique/informatique.php#metapong">programme</a><strong>
+                                                href="https://metapong.alwaysdata.net/">programme</a><strong>
                                                 Javascript</strong> multijoueurs tournant sur un
                                             serveur <strong>Nodejs</strong>. L'espace de jeu s'agrandit au fur et à
                                             mesure que les utilisateurs se connectent.
                                         </p>
                                         <br>
                                         <p align="center">
-                                            <a href="/informatique/informatique.php#metapong" target="blank">
+                                            <a href="https://metapong.alwaysdata.net/" target="blank">
                                                 <img alt="Metapong" title="Metapong"
                                                     src="/informatique/images/metapong.gif"
                                                     class="img-responsive ombre-image" />
