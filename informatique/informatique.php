@@ -71,7 +71,7 @@
 
 <a name="metapong"></a>
                     <h2>Metapong</h2>
-                    <p>Un petit jeu Pong multijoueurs tournant sur un serveur Nodejs. L'espace de jeu s'agrandit au fur et à mesure que les utilisateurs se connectent.<br>
+                    <p><a href="https://metapong.alwaysdata.net/" target="_blank">Un petit jeu Pong multijoueurs</a> tournant sur un serveur Nodejs. L'espace de jeu s'agrandit au fur et à mesure que les utilisateurs se connectent.<br>
                     </p>
                     <br>
                     <div class="row">
@@ -79,7 +79,7 @@
                         <div class="col-xs-12 col-sm-2 fond"></div>
                         <div class="col-xs-12 col-sm-8 fond">
                             <p align="center">
-                                <a href="images/metapong.gif" target="blank">
+                                <a href="https://metapong.alwaysdata.net/" target="_blank">
                                     <img alt="Metapong" title="Metapong" src="images/metapong.gif"
                                         class="img-responsive ombre-image" />
                                 </a>
