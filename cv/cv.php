@@ -114,9 +114,6 @@ echo $age;
                                     <h3>Windev, Webdev</h3>
                                 </li>
                                 <li>
-                                    <h3>SQL</h3>
-                                </li>
-                                <li>
                                     <h3>Gestionnaire de sources GIT</h3>
                                 </li>
                                 <br>
