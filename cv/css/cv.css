@@ -17,6 +17,17 @@ header img {
   width: 100%;
 }
 
+.identite {
+  top: -100px;
+  z-index: 1000;
+  height: auto;
+}
+
+.row.section {
+  position: relative;
+  top: -100px;
+}
+
 p {
   font-size: 1.3em;
 }
@@ -235,6 +246,12 @@ i {
 }
 i:hover {
   background-color: #f8f8f8;
+}
+
+@media (max-width: 991px) {
+  .section-competence {
+    top: -100px;
+  }
 }
 
 @media (max-width: 767px) {

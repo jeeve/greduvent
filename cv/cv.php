@@ -39,7 +39,7 @@
                 <a name="home"></a>
                 <!--<h1 class="hidden-xs">Curriculum vitæ</h1>-->
                 <div class="row">
-                    <div class="col-xs-11 col-md-4 fond-table encadrement-table encadre">
+                    <div class="col-xs-11 col-md-4 identite fond-table encadrement-table encadre">
                         <div>
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
@@ -92,7 +92,7 @@ echo $age;
                         </div>
                     </div>
                     <div class="col-md-1 fond"></div>
-                    <div class="col-xs-12 col-md-6 fond">
+                    <div class="col-xs-12 col-md-6 section-competence fond">
                         <h2>Compétences
                         </h2>
                         <div id="item-div-competences" class="section" data-section="competences">
@@ -127,7 +127,7 @@ echo $age;
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row section premiere">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
                         <h2 class="experience" data-section="experience">Expérience
@@ -471,7 +471,7 @@ echo $age;
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row section">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="formation"></a>
                         <h2 data-section="formation">Formation
@@ -591,7 +591,7 @@ echo $age;
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row section">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="divers"></a>
                         <h2 data-section="divers">à propos
