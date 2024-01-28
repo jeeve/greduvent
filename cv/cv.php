@@ -27,6 +27,9 @@
 </head>
 
 <body>
+    <header>
+        <img src="images/bandeau.jpg">
+    </header>
     <div class="page-container">
         <!-- top navbar -->
         <?php include("includes/navbar.php"); ?>
