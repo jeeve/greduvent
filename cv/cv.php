@@ -110,7 +110,7 @@ echo $age;
                                     <h3>Langages : Typescript, Java, Python, C#, Php, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), React, Spring,
+                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), Spring,
                                         .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
