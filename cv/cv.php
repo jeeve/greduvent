@@ -481,12 +481,12 @@ echo $age;
                             <li>
                                     <div class="cliquable" data-section="formation-professionnelle">
                                         <h3>
-                                            <i class="fa-solid fa-angle-up fa-rotate-90"></i>
+                                            <i class="fa-solid fa-angle-up fa-rotate-180"></i>
                                             <strong>Formations durant mon parcours professionnel</strong>
                                         </h3>
                                     </div>
                                     <div id="item-div-formationsprofessionnelles" class="section"
-                                        data-section="formation-professionnelle" style="display:none">
+                                        data-section="formation-professionnelle">
                                         <ul>
                                         <li>
                                             <h3>Développer une application <strong>Java</strong> full stack avec les Frameworks <strong>Spring</strong>, <strong>JPA/Hibernate</strong> et <strong>Angular</strong>
