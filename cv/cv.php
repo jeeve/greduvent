@@ -209,7 +209,7 @@ echo $age;
                                                             src="images/code-aqf.png" />
                                                        
                                                         <div class="legende">
-                                                            Projet Java
+                                                            Projet Java (Spring Boot)
                                             
                                                         </div>
                                                       
