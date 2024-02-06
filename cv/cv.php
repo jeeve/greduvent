@@ -194,6 +194,7 @@ echo $age;
                                             <div id="item-div-num-dossiers" class="section" data-section="num-dossiers"
                                                 style="display:none">
                                                 <ul class="internet">
+                                                <!--
                                                 <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/aqf.png" />
@@ -204,6 +205,7 @@ echo $age;
                                                         </div>
                                                       
                                                     </li>
+                                                    -->
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/code-aqf.png" />
@@ -214,6 +216,7 @@ echo $age;
                                                         </div>
                                                       
                                                     </li>
+                                                    <!--
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/num-dossiers.png" />
@@ -223,6 +226,7 @@ echo $age;
                                                         </div>
                                                      
                                                     </li>
+                                                    -->
                                                 </ul>
                                             </div>   
                                         </li>        
