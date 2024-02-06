@@ -145,21 +145,93 @@ echo $age;
 
                                     <ul class="realisation">
                                         <li>
-    
-                                            <h4>
-                                                    Réalisation en cours d'un projet saisie de temps avec
+
+
+                                        <div class="cliquable" data-section="saisie-temps">
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
+                                                <h4>
+                                                Réalisation en cours d'un projet saisie de temps avec
                                                     <strong>Angular</strong>
                                                 </h4>
+                                            </div>
+                                            <div id="item-div-saisie-temps" class="section" data-section="saisie-temps"
+                                                style="display:none">
+                                                <ul class="internet">
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/saisie-temps.png" />
+                                                            <!--
+                                                        <div class="legende">
+                                                            Services Web Soap
+                                                            <div class="sous-legende">Visual Studio
+                                                            </div>
+                                                        </div>
+                                                        -->
+                                                    </li>
+                                                </ul>
+                                            </div>                                        
+                                         
+                                        </li>  
 
+                                        <li>
+
+                                        <div class="cliquable" data-section="num-dossiers">
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
                                                     Création
                                                     d'applications avec
                                                     <strong>Spring / Hibernate / Thymeleaf</strong>
                                                 </h4>
+                                            </div>
+                                            <div id="item-div-num-dossiers" class="section" data-section="num-dossiers"
+                                                style="display:none">
+                                                <ul class="internet">
+                                                <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/aqf.png" />
+                                                       
+                                                        <div class="legende">
+                                                            Gestion des actions qualité fournisseur (AQF)
                                             
-                                        </li>  
+                                                        </div>
+                                                      
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/num-dossiers.png" />
+                                                         
+                                                        <div class="legende">
+                                                            Générateur de numéros de dossiers et sous-dossiers
+                                                        </div>
+                                                     
+                                                    </li>
+                                                </ul>
+                                            </div>   
+                                        </li>        
+
                                         <li>
-                                            <h4>Développement de notebooks <strong>Python</strong> dans le cadre de l'analyse de données industrielles (traitement fichiers csv, OCR...)</h4>
+
+                                        <div class="cliquable" data-section="ocr">
+                                                <i class="fa-solid fa-angle-up fa-rotate-90"></i>
+                                                <h4>Développement de notebooks <strong>Python</strong> dans le cadre de l'analyse de données industrielles (traitement fichiers csv, OCR...)</h4>
+                                            </div>
+                                            <div id="item-div-ocr" class="section" data-section="ocr"
+                                                style="display:none">
+                                                <ul class="internet">
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/ocr.png" />
+                                                            <!--
+                                                        <div class="legende">
+                                                            Services Web Soap
+                                                            <div class="sous-legende">Visual Studio
+                                                            </div>
+                                                        </div>
+                                                        -->
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                            
                                         </li> 
                                     </ul>   
                             </li>                                
@@ -481,12 +553,12 @@ echo $age;
                             <li>
                                     <div class="cliquable" data-section="formation-professionnelle">
                                         <h3>
-                                            <i class="fa-solid fa-angle-up fa-rotate-180"></i>
+                                            <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                             <strong>Formations durant mon parcours professionnel</strong>
                                         </h3>
                                     </div>
                                     <div id="item-div-formationsprofessionnelles" class="section"
-                                        data-section="formation-professionnelle">
+                                        data-section="formation-professionnelle" style="display:none">
                                         <ul>
                                         <li>
                                             <h3>Développer une application <strong>Java</strong> full stack avec les Frameworks <strong>Spring</strong>, <strong>JPA/Hibernate</strong> et <strong>Angular</strong>
