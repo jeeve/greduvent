@@ -160,13 +160,21 @@ echo $age;
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
                                                             src="images/saisie-temps.png" />
-                                                            <!--
+                                                           
                                                         <div class="legende">
-                                                            Services Web Soap
-                                                            <div class="sous-legende">Visual Studio
-                                                            </div>
+                                                            Ecran de saisie (Angular Material)
                                                         </div>
-                                                        -->
+                                                      
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/code-saisie-temps.png" />
+                                                       
+                                                        <div class="legende">
+                                                            Projet Angular
+                                            
+                                                        </div>
+                                                      
                                                     </li>
                                                 </ul>
                                             </div>                                        
@@ -192,6 +200,16 @@ echo $age;
                                                        
                                                         <div class="legende">
                                                             Gestion des actions qualité fournisseur (AQF)
+                                            
+                                                        </div>
+                                                      
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive ombre-image taille-double"
+                                                            src="images/code-aqf.png" />
+                                                       
+                                                        <div class="legende">
+                                                            Projet Java
                                             
                                                         </div>
                                                       
