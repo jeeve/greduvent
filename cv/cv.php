@@ -162,7 +162,7 @@ echo $age;
                                                             src="images/saisie-temps.png" />
                                                            
                                                         <div class="legende">
-                                                            Ecran de saisie (Angular Material)
+                                                            Prototype d'écran de saisie (Angular Material)
                                                         </div>
                                                       
                                                     </li>
