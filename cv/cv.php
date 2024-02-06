@@ -171,7 +171,7 @@ echo $age;
                                                             src="images/code-saisie-temps.png" />
                                                        
                                                         <div class="legende">
-                                                            Projet Angular
+                                                            Projet Angular 15
                                             
                                                         </div>
                                                       
