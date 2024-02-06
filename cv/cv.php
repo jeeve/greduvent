@@ -478,46 +478,7 @@ echo $age;
                         </h2>
                         <div id="item-div-formation" class="section" data-section="formation">
                             <ul>
-                                <li>
-                                    <div class="cliquable" data-section="formation-academique">
-                                        <h3>
-                                            <i class="fa-solid fa-angle-up fa-rotate-180"></i>
-                                            <strong>Formations
-                                                académiques</strong>
-                                        </h3>
-                                    </div>
-                                    <div id="item-div-formationsacademiques" class="section"
-                                        data-section="formation-academique">
-                                        <ul>
-                                            <li>
-                                                <h3><strong>IUP Génie Informatique</strong> 2ème année</h3>
-                                                <p>IUP Informatique - La Rochelle (17)</p>
-                                                <p>1995 - 1996</p>
-                                            </li>
-                                            <li>
-                                                <h3>Obtention du <strong>DUT Informatique</strong> Année Spéciale au
-                                                    Havre
-                                                </h3>
-                                                <p>IUT Informatique - Le Havre (76)</p>
-                                                <p>1994 - 1995</p>
-                                            </li>
-                                            <li>
-                                                <h3>Obtention du <strong>DUT Génie Electrique et Informatique
-                                                        Industrielle</strong>
-                                                </h3>
-                                                <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
-                                                <p>1991 - 1994</p>
-                                            </li>
-                                            <li>
-                                                <h3>Obtention du <strong>Bac E</strong> (Mathématiques et Techniques)
-                                                </h3>
-                                                <p>Lycée Augustin Thierry - Blois (41) - académie Orléans-Tours</p>
-                                                <p>1991</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
+                            <li>
                                     <div class="cliquable" data-section="formation-professionnelle">
                                         <h3>
                                             <i class="fa-solid fa-angle-up fa-rotate-90"></i>
@@ -583,6 +544,45 @@ echo $age;
                                             <li>
                                                 <h3><strong>Windev</strong> Prise en main</h3>
                                                 <p>PC Soft - 15/02/2010 au 16/02/2010</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cliquable" data-section="formation-academique">
+                                        <h3>
+                                            <i class="fa-solid fa-angle-up fa-rotate-180"></i>
+                                            <strong>Formations
+                                                académiques</strong>
+                                        </h3>
+                                    </div>
+                                    <div id="item-div-formationsacademiques" class="section"
+                                        data-section="formation-academique">
+                                        <ul>
+                                            <li>
+                                                <h3><strong>IUP Génie Informatique</strong> 2ème année</h3>
+                                                <p>IUP Informatique - La Rochelle (17)</p>
+                                                <p>1995 - 1996</p>
+                                            </li>
+                                            <li>
+                                                <h3>Obtention du <strong>DUT Informatique</strong> Année Spéciale au
+                                                    Havre
+                                                </h3>
+                                                <p>IUT Informatique - Le Havre (76)</p>
+                                                <p>1994 - 1995</p>
+                                            </li>
+                                            <li>
+                                                <h3>Obtention du <strong>DUT Génie Electrique et Informatique
+                                                        Industrielle</strong>
+                                                </h3>
+                                                <p>IUT Génie Electrique et Informatique Industrielle - Tours (37)</p>
+                                                <p>1991 - 1994</p>
+                                            </li>
+                                            <li>
+                                                <h3>Obtention du <strong>Bac E</strong> (Mathématiques et Techniques)
+                                                </h3>
+                                                <p>Lycée Augustin Thierry - Blois (41) - académie Orléans-Tours</p>
+                                                <p>1991</p>
                                             </li>
                                         </ul>
                                     </div>
