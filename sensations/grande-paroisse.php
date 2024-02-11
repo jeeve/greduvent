@@ -288,7 +288,7 @@
                                         src="images/logo-ventusky.png"></a>
                                 <a href="https://www.xcweather.co.uk/forecast/grande-paroisse" target="_blank"><img
                                         src="images/logo-xcweather.png"></a>
-                                <a href="http://www.meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130"
+                                <a href="https://meteofrance.com/previsions-meteo-france/la-grande-paroisse/77130"
                                     target="_blank"><img src="images/logo-meteofrance.png"></a>
                             </div>
                         </div>

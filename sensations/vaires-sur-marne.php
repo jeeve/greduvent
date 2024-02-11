@@ -251,7 +251,7 @@
                                         target="_blank">Ventusky</a><br><br>
                                     <a href="https://www.xcweather.co.uk/forecast/vaires_sur_marne"
                                         target="_blank">XCWeather</a><br><br>
-                                    <a href="http://www.meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360"
+                                    <a href="https://meteofrance.com/previsions-meteo-france/vaires-sur-marne/77360"
                                         target="_blank">Météo France</a>
                                 </p>
                             </div>
