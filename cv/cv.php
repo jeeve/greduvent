@@ -71,6 +71,9 @@ echo $age;
                             <p><i class="fa-solid fa-phone"></i>06 18 96 19 96
                             </p>
                             <br>
+                            <p class="soft-skills">
+                            Curiosité, créativité, qualités relationnelles, ouverture d'esprit, capacité d’adaptation 
+                            </p>
                             <!--
                             <p>Passionné d'informatique et en particulier par le développement logiciel, j'aime
                                 participer à la création d'outils numériques.
@@ -81,14 +84,18 @@ echo $age;
                                 porter
                                 assistance sont une autre source de motivation.
                             </p>-->
+                            <!--
                             <p class="justifie">Développeur informatique depuis tout jeune, c'est pour moi avant tout un
                                 moyen d'exprimer la créativité. Le
                                 domaine est vaste et une multitude de technologies émergent et évoluent en permanence.
                                 
                                 Parmi celles-ci, le Web et en particulier la partie "front-end" concentre mon intérêt.
-                                <!--Je m'investis actuellement plus particulièrement dans le framework <strong>Angular</strong>.-->
+                                
+                                Je m'investis actuellement plus particulièrement dans le framework <strong>Angular</strong>.
                                 L'informatique est pour moi une aventure au long cours, source intarissable de
                                 curiosité et de passion.</p>
+
+                --> 
                         </div>
                     </div>
                     <div class="col-md-1 fond"></div>
@@ -116,9 +123,11 @@ echo $age;
                                 <li>
                                     <h3>Windev, Webdev</h3>
                                 </li>
+                                <!--
                                 <li>
                                     <h3>Gestionnaire de sources GIT</h3>
                                 </li>
+                                -->
                                 <br>
                                 <li>
                                     <h3>Anglais lu et écrit</h3>
@@ -653,11 +662,13 @@ echo $age;
                                     <div id="item-div-formationsacademiques" class="section"
                                         data-section="formation-academique">
                                         <ul>
+                                            <!--
                                             <li>
                                                 <h3><strong>IUP Génie Informatique</strong> 2ème année</h3>
                                                 <p>IUP Informatique - La Rochelle (17)</p>
                                                 <p>1995 - 1996</p>
                                             </li>
+                                            -->
                                             <li>
                                                 <h3>Obtention du <strong>DUT Informatique</strong> Année Spéciale au
                                                     Havre
@@ -728,27 +739,9 @@ echo $age;
                                 Curieux de nature, j'aime apprendre et partager l'attrait pour les nouvelles
                                 technologies.
                             </p>
-                            <br>
-                            <p>A titre personnel j'utilise notamment les logiciels</p>
-                            <ul>
-                                <li>
-                                    <h3><strong>Visual Studio Code</strong></h3>
-                                </li>
-                                <li>
-                                    <h3>Racket, programmation fonctionnelle basée sur langage <strong>Scheme</strong>
-                                    </h3>
-                                </li>
-                                <li>
-                                    <h3><strong>Davinci Resolve</strong>, montage vidéo</h3>
-                                </li>
-                                <li>
-                                    <h3><strong>Reason Studio</strong>, création musicale</h3>
-                                </li>
-                            </ul>
-                            <br>
-                            <p>Je suis passionné par les sciences, l'intelligence artificielle, pratique le windfoil, et aime profiter de la nature.
-                                Le contact et l'échange avec les autres sont essentiels à mon équilibre.
-                            </p>
+                 
+                            
+
                             <div class="bouton-realisationspersonnelles cliquable"
                                 data-section="realisation-personnelle">
                                 <h3>
@@ -764,12 +757,12 @@ echo $age;
 
                                         <h3><strong>Visualiser les traces GPS</strong></h3>
                                         <p>
-                                            <a class="external"
-                                                href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
-                                                target="_blank">Application</a> développée en <strong>Typescript /
+                                            Application Web développée en <strong>Typescript /
                                                 Angular</strong>
                                             permettant d'analyser
-                                            les données GPX issues d'un capteur GPS.
+                                            les données GPX issues d'un capteur GPS. <a class="external"
+                                                href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                target="_blank">Cliquez ici pour tester.</a>
                                         </p>
                                         <br>
                                         <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
@@ -787,7 +780,7 @@ echo $age;
                                         <p>
                                             <a class="external"
                                                 href="http://metablaster.alwaysdata.net/"
-                                                target="_blank">Jeu multijoueurs en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong>
+                                                target="_blank">Jeu multijoueurs en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong> (Réalisation en cours...)
                                         </p>
                                         <br>
                                         <a href="http://metablaster.alwaysdata.net/"
@@ -1008,12 +1001,34 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                 <br>
                             </div>
 
+                            <p>A titre personnel j'utilise notamment les logiciels</p>
+                            <ul>
+                                <li>
+                                    <h3><strong>Visual Studio Code</strong></h3>
+                                </li>
+                                <li>
+                                    <h3>Racket, programmation fonctionnelle basée sur langage <strong>Scheme</strong>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3><strong>Davinci Resolve</strong>, montage vidéo</h3>
+                                </li>
+                                <li>
+                                    <h3><strong>Reason Studio</strong>, création musicale</h3>
+                                </li>
+                            </ul>
 
+<!--
                             <h3 class="site-perso">Site personnel : <a class="external"
                                     href="https://greduvent.herokuapp.com/" target="_blank">au
                                     gré du
                                     vent 1.0</a>
                             </h3>
+  -->
+  <br>
+  <p>Je suis passionné par les sciences, l'intelligence artificielle, pratique le windfoil, et aime profiter de la nature.
+                                Le contact et l'échange avec les autres sont essentiels à mon équilibre.
+                            </p>
                         </div>
                     </div>
                 </div>

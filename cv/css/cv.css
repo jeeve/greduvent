@@ -25,6 +25,10 @@ p {
   text-align: justify;
 }
 
+.soft-skills {
+  text-align: center;
+}
+
 .navbar-brand.navbar-brand-texte {
   color: #398efd;
   text-decoration: none;
@@ -87,6 +91,7 @@ strong {
 
 .section-perso {
   display: inline-block;
+  width: -webkit-fill-available;
 }
 
 .photo {
