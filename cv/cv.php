@@ -251,7 +251,7 @@ echo $age;
                                                 <ul class="internet">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
-                                                            src="images/ocr.png" />
+                                                            src="images/code-python.png" />
                                                             <!--
                                                         <div class="legende">
                                                             Services Web Soap
