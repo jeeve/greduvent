@@ -114,7 +114,7 @@ echo $age;
                                     <h3>Applications Windows, Web, HTML 5, Services Web</h3>
                                 </li>
                                 <li>
-                                    <h3>Langages : Typescript, Java, Python, C#, Php, Delphi...</h3>
+                                    <h3>Langages : Javascript / Typescript, Java, Python, C#, Php, Delphi...</h3>
                                 </li>
                                 <li>
                                     <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), Spring,
