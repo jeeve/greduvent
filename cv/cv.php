@@ -779,11 +779,11 @@ echo $age;
                                         <h3><strong>Metablaster</strong></h3>
                                         <p>
                                             <a class="external"
-                                                href="http://metablaster.alwaysdata.net/"
+                                                href="https://metablaster.alwaysdata.net/monoblaster/"
                                                 target="_blank">Jeu multijoueurs en ligne</a> inspiré de Dynablaster et développé en <strong>React / Nodejs.</strong> (Réalisation en cours...)
                                         </p>
                                         <br>
-                                        <a href="http://metablaster.alwaysdata.net/"
+                                        <a href="https://metablaster.alwaysdata.net/monoblaster/"
                                             target="_blank"><img class="img-responsive ombre-image taille-double centre" title="Jouer à Metablaster"
                                                 src="../informatique/images/metablaster.png" style="display: block; width: 659px; margin: auto;"/></a>
                                         <br>
