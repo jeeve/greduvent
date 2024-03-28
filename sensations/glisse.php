@@ -299,6 +299,9 @@
                                     <div class="item"> <img src="images/diapos/poses-v8.jpg"
                                             alt="Poses - 24 septembre 2023 - photo Phil95" title="Poses - 24 septembre 2023 - photo Phil95">
                                     </div>
+                                    <div class="item"> <img src="images/diapos/poses-24-03-2024.jpg"
+                                            alt="Poses - 24 mars 2024 - photo Phil95" title="Poses - 24 mars 2024 - photo Phil95">
+                                    </div>
                                 </div>
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#carousel-example-generic" role="button"
