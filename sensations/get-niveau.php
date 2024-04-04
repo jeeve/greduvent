@@ -3,7 +3,9 @@
 
 	
 		// BD
-		$mysqli = new mysqli("localhost", "id20378620_jeeve", "#o2sNJ]|)pWi8i9k", "id20378620_bd");
+		//$mysqli = new mysqli("localhost", "id20378620_jeeve", "#o2sNJ]|)pWi8i9k", "id20378620_bd");
+				// BD Heroku : https://mysql.jawsdb.com/resource/dashboard
+				$mysqli = new mysqli("zpfp07ebhm2zgmrm.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "qdpt9a9pwiqhq5fp", "cq4npfxbamtnjnpv", "iijg40m6hog6vtno", 3306);
 		
 	if (isset($_GET['date'])) {
 		$d = $_GET['date'];
