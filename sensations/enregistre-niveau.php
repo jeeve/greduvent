@@ -22,7 +22,7 @@ function enregistre_niveau_station($station) {
 			)
 		));
 		
-		$contents = file_get_contents('https://gpxweb.000webhostapp.com/sensations/niveau-foret-orient.php', false, $ctx);
+		$contents = file_get_contents('https://greduvent.herokuapp.com/sensations/niveau-foret-orient.php', false, $ctx);
 		
 		$obj = json_decode($contents);
 		
