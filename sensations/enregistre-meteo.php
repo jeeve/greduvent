@@ -59,7 +59,7 @@ function enregistre_meteo_station($station) {
 		// BD
 		//$mysqli = new mysqli("localhost", "id20378620_jeeve", "#o2sNJ]|)pWi8i9k", "id20378620_bd");
 				// BD Heroku : https://mysql.jawsdb.com/resource/dashboard
-				$mysqli = new mysqli("zpfp07ebhm2zgmrm.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "qdpt9a9pwiqhq5fp", "cq4npfxbamtnjnpv", "iijg40m6hog6vtno", 3306);
+				$mysqli = new mysqli("mysql-metapong.alwaysdata.net", "metapong", "betty987#A", "metapong_meteo");
 		$Ajouter = "INSERT INTO meteo (station, vitesse, orientation, temperature) VALUES ('" . $station . "', '" . floatval($vitesse) . "', '" . floatval($direction) . "', '" . floatval($temperature) . "')";
 		$mysqli->query($Ajouter);
 		$mysqli->close();				
