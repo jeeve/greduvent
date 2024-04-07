@@ -761,11 +761,11 @@ echo $age;
                                                 Angular</strong>
                                             permettant d'analyser
                                             les données GPX issues d'un capteur GPS. <a class="external"
-                                                href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                                href="/sensations/visu-gpx/index.php?url=https://metapong.alwaysdata.net/gpx/2022_03_19_vaires-sur-marne.gpx"
                                                 target="_blank">Cliquez ici pour tester.</a>
                                         </p>
                                         <br>
-                                        <a href="/sensations/visu-gpx/index.php?url=https://gpxweb.000webhostapp.com/gpx/2022_03_19_vaires-sur-marne.gpx"
+                                        <a href="/sensations/visu-gpx/index.php?url=https://metapong.alwaysdata.net/gpx/2022_03_19_vaires-sur-marne.gpx"
                                             target="_blank"><img class="img-responsive ombre-image taille-double"
                                                 src="images/visu-gpx.jpg" /></a>
                                         <br>
