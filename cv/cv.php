@@ -123,11 +123,11 @@ echo $age;
                                 <li>
                                     <h3>Windev, Webdev</h3>
                                 </li>
-                                <!--
+                                <br>
                                 <li>
-                                    <h3>Gestionnaire de sources GIT</h3>
+                                    <h3>SQL, GIT, Jquery, CSS, Bootstrap, Angular Material, Thymeleaf...</h3>
                                 </li>
-                                -->
+                               
                                 <br>
                                 <li>
                                     <h3>Anglais lu et écrit</h3>
