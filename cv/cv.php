@@ -125,7 +125,7 @@ echo $age;
                                 </li>
                                 <br>
                                 <li>
-                                    <h3>SQL, Git, Jquery, CSS, Bootstrap, Angular Material, Thymeleaf, Pandas, Matplotlib...</h3>
+                                    <h3>SQL, Git, Jquery, CSS, Bootstrap, Angular Material, Thymeleaf...</h3>
                                 </li>
                                
                                 <br>
