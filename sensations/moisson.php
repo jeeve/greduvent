@@ -314,8 +314,7 @@
                     <form id="datetimeform">
 
                         <div>
-                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                        style="color:grey">(JJ/MM/AAAA) </span></label><input style="width: 130px;"
+                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input style="width: 130px;"
                                     id="ma-date-moisson" type="text" name="date" value="25/02/2017"></input></p>
                         </div>
                         <!-- 

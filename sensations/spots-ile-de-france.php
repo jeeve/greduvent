@@ -331,8 +331,7 @@
                                 <div id="item-histo-poses" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-poses" type="text" name="date"
                                                     value="25/02/2017"></input></p>
                                         </div>
@@ -475,8 +474,7 @@
                                 <div id="item-histo-moisson" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-moisson" type="text" name="date"
                                                     value="25/02/2017"></input></p>
                                         </div>
@@ -610,8 +608,7 @@
                                 <div id="item-histo-ecluzelles" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-ecluzelles" type="text"
                                                     name="date" value="25/02/2017"></input></p>
                                         </div>
@@ -834,8 +831,7 @@
                                 <div id="item-histo-jablines" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-jablines" type="text" name="date"
                                                     value="25/02/2017"></input></p>
                                         </div>
@@ -968,8 +964,7 @@
                                 <div id="item-histo-vaires" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-vaires" type="text" name="date"
                                                     value="25/02/2017"></input></p>
                                         </div>
@@ -1108,8 +1103,7 @@
                                 <div id="item-histo-grandeparoisse" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-grandeparoisse" type="text"
                                                     name="date" value="25/02/2017"></input></p>
                                         </div>
@@ -1254,8 +1248,7 @@
                                 <div id="item-histo-foretorient" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
-                                            <p><label for="ma-date" style="margin-right: 10px;">Date <span
-                                                        style="color:grey">(JJ/MM/AAAA) </span></label><input
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
                                                     style="width: 130px;" id="ma-date-foretorient" type="text"
                                                     name="date" value="25/02/2017"></input></p>
                                         </div>
