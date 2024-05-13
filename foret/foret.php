@@ -23,6 +23,40 @@
                     <h1>peuple végétal</h1>
 
                     <br><br>
+                    <div class="container-fluid">
+                        <div class="row vertical-align">
+                            <div class="col-xs-12 col-sm-6 fond">
+
+                                <p>Il est un pays gorgé de soleil<br>
+Qui laisse au temps le temps de se poser<br> 
+Sans compter la présence d'un gigantesque personnage<br>
+De ses bras invisibles il balaye la cime des cyprès <br>
+Fait vivre les feuilles, danser la poussière <br>
+Derrière le Lubéron qui veille sur la vallée <br>
+Il paraîtrait qu'il y a la mer <br>
+D'un bleu insolent <br>
+Mais je ne peux y croire, assis sur ce banc <br>
+Le soleil descend se reposer <br>
+Encore une journée où il s'est offert sans compter <br>
+La nuit arrive doucement, sa douce fraîcheur <br>
+descendant la colline <br>
+Les senteurs s'éveillent <br>
+Au loin chants joyeux de grenouilles amoureuses</p>
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 fond">
+                                    <img alt="Goult - 11 mai 2024"
+                                        title="Goult - 11 mai 2024" src="images/abeille-goult.jpg"
+                                        class="img-responsive ombre-image center-block" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <br><br>
+
+
+                    <br><br>
                     <div class="row">
                         <div class="col-xs-12 col-sm-2 fond"></div>
                         <div class="col-xs-12 col-sm-8 fond">
