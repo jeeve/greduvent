@@ -56,7 +56,7 @@ Au loin chants joyeux de grenouilles amoureuses</p>
                     <br><br>
 
 
-                    
+                    <br>
                     <a name="rando-11-11-2021"></a>
                     <h2>Randonnée <a href="https://www.visorando.com/randonnee-la-butte-de-sucremont/"
                             target="_blank">La Butte de Sucremont</a> - 11 novembre 2021 - <a
