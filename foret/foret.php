@@ -38,8 +38,8 @@ D'un bleu insolent <br>
 Mais je ne peux y croire, assis sur ce banc <br>
 Le soleil descend se reposer <br>
 Encore une journée où il s'est offert sans compter <br>
-La nuit arrive doucement, sa douce fraîcheur <br>
-descendant la colline <br>
+La nuit s’approche à pas silencieux <br>
+Sa douce fraîcheur enveloppant la colline <br>
 Les senteurs s'éveillent <br>
 Au loin chants joyeux de grenouilles amoureuses</p>
 
