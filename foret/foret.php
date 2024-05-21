@@ -42,6 +42,10 @@ La nuit s’approche à pas silencieux <br>
 Sa douce fraîcheur enveloppant la colline <br>
 Les senteurs s'éveillent <br>
 Au loin chants joyeux de grenouilles amoureuses</p>
+                                <br>
+                                <p style="text-align: right;"><font size="2"><em>
+Goult, samedi 11 mai 2024</em></font>
+                                </p>
 
                             </div>
 
