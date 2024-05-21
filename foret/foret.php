@@ -31,7 +31,7 @@
 Qui laisse au temps le temps de se poser<br> 
 Sans compter la présence d'un gigantesque personnage<br>
 De ses bras invisibles il balaye la cime des cyprès <br>
-Fait vivre les feuilles, danser la poussière <br>
+Fait chanter les feuilles, danser la poussière <br>
 Derrière le Lubéron qui veille sur la vallée <br>
 Il paraîtrait qu'il y a la mer <br>
 D'un bleu insolent <br>
