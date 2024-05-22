@@ -30,7 +30,7 @@
                     <h2>GPS</h2>
                     <ul>
                         <li>
-                            <p><a href="http://gpxweb.000webhostapp.com/" target="_blank">Visualisateur de traces</a>
+                            <p><a href="/sensations/visu-gpx/" target="_blank">Visualisateur de traces</a>
                             </p>
                         </li>
                         <li>
