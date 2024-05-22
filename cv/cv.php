@@ -740,9 +740,34 @@ echo $age;
                                 technologies.
                             </p>
                  
-                            
+        
 
-                            <div class="bouton-realisationspersonnelles cliquable"
+                            <p>A titre personnel j'utilise notamment les logiciels</p>
+                            <ul>
+                                <li>
+                                    <h3><strong>Visual Studio Code</strong></h3>
+                                </li>
+                                <li>
+                                    <h3>Racket, programmation fonctionnelle basée sur langage <strong>Scheme</strong>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <h3><strong>Davinci Resolve</strong>, montage vidéo</h3>
+                                </li>
+                                <li>
+                                    <h3><strong>Reason Studio</strong>, création musicale</h3>
+                                </li>
+                            </ul>
+
+<!--
+                            <h3 class="site-perso">Site personnel : <a class="external"
+                                    href="https://greduvent.herokuapp.com/" target="_blank">au
+                                    gré du
+                                    vent 1.0</a>
+                            </h3>
+  -->
+
+  <div class="bouton-realisationspersonnelles cliquable"
                                 data-section="realisation-personnelle">
                                 <h3>
                                     <i class="fa-solid fa-angle-up fa-rotate-90"></i>
@@ -1001,30 +1026,6 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                 <br>
                             </div>
 
-                            <p>A titre personnel j'utilise notamment les logiciels</p>
-                            <ul>
-                                <li>
-                                    <h3><strong>Visual Studio Code</strong></h3>
-                                </li>
-                                <li>
-                                    <h3>Racket, programmation fonctionnelle basée sur langage <strong>Scheme</strong>
-                                    </h3>
-                                </li>
-                                <li>
-                                    <h3><strong>Davinci Resolve</strong>, montage vidéo</h3>
-                                </li>
-                                <li>
-                                    <h3><strong>Reason Studio</strong>, création musicale</h3>
-                                </li>
-                            </ul>
-
-<!--
-                            <h3 class="site-perso">Site personnel : <a class="external"
-                                    href="https://greduvent.herokuapp.com/" target="_blank">au
-                                    gré du
-                                    vent 1.0</a>
-                            </h3>
-  -->
   <br>
   <p>Je suis passionné par les sciences, l'intelligence artificielle, pratique le windfoil, aime la lecture de science-fiction et profiter de la nature.
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.
