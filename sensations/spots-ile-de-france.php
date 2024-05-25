@@ -1363,7 +1363,7 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <p><a href="http://gpxweb.000webhostapp.com/" target="_blank">Visualisateur de
+                                    <p><a href="/sensations/visu-gpx/" target="_blank">Visualisateur de
                                             traces GPS</a></p>
                                 </li>
                             </ul>
