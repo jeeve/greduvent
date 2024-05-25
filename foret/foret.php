@@ -22,7 +22,17 @@
                 <div class="col-xs-12 col-sm-12 col-md-9 fond">
                     <h1>peuple végétal</h1>
 
+
                     <br><br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 fond"></div>
+                        <div class="col-xs-12 col-sm-8 fond">
+                            <img alt="Vineuil - 18 mai 2024" title="Vineuil - 18 mai 2024"
+                                src="images/fleur-vineuil.jpg" class="img-responsive ombre-image" />
+                        </div>
+                    </div>
+
+                    <br><br><br>
                     <div class="container-fluid">
                         <div class="row vertical-align">
                             <div class="col-xs-12 col-sm-6 fond">
