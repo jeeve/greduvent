@@ -1027,7 +1027,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                             </div>
 
   <br>
-  <p>Je suis passionné par les sciences, l'intelligence artificielle, pratique le windfoil, aime la lecture de science-fiction et profiter de la nature.
+  <p>Je suis passionné par les sciences, l'intelligence artificielle, pratique le windfoil, aime les romans de science-fiction et profiter de la nature.
                                 Le contact et l'échange avec les autres sont essentiels à mon équilibre.
                             </p>
                         </div>
