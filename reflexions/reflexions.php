@@ -233,7 +233,7 @@
                         <div class="col-xs-1 visible-xs"></div>
                         <div class="col-xs-10 col-sm-5 fond">
                             <p align="center">
-                                Qui m’a habillé avec un costume humain dans ce théâtre cosmique ?
+                                Pourquoi suis-je habillé avec un costume humain dans ce théâtre cosmique ?
                             </p>
                             <p align="center">
                                 <img src="images/sculpture.jpg" class="img-responsive ombre-image" />
