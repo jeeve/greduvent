@@ -109,8 +109,8 @@
                             <h2>Windfoil</h2>
                             <ul>
                                 <li>
-                                    <p>flotteur&nbsp;JP Hydrofoil 135 modèle 2017<br>
-                                        dimensions : 215 x 86 cm
+                                    <p>flotteur&nbsp;Future Fly Camel 145 modèle 2022<br>
+                                        dimensions : 208 x 81 cm
                                     </p>
                                 </li>
                                 <li>
