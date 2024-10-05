@@ -88,6 +88,11 @@
                                     </p>
                                 </li>
                                 <li>
+                                    <p>voile Gunsails Torro modèle 2023<br>
+                                        surface : 4,7 m²
+                                    </p>
+                                </li>
+                                <li>
                                     <p>voile Gunsails Torro modèle 2019<br>
                                         surface : 5,3 m²
                                     </p>
