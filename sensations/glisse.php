@@ -301,11 +301,14 @@
                                     <div class="item"> <img src="images/diapos/suivi-planche-poses.jpg"
                                             alt="Poses - 29 décembre 2022" title="Poses - 29 décembre 2022">
                                     </div>
-                                    <div class="item"> <img src="images/diapos/poses-v8.jpg"
-                                            alt="Poses - 24 septembre 2023 - photo Phil95" title="Poses - 24 septembre 2023 - photo Phil95">
-                                    </div>
                                     <div class="item"> <img src="images/diapos/poses-24-03-2024.jpg"
                                             alt="Poses - 24 mars 2024 - photo Phil95" title="Poses - 24 mars 2024 - photo Phil95">
+                                    </div>
+                                    <div class="item"> <img src="images/diapos/poses-2024-10-20.jpg"
+                                            alt="Poses - 20 octobre 2024 - photo Phil95" title="Poses - 20 octobre 2024 - photo Phil95">
+                                    </div>
+                                    <div class="item"> <img src="images/diapos/poses2-2024-10-20.jpg"
+                                            alt="Poses - 20 octobre 2024 - photo Phil95" title="Poses - 20 octobre 2024 - photo Phil95">
                                     </div>
                                 </div>
                                 <!-- Controls -->
