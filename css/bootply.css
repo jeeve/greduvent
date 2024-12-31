@@ -49,6 +49,7 @@ body {
   height: calc(100% - 50px);
   background-color: #f8f8f8;
 }
+
 #sidebar .nav {
   width: 95%;
 }
@@ -109,10 +110,15 @@ body {
 
   #sidebar.sidebar-show {
     display: block;
+    width: 300px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 10000; /* Assurez-vous que la valeur de z-index est suffisamment élevée */
   }
   .container > div > div:last-child.sidebar-show {
-    left: 300px;
-    width: calc(100% - 300px);
+    left: 0;
+    width: 100%;
   }
 }
 
