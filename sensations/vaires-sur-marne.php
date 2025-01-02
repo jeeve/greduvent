@@ -327,16 +327,16 @@
                     <br>
 
                     <div class="row histo">
-                        <div class="col-xs-1 fond"></div>
-                        <div class="col-xs-10 fond" id="historique-vent-vaires"></div>
+                        <div class="col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-10 fond" id="historique-vent-vaires"></div>
                     </div>
                     <div class="row histo">
-                        <div class="col-xs-2 fond"></div>
-                        <div class="col-xs-8 fond" id="historique-rose-vaires"></div>
+                        <div class="col-sm-2 fond"></div>
+                        <div class="col xs-12 col-sm-8 fond" id="historique-rose-vaires"></div>
                     </div>
 					<div class="row histo">
-                        <div class="col-xs-1 fond"></div>
-                        <div class="col-xs-10 fond" id="historique-temp-vaires"></div>
+                        <div class="col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-10 fond" id="historique-temp-vaires"></div>
                     </div>
                     <br><br>
 

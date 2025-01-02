@@ -96,7 +96,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image histo-image"></a>'
       );
-      //$("#historique-temp-poses").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/louviers/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/louviers/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-poses").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/louviers/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/louviers/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "moisson":
       $("#historique-vent-moisson").html(
@@ -113,7 +113,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      //$("#historique-temp-moisson").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-moisson").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "ecluzelles":
       $("#historique-vent-ecluzelles").html(
@@ -130,7 +130,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      //$("#historique-temp-ecluzelles").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/dreux/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/dreux/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-ecluzelles").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/dreux/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/dreux/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "jablines":
       $("#historique-vent-jablines").html(
@@ -147,7 +147,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      //$("#historique-temp-jablines").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-jablines").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "vaires":
       $("#historique-vent-vaires").html(
@@ -164,7 +164,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      //$("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "grandeparoisse":
       $("#historique-vent-grandeparoisse").html(
@@ -181,7 +181,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      //$("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "foretorient":
       $("#historique-vent-foretorient").html(
@@ -201,7 +201,7 @@ function getHistoriqueVent(spot) {
       $("#historique-niveau-foretorient").html(
         '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/niveau/"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/niveau/" class="img-responsive ombre-image"></a>'
       );
-      //$("#historique-temp-foretorient").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-foretorient").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
   }
 }
