@@ -280,40 +280,7 @@ De l'atelier et d'autres que je connais...
                    </div>  
 				   <br> 
 				   			
-			<a name="breche-roland"></a>
-			<h2>La Brèche de Roland</h2>
-
-				     <div class="row">
-					  <div class="col-sm-3 fond"></div>
-					  <div class="col-xs-12 col-sm-6 fond">
-				   <a href="france3.html" target="_blank">
-				   <img src="images/france3-breche-roland.jpg" alt="Article paru dans France 3 Midi-Pyrénées" title="Article paru dans France 3 Midi-Pyrénées" class="img-responsive center-block ombre-image" />
-				   </a>
-				   </div></div>
-			<br>
-
-			 <div class="row">
-			 <div class="col-xs-12 fond">
-			<p>Retrouvez sur France 3 Midi-Pyrénées le <a href="france3.html" target="_blank" class="external">témoignage d’un guide de haute montagne</a> après une excursion dans les Hautes Pyrénées.</p> 
-			</div>
-			</div>
-	
-			<a name="liliane-sdf-jose"></a>
-			<h2>Liliane, Denis et José</h2>
-				<p>Pourquoi faire ?</p>
-				     <div class="row">
-					  <div class="col-sm-2 fond"></div>
-					  <div class="col-xs-12 col-sm-8 fond">
-					   <div class="embed-responsive embed-responsive-4by3 ombre-image">
-					   <video width="640" height="480" controls="controls">
-						<source src="images/jose-liliane-sdf.mp4" type="video/mp4" />
-						<source src="images/jose-liliane-sdf.webm" type="video/webm" />
-						<source src="images/jose-liliane-sdf.ogv" type="video/ogg" />
-					   </video>
-					   </div>
-						<p class="legende">by <a href="https://www.6play.fr/scenes-de-menages-p_829" target="_blank">Scènes de ménages sur M6</a></p>
-				   </div></div>
-					
+				
 			   				  
 			<br><br>
 			<div id="swipe"><div class="row">
