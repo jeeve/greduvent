@@ -1,10 +1,10 @@
 
 @font-face {
  font-family: "Raleway";
-    src : url('/fonts/Raleway-Regular.eot');
-    src : url('/fonts/Raleway-Regular.woff') format('woff'),
-          url('/fonts/Raleway-Regular.svg') format('svg'),
-          url('/fonts/Raleway-Regular.ttf') format('truetype');		  
+    src : url('../fonts/Raleway-Regular.eot');
+    src : url('../fonts/Raleway-Regular.woff') format('woff'),
+          url('../fonts/Raleway-Regular.svg') format('svg'),
+          url('../fonts/Raleway-Regular.ttf') format('truetype');		  
 }
 /*
 body {
