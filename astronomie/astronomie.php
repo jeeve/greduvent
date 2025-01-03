@@ -338,7 +338,7 @@ De la Terre, un sourire, s’envole, traverse la Voie Lactée pour rejoindre le 
 							<td>
 								<div class="embed-responsive embed-responsive-16by9">						
 							
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/86YLFOog4GM?controls=0&rel=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/wG4YaEcNlb0?si=kFZ1YqqOQPCfAWZ2?controls=0&rel=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								
 								</div>
 							</td>
@@ -346,7 +346,7 @@ De la Terre, un sourire, s’envole, traverse la Voie Lactée pour rejoindre le 
 					<tr>
 						<td>
 						<p align="center"><em><font size="2">
-						<a target="_blank" href="https://youtu.be/86YLFOog4GM">en direct de la 
+						<a target="_blank" href="https://www.youtube.com/live/wG4YaEcNlb0?si=kFZ1YqqOQPCfAWZ2">en direct de la 
 							station spatiale internationale</a></font></em></td>
 					</tr>
 				</table>
