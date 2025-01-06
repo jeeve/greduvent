@@ -29,10 +29,6 @@
         color: silver;
     }
 
-    .histo img {
-        margin: 10px;
-    }
-
     .loader-container {
         position: relative;
         height: 50px;
@@ -352,7 +348,7 @@
                     </div>
                     <div class="row histo">
                         <div class="col-sm-2 fond"></div>
-                        <div class="col xs-12 col-sm-8 fond" id="historique-rose-poses"></div>
+                        <div class="col-xs-12 col-sm-8 fond" id="historique-rose-poses"></div>
                     </div>
 					<div class="row histo">
                         <div class="col-sm-1 fond"></div>

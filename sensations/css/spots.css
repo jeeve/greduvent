@@ -138,3 +138,8 @@ label {
 #sessions .stats-annee {
 	font-weight: normal;
 }
+
+.histo img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
