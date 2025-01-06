@@ -889,7 +889,7 @@
                                 <br>
                                 <div class="fond-table encadrement-table" style="width: 150px;">
                                     <p>
-                                        <a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne"
+                                        <a href="https://fr.windfinder.com/weatherforecast/annet_sur_marne_ile_de_france_france"
                                             target="_blank">Superforecast</a><br><br>
                                         <a href="https://meteofrance.com/previsions-meteo-france/jablines/77450"
                                             target="_blank">Météo France</a><br><br>

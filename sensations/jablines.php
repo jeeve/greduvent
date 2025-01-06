@@ -280,7 +280,7 @@
                                 </script>
 
 
-                                <a href="https://www.windfinder.com/weatherforecast/lac-de-vaires-sur-Marne"
+                                <a href="https://fr.windfinder.com/weatherforecast/annet_sur_marne_ile_de_france_france"
                                     target="_blank"><img src="images/logo-windfinder.png" alt="superforecast"
                                         title="superforecast"></a>
                                 <a href="https://www.windalert.com/map#48.862,2.63,14,1,!33136" target="_blank"><img
