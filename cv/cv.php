@@ -287,13 +287,12 @@ echo $age;
                                                 style="display:none">
                                                 <ul class="internet">
                                                     <li>
-                                                        <a href="https://metalblog.ctif.com" target="_blank">
+                                                    
                                                             <img class="img-responsive ombre-image"
                                                                 src="images/metalblog.png" />
-                                                        </a>
+                                                     
                                                         <div class="legende">
-                                                            <a class="external" href="https://metalblog.ctif.com"
-                                                                target="_blank">MetalBlog</a>
+                                                         
                                                             <div class="sous-legende">Wordpress multi-sites avec
                                                                 Thème
                                                                 personnalisé
