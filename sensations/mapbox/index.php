@@ -57,7 +57,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmUiLCJhIjoiY21hM3pmYjZnMDFtOTJrczZ3djU5d
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/jeeve/cma3z0z23001s01sd080t8jm5', // Vue Satellite
+    style: 'mapbox://styles/mapbox/satellite-streets-v12', // Vue Satellite
     center: [2, 46],
     zoom: 5,
     pitch: 45,
