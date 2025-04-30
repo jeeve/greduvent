@@ -53,11 +53,11 @@
 
 <script>
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmUiLCJhIjoiY21hM3hoM2prMDB5bjJvczh2N2p6ZDVwbSJ9.cXhPhElcIwOcCtIxLDJpRw'; 
+mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmUiLCJhIjoiY21hM2piNWppMWx6dzJrc2g0eGRybXVwMSJ9.Mb9SiR-LznRZl789do68AQ'; 
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v12', // Vue Satellite
+    style: 'mapbox://styles/jeeve/cma3z0z23001s01sd080t8jm5', // Vue Satellite
     center: [2, 46],
     zoom: 5,
     pitch: 45,
