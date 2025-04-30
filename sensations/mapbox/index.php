@@ -33,8 +33,8 @@
          }
          /* Style pour le marqueur animé */
         .moving-marker {
-            width: 16px; 
-            height: 16px;
+            width: 12px; 
+            height: 12px;
             background-color: #e63946;
             border-radius: 50%;
             border: 2px solid white;
