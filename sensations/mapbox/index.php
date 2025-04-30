@@ -46,7 +46,7 @@
 <body>
 
     <div class="controls">
-        <button id="runButton">Run Simulation</button>
+        <button id="runButton">Play</button>
         <button id="stopButton">Stop</button>
     </div>
     <div id='map'></div>
