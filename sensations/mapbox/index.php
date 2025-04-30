@@ -146,7 +146,7 @@ function animateTrack() {
     // Animer la caméra (easeTo)
     map.easeTo({
         center: startPoint,
-        zoom: 14,
+        zoom: 14.5,
         pitch: 65,
         bearing: currentMapBearing,
         duration: 500, // Ajustez si besoin
