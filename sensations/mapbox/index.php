@@ -188,7 +188,7 @@ function stopAnimation() {
     }
     runButton.disabled = false;
     stopButton.disabled = true;
-    runButton.textContent = "Run Simulation";
+    runButton.textContent = "Play";
     console.log("Animation arrêtée.");
 
     // Optionnel : Réinitialiser la vue à la trace complète à l'arrêt
@@ -280,7 +280,7 @@ async function loadAndDisplayGPX(gpxFilePath) {
             currentMapBearing = map.getBearing();
             runButton.disabled = true;
             stopButton.disabled = false;
-            runButton.textContent = "Running...";
+            runButton.textContent = "Playing...";
             updateProgressLine([trackCoordinates[0]]);
             if (movingMarker) movingMarker.remove();
             movingMarker = null;
@@ -303,7 +303,7 @@ runButton.addEventListener('click', () => {
         currentMapBearing = map.getBearing();
         runButton.disabled = true;
         stopButton.disabled = false;
-        runButton.textContent = "Running...";
+        runButton.textContent = "Playing...";
 
         // Réinitialiser la ligne de progression au début
         updateProgressLine([trackCoordinates[0]]); // Commence avec juste le premier point
