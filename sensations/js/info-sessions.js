@@ -364,7 +364,7 @@ function getInfoSessions(spot) {
           if (replay != "" && replay != undefined) {
               html = html + '<a style="padding-left: 5px;" href="' + replay + '" target="_blank"><img src="/sensations/images/icone-play.png" title="Replay" alt"Replay" style="height: 20px;"></a>';
           } else {
-            const mapbox = window.location.origin + "/sensations/mapbox/index.php?gpx=" + trace;
+            const mapbox = window.location.origin + "/sensations/mapbox/index.php?gpx=" + lienGPX;
             html = html + '<a style="padding-left: 5px;" href="' + mapbox + '" target="_blank"><img src="/sensations/images/icone-play.png" title="Replay" alt"Replay" style="height: 20px;"></a>';
 
           }
