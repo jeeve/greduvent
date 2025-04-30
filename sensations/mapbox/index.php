@@ -53,7 +53,7 @@
 
 <script>
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmUiLCJhIjoiY21hM3pmYjZnMDFtOTJrczZ3djU5dDYwZyJ9.A53ozBbVOdDJzYAivniHZw'; 
+mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmU5NCIsImEiOiJjbWE0aWdqcGowNmlwMmpzZHBpaGNqemh4In0.uA9Zk9RR2v6NYZbbve4wzw'; 
 
 const map = new mapboxgl.Map({
     container: 'map',
