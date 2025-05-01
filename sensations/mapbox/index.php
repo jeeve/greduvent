@@ -53,6 +53,10 @@
 
 <script>
 
+let trackCenter = null; // Centre de la trace
+let cameraBearing = 0; // Angle de rotation de la caméra
+const rotationSpeed = 0.1; // Vitesse de rotation en degrés par frame
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmU5NCIsImEiOiJjbWE0aWdqcGowNmlwMmpzZHBpaGNqemh4In0.uA9Zk9RR2v6NYZbbve4wzw'; 
 
 const map = new mapboxgl.Map({
@@ -102,8 +106,8 @@ function lerp(start, end, amount) { /* ... (code précédent) ... */
 }
 // --- Fin Fonctions utilitaires ---
 
-
-// --- Fonction d'animation ---
+/*
+// --- Fonction d'animation --- (suivi des changements de direction)
 function animateTrack() {
     // S'assurer que l'index ne dépasse pas (important pour le dessin de ligne)
     let safeIndex = Math.min(currentPointIndex, trackCoordinates.length - 1);
@@ -157,6 +161,46 @@ function animateTrack() {
     currentPointIndex += animationSpeedFactor; // Note: on utilise currentPointIndex ici pour la vitesse
 
     // Demander la prochaine frame
+    animationFrameId = requestAnimationFrame(animateTrack);
+}
+*/
+
+// --- Fonction d'animation ---
+function animateTrack() {
+    let safeIndex = Math.min(currentPointIndex, trackCoordinates.length - 1);
+
+    if (safeIndex >= trackCoordinates.length - 1) {
+        console.log("Animation terminée.");
+        updateProgressLine(trackCoordinates);
+        stopAnimation();
+        return;
+    }
+
+    const startPoint = trackCoordinates[safeIndex];
+
+    if (!movingMarker) {
+        movingMarker = new mapboxgl.Marker(markerElement)
+            .setLngLat(startPoint)
+            .addTo(map);
+    } else {
+        movingMarker.setLngLat(startPoint);
+    }
+
+    const progressCoordinates = trackCoordinates.slice(0, safeIndex + 1);
+    updateProgressLine(progressCoordinates);
+
+    cameraBearing = (cameraBearing + rotationSpeed) % 360;
+
+    map.easeTo({
+        center: startPoint, // Suivre le marqueur
+        zoom: 15,
+        pitch: 65,
+        bearing: cameraBearing, // Maintenir la rotation
+        duration: 500,
+        easing: (t) => t
+    });
+
+    currentPointIndex += animationSpeedFactor;
     animationFrameId = requestAnimationFrame(animateTrack);
 }
 
@@ -289,6 +333,18 @@ async function loadAndDisplayGPX(gpxFilePath) {
             alert("La trace n'a pas assez de points pour lancer la simulation.");
         }
 
+            // Calculer le centre de la trace
+            if (trackCoordinates.length > 0) {
+        const sum = trackCoordinates.reduce(
+            (acc, coord) => [acc[0] + coord[0], acc[1] + coord[1]],
+            [0, 0]
+        );
+        trackCenter = [
+            sum[0] / trackCoordinates.length,
+            sum[1] / trackCoordinates.length
+        ];
+        }
+
     } catch (error) {
         console.error("Error loading/displaying GPX:", error);
         alert("Failed to load GPX track. Check console.");
@@ -299,20 +355,20 @@ async function loadAndDisplayGPX(gpxFilePath) {
 // --- Gestionnaires d'événements pour les boutons (modifiés pour réinitialiser la ligne) ---
 runButton.addEventListener('click', () => {
     if (!animationFrameId && trackCoordinates.length > 1) {
-        currentPointIndex = 0;
-        currentMapBearing = map.getBearing();
+        // Réinitialiser uniquement si l'animation est terminée
+        if (currentPointIndex >= trackCoordinates.length - 1) {
+            currentPointIndex = 0;
+            cameraBearing = 0;
+            updateProgressLine([trackCoordinates[0]]);
+            if (movingMarker) movingMarker.remove();
+            movingMarker = null;
+        }
         runButton.disabled = true;
         stopButton.disabled = false;
         runButton.textContent = "Playing...";
-
-        // Réinitialiser la ligne de progression au début
-        updateProgressLine([trackCoordinates[0]]); // Commence avec juste le premier point
-
-        if (movingMarker) movingMarker.remove();
-        movingMarker = null; // Sera recréé dans animateTrack
         animateTrack();
     } else if (trackCoordinates.length <= 1) {
-         alert("La trace n'a pas été chargée ou est trop courte.");
+        alert("La trace n'a pas été chargée ou est trop courte.");
     }
 });
 
