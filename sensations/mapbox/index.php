@@ -193,7 +193,7 @@ function animateTrack() {
 
     map.easeTo({
         center: startPoint, // Suivre le marqueur
-        zoom: 15,
+        zoom: window.innerWidth < 800 ? 13.5 : 15, // Zoom dynamique selon la taille de l'écran
         pitch: 65,
         bearing: cameraBearing, // Maintenir la rotation
         duration: 500,
