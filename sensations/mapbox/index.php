@@ -26,20 +26,20 @@
              cursor: pointer;
              border: 1px solid #ccc;
              border-radius: 3px;
-         }
-         .controls button:disabled {
+           }
+           .controls button:disabled {
              cursor: not-allowed;
              opacity: 0.5;
+           }
+           /* Style pour le marqueur animé */
+         .moving-marker {
+             width: 12px;
+             height: 12px;
+             background-color: #e63946; /* Couleur du marqueur */
+             border-radius: 50%;
+             border: 2px solid white;
+             box-shadow: 0 0 8px rgba(0,0,0,0.6);
          }
-         /* Style pour le marqueur animé */
-        .moving-marker {
-            width: 12px; 
-            height: 12px;
-            background-color: #e63946;
-            border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 8px rgba(0,0,0,0.6);
-        }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; } /* Pour s'assurer que la carte prend tout l'espace */
     </style>
 </head>
@@ -57,7 +57,7 @@ let trackCenter = null; // Centre de la trace
 let cameraBearing = 0; // Angle de rotation de la caméra
 const rotationSpeed = 0.1; // Vitesse de rotation en degrés par frame
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmU5NCIsImEiOiJjbWE0aWdqcGowNmlwMmpzZHBpaGNqemh4In0.uA9Zk9RR2v6NYZbbve4wzw'; 
+mapboxgl.accessToken = 'pk.eyJ1IjoiamVldmU5NCIsImEiOiJjbWE0aWdqcGowNmlwMmpzZHBpaGNqemh4In0.uA9Zk9RR2v6NYZbbve4wzw';
 
 const map = new mapboxgl.Map({
     container: 'map',
@@ -71,12 +71,14 @@ const map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 // --- Variables globales ---
-let trackCoordinates = [];          // Coordonnées complètes
+// Nouvelle structure pour stocker les coordonnées, le temps et la vitesse calculée *vers le point suivant*
+let trackData = [];
 let animationFrameId = null;
 let currentPointIndex = 0;
 let movingMarker = null;
-const animationSpeedFactor = 1;     // Vitesse (points sautés)
-let currentMapBearing = 0;
+const animationSpeedFactor = 1; // Vitesse (points sautés) - Ajustez pour une animation plus rapide ou plus lente
+let currentMapBearing = 0; // Inutilisé dans l'animation actuelle avec rotation libre
+let maxTrackSpeed = 0; // Pour stocker la vitesse maximale calculée (en km/h)
 
 // --- Éléments DOM ---
 const runButton = document.getElementById('runButton');
@@ -86,141 +88,105 @@ const stopButton = document.getElementById('stopButton');
 const markerElement = document.createElement('div');
 markerElement.className = 'moving-marker';
 
-// --- Fonctions utilitaires (calculateBearing, shortestAngleDiff, lerp - inchangées) ---
-function calculateBearing(startCoord, endCoord) { /* ... (code précédent) ... */
-    const lon1 = startCoord[0] * Math.PI / 180, lat1 = startCoord[1] * Math.PI / 180;
-    const lon2 = endCoord[0] * Math.PI / 180, lat2 = endCoord[1] * Math.PI / 180;
-    const y = Math.sin(lon2 - lon1) * Math.cos(lat2);
-    const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
-    let brng = Math.atan2(y, x) * 180 / Math.PI;
-    return (brng + 360) % 360;
-}
-function shortestAngleDiff(a1, a2) { /* ... (code précédent) ... */
-    let diff = a2 - a1;
-    while (diff <= -180) diff += 360;
-    while (diff > 180) diff -= 360;
-    return diff;
-}
-function lerp(start, end, amount) { /* ... (code précédent) ... */
-    return start + amount * (end - start);
-}
-// --- Fin Fonctions utilitaires ---
+// --- Pas besoin de calculateDistance ici, on utilisera distanceTo() directement ---
 
-/*
-// --- Fonction d'animation --- (suivi des changements de direction)
-function animateTrack() {
-    // S'assurer que l'index ne dépasse pas (important pour le dessin de ligne)
-    let safeIndex = Math.min(currentPointIndex, trackCoordinates.length - 1);
-
-    if (safeIndex >= trackCoordinates.length - 1) {
-        console.log("Animation terminée.");
-        // Dessiner le dernier segment explicitement
-         updateProgressLine(trackCoordinates); // Afficher la trace complète à la fin
-        stopAnimation();
-        return;
-    }
-
-    // Point de départ et d'arrivée pour ce segment
-    const startPoint = trackCoordinates[safeIndex];
-    const endPoint = trackCoordinates[safeIndex + 1];
-
-    // --- Lissage de l'orientation (même logique qu'avant) ---
-    let targetBearing = calculateBearing(startPoint, endPoint);
-     if ( (Math.abs(startPoint[0] - endPoint[0]) < 0.00005 && Math.abs(startPoint[1] - endPoint[1]) < 0.00005) && safeIndex < trackCoordinates.length - 5 ) {
-         let furtherPoint = trackCoordinates[safeIndex + 5];
-         targetBearing = calculateBearing(startPoint, furtherPoint);
-    }
-    const angleDifference = shortestAngleDiff(currentMapBearing, targetBearing);
-    const smoothedBearing = currentMapBearing + angleDifference * 0.1; // Lissage plus doux
-    currentMapBearing = smoothedBearing;
-
-    // Mettre à jour la position du marqueur
-    if (!movingMarker) {
-        movingMarker = new mapboxgl.Marker(markerElement).setLngLat(startPoint).addTo(map);
-    } else {
-        movingMarker.setLngLat(startPoint);
-    }
-
-    // --- Mettre à jour la ligne de progression ---
-    // Prend tous les points depuis le début jusqu'à l'index actuel (+1 pour inclure le point courant)
-    const progressCoordinates = trackCoordinates.slice(0, safeIndex + 1);
-    updateProgressLine(progressCoordinates);
-
-
-    // Animer la caméra (easeTo)
-    map.easeTo({
-        center: startPoint,
-        zoom: 15,
-        pitch: 65,
-        bearing: currentMapBearing,
-        duration: 500, // Ajustez si besoin
-        easing: t => t
-    });
-
-    // Passer au point suivant
-    currentPointIndex += animationSpeedFactor; // Note: on utilise currentPointIndex ici pour la vitesse
-
-    // Demander la prochaine frame
-    animationFrameId = requestAnimationFrame(animateTrack);
-}
-*/
 
 // --- Fonction d'animation ---
 function animateTrack() {
-    let safeIndex = Math.min(currentPointIndex, trackCoordinates.length - 1);
+    // safeIndex pointe vers le point de *départ* du segment en cours de traitement/affichage
+    let safeIndex = Math.min(currentPointIndex, trackData.length - 1);
 
-    if (safeIndex >= trackCoordinates.length - 1) {
+    // Si l'index atteint la fin de la trace, arrêter l'animation
+    if (safeIndex >= trackData.length - 1) {
         console.log("Animation terminée.");
-        updateProgressLine(trackCoordinates);
+        // Assurez-vous que le dernier segment est dessiné
+        updateProgressLine(trackData.length - 1); // Dessine jusqu'à l'avant-dernier point (segment final)
         stopAnimation();
         return;
     }
 
-    const startPoint = trackCoordinates[safeIndex];
+    // Point de départ du segment actuel
+    const startPointData = trackData[safeIndex];
+    const startCoord = startPointData.coord;
 
+    // Mettre à jour la position du marqueur
     if (!movingMarker) {
         movingMarker = new mapboxgl.Marker(markerElement)
-            .setLngLat(startPoint)
-            .addTo(map);
+             .setLngLat(startCoord)
+             .addTo(map);
     } else {
-        movingMarker.setLngLat(startPoint);
+        movingMarker.setLngLat(startCoord);
     }
 
-    const progressCoordinates = trackCoordinates.slice(0, safeIndex + 1);
-    updateProgressLine(progressCoordinates);
+    // --- Mettre à jour la ligne de progression ---
+    // updateProgressLine va créer des segments du début jusqu'à l'index actuel - 1
+    updateProgressLine(safeIndex);
 
+    // Rotation continue de la caméra
     cameraBearing = (cameraBearing + rotationSpeed) % 360;
 
+    // Animer la caméra (easeTo) pour suivre le marqueur et maintenir la rotation
     map.easeTo({
-        center: startPoint, // Suivre le marqueur
+        center: startCoord, // Suivre le marqueur
         zoom: window.innerWidth < 800 ? 13.5 : 15, // Zoom dynamique selon la taille de l'écran
-        pitch: 65,
-        bearing: cameraBearing, // Maintenir la rotation
-        duration: 500,
-        easing: (t) => t
+        pitch: 65, // Angle de la caméra
+        bearing: cameraBearing, // Rotation continue
+        duration: 500 / animationSpeedFactor, // Ajuster la durée pour que la vitesse d'animation soit plus cohérente
+        easing: (t) => t // Fonction d'interpolation (linéaire ici)
     });
 
+    // Passer au point suivant(s) selon animationSpeedFactor
     currentPointIndex += animationSpeedFactor;
+
+    // Demander la prochaine frame d'animation
     animationFrameId = requestAnimationFrame(animateTrack);
 }
 
 // --- Nouvelle fonction pour mettre à jour les données de la ligne de progression ---
-function updateProgressLine(coordinates) {
-     const progressSource = map.getSource('route-progress-source');
-     if (progressSource && coordinates && coordinates.length > 0) {
-         const geojson = {
-             type: 'Feature',
-             properties: {},
-             geometry: {
-                 type: 'LineString',
-                 coordinates: coordinates // Coordonnées jusqu'au point actuel
-             }
-         };
-         progressSource.setData(geojson);
-     } else if (progressSource && (!coordinates || coordinates.length === 0)) {
-         // Si pas de coordonnées, vider la source
-          progressSource.setData({ type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: [] } });
-     }
+// Prend l'index du point *actuel* du marqueur
+function updateProgressLine(currentIndex) {
+    const progressSource = map.getSource('route-progress-source');
+
+    // Créer une FeatureCollection pour contenir les segments de ligne
+    const featureCollection = {
+        type: 'FeatureCollection',
+        features: []
+    };
+
+    // Créer un segment LineString pour chaque paire de points parcourue
+    // Boucle jusqu'à l'index *avant* le point actuel (car on dessine les segments *entre* les points)
+    for (let i = 0; i < currentIndex; i++) {
+        // Assurez-vous qu'il y a un point suivant pour former un segment
+        if (i + 1 < trackData.length) {
+            const startPointData = trackData[i];
+            const endPointData = trackData[i + 1];
+
+            // Assurez-vous que la vitesse a été calculée pour ce segment (ajoutée dans loadAndDisplayGPX)
+            if (startPointData.speed !== undefined) {
+                 const segmentFeature = {
+                     type: 'Feature',
+                     properties: {
+                         // Ajouter la vitesse comme propriété du segment
+                         speed: startPointData.speed
+                     },
+                     geometry: {
+                         type: 'LineString',
+                         // Le segment va du point i au point i+1
+                         coordinates: [startPointData.coord, endPointData.coord]
+                     }
+                 };
+                 featureCollection.features.push(segmentFeature);
+            }
+        }
+    }
+
+
+    if (progressSource) {
+        // Mettre à jour la source avec la nouvelle collection de segments
+        progressSource.setData(featureCollection);
+    } else {
+        console.warn("La source 'route-progress-source' n'est pas disponible.");
+    }
 }
 
 
@@ -235,140 +201,273 @@ function stopAnimation() {
     runButton.textContent = "Play";
     console.log("Animation arrêtée.");
 
-    // Optionnel : Réinitialiser la vue à la trace complète à l'arrêt
-    // if (trackCoordinates.length > 0) {
-    //      const bounds = trackCoordinates.reduce((bounds, coord) => bounds.extend(coord), new mapboxgl.LngLatBounds(trackCoordinates[0], trackCoordinates[0]));
-    //      map.fitBounds(bounds, { padding: {top: 80, bottom: 40, left: 40, right: 40}, duration: 1000 });
-    // }
-
-     // Laisser la ligne dessinée telle quelle à l'arrêt.
-     // Si vous voulez la supprimer à l'arrêt, décommentez :
-     // updateProgressLine([]);
-     // if (movingMarker) { movingMarker.remove(); movingMarker = null; }
+    // Laisser la ligne dessinée telle quelle à l'arrêt.
+    // Si vous voulez la supprimer à l'arrêt, décommentez :
+    // updateProgressLine(0); // Vide la ligne
+    // if (movingMarker) { movingMarker.remove(); movingMarker = null; }
 }
 
-// --- Fonction pour charger et préparer la trace (modifiée) ---
+// --- Fonction pour charger, parser et préparer la trace ---
 async function loadAndDisplayGPX(gpxFilePath) {
     try {
-        // --- Chargement et parsing GPX (inchangé) ---
         const response = await fetch(gpxFilePath);
         if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
         const gpxText = await response.text();
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(gpxText, "text/xml");
-        let points;
-        let getCoordinates;
-        const trackpoints = xmlDoc.getElementsByTagName('trkpt');
-        const routepoints = xmlDoc.getElementsByTagName('rtept');
-         if (trackpoints.length > 0) { points = Array.from(trackpoints); getCoordinates = p => [parseFloat(p.getAttribute('lon')), parseFloat(p.getAttribute('lat'))]; }
-         else if (routepoints.length > 0) { points = Array.from(routepoints); getCoordinates = p => [parseFloat(p.getAttribute('lon')), parseFloat(p.getAttribute('lat'))]; }
-         else { throw new Error("No <trkpt> or <rtept> points found."); }
-        trackCoordinates = points.map(getCoordinates);
-        if (trackCoordinates.length < 2) throw new Error("Not enough coordinates.");
-        // --- Fin Chargement et parsing ---
 
-        // 1. Ajouter la source pour la ligne de progression (initialement vide)
-        map.addSource('route-progress-source', {
-            type: 'geojson',
-            data: { type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: [] } }
-        });
+        // Récupérer les points de trace (<trkpt>) ou de route (<rtept>)
+        let points = Array.from(xmlDoc.getElementsByTagName('trkpt'));
+        if (points.length === 0) {
+            points = Array.from(xmlDoc.getElementsByTagName('rtept'));
+        }
 
-        // 2. Ajouter la couche pour la ligne de progression (celle qui sera visible et dessinée)
+        if (points.length < 2) {
+             // Même avec un seul point, on peut afficher la carte, mais pas simuler
+             if (points.length === 1) {
+                  const lon = parseFloat(points[0].getAttribute('lon'));
+                  const lat = parseFloat(points[0].getAttribute('lat'));
+                  trackData = [{ coord: [lon, lat], time: null }]; // Stocker au moins le point pour la carte
+                  map.setCenter([lon, lat]);
+                  map.setZoom(15);
+                   alert("La trace a un seul point. Impossible de simuler l'animation de vitesse.");
+                    runButton.disabled = true; stopButton.disabled = true;
+                   return; // Sortir de la fonction
+             } else {
+                throw new Error("No <trkpt> or <rtept> points found, or not enough points (need at least 2).");
+             }
+        }
+
+        trackData = [];
+        maxTrackSpeed = 0; // Réinitialiser la vitesse max
+
+        // Parcourir les points pour extraire coord et temps, et calculer la vitesse
+        for (let i = 0; i < points.length; i++) {
+            const point = points[i];
+            const lat = parseFloat(point.getAttribute('lat'));
+            const lon = parseFloat(point.getAttribute('lon'));
+            const coord = [lon, lat];
+
+            let time = null;
+            const timeElement = point.getElementsByTagName('time')[0];
+            if (timeElement && timeElement.textContent) {
+                 try {
+                    time = new Date(timeElement.textContent);
+                 } catch (e) {
+                    console.warn("Could not parse time for point", i, ":", timeElement.textContent);
+                 }
+            }
+
+            // Ajouter le point actuel aux données de la trace
+            trackData.push({ coord: coord, time: time });
+
+            // Si ce n'est pas le premier point ET que le point précédent avait un temps valide, calculer la vitesse du segment précédent
+            if (i > 0 && trackData[i-1].time && time) {
+                const prevPointData = trackData[i - 1];
+                const currentPointData = trackData[i];
+
+                // Créez les objets LngLat pour les deux points
+                const lngLat1 = new mapboxgl.LngLat(prevPointData.coord[0], prevPointData.coord[1]);
+                const lngLat2 = new mapboxgl.LngLat(currentPointData.coord[0], currentPointData.coord[1]);
+
+                // Calculez la distance en utilisant la méthode d'instance distanceTo()
+                const distance_meters = lngLat1.distanceTo(lngLat2); // <-- Correction ici !
+
+                const time_diff_seconds = (currentPointData.time.getTime() - prevPointData.time.getTime()) / 1000;
+
+                let speed_kmh = 0;
+                // Ne calculer la vitesse que si la différence de temps est positive
+                if (time_diff_seconds > 0) {
+                     const speed_mps = distance_meters / time_diff_seconds;
+                     speed_kmh = speed_mps * 3.6; // Convertir m/s en km/h
+                } else {
+                     // Si temps_diff <= 0, cela signifie points identiques ou erreur de temps. Vitesse = 0.
+                }
+
+
+                 // Stocker la vitesse CALCULÉE pour le segment qui COMMENCE au point i-1
+                 // et va jusqu'au point i. Donc, on l'attache à trackData[i-1].
+                 trackData[i-1].speed = speed_kmh;
+
+                 // Mettre à jour la vitesse maximale
+                 if (speed_kmh > maxTrackSpeed) {
+                     maxTrackSpeed = speed_kmh;
+                 }
+            } else if (i > 0) {
+                 // Si le point précédent ou actuel n'a pas de temps, on ne peut pas calculer la vitesse pour ce segment.
+                 // On peut optionnellement définir la vitesse à 0 ou undefined pour ce segment.
+                 trackData[i-1].speed = 0; // Vitesse par défaut 0 si temps manquant
+            }
+        }
+
+        // Assurez-vous que le dernier point n'a pas de propriété 'speed' sortante car il n'est le début d'aucun segment
+        if (trackData.length > 0) {
+            delete trackData[trackData.length - 1].speed;
+        }
+
+
+        console.log(`Trace chargée avec ${trackData.length} points.`);
+        console.log(`Vitesse maximale calculée : ${maxTrackSpeed.toFixed(2)} km/h.`);
+
+        // --- Ajout/Mise à jour des sources et couches Mapbox ---
+
+        // 1. Source pour la ligne de progression (initialement vide FeatureCollection)
+        // La source sera mise à jour dans animateTrack avec des segments colorés
+        if (map.getSource('route-progress-source')) {
+             map.getSource('route-progress-source').setData({ type: 'FeatureCollection', features: [] });
+        } else {
+             map.addSource('route-progress-source', {
+                 type: 'geojson',
+                 data: { type: 'FeatureCollection', features: [] } // Initialement vide
+             });
+        }
+
+
+        // 2. Couche pour la ligne de progression (celle qui sera visible et dessinée)
+        if (map.getLayer('route-progress-line')) {
+            map.removeLayer('route-progress-line');
+        }
+         // Ajoutez la couche D'ABORD
         map.addLayer({
             id: 'route-progress-line',
             type: 'line',
             source: 'route-progress-source', // Liée à la source de progression
             layout: { 'line-join': 'round', 'line-cap': 'round' },
             paint: {
-                'line-color': '#e63946', // Couleur vive pour la trace dessinée
-                'line-width': 4,         // Épaisseur
-                'line-opacity': 0.9
-            }
+                'line-color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'speed'], // Vitesse en km/h
+
+                    // Stops de couleur : [vitesse_kmh, couleur]
+                    0, '#00FF00',                  // Vert à 0 km/h
+                   // 10 * 1.852, '#0000FF',    // Bleu à 10 nœuds (~18.52 km/h)
+                    12 * 1.852, '#FFA500',    // Orange à 12 nœuds (~27.78 km/h)
+                    /*maxTrackSpeed*/ 25 * 1.852, '#FF0000'       // Reste rouge jusqu'à la vitesse maximale calculée
+                ],
+        'line-width': 4,
+        'line-opacity': 0.9
+    }
         });
 
-        // 3. (Optionnel) Ajouter une couche de fond pour la trace complète (très discrète)
-         map.addSource('route-full-source', {
-            type: 'geojson',
-            data: { type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: trackCoordinates } }
-        });
-         map.addLayer({
-            id: 'route-full-line-background',
-            type: 'line',
-            source: 'route-full-source',
-            layout: { 'line-join': 'round', 'line-cap': 'round' },
-            paint: {
-                'line-color': '#ffffff', // Blanc ou gris clair
-                'line-width': 2,
-                'line-opacity': 0.2,   // Très faible opacité
-                'line-dasharray': [2, 2] // En pointillé pour la différencier
-            }
-        }, 'route-progress-line'); // Ajouter cette couche *avant* la ligne de progression
+        // 3. (Optionnel) Couche de fond pour la trace complète (très discrète)
+         const fullTrackGeoJSON = {
+             type: 'Feature',
+             properties: {},
+             geometry: {
+                 type: 'LineString',
+                 coordinates: trackData.map(p => p.coord)
+             }
+         };
+         if (map.getSource('route-full-source')) {
+             map.getSource('route-full-source').setData(fullTrackGeoJSON);
+         } else {
+              map.addSource('route-full-source', {
+                  type: 'geojson',
+                  data: fullTrackGeoJSON
+              });
+         }
+         if (!map.getLayer('route-full-line-background')) {
+              // Assurez-vous que la couche 'route-progress-line' existe avant d'ajouter celle-ci en dessous
+              if (map.getLayer('route-progress-line')) {
+                   map.addLayer({
+                       id: 'route-full-line-background',
+                       type: 'line',
+                       source: 'route-full-source',
+                       layout: { 'line-join': 'round', 'line-cap': 'round' },
+                       paint: {
+                           'line-color': '#ffffff', // Blanc ou gris clair
+                           'line-width': 2,
+                           'line-opacity': 0.2, // Très faible opacité
+                           'line-dasharray': [2, 2] // En pointillé pour la différencier
+                       }
+                   }, 'route-progress-line'); // Ajouter cette couche *avant* la ligne de progression
+              } else {
+                   // Si route-progress-line n'a pas pu être ajoutée, ajoutez celle-ci sans beforeId
+                    map.addLayer({
+                       id: 'route-full-line-background',
+                       type: 'line',
+                       source: 'route-full-source',
+                       layout: { 'line-join': 'round', 'line-cap': 'round' },
+                       paint: {
+                           'line-color': '#ffffff', // Blanc ou gris clair
+                           'line-width': 2,
+                           'line-opacity': 0.2, // Très faible opacité
+                           'line-dasharray': [2, 2] // En pointillé pour la différencier
+                       }
+                   });
+              }
+         }
 
 
         // Ajuster la vue initiale à la trace complète
-        const bounds = trackCoordinates.reduce((bounds, coord) => bounds.extend(coord), new mapboxgl.LngLatBounds(trackCoordinates[0], trackCoordinates[0]));
-        map.fitBounds(bounds, { padding: {top: 80, bottom: 40, left: 40, right: 40} });
+        if (trackData.length > 0) {
+            const bounds = trackData.reduce((bounds, point) => bounds.extend(point.coord), new mapboxgl.LngLatBounds(trackData[0].coord, trackData[0].coord));
+            map.fitBounds(bounds, { padding: {top: 80, bottom: 40, left: 40, right: 40} });
+        }
 
-        // Activer les boutons
-        runButton.disabled = false;
-        stopButton.disabled = true;
 
-        // Ajouter relief et ciel (inchangé)
-        map.addSource('mapbox-dem', { /* ... */ type: 'raster-dem', url: 'mapbox://mapbox.mapbox-terrain-dem-v1', tileSize: 512, maxzoom: 14 });
-        map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-        map.addLayer({ id: 'sky', type: 'sky', paint: { /* ... */ 'sky-type': 'atmosphere','sky-atmosphere-sun': [0.0, 0.0],'sky-atmosphere-sun-intensity': 15 }});
+        // Activer les boutons et lancer l'animation si possible
+        if (trackData.length > 1) {
+            runButton.disabled = false;
+            stopButton.disabled = true; // Stop est désactivé tant que ça ne joue pas
+            runButton.textContent = "Play";
 
-        // Lancer la simulation automatiquement
-        if (trackCoordinates.length > 1) {
-            currentPointIndex = 0;
-            currentMapBearing = map.getBearing();
+            currentPointIndex = 0; // Commencer au premier point
+            cameraBearing = 0; // Réinitialiser la rotation de la caméra si vous voulez
+            // Initialiser la ligne de progression avec le premier point (vide ou juste le point de départ)
+            updateProgressLine(0); // Dessine une ligne vide initialement
+            if (movingMarker) movingMarker.remove(); // Supprimer l'ancien marqueur si présent
+            movingMarker = null;
             runButton.disabled = true;
             stopButton.disabled = false;
             runButton.textContent = "Playing...";
-            updateProgressLine([trackCoordinates[0]]);
-            if (movingMarker) movingMarker.remove();
-            movingMarker = null;
-            animateTrack();
+            animateTrack(); // Lancer l'animation automatiquement
+
         } else {
-            alert("La trace n'a pas assez de points pour lancer la simulation.");
+             alert("La trace n'a pas assez de points (>1) ou manque de données de temps pour calculer la vitesse et lancer la simulation.");
+             runButton.disabled = true;
+             stopButton.disabled = true;
         }
 
-            // Calculer le centre de la trace
-            if (trackCoordinates.length > 0) {
-        const sum = trackCoordinates.reduce(
-            (acc, coord) => [acc[0] + coord[0], acc[1] + coord[1]],
-            [0, 0]
-        );
-        trackCenter = [
-            sum[0] / trackCoordinates.length,
-            sum[1] / trackCoordinates.length
-        ];
+
+        // Calculer le centre de la trace (inchangé)
+        if (trackData.length > 0) {
+            const sum = trackData.reduce(
+                (acc, point) => [acc[0] + point.coord[0], acc[1] + point.coord[1]],
+                [0, 0]
+            );
+            trackCenter = [
+                sum[0] / trackData.length,
+                sum[1] / trackData.length
+            ];
         }
 
     } catch (error) {
         console.error("Error loading/displaying GPX:", error);
-        alert("Failed to load GPX track. Check console.");
+        alert("Failed to load GPX track or process data. Check console.");
         runButton.disabled = true; stopButton.disabled = true;
     }
 }
 
-// --- Gestionnaires d'événements pour les boutons (modifiés pour réinitialiser la ligne) ---
+// --- Gestionnaires d'événements pour les boutons ---
 runButton.addEventListener('click', () => {
-    if (!animationFrameId && trackCoordinates.length > 1) {
-        // Réinitialiser uniquement si l'animation est terminée
-        if (currentPointIndex >= trackCoordinates.length - 1) {
-            currentPointIndex = 0;
-            cameraBearing = 0;
-            updateProgressLine([trackCoordinates[0]]);
-            if (movingMarker) movingMarker.remove();
+    // Ne relancer que si l'animation est arrêtée
+    if (!animationFrameId && trackData.length > 1) {
+        // Réinitialiser la progression si l'animation était terminée
+        if (currentPointIndex >= trackData.length - 1) {
+            currentPointIndex = 0; // Repartir du début
+            cameraBearing = 0; // Réinitialiser la rotation
+            updateProgressLine(0); // Vider la ligne dessinée
+            if (movingMarker) movingMarker.remove(); // Supprimer le marqueur
             movingMarker = null;
         }
         runButton.disabled = true;
         stopButton.disabled = false;
         runButton.textContent = "Playing...";
-        animateTrack();
-    } else if (trackCoordinates.length <= 1) {
-        alert("La trace n'a pas été chargée ou est trop courte.");
+        animateTrack(); // Redémarrer l'animation
+    } else if (trackData.length <= 1) {
+        alert("La trace n'a pas été chargée correctement ou est trop courte.");
     }
 });
 
@@ -376,21 +475,43 @@ stopButton.addEventListener('click', () => {
     stopAnimation();
 });
 
+// --- Gérer l'appui sur la touche Espace ---
+window.addEventListener('keydown', (event) => {
+    // Vérifier si la touche enfoncée est l'espace
+    if (event.key === ' ') {
+        // Empêcher le comportement par défaut (par exemple, le défilement)
+        event.preventDefault();
+
+        // Si l'animation est en cours, l'arrêter
+        if (animationFrameId !== null) {
+            stopAnimation();
+        } else {
+            // Si l'animation est arrêtée, la démarrer
+            runButton.disabled = true;
+            stopButton.disabled = false;
+            runButton.textContent = "Playing...";
+            animateTrack();
+        }
+    }
+});
+
 // --- Récupérer l'URL du GPX à partir des paramètres ---
 function getGpxUrlFromParams() {
     const params = new URLSearchParams(window.location.search);
     const gpxUrl = params.get('gpx');
     if (!gpxUrl) {
-        console.warn("No GPX URL provided in query parameters. Using default.");
-        return ''; // URL par défaut
+        console.warn("No GPX URL provided in query parameters. Using default or placeholder.");
+         // >>> REMPLACEZ L'URL CI-DESSOUS PAR L'URL DE VOTRE FICHIER GPX DE TEST <<<
+        return 'votre_trace.gpx'; // <-- Mettez l'URL de votre fichier GPX ici
     }
     return gpxUrl;
 }
 
 // --- Chargement initial ---
 map.on('load', () => {
-    runButton.disabled = true; // Désactiver le bouton initialement
+    runButton.disabled = true; // Désactiver les boutons initialement
     stopButton.disabled = true;
+    // Charger le fichier GPX spécifié par l'URL (ou celui par défaut)
     loadAndDisplayGPX(getGpxUrlFromParams());
 });
 
