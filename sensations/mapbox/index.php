@@ -147,22 +147,78 @@ function updateProgressLine(currentIndex) {
         features: []
     };
 
-    for (let i = 0; i < currentIndex; i++) {
+    let currentSegment = null;
+    let currentSpeedSum = 0;
+    let segmentPointCount = 0;
+    const distanceThreshold = 5; // Seuil de distance (en mètres) pour fusionner les points
+
+    for (let i = 0; i <= currentIndex; i++) {
         if (i + 1 < trackData.length) {
             const startPointData = trackData[i];
             const endPointData = trackData[i + 1];
-            if (startPointData.speed !== undefined) {
-                const segmentFeature = {
+
+            // Vérifier que les coordonnées sont valides
+            if (!startPointData.coord || !endPointData.coord || 
+                isNaN(startPointData.coord[0]) || isNaN(startPointData.coord[1]) ||
+                isNaN(endPointData.coord[0]) || isNaN(endPointData.coord[1])) {
+                console.warn(`Segment ${i} ignoré : coordonnées invalides`, startPointData.coord, endPointData.coord);
+                continue;
+            }
+
+            const speed = startPointData.speed !== undefined ? startPointData.speed : 0;
+            const lngLat1 = new mapboxgl.LngLat(startPointData.coord[0], startPointData.coord[1]);
+            const lngLat2 = new mapboxgl.LngLat(endPointData.coord[0], endPointData.coord[1]);
+            const distance = lngLat1.distanceTo(lngLat2); // Distance en mètres
+
+            if (distance < distanceThreshold && speed <= 10) { // Fusionner si distance < seuil et basse vitesse
+                if (!currentSegment) {
+                    currentSegment = {
+                        coordinates: [startPointData.coord],
+                        speedSum: speed,
+                        pointCount: 1
+                    };
+                }
+                currentSegment.coordinates.push(endPointData.coord);
+                currentSegment.speedSum += speed;
+                currentSegment.pointCount += 1;
+            } else {
+                // Ajouter le segment fusionné s'il existe
+                if (currentSegment) {
+                    const avgSpeed = currentSegment.speedSum / currentSegment.pointCount;
+                    featureCollection.features.push({
+                        type: 'Feature',
+                        properties: { speed: avgSpeed },
+                        geometry: {
+                            type: 'LineString',
+                            coordinates: currentSegment.coordinates
+                        }
+                    });
+                    currentSegment = null;
+                }
+                // Ajouter le segment courant (non fusionné)
+                featureCollection.features.push({
                     type: 'Feature',
-                    properties: { speed: startPointData.speed },
+                    properties: { speed: speed },
                     geometry: {
                         type: 'LineString',
                         coordinates: [startPointData.coord, endPointData.coord]
                     }
-                };
-                featureCollection.features.push(segmentFeature);
+                });
             }
         }
+    }
+
+    // Ajouter le dernier segment fusionné s'il existe
+    if (currentSegment) {
+        const avgSpeed = currentSegment.speedSum / currentSegment.pointCount;
+        featureCollection.features.push({
+            type: 'Feature',
+            properties: { speed: avgSpeed },
+            geometry: {
+                type: 'LineString',
+                coordinates: currentSegment.coordinates
+            }
+        });
     }
 
     if (progressSource) {
