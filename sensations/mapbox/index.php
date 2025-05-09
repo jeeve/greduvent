@@ -368,18 +368,24 @@ async function loadAndDisplayGPX(gpxFilePath) {
             id: 'route-progress-line',
             type: 'line',
             source: 'route-progress-source',
-            layout: { 'line-join': 'round', 'line-cap': 'round' },
+            layout: {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
             paint: {
                 'line-color': [
                     'interpolate',
                     ['linear'],
                     ['get', 'speed'],
-                    0, '#00FF00',
-                    12 * 1.852, '#FFA500',
-                    25 * 1.852, '#FF0000'
+                    0, '#008000',   // Vert foncé pour 0 km/h
+                    5 * 1.852, '#00CC00',   // Vert moyen pour 2 km/h
+                    8 * 1.852, '#00FF00',   // Vert clair pour 5 km/h
+                    12 * 1.852, '#FFA500', // Orange à 12 nœuds (~22.22 km/h)
+                    25 * 1.852, '#FF0000'  // Rouge à 25 nœuds (~46.3 km/h)
                 ],
-                'line-width': 4,
-                'line-opacity': 0.9
+                'line-width': window.innerWidth < 600 ? 6 : 4,
+                'line-opacity': 1,
+                'line-gap-width': 0
             }
         });
 
