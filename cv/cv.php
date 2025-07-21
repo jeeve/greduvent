@@ -159,7 +159,7 @@ echo $age;
                                         <div class="cliquable" data-section="saisie-temps">
                                                 <i class="fa-solid fa-angle-up fa-rotate-90"></i>
                                                 <h4>
-                                                Réalisation en cours d'un projet saisie de temps avec
+                                                Réalisation d'un projet saisie de temps avec
                                                     <strong>Angular</strong>
                                                 </h4>
                                             </div>
@@ -168,7 +168,7 @@ echo $age;
                                                 <ul class="internet">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
-                                                            src="images/saisie-temps.png" />
+                                                            src="images/saisie-temps-2.png" />
                                                            
                                                         <div class="legende">
                                                             Prototype d'écran de saisie (Angular Material)
