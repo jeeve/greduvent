@@ -168,10 +168,10 @@ echo $age;
                                                 <ul class="internet">
                                                     <li>
                                                         <img class="img-responsive ombre-image taille-double"
-                                                            src="images/saisie-temps-2.png" />
+                                                            src="images/saisie-temps-3.png" />
                                                            
                                                         <div class="legende">
-                                                            Prototype d'écran de saisie (Angular Material)
+                                                            Ecran de saisie (Angular Material)
                                                         </div>
                                                       
                                                     </li>
