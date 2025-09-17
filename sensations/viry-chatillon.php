@@ -393,7 +393,7 @@
 
     var myCam = setInterval(getWebCam, 30000); // 30 s
 
-    station = "mantes-la-jolie";
+    station = "viry-chatillon";
     var myVar = setInterval(getMeteo, 30000);
 
     function maPosition(position) {
