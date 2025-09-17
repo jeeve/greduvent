@@ -178,9 +178,9 @@
                         <div class="col-xs-12 col-sm-6 fond">
                             <div class="embed-responsive embed-responsive-4by3 ombre-image"
                                 style="background-image: none; background-color: black;">
-                                <iframe id="map-virychatillon"
-                                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d211164.66341434096!2d1.8751571688649815!3d48.89321926889306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e6c12b153c22bf%3A0x2d227d4087bc4da9!2sMoisson!3m2!1d49.072928999999995!2d1.6691859999999998!5e0!3m2!1sfr!2sfr!4v1544557383138"
-                                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe id="map-virychatillon"
+        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d187219.0664658097!2d2.155799017631988!3d48.77583726522512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!3m2!1d48.856614!2d2.3522219!4m5!1s0x47e5db2381273575%3A0x67a03b54a2a1a2e8!2sViry-Ch%C3%A2tillon!3m2!1d48.665768!2d2.383741!5e0!3m2!1sfr!2sfr!4v1701359300000!5m2!1sfr!2sfr"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                             <p class="legende">Itinéraire</p>
 
@@ -399,12 +399,18 @@
     function maPosition(position) {
         var lat1 = position.coords.latitude;
         var lon1 = position.coords.longitude;
+        var viryChatillonLat = 48.665768;
+        var viryChatillonLon = 2.383741;
+        var viryChatillonId = '1s0x47e5db2381273575%3A0x67a03b54a2a1a2e8';
         var itineraireSrc =
-            'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d' +
-            lat1 + '!2d' + lon1 + '!4m5!';
-        jQuery('#map-virychatillon').attr('src', itineraireSrc +
-            '1s0x47e6c12b153c22bf%3A0x2d227d4087bc4da9!2sMoisson!3m2!1d49.072928999999995!2d1.6691859999999998!5e0!3m2!1sfr!2sfr!4v1544557383138'
-            );
+                'https://www.google.com/maps/embed?pb=' +
+                '!1m28!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709' + // Ce bloc semble être un zoom global initial, on peut le garder ou l'ajuster
+                '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0' + // Paramètres de la carte
+                '!4m5!1s0x0%3A0x0!2m2!1d' + lat1 + '!2d' + lon1 + '!' + // Votre position (marquée 0x0 pour Google Maps dans ce contexte)
+                '!4m5!' + viryChatillonId + '!2sViry-Ch%C3%A2tillon!3m2!1d' + viryChatillonLat + '!2d' + viryChatillonLon + // Viry-Châtillon
+                '!5e0!3m2!1sfr!2sfr!4v1701359300000!5m2!1sfr!2sfr'; // Langue et version
+
+            jQuery('#map-virychatillon').attr('src', itineraireSrc);
     }
 
 
