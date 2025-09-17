@@ -223,7 +223,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p><a href="#viry-chatillon">Viry-Châtillon</a></p>
+                                            <p><a href="#virychatillon">Viry-Châtillon</a></p>
                                         </td>
                                         <td>
                                             <p class="noteViryChatillon"></p>
@@ -1046,30 +1046,30 @@
 
 
 
-                   <a name="viry-chatillon"></a>
-                    <h2><input id="div-viry-chatillon" type="button" value=" - " data-toggle="collapse"
-                            data-target="#item-div-viry-chatillon" /> <a href="viry-chatillon.php">Viry-Châtillon</a></h2>
-                    <div id="item-div-viry-chatillon" class="collapse in">
+                   <a name="virychatillon"></a>
+                    <h2><input id="div-virychatillon" type="button" value=" - " data-toggle="collapse"
+                            data-target="#item-div-virychatillon" /> <a href="viry-chatillon.php">Viry-Châtillon</a></h2>
+                    <div id="item-div-virychatillon" class="collapse in">
                         <div class="row">
                             <div class="col-sm-8">
 
-                                <p><input type="button" data-toggle="collapse" data-target="#item-vue-viry-chatillon"
+                                <p><input type="button" data-toggle="collapse" data-target="#item-vue-virychatillon"
                                         value="Satellite" class="btn-releve" /><!-- - <input type="button"
                                         data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam"
                                         class="btn-releve" />--> - <span class="hidden-xs"><input type="button"
-                                            data-target="#item-infos-viry-chatillon" value="Informations"
+                                            data-target="#item-infos-virychatillon" value="Informations"
                                             class="btn-releve" /></span><span class="visible-xs-inline"><input
-                                            type="button" data-target="#item-infos-viry-chatillon" value="Infos"
+                                            type="button" data-target="#item-infos-virychatillon" value="Infos"
                                             class="btn-releve" /></span>
                                     -
-                                    <span class="hidden-xs"><input type="button" data-target="#item-histo-viry-chatillon"
+                                    <span class="hidden-xs"><input type="button" data-target="#item-histo-virychatillon"
                                             value="Historique" class="btn-releve" /></span>
                                     <span class="visible-xs-inline"><input type="button"
-                                            data-target="#item-histo-viry-chatillon" value="Histo" class="btn-releve" /></span>
+                                            data-target="#item-histo-virychatillon" value="Histo" class="btn-releve" /></span>
                                 </p>
 
 
-                                <div id="item-vue-viry-chatillon" class="collapse">
+                                <div id="item-vue-virychatillon" class="collapse">
                                     <div class="embed-responsive embed-responsive-4by3 ombre-image">
                                         <iframe
                                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17424.380326749604!2d2.389222787583002!3d48.66381945917766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sus!4v1758110699674!5m2!1sfr!2sus"
@@ -1079,7 +1079,7 @@
                                     <br>
                                 </div>
 
-                                <div id="item-webcam-viry-chatillon" class="collapse">
+                                <div id="item-webcam-virychatillon" class="collapse">
                                     <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
 
                                         <video id="video-moisson" class="vjs-tech" tabindex="-1" preload="auto" loop=""
@@ -1094,24 +1094,24 @@
                                     <br>
                                 </div>
 
-                                <div id="item-infos-viry-chatillon" class="collapse">
+                                <div id="item-infos-virychatillon" class="collapse">
                                     <div class="infoViryChatillon"></div>
                                     <br>
                                 </div>
 
-                                <div id="item-histo-viry-chatillon" class="collapse histo">
+                                <div id="item-histo-virychatillon" class="collapse histo">
                                     <form class="datetimeform">
                                         <div>
                                             <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
-                                                    style="width: 130px;" id="ma-date-viry-chatillon" type="text" name="date"
+                                                    style="width: 130px;" id="ma-date-virychatillon" type="text" name="date"
                                                     value="25/02/2017"></input></p>
                                         </div>
                                     </form>
                                     <br>
                                     <div class="row">
-                                        <div class="col-xs-12 fond" id="historique-vent-viry-chatillon"></div>
-                                        <div class="col-xs-12 fond" id="historique-rose-viry-chatillon"></div>
-                                        <div class="col-xs-12 fond" id="historique-temp-viry-chatillon"></div>
+                                        <div class="col-xs-12 fond" id="historique-vent-virychatillon"></div>
+                                        <div class="col-xs-12 fond" id="historique-rose-virychatillon"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-virychatillon"></div>
                                     </div>
                                     <br>
                                 </div>
@@ -1119,7 +1119,7 @@
 
                                 <div class="fond-table encadrement-table">
 
-                                    <div class="item-meteo-viry-chatillon collapse">
+                                    <div class="item-meteo-virychatillon collapse">
                                         <script type="text/javascript"
                                             src="https://www.windfinder.com/widget/forecast/js/viry_chatillon?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0">
                                         </script><noscript><a rel='nofollow'
@@ -1155,7 +1155,7 @@
                             <div class="visible-xs"><br></div>
                             <div class="col-sm-4">
                                 <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
-                                    <iframe src="meteo-temps-reel.php?station=mantes-la-jolie&credit=0"></iframe>
+                                    <iframe src="meteo-temps-reel.php?station=viry-chatillon&credit=0"></iframe>
                                 </div>
                                 <br>
                                 <div class="fond-table encadrement-table" style="width: 150px;">

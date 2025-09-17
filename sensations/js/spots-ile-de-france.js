@@ -24,11 +24,11 @@
 	}
 	
 	    function getWebCams() {
-			getWebCamPoses();
-			getWebCamMoisson();
-			getWebCamSaintQuentin();
+			//getWebCamPoses();
+			//getWebCamMoisson();
+			//getWebCamSaintQuentin();
 			getWebCamGrandeParoisse();
-			getWebCamEcluzelles();
+			//getWebCamEcluzelles();
 			getWebCamJablines();
 			// getWebCamForetOrient();
 		}
@@ -291,7 +291,10 @@
 			});
 			$( "#ma-date-foretorient" ).change(function() {
 			 getHistoriqueVent('foretorient');
-			});			
+			});	
+			$( "#ma-date-virychatillon" ).change(function() {
+			 getHistoriqueVent('virychatillon');
+			});				
 			
 			
 			
