@@ -60,6 +60,7 @@
 
                         <div class="col-xs-12 col-sm-12 fond">
                             <br>
+                            <!--
                             <div class="visible-xs">
                                 <p>A13 près de Mantes la Ville, <a
                                         href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris'
@@ -118,7 +119,7 @@
 
                             <div class="visible-xs"><br></div>
                         </div>
-
+-->
 
                         <div class="visible-xs">
                             <div class="col-xs-1"></div>

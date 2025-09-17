@@ -223,6 +223,14 @@
                                     </tr>
                                     <tr>
                                         <td>
+                                            <p><a href="#viry-chatillon">Viry-Châtillon</a></p>
+                                        </td>
+                                        <td>
+                                            <p class="noteViryChatillon"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             <p><a href="#grande-paroisse">La Grande-Paroisse</a></p>
                                         </td>
                                         <td>
@@ -275,8 +283,8 @@
                             <div class="col-sm-8">
 
                                 <p><input type="button" value="Orientations" data-target="#item-vue-poses"
-                                        class="btn-releve" /> - <input type="button" value="Webcam"
-                                        data-target="#item-webcam-poses" class="btn-releve" /> - <span
+                                        class="btn-releve" /><!-- - <input type="button" value="Webcam"
+                                        data-target="#item-webcam-poses" class="btn-releve" />--> - <span
                                         class="hidden-xs"><input type="button" data-target="#item-infos-poses"
                                             value="Informations" class="btn-releve" /></span>
                                     <span class="visible-xs-inline"><input type="button" data-target="#item-infos-poses"
@@ -426,9 +434,9 @@
                             <div class="col-sm-8">
 
                                 <p><input type="button" data-toggle="collapse" data-target="#item-vue-moisson"
-                                        value="Satellite" class="btn-releve" /> - <input type="button"
+                                        value="Satellite" class="btn-releve" /><!-- - <input type="button"
                                         data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam"
-                                        class="btn-releve" /> - <span class="hidden-xs"><input type="button"
+                                        class="btn-releve" />--> - <span class="hidden-xs"><input type="button"
                                             data-target="#item-infos-moisson" value="Informations"
                                             class="btn-releve" /></span><span class="visible-xs-inline"><input
                                             type="button" data-target="#item-infos-moisson" value="Infos"
@@ -559,9 +567,9 @@
                             <div class="col-sm-8">
 
                                 <p><input type="button" data-toggle="collapse" data-target="#item-vue-ecluzelles"
-                                        value="Satellite" class="btn-releve" /> - <input type="button"
+                                        value="Satellite" class="btn-releve" /><!-- - <input type="button"
                                         data-toggle="collapse" data-target="#item-webcam-ecluzelles" value="Webcam"
-                                        class="btn-releve" /> - <span class="hidden-xs"><input type="button"
+                                        class="btn-releve" />--> - <span class="hidden-xs"><input type="button"
                                             data-target="#item-infos-ecluzelles" value="Informations"
                                             class="btn-releve" /></span><span class="visible-xs-inline"><input
                                             type="button" data-target="#item-infos-ecluzelles" value="Infos"
@@ -1035,6 +1043,141 @@
 
                         <br>
                     </div>
+
+
+
+                   <a name="viry-chatillon"></a>
+                    <h2><input id="div-viry-chatillon" type="button" value=" - " data-toggle="collapse"
+                            data-target="#item-div-viry-chatillon" /> <a href="viry-chatillon.php">Viry-Châtillon</a></h2>
+                    <div id="item-div-viry-chatillon" class="collapse in">
+                        <div class="row">
+                            <div class="col-sm-8">
+
+                                <p><input type="button" data-toggle="collapse" data-target="#item-vue-viry-chatillon"
+                                        value="Satellite" class="btn-releve" /><!-- - <input type="button"
+                                        data-toggle="collapse" data-target="#item-webcam-moisson" value="Webcam"
+                                        class="btn-releve" />--> - <span class="hidden-xs"><input type="button"
+                                            data-target="#item-infos-viry-chatillon" value="Informations"
+                                            class="btn-releve" /></span><span class="visible-xs-inline"><input
+                                            type="button" data-target="#item-infos-viry-chatillon" value="Infos"
+                                            class="btn-releve" /></span>
+                                    -
+                                    <span class="hidden-xs"><input type="button" data-target="#item-histo-viry-chatillon"
+                                            value="Historique" class="btn-releve" /></span>
+                                    <span class="visible-xs-inline"><input type="button"
+                                            data-target="#item-histo-viry-chatillon" value="Histo" class="btn-releve" /></span>
+                                </p>
+
+
+                                <div id="item-vue-viry-chatillon" class="collapse">
+                                    <div class="embed-responsive embed-responsive-4by3 ombre-image">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17424.380326749604!2d2.389222787583002!3d48.66381945917766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sus!4v1758110699674!5m2!1sfr!2sus"
+                                            width="600" height="450" frameborder="0" style="border:0"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <br>
+                                </div>
+
+                                <div id="item-webcam-viry-chatillon" class="collapse">
+                                    <div class="embed-responsive embed-responsive-16by9 ombre-image webcam">
+
+                                        <video id="video-moisson" class="vjs-tech" tabindex="-1" preload="auto" loop=""
+                                            muted="muted" playsinline="playsinline" autoplay=""></video>
+                                        <div class="webcam-texte">
+                                            <p>A13 près de Mantes la Ville, <a
+                                                    href='https://www.webcam-autoroute.eu/fr/cam%C3%A9ra/france-a13/129/ile-de-france/mantes-la-ville/rouen-vers-paris'
+                                                    target="_blank">péage de Buchelay</a>, vue orientée vers Paris</p>
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                </div>
+
+                                <div id="item-infos-viry-chatillon" class="collapse">
+                                    <div class="infoViryChatillon"></div>
+                                    <br>
+                                </div>
+
+                                <div id="item-histo-viry-chatillon" class="collapse histo">
+                                    <form class="datetimeform">
+                                        <div>
+                                            <p><label for="ma-date" style="margin-right: 10px;">Date </label><input
+                                                    style="width: 130px;" id="ma-date-viry-chatillon" type="text" name="date"
+                                                    value="25/02/2017"></input></p>
+                                        </div>
+                                    </form>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-xs-12 fond" id="historique-vent-viry-chatillon"></div>
+                                        <div class="col-xs-12 fond" id="historique-rose-viry-chatillon"></div>
+                                        <div class="col-xs-12 fond" id="historique-temp-viry-chatillon"></div>
+                                    </div>
+                                    <br>
+                                </div>
+
+
+                                <div class="fond-table encadrement-table">
+
+                                    <div class="item-meteo-viry-chatillon collapse">
+                                        <script type="text/javascript"
+                                            src="https://www.windfinder.com/widget/forecast/js/viry_chatillon?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0">
+                                        </script><noscript><a rel='nofollow'
+                                                href='https://www.windfinder.com/forecast/viry_chatillon_paris?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind
+                                                forecast for Viry-Châtillon</a> provided by <a rel='nofollow'
+                                                href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+                                    </div>
+
+                                    <script id="wg_fwdg_85146_100_1758111253699">
+                                    (function(window, document) {
+                                        var loader = function() {
+                                            var arg = ["s=85146", "m=3", "uid=wg_fwdg_85146_100_1758111253699",
+                                                "wj=knots", "tj=c", "odh=7", "doh=21", "fhours=240",
+                                                "vt=forecasts",
+                                                "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"
+                                            ];
+                                            var script = document.createElement("script");
+                                            var tag = document.getElementsByTagName("script")[0];
+                                            script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join(
+                                                "&"));
+                                            tag.parentNode.insertBefore(script, tag);
+                                        };
+                                        window.addEventListener ? window.addEventListener("load", loader, false) :
+                                            window.attachEvent("onload", loader);
+                                    })(window, document);
+                                    </script>
+
+                                    <!--
+						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/moisson_lavacourt?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&columns=2&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/moisson_lavacourt?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for Moisson Lavacourt</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
+-->
+                                </div>
+                            </div>
+                            <div class="visible-xs"><br></div>
+                            <div class="col-sm-4">
+                                <div class="embed-responsive fond-table encadrement-table" style="height:150px;">
+                                    <iframe src="meteo-temps-reel.php?station=mantes-la-jolie&credit=0"></iframe>
+                                </div>
+                                <br>
+                                <div class="fond-table encadrement-table" style="width: 150px;">
+                                    <p>
+                                        <a href="https://fr.windfinder.com/weatherforecast/viry_chatillon_paris"
+                                            target="_blank">Superforecast</a><br><br>
+                                        <a href="https://meteofrance.com/previsions-meteo-france/viry-chatillon/91170"
+                                            target="_blank">Météo France</a><br><br>
+                                        <a href="https://www.windguru.cz/85146" target="_blank">Windguru</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <br>
+                    </div>
+
+
+
+
 
 
 
