@@ -284,18 +284,18 @@
                                 })(window, document);
                                 </script>
 
-                                <a href="https://fr.windfinder.com/weatherforecast/moisson_lavacourt"
+                                <a href="https://fr.windfinder.com/weatherforecast/viry_chatillon_paris"
                                     target="_blank"><img src="images/logo-windfinder.png" alt="superforecast"
                                         title="superforecast"></a>
-                                <a href="https://www.windalert.com/map#49.062,2.72,9,1,!33116,2" target="_blank"><img
+                                <a href="https://windalert.com/map#48.67,2.385,14,1" target="_blank"><img
                                         src="images/logo-windalert.jpg"></a>
-                                <a href="https://www.windguru.cz/581" target="_blank"><img
+                                <a href="https://www.windguru.cz/85146" target="_blank"><img
                                         src="images/logo-windguru.gif"></a>
-                                <a href="https://www.ventusky.com/?p=49.39;0.90;8&l=wind-10m" target="_blank"><img
+                                <a href="https://www.ventusky.com/?p=48.634;2.397;12&l=wind-10m" target="_blank"><img
                                         src="images/logo-ventusky.png"></a>
-                                <a href="https://www.xcweather.co.uk/forecast/moisson" target="_blank"><img
+                                <a href="https://www.xcweather.co.uk/forecast/viry_chatillon" target="_blank"><img
                                         src="images/logo-xcweather.png"></a>
-                                <a href="http://www.meteofrance.com/previsions-meteo-france/moisson/78840"
+                                <a href="http://www.meteofrance.com/previsions-meteo-france/viry-chatillon/91170"
                                     target="_blank"><img src="images/logo-meteofrance.png"></a>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
                     </div>
 
                     <h2>Informations</h2>
-                    <div class="infoMoisson"></div>
+                    <div class="infoViryChatillon"></div>
                     <br>
 
                     <h2>Historique</h2>
@@ -329,15 +329,15 @@
 
                     <div class="row histo">
                         <div class="col-sm-1 fond"></div>
-                        <div class="col-xs-12 col-sm-10 fond" id="historique-vent-moisson"></div>
+                        <div class="col-xs-12 col-sm-10 fond" id="historique-vent-virychatillon"></div>
                     </div>
                     <div class="row histo">
                         <div class="col-sm-2 fond"></div>
-                        <div class="col-xs-12 col-sm-8 fond" id="historique-rose-moisson"></div>
+                        <div class="col-xs-12 col-sm-8 fond" id="historique-rose-virychatillon"></div>
                     </div>
 					<div class="row histo">
                         <div class="col-sm-1 fond"></div>
-                        <div class="col-xs-12 col-sm-10 fond" id="historique-temp-moisson"></div>
+                        <div class="col-xs-12 col-sm-10 fond" id="historique-temp-virychatillon"></div>
                     </div>
                     <br><br>
 
@@ -402,7 +402,7 @@
         var itineraireSrc =
             'https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d' +
             lat1 + '!2d' + lon1 + '!4m5!';
-        jQuery('#map-moisson').attr('src', itineraireSrc +
+        jQuery('#map-virychatillon').attr('src', itineraireSrc +
             '1s0x47e6c12b153c22bf%3A0x2d227d4087bc4da9!2sMoisson!3m2!1d49.072928999999995!2d1.6691859999999998!5e0!3m2!1sfr!2sfr!4v1544557383138'
             );
     }
@@ -410,7 +410,7 @@
 
     jQuery(document).ready(function($) {
         getInfoSpot();
-        getInfoSessions('Moisson');
+        getInfoSessions('Viry-Châtillon');
         getWebCam();
         getMeteo();
 
@@ -418,11 +418,11 @@
             navigator.geolocation.getCurrentPosition(maPosition);
         }
 
-        initHistorique('moisson');
-        getHistoriqueVent('moisson');
+        initHistorique('virychatillon');
+        getHistoriqueVent('virychatillon');
 
-        $("#ma-date-moisson").change(function() {
-            getHistoriqueVent('moisson');
+        $("#ma-date-virychatillon").change(function() {
+            getHistoriqueVent('virychatillon');
         });
 
 
