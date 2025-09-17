@@ -409,8 +409,7 @@
                 '!4m5!1s0x0%3A0x0!2m2!1d' + lat1 + '!2d' + lon1 + '!' + // Votre position (marquée 0x0 pour Google Maps dans ce contexte)
                 '!4m5!' + viryChatillonId + '!2sViry-Ch%C3%A2tillon!3m2!1d' + viryChatillonLat + '!2d' + viryChatillonLon + // Viry-Châtillon
                 '!5e0!3m2!1sfr!2sfr!4v1701359300000!5m2!1sfr!2sfr'; // Langue et version
-
-            jQuery('#map-virychatillon').attr('src', itineraireSrc);
+        jQuery('#map-virychatillon').attr('src', itineraireSrc);
     }
 
 
