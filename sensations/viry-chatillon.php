@@ -401,21 +401,20 @@
         var lon1 = position.coords.longitude;
         var viryChatillonLat = 48.665768;
         var viryChatillonLon = 2.383741;
-        var viryChatillonId = '1s0x47e5db2381273575%3A0x67a03b54a2a1a2e8';
+        var viryChatillonId = '0x47e5db2381273575:0x67a03b54a2a1a2e8'; // ID de lieu corrigé pour Viry-Châtillon
         var itineraireSrc =
-                'https://www.google.com/maps/embed?pb=' +
-                '!1m28!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709' + // Ce bloc semble être un zoom global initial, on peut le garder ou l'ajuster
-                '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0' + // Paramètres de la carte
-                '!4m5!1s0x0%3A0x0!2m2!1d' + lat1 + '!2d' + lon1 + '!' + // Votre position (marquée 0x0 pour Google Maps dans ce contexte)
-                '!4m5!' + viryChatillonId + '!2sViry-Ch%C3%A2tillon!3m2!1d' + viryChatillonLat + '!2d' + viryChatillonLon + // Viry-Châtillon
-                '!5e0!3m2!1sfr!2sfr!4v1701359300000!5m2!1sfr!2sfr'; // Langue et version
+            'https://www.google.com/maps/embed?pb=' +
+            '!1m28!1m12!1m3!1d353971.9888214055!2d2.2661361853305393!3d48.91901435220709' +
+            '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0' +
+            '!4m5!1s!2sMa+position!3m2!1d' + lat1 + '!2d' + lon1 + // Utilisation de "Ma position" comme libellé
+            '!4m5!1s' + viryChatillonId + '!2sViry-Ch%C3%A2tillon!3m2!1d' + viryChatillonLat + '!2d' + viryChatillonLon +
+            '!5e0!3m2!1sfr!2sfr!4v1701359300000!5m2!1sfr!2sfr';
         jQuery('#map-virychatillon').attr('src', itineraireSrc);
     }
 
-
     jQuery(document).ready(function($) {
         getInfoSpot();
-        getInfoSessions('Viry-Châtillon');
+        getInfoSessions('Viry-Chatillon');
         getWebCam();
         getMeteo();
 
