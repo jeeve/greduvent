@@ -119,8 +119,9 @@
                             </div>
 
                             <div class="visible-xs"><br></div>
+                            -->
                         </div>
--->
+
 
                         <div class="visible-xs">
                             <div class="col-xs-1"></div>
