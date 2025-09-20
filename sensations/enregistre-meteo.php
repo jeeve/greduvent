@@ -80,6 +80,8 @@ function enregistre_meteo_station($station) {
 	enregistre_meteo_station('montereau-fault-yonne');
 	sleep(1);
 	enregistre_meteo_station('torcy');
+	sleep(1);
+	enregistre_meteo_station('viry-châtillon');
 			
 		?>
 		

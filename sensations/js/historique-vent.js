@@ -164,24 +164,41 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/virychatillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
-    case "grandeparoisse":
-      $("#historique-vent-grandeparoisse").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/vent/' +
+    case "virychatillon":
+      $("#historique-vent-virychatillon").html(
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/vent/' +
-          curdate +
-          '" class="img-responsive ombre-image"></a>'
-      );
-      $("#historique-rose-grandeparoisse").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/montereau-fault-yonne/' +
-          curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/montereau-fault-yonne/' +
+          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-rose-virychatillon").html(
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/viry-châtillon/' +
+          curdate +
+          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/viry-châtillon/' +
+          curdate +
+          '" class="img-responsive ombre-image"></a>'
+      );
+      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      break;
+        case "vaires":
+      $("#historique-vent-vaires").html(
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+          curdate +
+          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+          curdate +
+          '" class="img-responsive ombre-image"></a>'
+      );
+      $("#historique-rose-vaires").html(
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+          curdate +
+          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+          curdate +
+          '" class="img-responsive ombre-image"></a>'
+      );
+      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "foretorient":
       $("#historique-vent-foretorient").html(
