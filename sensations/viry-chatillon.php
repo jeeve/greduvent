@@ -313,7 +313,7 @@
 
                         <div>
                             <p><label for="ma-date" style="margin-right: 10px;">Date </label><input style="width: 130px;"
-                                    id="ma-date-moisson" type="text" name="date" value="25/02/2017"></input></p>
+                                    id="ma-date-virychatillon" type="text" name="date" value="25/02/2017"></input></p>
                         </div>
                         <!-- 
  					    <div><p><label for="mon-heure1">entre <span style="color:grey">(HH:MM)</span></label><input id="mon-heure1" type="text" name="heure1" value="10:00"></input></p></div>

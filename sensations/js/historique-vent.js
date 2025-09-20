@@ -181,7 +181,7 @@ function getHistoriqueVent(spot) {
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-virychatillon").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
         case "vaires":
       $("#historique-vent-vaires").html(
