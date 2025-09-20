@@ -192,7 +192,7 @@
                                     loading="lazy"></iframe>
                             </div>
                             <p class="legende">Le spot sur <a
-                                    href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=276"
+                                    href="https://mywindsessions.com/mws_new/detail_spot.php?id_spot=276"
                                     target="_blank">My
                                     wind session</a></p>
                         </div>

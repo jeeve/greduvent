@@ -190,7 +190,7 @@
                                     width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                             <p class="legende">Le spot sur <a
-                                    href="http://windsurf-sessions.eg2.fr/detail_spot.php?id_spot=36" target="_blank">My
+                                    href="https://mywindsessions.com/mws_new/detail_spot.php?id_spot=36" target="_blank">My
                                     wind session</a></p>
                         </div>
 
