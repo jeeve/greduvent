@@ -267,23 +267,24 @@
                         <div class="visible-xs col-xs-12 fond">
                             <div class="fond-table encadrement-table">
 
-                                <script id="wg_fwdg_581_3_1562857685282">
-                                (function(window, document) {
-                                    var loader = function() {
-                                        var arg = ["s=581", "m=3", "uid=wg_fwdg_581_3_1562857685282",
-                                            "wj=knots", "tj=c", "odh=7", "doh=21", "fhours=240",
-                                            "vt=forecasts",
-                                            "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"
-                                        ];
-                                        var script = document.createElement("script");
-                                        var tag = document.getElementsByTagName("script")[0];
-                                        script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join("&"));
-                                        tag.parentNode.insertBefore(script, tag);
-                                    };
-                                    window.addEventListener ? window.addEventListener("load", loader, false) :
-                                        window.attachEvent("onload", loader);
-                                })(window, document);
-                                </script>
+                                    <script id="wg_fwdg_557750_100_1758441670829">
+                                    (function(window, document) {
+                                        var loader = function() {
+                                            var arg = ["s=85146", "m=3", "uid=wg_fwdg_557750_100_1758441670829",
+                                                "wj=knots", "tj=c", "odh=7", "doh=21", "fhours=240",
+                                                "vt=forecasts",
+                                                "p=WINDSPD,GUST,MWINDSPD,SMER,TMPE,FLHGT,CDC,APCPs,RATING"
+                                            ];
+                                            var script = document.createElement("script");
+                                            var tag = document.getElementsByTagName("script")[0];
+                                            script.src = "https://www.windguru.cz/js/widget.php?" + (arg.join(
+                                                "&"));
+                                            tag.parentNode.insertBefore(script, tag);
+                                        };
+                                        window.addEventListener ? window.addEventListener("load", loader, false) :
+                                            window.attachEvent("onload", loader);
+                                    })(window, document);
+                                    </script>
 
                                 <a href="https://fr.windfinder.com/weatherforecast/viry_chatillon_paris"
                                     target="_blank"><img src="images/logo-windfinder.png" alt="superforecast"
