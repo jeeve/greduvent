@@ -56,6 +56,7 @@
 		echo getSommaireItem('../sensations/saint-quentin-yvelines.php');
 		echo getSommaireItem('../sensations/jablines.php');		
 		echo getSommaireItem('../sensations/vaires-sur-marne.php');
+		echo getSommaireItem('../sensations/viry-chatillon.php');
 		echo getSommaireItem('../sensations/grande-paroisse.php');
 		echo getSommaireItem('../sensations/foret-orient.php');
 		echo getSommaireItem('../sensations/powerkite.php');
