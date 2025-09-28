@@ -178,6 +178,9 @@ function getInfoSessions(spot) {
             case "Vaires sur Marne":
               spotURL = "/sensations/vaires-sur-marne.php";
               break;
+            case "Viry-Châtillon":
+              spotURL = "/sensations/viry-chatillon.php";
+              break;              
             case "Moisson":
               spotURL = "/sensations/moisson.php";
               break;
@@ -229,6 +232,9 @@ function getInfoSessions(spot) {
           case "Vaires sur Marne":
             station = "torcy";
             break;
+          case "Viry-Châtillon":
+            station = "viry-châtillon";
+            break;            
           case "Moisson":
             station = "mantes-la-jolie";
             break;

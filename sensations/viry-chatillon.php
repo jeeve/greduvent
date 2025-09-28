@@ -413,7 +413,7 @@
 
     jQuery(document).ready(function($) {
         getInfoSpot();
-        getInfoSessions('Viry-Chatillon');
+        getInfoSessions('Viry-Châtillon');
         getWebCam();
         getMeteo();
 
