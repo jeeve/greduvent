@@ -213,14 +213,14 @@
                                             <p class="noteJablines"></p>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <!--<tr>
                                         <td>
                                             <p><a href="#vaires">Vaires sur Marne</a></p>
                                         </td>
                                         <td>
                                             <p class="noteVairesSurMarne"></p>
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                     <tr>
                                         <td>
                                             <p><a href="#virychatillon">Viry-Châtillon</a></p>
@@ -911,7 +911,7 @@
 
                         <br>
                     </div>
-
+<!--
                     <a name="vaires"></a>
                     <h2><input id="div-vaires" type="button" value=" - " data-toggle="collapse"
                             data-target="#item-div-vaires" /> <a href="vaires-sur-marne.php">Vaires sur Marne</a></h2>
@@ -1016,9 +1016,7 @@
                                     })(window, document);
                                     </script>
 
-                                    <!--
-						<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/lac-de-vaires-sur-Marne?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&days=4&show_day=1&show_pressure=0&show_waves=0"></script><noscript><a rel='nofollow' href='https://www.windfinder.com/forecast/lac-de-vaires-sur-Marne?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast'>Wind forecast for undefined</a> provided by <a rel='nofollow' href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo'>windfinder.com</a></noscript>
--->
+
                                 </div>
                             </div>
 
@@ -1044,7 +1042,7 @@
                         <br>
                     </div>
 
-
+                                -->
 
                    <a name="virychatillon"></a>
                     <h2><input id="div-virychatillon" type="button" value=" - " data-toggle="collapse"

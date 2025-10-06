@@ -200,6 +200,23 @@ function getHistoriqueVent(spot) {
       );
       $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
+    case "grandeparoisse":
+      $("#historique-vent-grandeparoisse").html(
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/vent/' +
+          curdate +
+          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/vent/' +
+          curdate +
+          '" class="img-responsive ombre-image"></a>'
+      );
+      $("#historique-rose-grandeparoisse").html(
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/montereau-fault-yonne/' +
+          curdate +
+          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/montereau-fault-yonne/' +
+          curdate +
+          '" class="img-responsive ombre-image"></a>'
+      );
+      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      break;      
     case "foretorient":
       $("#historique-vent-foretorient").html(
         '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/vent/' +
