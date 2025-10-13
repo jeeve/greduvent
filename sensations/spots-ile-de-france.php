@@ -1500,7 +1500,7 @@
                                             SML en GPX</a></p>
                                 </li>
                                 <li>
-                                    <p><a href="https://joewein.net/bike/gpxmerge/" target="_blank">Fusion de GPX</a>
+                                    <p><a href="https://gpxto.com/gpx-merge" target="_blank">Fusion de GPX</a>
                                     </p>
                                 </li>
                                 <li>
