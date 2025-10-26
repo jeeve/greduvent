@@ -38,7 +38,25 @@
                   <h1>en chemin</h1>
 									  
 				  <br>
+		
 				  
+	
+                  <div class="row vertical-align">
+				  	<div class="col-xs-1 visible-xs"></div>
+                     <div class="col-xs-10 col-sm-5 fond">
+					<h2 align="center">De passage à Plaisance</h2>
+					<p align="center">L'antre aux trésors<br>
+					L'odeur des œuvres qui sommeillent<br>  
+					Prêtent à enflammer les cœurs,<br>  
+					abreuver l'âme de passants aventureux</p>
+                     </div>
+					  <div class="col-xs-12 col-sm-7 fond">
+                        <p align="center">
+                           <img src="images/librairie-faure-plaisance.jpg" alt="Librairie Faure - Plaisance Paris - 24 octobre 2025" title="Librairie Faure - Plaisance Paris - 24 octobre 2025" class="img-responsive ombre-image" />
+                        </p>
+                     </div>
+                   </div>	
+			  <br><br>
 				   
 <a name="monde"></a>
 <div class="row">
@@ -90,7 +108,7 @@
 					Le bouillonnement d'une foule qui se presse vers le quai<br>  
 					La silhouette d'une jeune femme qui se hisse dans le wagon<br>  
 					Le sourire qui jaillit de ses yeux<br>  
-					Le train qui s'éloigne déjà</p></p>
+					Le train qui s'éloigne déjà</p>
                      </div>
 					  <div class="col-xs-12 col-sm-7 fond">
                         <p align="center">
