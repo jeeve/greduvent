@@ -310,6 +310,9 @@
                                     <div class="item"> <img src="images/diapos/poses2-2024-10-20.jpg"
                                             alt="Poses - 20 octobre 2024 - photo Phil95" title="Poses - 20 octobre 2024 - photo Phil95">
                                     </div>
+                                    <div class="item"> <img src="images/diapos/poses-2025-11-02.jpg"
+                                            alt="Poses - 2 novembre 2025 - photo Phil95" title="Poses - 2 novembre 2025 - photo Phil95">
+                                    </div>                                    
                                 </div>
                                 <!-- Controls -->
                                 <a class="left carousel-control" href="#carousel-example-generic" role="button"
