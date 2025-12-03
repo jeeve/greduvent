@@ -1,0 +1,319 @@
+/* Side Player Container */
+#side-player-container {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Trigger Tab (Visible by default) */
+#side-player-trigger {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 10px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    color: #f8fafc;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+}
+
+#side-player-trigger:hover {
+    background: rgba(99, 102, 241, 0.8);
+    color: white;
+}
+
+/* Panel (Hidden by default) */
+#side-player-panel {
+    width: 350px;
+    height: 500px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+    transform: translateX(100%); /* Hide off-screen */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -250px; /* Half of height */
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+}
+
+/* Hover Interaction */
+#side-player-container:hover #side-player-panel,
+#side-player-panel.active {
+    transform: translateX(0);
+}
+
+#side-player-container:hover #side-player-trigger {
+    transform: translateX(-350px); /* Move trigger with panel or hide it */
+    opacity: 0; /* Optional: hide trigger when open */
+    pointer-events: none;
+}
+
+/* Inner Layout */
+.app-container-side {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #f8fafc;
+    font-family: 'Outfit', sans-serif;
+}
+
+.side-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.side-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #6366f1;
+}
+
+.upload-btn-side {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background 0.2s;
+    color: #94a3b8;
+}
+
+.upload-btn-side:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.side-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.player-card-side {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0,0,0,0.2);
+}
+
+.visualizer-container-side {
+    height: 100px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas#visualizer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.track-info-side {
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.track-info-side h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-info-side p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.controls-container-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-area-side {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+.progress-bar-wrapper {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #6366f1;
+    width: 0%;
+    border-radius: 2px;
+}
+
+.main-controls-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.control-btn:hover {
+    color: #6366f1;
+    transform: scale(1.1);
+}
+
+.control-btn.lg {
+    width: 40px;
+    height: 40px;
+    background: #6366f1;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+}
+
+.control-btn.lg:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+.volume-control-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #94a3b8;
+}
+
+.volume-control-side input[type="range"] {
+    width: 80px;
+    height: 3px;
+}
+
+.playlist-panel-side {
+    flex: 1;
+    padding: 15px 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-panel-side h5 {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist-list-side {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.playlist-list-side::-webkit-scrollbar {
+    width: 4px;
+}
+
+.playlist-list-side::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+}
+
+.playlist-item {
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.playlist-item:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.playlist-item.active {
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+}
+
+.track-number {
+    font-size: 0.7rem;
+    color: #64748b;
+    width: 15px;
+}
+
+.track-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty-state-side {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none !important;
+}
