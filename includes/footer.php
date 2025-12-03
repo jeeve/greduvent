@@ -18,5 +18,5 @@
 
       <!-- Audio Player Integration -->
       <link rel="stylesheet" href="/css/side-player.css">
-      <?php include("includes/audio-player.php"); ?>
+      <?php include(__DIR__ . "/audio-player.php"); ?>
       <script src="/js/side-player.js"></script>

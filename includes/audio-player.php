@@ -1,3 +1,28 @@
+<?php
+// Scan for music files
+$musicDir = __DIR__ . '/../musique/songs';
+$webMusicDir = '/musique/songs';
+$songs = [];
+
+if (is_dir($musicDir)) {
+    $files = scandir($musicDir);
+    foreach ($files as $file) {
+        if ($file !== '.' && $file !== '..') {
+            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+            if (in_array($ext, ['mp3', 'wav', 'ogg'])) {
+                $songs[] = [
+                    'name' => pathinfo($file, PATHINFO_FILENAME),
+                    'url' => $webMusicDir . '/' . $file,
+                    'file' => null // It's a server file, not a Blob
+                ];
+            }
+        }
+    }
+}
+?>
+<script>
+    window.initialPlaylist = <?php echo json_encode($songs); ?>;
+</script>
 <div id="side-player-container">
     <div id="side-player-trigger">
         <i class="glyphicon glyphicon-music"></i>

@@ -59,6 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Volume
     audio.volume = volumeSlider.value;
 
+    // Load Initial Playlist
+    if (window.initialPlaylist && window.initialPlaylist.length > 0) {
+        playlist = [...window.initialPlaylist];
+        updatePlaylistUI();
+        // Load first track but don't play
+        loadTrack(0);
+    }
+
     // Handle File Selection
     function handleFileSelect(e) {
         const files = Array.from(e.target.files);
