@@ -1,9 +1,8 @@
 /* Side Player Container */
 #side-player-container {
     position: fixed;
-    top: 50%;
+    top: 60px; /* Position juste sous la navbar */
     right: 0;
-    transform: translateY(-50%);
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -60,8 +59,7 @@
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: absolute;
     right: 0;
-    top: 50%;
-    margin-top: -250px; /* Half of height */
+    top: 0; /* Aligné avec le bouton en haut */
     border-radius: 20px 0 0 20px;
     overflow: hidden;
 }
