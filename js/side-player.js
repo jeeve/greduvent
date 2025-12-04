@@ -64,6 +64,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     progressContainer.addEventListener('click', setProgress);
     volumeSlider.addEventListener('input', setVolume);
+    
+    // Save state periodically and on important events
+    audio.addEventListener('timeupdate', () => {
+        // Save every 2 seconds to avoid too many writes
+        if (Math.floor(audio.currentTime) % 2 === 0) {
+            saveState();
+        }
+    });
+    audio.addEventListener('pause', saveState);
+    audio.addEventListener('play', saveState);
+    
+    // Save state before page unload
+    window.addEventListener('beforeunload', saveState);
+
+    // LocalStorage keys
+    const STORAGE_KEY = 'audioPlayerState';
+
+    // Save player state to localStorage
+    function saveState() {
+        const state = {
+            currentTrackIndex,
+            currentTime: audio.currentTime,
+            isPlaying,
+            volume: audio.volume,
+            playlist: playlist.map(track => ({
+                name: track.name,
+                url: track.url
+            }))
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    // Load player state from localStorage
+    function loadState() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            try {
+                return JSON.parse(saved);
+            } catch (e) {
+                console.error('Error loading saved state:', e);
+                return null;
+            }
+        }
+        return null;
+    }
+
+    // Clear saved state
+    function clearState() {
+        localStorage.removeItem(STORAGE_KEY);
+    }
 
     // Initialize Volume
     audio.volume = volumeSlider.value;
@@ -71,14 +121,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load Initial Playlist
     console.log('Checking for initial playlist...');
     console.log('window.initialPlaylist:', window.initialPlaylist);
+    
+    // Try to restore previous state first
+    const savedState = loadState();
+    let shouldRestoreState = false;
+    
     if (window.initialPlaylist && window.initialPlaylist.length > 0) {
         playlist = [...window.initialPlaylist];
         console.log('Loaded initial playlist with', playlist.length, 'tracks');
         console.log('Playlist:', playlist);
         console.log('First track URL:', playlist[0]?.url);
-        updatePlaylistUI();
-        // Load first track but don't play
-        loadTrack(0);
+        
+        // Check if we should restore previous state
+        if (savedState && savedState.playlist && savedState.playlist.length > 0) {
+            console.log('Found saved state, restoring...');
+            // Verify the saved playlist matches current playlist
+            const playlistMatches = savedState.playlist.length === playlist.length &&
+                savedState.playlist.every((track, idx) => track.url === playlist[idx]?.url);
+            
+            if (playlistMatches) {
+                shouldRestoreState = true;
+                currentTrackIndex = savedState.currentTrackIndex;
+                audio.volume = savedState.volume;
+                volumeSlider.value = savedState.volume;
+                
+                updatePlaylistUI();
+                loadTrack(currentTrackIndex);
+                
+                // Wait for metadata to load before setting time
+                audio.addEventListener('loadedmetadata', function restoreTime() {
+                    audio.currentTime = savedState.currentTime || 0;
+                    if (savedState.isPlaying) {
+                        playTrack();
+                    }
+                    audio.removeEventListener('loadedmetadata', restoreTime);
+                }, { once: true });
+            } else {
+                console.log('Playlist changed, not restoring state');
+                updatePlaylistUI();
+                loadTrack(0);
+            }
+        } else {
+            updatePlaylistUI();
+            // Load first track but don't play
+            loadTrack(0);
+        }
     } else {
         console.log('No initial playlist found');
     }
@@ -183,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.play()
             .then(() => {
                 isPlaying = true;
+                saveState();
                 playIcon.classList.add('hidden');
                 pauseIcon.classList.remove('hidden');
                 updatePlaylistUI(); // To show active state
@@ -195,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isPlaying = false;
         playIcon.classList.remove('hidden');
         pauseIcon.classList.add('hidden');
+        saveState();
     }
 
     function playPrev() {
@@ -248,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setVolume(e) {
         audio.volume = e.target.value;
+        saveState();
     }
 
     function formatTime(seconds) {
