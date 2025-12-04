@@ -54,9 +54,9 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+    box-shadow: none; /* Pas d'ombre quand fermé */
     transform: translateX(100%); /* Hide off-screen */
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
     position: absolute;
     right: 0;
     top: 0; /* Aligné avec le bouton en haut */
@@ -68,6 +68,7 @@
 #side-player-container:hover #side-player-panel,
 #side-player-panel.active {
     transform: translateX(0);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.5); /* Ombre quand ouvert */
 }
 
 #side-player-container:hover #side-player-trigger {
