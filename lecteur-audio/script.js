@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentTrackIndex = index;
         audio.src = playlist[index].url;
         trackTitleEl.textContent = playlist[index].name;
-        trackArtistEl.textContent = "Fichier local";
+        trackArtistEl.textContent = "";
         
         // Reset progress
         progressBar.style.width = '0%';
