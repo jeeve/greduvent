@@ -127,40 +127,52 @@ document.addEventListener('DOMContentLoaded', () => {
     let shouldRestoreState = false;
     
     if (window.initialPlaylist && window.initialPlaylist.length > 0) {
-        playlist = [...window.initialPlaylist];
-        console.log('Loaded initial playlist with', playlist.length, 'tracks');
+        // Check if we have a saved shuffled order
+        if (savedState && savedState.playlist && savedState.playlist.length > 0) {
+            // Use the saved playlist order
+            console.log('Using saved playlist order');
+            playlist = savedState.playlist;
+        } else {
+            // First time - shuffle the initial playlist
+            console.log('First time - shuffling playlist');
+            playlist = [...window.initialPlaylist];
+            
+            // Fisher-Yates shuffle algorithm
+            for (let i = playlist.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [playlist[i], playlist[j]] = [playlist[j], playlist[i]];
+            }
+            
+            // Save the shuffled order immediately
+            saveState();
+        }
+        
+        console.log('Loaded playlist with', playlist.length, 'tracks');
         console.log('Playlist:', playlist);
         console.log('First track URL:', playlist[0]?.url);
         
-        // Check if we should restore previous state
-        if (savedState && savedState.playlist && savedState.playlist.length > 0) {
-            console.log('Found saved state, restoring...');
-            // Verify the saved playlist matches current playlist
-            const playlistMatches = savedState.playlist.length === playlist.length &&
-                savedState.playlist.every((track, idx) => track.url === playlist[idx]?.url);
+        // Check if we should restore previous playback state
+        if (savedState && savedState.currentTrackIndex >= 0) {
+            console.log('Found saved state, restoring playback...');
+            console.log('Saved track index:', savedState.currentTrackIndex);
+            console.log('Saved time:', savedState.currentTime);
+            console.log('Was playing:', savedState.isPlaying);
             
-            if (playlistMatches) {
-                shouldRestoreState = true;
-                currentTrackIndex = savedState.currentTrackIndex;
-                audio.volume = savedState.volume;
-                volumeSlider.value = savedState.volume;
-                
-                updatePlaylistUI();
-                loadTrack(currentTrackIndex);
-                
-                // Wait for metadata to load before setting time
-                audio.addEventListener('loadedmetadata', function restoreTime() {
-                    audio.currentTime = savedState.currentTime || 0;
-                    if (savedState.isPlaying) {
-                        playTrack();
-                    }
-                    audio.removeEventListener('loadedmetadata', restoreTime);
-                }, { once: true });
-            } else {
-                console.log('Playlist changed, not restoring state');
-                updatePlaylistUI();
-                loadTrack(0);
-            }
+            currentTrackIndex = savedState.currentTrackIndex;
+            audio.volume = savedState.volume;
+            volumeSlider.value = savedState.volume;
+            
+            updatePlaylistUI();
+            loadTrack(currentTrackIndex);
+            
+            // Wait for metadata to load before setting time
+            audio.addEventListener('loadedmetadata', function restoreTime() {
+                audio.currentTime = savedState.currentTime || 0;
+                if (savedState.isPlaying) {
+                    playTrack();
+                }
+                audio.removeEventListener('loadedmetadata', restoreTime);
+            }, { once: true });
         } else {
             updatePlaylistUI();
             // Load first track but don't play

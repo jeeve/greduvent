@@ -22,6 +22,8 @@ if (is_dir($musicDir)) {
             }
         }
     }
+    
+    // Don't shuffle here - let JavaScript handle it to maintain consistency
 }
 ?>
 <!-- Debug: Base URL = <?php echo htmlspecialchars($baseUrl); ?> -->
