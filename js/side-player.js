@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTrackIndex = -1;
     let isPlaying = false;
     let audio = new Audio();
+    audio.preload = 'auto'; // Enable buffering for seeking
     let audioContext;
     let analyser;
     let source;
@@ -211,13 +212,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setProgress(e) {
-        const width = this.clientWidth;
-        const clickX = e.offsetX;
         const duration = audio.duration;
-        
         if (isNaN(duration)) return;
 
-        audio.currentTime = (clickX / width) * duration;
+        // Use getBoundingClientRect for accurate click position
+        const rect = this.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        
+        // Calculate the new time
+        const newTime = (clickX / width) * duration;
+        const clampedTime = Math.max(0, Math.min(newTime, duration));
+        
+        // Just set it - let the browser handle buffering
+        audio.currentTime = clampedTime;
     }
 
     function setVolume(e) {

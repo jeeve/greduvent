@@ -1,7 +1,6 @@
 <?php
 // Scan for music files
 $musicDir = __DIR__ . '/../musique/songs';
-$webMusicDir = '/musique/songs';
 $songs = [];
 
 if (is_dir($musicDir)) {
@@ -12,7 +11,7 @@ if (is_dir($musicDir)) {
             if (in_array($ext, ['mp3', 'wav', 'ogg'])) {
                 $songs[] = [
                     'name' => pathinfo($file, PATHINFO_FILENAME),
-                    'url' => $webMusicDir . '/' . $file,
+                    'url' => '/stream-audio.php?file=' . urlencode($file),
                     'file' => null // It's a server file, not a Blob
                 ];
             }
