@@ -39,23 +39,18 @@ if (realpath(dirname($filePath)) !== realpath($musicDir)) {
 $fileSize = filesize($filePath);
 $fileName = basename($filePath);
 
-// Determine MIME type
-$finfo = finfo_open(FILEINFO_MIME_TYPE);
-$mimeType = finfo_file($finfo, $filePath);
-finfo_close($finfo);
+// Determine MIME type based on file extension
+$ext = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+$mimeTypes = [
+    'mp3' => 'audio/mpeg',
+    'wav' => 'audio/wav',
+    'ogg' => 'audio/ogg',
+    'flac' => 'audio/flac',
+    'm4a' => 'audio/mp4'
+];
+$mimeType = isset($mimeTypes[$ext]) ? $mimeTypes[$ext] : 'application/octet-stream';
 
-// If MIME type detection fails, use default based on extension
-if (!$mimeType) {
-    $ext = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
-    $mimeTypes = [
-        'mp3' => 'audio/mpeg',
-        'wav' => 'audio/wav',
-        'ogg' => 'audio/ogg',
-        'flac' => 'audio/flac',
-        'm4a' => 'audio/mp4'
-    ];
-    $mimeType = isset($mimeTypes[$ext]) ? $mimeTypes[$ext] : 'application/octet-stream';
-}
+error_log("MIME type: $mimeType");
 
 // Handle Range Requests
 $start = 0;

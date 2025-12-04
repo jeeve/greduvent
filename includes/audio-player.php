@@ -3,6 +3,11 @@
 $musicDir = __DIR__ . '/../musique/songs';
 $songs = [];
 
+// Calculate the base URL - simple approach
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'];
+$baseUrl = $protocol . '://' . $host;
+
 if (is_dir($musicDir)) {
     $files = scandir($musicDir);
     foreach ($files as $file) {
@@ -11,7 +16,7 @@ if (is_dir($musicDir)) {
             if (in_array($ext, ['mp3', 'wav', 'ogg'])) {
                 $songs[] = [
                     'name' => pathinfo($file, PATHINFO_FILENAME),
-                    'url' => '/stream-audio.php?file=' . urlencode($file),
+                    'url' => $baseUrl . '/stream-audio.php?file=' . urlencode($file),
                     'file' => null // It's a server file, not a Blob
                 ];
             }
@@ -19,6 +24,11 @@ if (is_dir($musicDir)) {
     }
 }
 ?>
+<!-- Debug: Base URL = <?php echo htmlspecialchars($baseUrl); ?> -->
+<!-- Debug: Number of songs found = <?php echo count($songs); ?> -->
+<?php if (count($songs) > 0): ?>
+<!-- Debug: First song URL = <?php echo htmlspecialchars($songs[0]['url']); ?> -->
+<?php endif; ?>
 <script>
     window.initialPlaylist = <?php echo json_encode($songs); ?>;
 </script>

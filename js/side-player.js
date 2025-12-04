@@ -38,11 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTrackIndex = -1;
     let isPlaying = false;
     let audio = new Audio();
-    audio.preload = 'auto'; // Enable buffering for seeking
+    audio.preload = 'metadata'; // Load metadata only initially
     let audioContext;
     let analyser;
     let source;
     let isAudioContextSetup = false;
+
+    // Add error handler for audio element
+    audio.addEventListener('error', (e) => {
+        console.error('Audio error:', e);
+        console.error('Audio error code:', audio.error ? audio.error.code : 'unknown');
+        console.error('Audio error message:', audio.error ? audio.error.message : 'unknown');
+        console.error('Current source:', audio.src);
+    });
 
     // Event Listeners
     fileInput.addEventListener('change', handleFileSelect);
@@ -61,11 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.volume = volumeSlider.value;
 
     // Load Initial Playlist
+    console.log('Checking for initial playlist...');
+    console.log('window.initialPlaylist:', window.initialPlaylist);
     if (window.initialPlaylist && window.initialPlaylist.length > 0) {
         playlist = [...window.initialPlaylist];
+        console.log('Loaded initial playlist with', playlist.length, 'tracks');
+        console.log('Playlist:', playlist);
+        console.log('First track URL:', playlist[0]?.url);
         updatePlaylistUI();
         // Load first track but don't play
         loadTrack(0);
+    } else {
+        console.log('No initial playlist found');
     }
 
     // Handle File Selection
@@ -131,7 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index < 0 || index >= playlist.length) return;
 
         currentTrackIndex = index;
-        audio.src = playlist[index].url;
+        const trackUrl = playlist[index].url;
+        console.log('Loading track:', playlist[index].name);
+        console.log('Track URL:', trackUrl);
+        audio.src = trackUrl;
         trackTitleEl.textContent = playlist[index].name;
         trackArtistEl.textContent = "Fichier local";
         
