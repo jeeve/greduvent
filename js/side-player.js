@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const trackArtistEl = document.getElementById('track-artist');
     const trackCountEl = document.getElementById('track-count');
     const visualizerCanvas = document.getElementById('visualizer');
+    const miniVisualizerCanvas = document.getElementById('mini-visualizer');
 
     // Panel Interaction
     let isPanelOpen = false;
@@ -286,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 playIcon.classList.add('hidden');
                 pauseIcon.classList.remove('hidden');
                 updatePlaylistUI(); // To show active state
+                trigger.classList.add('playing'); // Show mini visualizer
             })
             .catch(err => console.error("Error playing:", err));
     }
@@ -296,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playIcon.classList.remove('hidden');
         pauseIcon.classList.add('hidden');
         saveState();
+        trigger.classList.remove('playing'); // Hide mini visualizer
     }
 
     function playPrev() {
@@ -374,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isAudioContextSetup = true;
             
             drawVisualizer();
+            drawMiniVisualizer(); // Start mini visualizer animation
         } catch (e) {
             console.error("Audio Context setup failed:", e);
         }
@@ -422,5 +426,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         renderFrame();
+    }
+    
+    // Mini Visualizer for the trigger button
+    function drawMiniVisualizer() {
+        if (!isAudioContextSetup || !miniVisualizerCanvas) return;
+
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+        
+        const canvas = miniVisualizerCanvas;
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas size
+        canvas.width = 40;
+        canvas.height = 30;
+        
+        const WIDTH = canvas.width;
+        const HEIGHT = canvas.height;
+        const barCount = 8; // Fewer bars for mini visualizer
+        const barWidth = WIDTH / barCount - 1;
+        let barHeight;
+        let x = 0;
+
+        function renderMiniFrame() {
+            requestAnimationFrame(renderMiniFrame);
+            
+            x = 0;
+            analyser.getByteFrequencyData(dataArray);
+            
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+            
+            // Sample data at intervals for fewer bars
+            const step = Math.floor(bufferLength / barCount);
+            
+            for (let i = 0; i < barCount; i++) {
+                const dataIndex = i * step;
+                barHeight = (dataArray[dataIndex] / 255) * HEIGHT * 0.8; // Scale to canvas height
+                
+                // Simple gradient
+                const gradient = ctx.createLinearGradient(0, HEIGHT, 0, HEIGHT - barHeight);
+                gradient.addColorStop(0, '#6366f1');
+                gradient.addColorStop(1, '#ec4899');
+                
+                ctx.fillStyle = gradient;
+                ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+                
+                x += barWidth + 1;
+            }
+        }
+        
+        renderMiniFrame();
     }
 });

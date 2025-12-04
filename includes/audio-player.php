@@ -37,6 +37,7 @@ if (is_dir($musicDir)) {
 <div id="side-player-container">
     <div id="side-player-trigger">
         <i class="glyphicon glyphicon-music"></i>
+        <canvas id="mini-visualizer"></canvas>
     </div>
     <div id="side-player-panel">
         <div class="app-container-side">
