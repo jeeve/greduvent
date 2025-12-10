@@ -94,7 +94,14 @@ body {
 @media screen and (max-width: 990px) {
   /* initial 767px */
   #sidebar {
-    display: none;
+    display: block;
+    width: 200px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 10000;
+    transform: translateX(-200px);
+    transition: transform 0.3s ease-in-out;
   }
   .container > div > div:last-child {
     left: 0;
@@ -109,16 +116,30 @@ body {
   }
 
   #sidebar.sidebar-show {
-    display: block;
-    width: 200px;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    z-index: 10000; /* Assurez-vous que la valeur de z-index est suffisamment élevée */
+    transform: translateX(0);
   }
   .container > div > div:last-child.sidebar-show {
     left: 0;
     width: 100%;
+  }
+  
+  /* Overlay pour fermer la sidebar en cliquant à l'extérieur */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .sidebar-overlay.active {
+    display: block;
+    opacity: 1;
   }
 }
 

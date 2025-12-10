@@ -1,8 +1,19 @@
 $(document).ready(function () {
 
+  // Créer l'overlay pour la sidebar mobile
+  $('body').append('<div class="sidebar-overlay"></div>');
+
   $("#bouton-menu").click(function () {
       $("#sidebar").toggleClass("sidebar-show");
       $(".container > div > div:last-child").toggleClass("sidebar-show");
+      $(".sidebar-overlay").toggleClass("active");
+  });
+
+  // Fermer la sidebar en cliquant sur l'overlay
+  $(".sidebar-overlay").click(function () {
+      $("#sidebar").removeClass("sidebar-show");
+      $(".container > div > div:last-child").removeClass("sidebar-show");
+      $(".sidebar-overlay").removeClass("active");
   });
 
   $("#bouton-bas-page").click(function () {
@@ -16,13 +27,15 @@ $(document).ready(function () {
   if (jQuery.support.touch) {	
 	
     $("#sidebar").swipeleft(function() {
-      $("#sidebar").toggleClass("sidebar-show");
-      $(".container > div > div:last-child").toggleClass("sidebar-show");
+      $("#sidebar").removeClass("sidebar-show");
+      $(".container > div > div:last-child").removeClass("sidebar-show");
+      $(".sidebar-overlay").removeClass("active");
     });
 
     $("#sidebar + div").swiperight(function() {
-      $("#sidebar").toggleClass("sidebar-show");
-      $(".container > div > div:last-child").toggleClass("sidebar-show");
+      $("#sidebar").addClass("sidebar-show");
+      $(".container > div > div:last-child").addClass("sidebar-show");
+      $(".sidebar-overlay").addClass("active");
     });
 
   }
