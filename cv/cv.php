@@ -114,18 +114,17 @@ echo $age;
                                     <h3>Applications Windows, Web, HTML 5, Services Web</h3>
                                 </li>
                                 <li>
-                                    <h3>Langages : Javascript / Typescript, Java, Python, C#, Php, Delphi...</h3>
+                                    <h3>Langages : Javascript / <strong>Typescript</strong>, <strong>Java</strong>, Python, C#, Delphi...</h3>
                                 </li>
                                 <li>
-                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), Spring,
-                                        .NET, SharePoint, Wordpress</h3>
+                                    <h3><strong>Angular</strong> (<a href="?go=realisationspersonnelles">exemple</a>), <strong>Spring</strong>, .NET, SharePoint, Wordpress</h3>
                                 </li>
                                 <li>
                                     <h3>Windev, Webdev</h3>
                                 </li>
                                 <br>
                                 <li>
-                                    <h3>SQL, Git, Jquery, CSS, Bootstrap, Angular Material, Thymeleaf...</h3>
+                                    <h3>Bootstrap, Angular Material, Thymeleaf...</h3>
                                 </li>
                                
                                 <br>
