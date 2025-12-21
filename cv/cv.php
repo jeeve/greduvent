@@ -6,6 +6,7 @@
     <?php include("./includes/header.php"); ?>
     <link href="css/cv.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3ea7d43a4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
     .histo img {
         margin: 10px;
@@ -32,7 +33,9 @@
     </header>
     <div class="page-container">
         <!-- top navbar -->
-        <?php include("includes/navbar.php"); ?>
+        <div class="no-print" data-html2canvas-ignore="true">
+            <?php include("includes/navbar.php"); ?>
+        </div>
         <div class="container">
             <!-- main area -->
             <div class="col-xs-12 col-sm-12 col-md-12 fond">
@@ -44,6 +47,11 @@
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
                             <div class="nom">JULIEN</div>
+                            <div class="no-print" style="margin-top: 15px;" data-html2canvas-ignore="true">
+                                <button id="download-pdf" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 8px; padding: 10px 15px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
+                                    <i class="fa-solid fa-file-pdf" style="margin-right: 8px;"></i> Télécharger en PDF
+                                </button>
+                            </div>
                         </div>
                         <div class="section-perso">
                             <h3><strong>Développeur informatique</strong></h3>
@@ -1087,6 +1095,33 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
+
+    $("#download-pdf").click(function() {
+        // Déployer la section formations pour le PDF
+        const formationsSection = $("#item-div-formationsprofessionnelles");
+        const formationsArrow = $('[data-section="formation-professionnelle"] i.fa-angle-up');
+        const wasHidden = formationsSection.is(":hidden");
+        
+        formationsSection.show();
+        formationsArrow.removeClass("fa-rotate-90").addClass("fa-rotate-180");
+        
+        const element = document.querySelector('.page-container');
+        const opt = {
+            margin:       [5, 5, 5, 5],
+            filename:     'CV_Jean-Valery_JULIEN.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, useCORS: true, logging: true, scrollY: 0 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save().then(() => {
+            // Restaurer l'état original de la section formations
+            if (wasHidden) {
+                formationsSection.hide();
+            }
+            formationsArrow.removeClass("fa-rotate-180").addClass("fa-rotate-90");
+        });
+    });
     </script>
 </body>
 
