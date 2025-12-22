@@ -12,6 +12,7 @@
                <a class="navbar-brand navbar-brand-texte" href="./#experience">Expérience</a>
                <a class="navbar-brand navbar-brand-texte" href="./#formation">Formation</a>
                <a class="navbar-brand navbar-brand-texte" href="./#divers">à propos</a>
+               <a id="download-pdf-nav" class="navbar-brand navbar-brand-texte" href="javascript:void(0)" title="Télécharger en PDF"><i class="fa-solid fa-file-pdf"></i></a>
             </div>
          </div>
       </div>

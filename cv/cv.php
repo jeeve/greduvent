@@ -1097,7 +1097,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
 
-    $("#download-pdf").click(function() {
+    $("#download-pdf, #download-pdf-nav").click(function() {
         // Déployer la section formations pour le PDF
         const formationsSection = $("#item-div-formationsprofessionnelles");
         const formationsArrow = $('[data-section="formation-professionnelle"] i.fa-angle-up');
