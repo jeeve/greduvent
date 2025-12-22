@@ -42,7 +42,7 @@
                 <a name="home"></a>
                 <!--<h1 class="hidden-xs">Curriculum vitæ</h1>-->
                 <div class="row">
-                    <div class="col-xs-11 col-md-4 fond-table encadrement-table encadre">
+                    <div class="col-xs-11 col-md-4 fond-table encadrement-table encadre col-perso">
                         <div>
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
@@ -106,8 +106,8 @@ echo $age;
                 --> 
                         </div>
                     </div>
-                    <div class="col-md-1 fond"></div>
-                    <div class="col-xs-12 col-md-6 fond">
+                    <div class="col-md-1 fond no-print" data-html2canvas-ignore="true"></div>
+                    <div class="col-xs-12 col-md-6 fond col-skills">
                         <h2>Compétences
                         </h2>
                         <div id="item-div-competences" class="section" data-section="competences">
@@ -143,7 +143,8 @@ echo $age;
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="html2pdf__page-break"></div>
+                <div class="row page-break">
                     <div class="col-xs-12 col-md-12 fond">
                         <a name="experience"></a>
                         <h2 class="experience" data-section="experience">Expérience
@@ -1107,11 +1108,12 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
         
         const element = document.querySelector('.page-container');
         const opt = {
-            margin:       [5, 5, 5, 5],
+            margin:       [2, 2, 2, 2],
             filename:     'CV_Jean-Valery_JULIEN.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, logging: true, scrollY: 0 },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            html2canvas:  { scale: 1, useCORS: true, logging: true, scrollY: 0 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' },
+            pagebreak:    { mode: ['css', 'legacy'] }
         };
 
         html2pdf().set(opt).from(element).save().then(() => {
