@@ -47,11 +47,13 @@
                             <img class="photo" src="images/jvj.png" />
                             <div class="nom">Jean-Valéry</div>
                             <div class="nom">JULIEN</div>
+                            <!--
                             <div class="no-print" style="margin-top: 15px;" data-html2canvas-ignore="true">
                                 <button id="download-pdf" class="btn btn-primary btn-block" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 8px; padding: 10px 15px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;">
                                     <i class="fa-solid fa-file-pdf" style="margin-right: 8px;"></i> Télécharger en PDF
                                 </button>
                             </div>
+-->
                         </div>
                         <div class="section-perso">
                             <h3><strong>Développeur informatique</strong></h3>
