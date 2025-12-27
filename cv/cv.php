@@ -3,6 +3,7 @@
 
 <head>
     <title>Jean-Valéry JULIEN</title>
+    <base href="/cv/">
     <?php include("./includes/header.php"); ?>
     <link href="css/cv.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3ea7d43a4.js" crossorigin="anonymous"></script>
