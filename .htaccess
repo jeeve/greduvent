@@ -1,3 +1,5 @@
+Options -MultiViews
 RewriteEngine On
-RewriteRule ^cv/pdf$ cv/cv.php?view=pdf [L,QSA]
-RewriteRule cv/$ cv/cv.php
+
+RewriteRule ^cv/pdf/?$ cv/cv.php?view=pdf [L,QSA]
+RewriteRule ^cv/?$ cv/cv.php [L]
