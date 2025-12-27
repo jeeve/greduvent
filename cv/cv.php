@@ -1049,7 +1049,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                         <br>
                                         <h3><strong>Analyse de sessions en windfoil</strong></h3>
                                         <p>
-                                            <a href="https://outilsflask.herokuapp.com/sessions/ia"
+                                            <a href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/sessions/ia"
                                                 target="blank">Implémentation</a> en <strong>Python</strong> sous
                                             <strong>Flask</strong> d'un perceptron multicouche avec
                                             <strong>Tensorflow</strong>. <a
@@ -1058,7 +1058,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                                         </p>
                                         <br>
                                         <p align="center">
-                                            <a href="https://outilsflask.herokuapp.com/sessions/ia" target="blank">
+                                            <a href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/sessions/ia" target="blank">
                                                 <img alt="Analyse de sessions" title="Analyse de sessions"
                                                     src="images/perceptron.jpg" class="img-responsive ombre-image" />
                                             </a>
