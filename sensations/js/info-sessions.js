@@ -255,7 +255,7 @@ function getInfoSessions(spot) {
         }
 
         lienMeteo =
-          "http://outilsflask.herokuapp.com/meteo/plot/" +
+          "https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/" +
           station +
           "/" +
           laDateAnglais;

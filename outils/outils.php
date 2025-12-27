@@ -34,7 +34,7 @@
                             </p>
                         </li>
                         <li>
-                            <p><a href="https://outilsflask.herokuapp.com/gps/">Convertisseur fichiers FIT et SML en
+                            <p><a href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/gps/">Convertisseur fichiers FIT et SML en
                                     GPX</a></p>
                         </li>
                     </ul>

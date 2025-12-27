@@ -83,159 +83,159 @@ function getHistoriqueVent(spot) {
   switch (spot) {
     case "poses":
       $("#historique-vent-poses").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/louviers/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/louviers/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/louviers/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/louviers/vent/' +
           curdate +
           '" class="img-responsive ombre-image histo-image"></a>'
       );
       $("#historique-rose-poses").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/louviers/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/louviers/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/louviers/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/louviers/' +
           curdate +
           '" class="img-responsive ombre-image histo-image"></a>'
       );
-      $("#historique-temp-poses").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/louviers/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/louviers/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-poses").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/louviers/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/louviers/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "moisson":
       $("#historique-vent-moisson").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/mantes-la-jolie/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/mantes-la-jolie/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-moisson").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/mantes-la-jolie/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/mantes-la-jolie/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/mantes-la-jolie/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/mantes-la-jolie/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-moisson").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/mantes-la-jolie/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-moisson").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/mantes-la-jolie/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/mantes-la-jolie/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "ecluzelles":
       $("#historique-vent-ecluzelles").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/dreux/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/dreux/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/dreux/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/dreux/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-ecluzelles").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/dreux/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/dreux/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/dreux/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/dreux/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-ecluzelles").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/dreux/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/dreux/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-ecluzelles").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/dreux/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/dreux/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "jablines":
       $("#historique-vent-jablines").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-jablines").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/torcy/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/torcy/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-jablines").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-jablines").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "vaires":
       $("#historique-vent-vaires").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-vaires").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/torcy/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/torcy/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/virychatillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/virychatillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "virychatillon":
       $("#historique-vent-virychatillon").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/viry-châtillon/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/viry-châtillon/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-virychatillon").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/viry-châtillon/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/viry-châtillon/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/viry-châtillon/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/viry-châtillon/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-virychatillon").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/viry-châtillon/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-virychatillon").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/viry-châtillon/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/viry-châtillon/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
         case "vaires":
       $("#historique-vent-vaires").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-vaires").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/torcy/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/torcy/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/torcy/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-vaires").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/torcy/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
     case "grandeparoisse":
       $("#historique-vent-grandeparoisse").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/montereau-fault-yonne/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/montereau-fault-yonne/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-grandeparoisse").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/montereau-fault-yonne/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/montereau-fault-yonne/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/montereau-fault-yonne/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/montereau-fault-yonne/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-grandeparoisse").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/montereau-fault-yonne/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;      
     case "foretorient":
       $("#historique-vent-foretorient").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/vent/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/lusigny-sur-barse/vent/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/vent/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/lusigny-sur-barse/vent/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-rose-foretorient").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/rose/lusigny-sur-barse/' +
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/lusigny-sur-barse/' +
           curdate +
-          '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/rose/lusigny-sur-barse/' +
+          '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/rose/lusigny-sur-barse/' +
           curdate +
           '" class="img-responsive ombre-image"></a>'
       );
       $("#historique-niveau-foretorient").html(
-        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/niveau/"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/niveau/" class="img-responsive ombre-image"></a>'
+        '<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/niveau/"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/niveau/" class="img-responsive ombre-image"></a>'
       );
-      $("#historique-temp-foretorient").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://outilsflask.herokuapp.com/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
+      $("#historique-temp-foretorient").html('<div class="loader-container"><img src="images/loading.gif" class="loader"></div><a target="_blank" href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '"><img onload="imageChargee(this)" src="https://awake-cherianne-jeeve-606c3eea.koyeb.app/meteo/plot/lusigny-sur-barse/temperature/' + curdate + '" class="img-responsive ombre-image histo-image"></a>');
       break;
   }
 }
