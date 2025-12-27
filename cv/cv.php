@@ -18,16 +18,50 @@
     }
 
     .loader {
-        widht: 50px;
+        width: 50px;
         height: 50px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+
+    #pdf-loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 10000;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #398efd;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
     </style>
 </head>
 
 <body>
+    <div id="pdf-loading-overlay">
+        <div class="spinner"></div>
+        <p style="font-size: 1.5em; color: #398efd;">Génération du PDF en cours...</p>
+    </div>
     <header>
         <img src="images/bandeau.jpg">
     </header>
@@ -1100,6 +1134,14 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
     }
 
     $("#download-pdf, #download-pdf-nav").click(function() {
+        generatePDF('view', '_blank');
+    });
+
+    function generatePDF(mode = 'download', target = '_self') {
+        if (mode === 'view') {
+            $("#pdf-loading-overlay").css("display", "flex");
+        }
+
         // Déployer la section formations pour le PDF
         const formationsSection = $("#item-div-formationsprofessionnelles");
         const formationsArrow = $('[data-section="formation-professionnelle"] i.fa-angle-up');
@@ -1118,13 +1160,40 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
             pagebreak:    { mode: ['css', 'legacy'] }
         };
 
-        html2pdf().set(opt).from(element).save().then(() => {
-            // Restaurer l'état original de la section formations
-            if (wasHidden) {
-                formationsSection.hide();
-            }
-            formationsArrow.removeClass("fa-rotate-180").addClass("fa-rotate-90");
-        });
+        if (mode === 'download') {
+            html2pdf().set(opt).from(element).save().then(() => {
+                restoreUI(wasHidden, formationsSection, formationsArrow);
+            });
+        } else if (mode === 'view') {
+            html2pdf().set(opt).from(element).outputPdf('blob').then((blob) => {
+                const url = URL.createObjectURL(blob);
+                if (target === '_blank') {
+                    window.open(url, '_blank');
+                } else {
+                    window.location.href = url;
+                }
+                restoreUI(wasHidden, formationsSection, formationsArrow);
+            });
+        }
+    }
+
+    function restoreUI(wasHidden, formationsSection, formationsArrow) {
+        // Restaurer l'état original de la section formations
+        if (wasHidden) {
+            formationsSection.hide();
+        }
+        formationsArrow.removeClass("fa-rotate-180").addClass("fa-rotate-90");
+        $("#pdf-loading-overlay").hide();
+    }
+
+    $(document).ready(function() {
+        const view = getParameterByName("view");
+        if (view === "pdf") {
+            // Un petit délai pour s'assurer que tout est bien chargé avant de lancer la conversion
+            setTimeout(function() {
+                generatePDF('view');
+            }, 500);
+        }
     });
     </script>
 </body>
