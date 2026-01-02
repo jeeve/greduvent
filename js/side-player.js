@@ -402,6 +402,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let barHeight;
         let x = 0;
 
+        const capYPositionArray = []; // Store spectral peaks
+        const capHeight = 2;
+        const capStyle = '#ffffffff'; // Light yellow peaks
+
         function renderFrame() {
             requestAnimationFrame(renderFrame);
             
@@ -413,13 +417,29 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < bufferLength; i++) {
                 barHeight = dataArray[i] / 2; // Scale down
                 
-                // Create gradient
+                if (capYPositionArray.length < bufferLength) {
+                    capYPositionArray.push(barHeight);
+                }
+
+                // Draw the orange cap
+                ctx.fillStyle = capStyle;
+                if (barHeight < capYPositionArray[i]) {
+                    // Slow descent: only decrease by 0.5 per frame
+                    capYPositionArray[i] -= 0.5;
+                    if (capYPositionArray[i] < 0) capYPositionArray[i] = 0;
+                    ctx.fillRect(x, HEIGHT - capYPositionArray[i], barWidth, capHeight);
+                } else {
+                    ctx.fillRect(x, HEIGHT - barHeight, barWidth, capHeight);
+                    capYPositionArray[i] = barHeight;
+                }
+
+                // Create gradient for the main bar
                 const gradient = ctx.createLinearGradient(0, HEIGHT, 0, HEIGHT - barHeight);
                 gradient.addColorStop(0, '#6366f1');
                 gradient.addColorStop(1, '#ec4899');
                 
                 ctx.fillStyle = gradient;
-                ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+                ctx.fillRect(x, HEIGHT - barHeight + capHeight, barWidth, barHeight);
                 
                 x += barWidth + 1;
             }

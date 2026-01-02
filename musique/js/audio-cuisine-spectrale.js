@@ -30,7 +30,7 @@ $(document).ready(function () {
           meterWidth = 4, //width of the meters in the spectrum
           gap = 1, //gap between meters
           capHeight = 2,
-          capStyle = "#AAA",
+          capStyle = "#ffffffff",
           meterNum = 800 / (10 + 2), //count of the meters
           capYPositionArray = []; ////store the vertical position of hte caps for the preivous frame
         (ctx = canvas.getContext("2d")),
@@ -54,7 +54,7 @@ $(document).ready(function () {
             if (value < capYPositionArray[i]) {
               ctx.fillRect(
                 i * 4.65,
-                cheight - --capYPositionArray[i],
+                cheight - (capYPositionArray[i] -= 0.5),
                 meterWidth,
                 capHeight
               );
