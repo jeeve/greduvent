@@ -15,11 +15,11 @@
                  <!-- <a onclick="return !window.open(this.href, 'pop', 'width=312,height=450,left=0,top=0');"
                       href="/musique/musique.php"><img alt="Ecouter Cuisine Spectrale" title="Ecouter Cuisine Spectrale"
                           src="/images/enceinte.gif" class="navbar-brand" /></a> -->
-                  <a href="/commentaires/commentaires.php"><img alt="Livre d'or"
+                  <a href="/commentaires/commentaires.php"><img alt="Livre d'or" title="Livre d'or"
                           src="/images/livre.png" class="navbar-brand hidden-xs" /></a>
                   <a rel="alternate" type="application/rss+xml" href="/news.xml" target="_blank"><img alt="Flux RSS"
-                          src="/images/logo_rss.png" class="navbar-brand hidden-xs" /></a>
-                  <a href="http://www.twitter.com/jeeve" target="_blank"><img alt="@jeeve"
+                          title="Flux RSS" src="/images/logo_rss.png" class="navbar-brand hidden-xs" /></a>
+                  <a href="http://www.twitter.com/jeeve" target="_blank"><img alt="@jeeve" title="@jeeve"
                           src="/images/logo_twitter.png" class="navbar-brand hidden-xs" /></a>
               </div>
               <button id="bouton-bas-page" type="button" class="navbar-toggle hidden" style="padding-top:5px;"
