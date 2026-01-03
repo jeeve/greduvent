@@ -19,4 +19,4 @@
       <!-- Audio Player Integration -->
       <link rel="stylesheet" href="/css/side-player.css">
       <?php include(__DIR__ . "/audio-player.php"); ?>
-      <script src="/js/side-player.js"></script>
+      <script src="/js/side-player.js"></script>      <script src="/js/image-titles.js"></script>
