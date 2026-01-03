@@ -365,3 +365,8 @@ i:hover {
   transform: translateY(0);
   box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4) !important;
 }
+
+.legende {
+	margin-top: 10px;
+}
+
