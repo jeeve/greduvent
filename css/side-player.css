@@ -71,10 +71,13 @@
     box-shadow: -5px 0 20px rgba(0,0,0,0.5); /* Ombre quand ouvert */
 }
 
-#side-player-container:hover #side-player-trigger {
-    transform: translateX(-350px); /* Move trigger with panel or hide it */
-    opacity: 0; /* Optional: hide trigger when open */
+#side-player-container:hover #side-player-trigger,
+#side-player-panel.active ~ #side-player-trigger,
+#side-player-container:has(#side-player-panel.active) #side-player-trigger {
+    transform: translateX(-350px);
+    opacity: 0;
     pointer-events: none;
+    transition: none; /* Instant hide */
 }
 
 /* Inner Layout */
