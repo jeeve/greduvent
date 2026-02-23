@@ -1,12 +1,13 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!doctype html>
+<html lang="fr" data-critters-container>
+<head>
   <meta charset="utf-8">
   <title>Visugpx</title>
   <base href="sensations">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.8141577e5065267e.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.8141577e5065267e.css"></noscript></head>
+<link rel="stylesheet" href="styles.80fee182402815e4.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.80fee182402815e4.css"></noscript></head>
 <body>
   <app-root></app-root>
-<script src="runtime.05c3d68d52938d04.js" type="module"></script><script src="polyfills.c8dc2bd6d291373a.js" type="module"></script><script src="main.1c4b6eb9f3e3da24.js" type="module"></script>
-
-</body></html>
+<script src="runtime.05c3d68d52938d04.js" type="module"></script><script src="polyfills.05a1aeb1f7367769.js" type="module"></script><script src="main.1a2a2ae8ef6beaa5.js" type="module"></script></body>
+</html>
