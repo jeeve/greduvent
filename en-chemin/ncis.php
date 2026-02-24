@@ -138,7 +138,7 @@ Forgeron constitue quasiment son seul défaut. D’ailleurs dès qu’il a un mo
 <hr>					
 					
 					<br><p><a name="simulation-communique"></a><em><u>Communiqué NCIS du 7 mars 2017</u></em><br>
-					<img src="images/jeeve-barbu.jpg" class="ombre-image image-dans-texte" style="float: right" alt="Jeeve l'informaticien - 13 avril 2009" title="Jeeve l'informaticien - 13 avril 2009">
+					<!--<img src="images/jeeve-barbu.jpg" class="ombre-image image-dans-texte" style="float: right" alt="Jeeve l'informaticien - 13 avril 2009" title="Jeeve l'informaticien - 13 avril 2009">-->
 					Cet informaticien vivait reclus dans son bureau depuis des mois.<br>
 					Il ne doit son salut qu'à une <a href="#simulation-caboulettes">caboulette</a> d'ampleur relativement mineure mais nécessitant une intervention immédiate. L'informaticien a été découvert en l'état, devant l'écran, le regard hagard, figé devant moultes lignes de codes aussi incompréhensibles qu'un rapport de <a href="#simulation-jose">José del Rio</a> sur l'emploi de talons de lavage en encombrement limité.<br>
 					Devant l'état préoccupant du jeune homme, l'équipe du NCIS a décidé d'un commun accord de lui administrer une cure de café et de blagues de José corsées mais faciles à comprendre afin de stimuler ses neurones lors de séances quotidiennes. Les résultats semblent prometteurs même si on constate toujours une absence totale de répartie imputable selon les spécialistes à un délai de latence neurologique qui laisse à désirer.<br> 
