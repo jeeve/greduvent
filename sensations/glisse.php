@@ -146,11 +146,11 @@
                             <p class="legende">Safaga</p></a>
                             <p align="center"><br><br>
                                 <a target="_blank"
-                                    href="http://windsurf-sessions.eg2.fr/mws_new/infos_rider.php?id_rider=3185"><img
+                                    href="https://mywindsessions.com/mws_new?id_rider=3185"><img
                                         class="img-responsive ombre-image"
-                                        src="http://windsurf-sessions.eg2.fr/signatures/signature_3185.jpg" border="0"
+                                        src="https://mywindsessions.com/signatures/signature_3185.jpg" border="0"
                                         title="My Wind Sessions - Mon journal de navigation en ligne"></a>Powered by <a
-                                    href="http://windsurf-sessions.eg2.fr/mws_new">MWS</a>
+                                    href="https://mywindsessions.com/mws_new">MWS</a>
                                 <br><br>
                             </p>
                         </div>
@@ -178,8 +178,7 @@
                         </div>
                     </div>
                     <br>
-                    <p align="center">
-                    </p>
+<!--
                     <p align="center">&nbsp;</p>
                     <div align="center">
                         <table border="0" width="270">
@@ -197,6 +196,7 @@
                             </tbody>
                         </table>
                     </div>
+-->
                     <br>
 
 
