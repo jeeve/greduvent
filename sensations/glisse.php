@@ -158,86 +158,6 @@
                     <p align="center">
                         <img src="images/planche-casimir-animation.gif">
                     </p>
-                    <div class="container-fluid; float:left">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-1 fond"></div>
-                            <div class="col-xs-12 col-sm-10 fond">
-                                <div class="embed-responsive embed-responsive-4by3 ombre-image">
-                                    <p align="center">
-                                        <iframe
-                                            src="https://www.google.com/maps/d/u/0/embed?mid=1tYJab9GlTo3NNKg2sGabgFLygHw"
-                                            width="640" height="480"></iframe>
-                                    </p>
-                                </div>
-                                <p class="legende">
-                                    <a target="_blank"
-                                        href="http://maps.google.fr/maps/ms?hl=fr&amp;ie=UTF8&amp;t=k&amp;msa=0&amp;msid=200553150720547264858.000479f72ea8ec718d36b&amp;ll=48.385442,-0.65918&amp;spn=5.107788,9.360352&amp;z=6&amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left">
-                                        Quelques spots testés et approuvés</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-<!--
-                    <p align="center">&nbsp;</p>
-                    <div align="center">
-                        <table border="0" width="270">
-                            <tbody>
-                                <tr>
-                                    <td width="258">
-                                        <p align="center">
-                                            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-                                        <h2 align="center"><a target="_blank"
-                                                href="http://windsurf-sessions.eg2.fr/mws_new/rider_sessions.php?id_rider=3185">Récits
-                                                de sessions</a></h2>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
--->
-                    <br>
-
-
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-1 fond"></div>
-                        <div class="col-xs-12 col-sm-10 fond">
-                            <div id="chart_div_1" class="chart fond ombre-image"></div>
-                            <p class="legende"><a
-                                    href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml"
-                                    target="_blank">Vitesses windsurf</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-1 fond"></div>
-                        <div class="col-xs-12 col-sm-10 fond">
-                            <div id="chart_div_2" class="chart fond ombre-image"></div>
-                            <p class="legende"><a
-                                    href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml"
-                                    target="_blank">Vitesses windfoil</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div align="center">
-                        <table border="0" width="270">
-                            <tbody>
-                                <tr>
-                                    <td width="258">
-                                        <p align="center">
-                                            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                        <h2 align="center"><a
-                                                href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/sessions/ia">Analyse de
-                                                sessions</a></h2>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
                     <br>
                     <br>
@@ -329,32 +249,7 @@
                         </div>
                     </div>
                     <br>
-                    <!--
-                     <p align="center">
-                     <a href="https://windsurf-sessions.eg2.fr/mws_new/infos_session.php?target=id_rider&id_rider=3185&id_session=260968" target="_blank">
-                     <img alt="Jablines - 20 février 2021 - prise de vue Olive91" title="Jablines - 20 février 2021 - prise de vue Olive91" src="images/v8-foil.jpg" class="img-responsive ombre-image" />
-                     </a>
-                     </p>
-                     <p class="legende"><a href="https://windsurf-sessions.eg2.fr/mws_new/infos_session.php?target=id_rider&id_rider=3185&id_session=260968" target="_blank">En vol à Jablines</a></p>
-                     
-                     <a name="ca-zef-au-crotoy"></a>
-                     <p align="center">
-                     <a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">
-                     <img alt="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." title="Le Crotoy - 16 mai 2011 - prise de vue Mireille M." src="images/windsurf-full-speed.jpg" class="img-responsive ombre-image" />
-                     </a>
-                     </p>
-                     <p class="legende"><a href="http://windsurf-sessions.eg2.fr/infos_session.php?id_session=166956" target="_blank">Ca zef au Crotoy</a></p>
-                     
-                     <br><br>
-                     <p align="center">
-                     <img alt="Kitesurf au Crotoy - 1er mai 2009 - prise de vue Mireille M." title="Kitesurf au Crotoy - 1er mai 2009 - prise de vue Mireille M." src="images/le-crotoy-kitesurf.jpg" class="img-responsive ombre-image" />			  
-                     </p>
-                     
-                     <br><br>
-                     <p align="center">
-                     <img alt="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M." title="Ride en baie de Beaussais - 7 août 2011 - photo Mireille M." src="images/run-beaussais.jpg" class="img-responsive ombre-image" />			  
-                     </p>
-                     -->
+
                     <br>
                     <br><a name="lery-poses-10-05-18"></a>
                     <div class="row">
@@ -408,7 +303,79 @@
                             </p>
                         </div>
                     </div>
-                    <br><br>
+
+
+
+
+
+
+
+                    <br/>
+                    <br/>
+                    <div class="container-fluid; float:left">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-1 fond"></div>
+                            <div class="col-xs-12 col-sm-10 fond">
+                                <div class="embed-responsive embed-responsive-4by3 ombre-image">
+                                    <p align="center">
+                                        <iframe
+                                            src="https://www.google.com/maps/d/u/0/embed?mid=1tYJab9GlTo3NNKg2sGabgFLygHw"
+                                            width="640" height="480"></iframe>
+                                    </p>
+                                </div>
+                                <p class="legende">
+                                    <a target="_blank"
+                                        href="http://maps.google.fr/maps/ms?hl=fr&amp;ie=UTF8&amp;t=k&amp;msa=0&amp;msid=200553150720547264858.000479f72ea8ec718d36b&amp;ll=48.385442,-0.65918&amp;spn=5.107788,9.360352&amp;z=6&amp;source=embed&quot; style=&quot;color:#0000FF;text-align:left">
+                                        Quelques spots testés et approuvés</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <br>
+
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-10 fond">
+                            <div id="chart_div_1" class="chart fond ombre-image"></div>
+                            <p class="legende"><a
+                                    href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml"
+                                    target="_blank">Vitesses windsurf</a></p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-1 fond"></div>
+                        <div class="col-xs-12 col-sm-10 fond">
+                            <div id="chart_div_2" class="chart fond ombre-image"></div>
+                            <p class="legende"><a
+                                    href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFUBsKIblwzZ74TocRl5cItHXxjL8MjRFyD_mj0D8Zewd4PTQ9BoUFTj1bB6RdLaXckWbZ50rBZsjM/pubhtml"
+                                    target="_blank">Vitesses windfoil</a></p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div align="center">
+                        <table border="0" width="270">
+                            <tbody>
+                                <tr>
+                                    <td width="258">
+                                        <p align="center">
+                                            <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                                        <h2 align="center"><a
+                                                href="https://awake-cherianne-jeeve-606c3eea.koyeb.app/sessions/ia">Analyse de
+                                                sessions</a></h2>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                     <br><br>
                     <a name="liste-sessions"></a>
                     <h2>Liste des sessions</h2>
                     <div id="sessions"></div>
