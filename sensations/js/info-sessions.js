@@ -110,7 +110,7 @@ function getInfoSessions(spot) {
           reglage = " R" + reglage;
         }
 
-        distance = ligne[33]; //ligne[7];
+        distance = ligne[33] !== undefined ? ligne[33] : 0; //ligne[7];
         vmax = ligne[31]; //ligne[9];
         v100m = ligne[32]; //ligne[10];
         ventMini = ligne[4];
