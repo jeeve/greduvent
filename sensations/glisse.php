@@ -438,9 +438,9 @@
                 ligne = data.values[i];
                 d = ligne[0];
                 pratique = ligne[2];
-                vmax = parseFloat(ligne[9]);
-                v100 = parseFloat(ligne[10]);
-                distanceFoil = ligne[7];
+                vmax = parseFloat(ligne[31]);
+                v100 = parseFloat(ligne[32]);
+                distanceFoil = ligne[33] == undefined ? 0 : ligne[33];
                 if (distanceFoil == "") {
                     distanceFoil = 0.0;
                 }
@@ -521,7 +521,7 @@
                 title: 'Noeuds',
                 minValue: 0
             },
-            pointSize: 10
+            pointSize: 5
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div_1'));
@@ -541,7 +541,7 @@
                 title: 'Noeuds',
                 minValue: 0
             },
-            pointSize: 10
+            pointSize: 5
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div_2'));
