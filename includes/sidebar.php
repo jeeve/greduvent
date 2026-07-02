@@ -17,9 +17,10 @@
 				  </li>	                  
 				  <li><a href="/foret/foret.php">peuple végétal</a>
 					<ul style="display: none;">
+						<li><a href="/foret/randonnees.php">pas à pas</a></li>
 						<li><a href="/foret/diapo.php">rencontres végétales</a></li>
-					</ul>	
-				  </li>	 
+					</ul>
+				  </li>
                   <li><a href="/impressions/impressions.php">impressions</a></li>
                   <li><a href="/sensations/sensations.php">sensations</a>
 					<ul style="display: none;">

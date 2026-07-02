@@ -41,9 +41,10 @@
 	echo '<ul>';
 		echo getSommaireItem('../loire/diapo.php'); 
 	echo '</ul>';
-	echo getSommaireItem('../foret/foret.php'); 
+	echo getSommaireItem('../foret/foret.php');
 	echo '<ul>';
-		echo getSommaireItem('../foret/diapo.php'); 
+		echo getSommaireItem('../foret/randonnees.php');
+		echo getSommaireItem('../foret/diapo.php');
 	echo '</ul>';
 	echo getSommaireItem('../impressions/impressions.php'); 
 	echo getSommaireItem('../sensations/sensations.php'); 
