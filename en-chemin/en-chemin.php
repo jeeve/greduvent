@@ -115,7 +115,13 @@
                            <img src="images/ligne13.jpg" alt="Ligne 13 - Malakoff" title="Ligne 13 - Malakoff" class="img-responsive ombre-image" />
                         </p>
                      </div>
-                   </div>				   
+                   </div>		
+				   
+                    <br><br>
+                    <p align="center">
+                        <img alt="Loire sous la neige - 11 février 2012" title="Loire sous la neige - 11 février 2012"
+                            src="images/loire-neige.jpg" class="img-responsive ombre-image" />
+                    </p>				   
 				   
 					  <br><br>
                   <div class="row vertical-align">
