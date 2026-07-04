@@ -104,12 +104,9 @@ Goult, samedi 11 mai 2024</em></font>
                             </div>
 
                             <div class="col-xs-12 col-sm-6 fond">
-                                <a href="http://blenderartists.org/forum/attachment.php?attachmentid=128881&d=1296826834"
-                                    target="_blank">
-                                    <img alt="Dream of flying par Artur Zygulski"
-                                        title="Dream of flying par Artur Zygulski" src="images/dream-of-flying.jpg"
-                                        class="img-responsive encadrement-table fond-table center-block" />
-                                </a>
+                                <img alt="Dream of flying par Artur Zygulski"
+                                    title="Dream of flying par Artur Zygulski" src="images/dream-of-flying.jpg"
+                                    class="img-responsive encadrement-table fond-table center-block" />
                             </div>
 
                         </div>
