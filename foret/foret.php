@@ -22,6 +22,12 @@
 
 
                     <br><br>
+                    <p align="center">
+                        <img alt="Parc Montsouris - 28 juin 2026" title="Parc Montsouris - 28 juin 2026"
+                            src="images/montsouris.jpg" class="img-responsive ombre-image" />
+                    </p>
+
+                    <br><br>
                     <div class="row">
                         <div class="col-xs-12 col-sm-2 fond"></div>
                         <div class="col-xs-12 col-sm-8 fond">
