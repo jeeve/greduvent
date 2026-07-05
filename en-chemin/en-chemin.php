@@ -303,10 +303,8 @@ De l'atelier et d'autres que je connais...
                      </div>
                    </div>  
 				   <br> 
-				   			
-				
-			   				  
-			<br><br>
+				   					  
+			<br>
 			<div class="row">
 				<div class="col-sm-3 fond"></div>
 				<div class="col-xs-12 col-sm-6 fond">
@@ -316,6 +314,7 @@ De l'atelier et d'autres que je connais...
 				</div>
 			</div>
 			<br><br>
+
 			<div id="swipe"><div class="row">
 <div class="col-xs-4"><p><a id="page-precedente" href="../emotions/emotions.php">émotions</a></p></div>
 <div class="col-xs-8">
