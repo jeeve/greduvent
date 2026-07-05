@@ -308,7 +308,8 @@ De l'atelier et d'autres que je connais...
 			   				  
 			<br><br>
 			<div class="row">
-				<div class="col-xs-12 fond">
+				<div class="col-sm-3 fond"></div>
+				<div class="col-xs-12 col-sm-6 fond">
 					<p align="center">
 						<img src="images/butte-cailles.jpg" alt="La Butte aux Cailles - 7 juin 2026" title="La Butte aux Cailles - 7 juin 2026" class="img-responsive ombre-image" />
 					</p>
