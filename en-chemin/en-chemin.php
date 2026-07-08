@@ -119,7 +119,7 @@
 				   
                     <br><br>
                     <p align="center">
-                        <img alt="Loire sous la neige - 11 février 2012" title="Loire sous la neige - 11 février 2012"
+                        <img alt="Blois - 11 février 2012" title="Blois - 11 février 2012"
                             src="images/loire-neige.jpg" class="img-responsive ombre-image" />
                     </p>				   
 				   
