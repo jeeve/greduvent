@@ -383,6 +383,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Dessine une barre en segments façon afficheur à LED d'époque :
+    // vert en bas, jaune au milieu, rouge en haut de l'échelle
+    function drawLedBar(ctx, x, width, barHeight, HEIGHT, segment) {
+        const step = segment + 1;
+        for (let y = 0; y < barHeight; y += step) {
+            const level = y / HEIGHT;
+            ctx.fillStyle = level > 0.75 ? '#ff2020' : level > 0.5 ? '#ffff00' : '#00ff00';
+            ctx.fillRect(x, HEIGHT - y - segment, width, segment);
+        }
+    }
+
     function drawVisualizer() {
         if (!isAudioContextSetup) return;
 
@@ -404,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const capYPositionArray = []; // Store spectral peaks
         const capHeight = 2;
-        const capStyle = '#ffffffff'; // Light yellow peaks
+        const capStyle = '#ffffff'; // Crêtes blanches
 
         function renderFrame() {
             requestAnimationFrame(renderFrame);
@@ -433,13 +444,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     capYPositionArray[i] = barHeight;
                 }
 
-                // Create gradient for the main bar
-                const gradient = ctx.createLinearGradient(0, HEIGHT, 0, HEIGHT - barHeight);
-                gradient.addColorStop(0, '#6366f1');
-                gradient.addColorStop(1, '#ec4899');
-                
-                ctx.fillStyle = gradient;
-                ctx.fillRect(x, HEIGHT - barHeight + capHeight, barWidth, barHeight);
+                // Barre en LED segmentées
+                drawLedBar(ctx, x, barWidth, barHeight, HEIGHT, 3);
                 
                 x += barWidth + 1;
             }
@@ -484,13 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dataIndex = i * step;
                 barHeight = (dataArray[dataIndex] / 255) * HEIGHT * 0.8; // Scale to canvas height
                 
-                // Simple gradient
-                const gradient = ctx.createLinearGradient(0, HEIGHT, 0, HEIGHT - barHeight);
-                gradient.addColorStop(0, '#6366f1');
-                gradient.addColorStop(1, '#ec4899');
-                
-                ctx.fillStyle = gradient;
-                ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+                drawLedBar(ctx, x, barWidth, barHeight, HEIGHT, 2);
                 
                 x += barWidth + 1;
             }

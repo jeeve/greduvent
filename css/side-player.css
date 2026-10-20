@@ -1,3 +1,6 @@
+/* Lecteur latéral, look "web des débuts" : cadres gris biseautés,
+   barre de titre bleue, liens soulignés et afficheur à LED vertes */
+
 /* Side Player Container */
 #side-player-container {
     position: fixed;
@@ -7,31 +10,27 @@
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;
+    font-family: Verdana, Geneva, Arial, sans-serif;
 }
 
 /* Trigger Tab (Visible by default) */
 #side-player-trigger {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 15px 10px;
-    border-radius: 10px 0 0 10px;
+    background: #c0c0c0;
+    padding: 10px 6px;
     cursor: pointer;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
-    color: #f8fafc;
-    font-size: 24px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #000;
+    font-size: 20px;
+    border: 2px outset #dfdfdf;
     border-right: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 #side-player-trigger:hover {
-    background: rgba(99, 102, 241, 0.8);
-    color: white;
+    background: #d4d0c8;
+    color: #000080;
 }
 
 /* Mini Visualizer */
@@ -39,6 +38,9 @@
     width: 40px;
     height: 30px;
     display: none; /* Hidden by default */
+    background: #000;
+    border: 2px inset #dfdfdf;
+    box-sizing: content-box;
 }
 
 /* Show mini visualizer when playing */
@@ -50,17 +52,14 @@
 #side-player-panel {
     width: 350px;
     height: 500px;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: none; /* Pas d'ombre quand fermé */
+    background: #c0c0c0;
+    border: 2px outset #dfdfdf;
+    border-right: none;
     transform: translateX(100%); /* Hide off-screen */
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+    transition: transform 0.3s steps(6);
     position: absolute;
     right: 0;
     top: 0; /* Aligné avec le bouton en haut */
-    border-radius: 20px 0 0 20px;
     overflow: hidden;
 }
 
@@ -68,7 +67,6 @@
 #side-player-container:hover #side-player-panel,
 #side-player-panel.active {
     transform: translateX(0);
-    box-shadow: -5px 0 20px rgba(0,0,0,0.5); /* Ombre quand ouvert */
 }
 
 #side-player-container:hover #side-player-trigger,
@@ -85,39 +83,46 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    color: #f8fafc;
-    font-family: 'Outfit', sans-serif;
+    color: #000;
+    font-family: Verdana, Geneva, Arial, sans-serif;
 }
 
+/* Barre de titre façon fenêtre d'époque */
 .side-header {
-    padding: 15px 20px;
+    padding: 3px 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000080;
+    background: linear-gradient(to right, #000080, #1084d0);
 }
 
 .side-header h3 {
     margin: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.side-header h3 a:hover {
+    text-decoration: underline !important;
 }
 
 .highlight {
-    color: #6366f1;
+    color: #000080;
 }
 
 .upload-btn-side {
     cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
-    transition: background 0.2s;
-    color: #94a3b8;
+    padding: 1px 3px;
+    color: #000;
+    background: #c0c0c0;
+    border: 2px outset #dfdfdf;
 }
 
-.upload-btn-side:hover {
-    background: rgba(255,255,255,0.1);
-    color: white;
+.upload-btn-side:active {
+    border-style: inset;
 }
 
 .side-main {
@@ -128,21 +133,24 @@
 }
 
 .player-card-side {
-    padding: 20px;
+    margin: 8px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    background: rgba(0,0,0,0.2);
+    gap: 8px;
+    background: #fff;
+    border: 2px solid grey;
 }
 
+/* Écran LCD noir enfoncé */
 .visualizer-container-side {
     height: 100px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 10px;
+    background: #000;
+    border: 2px inset #dfdfdf;
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -152,58 +160,66 @@ canvas#visualizer {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.6;
+    opacity: 0.85;
 }
 
 .track-info-side {
     z-index: 1;
     text-align: center;
     width: 100%;
-    padding: 0 10px;
+    padding: 4px 6px 0;
+    font-family: "Courier New", Courier, monospace;
+    color: #00ff00;
 }
 
 .track-info-side h4 {
-    margin: 0 0 5px 0;
-    font-size: 1rem;
+    margin: 0 0 2px 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 13px;
+    font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-shadow: 1px 1px 0 #000;
 }
 
 .track-info-side p {
     margin: 0;
-    font-size: 0.8rem;
-    color: #94a3b8;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    color: #00b000;
+    text-shadow: 1px 1px 0 #000;
 }
 
 .controls-container-side {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .progress-area-side {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.7rem;
-    color: #94a3b8;
+    gap: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    color: #000;
 }
 
 .progress-bar-wrapper {
     flex: 1;
-    height: 4px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 2px;
+    height: 12px;
+    background: #fff;
+    border: 2px inset #dfdfdf;
     cursor: pointer;
     position: relative;
 }
 
+/* Remplissage en blocs comme les barres de progression d'antan */
 .progress-bar {
     height: 100%;
-    background: #6366f1;
+    background: repeating-linear-gradient(to right, #000080 0 6px, transparent 6px 8px);
     width: 0%;
-    border-radius: 2px;
     pointer-events: none;
 }
 
@@ -211,66 +227,77 @@ canvas#visualizer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 6px;
 }
 
 .control-btn {
-    background: none;
-    border: none;
-    color: #f8fafc;
+    background: #c0c0c0;
+    border: 2px outset #dfdfdf;
+    color: #000;
     cursor: pointer;
-    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
+    width: 34px;
+    height: 26px;
 }
 
 .control-btn:hover {
-    color: #6366f1;
-    transform: scale(1.1);
+    color: #000080;
+}
+
+.control-btn:active {
+    border-style: inset;
+}
+
+.control-btn:active svg {
+    transform: translate(1px, 1px);
 }
 
 .control-btn.lg {
-    width: 40px;
-    height: 40px;
-    background: #6366f1;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+    width: 46px;
+    height: 26px;
 }
 
-.control-btn.lg:hover {
-    background: #4f46e5;
-    color: white;
+.control-btn svg {
+    width: 14px;
+    height: 14px;
 }
 
 .volume-control-side {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    color: #94a3b8;
+    gap: 6px;
+    color: #000;
 }
 
 .volume-control-side input[type="range"] {
-    width: 80px;
-    height: 3px;
+    width: 100px;
+    height: 16px;
+    accent-color: #000080;
 }
 
 .playlist-panel-side {
     flex: 1;
-    padding: 15px 20px;
+    margin: 0 8px 8px;
+    padding: 6px 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background: #fff;
+    border: 2px solid grey;
 }
 
 .playlist-panel-side h5 {
-    margin: 0 0 10px 0;
-    font-size: 0.9rem;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin: 0 0 6px 0;
+    padding-bottom: 4px;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 1px solid grey;
     display: flex;
     justify-content: space-between;
 }
@@ -283,40 +310,43 @@ canvas#visualizer {
     flex: 1;
 }
 
-.playlist-list-side::-webkit-scrollbar {
-    width: 4px;
-}
-
-.playlist-list-side::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.1);
-    border-radius: 2px;
-}
-
 .playlist-item {
-    padding: 8px 10px;
-    border-radius: 6px;
-    margin-bottom: 4px;
+    padding: 2px 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    transition: background 0.2s;
+    gap: 6px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    color: #0000ee;
+}
+
+.playlist-item .track-name {
+    text-decoration: underline;
 }
 
 .playlist-item:hover {
-    background: rgba(255,255,255,0.05);
+    color: #ee0000;
 }
 
 .playlist-item.active {
-    background: rgba(99, 102, 241, 0.15);
-    color: #6366f1;
+    color: #551a8b;
+    font-weight: bold;
+    background: #d9dff2; /* même bleu que le survol du menu (style.css) */
 }
 
 .track-number {
-    font-size: 0.7rem;
-    color: #64748b;
-    width: 15px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    color: #808080;
+    min-width: 18px;
+    text-align: right;
+}
+
+.playlist-item.active .track-number::before {
+    content: "\25BA";
+    color: #000080;
+    margin-right: 2px;
 }
 
 .track-name {
@@ -327,8 +357,9 @@ canvas#visualizer {
 
 .empty-state-side {
     text-align: center;
-    color: #64748b;
-    font-size: 0.8rem;
+    color: #808080;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
     margin-top: 20px;
     font-style: italic;
 }
