@@ -466,7 +466,7 @@
                         v100mwindsurfdate = d;
                     }
                 }
-                if (vmax != '') {
+                if (!isNaN(vmax) && !isNaN(v100)) {
                     v = [];
                     v[0] = new Date(d);
                     v[1] = parseFloat(v100);
@@ -521,7 +521,20 @@
                 title: 'Noeuds',
                 minValue: 0
             },
-            pointSize: 5
+            pointSize: 5,
+            legend: {
+                position: 'top'
+            },
+            chartArea: {
+                left: 60,
+                top: 30,
+                right: 10,
+                bottom: 40,
+                backgroundColor: {
+                    stroke: '#ccc',
+                    strokeWidth: 1
+                }
+            }
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div_1'));
@@ -541,7 +554,20 @@
                 title: 'Noeuds',
                 minValue: 0
             },
-            pointSize: 5
+            pointSize: 5,
+            legend: {
+                position: 'top'
+            },
+            chartArea: {
+                left: 60,
+                top: 30,
+                right: 10,
+                bottom: 40,
+                backgroundColor: {
+                    stroke: '#ccc',
+                    strokeWidth: 1
+                }
+            }
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('chart_div_2'));
