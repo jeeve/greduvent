@@ -36,7 +36,7 @@ if (is_dir($musicDir)) {
 </script>
 <div id="side-player-container">
     <div id="side-player-trigger">
-        <i class="glyphicon glyphicon-music"></i>
+        <svg class="side-player-note" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5 20 3v3L9.6 8.2V18H8z"/><rect x="18.4" y="3" width="1.6" height="12.5"/><ellipse cx="5.8" cy="18" rx="3" ry="2.4"/><ellipse cx="16.2" cy="15.5" rx="3" ry="2.4"/></svg>
         <canvas id="mini-visualizer"></canvas>
     </div>
     <div id="side-player-panel">

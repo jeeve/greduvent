@@ -28,6 +28,11 @@
     gap: 6px;
 }
 
+.side-player-note {
+    display: block;
+    shape-rendering: geometricPrecision;
+}
+
 #side-player-trigger:hover {
     background: #d4d0c8;
     color: #000080;
