@@ -61,7 +61,7 @@
     border: 2px outset #dfdfdf;
     border-right: none;
     transform: translateX(100%); /* Hide off-screen */
-    transition: transform 0.3s steps(6);
+    transition: transform 0.3s ease-out;
     position: absolute;
     right: 0;
     top: 0; /* Aligné avec le bouton en haut */
