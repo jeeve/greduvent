@@ -12,6 +12,7 @@
 	border-right-style: none; 
 	border-right-width: medium;
 	width: 220px;
+	white-space: nowrap;
 	vertical-align : bottom;
 }
 

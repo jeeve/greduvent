@@ -36,6 +36,7 @@
                             </p>
                             <br>
                             <ul class="sommaire">
+                                <li><a href="#depassement-par-le-haut">Système de dépassement de véhicules par le haut</a></li>
                                 <li><a href="#relativite-restreinte">La relativité restreinte</a></li>
                                 <li><a href="#hypothese-riemann">L'hypothèse de Riemann</a></li>
                                 <li><a href="#espace-temps">Espace-temps</a></li>
@@ -47,6 +48,68 @@
                                 <li><a href="#principe-inertie">Principe d'inertie</a></li>
                                 <li><a href="#teleportation-ionique">Téléportation ionique</a></li>
                             </ul>
+
+                            <a name="depassement-par-le-haut"></a>
+                            <table class="table-externe">
+                                <tr>
+                                    <td>
+                                        <table border="0" width="100%">
+                                            <tr>
+                                                <td class="titre-externe">
+                                                    <h2>Système de dépassement de véhicules par le haut</h2>
+                                                </td>
+                                                <td class="titre-externe" align="right">
+                                                    <a target="_blank"
+                                                        href="https://docs.google.com/forms/d/e/1FAIpQLScpCsx9wor9hE0LNdcuTTVBB-SsaCMG988-MqC-ml5l2HP79g/viewform?usp=pp_url&entry.532531437=Syst%C3%A8me+de+d%C3%A9passement+de+v%C3%A9hicules+par+le+haut">
+                                                        <span class="glyphicon glyphicon-edit"
+                                                            aria-hidden="true"></span> contribuer</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table class="table-interne">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <p><a name="depassement-par-le-haut-fin"></a>Et si, pour doubler, les
+                                                        véhicules passaient par-dessus les autres plutôt que sur la voie
+                                                        d'à côté ?</p>
+                                                    <br>
+                                                    <p align="center">
+                                                    <div class="embed-responsive embed-responsive-16by9 ombre-image">
+                                                        <iframe width="200" height="112"
+                                                            src="https://www.youtube.com/embed/G1yC2FFuJZU?rel=0&amp;showinfo=0"
+                                                            frameborder="0" allowfullscreen></iframe>
+                                                    </div>
+                                                    </p><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="colonne-lien">
+                                                    <a href="#sommaire">
+                                                        <font size="1">Sommaire</font>
+                                                    </a>
+                                                    <font size="1">
+                                                        - <a href="#depassement-par-le-haut">Dépassement par le haut</a> -
+                                                    </font>
+                                                    <a href="#depassement-par-le-haut-fin">
+                                                        <font size="1">Fin</font>
+                                                    </a>
+                                                </td>
+                                                <td class="colonne-auteur">
+                                                    <a target="_blank" href="https://twitter.com/jeeve">
+                                                        <font size="1">@jeeve</font>
+                                                    </a>
+                                                    <font size="1">,
+                                                        28/10/2026 11h54</font>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
 
                             <a name="relativite-restreinte"></a>
                             <table class="table-externe">
