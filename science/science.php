@@ -2906,8 +2906,8 @@ Professeur Machepro
                             </table>
                         </div>
                         <div class="hidden-xs col-sm-4 fond">
-                            <iframe src="twitter.html" height=2050 name="I1" align="top"
-                                style="background: white"></iframe>
+                            <iframe src="matrix.html" height=2050 name="I1" align="top" allowtransparency="true"
+                                style="background: transparent; border: 0; width: 100%"></iframe>
                         </div>
                     </div>
                     <br><br>

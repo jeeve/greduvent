@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>matrix</title>
+<style>
+	html, body { margin: 0; padding: 0; height: 100%; background: transparent; overflow: hidden; }
+	canvas { display: block; }
+</style>
+</head>
+
+<body>
+<canvas id="matrix"></canvas>
+<script>
+(function () {
+	var canvas = document.getElementById('matrix');
+	var ctx = canvas.getContext('2d');
+	var caracteres = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';
+	var taille = 16;
+	var lignes = 0;
+	var colonnes = [];
+
+	function caractere() {
+		return caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+	}
+
+	function nouvelleColonne(tete) {
+		var c = { tete: tete, longueur: 8 + Math.floor(Math.random() * 25), car: [] };
+		for (var j = 0; j < lignes; j++) {
+			c.car[j] = caractere();
+		}
+		return c;
+	}
+
+	function redimensionner() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		lignes = Math.ceil(canvas.height / taille);
+		colonnes = [];
+		var nb = Math.floor(canvas.width / taille);
+		for (var i = 0; i < nb; i++) {
+			colonnes[i] = nouvelleColonne(Math.floor(Math.random() * lignes));
+		}
+	}
+
+	// fond transparent : on redessine chaque traînée avec une opacité décroissante
+	function dessiner() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.font = taille + 'px monospace';
+		for (var i = 0; i < colonnes.length; i++) {
+			var c = colonnes[i];
+			if (Math.random() > 0.9) {
+				c.car[Math.floor(Math.random() * lignes)] = caractere();
+			}
+			for (var k = 0; k < c.longueur; k++) {
+				var j = c.tete - k;
+				if (j < 0 || j >= lignes) continue;
+				if (k === 0) {
+					ctx.globalAlpha = 1;
+					ctx.fillStyle = '#003300';
+				} else {
+					ctx.globalAlpha = 1 - k / c.longueur;
+					ctx.fillStyle = '#008c00';
+				}
+				ctx.fillText(c.car[j], i * taille, (j + 1) * taille);
+			}
+			c.tete++;
+			if (c.tete - c.longueur > lignes && Math.random() > 0.95) {
+				colonnes[i] = nouvelleColonne(0);
+			}
+		}
+		ctx.globalAlpha = 1;
+	}
+
+	redimensionner();
+	window.addEventListener('resize', redimensionner);
+	setInterval(dessiner, 60);
+})();
+</script>
+</body>
+
+</html>
