@@ -58,10 +58,10 @@
 				if (j < 0 || j >= lignes) continue;
 				if (k === 0) {
 					ctx.globalAlpha = 1;
-					ctx.fillStyle = '#003300';
+					ctx.fillStyle = '#909090';
 				} else {
 					ctx.globalAlpha = 1 - k / c.longueur;
-					ctx.fillStyle = '#008c00';
+					ctx.fillStyle = '#b4b4b4';
 				}
 				ctx.fillText(c.car[j], i * taille, (j + 1) * taille);
 			}
