@@ -80,7 +80,7 @@
                                                     <p align="center">
                                                     <div class="embed-responsive embed-responsive-16by9 ombre-image">
                                                         <iframe width="200" height="112"
-                                                            src="https://www.youtube.com/embed/G1yC2FFuJZU?rel=0&amp;showinfo=0"
+                                                            src="https://www.youtube.com/embed/G1yC2FFuJZU?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=G1yC2FFuJZU"
                                                             frameborder="0" allowfullscreen></iframe>
                                                     </div>
                                                     </p><br>
