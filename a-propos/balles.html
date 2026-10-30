@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>balles</title>
+<style>
+	html, body { margin: 0; padding: 0; height: 100%; background: transparent; overflow: hidden; }
+	canvas { display: block; }
+</style>
+</head>
+
+<body>
+<canvas id="balles"></canvas>
+<script>
+(function () {
+	var canvas = document.getElementById('balles');
+	var ctx = canvas.getContext('2d');
+	var nombre = 25;
+	var balles = [];
+
+	function redimensionner() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		balles = [];
+		for (var i = 0; i < nombre; i++) {
+			var r = 4 + Math.random() * 10;
+			var angle = Math.random() * 2 * Math.PI;
+			var vitesse = 1 + Math.random() * 2.5;
+			balles.push({
+				x: r + Math.random() * (canvas.width - 2 * r),
+				y: r + Math.random() * (canvas.height - 2 * r),
+				vx: Math.cos(angle) * vitesse,
+				vy: Math.sin(angle) * vitesse,
+				r: r,
+				m: r * r
+			});
+		}
+	}
+
+	// choc élastique entre deux balles qui se chevauchent
+	function collision(a, b) {
+		var dx = b.x - a.x, dy = b.y - a.y;
+		var d = Math.sqrt(dx * dx + dy * dy);
+		if (d === 0 || d >= a.r + b.r) return;
+		var nx = dx / d, ny = dy / d;
+		// on écarte les balles pour qu'elles ne restent pas collées
+		var recouvrement = (a.r + b.r - d) / 2;
+		a.x -= nx * recouvrement; a.y -= ny * recouvrement;
+		b.x += nx * recouvrement; b.y += ny * recouvrement;
+		var vn = (a.vx - b.vx) * nx + (a.vy - b.vy) * ny;
+		if (vn <= 0) return;
+		var p = 2 * vn / (a.m + b.m);
+		a.vx -= p * b.m * nx; a.vy -= p * b.m * ny;
+		b.vx += p * a.m * nx; b.vy += p * a.m * ny;
+	}
+
+	function dessiner() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		var i, j, b;
+		for (i = 0; i < balles.length; i++) {
+			b = balles[i];
+			b.x += b.vx;
+			b.y += b.vy;
+			if (b.x < b.r) { b.x = b.r; b.vx = Math.abs(b.vx); }
+			if (b.x > canvas.width - b.r) { b.x = canvas.width - b.r; b.vx = -Math.abs(b.vx); }
+			if (b.y < b.r) { b.y = b.r; b.vy = Math.abs(b.vy); }
+			if (b.y > canvas.height - b.r) { b.y = canvas.height - b.r; b.vy = -Math.abs(b.vy); }
+		}
+		for (i = 0; i < balles.length; i++) {
+			for (j = i + 1; j < balles.length; j++) {
+				collision(balles[i], balles[j]);
+			}
+		}
+		// cadre à peine visible sur lequel rebondissent les balles
+		ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+		ctx.lineWidth = 1;
+		ctx.strokeRect(0.5, 0.5, canvas.width - 1, canvas.height - 1);
+		ctx.strokeStyle = '#b4b4b4';
+		ctx.lineWidth = 1.5;
+		for (i = 0; i < balles.length; i++) {
+			b = balles[i];
+			ctx.beginPath();
+			ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
+			ctx.stroke();
+		}
+		requestAnimationFrame(dessiner);
+	}
+
+	redimensionner();
+	window.addEventListener('resize', redimensionner);
+	requestAnimationFrame(dessiner);
+})();
+</script>
+</body>
+
+</html>

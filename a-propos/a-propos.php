@@ -116,7 +116,7 @@ du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font 
 	   
 	</div>
 	<div class="hidden-xs col-sm-4 fond">
-		<iframe src="twitter.html" height=2050 name="I1" align="top" style="background: white" ></iframe>
+		<iframe src="balles.html" height=2050 name="I1" align="top" allowtransparency="true" style="background: transparent; border: 0; width: 100%" ></iframe>
     </div>
 	</div>	
 
