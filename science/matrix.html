@@ -20,6 +20,16 @@
 	var taille = 16;
 	var lignes = 0;
 	var colonnes = [];
+	var police = '100 ' + taille + 'px "M PLUS 1 Code", monospace';
+
+	// police très fine chargée depuis Google Fonts, réduite aux seuls caractères utilisés
+	var lien = document.createElement('link');
+	lien.rel = 'stylesheet';
+	lien.href = 'https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100&text=' + encodeURIComponent(caracteres);
+	document.head.appendChild(lien);
+	lien.onload = function () {
+		if (document.fonts) document.fonts.load(police, caracteres);
+	};
 
 	function caractere() {
 		return caracteres.charAt(Math.floor(Math.random() * caracteres.length));
@@ -47,7 +57,7 @@
 	// fond transparent : on redessine chaque traînée avec une opacité décroissante
 	function dessiner() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		ctx.font = taille + 'px monospace';
+		ctx.font = police;
 		for (var i = 0; i < colonnes.length; i++) {
 			var c = colonnes[i];
 			if (Math.random() > 0.9) {
