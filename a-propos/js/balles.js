@@ -162,8 +162,20 @@
 		}
 	}
 
+	// sur tablette la barre d'adresse se replie au défilement et déclenche un resize :
+	// on ne replace les balles dans le cadre que si la largeur change vraiment
+	var largeurFenetre = window.innerWidth;
+	function redimensionner() {
+		if (window.innerWidth !== largeurFenetre) {
+			largeurFenetre = window.innerWidth;
+			initialiser();
+		} else {
+			dimensionner();
+		}
+	}
+
 	window.addEventListener('load', initialiser);
-	window.addEventListener('resize', initialiser);
+	window.addEventListener('resize', redimensionner);
 	initialiser();
 	requestAnimationFrame(dessiner);
 })();
