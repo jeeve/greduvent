@@ -4,6 +4,7 @@
 	var cadre = document.getElementById('cadre-balles');
 	if (!cadre) return;
 	var header = document.querySelector('.navbar-fixed-top');
+	var menu = document.getElementById('sidebar');
 
 	var canvas = document.createElement('canvas');
 	canvas.style.position = 'absolute';
@@ -117,6 +118,8 @@
 
 		// le header sert de plafond en haut de la page, sans dépendre du défilement
 		var plafond = header ? header.offsetHeight : 0;
+		// le menu de gauche sert de mur (sauf s'il est replié hors de l'écran)
+		var gauche = menu ? Math.max(0, menu.getBoundingClientRect().right + window.pageXOffset) : 0;
 
 		var i, j, b;
 		for (i = 0; i < balles.length; i++) {
@@ -124,7 +127,7 @@
 			b.x += b.vx;
 			b.y += b.vy;
 			// bords de la page
-			if (b.x < b.r) { b.x = b.r; b.vx = Math.abs(b.vx); }
+			if (b.x < gauche + b.r) { b.x = gauche + b.r; b.vx = Math.abs(b.vx); }
 			if (b.x > largeur - b.r) { b.x = largeur - b.r; b.vx = -Math.abs(b.vx); }
 			if (b.y < plafond + b.r) { b.y = plafond + b.r; b.vy = Math.abs(b.vy); }
 			if (b.y > hauteur - b.r) { b.y = hauteur - b.r; b.vy = -Math.abs(b.vy); }
