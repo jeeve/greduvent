@@ -116,7 +116,7 @@ du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font 
 	   
 	</div>
 	<div class="hidden-xs col-sm-4 fond">
-		<iframe src="balles.html" height=2050 name="I1" align="top" allowtransparency="true" style="background: transparent; border: 0; width: 100%" ></iframe>
+		<div id="cadre-balles" style="height: 2050px"></div>
     </div>
 	</div>	
 
@@ -140,5 +140,6 @@ du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font 
       <!--/.page-container-->
       <?php include("../includes/footer.php"); ?>
 	  <script type="text/javascript" src="js/favoris.js"></script>
+	  <script type="text/javascript" src="js/balles.js"></script>
    </body>
 </html>
