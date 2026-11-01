@@ -27,8 +27,13 @@
 	lien.rel = 'stylesheet';
 	lien.href = 'https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100&text=' + encodeURIComponent(caracteres);
 	document.head.appendChild(lien);
+	// l'animation ne démarre qu'une fois la police fine prête, pour ne jamais voir
+	// les caractères de la police de secours ; si elle ne se charge pas, rien ne s'affiche
 	lien.onload = function () {
-		if (document.fonts) document.fonts.load(police, caracteres);
+		if (!document.fonts) return;
+		document.fonts.load(police, caracteres).then(function (polices) {
+			if (polices.length > 0) demarrer();
+		});
 	};
 
 	function caractere() {
@@ -83,9 +88,11 @@
 		ctx.globalAlpha = 1;
 	}
 
-	redimensionner();
-	window.addEventListener('resize', redimensionner);
-	setInterval(dessiner, 60);
+	function demarrer() {
+		redimensionner();
+		window.addEventListener('resize', redimensionner);
+		setInterval(dessiner, 60);
+	}
 })();
 </script>
 </body>
