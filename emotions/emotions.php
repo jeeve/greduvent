@@ -33,7 +33,7 @@
 						  </p>
 						  <p align="right"><em><font size="2">samedi 5 novembre 2016</font></em></p>
 					  </div>
-					  <div class="col-xs-12 col-sm-5 fond">
+					  <div class="col-xs-12 col-sm-6 fond">
 						  <p align="center">
 							 <img src="images/banc-kellermann.jpg" alt="Parc Kellermann - 1er novembre 2026" title="Parc Kellermann - 1er novembre 2026" class="img-responsive ombre-image center-block" />
 						  </p>
