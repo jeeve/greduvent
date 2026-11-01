@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>au gré du vent</title>
+<style>
+	html, body { margin: 0; padding: 0; height: 100%; background: transparent; overflow: hidden; }
+	canvas { display: block; }
+</style>
+</head>
+
+<body>
+<canvas id="vent"></canvas>
+<script>
+// Les lettres libérées par le « Soutien des Lettres Condamnées » flottent au gré du vent ;
+// de temps en temps quelques-unes se rassemblent pour former un mot de la page, puis s'envolent.
+(function () {
+	var canvas = document.getElementById('vent');
+	var ctx = canvas.getContext('2d');
+	// les lettres volantes sont tirées de ce texte, pour garder la fréquence des lettres du français
+	var texte = 'le langage des yeux habille la pauvreté des mots quelques textes qui s ennuyaient dans un tiroir '
+		+ 'mes états d âmes rêves et désillusions qui germent au fil des saisons fleurissent au gré du vent';
+	var mots = ['au gré du vent', 'rêves', 'désillusions', 'saisons', 'liberté', 'imaginaire',
+		'la vague parfaite', 'lumière', 'Univers', 'compassion', 'la nature entière', 'illusion', 'mots', 'tiroir'];
+	var caracteres = texte + mots.join('') + 'abcdefghijklmnopqrstuvwxyzU';
+	var poids = 100;
+	var famille = '"M PLUS 1 Code", monospace';
+	var tailleMot = 18;
+	var lettres = [];
+	var largeur = 0, hauteur = 0;
+	var mot = null;          // mot en cours : { lettres, phase, debut }
+	var prochainMot = 0;
+	var indiceMot = 0;
+
+	// même police très fine que l'animation Matrix de la page science
+	var lien = document.createElement('link');
+	lien.rel = 'stylesheet';
+	lien.href = 'https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100&text=' + encodeURIComponent(caracteres);
+	document.head.appendChild(lien);
+	lien.onload = function () {
+		if (!document.fonts) return;
+		document.fonts.load(poids + ' 16px ' + famille, caracteres).then(function (polices) {
+			if (polices.length > 0) demarrer();
+		});
+	};
+
+	function caractere() {
+		var c;
+		do { c = texte.charAt(Math.floor(Math.random() * texte.length)); } while (c === ' ');
+		return c;
+	}
+
+	function nouvelleLettre(x, y) {
+		var profondeur = Math.random(); // les lettres proches sont plus grandes, plus nettes et plus rapides
+		return {
+			x: x, y: y,
+			car: caractere(),
+			taille: 11 + profondeur * 9,
+			alpha: 0.45 + profondeur * 0.55,
+			vitesse: 0.5 + profondeur * 0.8,
+			angle: (Math.random() - 0.5) * 0.6,
+			phase: Math.random() * 2 * Math.PI,
+			libre: true
+		};
+	}
+
+	function redimensionner() {
+		largeur = canvas.width = window.innerWidth;
+		hauteur = canvas.height = window.innerHeight;
+		lettres = [];
+		mot = null;
+		var nb = Math.round(largeur * hauteur / 2500);
+		for (var i = 0; i < nb; i++) {
+			lettres.push(nouvelleLettre(Math.random() * largeur, Math.random() * hauteur));
+		}
+	}
+
+	// partie du cadre réellement visible dans la page, pour y faire apparaître les mots
+	function zoneVisible() {
+		try {
+			var r = window.frameElement.getBoundingClientRect();
+			return { haut: Math.max(0, -r.top), bas: Math.min(hauteur, window.parent.innerHeight - r.top) };
+		} catch (e) {
+			return { haut: 0, bas: hauteur };
+		}
+	}
+
+	// découpe le mot en lignes qui tiennent dans la largeur du cadre
+	function decouper(texteMot) {
+		ctx.font = poids + ' ' + tailleMot + 'px ' + famille;
+		var lignes = [], ligne = '';
+		texteMot.split(' ').forEach(function (m) {
+			var essai = ligne ? ligne + ' ' + m : m;
+			if (ligne && ctx.measureText(essai).width > largeur - 30) {
+				lignes.push(ligne);
+				ligne = m;
+			} else {
+				ligne = essai;
+			}
+		});
+		lignes.push(ligne);
+		return lignes;
+	}
+
+	function former() {
+		var zone = zoneVisible();
+		if (zone.bas - zone.haut < 150) return false;
+		var lignes = decouper(mots[indiceMot]);
+		indiceMot = (indiceMot + 1) % mots.length;
+		var interligne = tailleMot * 1.6;
+		var y0 = zone.haut + 60 + Math.random() * Math.max(0, zone.bas - zone.haut - 120 - lignes.length * interligne);
+		var choisies = [];
+		ctx.font = poids + ' ' + tailleMot + 'px ' + famille;
+		lignes.forEach(function (ligne, n) {
+			var x = (largeur - ctx.measureText(ligne).width) / 2;
+			for (var k = 0; k < ligne.length; k++) {
+				var c = ligne.charAt(k);
+				var cx = x;
+				x += ctx.measureText(c).width;
+				if (c === ' ') continue;
+				var cible = { x: cx, y: y0 + n * interligne };
+				// la lettre libre la plus proche rejoint sa place dans le mot
+				var meilleure = null, distance = Infinity;
+				for (var i = 0; i < lettres.length; i++) {
+					var l = lettres[i];
+					if (!l.libre) continue;
+					var d = (l.x - cible.x) * (l.x - cible.x) + (l.y - cible.y) * (l.y - cible.y);
+					if (d < distance) { distance = d; meilleure = l; }
+				}
+				if (!meilleure) continue;
+				meilleure.libre = false;
+				meilleure.car = c;
+				meilleure.cible = cible;
+				choisies.push(meilleure);
+			}
+		});
+		mot = { lettres: choisies, phase: 'rassemble', debut: performance.now() };
+		return true;
+	}
+
+	function relacher(t) {
+		mot.lettres.forEach(function (l) {
+			l.libre = true;
+			l.cible = null;
+			l.rafale = 3 + Math.random() * 3; // la rafale qui disperse le mot s'atténue ensuite
+		});
+		mot = null;
+		prochainMot = t + 5000 + Math.random() * 4000;
+	}
+
+	function dessiner(t) {
+		requestAnimationFrame(dessiner);
+		ctx.clearRect(0, 0, largeur, hauteur);
+
+		if (mot) {
+			var duree = t - mot.debut;
+			if (mot.phase === 'rassemble' && duree > 2500) { mot.phase = 'tient'; mot.debut = t; }
+			else if (mot.phase === 'tient' && duree > 3000) relacher(t);
+		} else if (t > prochainMot && !former()) {
+			prochainMot = t + 1000;
+		}
+
+		// le vent souffle de gauche à droite, avec des rafales et des tourbillons qui varient lentement
+		var souffle = 0.6 + 0.4 * Math.sin(t * 0.0003) + 0.3 * Math.sin(t * 0.0011);
+		for (var i = 0; i < lettres.length; i++) {
+			var l = lettres[i];
+			var taille = l.taille, alpha = l.alpha, couleur = '#b4b4b4', angle = l.angle;
+			if (l.libre) {
+				var rafale = l.rafale || 0;
+				l.rafale = rafale * 0.98;
+				var vx = (souffle + rafale) * l.vitesse + 0.4 * Math.sin(l.y * 0.006 + t * 0.0007 + l.phase);
+				var vy = 0.12 + 0.45 * Math.sin(l.x * 0.03 + t * 0.0009 + l.phase) - rafale * 0.3;
+				l.x += vx;
+				l.y += vy;
+				l.angle = Math.max(-0.8, Math.min(0.8, l.angle + (vy * 0.6 - l.angle) * 0.05));
+				angle = l.angle;
+				if (l.x > largeur + 20) { l.x = -20; l.y = Math.random() * hauteur; l.car = caractere(); }
+				if (l.y > hauteur + 20) { l.y = -20; }
+				if (l.y < -20) { l.y = hauteur + 20; }
+				// les lettres changent parfois, comme dans la pluie Matrix
+				if (Math.random() > 0.998) l.car = caractere();
+			} else {
+				l.x += (l.cible.x - l.x) * 0.05;
+				l.y += (l.cible.y - l.y) * 0.05;
+				l.angle *= 0.9;
+				var p = Math.min(1, Math.hypot(l.cible.x - l.x, l.cible.y - l.y) / 80);
+				// en approchant de sa place, la lettre prend la taille et la couleur du mot
+				taille = tailleMot + (l.taille - tailleMot) * p;
+				alpha = 1 + (l.alpha - 1) * p;
+				couleur = p < 0.5 ? '#909090' : '#b4b4b4';
+				angle = l.angle;
+			}
+			ctx.save();
+			ctx.translate(l.x, l.y);
+			ctx.rotate(angle);
+			ctx.globalAlpha = alpha;
+			ctx.fillStyle = couleur;
+			ctx.font = poids + ' ' + taille.toFixed(1) + 'px ' + famille;
+			ctx.fillText(l.car, 0, 0);
+			ctx.restore();
+		}
+	}
+
+	function demarrer() {
+		redimensionner();
+		window.addEventListener('resize', redimensionner);
+		prochainMot = performance.now() + 2000;
+		requestAnimationFrame(dessiner);
+	}
+})();
+</script>
+</body>
+
+</html>
