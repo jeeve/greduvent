@@ -16,23 +16,32 @@
 			   <!-- main area -->
                <div class="col-xs-12 col-sm-12 col-md-9 fond">
                   <h1>émotions</h1>
-					
+				  <br>
+				  <br>
  				  
-                  <a name="bonheur"></a><div class="row">
-                     <div class="col-xs-1 col-sm-3 fond"></div>
-					  <div class="col-xs-10 col-sm-6 fond">
-					  <p>
-							Toucher le bonheur du bout des lèvres<br>
-Laisser ses doigts l'effleurer<br>
-De la joue s'égarer dans l'immense blondeur<br>
-Se rapprocher, se coller, se livrer<br>
-Sentir chaque courbe cheminer<br>
-Vers d'innombrables passages secrets<br>
-Toucher le bonheur de tout son être<br>
-Puis s'endormir à ses côtés					</p>
-<p align="right"><em><font size="2">samedi 5 novembre 2016</font></em></p>
-				   </div></div>
-					
+                  <a name="bonheur"></a><div class="row vertical-align">
+					  <div class="col-xs-12 col-sm-6 fond">
+						  <p>
+								Toucher le bonheur du bout des lèvres<br>
+	Laisser ses doigts l'effleurer<br>
+	De la joue s'égarer dans l'immense blondeur<br>
+	Se rapprocher, se coller, se livrer<br>
+	Sentir chaque courbe cheminer<br>
+	Vers d'innombrables passages secrets<br>
+	Toucher le bonheur de tout son être<br>
+	Puis s'endormir à ses côtés
+						  </p>
+						  <p align="right"><em><font size="2">samedi 5 novembre 2016</font></em></p>
+					  </div>
+					  <div class="col-xs-12 col-sm-5 fond">
+						  <p align="center">
+							 <img src="images/banc-kellermann.jpg" alt="Parc Kellermann - 1er novembre 2026" title="Parc Kellermann - 1er novembre 2026" class="img-responsive ombre-image center-block" />
+						  </p>
+					  </div>
+				  </div>
+				  <br>
+
+
 				  <br><br>
                   <div class="row vertical-align">
                      
