@@ -52,7 +52,7 @@
                      </div>
 					  <div class="col-xs-12 col-sm-7 fond">
                         <p align="center">
-                           <img src="images/librairie-faure-plaisance.jpg" alt="Librairie Faure - Plaisance Paris - 24 octobre 2025" title="Librairie Faure - Plaisance Paris - 24 octobre 2025" class="img-responsive ombre-image" />
+                           <img src="images/librairie-faure-plaisance.jpg" alt="Librairie Faure - Plaisance - Paris - 24 octobre 2025" title="Librairie Faure - Plaisance - Paris - 24 octobre 2025" class="img-responsive ombre-image" />
                         </p>
                      </div>
                    </div>	
@@ -309,7 +309,7 @@ De l'atelier et d'autres que je connais...
 				<div class="col-sm-3 fond"></div>
 				<div class="col-xs-12 col-sm-6 fond">
 					<p align="center">
-						<img src="images/butte-cailles.jpg" alt="La Butte aux Cailles - 7 juin 2026" title="La Butte aux Cailles - 7 juin 2026" class="img-responsive ombre-image" />
+						<img src="images/butte-cailles.jpg" alt="La Butte aux Cailles - Paris - 7 juin 2026" title="La Butte aux Cailles - Paris - 7 juin 2026" class="img-responsive ombre-image" />
 					</p>
 				</div>
 			</div>
@@ -318,7 +318,7 @@ De l'atelier et d'autres que je connais...
 			<div class="row">
 				<div class="col-xs-12 fond">
 					<p align="center">
-						<img src="images/kellermann.jpg" alt="Parc Kellermann - 1er novembre 2026" title="Parc Kellermann - 1er novembre 2026" class="img-responsive ombre-image" />
+						<img src="images/kellermann.jpg" alt="Parc Kellermann - Paris - 1er novembre 2026" title="Parc Kellermann - Paris - 1er novembre 2026" class="img-responsive ombre-image" />
 					</p>
 				</div>
 			</div>

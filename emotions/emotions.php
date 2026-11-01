@@ -35,7 +35,7 @@
 					  </div>
 					  <div class="col-xs-12 col-sm-6 fond">
 						  <p align="center">
-							 <img src="images/banc-kellermann.jpg" alt="Parc Kellermann - 1er novembre 2026" title="Parc Kellermann - 1er novembre 2026" class="img-responsive ombre-image center-block" />
+							 <img src="images/banc-kellermann.jpg" alt="Parc Kellermann - Paris - 1er novembre 2026" title="Parc Kellermann - Paris - 1er novembre 2026" class="img-responsive ombre-image center-block" />
 						  </p>
 					  </div>
 				  </div>
