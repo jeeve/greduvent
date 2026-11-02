@@ -57,7 +57,7 @@
     </div>
     <!--/.page-container-->
     <?php include("includes/footer.php"); ?>
-    <script src="/js/lake.js"></script>
+    <script src="/js/lake2.js"></script>
 </body>
 
 </html>
