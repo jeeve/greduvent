@@ -98,7 +98,7 @@
         '        float k = 38.0 * pow(1.38, fi);',
         '        float a = (fi - 1.0) * 0.28 + 0.05;',
         '        vec2 dir = vec2(sin(a), cos(a));',
-        '        float ph = k * dot(dir, p) + sqrt(k) * 2.4 * u_time + fi * 2.1;',
+        '        float ph = k * dot(dir, p) + sqrt(k) * 1.6 * u_time + fi * 2.1;',
         '        float s = 0.5 + 0.5 * sin(ph);',
         '        float env = 0.35 + 0.65 * smoothstep(0.2, 0.8, 0.5 + 0.5 * sin(dot(vec2(dir.y, -dir.x), p) * k * 0.09 + u_time * 0.4 + fi * 1.7));',
         '        float aa = 1.0 - smoothstep(0.9, 2.4, k * z * z / u_px);',
