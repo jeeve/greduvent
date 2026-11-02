@@ -315,7 +315,7 @@
                     <div class="row vertical-align">
 
                         <div class="col-xs-12 col-sm-6 fond">
-                            <img alt="Saint-Sulpice - 29 octobre 2003" title="Saint-Sulpice - 29 octobre 2003"
+                            <img alt="Saint-Sulpice - Paris - 29 octobre 2003" title="Saint-Sulpice - Paris - 29 octobre 2003"
                                 src="images/saint-sulpice.jpg"
                                 class="center-block img-responsive ombre-image center-block" />
                         </div>
