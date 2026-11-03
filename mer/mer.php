@@ -123,7 +123,17 @@
 					   <img src="images/vague.jpg" class="img-responsive encadrement-table fond-table center-block"/>
                      </div>
                   </div>
-                              
+
+                 <div class="row">
+				 <div class="col-sm-1 col-md-1 fond"></div>
+				<div class="col-xs-12 col-sm-10 fond">
+                <br><br>
+                  <p align="center">
+                     <img alt="Préfailles - photo André J." title="Préfailles - photo André J. (je suis dessus)" src="images/bateau-prefailles.jpg" class="img-responsive ombre-image" />
+                  </p>
+				</div>
+				</div>
+
 <br><br>
 <div id="swipe"><div class="row">
 <div class="col-xs-3"><p><a id="page-precedente" href="../astronomie/astronomie.php">vers les étoiles</a></p></div>
