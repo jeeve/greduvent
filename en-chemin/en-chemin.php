@@ -140,9 +140,7 @@
 			la vie comme elle vient. Ils y en a qui souffrent et le vent du 
 			silence les emporte vers quelque solitude. Ils y a ceux qui rêvent, 
 			pour qui le monde ressemble au portrait de Dieu. Par delà la 
-			balustrade, 
-			<a target="_blank" href="http://www.paris-26-gigapixels.com/index-fr.html">
-			Paris</a> s'étend et le ciel bleu gris en profite pour s'y reposer. 
+			balustrade, Paris s'étend et le ciel bleu gris en profite pour s'y reposer. 
 			Derrière un dédale de toits et comme assis sur une fourmilière 
 			géante, le Sacré Cœur médite. Imperturbable, l'agitation des hommes 
 			ne l'affecte plus. Seules d'épaisses volutes de fumée sorties tout 
