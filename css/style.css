@@ -51,6 +51,33 @@ h2 { font-family: 'Raleway', sans-serif; /* Times New Roman, Times, serif; */
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	color: #5a6a99;
+	letter-spacing: 1px;
+}
+
+/* ornement : un filet qui s'estompe puis une petite etoile de chaque cote */
+.numero-page::before,
+.numero-page::after {
+	content: "\2726";
+	font-size: 70%;
+	color: #9aa6c9;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-size: 50px 1px;
+}
+
+.numero-page::before {
+	padding-left: 58px;
+	margin-right: 10px;
+	background-image: linear-gradient(to right, transparent, #9aa6c9);
+	background-position: left center;
+}
+
+.numero-page::after {
+	padding-right: 58px;
+	margin-left: 10px;
+	background-image: linear-gradient(to left, transparent, #9aa6c9);
+	background-position: right center;
 }
 
 .ombre-image {
