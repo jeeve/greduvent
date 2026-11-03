@@ -2917,7 +2917,7 @@ Professeur Machepro
                                 <p><a id="page-precedente" href="../informatique/informatique.php">01101</a></p>
                             </div>
                             <div class="col-xs-10">
-                                <p align="right"><a id="page-suivante" href="../outils/outils.php">la boite à outils</a>
+                                <p align="right"><a id="page-suivante" href="../a-propos/a-propos.php">à propos</a>
                                 </p>
                             </div>
                         </div>

@@ -75,7 +75,6 @@
 		echo getSommaireItem('../informatique/racket.php');
 	echo '</ul>';	
 	echo getSommaireItem('../science/science.php'); 
-	echo getSommaireItem('../outils/outils.php'); 
 	echo getSommaireItem('../a-propos/a-propos.php'); 
 	echo getSommaireItem('../commentaires/commentaires.php'); 
 	
