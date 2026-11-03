@@ -183,6 +183,33 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('No initial playlist found');
     }
 
+    // Lance un morceau de la playlist par son nom (ex. 'le-chant-des-songes')
+    // depuis un lien de la page ; renvoie false si le morceau est introuvable
+    window.playSideTrack = function (name) {
+        const index = playlist.findIndex(track => track.name === name);
+        if (index === -1) return false;
+        loadTrack(index);
+        playTrack();
+        panel.classList.add('active');
+        return true;
+    };
+
+    // Le panneau ouvert depuis un lien se referme au clic en dehors du lecteur
+    document.addEventListener('click', (e) => {
+        if (!container.contains(e.target) && !e.target.closest('[data-side-track]')) {
+            panel.classList.remove('active');
+        }
+    });
+
+    // Liens de la page qui lancent un morceau dans le lecteur
+    document.querySelectorAll('[data-side-track]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (window.playSideTrack(link.dataset.sideTrack)) {
+                e.preventDefault();
+            }
+        });
+    });
+
     // Handle File Selection
     function handleFileSelect(e) {
         const files = Array.from(e.target.files);

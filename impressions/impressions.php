@@ -341,8 +341,7 @@
                             <h2 align="center">Le chant des
                                 songes</h2>
                             <p align="center">
-                                <a href="../musique/le-chant-des-songes.php"
-                                    onclick="return !window.open(this.href, 'pop', 'width=315,height=295,left=0,top=0');">
+                                <a href="../musique/le-chant-des-songes.php" data-side-track="le-chant-des-songes">
                                     <img src="../images/enceinte.gif" alt="Cuisine Spectrale - Le Chant des Songes"
                                         title="Cuisine Spectrale - Le Chant des Songes" height="26" border="0"
                                         width="25"></a>
