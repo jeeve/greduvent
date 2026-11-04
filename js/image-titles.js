@@ -49,20 +49,30 @@ $(document).ready(function() {
             .appendTo('head');
     }
 
-    // Process images after a short delay to ensure they are fully loaded
-    setTimeout(function() {
-        $('img[title]').each(function() {
-            var $img = $(this);
+    // Traite chaque image une fois réellement chargée (sinon sa taille vaut 0
+    // et elle serait prise à tort pour une petite image)
+    $('img[title]').each(function() {
+        var img = this;
+        if (img.complete && img.naturalWidth > 0) {
+            processImage(img);
+        } else {
+            $(img).one('load', function() { processImage(img); });
+        }
+    });
+
+    function processImage(img) {
+            var $img = $(img);
             var titleText = $img.attr('title');
-            
+
             // Skip images that are already wrapped or have empty titles
             if ($img.parent().hasClass('img-title-container') || !titleText || !titleText.trim()) {
                 return;
             }
 
             // Skip small images (less than 80px in width or height)
-            var imgWidth = $img.width();
-            var imgHeight = $img.height();
+            // Taille affichée, ou taille naturelle si l'image est masquée (onglet, carrousel…)
+            var imgWidth = $img.width() || img.naturalWidth;
+            var imgHeight = $img.height() || img.naturalHeight;
             if (imgWidth < 80 || imgHeight < 80) {
                 // Keep the title attribute for small images (browser tooltip)
                 return;
@@ -116,6 +126,5 @@ $(document).ready(function() {
             
             $img.wrap($container);
             $img.after('<div class="img-title-overlay">' + titleText + '</div>');
-        });
-    }, 100);
+    }
 });
