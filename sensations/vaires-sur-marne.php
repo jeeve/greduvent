@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="embed-responsive embed-responsive-4by3 ombre-image">
-                                <div class="ombre-image">
+                                <div>
                                     <div>
                                     <video id="videojs-viewsurf_html5_api" class="vjs-tech" tabindex="-1" preload="auto"
                                         loop="" muted="muted" playsinline="playsinline" autoplay="">
