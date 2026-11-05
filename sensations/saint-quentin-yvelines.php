@@ -2,7 +2,7 @@
 <html lang="fr">
    <head>
       <title>Saint-Quentin en Yvelines</title>
-      <META NAME="Description" CONTENT="Le lac de Saint-Quentin en Yvelines avec webcam, archives, météo en temps réel et prévisions."/>
+      <META NAME="Description" CONTENT="Le lac de Saint-Quentin en Yvelines avec archives, météo en temps réel et prévisions."/>
 	  <?php include("../includes/header.php"); ?>	
 	  <link rel="stylesheet" type="text/css" href="css/spots.css" media="all"/>	  
 	  <style>
@@ -39,6 +39,7 @@
 
                <div class="row">
 			   
+  <!-- webcam masquée : flux viewsurf 5610 (Paris porte de Vanves) hors service, pas de webcam publique sur l'étang
   <div class="col-xs-12 col-sm-12 fond">
     <br>
 	<div class="visible-xs">
@@ -74,32 +75,20 @@
   
   <div class="visible-xs"><br></div>
   </div> 
-  
-  
-  <div class="visible-xs">
-   <div class="col-xs-1"></div>
+  -->
 
-				  <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
-				  <table>
-					<tr>
-						<td><p>Vitesse vent </p></td><td><p id="vitesse-vent" class="vitesse-vent"></p></td>
-					</tr>
-					<tr>
-						<td><p>Orientation </p></td><td><p id="orientation-vent" class="orientation-vent"></p></td>
-					</tr>				
-					<tr>
-						<td><p>Air </p></td><td><p id="temperature-air" class="temperature-air"></p></td>
-					</tr>
-					
-					<tr>
-						<td colspan=2><p style="font-size: 10px;">Données temps réel <em><a id="nom-sation" class="nom-sation" href="https://openweathermap.org/city/2992415" target="_blank">Montigny-le-Bretonneux</a></em></p></td>
-					</tr>						
-				</table>
-				</div>
-											
-				</div>	
+  <div class="col-xs-12 fond" style="margin-top: 25px;">
+	<div class="fond-table encadrement-table" style="display: table; margin: 0 auto;">
+	<table>
+		<tr><td><p>Vitesse vent </p></td><td><p class="vitesse-vent"></p></td></tr>
+		<tr><td><p>Orientation </p></td><td><p class="orientation-vent"></p></td></tr>
+		<tr><td><p>Air </p></td><td><p class="temperature-air"></p></td></tr>
+		<tr><td colspan=2><p style="font-size: 10px;">Données temps réel <em><a class="nom-sation" href="https://openweathermap.org/city/2992415" target="_blank">Montigny-le-Bretonneux</a></em></p></td></tr>
+	</table>
+	</div>
+  </div>
 
-</div>				
+</div>
 	
 		 
                
@@ -255,7 +244,7 @@
 		});
 		}
 		
-		var myCam = setInterval(getWebCam, 30000);	// 30 s
+		// var myCam = setInterval(getWebCam, 30000);	// webcam masquée	// 30 s
 	  
 		station = "montigny-le-bretonneux";
 		var myVar =	setInterval(getMeteo, 30000);		
@@ -271,7 +260,7 @@
 		jQuery(document).ready(function($) {
 		getInfoSpot();
 		getInfoSessions('Saint-Quentin-en-Yvelines');
-		getWebCam();	 
+		// getWebCam();	 // webcam masquée
 		getMeteo();
 		
 		if (navigator.geolocation) {

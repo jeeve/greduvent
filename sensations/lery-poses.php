@@ -4,7 +4,7 @@
 <head>
     <title>Léry-Poses</title>
     <META NAME="Description"
-        CONTENT="Le lac de Léry Poses avec webcam, archives, météo en temps réel et prévisions, lien vers l'association WLPA et site de covoiturage." />
+        CONTENT="Le lac de Léry Poses avec archives, météo en temps réel et prévisions, lien vers l'association WLPA et site de covoiturage." />
     <?php include("../includes/header.php"); ?>
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/spots.css" media="all" />
@@ -125,10 +125,8 @@
                         </div>
 
 
-                        <div class="visible-xs">
-                            <div class="col-xs-1"></div>
-
-                            <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
+                        <div class="col-xs-12 fond" style="margin-top: 25px;">
+                            <div class="fond-table encadrement-table" style="display: table; margin: 0 auto;">
                                 <table>
                                     <tr>
                                         <td>
@@ -410,7 +408,7 @@
         });
     }
 
-    var myCam = setInterval(getWebCam, 30000); // 30 s
+    // var myCam = setInterval(getWebCam, 30000); // webcam masquée // 30 s
 
     station = "louviers";
     var myVar = setInterval(getMeteo, 30000);
@@ -431,7 +429,7 @@
 
         getInfoSpot();
         getInfoSessions('Léry-Poses');
-        getWebCam();
+        // getWebCam(); // webcam masquée
         getMeteo();
 
         if (navigator.geolocation) {

@@ -4,7 +4,7 @@
 <head>
     <title>Viry-Châtillon</title>
     <META NAME="Description"
-        CONTENT="Le lac de Viry-cChâtillon avec webcam, archives, météo en temps réel et prévisions." />
+        CONTENT="Le lac de Viry-cChâtillon avec archives, météo en temps réel et prévisions." />
     <?php include("../includes/header.php"); ?>
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/spots.css" media="all" />
@@ -122,10 +122,8 @@
                         </div>
 
 
-                        <div class="visible-xs">
-                            <div class="col-xs-1"></div>
-
-                            <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
+                        <div class="col-xs-12 fond" style="margin-top: 25px;">
+                            <div class="fond-table encadrement-table" style="display: table; margin: 0 auto;">
                                 <table>
                                     <tr>
                                         <td>
@@ -392,7 +390,7 @@
         });
     }
 
-    var myCam = setInterval(getWebCam, 30000); // 30 s
+    // var myCam = setInterval(getWebCam, 30000); // webcam masquée // 30 s
 
     station = "viry-chatillon";
     var myVar = setInterval(getMeteo, 30000);
@@ -413,7 +411,7 @@
     jQuery(document).ready(function($) {
         getInfoSpot();
         getInfoSessions('Viry-Châtillon');
-        getWebCam();
+        // getWebCam(); // webcam masquée
         getMeteo();
 
         if (navigator.geolocation) {

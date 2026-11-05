@@ -4,7 +4,7 @@
 <head>
     <title>Mézières-Ecluzelles</title>
     <META NAME="Description"
-        CONTENT="Le plan d'eau de Mézières-Ecluzelles avec webcam, archives, météo en temps réel et prévisions." />
+        CONTENT="Le plan d'eau de Mézières-Ecluzelles avec archives, météo en temps réel et prévisions." />
     <?php include("../includes/header.php"); ?>
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/spots.css" media="all" />
@@ -123,10 +123,8 @@
                         </div>
 
 
-                        <div class="visible-xs">
-                            <div class="col-xs-1"></div>
-
-                            <div class="col-xs-10 col-sm-3 fond-table encadrement-table">
+                        <div class="col-xs-12 fond" style="margin-top: 25px;">
+                            <div class="fond-table encadrement-table" style="display: table; margin: 0 auto;">
                                 <table>
                                     <tr>
                                         <td>
@@ -387,7 +385,7 @@
         });
     }
 
-    var myCam = setInterval(getWebCam, 30000); // 30 s
+    // var myCam = setInterval(getWebCam, 30000); // webcam masquée // 30 s
 
     station = "dreux";
     var myVar = setInterval(getMeteo, 30000);
@@ -407,7 +405,7 @@
     jQuery(document).ready(function($) {
         getInfoSpot();
         getInfoSessions('Mézières-Ecluzelles');
-        getWebCam();
+        // getWebCam(); // webcam masquée
         getMeteo();
 
         if (navigator.geolocation) {
