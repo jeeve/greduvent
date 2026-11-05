@@ -69,7 +69,7 @@
 				  
 			<br><br>
 			<div id="swipe"><div class="row">
-			<div class="col-xs-9"><p><a href="sensations.php">sensations</a> - <a href="windsurf-kitesurf.php.php">windsurf / kitesurf</a> - <a id="page-precedente" href="spots-ile-de-france.php">les spots d'Ile-de-France</a></p></div>
+			<div class="col-xs-9"><p><a href="sensations.php">sensations</a> - <a href="glisse.php">glisse</a> - <a id="page-precedente" href="spots-ile-de-france.php">les spots d'Ile-de-France</a></p></div>
 <div class="col-xs-3">
 			<p align="right"><a id="page-suivante" href="../emotions/emotions.php">émotions</a></p>
 			</div></div>

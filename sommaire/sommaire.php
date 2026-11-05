@@ -142,7 +142,7 @@
                               </a>
                            </g>
                            <g class="hover_group" opacity="0">
-                              <a xlink:href="../sensations/windsurf-kitesurf.php">
+                              <a xlink:href="../sensations/glisse.php">
                                  <text x="124" y="65" font-size="20" style="fill:white">windsurf / kitesurf</text>
                                  <rect x="124" y="2" opacity="0.2" fill="#FFFFFF" width="108" height="63"></rect>
                               </a>
@@ -161,7 +161,7 @@
                            </g>
 						  <!-- 
                            <g class="hover_group" opacity="0">
-                              <a xlink:href="../sensations/windsurf-kitesurf.php">
+                              <a xlink:href="../sensations/glisse.php">
                                  <text x="136" y="416" font-size="20" style="fill:white">windsurf / kite</text>
                                  <rect x="136" y="388" opacity="0.2" fill="#FFFFFF" width="360" height="28"></rect>
                               </a>

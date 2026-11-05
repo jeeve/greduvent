@@ -99,8 +99,8 @@
                      
                         <p>Une matinée douce de septembre,  
                            banlieue parisienne. Chargement de la clio, sans oublier la 
-                           <a href="../sensations/windsurf-kitesurf.php">jp</a>, la 
-                           <a href="../sensations/windsurf-kitesurf.php">v6</a>, la  
+                           <a href="../sensations/glisse.php">jp</a>, la 
+                           <a href="../sensations/glisse.php">v6</a>, la  
                            tente, le matelas pneumatique. Direction la Bretagne nord. Plus précisément  
                            une presqu’île nichée au cœur de la Côte d’Émeraude. Le soleil et  
                            le vent de nord devraient nous accompagner pendant ces 4 jours de pèlerinage  
@@ -151,7 +151,7 @@
 				  </div>
 				  </p>
 				<p class="legende">
-				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2019
+				  <a href="../sensations/glisse.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2019
 				  </p>
 				  </div></div>	
 -->
@@ -165,7 +165,7 @@
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> sous l'orage à Saint-Jacut-de-la-Mer, août 2018
+				  <a href="../sensations/glisse.php">Planche à voile</a> sous l'orage à Saint-Jacut-de-la-Mer, août 2018
 				  </p>
 				  </div></div>	
 
@@ -179,7 +179,7 @@
 				  </div>
 				  </p>
 				  <p class="legende">
-				  <a href="../sensations/windsurf-kitesurf.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2017
+				  <a href="../sensations/glisse.php">Planche à voile</a> à Saint-Jacut-de-la-Mer, août 2017
 				  </p>
 				  </div></div>				 
 				  
