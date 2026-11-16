@@ -144,7 +144,7 @@ Pour la peine je me reprends un Ricard.
 		  <a name="expansion"></a>
 		  <h2>Expansion</h2>
 <p>	  
-		  <a href="http://www.google.com/sky/#latitude=31.222803&amp;longitude=6.613&amp;zoom=12&amp;Spitzer=0.00&amp;ChandraXO=0.00&amp;Galex=0.00&amp;IRAS=0.00&amp;WMAP=0.00&amp;Cassini=0.00&amp;slide=1&amp;mI=-1&amp;oI=-1" target="_blank"><img src="images/galaxie.gif" align="right" alt="A plus de 60 millions d'années-lumière de la Terre, la galaxie spirale NGC 4414" title="A plus de 60 millions d'années-lumière de la Terre, la galaxie spirale NGC 4414" class="img-responsive image-dans-texte"></a>		  
+		 <img src="images/galaxie.gif" align="right" alt="A plus de 60 millions d'années-lumière de la Terre, la galaxie spirale NGC 4414" title="A plus de 60 millions d'années-lumière de la Terre, la galaxie spirale NGC 4414" class="img-responsive image-dans-texte">	  
 
 L’expansion de l’univers est une théorie physique confirmée par les observations.<br>
 Les galaxies, ces univers-îles, s’éloignent les unes des autres.<br>
