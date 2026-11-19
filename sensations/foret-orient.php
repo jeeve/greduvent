@@ -366,7 +366,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p class="numero-page">page 14i</p>
+                            <p class="numero-page">page 24</p>
 
                         </div>
                     </div>

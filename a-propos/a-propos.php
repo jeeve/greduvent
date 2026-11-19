@@ -128,7 +128,7 @@ du scanner. De ce jour est né "au gré du vent 1.0".<p align="right"><em><font 
 <div class="col-xs-8">
 <p align="right"><a id="page-suivante" href="../commentaires/commentaires.php">et vous ?</a></p>
 </div></div><div class="row">
-<p class="numero-page">page 25</p></div></div>
+<p class="numero-page">page 35</p></div></div>
 				 
 				 
                </div>

@@ -163,7 +163,7 @@ Forgeron constitue quasiment son seul défaut. D’ailleurs dès qu’il a un mo
 <div class="col-xs-8">
 			<p align="right"><a id="page-suivante" href="../reflexions/reflexions.php">?!?</a></p>
 			</div>
-			</div><div class="row"><p class="numero-page">page 18</p>	
+			</div><div class="row"><p class="numero-page">page 28</p>	
  
 			</div></div>
 			

@@ -74,7 +74,7 @@
 			<p align="right"><a id="page-suivante" href="../emotions/emotions.php">émotions</a></p>
 			</div></div>
 			<div class="row">
-			<p class="numero-page">page 15</p></div></div>
+			<p class="numero-page">page 25</p></div></div>
 
 						
 

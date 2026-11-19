@@ -81,7 +81,7 @@
 <div class="col-xs-5"><p><a id="page-precedente" href="randonnees.php">pas à pas</a></p></div>
 <div class="col-xs-7"><p align="right"><a id="page-suivante" href="../impressions/impressions.php">impressions</a></p>
 </div>
-</div><div class="row"><p class="numero-page">page 10</p>	
+</div><div class="row"><p class="numero-page">page 11</p>	
 
 </div></div>
 

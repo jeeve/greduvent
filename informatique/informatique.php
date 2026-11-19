@@ -745,7 +745,7 @@ nombre_tentatives <span style="color: #333333">=</span> <span style="color: #000
                             </div>
                         </div>
                         <div class="row">
-                            <p class="numero-page">page 20</p>
+                            <p class="numero-page">page 30</p>
 
                         </div>
                     </div>
