@@ -307,6 +307,7 @@
                                             title="Les mises à l'eau en fonction du vent">
                                     </a>
                                     <br>
+                                    <br>
                                 </div>
 
                                 <div id="item-webcam-poses" class="collapse">
