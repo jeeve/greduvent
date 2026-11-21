@@ -181,7 +181,7 @@
 <div class="col-xs-10">
 			<p align="right"><a id="page-suivante" href="../en-chemin/en-chemin.php">en chemin</a></p>
 			</div>
-			</div><div class="row"><p class="numero-page">page 16</p>	
+			</div><div class="row"><p class="numero-page">page 26</p>	
 
 </div></div>
 			

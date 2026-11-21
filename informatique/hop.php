@@ -368,7 +368,7 @@ L&#39;auteur décline toute responsabilité quant aux usages abusifs du programm
 <div class="col-xs-8">
 			<p align="right"><a id="page-suivante" href="wescheme.php">wescheme</a> - <span class="hidden-xs"><a href="racket.php">racket</a> - </span><a href="../science/science.php">e^(i.pi)+1=0</a></p>
 			</div>
-			</div><div class="row"><p class="numero-page">page 21</p>	
+			</div><div class="row"><p class="numero-page">page 31</p>	
  
 </div></div>
 			

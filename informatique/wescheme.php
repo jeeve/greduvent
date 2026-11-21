@@ -101,7 +101,7 @@ une bombe...</p>
 <div class="col-xs-6">
 			<p align="right"><span class="hidden-xs"><a href="racket.php">racket</a> - </span><a id="page-suivante" href="../science/science.php">e^(i.pi)+1=0</a></p>
 </div>
-</div><div class="row"><p class="numero-page">page 22</p>	
+</div><div class="row"><p class="numero-page">page 32</p>	
   
 </div></div>			
 			

@@ -327,7 +327,7 @@ De l'atelier et d'autres que je connais...
 <div class="col-xs-8">
 			<p align="right"><a id="page-suivante" href="ncis.php">NCIS</a> - <a href="../reflexions/reflexions.php">?!?</a></p>
 			</div>
-			</div><div class="row"><p class="numero-page">page 17</p>	
+			</div><div class="row"><p class="numero-page">page 27</p>	
  
 			</div></div>
 			

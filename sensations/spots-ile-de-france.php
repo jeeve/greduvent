@@ -307,6 +307,7 @@
                                             title="Les mises à l'eau en fonction du vent">
                                     </a>
                                     <br>
+                                    <br>
                                 </div>
 
                                 <div id="item-webcam-poses" class="collapse">
@@ -1495,7 +1496,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p class="numero-page">page 14</p>
+                            <p class="numero-page">page 15</p>
 
                         </div>
                     </div>

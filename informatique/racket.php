@@ -304,7 +304,7 @@ Et cliquez sur le bouton <i>Exécuter</i>.</p>
 <div class="col-xs-3">
 			<p align="right"><a id="page-suivante" href="../science/science.php">e^(i.pi)+1=0</a></p>
 			</div>
-			</div><div class="row"><p class="numero-page">page 23</p>	
+			</div><div class="row"><p class="numero-page">page 33</p>	
  
 </div></div>
 			
