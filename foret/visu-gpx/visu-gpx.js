@@ -1144,11 +1144,12 @@ function visuGPX(id, url, visuGpxOptions) {
         var l = ligneLaPlusProche(touch);
         if (l) {
           e.preventDefault(); // pas de défilement ni de clic émulé
+          e.stopPropagation(); // Google Charts & co ne voient pas ce toucher
           ligneTouchee = l;
           souris("mousedown", l, touch);
         }
       },
-      { passive: false }
+      { passive: false, capture: true }
     );
 
     racine.addEventListener(
@@ -1156,20 +1157,23 @@ function visuGPX(id, url, visuGpxOptions) {
       function (e) {
         if (ligneTouchee) {
           e.preventDefault();
+          e.stopPropagation();
           souris("mousemove", ligneTouchee, e.touches[0]);
         }
       },
-      { passive: false }
+      { passive: false, capture: true }
     );
 
     function finTouche(e) {
       if (ligneTouchee) {
+        e.stopPropagation();
         souris("mouseup", ligneTouchee, e.changedTouches[0]);
         ligneTouchee = null;
       }
     }
-    racine.addEventListener("touchend", finTouche);
-    racine.addEventListener("touchcancel", finTouche);
+    // phase de capture : on passe avant les gestionnaires du graphe
+    racine.addEventListener("touchend", finTouche, true);
+    racine.addEventListener("touchcancel", finTouche, true);
   }
 
   $("#" + id + " " + ".chart").keypress(function (e) {

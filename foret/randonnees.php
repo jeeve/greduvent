@@ -7,7 +7,7 @@
         CONTENT="Randonnées en forêt de Fontainebleau, tracés GPX et photographies." />
     <?php include("../includes/header.php"); ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-    <link rel="stylesheet" href="visu-gpx/visu-gpx.css ">
+    <link rel="stylesheet" href="visu-gpx/visu-gpx.css?v=<?php echo filemtime(__DIR__ . '/visu-gpx/visu-gpx.css'); ?>">
 </head>
 
 <body>
@@ -407,7 +407,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="visu-gpx/rotatedMarker.js"></script>
     <script src="https://www.google.com/jsapi"></script>
-    <script src="visu-gpx/visu-gpx.js"></script>
+    <script src="visu-gpx/visu-gpx.js?v=<?php echo filemtime(__DIR__ . '/visu-gpx/visu-gpx.js'); ?>"></script>
     <script src="visu-gpx/exif.js"></script>
     <script>
     window.onload = GPX;
