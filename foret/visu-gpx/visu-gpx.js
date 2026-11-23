@@ -1072,6 +1072,106 @@ function visuGPX(id, url, visuGpxOptions) {
   var curseurA = { currentX: 0, selectedElement: null };
   var curseurB = { currentX: 0, selectedElement: null };
 
+  registerEvtTactile();
+
+  // Déplacement des lignes au doigt : un toucher proche d'une ligne visible
+  // (TOLERANCE_TACTILE px) est rejoué en mousedown / mousemove / mouseup sur
+  // cette ligne, comme le ferait la souris. Ailleurs, le défilement reste libre.
+  function registerEvtTactile() {
+    var TOLERANCE_TACTILE = 20;
+    var racine = document.getElementById(id);
+    if (!racine) {
+      return;
+    }
+    var ligneTouchee = null;
+
+    function souris(type, elt, touch) {
+      elt.dispatchEvent(
+        new MouseEvent(type, {
+          bubbles: true,
+          cancelable: true,
+          view: window,
+          button: 0,
+          clientX: touch.clientX,
+          clientY: touch.clientY,
+        })
+      );
+    }
+
+    function ligneLaPlusProche(touch) {
+      var meilleure = null;
+      var dMin = TOLERANCE_TACTILE;
+      // la ligne de position d'abord : elle gagne en cas d'égalité
+      var lignes = racine.querySelectorAll(
+        ".ligne-position, .ligne-seuil, .ligne-gauche, .ligne-droite"
+      );
+      for (var k = 0; k < lignes.length; k++) {
+        var l = lignes[k];
+        if (getComputedStyle(l).visibility == "hidden") {
+          continue;
+        }
+        var r = l.getBoundingClientRect();
+        if (r.width == 0 && r.height == 0) {
+          continue;
+        }
+        var d;
+        if (elementEstClasse(l, "ligne-seuil")) {
+          if (touch.clientX < r.left || touch.clientX > r.right) {
+            continue;
+          }
+          d = Math.abs(touch.clientY - (r.top + r.height / 2));
+        } else {
+          if (touch.clientY < r.top - TOLERANCE_TACTILE || touch.clientY > r.bottom + TOLERANCE_TACTILE) {
+            continue;
+          }
+          d = Math.abs(touch.clientX - (r.left + r.width / 2));
+        }
+        if (d < dMin) {
+          dMin = d;
+          meilleure = l;
+        }
+      }
+      return meilleure;
+    }
+
+    racine.addEventListener(
+      "touchstart",
+      function (e) {
+        if (e.touches.length != 1) {
+          return;
+        }
+        var touch = e.touches[0];
+        var l = ligneLaPlusProche(touch);
+        if (l) {
+          e.preventDefault(); // pas de défilement ni de clic émulé
+          ligneTouchee = l;
+          souris("mousedown", l, touch);
+        }
+      },
+      { passive: false }
+    );
+
+    racine.addEventListener(
+      "touchmove",
+      function (e) {
+        if (ligneTouchee) {
+          e.preventDefault();
+          souris("mousemove", ligneTouchee, e.touches[0]);
+        }
+      },
+      { passive: false }
+    );
+
+    function finTouche(e) {
+      if (ligneTouchee) {
+        souris("mouseup", ligneTouchee, e.changedTouches[0]);
+        ligneTouchee = null;
+      }
+    }
+    racine.addEventListener("touchend", finTouche);
+    racine.addEventListener("touchcancel", finTouche);
+  }
+
   $("#" + id + " " + ".chart").keypress(function (e) {
     if (e.which == 32) {
       if (lectureTimer == null) {
