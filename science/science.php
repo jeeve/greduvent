@@ -78,10 +78,13 @@
                                                         d'à côté ?</p>
                                                     <br>
                                                     <p align="center">
-                                                    <img class="ombre-image" src="images/depassement-grok.gif"
-                                                        width="480" height="220"
-                                                        style="max-width: 100%; height: auto;"
-                                                        alt="Dépassement de véhicules par le haut">
+                                                    <a href="https://www.youtube.com/watch?v=G1yC2FFuJZU"
+                                                        target="_blank" rel="noopener noreferrer">
+                                                        <img class="ombre-image" src="images/depassement-grok.gif"
+                                                            width="480" height="220"
+                                                            style="max-width: 100%; height: auto;"
+                                                            alt="Dépassement de véhicules par le haut">
+                                                    </a>
                                                     </p><br>
                                                 </td>
                                             </tr>
