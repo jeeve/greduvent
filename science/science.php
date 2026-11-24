@@ -79,7 +79,8 @@
                                                     <br>
                                                     <p align="center">
                                                     <a href="https://www.youtube.com/watch?v=G1yC2FFuJZU"
-                                                        target="_blank" rel="noopener noreferrer">
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        style="display: inline-block; max-width: calc(100% - 6px);">
                                                         <img class="ombre-image" src="images/depassement-grok.gif"
                                                             width="480" height="220"
                                                             style="max-width: 100%; height: auto;"
