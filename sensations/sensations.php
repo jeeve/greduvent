@@ -209,8 +209,8 @@
                         <div class="col-xs-12 col-md-6 fond">
                             <p align="center">
                                 <a href="https://www.instagram.com/explore/locations/120673374643308/couleurs-cafe-le-cafe-nomade/" target="_blank"><img
-                                        alt="Le Couleurs café - dessin David Mahé"
-                                        title="Le Couleurs café - dessin David Mahé" src="images/couleurs-cafe.jpg"
+                                        alt="Le Couleurs Café - dessin David Mahé"
+                                        title="Le Couleurs Café - dessin David Mahé" src="images/couleurs-cafe.jpg"
                                         class="img-responsive ombre-image" /></a>
                             </p>
                         </div>
