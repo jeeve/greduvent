@@ -87,7 +87,14 @@
                      </div>
                   </div>
 				  
-				  <p><br></p>	
+				
+                            <br><br>
+                    <p align="center">
+                        <img alt="Blois - 11 février 2012" title="Blois - 11 février 2012"
+                            src="images/loire-neige.jpg" class="img-responsive ombre-image" />
+                    </p>	    
+            
+                  <p><br></p>	
                  <div class="row">
 					
 					<div class="col-sm-2"></div>
